@@ -430,4 +430,158 @@ const postJobMatchScore = async (req, res, next) => {
   }
 };
 
-module.exports = { getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore };
+// ─── T2 전용 매핑 ────────────────────────────────────────────────────────────
+
+const AB_TO_T21 = {
+  AB34: 'L', AB35: 'L', AB09: 'L', AB14: 'L',
+  AB04: 'M', AB08: 'M', AB07: 'M', AB13: 'M',
+  AB05: 'S',
+  AB41: 'A',
+  AB43: 'B', AB44: 'B', AB38: 'B', AB37: 'B',
+  AB26: 'I', AB20: 'I', AB23: 'I', AB28: 'I',
+  AB06: 'N', AB15: 'N',
+  AB10: 'T', AB01: 'T', AB32: 'T',
+};
+
+const A_TO_T21 = {
+  A09: 'L', A10: 'L', A16: 'L', A25: 'L',
+  A05: 'M', A17: 'M', A07: 'M', A34: 'M',
+  A03: 'S', A29: 'S',
+  A32: 'B', A40: 'B', A41: 'B', A36: 'B',
+  A19: 'I', A21: 'I', A22: 'I', A15: 'I',
+  A06: 'N', A12: 'N', A26: 'N',
+  A04: 'T', A11: 'T', A24: 'T',
+};
+
+const T22_TO_KN = {
+  BUS_1: 'KN14', BUS_2: 'KN10', BUS_3: 'KN08',
+  BUS_4: 'KN12', BUS_5: 'KN07', BUS_6: 'KN13',
+  COM_1: 'KN04', COM_2: 'KN15', COM_3: 'KN03',
+  EDU_1: 'KN18', EDU_2: 'KN23',
+  SAF_1: 'KN11',
+  SCI_1: 'KN02', SCI_2: 'KN31', SCI_3: 'KN29',
+  SCI_4: 'KN33', SCI_5: 'KN16', SCI_6: 'KN30',
+  SOC_1: 'KN24', SOC_2: 'KN22', SOC_3: 'KN27',
+  SOC_4: 'KN19', SOC_5: 'KN26', SOC_6: 'KN21', SOC_7: 'KN25',
+  TEC_1: 'KN09', TEC_2: 'KN01', TEC_3: 'KN32',
+  TEC_4: 'KN28', TEC_5: 'KN20', TEC_6: 'KN05',
+  TEC_7: 'KN17', TEC_8: 'KN06',
+};
+
+const T23_TO_VA_T2 = {
+  T23_1: 'VA10', T23_2: 'VA11',  T23_3: 'VA04',
+  T23_4: 'VA01', T23_5: 'VA06',  T23_6: 'VA09',
+  T23_7: 'VA05', T23_8: 'VA12',  T23_9: 'VA07',
+  T23_10: 'VA08', T23_11: 'VA03', T23_12: 'VA13',
+  T23_13: 'VA02',
+};
+
+// ─── T2 점수 함수 ─────────────────────────────────────────────────────────────
+
+function top5codes(items) {
+  return [...(items || [])].sort((a, b) => b.score - a.score).slice(0, 5);
+}
+
+function calcT21ScoreT2(job, userT21) {
+  const abItems = top5codes(job.details?.업무수행능력?.중요도?.직업간);
+  const aItems  = top5codes(job.details?.업무활동?.중요도?.직업간);
+
+  const intelScores = {};
+  for (const item of [...abItems, ...aItems]) {
+    const intel = AB_TO_T21[item.code] || A_TO_T21[item.code];
+    if (!intel) continue;
+    (intelScores[intel] = intelScores[intel] || []).push(item.score);
+  }
+
+  let total = 0, weightSum = 0;
+  for (const [intel, scores] of Object.entries(intelScores)) {
+    const jobScore = scores.reduce((a, b) => a + b, 0) / scores.length / 100;
+    const userScore = userT21[intel] ?? 0;
+    total += jobScore * userScore;
+    weightSum += userScore;
+  }
+  return weightSum > 0 ? total / weightSum : 0;
+}
+
+function calcT22ScoreT2(job, userKnCodes) {
+  const jobKnCodes = top5codes(job.details?.지식?.중요도?.직업간).map(i => i.code);
+  const matched = userKnCodes.filter(kn => jobKnCodes.includes(kn)).length;
+  return userKnCodes.length > 0 ? matched / userKnCodes.length : 0;
+}
+
+function calcT23ScoreT2(job, userVaPriorities) {
+  const jobVaCodes = top5codes(job.details?.가치관?.중요도?.직업간).map(i => i.code);
+  const weights = { priority_1: 1.0, priority_2: 0.6, priority_3: 0.3 };
+  let total = 0, weightSum = 0;
+  for (const [priority, vaCode] of Object.entries(userVaPriorities)) {
+    if (!weights[priority] || !vaCode) continue;
+    weightSum += weights[priority];
+    if (jobVaCodes.includes(vaCode)) total += weights[priority];
+  }
+  return weightSum > 0 ? total / weightSum : 0;
+}
+
+// ─── GET /api/job/recommend-t2/:survey_id ────────────────────────────────────
+
+const getJobRecommendT2BySurveyId = async (req, res, next) => {
+  try {
+    const { survey_id } = req.params;
+
+    const surveyResult = await SurveyResult.findOne({ survey_id }).lean();
+    if (!surveyResult) {
+      return res.status(404).json({
+        success: false,
+        error: `survey_id '${survey_id}'에 해당하는 검사 결과를 찾을 수 없습니다.`,
+      });
+    }
+
+    const userT21 = calcGroupScores(surveyResult.answers?.T21);
+
+    const checked = surveyResult.answers?.T22?.checked ?? [];
+    const userKnCodes = checked
+      .map(itemId => T22_TO_KN[itemId.replace(/^T22_/, '')])
+      .filter(Boolean);
+
+    const t23 = surveyResult.answers?.T23 ?? {};
+    const userVaPriorities = {
+      priority_1: T23_TO_VA_T2[t23.priority_1] ?? null,
+      priority_2: T23_TO_VA_T2[t23.priority_2] ?? null,
+      priority_3: T23_TO_VA_T2[t23.priority_3] ?? null,
+    };
+
+    const Job = getJobModel();
+    const jobs = await Job.find({}, {
+      jobCode: 1, title: 1, classification: 1, salary: 1, jobSatisfaction: 1,
+      'details.업무수행능력.중요도.직업간': 1,
+      'details.업무활동.중요도.직업간':    1,
+      'details.지식.중요도.직업간':        1,
+      'details.가치관.중요도.직업간':      1,
+      _id: 0,
+    }).lean();
+
+    const results = [];
+    for (const job of jobs) {
+      const t21 = calcT21ScoreT2(job, userT21);
+      const t22 = calcT22ScoreT2(job, userKnCodes);
+      const t23Score = calcT23ScoreT2(job, userVaPriorities);
+      const score = round3(t21 * 0.36 + t22 * 0.36 + t23Score * 0.28);
+      results.push({
+        jobCode: job.jobCode,
+        title: job.title,
+        classification: job.classification,
+        salary: job.salary ?? null,
+        jobSatisfaction: job.jobSatisfaction ?? null,
+        t2_match_score: score,
+        t2_match_detail: { T21: round3(t21), T22: round3(t22), T23: round3(t23Score) },
+      });
+    }
+
+    results.sort((a, b) => b.t2_match_score - a.t2_match_score);
+
+    res.json({ success: true, survey_id, count: Math.min(results.length, 5), data: results.slice(0, 5) });
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = { getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore, getJobRecommendT2BySurveyId };

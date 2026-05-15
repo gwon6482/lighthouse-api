@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { getJobByCode, searchJobByName, getJobList, createJob, updateJob, deleteJob, getClassifications, getMajors } = require('../controllers/jobController');
-const { getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore } = require('../controllers/recommendController');
+const { getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore, getJobRecommendT2BySurveyId } = require('../controllers/recommendController');
 const { getApprovedReviews, submitReview } = require('../controllers/reviewController');
 
 /**
@@ -516,6 +516,7 @@ router.get('/classifications', getClassifications);
 router.get('/majors', getMajors);
 router.get('/search', searchJobByName);
 router.get('/recommend/:survey_id', getJobRecommendBySurveyId);
+router.get('/recommend-t2/:survey_id', getJobRecommendT2BySurveyId);
 router.post('/recommend', postJobRecommend);
 router.post('/', createJob);
 /**
