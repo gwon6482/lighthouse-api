@@ -107,6 +107,11 @@ const UserSchema = new mongoose.Schema({
     default: []
   },
 
+  // 프로필
+  name:   { type: String, trim: true },
+  age:    { type: Number, min: 1, max: 120 },
+  gender: { type: String, enum: ['M', 'F'] },
+
   // 계정 상태
   isActive:    { type: Boolean, default: true },
   lastLoginAt: { type: Date }

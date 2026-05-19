@@ -11,9 +11,12 @@ const generateToken = (user) =>
 // POST /api/auth/register
 const register = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
+    const { email, password, name, age, gender } = req.body;
     if (!email || !password) {
       return res.status(400).json({ success: false, error: '이메일과 비밀번호를 입력해주세요' });
+    }
+    if (gender && !['M', 'F'].includes(gender)) {
+      return res.status(400).json({ success: false, error: '성별은 M 또는 F만 허용됩니다' });
     }
 
     const existing = await User.findOne({ email: email.toLowerCase().trim() });
@@ -26,6 +29,9 @@ const register = async (req, res, next) => {
       email,
       passwordHash,
       authProviders: [{ provider: 'local', providerId: email.toLowerCase().trim() }],
+      ...(name && { name }),
+      ...(age && { age: Number(age) }),
+      ...(gender && { gender }),
     });
 
     const token = generateToken(user);
