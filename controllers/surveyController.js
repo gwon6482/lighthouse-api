@@ -4,6 +4,8 @@ const SurveyResult = require('../models/SurveyResult');
 const SurveyQuestionnaire = require('../models/SurveyQuestionnaire');
 const SurveyStatistics = require('../models/SurveyStatistics');
 const T1Type = require('../models/T1Type');
+const CareerAttribute = require('../models/CareerAttribute');
+const T3_RESULT_TEXTS = require('../config/t3ResultTexts');
 
 // 전체 설문지 조회 (GET)
 const getSurveyForm = async (req, res) => {
@@ -542,14 +544,14 @@ const getSurveyAnalysis = async (req, res) => {
       values[p] = code ? { code, name: t23Map[code]?.name || code, definition: t23Map[code]?.definition || null } : null;
     }
 
-    // T3 환경 — 파트별 레벨(1~5) + 이름/설명 + 모집단 통계
+    // T3 환경 — 파트별 레벨(1~5) + 이름/설명 + 모집단 통계 + 결과 문장 + WE 역산
     const T3Model = getQuestionModel('T3_environmental');
     const t3Answers = answers.T3 || {};
     const T3_PARTS = ['T3_PHY', 'T3_PEO', 'T3_COM', 'T3_RES', 'T3_STR', 'T3_FLX'];
 
     const t3PartDocs = await T3Model.find(
       { part_code: { $in: T3_PARTS } },
-      { part_code: 1, part_name: 1, levels: 1, _id: 0 }
+      { part_code: 1, part_name: 1, levels: 1, related_WE: 1, _id: 0 }
     ).lean();
     const t3PartMap = Object.fromEntries(t3PartDocs.map(p => [p.part_code, p]));
 
@@ -571,6 +573,81 @@ const getSurveyAnalysis = async (req, res) => {
         level_description: partInfo?.levels?.find(l => l.level === level)?.description ?? null
       };
     }).filter(p => p.level !== null);
+
+    // T3 결과 문장 (good / bad)
+    const t3Texts = { good: [], bad: [] };
+    for (const partCode of T3_PARTS) {
+      const level = t3Answers[partCode];
+      if (!level || level === 3) continue;
+      const texts = T3_RESULT_TEXTS[partCode]?.levels?.[level];
+      if (!texts) continue;
+      t3Texts.good.push({ part: partCode, level, text: texts.good });
+      t3Texts.bad.push({ part: partCode, level, text: texts.bad });
+    }
+
+    // T3 WE 역산 (good / bad)
+    const goodWeMap = {};
+    const badWeMap = {};
+    for (const partCode of T3_PARTS) {
+      const level = t3Answers[partCode];
+      if (!level || level === 3) continue;
+      const relatedWE = t3PartMap[partCode]?.related_WE;
+      if (!relatedWE) continue;
+
+      const isHigh = level >= 4;  // 레벨 4·5
+      const isLow  = level <= 2;  // 레벨 1·2
+
+      const collect = (items, targetMap) => {
+        for (const { code, weight } of (items || [])) {
+          targetMap[code] = (targetMap[code] || 0) + weight;
+        }
+      };
+
+      if (isHigh) {
+        collect(relatedWE.up,   goodWeMap);
+        collect(relatedWE.down, badWeMap);
+      } else if (isLow) {
+        collect(relatedWE.down, goodWeMap);
+        collect(relatedWE.up,   badWeMap);
+      }
+    }
+
+    const toSortedTop5 = (weMap) =>
+      Object.entries(weMap)
+        .sort(([, a], [, b]) => b - a)
+        .slice(0, 5)
+        .map(([code, weight]) => ({ code, weight: Math.round(weight * 10) / 10 }));
+
+    const goodWeCandidates = toSortedTop5(goodWeMap);
+    const badWeCandidates  = toSortedTop5(badWeMap);
+
+    const allWeCodes = [...new Set([...goodWeCandidates.map(w => w.code), ...badWeCandidates.map(w => w.code)])];
+    let weDetailMap = {};
+    if (allWeCodes.length > 0) {
+      const weAttrs = await CareerAttribute.find(
+        { code: { $in: allWeCodes }, category: 'work_environment' },
+        { code: 1, name: 1, definition: 1, _id: 0 }
+      ).lean();
+      weDetailMap = Object.fromEntries(weAttrs.map(a => [a.code, a]));
+    }
+
+    const enrichWe = (candidates) =>
+      candidates.map(({ code, weight }) => ({
+        code, weight,
+        name:       weDetailMap[code]?.name       ?? code,
+        definition: weDetailMap[code]?.definition ?? null
+      }));
+
+    const t3WeItems = {
+      good: enrichWe(goodWeCandidates),
+      bad:  enrichWe(badWeCandidates)
+    };
+
+    const allLevel3 = T3_PARTS.every(p => !t3Answers[p] || t3Answers[p] === 3);
+    const t3Result = {
+      texts:   allLevel3 ? null : t3Texts,
+      weItems: allLevel3 ? null : t3WeItems
+    };
 
     // T1 유형 결과
     let T1_result = result.T1_result || null;
@@ -614,7 +691,9 @@ const getSurveyAnalysis = async (req, res) => {
         interest,
         values,
         environment: {
-          parts: environmentParts
+          parts: environmentParts,
+          texts:   t3Result.texts,
+          weItems: t3Result.weItems
         }
       }
     });
