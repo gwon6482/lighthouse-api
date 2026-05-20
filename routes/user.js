@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getProfile, updateProfile, deleteAccount, addSurveyResult, getSurveyResults, getBookmarks, addBookmark, removeBookmark, saveRecommendedJobs, registerDevice, removeDevice } = require('../controllers/userController');
+const { getProfile, updateProfile, deleteAccount, addSurveyResult, getSurveyResults, getBookmarks, addBookmark, removeBookmark, saveRecommendedJobs, getTargetCareer, setTargetCareer, registerDevice, removeDevice } = require('../controllers/userController');
 const { authenticate } = require('../middleware/auth');
 
 // 모든 /api/user 라우트는 인증 필요
@@ -189,6 +189,55 @@ router.post('/bookmarks/:jobCode', addBookmark);
  */
 router.delete('/bookmarks/:jobCode', removeBookmark);
 router.post('/recommended-jobs', saveRecommendedJobs);
+
+/**
+ * @swagger
+ * /api/user/target-career:
+ *   get:
+ *     summary: 목표 진로 조회
+ *     description: refType이 jobCode이면 job_info에서 직업 정보도 함께 반환합니다.
+ *     tags: [User]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: 목표 진로 정보 반환 (미설정 시 targetCareer=null)
+ */
+router.get('/target-career', getTargetCareer);
+
+/**
+ * @swagger
+ * /api/user/target-career:
+ *   put:
+ *     summary: 목표 진로 설정/변경/삭제
+ *     tags: [User]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             oneOf:
+ *               - type: object
+ *                 required: [refType, ref]
+ *                 properties:
+ *                   refType:
+ *                     type: string
+ *                     enum: [jobCode, custom]
+ *                   ref:
+ *                     type: string
+ *                     example: "013601"
+ *               - type: "null"
+ *     responses:
+ *       200:
+ *         description: 목표 진로 설정 완료
+ *       400:
+ *         description: 잘못된 요청
+ *       404:
+ *         description: 존재하지 않는 jobCode
+ */
+router.put('/target-career', setTargetCareer);
 
 /**
  * @swagger

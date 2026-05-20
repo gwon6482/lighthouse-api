@@ -89,6 +89,14 @@ const UserSchema = new mongoose.Schema({
     default: []
   },
 
+  // 목표 진로
+  // refType: 'jobCode' → job_data DB job_info 컬렉션의 jobCode 참조
+  // refType: 'custom'  → 추후 custom_career 컬렉션 UID 참조 (진로백과에 없는 직업)
+  targetCareer: {
+    refType: { type: String, enum: ['jobCode', 'custom'] },
+    ref:     { type: String }
+  },
+
   // 진로설계 (미구현 — 추후 careerDesign 컬렉션 UID로 교체)
   careerDesigns: {
     type: [String],

@@ -231,6 +231,88 @@ const saveRecommendedJobs = async (req, res, next) => {
   }
 };
 
+// GET /api/user/target-career — 목표 진로 조회
+// refType === 'jobCode'이면 job_info에서 직업 정보도 함께 반환
+const getTargetCareer = async (req, res, next) => {
+  try {
+    const user = await User.findOne({ uid: req.user.uid });
+    if (!user) {
+      return res.status(404).json({ success: false, error: '유저를 찾을 수 없습니다' });
+    }
+
+    const tc = user.targetCareer;
+    if (!tc?.ref) {
+      return res.json({ success: true, targetCareer: null });
+    }
+
+    if (tc.refType === 'jobCode') {
+      const JobInfo = getJobInfoModel();
+      const job = await JobInfo.findOne(
+        { jobCode: tc.ref },
+        { jobCode: 1, title: 1, classification: 1 }
+      ).lean();
+      return res.json({
+        success: true,
+        targetCareer: {
+          refType: 'jobCode',
+          ref: tc.ref,
+          title: job?.title ?? tc.ref,
+          classification: job?.classification ?? null,
+        },
+      });
+    }
+
+    // custom 타입 (추후 custom_career 컬렉션 조회로 교체)
+    return res.json({
+      success: true,
+      targetCareer: { refType: 'custom', ref: tc.ref, title: null },
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
+// PUT /api/user/target-career — 목표 진로 설정/변경/삭제
+// body: { refType: 'jobCode'|'custom', ref: string } 또는 null (삭제)
+const setTargetCareer = async (req, res, next) => {
+  try {
+    const user = await User.findOne({ uid: req.user.uid });
+    if (!user) {
+      return res.status(404).json({ success: false, error: '유저를 찾을 수 없습니다' });
+    }
+
+    const body = req.body; // null이면 삭제
+    if (body === null || body === undefined || !body.ref) {
+      user.targetCareer = undefined;
+      await user.save();
+      return res.json({ success: true, targetCareer: null });
+    }
+
+    const { refType, ref } = body;
+    if (!['jobCode', 'custom'].includes(refType)) {
+      return res.status(400).json({ success: false, error: 'refType은 jobCode 또는 custom이어야 합니다' });
+    }
+    if (!ref || typeof ref !== 'string') {
+      return res.status(400).json({ success: false, error: 'ref 값이 필요합니다' });
+    }
+
+    if (refType === 'jobCode') {
+      const JobInfo = getJobInfoModel();
+      const exists = await JobInfo.exists({ jobCode: ref });
+      if (!exists) {
+        return res.status(404).json({ success: false, error: '존재하지 않는 jobCode입니다' });
+      }
+    }
+
+    user.targetCareer = { refType, ref };
+    await user.save();
+
+    res.json({ success: true, targetCareer: { refType, ref } });
+  } catch (err) {
+    next(err);
+  }
+};
+
 // POST /api/user/devices — FCM 기기 토큰 등록/갱신
 const registerDevice = async (req, res, next) => {
   try {
@@ -293,5 +375,6 @@ module.exports = {
   addSurveyResult, getSurveyResults,
   getBookmarks, addBookmark, removeBookmark,
   saveRecommendedJobs,
+  getTargetCareer, setTargetCareer,
   registerDevice, removeDevice,
 };
