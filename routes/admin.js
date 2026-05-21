@@ -12,6 +12,7 @@ const {
   updateAdminT1Type
 } = require('../controllers/adminController');
 const { getAdminReviews, createAdminReview, updateAdminReview, deleteAdminReview } = require('../controllers/reviewController');
+const { createDuty, updateDuty, deleteDuty } = require('../controllers/dutyController');
 
 /**
  * @swagger
@@ -367,5 +368,62 @@ router.get('/reviews', getAdminReviews);
 router.post('/reviews', createAdminReview);
 router.put('/reviews/:id', updateAdminReview);
 router.delete('/reviews/:id', deleteAdminReview);
+
+/**
+ * @swagger
+ * /api/admin/duties:
+ *   post:
+ *     summary: 직무 등록
+ *     tags: [Admin]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [name]
+ *             properties:
+ *               name:     { type: string }
+ *               category: { type: string }
+ *               keywords: { type: array, items: { type: string } }
+ *     responses:
+ *       201:
+ *         description: 생성 성공
+ */
+router.post('/duties', createDuty);
+
+/**
+ * @swagger
+ * /api/admin/duties/{id}:
+ *   put:
+ *     summary: 직무 수정
+ *     tags: [Admin]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema: { type: string }
+ *     responses:
+ *       200:
+ *         description: 수정 성공
+ */
+router.put('/duties/:id', updateDuty);
+
+/**
+ * @swagger
+ * /api/admin/duties/{id}:
+ *   delete:
+ *     summary: 직무 비활성화
+ *     tags: [Admin]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema: { type: string }
+ *     responses:
+ *       200:
+ *         description: 비활성화 성공
+ */
+router.delete('/duties/:id', deleteDuty);
 
 module.exports = router; 

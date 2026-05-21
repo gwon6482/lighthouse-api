@@ -18,6 +18,8 @@ const jobRoutes = require('./routes/job');
 const referenceRoutes = require('./routes/reference');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
+const careerPlanRoutes = require('./routes/careerPlan');
+const dutiesRoutes = require('./routes/duties');
 
 const app = express();
 
@@ -86,6 +88,8 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/survey', surveyRoutes);
 app.use('/api/job', jobRoutes);
 app.use('/api/reference', referenceRoutes);
+app.use('/api/career-plan', careerPlanRoutes);
+app.use('/api/duties', dutiesRoutes);
 
 // 기본 라우트
 /**
