@@ -1,5 +1,6 @@
 const crypto = require('crypto');
 const CareerPlan = require('../models/CareerPlan');
+const PublicCareerPlan = require('../models/PublicCareerPlan');
 const User = require('../models/User');
 
 // DB { month, projectIds } → FE { month, projects: Project[] } 변환
@@ -221,6 +222,21 @@ const saveTimeline = async (req, res, next) => {
   }
 };
 
+// ── GET /api/career-plan/templates ──────────────────────────
+// 공개 템플릿 목록 조회 (인증 불필요)
+const getTemplates = async (req, res, next) => {
+  try {
+    const { q } = req.query;
+    const filter = { isActive: true };
+    if (q) filter.$text = { $search: q };
+
+    const plans = await PublicCareerPlan.find(filter).sort({ likes: -1 }).limit(20);
+    res.json({ success: true, plans });
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   createPlan,
   updatePlan,
@@ -230,5 +246,6 @@ module.exports = {
   addProject,
   updateProject,
   deleteProject,
-  saveTimeline
+  saveTimeline,
+  getTemplates
 };

@@ -3,8 +3,26 @@ const router = express.Router();
 const { authenticate } = require('../middleware/auth');
 const {
   createPlan, updatePlan, getMyPlans, getPlan, deletePlan,
-  addProject, updateProject, deleteProject, saveTimeline
+  addProject, updateProject, deleteProject, saveTimeline,
+  getTemplates
 } = require('../controllers/careerPlanController');
+
+/**
+ * @swagger
+ * /api/career-plan/templates:
+ *   get:
+ *     summary: 공개 진로계획 템플릿 목록 (인증 불필요)
+ *     tags: [CareerPlan]
+ *     parameters:
+ *       - in: query
+ *         name: q
+ *         schema: { type: string }
+ *         description: 검색어 (풀텍스트)
+ *     responses:
+ *       200:
+ *         description: 템플릿 목록 반환
+ */
+router.get('/templates', getTemplates);
 
 router.use(authenticate);
 
