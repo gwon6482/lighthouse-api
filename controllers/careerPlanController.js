@@ -112,14 +112,14 @@ const deletePlan = async (req, res, next) => {
 const addProject = async (req, res, next) => {
   try {
     const { planId } = req.params;
-    const { name, category, goal, days, startTime, endTime, curriculum } = req.body;
+    const { id, name, category, goal, days, startTime, endTime, curriculum } = req.body;
 
     if (!name || !category) {
       return res.status(400).json({ success: false, error: 'name과 category는 필수입니다' });
     }
 
     const project = {
-      id: crypto.randomUUID(),
+      id:         id || crypto.randomUUID(),
       name,
       category,
       goal:       goal       || '',
@@ -137,6 +137,41 @@ const addProject = async (req, res, next) => {
     if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
 
     res.status(201).json({ success: true, project, plan });
+  } catch (err) {
+    next(err);
+  }
+};
+
+// ── POST /api/career-plan/:planId/projects/bulk ──────────────
+// 프로젝트 일괄 등록 (붙여넣기 후 일괄 동기화용)
+const bulkAddProjects = async (req, res, next) => {
+  try {
+    const { planId } = req.params;
+    const { projects } = req.body;
+
+    if (!Array.isArray(projects) || projects.length === 0) {
+      return res.status(400).json({ success: false, error: 'projects는 비어있지 않은 배열이어야 합니다' });
+    }
+
+    const normalized = projects.map(p => ({
+      id:         p.id || crypto.randomUUID(),
+      name:       p.name || '',
+      category:   p.category || 'knowledge',
+      goal:       p.goal || '',
+      days:       p.days || [],
+      startTime:  p.startTime || '',
+      endTime:    p.endTime || '',
+      curriculum: p.curriculum || []
+    })).filter(p => p.name && p.category);
+
+    const plan = await CareerPlan.findOneAndUpdate(
+      { planId, userUid: req.user.uid },
+      { $push: { projects: { $each: normalized } } },
+      { new: true }
+    );
+    if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
+
+    res.status(201).json({ success: true, projects: normalized, plan });
   } catch (err) {
     next(err);
   }
@@ -244,6 +279,7 @@ module.exports = {
   getPlan,
   deletePlan,
   addProject,
+  bulkAddProjects,
   updateProject,
   deleteProject,
   saveTimeline,

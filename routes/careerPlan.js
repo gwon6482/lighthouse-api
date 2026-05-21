@@ -3,7 +3,7 @@ const router = express.Router();
 const { authenticate } = require('../middleware/auth');
 const {
   createPlan, updatePlan, getMyPlans, getPlan, deletePlan,
-  addProject, updateProject, deleteProject, saveTimeline,
+  addProject, bulkAddProjects, updateProject, deleteProject, saveTimeline,
   getTemplates
 } = require('../controllers/careerPlanController');
 
@@ -177,6 +177,7 @@ router.delete('/:planId', deletePlan);
  *         description: 추가 성공
  */
 router.post('/:planId/projects', addProject);
+router.post('/:planId/projects/bulk', bulkAddProjects);
 
 /**
  * @swagger
