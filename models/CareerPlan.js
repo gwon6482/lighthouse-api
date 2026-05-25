@@ -35,6 +35,19 @@ const TimelineSlotSchema = new mongoose.Schema({
   projectIds: { type: [String], default: [] }
 }, { _id: false });
 
+// ── 루틴 서브스키마 ──────────────────────────────────────────
+// 진로계획이 끝날 때까지 매일 꾸준히 반복하는 규칙
+
+const RoutineSchema = new mongoose.Schema({
+  id:               { type: String, default: () => crypto.randomUUID() },
+  name:             { type: String, required: true, trim: true },
+  days:             { type: [String], default: [] },
+  duration:         { type: Number, default: 30 },
+  notificationTime: { type: String, default: '09:00' },
+  notification:     { type: Boolean, default: false },
+  memo:             { type: String, default: '' }
+}, { _id: false });
+
 // ── 진로계획 메인 스키마 ─────────────────────────────────────
 
 const CareerPlanSchema = new mongoose.Schema({
@@ -53,6 +66,7 @@ const CareerPlanSchema = new mongoose.Schema({
   startDate:  { type: String, default: '' },   // 'YYYY-MM'
   endDate:    { type: String, default: '' },   // 'YYYY-MM'
   projects:   { type: [ProjectSchema], default: [] },
+  routines:   { type: [RoutineSchema], default: [] },
   timeline:   { type: [TimelineSlotSchema], default: [] },
   status: {
     type: String,

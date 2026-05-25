@@ -3,7 +3,9 @@ const router = express.Router();
 const { authenticate } = require('../middleware/auth');
 const {
   createPlan, updatePlan, getMyPlans, getPlan, deletePlan,
-  addProject, bulkAddProjects, updateProject, deleteProject, saveTimeline,
+  addProject, bulkAddProjects, updateProject, deleteProject,
+  addRoutine, updateRoutine, deleteRoutine,
+  saveTimeline,
   getTemplates
 } = require('../controllers/careerPlanController');
 
@@ -50,7 +52,6 @@ router.use(authenticate);
  *             properties:
  *               name:      { type: string }
  *               targetJob: { type: string }
- *               duties:    { type: array, items: { type: string } }
  *               startDate: { type: string, example: "2026-03" }
  *               endDate:   { type: string, example: "2026-12" }
  *     responses:
@@ -115,7 +116,6 @@ router.get('/:planId', getPlan);
  *             properties:
  *               name:      { type: string }
  *               targetJob: { type: string }
- *               duties:    { type: array, items: { type: string } }
  *               startDate: { type: string }
  *               endDate:   { type: string }
  *               status:    { type: string, enum: [draft, active, completed] }
@@ -224,6 +224,85 @@ router.put('/:planId/projects/:projId', updateProject);
  *         description: 삭제 성공
  */
 router.delete('/:planId/projects/:projId', deleteProject);
+
+/**
+ * @swagger
+ * /api/career-plan/{planId}/routines:
+ *   post:
+ *     summary: 루틴 추가
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: planId
+ *         required: true
+ *         schema: { type: string }
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [name]
+ *             properties:
+ *               name:             { type: string }
+ *               days:             { type: array, items: { type: string } }
+ *               duration:         { type: integer }
+ *               notificationTime: { type: string, example: "09:00" }
+ *               notification:     { type: boolean }
+ *               memo:             { type: string }
+ *     responses:
+ *       201:
+ *         description: 추가 성공
+ */
+router.post('/:planId/routines', addRoutine);
+
+/**
+ * @swagger
+ * /api/career-plan/{planId}/routines/{routineId}:
+ *   put:
+ *     summary: 루틴 수정
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: planId
+ *         required: true
+ *         schema: { type: string }
+ *       - in: path
+ *         name: routineId
+ *         required: true
+ *         schema: { type: string }
+ *     responses:
+ *       200:
+ *         description: 수정 성공
+ */
+router.put('/:planId/routines/:routineId', updateRoutine);
+
+/**
+ * @swagger
+ * /api/career-plan/{planId}/routines/{routineId}:
+ *   delete:
+ *     summary: 루틴 삭제
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: planId
+ *         required: true
+ *         schema: { type: string }
+ *       - in: path
+ *         name: routineId
+ *         required: true
+ *         schema: { type: string }
+ *     responses:
+ *       200:
+ *         description: 삭제 성공
+ */
+router.delete('/:planId/routines/:routineId', deleteRoutine);
 
 /**
  * @swagger

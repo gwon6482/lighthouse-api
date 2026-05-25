@@ -225,6 +225,84 @@ const deleteProject = async (req, res, next) => {
   }
 };
 
+// ── POST /api/career-plan/:planId/routines ───────────────────
+// 루틴 추가
+const addRoutine = async (req, res, next) => {
+  try {
+    const { planId } = req.params;
+    const { id, name, days, duration, notificationTime, notification, memo } = req.body;
+
+    if (!name) {
+      return res.status(400).json({ success: false, error: 'name은 필수입니다' });
+    }
+
+    const routine = {
+      id:               id || crypto.randomUUID(),
+      name,
+      days:             days             || [],
+      duration:         duration         ?? 30,
+      notificationTime: notificationTime || '09:00',
+      notification:     notification     ?? false,
+      memo:             memo             || ''
+    };
+
+    const plan = await CareerPlan.findOneAndUpdate(
+      { planId, userUid: req.user.uid },
+      { $push: { routines: routine } },
+      { new: true }
+    );
+    if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
+
+    res.status(201).json({ success: true, routine, plan });
+  } catch (err) {
+    next(err);
+  }
+};
+
+// ── PUT /api/career-plan/:planId/routines/:routineId ─────────
+// 루틴 수정
+const updateRoutine = async (req, res, next) => {
+  try {
+    const { planId, routineId } = req.params;
+    const allowed = ['name', 'days', 'duration', 'notificationTime', 'notification', 'memo'];
+    const setFields = {};
+    for (const key of allowed) {
+      if (req.body[key] !== undefined) setFields[`routines.$.${key}`] = req.body[key];
+    }
+
+    const plan = await CareerPlan.findOneAndUpdate(
+      { planId, userUid: req.user.uid, 'routines.id': routineId },
+      { $set: setFields },
+      { new: true }
+    );
+    if (!plan) return res.status(404).json({ success: false, error: '루틴을 찾을 수 없습니다' });
+
+    const updated = plan.routines.find(r => r.id === routineId);
+    res.json({ success: true, routine: updated, plan });
+  } catch (err) {
+    next(err);
+  }
+};
+
+// ── DELETE /api/career-plan/:planId/routines/:routineId ──────
+// 루틴 삭제
+const deleteRoutine = async (req, res, next) => {
+  try {
+    const { planId, routineId } = req.params;
+
+    const plan = await CareerPlan.findOneAndUpdate(
+      { planId, userUid: req.user.uid },
+      { $pull: { routines: { id: routineId } } },
+      { new: true }
+    );
+    if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
+
+    res.json({ success: true, message: '루틴이 삭제되었습니다', plan });
+  } catch (err) {
+    next(err);
+  }
+};
+
 // ── STEP 3: PUT /api/career-plan/:planId/timeline ────────────
 // FE가 보내는 { month, projects: Project[] } 형식을
 // DB 저장 형식 { month, projectIds: string[] } 로 변환해 저장
@@ -281,6 +359,9 @@ module.exports = {
   bulkAddProjects,
   updateProject,
   deleteProject,
+  addRoutine,
+  updateRoutine,
+  deleteRoutine,
   saveTimeline,
   getTemplates
 };
