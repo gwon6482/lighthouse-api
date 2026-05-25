@@ -19,12 +19,11 @@ function _withPopulatedTimeline(plan) {
 // 계획 초안 생성. name/targetJob/duties/startDate/endDate 받음
 const createPlan = async (req, res, next) => {
   try {
-    const { name, targetJob, duties, startDate, endDate } = req.body;
+    const { name, targetJob, startDate, endDate } = req.body;
     const plan = await CareerPlan.create({
       userUid: req.user.uid,
       name:      name      || '',
       targetJob: targetJob || '',
-      duties:    duties    || [],
       startDate: startDate || '',
       endDate:   endDate   || '',
       status: 'draft'
@@ -47,7 +46,7 @@ const createPlan = async (req, res, next) => {
 const updatePlan = async (req, res, next) => {
   try {
     const { planId } = req.params;
-    const allowed = ['name', 'targetJob', 'duties', 'startDate', 'endDate', 'status'];
+    const allowed = ['name', 'targetJob', 'startDate', 'endDate', 'status'];
     const update = {};
     for (const key of allowed) {
       if (req.body[key] !== undefined) update[key] = req.body[key];

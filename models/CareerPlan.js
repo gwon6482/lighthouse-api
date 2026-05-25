@@ -50,7 +50,6 @@ const CareerPlanSchema = new mongoose.Schema({
   },
   name:       { type: String, default: '' },
   targetJob:  { type: String, default: '' },
-  duties:     { type: [String], default: [] },
   startDate:  { type: String, default: '' },   // 'YYYY-MM'
   endDate:    { type: String, default: '' },   // 'YYYY-MM'
   projects:   { type: [ProjectSchema], default: [] },
