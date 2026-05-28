@@ -8,6 +8,9 @@ const {
   saveTimeline,
   getTemplates
 } = require('../controllers/careerPlanController');
+const {
+  listSchedules, getSchedule, createSchedule, updateSchedule, deleteSchedule
+} = require('../controllers/weeklyScheduleController');
 
 /**
  * @swagger
@@ -337,5 +340,72 @@ router.delete('/:planId/routines/:routineId', deleteRoutine);
  *         description: 저장 성공
  */
 router.put('/:planId/timeline', saveTimeline);
+
+/**
+ * @swagger
+ * /api/career-plan/{planId}/weekly-schedule:
+ *   get:
+ *     summary: 주간 일정 목록 (weekStart desc)
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: planId
+ *         required: true
+ *         schema: { type: string }
+ *     responses:
+ *       200:
+ *         description: 주간 일정 목록
+ *   post:
+ *     summary: 주간 일정 생성 (해당 주가 이미 있으면 409)
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: planId
+ *         required: true
+ *         schema: { type: string }
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [weekStart, weekEnd]
+ *             properties:
+ *               weekStart: { type: string, example: "2026-05-26" }
+ *               weekEnd:   { type: string, example: "2026-06-01" }
+ *               items:     { type: array }
+ *     responses:
+ *       201: { description: 생성 성공 }
+ *       409: { description: 해당 주의 일정이 이미 존재 }
+ */
+router.get('/:planId/weekly-schedule', listSchedules);
+router.post('/:planId/weekly-schedule', createSchedule);
+
+/**
+ * @swagger
+ * /api/career-plan/{planId}/weekly-schedule/{weekStart}:
+ *   get:
+ *     summary: 특정 주의 일정 조회 (없으면 schedule=null 반환)
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *   put:
+ *     summary: 주간 일정 수정 (items / weekEnd / reviewNote / status)
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *   delete:
+ *     summary: 주간 일정 삭제
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ */
+router.get('/:planId/weekly-schedule/:weekStart', getSchedule);
+router.put('/:planId/weekly-schedule/:weekStart', updateSchedule);
+router.delete('/:planId/weekly-schedule/:weekStart', deleteSchedule);
 
 module.exports = router;

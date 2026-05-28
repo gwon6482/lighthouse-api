@@ -63,8 +63,9 @@ const CareerPlanSchema = new mongoose.Schema({
   },
   name:       { type: String, default: '' },
   targetJob:  { type: String, default: '' },
-  startDate:  { type: String, default: '' },   // 'YYYY-MM'
-  endDate:    { type: String, default: '' },   // 'YYYY-MM'
+  startDate:  { type: String, default: '' },   // 'YYYY-MM' 또는 'YYYY-MM-DD'
+  endDate:    { type: String, default: '' },   // 'YYYY-MM' 또는 'YYYY-MM-DD'
+  reviewDay:  { type: String, default: '' },   // 주간리뷰 요일 ('월'|'화'|...|'일'). 일주일의 끝이자 시작
   projects:   { type: [ProjectSchema], default: [] },
   routines:   { type: [RoutineSchema], default: [] },
   timeline:   { type: [TimelineSlotSchema], default: [] },
