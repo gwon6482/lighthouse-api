@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { register, login, logout, me } = require('../controllers/authController');
+const { register, checkEmail, login, logout, me } = require('../controllers/authController');
 const { authenticate } = require('../middleware/auth');
 
 /**
@@ -39,6 +39,27 @@ const { authenticate } = require('../middleware/auth');
  *         description: 이미 존재하는 이메일
  */
 router.post('/register', register);
+
+/**
+ * @swagger
+ * /api/auth/check-email:
+ *   get:
+ *     summary: 이메일 사용 가능 여부 확인
+ *     tags: [Auth]
+ *     parameters:
+ *       - in: query
+ *         name: email
+ *         required: true
+ *         schema:
+ *           type: string
+ *         example: user@example.com
+ *     responses:
+ *       200:
+ *         description: "{ available: true } 사용 가능 / false 이미 사용 중"
+ *       400:
+ *         description: 이메일 미입력
+ */
+router.get('/check-email', checkEmail);
 
 /**
  * @swagger

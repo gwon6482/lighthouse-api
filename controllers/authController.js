@@ -45,6 +45,21 @@ const register = async (req, res, next) => {
   }
 };
 
+// GET /api/auth/check-email?email=
+// 회원가입 입력 단계에서 이메일 중복 여부를 미리 확인
+const checkEmail = async (req, res, next) => {
+  try {
+    const email = (req.query.email || '').toLowerCase().trim();
+    if (!email) {
+      return res.status(400).json({ success: false, error: '이메일을 입력해주세요' });
+    }
+    const existing = await User.findOne({ email });
+    res.json({ success: true, available: !existing });
+  } catch (err) {
+    next(err);
+  }
+};
+
 // POST /api/auth/login
 const login = async (req, res, next) => {
   try {
@@ -100,4 +115,4 @@ const me = async (req, res, next) => {
   }
 };
 
-module.exports = { register, login, logout, me };
+module.exports = { register, checkEmail, login, logout, me };
