@@ -18,8 +18,17 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: 22
           script: |
-            cd /root/lighthouse_project/lighthouse_DB_API
+            cd /root/lighthouse_project
+            # 네이밍 표준화: 구 디렉토리명이면 1회 rename (멱등)
+            if [ -d lighthouse_DB_API ] && [ ! -d lighthouse-api ]; then
+              mv lighthouse_DB_API lighthouse-api
+            fi
+            cd lighthouse-api
+            git remote set-url origin https://github.com/gwon6482/lighthouse-api.git
             git fetch origin main
             git reset --hard origin/main
             npm install --omit=dev
-            pm2 reload lighthouse-db-api --update-env
+            # pm2 프로세스명 표준화: 구 이름이 떠 있으면 정리 후 신규 기동 (멱등)
+            pm2 delete lighthouse-db-api 2>/dev/null || true
+            pm2 startOrReload ecosystem.config.js --update-env
+            pm2 save

@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'lighthouse-db-api',
+      name: 'lighthouse-api',
       script: 'server.js',
       instances: 'max', // CPU 코어 수만큼 인스턴스 생성
       exec_mode: 'cluster', // 클러스터 모드로 실행
