@@ -11,6 +11,10 @@ const {
 const {
   listSchedules, getSchedule, createSchedule, updateSchedule, deleteSchedule
 } = require('../controllers/weeklyScheduleController');
+const {
+  listAchievements, upsertAchievement, deleteAchievement,
+  listCurriculum, upsertCurriculum, presignUpload
+} = require('../controllers/achievementController');
 
 /**
  * @swagger
@@ -407,5 +411,86 @@ router.post('/:planId/weekly-schedule', createSchedule);
 router.get('/:planId/weekly-schedule/:weekStart', getSchedule);
 router.put('/:planId/weekly-schedule/:weekStart', updateSchedule);
 router.delete('/:planId/weekly-schedule/:weekStart', deleteSchedule);
+
+/**
+ * @swagger
+ * /api/career-plan/uploads/presign:
+ *   post:
+ *     summary: 인증사진 S3 업로드용 presigned URL 발급
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               contentType: { type: string, example: image/jpeg }
+ *     responses:
+ *       200:
+ *         description: "{ uploadUrl, fileUrl, key } 반환 (uploadUrl 로 PUT 후 fileUrl 저장)"
+ */
+router.post('/uploads/presign', presignUpload);
+
+/**
+ * @swagger
+ * /api/career-plan/{planId}/achievements:
+ *   get:
+ *     summary: 진로달성 기록 목록 (from/to 범위, 피드/완료상태 복원용)
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: planId
+ *         schema: { type: string }
+ *         required: true
+ *       - in: query
+ *         name: from
+ *         schema: { type: string }
+ *         description: "YYYY-MM-DD (이상)"
+ *       - in: query
+ *         name: to
+ *         schema: { type: string }
+ *         description: "YYYY-MM-DD (이하)"
+ *     responses:
+ *       200:
+ *         description: "{ records: [...] }"
+ *
+ * /api/career-plan/{planId}/achievements/{date}/{itemType}/{itemId}:
+ *   put:
+ *     summary: 달성 기록 upsert (완료 토글 또는 인증 기록)
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *   delete:
+ *     summary: 달성 기록 삭제 (완료 토글 off)
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ */
+router.get('/:planId/achievements', listAchievements);
+router.put('/:planId/achievements/:date/:itemType/:itemId', upsertAchievement);
+router.delete('/:planId/achievements/:date/:itemType/:itemId', deleteAchievement);
+
+/**
+ * @swagger
+ * /api/career-plan/{planId}/curriculum:
+ *   get:
+ *     summary: 커리큘럼 항목 완료 목록
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *
+ * /api/career-plan/{planId}/curriculum/{projectId}/{week}/{idx}:
+ *   put:
+ *     summary: 커리큘럼 항목 완료 토글 (body.done=false 면 해제)
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ */
+router.get('/:planId/curriculum', listCurriculum);
+router.put('/:planId/curriculum/:projectId/:week/:idx', upsertCurriculum);
 
 module.exports = router;
