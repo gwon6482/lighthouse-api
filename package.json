@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "MongoDB와 소통하는 Express 기반 API 서버",
   "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "cross-env PORT=4000 nodemon server.js",

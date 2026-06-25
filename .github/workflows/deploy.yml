@@ -1,34 +1,44 @@
-﻿name: Deploy BE to Home Server
+name: Build & Publish API image
+
+# main push → Docker 이미지 빌드 → GitHub Container Registry(ghcr.io) 푸시
+# 컴퓨트(Lightsail 등) 배포 단계는 리소스 생성 후 별도 단계로 추가 예정.
+# (기존 SSH→홈서버 pm2 방식 폐기. 홈서버 의존 제거)
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  packages: write   # ghcr.io 푸시
+
+env:
+  IMAGE: ghcr.io/gwon6482/lighthouse-api
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.3
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: 22
-          script: |
-            cd /root/lighthouse_project
-            # 네이밍 표준화: 구 디렉토리명이면 1회 rename (멱등)
-            if [ -d lighthouse_DB_API ] && [ ! -d lighthouse-api ]; then
-              mv lighthouse_DB_API lighthouse-api
-            fi
-            cd lighthouse-api
-            git remote set-url origin https://github.com/gwon6482/lighthouse-api.git
-            git fetch origin main
-            git reset --hard origin/main
-            npm install --omit=dev
-            # pm2 프로세스명 표준화: 구 이름이 떠 있으면 정리 후 신규 기동 (멱등)
-            pm2 delete lighthouse-db-api 2>/dev/null || true
-            pm2 startOrReload ecosystem.config.js --update-env
-            pm2 save
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push image (sha + latest)
+        run: |
+          docker build -t "$IMAGE:${{ github.sha }}" -t "$IMAGE:latest" .
+          docker push "$IMAGE:${{ github.sha }}"
+          docker push "$IMAGE:latest"
+          echo "pushed $IMAGE:${{ github.sha }}"
+
+      # TODO(배포): Lightsail 컨테이너 서비스 생성 후 아래 형태의 단계 추가
+      #   - aws lightsail create-container-service-deployment 로 위 이미지를 배포
+      #   - 컨테이너 env(MONGODB_URI/JWT_SECRET 등)는 GitHub Secrets에서 주입
+      #   - public-endpoint healthCheck path = /api/health, containerPort = 8080

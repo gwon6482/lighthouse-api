@@ -1,51 +1,27 @@
-# 우분투 22.04 LTS를 기반으로 사용
-FROM ubuntu:22.04
-
-# 환경 변수 설정
-ENV NODE_VERSION=18.19.0
-ENV NPM_VERSION=10.2.4
-ENV PM2_VERSION=5.3.0
-
-# 패키지 업데이트 및 필요한 패키지 설치
-RUN apt-get update && apt-get install -y \
-    curl \
-    wget \
-    git \
-    build-essential \
-    python3 \
-    ca-certificates \
+# syntax=docker/dockerfile:1
+# ── Stage 1: 의존성 설치 (네이티브 모듈 bcrypt 빌드 보장) ──
+FROM node:20-slim AS deps
+WORKDIR /app
+# bcrypt 등 네이티브 모듈에 prebuild 없을 때를 대비한 빌드 도구
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      python3 build-essential \
     && rm -rf /var/lib/apt/lists/*
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
 
-# Node.js 설치
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
-    && apt-get install -y nodejs
-
-# npm 업데이트
-RUN npm install -g npm@${NPM_VERSION}
-
-# PM2 글로벌 설치
-RUN npm install -g pm2@${PM2_VERSION}
-
-# 작업 디렉토리 생성
+# ── Stage 2: 런타임 (슬림) ──
+FROM node:20-slim AS runtime
+ENV NODE_ENV=production
+# App Runner 기본 포트. server.js 는 process.env.PORT 를 사용한다.
+ENV PORT=8080
 WORKDIR /app
 
-# package.json과 package-lock.json 복사
-COPY package*.json ./
+# 비루트 사용자로 실행
+COPY --chown=node:node --from=deps /app/node_modules ./node_modules
+COPY --chown=node:node . .
+USER node
 
-# 의존성 설치
-RUN npm ci --only=production
+EXPOSE 8080
 
-# 애플리케이션 소스 코드 복사
-COPY . .
-
-# 로그 디렉토리 생성
-RUN mkdir -p logs
-
-# 포트 노출
-EXPOSE 3000
-
-# PM2 설정 파일 복사
-COPY ecosystem.config.js ./
-
-# PM2를 통한 애플리케이션 시작
-CMD ["pm2-runtime", "start", "ecosystem.config.js", "--env", "production"] 
+# pm2 없이 단일 프로세스로 실행 — 스케일/재시작은 App Runner가 담당
+CMD ["node", "server.js"]

@@ -1,6 +1,7 @@
 # Git 관련
 .git
 .gitignore
+.github/
 
 # Node.js 관련
 node_modules
@@ -14,6 +15,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+env.example
 
 # 로그 파일
 logs/
@@ -43,8 +45,23 @@ coverage/
 # 문서
 README.md
 *.md
+docs/
+
+# 대용량 DB 덤프/데이터 (런타임 비의존 — 이미지에서 제외)
+dump/
+mongo-init/
+*.tar
+*.bson
+
+# 일회성 스크립트/시드 (런타임 비의존)
+scripts/
+cc_logs/
+.claude/
+test-responses/
 
 # 도커 관련
 Dockerfile
 .dockerignore
-docker-compose*.yml 
+docker-compose*.yml
+ecosystem.config.js
+vercel.json
