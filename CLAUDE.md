@@ -1,8 +1,10 @@
 # Lighthouse API (`lighthouse-api`) - Claude 참조 문서
 
 > 네이밍 표준화(2026-06-15): 구 `lighthouse_DB_API` → `lighthouse-api`.
-> 레포 `lighthouse-api` / pm2 `lighthouse-api`(cluster) / 서버경로 `/root/lighthouse_project/lighthouse-api` / port 3000.
-> `main` push → GitHub Actions 자동 배포. 전체 매핑은 루트 `NAMING.md`.
+> 배포(2026-06-25 클라우드 이전): `main` push → GitHub Actions(`Build & Deploy API`) → Docker 빌드
+> → `ghcr.io/gwon6482/lighthouse-api`(public) → **AWS Lightsail 컨테이너** `lighthouse-api`(ap-northeast-2 서울, nano, port 8080) 자동 재배포.
+> env는 GitHub Secrets(MONGODB_URI/JWT_SECRET/AWS_*). DB=MongoDB Atlas. 구 홈서버 pm2/port 3000 방식 폐기.
+> 전체 매핑은 루트 `NAMING.md`.
 
 ## 프로젝트 공유 문서
 
