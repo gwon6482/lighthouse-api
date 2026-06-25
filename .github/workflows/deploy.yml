@@ -54,6 +54,8 @@ jobs:
           IMAGE_REF: ${{ env.IMAGE }}:${{ github.sha }}
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           # 시크릿 노출 방지: python 으로 env 에서 직접 읽어 배포 스펙 작성
           python3 - <<'PY'
@@ -69,6 +71,13 @@ jobs:
                   "MONGODB_URI": os.environ["MONGODB_URI"],
                   "JWT_SECRET": os.environ["JWT_SECRET"],
                   "JWT_EXPIRES_IN": "7d",
+                  # S3 인증사진 업로드(진로달성). bucket/public-base는 env.example 문서값 — 기능 런칭 시 검증 필요
+                  "AWS_REGION": os.environ["AWS_REGION"],
+                  "AWS_ACCESS_KEY_ID": os.environ["AWS_ACCESS_KEY_ID"],
+                  "AWS_SECRET_ACCESS_KEY": os.environ["AWS_SECRET_ACCESS_KEY"],
+                  "S3_UPLOAD_BUCKET": "lighthouse-career-fe",
+                  "S3_UPLOAD_PREFIX": "uploads",
+                  "S3_UPLOAD_PUBLIC_BASE": "https://lighthouse.career",
                 },
                 "ports": {"8080": "HTTP"},
               }
