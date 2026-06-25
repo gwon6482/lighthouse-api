@@ -129,7 +129,18 @@ git push main
 - **배포 검증**: CI 배포 후 `/api/health` 200 확인 + 실패 시 자동 롤백 단계.
 - **백업/DR**: Atlas 백업 정책 점검(앱은 stateless라 이미지 재배포로 복구).
 
-### 당장의 후속(미결)
-- S3 업로드: `S3_UPLOAD_BUCKET`(lighthouse-career-fe) ↔ `S3_UPLOAD_PUBLIC_BASE`(lighthouse.career) **정합 필요**(사진 기능 런칭 전).
-- 옛 API CloudFront(`EAW8SQWOOJ150`) 콘솔 삭제(고아·무해).
-- **admin.lighthouse.career도 죽은 홈서버 오리진** → 동일 패턴으로 클라우드 이전 필요.
+### S3 업로드(진로달성 인증사진)
+- **현재(옵션 A, 적용됨)**: 전용 버킷 **`lighthouse-uploads`**(ap-northeast-2), `uploads/*` 공개읽기(버킷정책) + CORS(app/test/localhost).
+  - env: `S3_UPLOAD_BUCKET=lighthouse-uploads`, `S3_UPLOAD_PREFIX=uploads`, `S3_UPLOAD_PUBLIC_BASE=https://lighthouse-uploads.s3.ap-northeast-2.amazonaws.com`
+  - 키 형식: `uploads/achievements/{uid}/{uuid}.{ext}` (presign PUT → 공개 GET).
+  - SPA 호스팅 버킷(lighthouse-career-fe/-app)과 분리 → FE 배포 `--delete`에 안 쓸림.
+- **옵션 B(향후 승격): 미디어 CDN 도메인** — 트래픽/이미지 늘면 전환.
+  - `media.lighthouse.career` + CloudFront(OAC로 `lighthouse-uploads` 비공개 origin 읽기) + ACM 인증서 + Route53.
+  - 그러면 버킷 **Block Public Access 전체 ON**으로 되돌리고(직접 공개 차단), 읽기는 CloudFront만 통하도록.
+  - **코드 변경 없이 env `S3_UPLOAD_PUBLIC_BASE`만** `https://media.lighthouse.career` 로 교체하면 A→B 전환.
+  - 이점: CDN 캐시·속도, 깔끔한 URL, origin 비공개(보안↑). 비용: CloudFront 배포 1개 추가.
+  - 주의: CloudFront create-distribution 권한 확인 필요(현 자격증명 미확인).
+
+### 기타 후속(미결)
+- 옛 CloudFront(api `EAW8SQWOOJ150` / admin `E1PH97BDFMT1JF`) 삭제 — 비활성화 후 삭제 진행 중/예정.
+- admin → Vercel 이전 완료(별도).

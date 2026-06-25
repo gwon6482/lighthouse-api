@@ -71,13 +71,13 @@ jobs:
                   "MONGODB_URI": os.environ["MONGODB_URI"],
                   "JWT_SECRET": os.environ["JWT_SECRET"],
                   "JWT_EXPIRES_IN": "7d",
-                  # S3 인증사진 업로드(진로달성). bucket/public-base는 env.example 문서값 — 기능 런칭 시 검증 필요
+                  # S3 인증사진 업로드(진로달성). 전용 버킷 lighthouse-uploads, uploads/* 공개읽기
                   "AWS_REGION": os.environ["AWS_REGION"],
                   "AWS_ACCESS_KEY_ID": os.environ["AWS_ACCESS_KEY_ID"],
                   "AWS_SECRET_ACCESS_KEY": os.environ["AWS_SECRET_ACCESS_KEY"],
-                  "S3_UPLOAD_BUCKET": "lighthouse-career-fe",
+                  "S3_UPLOAD_BUCKET": "lighthouse-uploads",
                   "S3_UPLOAD_PREFIX": "uploads",
-                  "S3_UPLOAD_PUBLIC_BASE": "https://lighthouse.career",
+                  "S3_UPLOAD_PUBLIC_BASE": "https://lighthouse-uploads.s3.ap-northeast-2.amazonaws.com",
                 },
                 "ports": {"8080": "HTTP"},
               }
