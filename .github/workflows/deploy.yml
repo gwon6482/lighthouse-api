@@ -1,7 +1,6 @@
-name: Build & Publish API image
+name: Build & Deploy API
 
-# main push → Docker 이미지 빌드 → GitHub Container Registry(ghcr.io) 푸시
-# 컴퓨트(Lightsail 등) 배포 단계는 리소스 생성 후 별도 단계로 추가 예정.
+# main push → Docker 빌드 → ghcr.io 푸시 → AWS Lightsail 컨테이너 재배포
 # (기존 SSH→홈서버 pm2 방식 폐기. 홈서버 의존 제거)
 
 on:
@@ -16,9 +15,11 @@ permissions:
 
 env:
   IMAGE: ghcr.io/gwon6482/lighthouse-api
+  AWS_REGION: ap-northeast-2
+  LIGHTSAIL_SERVICE: lighthouse-api
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,7 +39,55 @@ jobs:
           docker push "$IMAGE:latest"
           echo "pushed $IMAGE:${{ github.sha }}"
 
-      # TODO(배포): Lightsail 컨테이너 서비스 생성 후 아래 형태의 단계 추가
-      #   - aws lightsail create-container-service-deployment 로 위 이미지를 배포
-      #   - 컨테이너 env(MONGODB_URI/JWT_SECRET 등)는 GitHub Secrets에서 주입
-      #   - public-endpoint healthCheck path = /api/health, containerPort = 8080
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Deploy to Lightsail
+        env:
+          IMAGE_REF: ${{ env.IMAGE }}:${{ github.sha }}
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+        run: |
+          # 시크릿 노출 방지: python 으로 env 에서 직접 읽어 배포 스펙 작성
+          python3 - <<'PY'
+          import os, json
+          spec = {
+            "serviceName": os.environ["LIGHTSAIL_SERVICE"],
+            "containers": {
+              "app": {
+                "image": os.environ["IMAGE_REF"],
+                "environment": {
+                  "NODE_ENV": "production",
+                  "PORT": "8080",
+                  "MONGODB_URI": os.environ["MONGODB_URI"],
+                  "JWT_SECRET": os.environ["JWT_SECRET"],
+                  "JWT_EXPIRES_IN": "7d",
+                },
+                "ports": {"8080": "HTTP"},
+              }
+            },
+            "publicEndpoint": {
+              "containerName": "app",
+              "containerPort": 8080,
+              "healthCheck": {
+                "path": "/api/health",
+                "successCodes": "200-499",
+                "intervalSeconds": 10,
+                "timeoutSeconds": 5,
+                "healthyThreshold": 2,
+                "unhealthyThreshold": 5,
+              },
+            },
+          }
+          with open("deploy.json", "w") as f:
+              json.dump(spec, f)
+          PY
+          aws lightsail create-container-service-deployment \
+            --cli-input-json file://deploy.json \
+            --region "$AWS_REGION"
+          rm -f deploy.json
+          echo "Lightsail deployment 트리거됨: $IMAGE_REF"
