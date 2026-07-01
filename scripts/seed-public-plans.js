@@ -120,7 +120,47 @@ const PLANS = [
       { label:'2025년 10월', items:[{ projectId:'p52', projectName:'최종 포트폴리오 완성 및 취업 지원', category:'portfolio', date:'10월 6일' }] },
     ],
   },
+
+  // ─────────────────────────────────────────
+  // Plan 4: 예술·디자인·방송 기관 관리자 24개월 준비
+  // ─────────────────────────────────────────
+  {
+    name: '예술·디자인·방송 기관 관리자 24개월 준비',
+    targetJob: '예술·디자인·방송관리자',
+    author: '정하늘',
+    duration: '24개월',
+    description: '공연·전시·방송 등 문화·예술 기관의 운영을 기획·관리하는 관리자로 성장하는 2년 로드맵',
+    tags: ['#예술경영', '#공연전시기획', '#문화기관운영'],
+    likes: 176, views: 884, routineCount: 5,
+    projects: [
+      { id: 'p61', category: 'knowledge', name: '문화예술경영 개론', goal: '예술경영 전반의 구조와 용어 이해', days: ['월','수','금'], duration: 60, priority: 'high', notification: true, missedNotification: true, notificationTime: '09:00', memo: '', source: 'KOCW', field: '예술경영', level: '초급', weeks: 4, description: '공공·민간 문화기관의 운영 원리와 예술경영 기본 개념 학습', tags: ['#예술경영','#문화산업','#기관운영'], likes: 176, views: 884, curriculum: [{ week:1, title:'예술경영의 이해', items:['예술경영 개념','문화산업 구조','공공/민간 기관'] },{ week:2, title:'기관 운영 기초', items:['경영방침 수립','조직 구조','이해관계자'] },{ week:3, title:'문화정책 이해', items:['문화예술 정책','지원제도','문화기금'] },{ week:4, title:'사례 연구', items:['국내외 문화기관 사례','운영 모델 비교','정리'] }] },
+      { id: 'p62', category: 'knowledge', name: '공연·전시 기획론', goal: '공연·전시 기획 프로세스 이해', days: ['화','목'], duration: 60, priority: 'high', notification: true, missedNotification: false, notificationTime: '09:00', memo: '', source: 'KOCW', field: '공연전시기획', level: '초급', weeks: 4, description: '기획 컨셉 도출부터 프로그램 구성·예산·홍보 연계까지의 기획 흐름', tags: ['#공연기획','#전시기획','#기획프로세스'], likes: 142, views: 720, curriculum: [{ week:1, title:'기획의 기초', items:['기획 개념','관객 분석','컨셉 도출'] },{ week:2, title:'공연 기획', items:['프로그램 구성','아티스트 섭외','일정 설계'] },{ week:3, title:'전시 기획', items:['전시 주제','작품 선정','공간 구성'] },{ week:4, title:'예산·홍보 연계', items:['예산 개요','홍보 전략','기획서 골격'] }] },
+      { id: 'p63', category: 'knowledge', name: '미디어·방송 콘텐츠 산업 이해', goal: '방송·영상 제작/유통 구조 이해', days: ['월','수'], duration: 45, priority: 'normal', notification: true, missedNotification: false, notificationTime: '09:00', memo: '', source: '패스트캠퍼스', field: '방송콘텐츠', level: '초급', weeks: 3, description: '방송·영상 콘텐츠가 기획·제작·유통되는 전체 생태계 이해', tags: ['#방송제작','#콘텐츠산업','#유통'], likes: 128, views: 640, curriculum: [{ week:1, title:'콘텐츠 산업 개요', items:['방송·영상 생태계','제작 주체','유통 채널'] },{ week:2, title:'제작 파이프라인', items:['기획-제작-후반-송출','역할 분담','예산 흐름'] },{ week:3, title:'저작권·계약 기초', items:['저작권 개념','제작 계약','정산 구조'] }] },
+      { id: 'p64', category: 'skill', name: '프로젝트 예산·정산 실무', goal: '문화 프로젝트 예산 수립·집행·정산 수행', days: ['화','목'], duration: 60, priority: 'high', notification: true, missedNotification: true, notificationTime: '09:00', memo: '', source: 'Udemy', field: '예산관리', level: '중급', weeks: 4, description: '문화 프로젝트의 예산안 작성부터 집행·정산까지 실무 처리', tags: ['#예산관리','#정산','#회계실무'], likes: 165, views: 810, curriculum: [{ week:1, title:'예산 수립', items:['항목 구조','견적','예산안 작성'] },{ week:2, title:'집행 관리', items:['지출 결의','증빙','계약 관리'] },{ week:3, title:'정산 실무', items:['정산서 작성','증빙 정리','감사 대응'] },{ week:4, title:'실전', items:['가상 프로젝트 예산-정산 1건','오류 점검','완성'] }] },
+      { id: 'p65', category: 'skill', name: '공연·전시 프로젝트 매니지먼트', goal: '기획~운영~정산 전 과정 PM 역량', days: ['월','수','금'], duration: 60, priority: 'high', notification: true, missedNotification: true, notificationTime: '09:00', memo: '', source: '인프런', field: '프로젝트관리', level: '중급', weeks: 5, description: '범위·일정·자원·리스크를 관리하며 공연/전시를 성공적으로 운영', tags: ['#PM','#프로젝트관리','#현장운영'], likes: 198, views: 970, curriculum: [{ week:1, title:'PM 개요', items:['범위·일정·자원','이해관계자','리스크'] },{ week:2, title:'사전 준비', items:['계약','대관','인력 배치'] },{ week:3, title:'현장 운영', items:['진행 관리','안전 관리','커뮤니케이션'] },{ week:4, title:'위기 대응', items:['돌발 상황','대안 수립','의사결정'] },{ week:5, title:'사후 관리', items:['결과 보고','정산','회고'] }] },
+      { id: 'p66', category: 'skill', name: '문화기관 조직·인력 운영', goal: '조직 운영과 리더십 실무 습득', days: ['화','목'], duration: 60, priority: 'normal', notification: true, missedNotification: false, notificationTime: '09:00', memo: '', source: '패스트캠퍼스', field: '조직운영', level: '중급', weeks: 4, description: '조직 구조 설계, 인력 관리, 팀 리더십과 부서 간 협업 실무', tags: ['#조직운영','#리더십','#인력관리'], likes: 154, views: 760, curriculum: [{ week:1, title:'조직 운영 기초', items:['조직 구조','R&R','업무 분장'] },{ week:2, title:'인력 관리', items:['채용','평가','동기부여'] },{ week:3, title:'리더십', items:['팀 커뮤니케이션','갈등 관리','코칭'] },{ week:4, title:'협업 실무', items:['부서 간 협업','외부 협력','보고 체계'] }] },
+      { id: 'p67', category: 'skill', name: '문화기관 홍보·관객개발 실무', goal: '홍보 전략 수립과 관객 개발', days: ['화','목'], duration: 45, priority: 'normal', notification: false, missedNotification: false, notificationTime: '20:00', memo: '', source: '클래스101', field: '문화마케팅', level: '초급', weeks: 3, description: '문화기관의 홍보 채널 전략과 데이터 기반 관객 개발 실습', tags: ['#홍보','#관객개발','#문화마케팅'], likes: 137, views: 690, curriculum: [{ week:1, title:'홍보 기획', items:['타깃 분석','채널 전략','메시지'] },{ week:2, title:'디지털 홍보', items:['SNS 운영','보도자료','뉴스레터'] },{ week:3, title:'관객 개발', items:['멤버십','CRM','데이터 활용'] }] },
+      { id: 'p68', category: 'qualification', name: '예술경영 아카데미 수료', goal: '예술경영지원센터 등 전문 과정 이수', days: ['월','수','금'], duration: 60, priority: 'high', notification: true, missedNotification: true, notificationTime: '09:00', memo: '', source: '예술경영지원센터', field: '예술경영', level: '중급', weeks: 4, description: '예술경영 이론과 기획 실습, 현장 연계로 구성된 전문 교육과정 이수', tags: ['#예술경영','#교육수료','#아카데미'], likes: 182, views: 920, curriculum: [{ week:1, title:'예술경영 이론', items:['경영전략','문화마케팅','재무 기초'] },{ week:2, title:'기획 실습', items:['프로젝트 기획','팀 과제','피드백'] },{ week:3, title:'현장 연계', items:['기관 탐방','실무자 특강','네트워킹'] },{ week:4, title:'수료 과제', items:['최종 기획안','발표','수료'] }] },
+      { id: 'p69', category: 'qualification', name: '준학예사(학예사) 자격 준비', goal: '박물관·미술관 준학예사 자격 취득', days: ['월','화','수','목'], duration: 60, priority: 'normal', notification: true, missedNotification: false, notificationTime: '08:00', memo: '시험일: 2024년 11월', source: '자체 학습', field: '자격증', level: '중급', weeks: 4, description: '박물관·미술관 학예 실무와 관련 법규 중심의 자격 준비', tags: ['#준학예사','#박물관학','#자격증'], likes: 149, views: 730, curriculum: [{ week:1, title:'박물관학 개론', items:['박물관 정의·기능','수집·보존','전시'] },{ week:2, title:'학예 실무', items:['소장품 관리','조사연구','교육 프로그램'] },{ week:3, title:'관련 법규', items:['박물관·미술관 진흥법','등록 제도','직업 윤리'] },{ week:4, title:'시험 준비', items:['기출 정리','논술 연습','최종 점검'] }] },
+      { id: 'p70', category: 'portfolio', name: '기획공연·전시 기획서 완성', goal: '제안 가능한 수준의 기획서 1건 완성', days: ['토'], duration: 120, priority: 'high', notification: false, missedNotification: false, notificationTime: '10:00', memo: '', source: '자체 제작', field: '기획', level: '중급', weeks: 5, description: '주제 도출부터 프로그램·예산·홍보·평가까지 담은 완성형 기획서', tags: ['#기획서','#공연전시','#포트폴리오'], likes: 173, views: 850, curriculum: [{ week:1, title:'주제·컨셉', items:['트렌드 분석','컨셉 도출','타깃 설정'] },{ week:2, title:'프로그램 구성', items:['세부 프로그램','섭외 계획','일정'] },{ week:3, title:'예산·운영', items:['예산안','인력 계획','리스크'] },{ week:4, title:'홍보·평가', items:['홍보 전략','성과 지표','KPI'] },{ week:5, title:'기획서 완성', items:['문서화','PPT','발표 리허설'] }] },
+      { id: 'p71', category: 'portfolio', name: '문화기관 운영 개선 프로젝트', goal: '실제 기관 대상 운영 개선 제안서 완성', days: ['토','일'], duration: 90, priority: 'normal', notification: false, missedNotification: false, notificationTime: '10:00', memo: '관심 기관 1곳 선정', source: '자체 제작', field: '운영개선', level: '중급', weeks: 4, description: '현황 분석·벤치마킹을 통한 문화기관 운영 개선안 도출 및 제안', tags: ['#운영개선','#제안서','#포트폴리오'], likes: 158, views: 780, curriculum: [{ week:1, title:'현황 분석', items:['기관 조사','운영 데이터','문제 정의'] },{ week:2, title:'벤치마킹', items:['국내외 우수 사례','시사점','아이디어'] },{ week:3, title:'개선안 도출', items:['프로세스·조직·예산 개선','우선순위','실행 가능성'] },{ week:4, title:'제안서 완성', items:['보고서','실행 로드맵','발표'] }] },
+      { id: 'p72', category: 'portfolio', name: '운영 관리 포트폴리오 완성', goal: '지원서 첨부용 포트폴리오 완성', days: ['토','일'], duration: 120, priority: 'high', notification: false, missedNotification: false, notificationTime: '10:00', memo: '목표 지원: 2025년 하반기', source: '자체 제작', field: '취업준비', level: '고급', weeks: 4, description: '2년간의 기획·운영·자격 이력을 한 권의 포트폴리오로 정리', tags: ['#포트폴리오','#취업','#운영관리'], likes: 201, views: 990, curriculum: [{ week:1, title:'구조 설계', items:['목차','핵심 프로젝트 선정','스토리 구성'] },{ week:2, title:'성과 정리', items:['운영 성과','수치화','대표 사례'] },{ week:3, title:'디자인', items:['레이아웃','인포그래픽','컬러 정리'] },{ week:4, title:'최종 완성', items:['PDF 변환','발표 자료','검토'] }] },
+    ],
+    timeline: [
+      { label:'2024년 1월', items:[{ projectId:'p61', projectName:'문화예술경영 개론', category:'knowledge', date:'1월 3일' },{ projectId:'p62', projectName:'공연·전시 기획론', category:'knowledge', date:'1월 16일' }] },
+      { label:'2024년 3월', items:[{ projectId:'p63', projectName:'미디어·방송 콘텐츠 산업 이해', category:'knowledge', date:'3월 5일' },{ projectId:'p64', projectName:'프로젝트 예산·정산 실무', category:'skill', date:'3월 19일' }] },
+      { label:'2024년 5월', items:[{ projectId:'p65', projectName:'공연·전시 프로젝트 매니지먼트', category:'skill', date:'5월 7일' }] },
+      { label:'2024년 7월', items:[{ projectId:'p68', projectName:'예술경영 아카데미 수료', category:'qualification', date:'7월 2일' },{ projectId:'p66', projectName:'문화기관 조직·인력 운영', category:'skill', date:'7월 16일' }] },
+      { label:'2024년 9월', items:[{ projectId:'p67', projectName:'문화기관 홍보·관객개발 실무', category:'skill', date:'9월 3일' }] },
+      { label:'2024년 11월', items:[{ projectId:'p69', projectName:'준학예사(학예사) 자격 준비', category:'qualification', date:'11월 5일' }] },
+      { label:'2025년 1월', items:[{ projectId:'p70', projectName:'기획공연·전시 기획서 완성', category:'portfolio', date:'1월 11일' }] },
+      { label:'2025년 4월', items:[{ projectId:'p71', projectName:'문화기관 운영 개선 프로젝트', category:'portfolio', date:'4월 5일' }] },
+      { label:'2025년 10월', items:[{ projectId:'p72', projectName:'운영 관리 포트폴리오 완성', category:'portfolio', date:'10월 4일' }] },
+    ],
+  },
 ];
+
+module.exports = PLANS;
 
 async function seed() {
   await mongoose.connect(process.env.MONGODB_URI);
@@ -139,7 +179,10 @@ async function seed() {
   console.log('✅ 완료');
 }
 
-seed().catch(err => {
-  console.error('❌ 오류:', err);
-  process.exit(1);
-});
+// 직접 실행할 때만 전체 재시드 수행 (require 시 자동 실행 방지)
+if (require.main === module) {
+  seed().catch(err => {
+    console.error('❌ 오류:', err);
+    process.exit(1);
+  });
+}
