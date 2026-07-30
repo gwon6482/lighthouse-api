@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { register, checkEmail, login, logout, me } = require('../controllers/authController');
 const { authenticate } = require('../middleware/auth');
+const { loginLimiter, checkEmailLimiter } = require('../middleware/rateLimit');
 
 /**
  * @swagger
@@ -59,7 +60,7 @@ router.post('/register', register);
  *       400:
  *         description: 이메일 미입력
  */
-router.get('/check-email', checkEmail);
+router.get('/check-email', checkEmailLimiter, checkEmail);
 
 /**
  * @swagger
@@ -85,7 +86,7 @@ router.get('/check-email', checkEmail);
  *       401:
  *         description: 인증 실패
  */
-router.post('/login', login);
+router.post('/login', loginLimiter, login);
 
 /**
  * @swagger

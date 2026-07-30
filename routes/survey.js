@@ -10,6 +10,8 @@ const {
   getSurveyStatistics,
   getSurveyResultList
 } = require('../controllers/surveyController');
+const adminAuth = require('../middleware/adminAuth');
+const { authenticate } = require('../middleware/auth');
 
 /**
  * @swagger
@@ -444,7 +446,7 @@ router.post('/response', submitSurveyResponse);
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.post('/report', getSurveyReport);
+router.post('/report', adminAuth, getSurveyReport);
 
 /**
  * @swagger
@@ -479,7 +481,7 @@ router.post('/report', getSurveyReport);
  *                       type: object
  *                       description: 분석 결과 데이터
  */
-router.get('/analysis/:survey_id', getSurveyAnalysis);
+router.get('/analysis/:survey_id', authenticate, getSurveyAnalysis);
 
 /**
  * @swagger
@@ -537,7 +539,7 @@ router.get('/analysis/:survey_id', getSurveyAnalysis);
  *       404:
  *         description: 해당 survey_id 없음 또는 T1 데이터 없음
  */
-router.get('/t1-result/:survey_id', getT1Result);
+router.get('/t1-result/:survey_id', authenticate, getT1Result);
 
 /**
  * @swagger
@@ -575,7 +577,7 @@ router.get('/t1-result/:survey_id', getT1Result);
  *                 message:
  *                   type: string
  */
-router.post('/statistics/update', updateSurveyStatistics);
+router.post('/statistics/update', adminAuth, updateSurveyStatistics);
 
 /**
  * @swagger
@@ -655,6 +657,6 @@ router.get('/statistics', getSurveyStatistics);
  *                     total_items:
  *                       type: integer
  */
-router.get('/result/list', getSurveyResultList);
+router.get('/result/list', adminAuth, getSurveyResultList);
 
 module.exports = router; 

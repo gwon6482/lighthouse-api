@@ -54,6 +54,7 @@ jobs:
           IMAGE_REF: ${{ env.IMAGE }}:${{ github.sha }}
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          ADMIN_API_KEY: ${{ secrets.ADMIN_API_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
@@ -71,6 +72,9 @@ jobs:
                   "MONGODB_URI": os.environ["MONGODB_URI"],
                   "JWT_SECRET": os.environ["JWT_SECRET"],
                   "JWT_EXPIRES_IN": "7d",
+                  # 관리자 API(/api/admin 및 job/reference 쓰기 등) 보호 공유키.
+                  # GitHub Secret 미설정 시 여기서 KeyError→배포 실패(키 없이 배포돼 503 나는 것 방지).
+                  "ADMIN_API_KEY": os.environ["ADMIN_API_KEY"],
                   # S3 인증사진 업로드(진로달성). 전용 버킷 lighthouse-uploads, uploads/* 공개읽기
                   "AWS_REGION": os.environ["AWS_REGION"],
                   "AWS_ACCESS_KEY_ID": os.environ["AWS_ACCESS_KEY_ID"],

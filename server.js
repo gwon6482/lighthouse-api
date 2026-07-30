@@ -7,6 +7,7 @@ require('dotenv').config();
 
 const connectDB = require('./config/database');
 const errorHandler = require('./middleware/error');
+const adminAuth = require('./middleware/adminAuth');
 
 // Swagger 설정
 const swaggerSpecs = require('./config/swagger');
@@ -21,6 +22,10 @@ const userRoutes = require('./routes/user');
 const careerPlanRoutes = require('./routes/careerPlan');
 
 const app = express();
+
+// Lightsail LB(단일 프록시 1홉)가 넘기는 X-Forwarded-For를 신뢰 → req.ip = 실제 클라이언트.
+// 1로 한정해 클라이언트가 위조한 XFF 값은 무시되도록 한다(레이트리밋 우회 방지).
+app.set('trust proxy', 1);
 
 // MongoDB 연결
 connectDB();
@@ -83,7 +88,7 @@ app.get(['/api-docs', '/api-docs/'], (req, res) => {
 // 라우터
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
-app.use('/api/admin', adminRoutes);
+app.use('/api/admin', adminAuth, adminRoutes);
 app.use('/api/survey', surveyRoutes);
 app.use('/api/job', jobRoutes);
 app.use('/api/reference', referenceRoutes);

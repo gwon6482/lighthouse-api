@@ -6,6 +6,7 @@ const {
   createCareerAttribute, updateCareerAttribute, deleteCareerAttribute,
   getT1Types, getT1TypeByCode
 } = require('../controllers/referenceController');
+const adminAuth = require('../middleware/adminAuth');
 
 /**
  * @swagger
@@ -127,7 +128,7 @@ const {
  *         description: code 중복
  */
 router.get('/survey-elements', getSurveyElements);
-router.post('/survey-elements', createSurveyElement);
+router.post('/survey-elements', adminAuth, createSurveyElement);
 
 /**
  * @swagger
@@ -189,8 +190,8 @@ router.post('/survey-elements', createSurveyElement);
  *         description: 해당 code 없음
  */
 router.get('/survey-elements/:code', getSurveyElementByCode);
-router.put('/survey-elements/:code', updateSurveyElement);
-router.delete('/survey-elements/:code', deleteSurveyElement);
+router.put('/survey-elements/:code', adminAuth, updateSurveyElement);
+router.delete('/survey-elements/:code', adminAuth, deleteSurveyElement);
 
 /**
  * @swagger
@@ -248,7 +249,7 @@ router.delete('/survey-elements/:code', deleteSurveyElement);
  *         description: code 중복
  */
 router.get('/career-attributes', getCareerAttributes);
-router.post('/career-attributes', createCareerAttribute);
+router.post('/career-attributes', adminAuth, createCareerAttribute);
 
 /**
  * @swagger
@@ -309,8 +310,8 @@ router.post('/career-attributes', createCareerAttribute);
  *         description: 해당 code 없음
  */
 router.get('/career-attributes/:code', getCareerAttributeByCode);
-router.put('/career-attributes/:code', updateCareerAttribute);
-router.delete('/career-attributes/:code', deleteCareerAttribute);
+router.put('/career-attributes/:code', adminAuth, updateCareerAttribute);
+router.delete('/career-attributes/:code', adminAuth, deleteCareerAttribute);
 
 /**
  * @swagger

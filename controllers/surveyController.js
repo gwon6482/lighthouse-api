@@ -5,7 +5,29 @@ const SurveyQuestionnaire = require('../models/SurveyQuestionnaire');
 const SurveyStatistics = require('../models/SurveyStatistics');
 const T1Type = require('../models/T1Type');
 const CareerAttribute = require('../models/CareerAttribute');
+const User = require('../models/User');
 const T3_RESULT_TEXTS = require('../config/t3ResultTexts');
+
+// 검사결과 소유권 확인. 인증된 사용자의 것이면 허용하고,
+// 아직 아무에게도 연결되지 않은(orphan/링크 지연) survey_id는 본인에게 귀속(claim-on-read)해
+// FE의 link 호출이 실패/지연돼도 결과 화면이 깨지지 않게 한다.
+// 반환: true = 허용 / false = 차단(응답 이미 전송됨)
+async function ensureSurveyOwnership(req, res, survey_id) {
+  const uid = req.user?.uid;
+  if (!uid) {
+    res.status(401).json({ success: false, error: '인증이 필요합니다' });
+    return false;
+  }
+  const owner = await User.findOne({ surveyResults: survey_id }).select('uid').lean();
+  if (owner && owner.uid !== uid) {
+    res.status(403).json({ success: false, error: '본인의 검사 결과만 조회할 수 있습니다' });
+    return false;
+  }
+  if (!owner) {
+    await User.updateOne({ uid }, { $addToSet: { surveyResults: survey_id } });
+  }
+  return true;
+}
 
 // 전체 설문지 조회 (GET)
 const getSurveyForm = async (req, res) => {
@@ -460,6 +482,8 @@ const getSurveyAnalysis = async (req, res) => {
       return res.status(404).json({ success: false, error: '해당 survey_id의 응답이 존재하지 않습니다.' });
     }
 
+    if (!(await ensureSurveyOwnership(req, res, survey_id))) return;
+
     const answers = result.answers;
     const answer_type = result.raw_payload?.answer_type;
 
@@ -777,6 +801,8 @@ const getT1Result = async (req, res) => {
     if (!result) {
       return res.status(404).json({ success: false, error: '해당 survey_id의 응답이 존재하지 않습니다.' });
     }
+
+    if (!(await ensureSurveyOwnership(req, res, survey_id))) return;
 
     let T1_result = result.T1_result || null;
 

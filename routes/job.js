@@ -3,6 +3,7 @@ const router = express.Router();
 const { getJobByCode, searchJobByName, getJobList, createJob, updateJob, deleteJob, getClassifications, getMajors } = require('../controllers/jobController');
 const { getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore, getJobRecommendT2BySurveyId } = require('../controllers/recommendController');
 const { getApprovedReviews, submitReview } = require('../controllers/reviewController');
+const adminAuth = require('../middleware/adminAuth');
 
 /**
  * @swagger
@@ -518,7 +519,7 @@ router.get('/search', searchJobByName);
 router.get('/recommend/:survey_id', getJobRecommendBySurveyId);
 router.get('/recommend-t2/:survey_id', getJobRecommendT2BySurveyId);
 router.post('/recommend', postJobRecommend);
-router.post('/', createJob);
+router.post('/', adminAuth, createJob);
 /**
  * @swagger
  * /api/job/{jobCode}/match:
@@ -636,7 +637,7 @@ router.post('/:jobCode/match', postJobMatchScore);
 router.get('/:jobCode/reviews', getApprovedReviews);
 router.post('/:jobCode/reviews', submitReview);
 router.get('/:jobCode', getJobByCode);
-router.put('/:jobCode', updateJob);
-router.delete('/:jobCode', deleteJob);
+router.put('/:jobCode', adminAuth, updateJob);
+router.delete('/:jobCode', adminAuth, deleteJob);
 
 module.exports = router;
