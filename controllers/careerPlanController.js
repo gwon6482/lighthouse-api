@@ -3,15 +3,33 @@ const CareerPlan = require('../models/CareerPlan');
 const PublicCareerPlan = require('../models/PublicCareerPlan');
 const User = require('../models/User');
 
-// DB { month, projectIds } → FE { month, projects: Project[] } 변환
+// 레거시 month 라벨('2026.03' / '2026년 3월' / '2026-03')을 계획 시작주 기준 주차로 환산.
+// 2026-08-27 타임라인 주차 전환 이전에 저장된 계획을 읽을 때만 쓴다.
+function _weekFromLegacyMonth(monthStr, startDate) {
+  if (!monthStr || !startDate) return 1;
+  const m = String(monthStr).match(/(\d{4})\s*[년.\-]\s*(\d{1,2})/);
+  const sd = String(startDate).match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!m || !sd) return 1;
+  const monthFirstDay = new Date(+m[1], +m[2] - 1, 1);
+  const start = new Date(+sd[1], +sd[2] - 1, +sd[3]);
+  const days = Math.floor((monthFirstDay - start) / 86400000);
+  if (days < 0) return 1;            // 계획 시작 전 달이면 1주차로 당긴다
+  return Math.floor(days / 7) + 1;
+}
+
+// DB { week, projectIds } → FE { week, projects: Project[] } 변환.
+// week 가 없는 레거시 문서는 month 로부터 환산해서 내려준다.
 function _withPopulatedTimeline(plan) {
   const obj = plan.toObject();
   const projectMap = {};
   for (const p of obj.projects) projectMap[p.id] = p;
-  obj.timeline = (obj.timeline || []).map(slot => ({
-    month:    slot.month,
-    projects: (slot.projectIds || []).map(id => projectMap[id]).filter(Boolean)
-  }));
+  obj.timeline = (obj.timeline || [])
+    .map(slot => ({
+      week:     slot.week != null ? slot.week : _weekFromLegacyMonth(slot.month, obj.startDate),
+      projects: (slot.projectIds || []).map(id => projectMap[id]).filter(Boolean)
+    }))
+    .filter(slot => slot.projects.length > 0)
+    .sort((a, b) => a.week - b.week);
   return obj;
 }
 
@@ -316,11 +334,15 @@ const saveTimeline = async (req, res, next) => {
       return res.status(400).json({ success: false, error: 'timeline은 배열이어야 합니다' });
     }
 
-    // FE TimelineSlot { month, projects: Project[] } → DB { month, projectIds: string[] }
-    const dbTimeline = timeline.map(slot => ({
-      month:      slot.month,
-      projectIds: (slot.projects ?? []).map(p => p.id).filter(Boolean)
-    }));
+    // FE TimelineSlot { week, projects: Project[] } → DB { week, projectIds: string[] }
+    // week 가 유효하지 않은 슬롯은 버린다(구 클라이언트의 month 전송 등).
+    const dbTimeline = timeline
+      .map(slot => ({
+        week:       Number(slot.week),
+        projectIds: (slot.projects ?? []).map(p => p.id).filter(Boolean)
+      }))
+      .filter(slot => Number.isInteger(slot.week) && slot.week >= 1 && slot.projectIds.length > 0)
+      .sort((a, b) => a.week - b.week);
 
     const plan = await CareerPlan.findOneAndUpdate(
       { planId, userUid: req.user.uid },

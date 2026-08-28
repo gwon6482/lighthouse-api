@@ -337,7 +337,7 @@ router.delete('/:planId/routines/:routineId', deleteRoutine);
  *                 items:
  *                   type: object
  *                   properties:
- *                     month:    { type: string, example: "2026.03" }
+ *                     week:     { type: integer, example: 3, description: "프로젝트 시작 주차(1-based, startDate 가 속한 월~일 달력 주가 1주차)" }
  *                     projects: { type: array }
  *     responses:
  *       200:
