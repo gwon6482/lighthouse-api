@@ -31,6 +31,39 @@ const DeviceSchema = new mongoose.Schema({
   lastActiveAt: { type: Date, default: Date.now }
 }, { _id: false });
 
+// 회원가입 마지막 3단계에서 받는 진로 온보딩 답변.
+// ⚠️ 값은 전부 **숫자 코드**다. 선택지 문구가 여기 없으면 나중에 아무도 해석할 수 없으므로
+// 원문을 그대로 적어둔다. 문구를 바꾸면 코드 의미가 달라지니 이 표도 같이 고칠 것.
+// 출처: lighthouse-test `modules/onboarding/pages/SignupWizardPage.vue` 의 Q1/Q2/Q3
+const OnboardingSchema = new mongoose.Schema({
+  // Q1 "지금 어떤 상황이신가요?" (단일 선택)
+  //   1 중·고등학생  2 대학생(휴학 포함)  3 취업 준비 중
+  //   4 일하고 있지만 진로를 다시 고민 중
+  status: { type: Number, min: 1, max: 4 },
+
+  // Q2 "요즘 진로에 대해 어떤 고민이 있나요?" (복수 선택)
+  //   1 무엇을 좋아하고 잘하는지 모르겠음
+  //   2 선택 가능한 진로 분야를 모르겠음
+  //   3 관심 분야는 있으나 진로로 정해도 될지 모르겠음
+  //   4 목표는 있으나 무엇부터 준비할지 모르겠음
+  //   5 노력 중이나 방법이 맞는지 확신이 없음
+  //   6 아직 잘 모르겠음  ← FE 에서 **단독 선택**으로 강제된다(Q2_NONE)
+  concerns: {
+    type: [Number],
+    default: undefined,
+    validate: {
+      validator: (v) => !v || v.every((n) => Number.isInteger(n) && n >= 1 && n <= 6),
+      message: 'concerns 는 1~6 사이 정수만 허용됩니다'
+    }
+  },
+
+  // Q3 "나 자신에 대해 얼마나 알고 있다고 생각하세요?" (단일 선택)
+  //   1 잘 알고 있음  2 조금 알고 있음  3 거의 모름
+  selfAwareness: { type: Number, min: 1, max: 3 },
+
+  answeredAt: { type: Date, default: Date.now }
+}, { _id: false });
+
 const SettingsSchema = new mongoose.Schema({
   notifications: {
     push:  { type: Boolean, default: true },
@@ -119,6 +152,13 @@ const UserSchema = new mongoose.Schema({
   devices: {
     type: [DeviceSchema],
     default: []
+  },
+
+  // 진로 온보딩 답변 (회원가입 3~5단계)
+  // 2026-09-09 추가. 그 전 가입자는 이 필드가 없다 — 집계 시 반드시 존재 여부를 확인할 것.
+  onboarding: {
+    type: OnboardingSchema,
+    default: undefined   // 답 안 하고 가입한 계정에 빈 객체를 만들지 않는다
   },
 
   // 프로필

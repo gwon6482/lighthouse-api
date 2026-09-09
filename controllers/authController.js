@@ -9,14 +9,52 @@ const generateToken = (user) =>
   jwt.sign({ uid: user.uid, email: user.email }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
 
 // POST /api/auth/register
+// 온보딩 답변 정규화. 잘못된 형식이면 INVALID 를 돌려 400 으로 끊는다.
+// 답이 아예 없으면 null — 이때는 필드 자체를 만들지 않는다(빈 객체를 남기지 않기 위해).
+const INVALID = Symbol('invalid-onboarding');
+
+function buildOnboarding(raw) {
+  if (raw === undefined || raw === null) return null;
+  if (typeof raw !== 'object' || Array.isArray(raw)) return INVALID;
+
+  const { status, concerns, selfAwareness } = raw;
+  const doc = {};
+
+  if (status !== undefined && status !== null) {
+    if (!Number.isInteger(status) || status < 1 || status > 4) return INVALID;
+    doc.status = status;
+  }
+  if (concerns !== undefined && concerns !== null) {
+    if (!Array.isArray(concerns) || concerns.length === 0) return INVALID;
+    if (!concerns.every((n) => Number.isInteger(n) && n >= 1 && n <= 6)) return INVALID;
+    // 중복 제거 — FE 토글이 꼬여도 같은 값이 두 번 들어가지 않게 한다
+    doc.concerns = [...new Set(concerns)];
+  }
+  if (selfAwareness !== undefined && selfAwareness !== null) {
+    if (!Number.isInteger(selfAwareness) || selfAwareness < 1 || selfAwareness > 3) return INVALID;
+    doc.selfAwareness = selfAwareness;
+  }
+
+  if (Object.keys(doc).length === 0) return null;
+  doc.answeredAt = new Date();
+  return doc;
+}
+
 const register = async (req, res, next) => {
   try {
-    const { email, password, name, age, gender } = req.body;
+    const { email, password, name, age, gender, onboarding } = req.body;
     if (!email || !password) {
       return res.status(400).json({ success: false, error: '이메일과 비밀번호를 입력해주세요' });
     }
     if (gender && !['M', 'F'].includes(gender)) {
       return res.status(400).json({ success: false, error: '성별은 M 또는 F만 허용됩니다' });
+    }
+
+    // 진로 온보딩 답변(Q1~Q3)은 선택 입력이다. 넘어오면 검증해서 저장하고, 없으면 필드를 만들지 않는다.
+    // 2026-09-09 이전에는 FE 가 localStorage 에만 넣고 서버로 보내지 않아 답이 전부 버려졌다.
+    const onboardingDoc = buildOnboarding(onboarding);
+    if (onboardingDoc === INVALID) {
+      return res.status(400).json({ success: false, error: '온보딩 답변 형식이 올바르지 않습니다' });
     }
 
     const existing = await User.findOne({ email: email.toLowerCase().trim() });
@@ -32,6 +70,7 @@ const register = async (req, res, next) => {
       ...(name && { name }),
       ...(age && { age: Number(age) }),
       ...(gender && { gender }),
+      ...(onboardingDoc && { onboarding: onboardingDoc }),
     });
 
     const token = generateToken(user);
@@ -115,4 +154,5 @@ const me = async (req, res, next) => {
   }
 };
 
-module.exports = { register, checkEmail, login, logout, me };
+// buildOnboarding 은 검증 로직 단위 확인용으로 함께 내보낸다(라우터는 쓰지 않는다).
+module.exports = { register, checkEmail, login, logout, me, buildOnboarding, INVALID };

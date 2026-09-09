@@ -31,6 +31,25 @@ const { loginLimiter, checkEmailLimiter } = require('../middleware/rateLimit');
  *               password:
  *                 type: string
  *                 example: "securepassword"
+ *               onboarding:
+ *                 type: object
+ *                 description: >
+ *                   진로 온보딩 답변(선택). 회원가입 3~5단계 Q1~Q3.
+ *                   선택지 문구는 models/User.js 의 OnboardingSchema 주석 참조.
+ *                 properties:
+ *                   status:
+ *                     type: integer
+ *                     description: Q1 현재 상황 (1~4)
+ *                     example: 2
+ *                   concerns:
+ *                     type: array
+ *                     description: Q2 진로 고민, 복수 선택 (각 1~6)
+ *                     items: { type: integer }
+ *                     example: [1, 3]
+ *                   selfAwareness:
+ *                     type: integer
+ *                     description: Q3 자기이해 정도 (1~3)
+ *                     example: 2
  *     responses:
  *       201:
  *         description: 회원가입 성공, JWT 토큰 발급
