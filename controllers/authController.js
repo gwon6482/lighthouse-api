@@ -25,10 +25,14 @@ function buildOnboarding(raw) {
     doc.status = status;
   }
   if (concerns !== undefined && concerns !== null) {
-    if (!Array.isArray(concerns) || concerns.length === 0) return INVALID;
-    if (!concerns.every((n) => Number.isInteger(n) && n >= 1 && n <= 6)) return INVALID;
-    // 중복 제거 — FE 토글이 꼬여도 같은 값이 두 번 들어가지 않게 한다
-    doc.concerns = [...new Set(concerns)];
+    if (!Array.isArray(concerns)) return INVALID;
+    // 빈 배열은 '고르지 않음'으로 본다. 여기서 400 을 내면 선택 항목 하나 때문에
+    // **가입 자체가 실패**한다 — 그 대가는 잘못된 형식을 잡는 이득보다 훨씬 크다.
+    if (concerns.length > 0) {
+      if (!concerns.every((n) => Number.isInteger(n) && n >= 1 && n <= 6)) return INVALID;
+      // 중복 제거 — FE 토글이 꼬여도 같은 값이 두 번 들어가지 않게 한다
+      doc.concerns = [...new Set(concerns)];
+    }
   }
   if (selfAwareness !== undefined && selfAwareness !== null) {
     if (!Number.isInteger(selfAwareness) || selfAwareness < 1 || selfAwareness > 3) return INVALID;
