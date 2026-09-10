@@ -57,6 +57,9 @@ jobs:
           ADMIN_API_KEY: ${{ secrets.ADMIN_API_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          # 카카오 로그인. 키가 없어도 배포는 성공해야 한다(기능만 꺼진 채 뜬다) → 아래에서 .get 사용
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+          KAKAO_CLIENT_SECRET: ${{ secrets.KAKAO_CLIENT_SECRET }}
         run: |
           # 시크릿 노출 방지: python 으로 env 에서 직접 읽어 배포 스펙 작성
           python3 - <<'PY'
@@ -82,6 +85,12 @@ jobs:
                   "S3_UPLOAD_BUCKET": "lighthouse-uploads",
                   "S3_UPLOAD_PREFIX": "uploads",
                   "S3_UPLOAD_PUBLIC_BASE": "https://lighthouse-uploads.s3.ap-northeast-2.amazonaws.com",
+                  # 카카오 로그인 — 비밀이 아닌 고정값은 여기에 평문으로 둔다.
+                  # 시크릿에 넣으면 카카오 콘솔 등록값과 한 글자만 달라도 KOE006 이 나는데
+                  # 값이 가려져 원인을 못 찾는다. 콘솔 등록값과 이 줄이 정확히 같아야 한다.
+                  "KAKAO_REDIRECT_URI": "https://api.lighthouse.career/api/auth/kakao/callback",
+                  # OAuth 복귀 허용 오리진(오픈 리다이렉트 차단 목록)
+                  "OAUTH_ALLOWED_ORIGINS": "https://app.lighthouse.career,https://test.lighthouse.career",
                 },
                 "ports": {"8080": "HTTP"},
               }
@@ -99,6 +108,13 @@ jobs:
               },
             },
           }
+          # 카카오 앱 키는 **선택**이다. 미등록이면 항목을 아예 빼고, 서버는 기능만 꺼진 채 뜬다
+          # (/api/auth/providers → kakao:false, /api/auth/kakao → 503).
+          # ⚠️ ADMIN_API_KEY 처럼 os.environ[] 로 읽으면 안 된다 — 키를 넣기 전까지 배포 전체가 죽는다.
+          for k in ("KAKAO_REST_API_KEY", "KAKAO_CLIENT_SECRET"):
+              v = os.environ.get(k, "").strip()
+              if v:
+                  spec["containers"]["app"]["environment"][k] = v
           with open("deploy.json", "w") as f:
               json.dump(spec, f)
           PY
