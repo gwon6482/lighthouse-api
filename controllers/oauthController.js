@@ -168,21 +168,6 @@ const kakaoCallback = async (req, res, next) => {
 // 같은 이메일을 쓰는 로컬 계정이 이미 있을 때 쓰는 표식.
 const EMAIL_TAKEN = Symbol('email-taken');
 
-// 출생연도("YYYY") → 나이.
-// ⚠️ 이건 **연 나이**(현재연도 - 출생연도)다. 만 나이가 아니다 —
-//    생일(birthday)은 출생연도와 별개의 동의항목이라 같이 받지 않으면 계산할 수 없다.
-//    가입 위저드에서 사용자가 고칠 수 있으니 프리필 값으로는 이 정도면 충분하다.
-// 동의하지 않았으면 필드 자체가 응답에서 빠지므로 undefined 가 정상 경로다.
-function ageFromBirthyear(birthyear) {
-  if (!birthyear) return undefined;
-  const year = Number(birthyear);
-  if (!Number.isInteger(year)) return undefined;
-  const age = new Date().getFullYear() - year;
-  // User 스키마의 age 는 1~120 이다. 벗어나면 저장을 시도하지 않는다
-  // (여기서 던지면 이상한 값 하나 때문에 로그인 전체가 실패한다).
-  return age >= 1 && age <= 120 ? age : undefined;
-}
-
 // 카카오 프로필 → 우리 유저.
 // ⚠️ 이메일이 같다고 기존 계정에 **자동 연결하지 않는다.** 이메일 기반 자동 연결은
 //    계정 탈취 경로로 알려져 있다. 지금은 명시적 에러를 내고, 로그인한 사용자가
@@ -220,7 +205,10 @@ async function findOrCreateKakaoUser(profile) {
     // passwordHash 없음 — 카카오 전용 계정은 비밀번호 로그인을 할 수 없다
     authProviders: [{ provider: 'kakao', providerId }],
     ...(nickname && { name: nickname }),
-    ...(ageFromBirthyear(account.birthyear) && { age: ageFromBirthyear(account.birthyear) }),
+    // ⚠️ 나이는 카카오에서 받지 않는다. 가입 위저드에서 **사용자가 직접 입력**한다.
+    //    출생연도(birthyear)로 채우는 방법이 있었지만 동의항목 승인에 시간이 걸려 접었다
+    //    (2026-09-11). 승인이 나면 여기서 account.birthyear 로 age 를 채우면 된다 —
+    //    단 생일은 별개 동의항목이라 만 나이가 아니라 연 나이가 된다.
   });
 }
 
