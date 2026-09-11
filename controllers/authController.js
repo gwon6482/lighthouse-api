@@ -158,5 +158,50 @@ const me = async (req, res, next) => {
   }
 };
 
+// POST /api/auth/complete-profile  (인증 필요)
+// 소셜 가입자가 가입 위저드를 마칠 때 부른다.
+//
+// ⚠️ 소셜 로그인은 콜백에서 **계정이 이미 만들어진다.** 그래서 위저드 끝에서 register 를
+//    부를 수 없다(409 가 난다). 이메일 가입이 register 한 번에 하는 일을
+//    '계정 생성(콜백)' + '나머지 채우기(여기)' 둘로 나눈 것이다.
+const completeProfile = async (req, res, next) => {
+  try {
+    const { name, age, gender, onboarding } = req.body;
+
+    if (gender && !['M', 'F'].includes(gender)) {
+      return res.status(400).json({ success: false, error: '성별은 M 또는 F만 허용됩니다' });
+    }
+    if (age !== undefined && age !== null) {
+      const n = Number(age);
+      if (!Number.isInteger(n) || n < 1 || n > 120) {
+        return res.status(400).json({ success: false, error: '나이는 1~120 사이 정수만 허용됩니다' });
+      }
+    }
+
+    // 검증 규칙은 register 와 **같은 함수**를 쓴다. 두 벌로 두면 반드시 어긋난다.
+    const onboardingDoc = buildOnboarding(onboarding);
+    if (onboardingDoc === INVALID) {
+      return res.status(400).json({ success: false, error: '온보딩 답변 형식이 올바르지 않습니다' });
+    }
+
+    const user = await User.findOne({ uid: req.user.uid });
+    if (!user) {
+      return res.status(404).json({ success: false, error: '유저를 찾을 수 없습니다' });
+    }
+
+    // 보내온 것만 덮어쓴다. 빈 값으로 기존 값을 지우지 않는다
+    // (위저드를 두 번 돌더라도 이미 채운 정보가 날아가면 안 된다).
+    if (name) user.name = name;
+    if (age !== undefined && age !== null) user.age = Number(age);
+    if (gender) user.gender = gender;
+    if (onboardingDoc) user.onboarding = onboardingDoc;
+
+    await user.save();
+    res.json({ success: true, user: user.toJSON() });
+  } catch (err) {
+    next(err);
+  }
+};
+
 // buildOnboarding 은 검증 로직 단위 확인용으로 함께 내보낸다(라우터는 쓰지 않는다).
-module.exports = { register, checkEmail, login, logout, me, buildOnboarding, INVALID };
+module.exports = { register, checkEmail, login, logout, me, completeProfile, buildOnboarding, INVALID };

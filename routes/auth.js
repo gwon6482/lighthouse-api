@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { register, checkEmail, login, logout, me } = require('../controllers/authController');
+const { register, checkEmail, login, logout, me, completeProfile } = require('../controllers/authController');
 const { authenticate } = require('../middleware/auth');
 const { loginLimiter, checkEmailLimiter } = require('../middleware/rateLimit');
 const { kakaoStart, kakaoCallback, listProviders } = require('../controllers/oauthController');
@@ -151,6 +151,25 @@ router.get('/me', authenticate, me);
  *       200:
  *         description: "예) { kakao: true, google: false, apple: false }"
  */
+/**
+ * @swagger
+ * /api/auth/complete-profile:
+ *   post:
+ *     summary: 소셜 가입자의 가입 위저드 완료 (이름/나이/성별/진로답변 저장)
+ *     description: >
+ *       소셜 로그인은 콜백에서 계정이 이미 만들어지므로 위저드 끝에서 register 를 부를 수 없다.
+ *       이메일 가입이 register 한 번에 하는 일을 계정 생성(콜백) + 나머지 채우기(여기)로 나눈 것이다.
+ *     tags: [Auth]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: 저장된 유저 정보
+ *       400:
+ *         description: 형식 오류(성별/나이/온보딩 답변)
+ */
+router.post('/complete-profile', authenticate, completeProfile);
+
 router.get('/providers', listProviders);
 
 /**
