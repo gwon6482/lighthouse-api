@@ -143,7 +143,8 @@ app.get('/', (req, res) => {
         all_stats: '/api/admin/questions/stats',
         collection_questions: '/api/admin/questions/:collection_type',
         collection_stats: '/api/admin/questions/:collection_type/stats',
-        question_by_id: '/api/admin/questions/:collection_type/:question_id'
+        question_by_id: '/api/admin/questions/:collection_type/:question_id',
+        onboarding_stats: '/api/admin/onboarding/stats'
       }
     },
     collection_types: ['T1_personality', 'T2_1_talent', 'T2_2_interest', 'T2_3_values', 'T3_environmental']

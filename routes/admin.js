@@ -12,6 +12,7 @@ const {
   updateAdminT1Type
 } = require('../controllers/adminController');
 const { getAdminReviews, createAdminReview, updateAdminReview, deleteAdminReview } = require('../controllers/reviewController');
+const { getOnboardingStats } = require('../controllers/onboardingStatsController');
 
 /**
  * @swagger
@@ -367,5 +368,21 @@ router.get('/reviews', getAdminReviews);
 router.post('/reviews', createAdminReview);
 router.put('/reviews/:id', updateAdminReview);
 router.delete('/reviews/:id', deleteAdminReview);
+
+/**
+ * @swagger
+ * /api/admin/onboarding/stats:
+ *   get:
+ *     summary: 회원가입 진로답변(Q1~Q3) 분포
+ *     description: |
+ *       회원가입 3~5단계 답변 분포. 비율의 분모는 `answered` 다 —
+ *       `onboarding` 필드는 2026-09-09 에 생겨서 그 전 가입자에겐 필드 자체가 없다.
+ *       Q2 는 복수 선택이라 byConcern 의 합계가 answered 를 넘을 수 있다.
+ *     tags: [Admin]
+ *     responses:
+ *       200:
+ *         description: 조회 성공
+ */
+router.get('/onboarding/stats', getOnboardingStats);
 
 module.exports = router;
