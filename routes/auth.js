@@ -3,7 +3,7 @@ const router = express.Router();
 const { register, checkEmail, login, logout, me, completeProfile } = require('../controllers/authController');
 const { authenticate } = require('../middleware/auth');
 const { loginLimiter, checkEmailLimiter } = require('../middleware/rateLimit');
-const { kakaoStart, kakaoCallback, listProviders } = require('../controllers/oauthController');
+const { kakaoStart, kakaoCallback, googleStart, googleCallback, listProviders } = require('../controllers/oauthController');
 
 /**
  * @swagger
@@ -212,5 +212,39 @@ router.get('/kakao', kakaoStart);
  *         description: 카카오 앱 키 미설정
  */
 router.get('/kakao/callback', kakaoCallback);
+
+/**
+ * @swagger
+ * /api/auth/google:
+ *   get:
+ *     summary: 구글 로그인 시작
+ *     description: |
+ *       구글 동의 화면으로 302. `?redirect=` 로 FE 복귀 URL 을 받지만
+ *       **허용 오리진 목록(OAUTH_ALLOWED_ORIGINS) 밖이면 무시**한다(오픈 리다이렉트 차단).
+ *       env(GOOGLE_CLIENT_ID/SECRET/REDIRECT_URI) 가 없으면 503.
+ *     tags: [Auth]
+ *     responses:
+ *       302:
+ *         description: 구글 동의 화면으로 이동
+ *       503:
+ *         description: 구글 로그인 미설정
+ */
+router.get('/google', googleStart);
+
+/**
+ * @swagger
+ * /api/auth/google/callback:
+ *   get:
+ *     summary: 구글 로그인 콜백
+ *     description: |
+ *       코드→토큰→userinfo→계정→우리 JWT 발급 후 FE 로 302.
+ *       토큰은 쿼리가 아니라 **프래그먼트**(`#token=`)로 전달한다.
+ *       실패는 `?error=` (cancelled / invalid_state / token_failed / profile_failed / email_taken)
+ *     tags: [Auth]
+ *     responses:
+ *       302:
+ *         description: FE 복귀 URL 로 이동
+ */
+router.get('/google/callback', googleCallback);
 
 module.exports = router;
