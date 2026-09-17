@@ -182,7 +182,16 @@ async function findOrCreateKakaoUser(profile) {
   const existing = await User.findOne({
     authProviders: { $elemMatch: { provider: 'kakao', providerId } },
   });
-  if (existing) return existing;
+  if (existing) {
+    // ⚠️ 이메일 로그인은 login 이 lastLoginAt 을 갱신한다. 여기서 안 하면
+    // **카카오 유저만** 마지막 접속 집계에서 통째로 빠진다(2026-09-17 추가).
+    // save() 가 아니라 updateOne 인 이유: 문서 전체 검증을 다시 돌리지 않기 위해서다.
+    // 옛 계정에 스키마와 어긋난 값이 하나라도 있으면 save() 는 **로그인 자체를 실패시킨다.**
+    const now = new Date();
+    await User.updateOne({ _id: existing._id }, { $set: { lastLoginAt: now } });
+    existing.lastLoginAt = now;   // 호출부가 방금 쓴 값을 그대로 보게
+    return existing;
+  }
 
   const account = profile.kakao_account || {};
   // ⚠️ 동의하지 않은 항목은 값이 null 이 아니라 **필드 자체가 응답에서 빠진다**
@@ -205,6 +214,7 @@ async function findOrCreateKakaoUser(profile) {
     // passwordHash 없음 — 카카오 전용 계정은 비밀번호 로그인을 할 수 없다
     authProviders: [{ provider: 'kakao', providerId }],
     ...(nickname && { name: nickname }),
+    lastLoginAt: new Date(),   // 가입 = 첫 로그인. 기존 유저 경로와 맞춘다
     // ⚠️ 나이는 카카오에서 받지 않는다. 가입 위저드에서 **사용자가 직접 입력**한다.
     //    출생연도(birthyear)로 채우는 방법이 있었지만 동의항목 승인에 시간이 걸려 접었다
     //    (2026-09-11). 승인이 나면 여기서 account.birthyear 로 age 를 채우면 된다 —

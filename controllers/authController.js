@@ -44,14 +44,32 @@ function buildOnboarding(raw) {
   return doc;
 }
 
+// 프로필(나이·성별) 검증. 두 벌로 두면 반드시 어긋난다 — 실제로 어긋나 있었다.
+// register 에는 age 검증이 없어서 잘못된 값이 400 이 아니라 Mongoose ValidationError(500) 로 샜다.
+// 반환값: 오류 메시지(string) 또는 null(이상 없음).
+// ⚠️ 빈 값('' / undefined / null)은 '보내지 않음'으로 본다. 둘 다 선택 입력이라
+//    여기서 막으면 값 하나 때문에 가입 자체가 실패한다(buildOnboarding 의 빈 배열 처리와 같은 방침).
+function validateProfile({ age, gender }) {
+  if (gender !== undefined && gender !== null && gender !== '') {
+    if (!['M', 'F'].includes(gender)) return '성별은 M 또는 F만 허용됩니다';
+  }
+  if (age !== undefined && age !== null && age !== '') {
+    const n = Number(age);
+    if (!Number.isInteger(n) || n < 1 || n > 120) return '나이는 1~120 사이 정수만 허용됩니다';
+  }
+  return null;
+}
+
 const register = async (req, res, next) => {
   try {
     const { email, password, name, age, gender, onboarding } = req.body;
     if (!email || !password) {
       return res.status(400).json({ success: false, error: '이메일과 비밀번호를 입력해주세요' });
     }
-    if (gender && !['M', 'F'].includes(gender)) {
-      return res.status(400).json({ success: false, error: '성별은 M 또는 F만 허용됩니다' });
+
+    const profileError = validateProfile({ age, gender });
+    if (profileError) {
+      return res.status(400).json({ success: false, error: profileError });
     }
 
     // 진로 온보딩 답변(Q1~Q3)은 선택 입력이다. 넘어오면 검증해서 저장하고, 없으면 필드를 만들지 않는다.
@@ -168,14 +186,10 @@ const completeProfile = async (req, res, next) => {
   try {
     const { name, age, gender, onboarding } = req.body;
 
-    if (gender && !['M', 'F'].includes(gender)) {
-      return res.status(400).json({ success: false, error: '성별은 M 또는 F만 허용됩니다' });
-    }
-    if (age !== undefined && age !== null) {
-      const n = Number(age);
-      if (!Number.isInteger(n) || n < 1 || n > 120) {
-        return res.status(400).json({ success: false, error: '나이는 1~120 사이 정수만 허용됩니다' });
-      }
+    // 나이·성별도 register 와 **같은 함수**로 검증한다(2026-09-17 통합).
+    const profileError = validateProfile({ age, gender });
+    if (profileError) {
+      return res.status(400).json({ success: false, error: profileError });
     }
 
     // 검증 규칙은 register 와 **같은 함수**를 쓴다. 두 벌로 두면 반드시 어긋난다.
@@ -192,7 +206,8 @@ const completeProfile = async (req, res, next) => {
     // 보내온 것만 덮어쓴다. 빈 값으로 기존 값을 지우지 않는다
     // (위저드를 두 번 돌더라도 이미 채운 정보가 날아가면 안 된다).
     if (name) user.name = name;
-    if (age !== undefined && age !== null) user.age = Number(age);
+    // 빈 문자열은 '보내지 않음'이다 — Number('') 는 0 이라 그대로 넣으면 스키마 min:1 에 걸린다.
+    if (age !== undefined && age !== null && age !== '') user.age = Number(age);
     if (gender) user.gender = gender;
     if (onboardingDoc) user.onboarding = onboardingDoc;
 
@@ -203,5 +218,8 @@ const completeProfile = async (req, res, next) => {
   }
 };
 
-// buildOnboarding 은 검증 로직 단위 확인용으로 함께 내보낸다(라우터는 쓰지 않는다).
-module.exports = { register, checkEmail, login, logout, me, completeProfile, buildOnboarding, INVALID };
+// buildOnboarding / validateProfile 은 검증 로직 단위 확인용으로 함께 내보낸다(라우터는 쓰지 않는다).
+module.exports = {
+  register, checkEmail, login, logout, me, completeProfile,
+  buildOnboarding, validateProfile, INVALID,
+};
