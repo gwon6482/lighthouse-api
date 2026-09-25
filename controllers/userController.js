@@ -1,5 +1,12 @@
 const User = require('../models/User');
 const SurveyResult = require('../models/SurveyResult');
+const CareerPlan = require('../models/CareerPlan');
+const WeeklySchedule = require('../models/WeeklySchedule');
+const AchievementRecord = require('../models/AchievementRecord');
+const CurriculumCompletion = require('../models/CurriculumCompletion');
+const JobReview = require('../models/JobReview');
+const { ListObjectsV2Command, DeleteObjectsCommand } = require('@aws-sdk/client-s3');
+const { s3Client, UPLOAD_BUCKET, UPLOAD_PREFIX } = require('../config/s3');
 const mongoose = require('mongoose');
 
 // job_data DB 모델 (중복 컴파일 방지)
@@ -56,19 +63,87 @@ const updateProfile = async (req, res, next) => {
   }
 };
 
+// 인증사진 S3 정리.
+// 키가 `<prefix>/achievements/<uid>/<uuid>.<ext>` 라서 uid 접두사로 통째로 지울 수 있다.
+// DB 의 photoUrl 을 훑지 않는 이유: 업로드(presigned)만 되고 기록이 안 남은 **고아 파일**도
+// 같은 접두사 아래 있어서, 접두사 기준이라야 빠짐없이 지워진다.
+async function deleteUserUploads(uid) {
+  const Prefix = `${UPLOAD_PREFIX}/achievements/${uid}/`;
+  let deleted = 0;
+  let ContinuationToken;
+
+  do {
+    const listed = await s3Client.send(new ListObjectsV2Command({
+      Bucket: UPLOAD_BUCKET, Prefix, ContinuationToken
+    }));
+    const objects = (listed.Contents || []).map((o) => ({ Key: o.Key }));
+
+    if (objects.length > 0) {
+      // DeleteObjects 는 1회 1000개가 상한이다. ListObjectsV2 도 기본 1000개라 그대로 맞는다.
+      const res = await s3Client.send(new DeleteObjectsCommand({
+        Bucket: UPLOAD_BUCKET, Delete: { Objects: objects, Quiet: true }
+      }));
+      if (res.Errors && res.Errors.length > 0) {
+        throw new Error(`S3 삭제 실패 ${res.Errors.length}건: ${res.Errors[0].Message}`);
+      }
+      deleted += objects.length;
+    }
+    ContinuationToken = listed.IsTruncated ? listed.NextContinuationToken : undefined;
+  } while (ContinuationToken);
+
+  return deleted;
+}
+
 // DELETE /api/user
-// 소프트 삭제 — isActive: false
+// **하드 삭제** — 계정과 딸린 데이터를 영구 삭제한다.
+//
+// 2026-09-25 소프트 삭제(isActive=false)에서 전환. 두 가지 이유가 있다.
+//  1) 개인정보처리방침이 "탈퇴 시 지체 없이 파기"라고 공개돼 있는데 문서가 그대로 남아 있었다.
+//     보유기간 경과·목적 달성 시 파기는 법 제21조 의무라 문구만 고쳐서 해결될 문제가 아니었다.
+//  2) 문서가 남으면 **같은 소셜 계정으로 재가입할 때 충돌한다**(authProviders 가 살아있으므로).
+//
+// ⚠️ 삭제 순서: 딸린 것 먼저, `users` 문서를 **맨 마지막**에. 중간에 실패하면 계정이 남아 있어
+//    같은 토큰으로 재시도할 수 있다. 반대로 하면 재인증이 불가능해져 고아 데이터만 남는다.
+// ⚠️ 트랜잭션은 쓰지 않는다. S3 는 어차피 트랜잭션에 못 들어가고, DB 3개(user_data/survey_data/
+//    job_data)에 걸쳐 있어 얻는 것보다 복잡도가 크다. 순서와 재시도 가능성으로 대신한다.
 const deleteAccount = async (req, res, next) => {
   try {
-    const user = await User.findOne({ uid: req.user.uid });
+    const uid = req.user.uid;
+    const user = await User.findOne({ uid });
     if (!user) {
       return res.status(404).json({ success: false, error: '유저를 찾을 수 없습니다' });
     }
 
-    user.isActive = false;
-    await user.save();
+    const deleted = {};
 
-    res.json({ success: true, message: '계정이 비활성화되었습니다' });
+    // 1) S3 인증사진. DB 기록을 지우기 전에 먼저 — 기록이 사라지면 대조할 방법이 없다.
+    deleted.photos = await deleteUserUploads(uid);
+
+    // 2) 검사 결과. survey_id 로 걸리는 것과 respondent_id 로 걸리는 것을 **둘 다** 본다.
+    //    respondent_id 는 클라이언트가 보낸 값이라 비어 있을 수 있어 한쪽만 믿으면 놓친다.
+    const surveyIds = Array.isArray(user.surveyResults) ? user.surveyResults : [];
+    const surveyFilter = surveyIds.length > 0
+      ? { $or: [{ survey_id: { $in: surveyIds } }, { respondent_id: uid }] }
+      : { respondent_id: uid };
+    deleted.surveyResults = (await SurveyResult.deleteMany(surveyFilter)).deletedCount;
+
+    // 3) 직업 후기는 **지우지 않고 익명화**한다. 후기 본문은 다른 이용자가 보는 공개 정보이고,
+    //    개인을 식별하는 것은 submitterEmail 하나뿐이다. 그것만 비우면 개인정보는 남지 않는다.
+    //    (이메일 없는 소셜 계정은 연결고리 자체가 없어 대상이 없다)
+    deleted.reviewsAnonymized = user.email
+      ? (await JobReview.updateMany({ submitterEmail: user.email }, { $set: { submitterEmail: '' } })).modifiedCount
+      : 0;
+
+    // 4) 진로설계·달성 데이터
+    deleted.achievementRecords = (await AchievementRecord.deleteMany({ userUid: uid })).deletedCount;
+    deleted.curriculumCompletions = (await CurriculumCompletion.deleteMany({ userUid: uid })).deletedCount;
+    deleted.weeklySchedules = (await WeeklySchedule.deleteMany({ userUid: uid })).deletedCount;
+    deleted.careerPlans = (await CareerPlan.deleteMany({ userUid: uid })).deletedCount;
+
+    // 5) 계정 문서 — 반드시 마지막
+    await User.deleteOne({ uid });
+
+    res.json({ success: true, message: '계정과 관련 데이터가 모두 삭제되었습니다', deleted });
   } catch (err) {
     next(err);
   }

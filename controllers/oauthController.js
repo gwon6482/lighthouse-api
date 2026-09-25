@@ -158,6 +158,9 @@ const kakaoCallback = async (req, res, next) => {
     if (user === EMAIL_TAKEN) {
       return redirectWithError(res, returnTo, 'email_taken');
     }
+    if (user === INACTIVE) {
+      return redirectWithError(res, returnTo, 'inactive');
+    }
 
     // 3) 우리 JWT 발급
     // ⚠️ 토큰은 쿼리스트링이 아니라 **프래그먼트**로 넘긴다.
@@ -173,6 +176,8 @@ const kakaoCallback = async (req, res, next) => {
 
 // 같은 이메일을 쓰는 로컬 계정이 이미 있을 때 쓰는 표식.
 const EMAIL_TAKEN = Symbol('email-taken');
+// 비활성 계정. 이메일 로그인(authController)은 막는데 소셜만 통과하던 구멍을 메운다.
+const INACTIVE = Symbol('inactive');
 
 // 소셜 프로필 → 우리 유저. **모든 소셜 제공자가 이 함수 하나를 쓴다.**
 //
@@ -189,6 +194,12 @@ async function findOrCreateSocialUser({ provider, providerId, email, name }) {
     authProviders: { $elemMatch: { provider, providerId } },
   });
   if (existing) {
+    // ⚠️ 비활성 계정은 여기서 막는다. `authController.login` 은 막고 있었는데 소셜 경로에는
+    // 검사가 없어서, 비활성화된 계정이 카카오·구글로는 그대로 되살아났다(2026-09-25 수정).
+    // 탈퇴가 하드 삭제로 바뀐 뒤로 isActive:false 를 새로 만드는 경로는 없지만,
+    // 전환 이전에 소프트 삭제된 **옛 계정이 남아 있어** 가드가 필요하다.
+    if (existing.isActive === false) return INACTIVE;
+
     // ⚠️ save() 가 아니라 updateOne 인 이유: 문서 전체 검증을 다시 돌리지 않기 위해서다.
     // 옛 계정에 스키마와 어긋난 값이 하나라도 있으면 save() 는 **로그인 자체를 실패시킨다.**
     const now = new Date();
@@ -357,6 +368,9 @@ const googleCallback = async (req, res, next) => {
     if (user === EMAIL_TAKEN) {
       return redirectWithError(res, returnTo, 'email_taken');
     }
+    if (user === INACTIVE) {
+      return redirectWithError(res, returnTo, 'inactive');
+    }
 
     const url = new URL(returnTo);
     url.hash = `token=${encodeURIComponent(issueAppToken(user))}`;
@@ -395,4 +409,5 @@ module.exports = {
   isKakaoEnabled,
   isGoogleEnabled,
   EMAIL_TAKEN,
+  INACTIVE,
 };

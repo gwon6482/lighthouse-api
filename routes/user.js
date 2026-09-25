@@ -72,15 +72,22 @@ router.put('/profile', updateProfile);
  * @swagger
  * /api/user:
  *   delete:
- *     summary: 계정 탈퇴 (소프트 삭제)
+ *     summary: 계정 탈퇴 (하드 삭제 — 되돌릴 수 없음)
+ *     description: |
+ *       계정 문서와 딸린 데이터(진로계획·주간일정·달성기록·커리큘럼완료·검사결과)를
+ *       영구 삭제하고, S3 인증사진도 함께 지웁니다. 직업 후기는 본문을 남기되
+ *       작성자 이메일만 비워 익명화합니다.
+ *       2026-09-25 소프트 삭제에서 전환했습니다.
  *     tags: [User]
  *     security:
  *       - bearerAuth: []
  *     responses:
  *       200:
- *         description: 계정 비활성화 완료
+ *         description: 삭제 완료. deleted 에 항목별 건수를 담아 돌려줍니다
  *       401:
  *         description: 인증 실패
+ *       404:
+ *         description: 유저를 찾을 수 없음 (이미 삭제됨)
  */
 router.delete('/', deleteAccount);
 
