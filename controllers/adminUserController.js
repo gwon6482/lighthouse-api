@@ -150,7 +150,9 @@ const deleteUser = async (req, res, next) => {
 const getUserDetail = async (req, res, next) => {
   try {
     const { uid } = req.params;
-    const user = await User.findOne({ uid }, { passwordHash: 0, __v: 0 }).lean();
+    // ⚠️ passwordHash 를 projection 에서 빼면 `!!user.passwordHash` 가 **항상 false** 가 된다.
+    //    읽어 와서 유무만 판정하고, 응답에는 값을 절대 싣지 않는다(아래 응답 구성은 화이트리스트다).
+    const user = await User.findOne({ uid }, { __v: 0 }).lean();
     if (!user) {
       return res.status(404).json({ success: false, error: '유저를 찾을 수 없습니다' });
     }
