@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('compression');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -31,6 +32,18 @@ app.set('trust proxy', 1);
 connectDB();
 
 // 미들웨어
+// ⚠️ **압축은 다른 미들웨어보다 먼저** 둔다. 뒤에 두면 이미 전송이 시작된 응답을 못 잡는다.
+//
+// 2026-09-27 추가. 그전까지 **모든 응답이 무압축**으로 나갔다(content-encoding 헤더 없음).
+// 진로백과 상세가 고용24 전량 데이터로 바뀌면서 응답이 6KB → 39KB 가 되는데,
+// gzip 이면 **7.8KB** 다. 절삭 로직을 만드는 대신 압축으로 해결한다
+// (절삭하면 화면을 확장할 때마다 API 를 다시 고쳐야 하고, "어디서 몇 개를 받는지"를
+//  계속 추적해야 한다).
+//
+// ⚠️ api.lighthouse.career 는 Lightsail 컨테이너에 **직접** 붙는다(CDN·프록시 없음).
+//    앞단에 압축 계층이 생기면 이중 압축이 되므로 그때 재검토할 것.
+app.use(compression());
+
 app.use(helmet({
   contentSecurityPolicy: false,
   strictTransportSecurity: false,
