@@ -1,0 +1,3761 @@
+{
+ "generatedAt": "2026-09-27",
+ "note": "우리 jobCode → 고용24 jobCd. A안(세분류 유지 + 상위 데이터 공유).",
+ "unmapped": {
+  "경기심판 및 경기기록원": "적합한 대응 직업 없음 — 크롤링본 유지"
+ },
+ "mapping": {
+  "011102": {
+   "ours": "행정부고위공무원",
+   "jobCd": "K000000933",
+   "jobNm": "행정부고위공무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "013401": {
+   "ours": "보건·의료관리자",
+   "jobCd": "K000000931",
+   "jobNm": "보건 의료 관련 관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "012301": {
+   "ours": "마케팅·광고·홍보관리자",
+   "jobCd": "K000000919",
+   "jobNm": "마케팅 및 광고·홍보 관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "022103": {
+   "ours": "경영·진단전문가",
+   "jobCd": "K000000944",
+   "jobNm": "경영 및 진단 전문가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "021001": {
+   "ours": "정부·공공행정전문가",
+   "jobCd": "K000000925",
+   "jobNm": "정부·공공행정전문가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "023201": {
+   "ours": "세무사",
+   "jobCd": "K000007525",
+   "jobNm": "세무사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "023101": {
+   "ours": "회계사",
+   "jobCd": "K000007449",
+   "jobNm": "회계사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "012401": {
+   "ours": "금융관리자",
+   "jobCd": "K000001210",
+   "jobNm": "금융관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "016201": {
+   "ours": "전기·가스·수도관리자",
+   "jobCd": "K000001018",
+   "jobNm": "전기·가스 및 수도 관련 관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "015101": {
+   "ours": "영업·판매관리자",
+   "jobCd": "K000001028",
+   "jobNm": "영업 및 판매 관련 관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "013701": {
+   "ours": "정보통신관리자",
+   "jobCd": "K000001032",
+   "jobNm": "정보 통신 관련 관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "013204": {
+   "ours": "대학교 총장 및 대학학장",
+   "jobCd": "K000000990",
+   "jobNm": "대학교 총장 및 대학학장",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "012101": {
+   "ours": "정부행정관리자",
+   "jobCd": "K000001081",
+   "jobNm": "정부 행정 관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "013101": {
+   "ours": "연구관리자",
+   "jobCd": "K000001190",
+   "jobNm": "연구관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "013501": {
+   "ours": "사회복지관리자",
+   "jobCd": "K000000833",
+   "jobNm": "사회복지 관련 관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "132004": {
+   "ours": "정보통신컨설턴트 및 감리원",
+   "jobCd": "K000001085",
+   "jobNm": "정보통신컨설턴트 및 감리원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "013201": {
+   "ours": "유치원 원장 및 원감",
+   "jobCd": "K000001171",
+   "jobNm": "유치원 원장 및 원감",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "014201": {
+   "ours": "음식서비스관리자",
+   "jobCd": "K000000950",
+   "jobNm": "음식 서비스 관련 관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "015201": {
+   "ours": "운송관리자",
+   "jobCd": "K000001094",
+   "jobNm": "운송 관련 관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "022201": {
+   "ours": "노무사",
+   "jobCd": "K000007562",
+   "jobNm": "노무사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "012201": {
+   "ours": "경영지원관리자",
+   "jobCd": "K000001059",
+   "jobNm": "경영 지원 관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "012402": {
+   "ours": "보험관리자",
+   "jobCd": "K000007471",
+   "jobNm": "보험관리자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "022202": {
+   "ours": "인적자원전문가",
+   "jobCd": "K000000875",
+   "jobNm": "인적자원전문가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "026301": {
+   "ours": "총무사무원",
+   "jobCd": "K000007517",
+   "jobNm": "총무사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "029202": {
+   "ours": "의료코디네이터",
+   "jobCd": "K000001127",
+   "jobNm": "의료코디네이터",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "027101": {
+   "ours": "회계사무원",
+   "jobCd": "K000007487",
+   "jobNm": "회계사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "025201": {
+   "ours": "관세행정사무원",
+   "jobCd": "K000001040",
+   "jobNm": "관세 행정 사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "026103": {
+   "ours": "영업기획·관리·지원사무원",
+   "jobCd": "K000001200",
+   "jobNm": "영업기획·관리·지원사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "026101": {
+   "ours": "경영기획사무원",
+   "jobCd": "K000001079",
+   "jobNm": "경영 기획 사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "026401": {
+   "ours": "감사사무원",
+   "jobCd": "K000007553",
+   "jobNm": "감사사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "028101": {
+   "ours": "무역사무원",
+   "jobCd": "K000000918",
+   "jobNm": "무역 사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "026201": {
+   "ours": "인사·교육·훈련사무원",
+   "jobCd": "K000001196",
+   "jobNm": "인사·교육·훈련사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "025301": {
+   "ours": "병무행정사무원",
+   "jobCd": "K000007456",
+   "jobNm": "병무행정사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "025401": {
+   "ours": "일반행정공무원",
+   "jobCd": "K000000995",
+   "jobNm": "일반행정공무원(조세, 관세, 병무 제외)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "024402": {
+   "ours": "공연·영화 및 음반기획자",
+   "jobCd": "K000000881",
+   "jobNm": "공연·영화 및 음반 기획자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "023301": {
+   "ours": "관세사",
+   "jobCd": "K000007500",
+   "jobNm": "관세사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "026102": {
+   "ours": "광고·홍보·마케팅사무원",
+   "jobCd": "K000001069",
+   "jobNm": "광고·홍보·마케팅사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "024203": {
+   "ours": "조사전문가",
+   "jobCd": "K000001139",
+   "jobNm": "조사전문가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "027201": {
+   "ours": "경리사무원",
+   "jobCd": "K000007466",
+   "jobNm": "경리사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "023401": {
+   "ours": "감정평가사",
+   "jobCd": "K000007514",
+   "jobNm": "감정평가사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "025101": {
+   "ours": "조세행정사무원",
+   "jobCd": "K000007516",
+   "jobNm": "조세행정사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "029201": {
+   "ours": "고객상담원",
+   "jobCd": "K000001194",
+   "jobNm": "고객상담원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "211101": {
+   "ours": "대학교수",
+   "jobCd": "K000000906",
+   "jobNm": "대학 교수",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "212901": {
+   "ours": "보조교사",
+   "jobCd": "K000000849",
+   "jobNm": "보조교사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "214101": {
+   "ours": "문리학원강사",
+   "jobCd": "K000000947",
+   "jobNm": "문리학원 강사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "212201": {
+   "ours": "초등학교교사",
+   "jobCd": "K000007558",
+   "jobNm": "초등학교교사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "031101": {
+   "ours": "투자분석가",
+   "jobCd": "K000001179",
+   "jobNm": "투자분석가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "214301": {
+   "ours": "기술·기능계강사",
+   "jobCd": "K000000967",
+   "jobNm": "기술·기능계강사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "031201": {
+   "ours": "자산운용가",
+   "jobCd": "K000000987",
+   "jobNm": "자산운용가(펀드매니저)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "032401": {
+   "ours": "출납창구사무원",
+   "jobCd": "K000001131",
+   "jobNm": "출납 창구 사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "214102": {
+   "ours": "외국어강사",
+   "jobCd": "K000000837",
+   "jobNm": "외국어 강사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "029401": {
+   "ours": "비서",
+   "jobCd": "K000007478",
+   "jobNm": "비서",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "029904": {
+   "ours": "취업알선원",
+   "jobCd": "K000008504",
+   "jobNm": "취업알선원(직업소개소)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "032201": {
+   "ours": "증권사무원",
+   "jobCd": "K000001114",
+   "jobNm": "증권 사무원(출납창구제외)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "031501": {
+   "ours": "손해사정사",
+   "jobCd": "K000007561",
+   "jobNm": "손해사정사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "213001": {
+   "ours": "유치원교사",
+   "jobCd": "K000007530",
+   "jobNm": "유치원교사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "214201": {
+   "ours": "컴퓨터강사",
+   "jobCd": "K000007539",
+   "jobNm": "컴퓨터강사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "032501": {
+   "ours": "신용추심원",
+   "jobCd": "K000001104",
+   "jobNm": "신용추심원(채권관리원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "031401": {
+   "ours": "증권·외환딜러",
+   "jobCd": "K000001168",
+   "jobNm": "증권 및 외환 딜러",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "029903": {
+   "ours": "행정사",
+   "jobCd": "K000007524",
+   "jobNm": "행정사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "033201": {
+   "ours": "보험대리인 및 중개인",
+   "jobCd": "K000000977",
+   "jobNm": "보험대리인 및 중개인",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "029501": {
+   "ours": "전산자료입력원 및 사무보조원",
+   "jobCd": "K000001219",
+   "jobNm": "전산자료입력원 및 사무보조원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "212101": {
+   "ours": "중·고등학교교사",
+   "jobCd": "K000001065",
+   "jobNm": "중·고등학교 교사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "032301": {
+   "ours": "보험인수심사원(언더라이터)",
+   "jobCd": "K000000908",
+   "jobNm": "보험인수심사원(언더라이터)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "032101": {
+   "ours": "은행사무원",
+   "jobCd": "K000001136",
+   "jobNm": "은행 사무원(출납창구제외)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "033202": {
+   "ours": "보험모집인",
+   "jobCd": "K000001206",
+   "jobNm": "보험모집인(보험설계사/FC)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "212301": {
+   "ours": "특수교육교사",
+   "jobCd": "K000001113",
+   "jobNm": "특수교육 교사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "029901": {
+   "ours": "출판·자료편집사무원",
+   "jobCd": "K000000866",
+   "jobNm": "출판·자료편집사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "029902": {
+   "ours": "속기사",
+   "jobCd": "K000001183",
+   "jobNm": "속기사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "231101": {
+   "ours": "사회복지사",
+   "jobCd": "K000000857",
+   "jobNm": "사회복지사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "231201": {
+   "ours": "심리상담전문가",
+   "jobCd": "K000001049",
+   "jobNm": "심리상담전문가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "222001": {
+   "ours": "법률사무원",
+   "jobCd": "K000001180",
+   "jobNm": "법률 관련 사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "221401": {
+   "ours": "변리사",
+   "jobCd": "K000007470",
+   "jobNm": "변리사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "250301": {
+   "ours": "부사관",
+   "jobCd": "K000007508",
+   "jobNm": "부사관",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "231301": {
+   "ours": "청소년지도사",
+   "jobCd": "K000007526",
+   "jobNm": "청소년지도사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "221301": {
+   "ours": "법무사 및 집행관",
+   "jobCd": "K000001221",
+   "jobNm": "법무사 및 집행관",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "221101": {
+   "ours": "판사",
+   "jobCd": "K000007527",
+   "jobNm": "판사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "240101": {
+   "ours": "경찰관",
+   "jobCd": "K000007521",
+   "jobNm": "경찰관",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "214501": {
+   "ours": "학습지·교육교구방문강사",
+   "jobCd": "K000000883",
+   "jobNm": "학습지·교육교구 방문강사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "231401": {
+   "ours": "직업상담사",
+   "jobCd": "K000007565",
+   "jobNm": "직업상담사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "250201": {
+   "ours": "위관급 장교",
+   "jobCd": "K000001175",
+   "jobNm": "위관급 장교",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "240102": {
+   "ours": "해양경찰관",
+   "jobCd": "K000007540",
+   "jobNm": "해양경찰관",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "232901": {
+   "ours": "생활지도원",
+   "jobCd": "K000007541",
+   "jobNm": "생활지도원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "214401": {
+   "ours": "예능강사",
+   "jobCd": "K000000911",
+   "jobNm": "예능 강사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "221102": {
+   "ours": "검사",
+   "jobCd": "K000007573",
+   "jobNm": "검사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "240201": {
+   "ours": "소방관",
+   "jobCd": "K000007495",
+   "jobNm": "소방관",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "232101": {
+   "ours": "보육교사",
+   "jobCd": "K000007502",
+   "jobNm": "보육교사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "240301": {
+   "ours": "교도관",
+   "jobCd": "K000007570",
+   "jobNm": "교도관",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "221201": {
+   "ours": "변호사",
+   "jobCd": "K000007482",
+   "jobNm": "변호사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "302001": {
+   "ours": "수의사",
+   "jobCd": "K000001011",
+   "jobNm": "수의사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "301301": {
+   "ours": "한의사",
+   "jobCd": "K000007542",
+   "jobNm": "한의사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "307101": {
+   "ours": "응급구조사",
+   "jobCd": "K000007461",
+   "jobNm": "응급구조사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "306903": {
+   "ours": "놀이치료사",
+   "jobCd": "K000007564",
+   "jobNm": "놀이치료사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "307601": {
+   "ours": "안마사",
+   "jobCd": "K000007547",
+   "jobNm": "안마사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "307301": {
+   "ours": "안경사",
+   "jobCd": "K000007509",
+   "jobNm": "안경사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "306701": {
+   "ours": "재활공학기사",
+   "jobCd": "K000000864",
+   "jobNm": "재활공학기사(의지보조기기사)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "306301": {
+   "ours": "치과기공사",
+   "jobCd": "K000007577",
+   "jobNm": "치과기공사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "306502": {
+   "ours": "작업치료사",
+   "jobCd": "K000007537",
+   "jobNm": "작업치료사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "306401": {
+   "ours": "치과위생사",
+   "jobCd": "K000000830",
+   "jobNm": "치과위생사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "307401": {
+   "ours": "보건의료정보관리사",
+   "jobCd": "K000007492",
+   "jobNm": "보건의료정보관리사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "303001": {
+   "ours": "약사",
+   "jobCd": "K000000993",
+   "jobNm": "약사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "303002": {
+   "ours": "한약사",
+   "jobCd": "K000007474",
+   "jobNm": "한약사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "411102": {
+   "ours": "소설가",
+   "jobCd": "K000007572",
+   "jobNm": "소설가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "301201": {
+   "ours": "일반의사",
+   "jobCd": "K000007504",
+   "jobNm": "일반의사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "305001": {
+   "ours": "영양사",
+   "jobCd": "K000001144",
+   "jobNm": "영양사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "306901": {
+   "ours": "언어치료사",
+   "jobCd": "K000001088",
+   "jobNm": "언어치료사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "306101": {
+   "ours": "임상병리사",
+   "jobCd": "K000007544",
+   "jobNm": "임상병리사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "306904": {
+   "ours": "예술치료사",
+   "jobCd": "K000001216",
+   "jobNm": "예술치료사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "306201": {
+   "ours": "방사선사",
+   "jobCd": "K000001017",
+   "jobNm": "방사선사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "306501": {
+   "ours": "물리치료사",
+   "jobCd": "K000007501",
+   "jobNm": "물리치료사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "304004": {
+   "ours": "간호사",
+   "jobCd": "K000007494",
+   "jobNm": "간호사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "307501": {
+   "ours": "간호조무사",
+   "jobCd": "K000007576",
+   "jobNm": "간호조무사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "301401": {
+   "ours": "치과의사",
+   "jobCd": "K000007472",
+   "jobNm": "치과의사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "306601": {
+   "ours": "임상심리사",
+   "jobCd": "K000008503",
+   "jobNm": "임상심리사(심리치료사)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "415404": {
+   "ours": "시각디자이너",
+   "jobCd": "K000001060",
+   "jobNm": "시각 디자이너",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "411201": {
+   "ours": "번역가",
+   "jobCd": "K000000824",
+   "jobNm": "번역가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "415502": {
+   "ours": "게임그래픽디자이너",
+   "jobCd": "K000007567",
+   "jobNm": "게임그래픽디자이너",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "413101": {
+   "ours": "학예사",
+   "jobCd": "K000001019",
+   "jobNm": "학예사(큐레이터)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "414703": {
+   "ours": "대중무용수",
+   "jobCd": "K000008494",
+   "jobNm": "대중무용수(백댄서)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "415201": {
+   "ours": "의상디자이너",
+   "jobCd": "K000007454",
+   "jobNm": "의상디자이너",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "411202": {
+   "ours": "통역가",
+   "jobCd": "K000001051",
+   "jobNm": "통역가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "413202": {
+   "ours": "기록물관리사",
+   "jobCd": "K000001100",
+   "jobNm": "기록물관리사(기록물관리전문요원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "411301": {
+   "ours": "출판물기획자",
+   "jobCd": "K000001198",
+   "jobNm": "출판물기획자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "412002": {
+   "ours": "방송기자",
+   "jobCd": "K000001222",
+   "jobNm": "방송기자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "415501": {
+   "ours": "웹디자이너",
+   "jobCd": "K000007463",
+   "jobNm": "웹디자이너",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "414602": {
+   "ours": "성악가",
+   "jobCd": "K000007505",
+   "jobNm": "성악가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "414401": {
+   "ours": "국악인",
+   "jobCd": "K000001110",
+   "jobNm": "국악인",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "414501": {
+   "ours": "지휘자",
+   "jobCd": "K000000851",
+   "jobNm": "지휘자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "414503": {
+   "ours": "연주가",
+   "jobCd": "K000001181",
+   "jobNm": "연주가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "415301": {
+   "ours": "실내장식디자이너",
+   "jobCd": "K000007498",
+   "jobNm": "실내장식디자이너",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "411104": {
+   "ours": "방송작가",
+   "jobCd": "K000001169",
+   "jobNm": "방송작가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "415202": {
+   "ours": "패션소품디자이너",
+   "jobCd": "K000001008",
+   "jobNm": "패션소품디자이너(의상제외)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "413102": {
+   "ours": "문화재보존원",
+   "jobCd": "K000001119",
+   "jobNm": "문화재보존원(컨서베이터)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "414601": {
+   "ours": "가수",
+   "jobCd": "K000001089",
+   "jobNm": "가수",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "413201": {
+   "ours": "사서",
+   "jobCd": "K000007532",
+   "jobNm": "사서",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "412001": {
+   "ours": "신문기자",
+   "jobCd": "K000000937",
+   "jobNm": "신문기자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "414502": {
+   "ours": "작곡가",
+   "jobCd": "K000007583",
+   "jobNm": "작곡가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "415101": {
+   "ours": "제품디자이너",
+   "jobCd": "K000001000",
+   "jobNm": "제품 디자이너",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "414702": {
+   "ours": "안무가",
+   "jobCd": "K000007479",
+   "jobNm": "안무가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "414701": {
+   "ours": "무용가",
+   "jobCd": "K000007546",
+   "jobNm": "무용가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "412003": {
+   "ours": "잡지기자",
+   "jobCd": "K000000966",
+   "jobNm": "잡지기자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "420202": {
+   "ours": "프로게이머",
+   "jobCd": "K000007507",
+   "jobNm": "프로게이머",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416301": {
+   "ours": "아나운서",
+   "jobCd": "K000001161",
+   "jobNm": "아나운서",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "511201": {
+   "ours": "미용사",
+   "jobCd": "K000007481",
+   "jobNm": "미용사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "511302": {
+   "ours": "네일아티스트",
+   "jobCd": "K000000972",
+   "jobNm": "네일아티스트(손톱관리사)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "420403": {
+   "ours": "레크리에이션전문가",
+   "jobCd": "K000000981",
+   "jobNm": "레크리에이션전문가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416204": {
+   "ours": "개그맨 및 코미디언",
+   "jobCd": "K000001126",
+   "jobNm": "개그맨 및 코미디언",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416101": {
+   "ours": "방송연출가",
+   "jobCd": "K000001138",
+   "jobNm": "방송연출가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416201": {
+   "ours": "영화배우 및 탤런트",
+   "jobCd": "K000000899",
+   "jobNm": "영화배우 및 탤런트",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416203": {
+   "ours": "연극 및 뮤지컬배우",
+   "jobCd": "K000000901",
+   "jobNm": "연극 및 뮤지컬배우",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "417201": {
+   "ours": "연예인매니저",
+   "jobCd": "K000007574",
+   "jobNm": "연예인매니저",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "420201": {
+   "ours": "직업운동선수",
+   "jobCd": "K000000867",
+   "jobNm": "직업 운동선수",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416105": {
+   "ours": "연극영화방송기술감독",
+   "jobCd": "K000001160",
+   "jobNm": "연극영화방송기술감독",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416104": {
+   "ours": "광고영상감독",
+   "jobCd": "K000007460",
+   "jobNm": "광고영상감독",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "420101": {
+   "ours": "스포츠감독 및 코치",
+   "jobCd": "K000001027",
+   "jobNm": "스포츠 감독 및 코치",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416401": {
+   "ours": "촬영기사",
+   "jobCd": "K000007543",
+   "jobNm": "촬영기사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416102": {
+   "ours": "영화감독",
+   "jobCd": "K000007458",
+   "jobNm": "영화감독",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416103": {
+   "ours": "연극연출가",
+   "jobCd": "K000007503",
+   "jobNm": "연극연출가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416601": {
+   "ours": "영상·녹화 및 편집기사",
+   "jobCd": "K000001099",
+   "jobNm": "영상·녹화 및 편집 기사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "415504": {
+   "ours": "UX·UI디자이너",
+   "jobCd": "K000000890",
+   "jobNm": "UX/UI디자이너",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416202": {
+   "ours": "모델",
+   "jobCd": "K000000951",
+   "jobNm": "모델",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "511301": {
+   "ours": "피부 및 체형관리사",
+   "jobCd": "K000001091",
+   "jobNm": "피부 및 체형관리사(발관리사포함)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416302": {
+   "ours": "리포터",
+   "jobCd": "K000001207",
+   "jobNm": "리포터",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416701": {
+   "ours": "조명기사",
+   "jobCd": "K000007473",
+   "jobNm": "조명기사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "511401": {
+   "ours": "메이크업아티스트 및 뷰티매니저",
+   "jobCd": "K000001178",
+   "jobNm": "메이크업아티스트 및 뷰티매니저",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "511101": {
+   "ours": "이용사",
+   "jobCd": "K000007569",
+   "jobNm": "이용사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "415503": {
+   "ours": "영상그래픽디자이너",
+   "jobCd": "K000007459",
+   "jobNm": "영상그래픽디자이너",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416205": {
+   "ours": "성우",
+   "jobCd": "K000007476",
+   "jobNm": "성우",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "417102": {
+   "ours": "미디어콘텐츠창작자(크리에이터)",
+   "jobCd": "K000001025",
+   "jobNm": "미디어 콘텐츠 창작자(웹방송전문가)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "416501": {
+   "ours": "음향·녹음기사",
+   "jobCd": "K000000873",
+   "jobNm": "음향 및 녹음 기사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "532201": {
+   "ours": "홀서빙원",
+   "jobCd": "K000000913",
+   "jobNm": "홀서빙원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "531701": {
+   "ours": "음료조리사",
+   "jobCd": "K000000893",
+   "jobNm": "음료 조리사(바리스타포함)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "541301": {
+   "ours": "시설·특수경비원",
+   "jobCd": "K000001150",
+   "jobNm": "시설 및 특수 경비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "550201": {
+   "ours": "육아도우미",
+   "jobCd": "K000008490",
+   "jobNm": "육아 도우미(베이비시터)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "542001": {
+   "ours": "경비원",
+   "jobCd": "K000008486",
+   "jobNm": "경비원(건물관리원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "541101": {
+   "ours": "경호원",
+   "jobCd": "K000007549",
+   "jobNm": "경호원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "541201": {
+   "ours": "청원경찰",
+   "jobCd": "K000001212",
+   "jobNm": "청원경찰",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "532101": {
+   "ours": "패스트푸드준비원",
+   "jobCd": "K000000982",
+   "jobNm": "패스트푸드 준비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "512301": {
+   "ours": "장례지도사 및 장례상담원",
+   "jobCd": "K000000846",
+   "jobNm": "장례 지도사 및 장례 상담원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "531201": {
+   "ours": "한식조리사",
+   "jobCd": "K000007538",
+   "jobNm": "한식조리사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "531401": {
+   "ours": "양식조리사",
+   "jobCd": "K000007555",
+   "jobNm": "양식조리사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "511501": {
+   "ours": "반려동물미용사",
+   "jobCd": "K000007477",
+   "jobNm": "반려동물미용사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "532301": {
+   "ours": "주방보조원",
+   "jobCd": "K000001192",
+   "jobNm": "주방 보조원(일반음식점)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "531301": {
+   "ours": "중식조리사",
+   "jobCd": "K000007450",
+   "jobNm": "중식조리사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "521201": {
+   "ours": "여행사무원",
+   "jobCd": "K000001187",
+   "jobNm": "여행 사무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "521101": {
+   "ours": "여행상품개발자",
+   "jobCd": "K000001093",
+   "jobNm": "여행상품 개발자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "511502": {
+   "ours": "수의사보조원",
+   "jobCd": "K000007497",
+   "jobNm": "수의사 보조원(동물보건사)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "550101": {
+   "ours": "요양보호사 및 간병인",
+   "jobCd": "K000000850",
+   "jobNm": "요양 보호사 및 간병인",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "511402": {
+   "ours": "분장사",
+   "jobCd": "K000007528",
+   "jobNm": "분장사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "531501": {
+   "ours": "일식조리사",
+   "jobCd": "K000007579",
+   "jobNm": "일식조리사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "522101": {
+   "ours": "항공기객실승무원",
+   "jobCd": "K000007506",
+   "jobNm": "항공기객실승무원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "512201": {
+   "ours": "혼례종사원",
+   "jobCd": "K000001167",
+   "jobNm": "혼례 종사원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "612101": {
+   "ours": "기술영업원",
+   "jobCd": "K000001004",
+   "jobNm": "기술 영업원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "561201": {
+   "ours": "환경미화원 및 재활용품수거원",
+   "jobCd": "K000001156",
+   "jobNm": "환경미화원 및 재활용품 수거원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "615501": {
+   "ours": "노점 및 이동판매원",
+   "jobCd": "K000000827",
+   "jobNm": "노점 및 이동 판매원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "617101": {
+   "ours": "홍보도우미 및 판촉원",
+   "jobCd": "K000001218",
+   "jobNm": "홍보도우미 및 판촉원(나레이터모델포함)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "615401": {
+   "ours": "상품대여원",
+   "jobCd": "K000001050",
+   "jobNm": "상품 대여원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "561601": {
+   "ours": "가사관리사",
+   "jobCd": "K000007566",
+   "jobNm": "가사관리사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "621203": {
+   "ours": "선박기관사",
+   "jobCd": "K000007469",
+   "jobNm": "선박기관사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "562101": {
+   "ours": "계기검침원 및 가스점검원",
+   "jobCd": "K000001204",
+   "jobNm": "계기 검침원 및 가스 점검원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "615601": {
+   "ours": "방문판매원",
+   "jobCd": "K000007513",
+   "jobNm": "방문판매원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "613001": {
+   "ours": "텔레마케터",
+   "jobCd": "K000007451",
+   "jobNm": "텔레마케터",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "615101": {
+   "ours": "상점판매원",
+   "jobCd": "K000001128",
+   "jobNm": "상점 판매원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "614001": {
+   "ours": "소규모판매점장",
+   "jobCd": "K000001143",
+   "jobNm": "소규모판매점장",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "561101": {
+   "ours": "청소원",
+   "jobCd": "K000001066",
+   "jobNm": "청소원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "615701": {
+   "ours": "주유원",
+   "jobCd": "K000000874",
+   "jobNm": "주유원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "621101": {
+   "ours": "항공기조종사",
+   "jobCd": "K000007552",
+   "jobNm": "항공기조종사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "612201": {
+   "ours": "해외영업원",
+   "jobCd": "K000007560",
+   "jobNm": "해외영업원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "612401": {
+   "ours": "제품광고영업원",
+   "jobCd": "K000000930",
+   "jobNm": "제품·광고 영업원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "621301": {
+   "ours": "철도·전동차기관사",
+   "jobCd": "K000000941",
+   "jobNm": "철도 및 전동차 기관사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "612301": {
+   "ours": "자동차영업원",
+   "jobCd": "K000008491",
+   "jobNm": "자동차 영업원(자동차딜러)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "616201": {
+   "ours": "매표원 및 복권판매원",
+   "jobCd": "K000001092",
+   "jobNm": "매표원 및 복권 판매원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "616101": {
+   "ours": "매장계산원 및 요금정산원",
+   "jobCd": "K000000952",
+   "jobNm": "매장 계산원 및 요금 정산원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "612501": {
+   "ours": "상품중개인 및 경매사",
+   "jobCd": "K000001195",
+   "jobNm": "상품중개인 및 경매사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "624101": {
+   "ours": "택배원",
+   "jobCd": "K000008492",
+   "jobNm": "택배원(늘찬배달원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "705901": {
+   "ours": "점화·발파·화약관리원",
+   "jobCd": "K000000896",
+   "jobNm": "점화·발파·화약관리원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "621901": {
+   "ours": "신호원 및 수송원",
+   "jobCd": "K000001137",
+   "jobNm": "신호원 및 수송원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "702101": {
+   "ours": "미장공",
+   "jobCd": "K000001102",
+   "jobNm": "미장공",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "624401": {
+   "ours": "하역·적재종사원",
+   "jobCd": "K000000954",
+   "jobNm": "하역 및 적재 종사원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "702501": {
+   "ours": "도배공",
+   "jobCd": "K000001188",
+   "jobNm": "도배공",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "705101": {
+   "ours": "광원·채석원 및 석재절단원",
+   "jobCd": "K000001111",
+   "jobNm": "광원 채석원 및 석재 절단원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "702601": {
+   "ours": "건물도장공",
+   "jobCd": "K000007480",
+   "jobNm": "건물도장공",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "624301": {
+   "ours": "선박갑판원",
+   "jobCd": "K000000884",
+   "jobNm": "선박갑판원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "701201": {
+   "ours": "경량철골공",
+   "jobCd": "K000008485",
+   "jobNm": "경량철골공(석고보드공, 텍스공, 조립주택건립원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "702401": {
+   "ours": "타일·대리석시공원",
+   "jobCd": "K000001053",
+   "jobNm": "타일·대리석시공원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "702502": {
+   "ours": "유리부착원",
+   "jobCd": "K000000932",
+   "jobNm": "유리 부착원(유리공)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "702201": {
+   "ours": "방수공",
+   "jobCd": "K000001038",
+   "jobNm": "방수공",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "623002": {
+   "ours": "지게차운전원",
+   "jobCd": "K000007462",
+   "jobNm": "지게차운전원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "703101": {
+   "ours": "건설배관공",
+   "jobCd": "K000000964",
+   "jobNm": "건설 배관공",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "702301": {
+   "ours": "단열공",
+   "jobCd": "K000000923",
+   "jobNm": "단열공",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "704001": {
+   "ours": "건설 및 채굴기계운전원",
+   "jobCd": "K000000868",
+   "jobNm": "건설 및 채굴 기계 운전원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "705201": {
+   "ours": "철로설치·보수원",
+   "jobCd": "K000001062",
+   "jobNm": "철로 설치 및 보수원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "701501": {
+   "ours": "건축석공",
+   "jobCd": "K000007475",
+   "jobNm": "건축석공",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "701401": {
+   "ours": "콘크리트공",
+   "jobCd": "K000007467",
+   "jobNm": "콘크리트공",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "703201": {
+   "ours": "공업배관공",
+   "jobCd": "K000008484",
+   "jobNm": "공업배관공(플렌트, 항공, 선박, 철도차량)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "623001": {
+   "ours": "크레인·호이스트운전원",
+   "jobCd": "K000001213",
+   "jobNm": "크레인 및 호이스트운전원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "701601": {
+   "ours": "건축목공",
+   "jobCd": "K000001117",
+   "jobNm": "건축 목공(전통건축기능원 포함)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "701301": {
+   "ours": "철근공",
+   "jobCd": "K000007533",
+   "jobNm": "철근공",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "622304": {
+   "ours": "화물차·특수차운전원",
+   "jobCd": "K000001164",
+   "jobNm": "화물차 및 특수차 운전원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "622201": {
+   "ours": "버스운전원",
+   "jobCd": "K000007468",
+   "jobNm": "버스운전원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "701101": {
+   "ours": "철골공(강구조물건립원)",
+   "jobCd": "K000000897",
+   "jobNm": "철골공(강구조물건립원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "622101": {
+   "ours": "택시운전원",
+   "jobCd": "K000007465",
+   "jobNm": "택시운전원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "825101": {
+   "ours": "도장원(도장기조작원)",
+   "jobCd": "K000000831",
+   "jobNm": "도장원(도장기조작원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "862301": {
+   "ours": "재봉사",
+   "jobCd": "K000000848",
+   "jobNm": "재봉사(의류·직물)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "841201": {
+   "ours": "이동전화기수리원",
+   "jobCd": "K000001121",
+   "jobNm": "이동전화기 수리원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "811201": {
+   "ours": "승강기설치·정비원",
+   "jobCd": "K000000885",
+   "jobNm": "승강기 설치 및 정비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "811101": {
+   "ours": "공업기계설치 및 정비원",
+   "jobCd": "K000001023",
+   "jobNm": "공업기계 설치 및 정비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "852101": {
+   "ours": "타이어·고무제품생산기계조작원",
+   "jobCd": "K000001152",
+   "jobNm": "타이어 및 고무제품 생산기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "881201": {
+   "ours": "사진인화·현상기조작원(사진수정 포함)",
+   "jobCd": "K000000880",
+   "jobNm": "사진 인화 및 현상기 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "871201": {
+   "ours": "떡제조원",
+   "jobCd": "K000008482",
+   "jobNm": "떡 제조원(한과포함)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "851101": {
+   "ours": "석유·천연가스제조제어장치조작원",
+   "jobCd": "K000001009",
+   "jobNm": "석유 및 천연가스 제조 관련 제어 장치 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "863401": {
+   "ours": "의복·가죽·모피수선원",
+   "jobCd": "K000000965",
+   "jobNm": "의복·가죽 및 모피 수선원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "812201": {
+   "ours": "선박정비원",
+   "jobCd": "K000000976",
+   "jobNm": "선박 정비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "842101": {
+   "ours": "방송장비설치·수리원",
+   "jobCd": "K000000958",
+   "jobNm": "방송 관련 장비 설치 및 수리원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "826401": {
+   "ours": "광석·석제품생산기계조작원",
+   "jobCd": "K000001197",
+   "jobNm": "광석 및 석제품 생산기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "705902": {
+   "ours": "잠수기능원",
+   "jobCd": "K000000983",
+   "jobNm": "잠수기능원(잠수부, 구난잠수요원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "813201": {
+   "ours": "금속공작기계조작원",
+   "jobCd": "K000001112",
+   "jobNm": "금속 공작기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "821101": {
+   "ours": "금속가공제어장치조작원",
+   "jobCd": "K000001165",
+   "jobNm": "금속가공 제어장치 조작원(용광로·용해로·금속가열로)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "817101": {
+   "ours": "자동차조립원",
+   "jobCd": "K000007548",
+   "jobNm": "자동차조립원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "823101": {
+   "ours": "단조원(단조기조작원)",
+   "jobCd": "K000001148",
+   "jobNm": "단조원(단조기조작원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "816103": {
+   "ours": "일반기계조립원",
+   "jobCd": "K000000871",
+   "jobNm": "일반기계 조립원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "842301": {
+   "ours": "방송·통신·인터넷케이블 설치·수리원",
+   "jobCd": "K000001075",
+   "jobNm": "방송·통신·인터넷 케이블 설치 및 수리원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "853201": {
+   "ours": "재활용 처리장치·소각로조작원",
+   "jobCd": "K000001003",
+   "jobNm": "재활용 처리장치 및 소각로 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "822101": {
+   "ours": "판금원(판금기조작원)",
+   "jobCd": "K000000823",
+   "jobNm": "판금원(판금기조작원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "811501": {
+   "ours": "보일러설치·정비원",
+   "jobCd": "K000001031",
+   "jobNm": "보일러 설치 및 정비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "822301": {
+   "ours": "제관원(제관기조작원)",
+   "jobCd": "K000000821",
+   "jobNm": "제관원(제관기조작원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "852401": {
+   "ours": "고무·플라스틱 제품 조립원",
+   "jobCd": "K000001047",
+   "jobNm": "고무 및 플라스틱제품 조립원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "873201": {
+   "ours": "제분·도정기계조작원",
+   "jobCd": "K000001024",
+   "jobNm": "제분 및 도정 관련 기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "861301": {
+   "ours": "표백·염색기조작원",
+   "jobCd": "K000000839",
+   "jobNm": "표백 및 염색기 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "882101": {
+   "ours": "목재가공기계조작원",
+   "jobCd": "K000001078",
+   "jobNm": "목재 가공 관련 기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "812101": {
+   "ours": "항공기정비원",
+   "jobCd": "K000000822",
+   "jobNm": "항공기 정비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "824101": {
+   "ours": "용접원(용접기조작원)",
+   "jobCd": "K000001055",
+   "jobNm": "용접원(용접기조작원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "706001": {
+   "ours": "건설·채굴단순종사원",
+   "jobCd": "K000001096",
+   "jobNm": "건설 및 채굴 단순 종사원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "831301": {
+   "ours": "외선전기공",
+   "jobCd": "K000001083",
+   "jobNm": "외선 전기공",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "835101": {
+   "ours": "전기부품·제품생산기계조작원",
+   "jobCd": "K000000927",
+   "jobNm": "전기 부품 및 제품 생산기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "872201": {
+   "ours": "김치·밑반찬 제조종사원",
+   "jobCd": "K000000841",
+   "jobNm": "김치 및 밑반찬 제조 종사원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "852301": {
+   "ours": "화학제품생산기계조작원(고무·플라스틱 제외)",
+   "jobCd": "K000000986",
+   "jobNm": "화학제품 생산기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "882201": {
+   "ours": "펄프·종이제조장치조작원",
+   "jobCd": "K000001199",
+   "jobNm": "펄프 및 종이 제조 장치 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "817201": {
+   "ours": "자동차부품조립·검사원",
+   "jobCd": "K000000858",
+   "jobNm": "자동차부품조립·검사원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "821201": {
+   "ours": "금속가공기계조작원",
+   "jobCd": "K000000945",
+   "jobNm": "금속가공 기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "823301": {
+   "ours": "주조원(주조기조작원)",
+   "jobCd": "K000001006",
+   "jobNm": "주조원(주조기조작원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "812401": {
+   "ours": "자동차정비원",
+   "jobCd": "K000001070",
+   "jobNm": "자동차 정비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "814001": {
+   "ours": "냉·난방설비조작원",
+   "jobCd": "K000001013",
+   "jobNm": "냉·난방 관련 설비 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "826101": {
+   "ours": "유리·유리제품생산기계조작원",
+   "jobCd": "K000001037",
+   "jobNm": "유리·유리제품 생산기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "861201": {
+   "ours": "직조기 및 편직기조작원",
+   "jobCd": "K000001145",
+   "jobNm": "직조기 및 편직기 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "873301": {
+   "ours": "곡물가공제품기계조작원",
+   "jobCd": "K000001016",
+   "jobNm": "곡물가공 제품 기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "863201": {
+   "ours": "양장·양복제조원",
+   "jobCd": "K000001115",
+   "jobNm": "양장 및 양복 제조원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "881101": {
+   "ours": "인쇄기계조작원",
+   "jobCd": "K000000988",
+   "jobNm": "인쇄 관련 기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "811901": {
+   "ours": "농업용 및 기타기계장비설치 및 정비원",
+   "jobCd": "K000001043",
+   "jobNm": "농업용·기타 기계장비 설치 및 정비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "812301": {
+   "ours": "철도기관차·전동차정비원",
+   "jobCd": "K000001030",
+   "jobNm": "철도기관차 및 전동차 정비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "811401": {
+   "ours": "냉동·냉장·공조기설치·정비원",
+   "jobCd": "K000000886",
+   "jobNm": "냉동·냉장·공조기 설치 및 정비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "813101": {
+   "ours": "금형원",
+   "jobCd": "K000001223",
+   "jobNm": "금형원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "811301": {
+   "ours": "크레인 및 지게차설치 및 정비원",
+   "jobCd": "K000001107",
+   "jobNm": "크레인 및 지게차 설치 및 정비원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "815001": {
+   "ours": "자동조립라인·산업용 로봇조작원",
+   "jobCd": "K000001076",
+   "jobNm": "자동조립라인 및 산업용로봇 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "884101": {
+   "ours": "공예원",
+   "jobCd": "K000001077",
+   "jobNm": "공예원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "885101": {
+   "ours": "악기제조원 및 조율사",
+   "jobCd": "K000000894",
+   "jobNm": "악기 제조원 및 조율사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "873501": {
+   "ours": "음료제조기계조작원",
+   "jobCd": "K000000905",
+   "jobNm": "음료 제조 관련 기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "832201": {
+   "ours": "가전제품설치·수리원",
+   "jobCd": "K000001098",
+   "jobNm": "가전제품 설치 및 수리원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "885201": {
+   "ours": "간판제작·설치원",
+   "jobCd": "K000001020",
+   "jobNm": "간판 제작 및 설치원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "825201": {
+   "ours": "도금·금속분무기조작원",
+   "jobCd": "K000000962",
+   "jobNm": "도금 및 금속 분무기 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "826301": {
+   "ours": "시멘트·광물제품생산기계조작원",
+   "jobCd": "K000000828",
+   "jobNm": "시멘트 및 광물제품 생산기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "884201": {
+   "ours": "귀금속·보석세공원",
+   "jobCd": "K000000882",
+   "jobNm": "귀금속 및 보석 세공원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "872301": {
+   "ours": "식품·담배등급원",
+   "jobCd": "K000001105",
+   "jobNm": "식품 및 담배 등급원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "841101": {
+   "ours": "컴퓨터설치·수리원",
+   "jobCd": "K000000963",
+   "jobNm": "컴퓨터 설치 및 수리원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "842201": {
+   "ours": "통신장비설치·수리원",
+   "jobCd": "K000001039",
+   "jobNm": "통신 관련 장비 설치 및 수리원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "831101": {
+   "ours": "산업전기공",
+   "jobCd": "K000001158",
+   "jobNm": "산업 전기공(항공기·선박·철도기관차·전동차전기공)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "883201": {
+   "ours": "가구조립원",
+   "jobCd": "K000000971",
+   "jobNm": "가구 조립원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "862201": {
+   "ours": "재단사",
+   "jobCd": "K000001122",
+   "jobNm": "재단사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "863101": {
+   "ours": "한복제조원",
+   "jobCd": "K000007457",
+   "jobNm": "한복제조원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "864101": {
+   "ours": "제화원",
+   "jobCd": "K000001033",
+   "jobNm": "제화원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "885902": {
+   "ours": "주입·포장·상표부착기계조작원",
+   "jobCd": "K000001005",
+   "jobNm": "주입·포장 및 상표부착 기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "853101": {
+   "ours": "상·하수도처리장치조작원",
+   "jobCd": "K000000916",
+   "jobNm": "상하수도 처리장치 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "834001": {
+   "ours": "전기·전자설비조작원",
+   "jobCd": "K000001118",
+   "jobNm": "전기 및 전자설비 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "882301": {
+   "ours": "종이제품생산기계조작원",
+   "jobCd": "K000000943",
+   "jobNm": "종이제품 생산기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "883101": {
+   "ours": "가구제조·수리원",
+   "jobCd": "K000000996",
+   "jobNm": "가구 제조 및 수리원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "862101": {
+   "ours": "패턴사",
+   "jobCd": "K000001182",
+   "jobNm": "패턴사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "871101": {
+   "ours": "제과·제빵원",
+   "jobCd": "K000000861",
+   "jobNm": "제과·제빵원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "833001": {
+   "ours": "발전·배전장치조작원",
+   "jobCd": "K000001087",
+   "jobNm": "발전 및 배전 장치 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "852201": {
+   "ours": "플라스틱제품생산기계조작원",
+   "jobCd": "K000001124",
+   "jobNm": "플라스틱제품 생산기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "832101": {
+   "ours": "사무용 전자기기설치·수리원",
+   "jobCd": "K000000961",
+   "jobNm": "사무용 전자기기 설치 및 수리원(컴퓨터제외)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "836001": {
+   "ours": "전기·전자부품·제품조립원",
+   "jobCd": "K000001135",
+   "jobNm": "전기·전자 부품 및 제품 조립원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "835201": {
+   "ours": "전자부품·제품생산기계조작원",
+   "jobCd": "K000000917",
+   "jobNm": "전자 부품 및 제품 생산기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "826201": {
+   "ours": "점토제품생산기계조작원",
+   "jobCd": "K000001174",
+   "jobNm": "점토제품 생산기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "851201": {
+   "ours": "화학물가공장치조작원",
+   "jobCd": "K000001054",
+   "jobNm": "화학물 가공 장치 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "861101": {
+   "ours": "섬유제조기계조작원",
+   "jobCd": "K000001072",
+   "jobNm": "섬유 제조기계 조작원(방적,방사,연사,합사,권사기등)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "864301": {
+   "ours": "세탁기계조작원",
+   "jobCd": "K000001057",
+   "jobNm": "세탁 기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "831201": {
+   "ours": "내선전기공",
+   "jobCd": "K000001095",
+   "jobNm": "내선 전기공(건물내전기공사원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "873101": {
+   "ours": "육류·어패류·낙농품가공기계조작원",
+   "jobCd": "K000001166",
+   "jobNm": "육류·어패류 및 낙농품 가공 기계 조작원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "121201": {
+   "ours": "자연과학시험원",
+   "jobCd": "K000000825",
+   "jobNm": "자연과학 시험원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "122201": {
+   "ours": "생명과학시험원",
+   "jobCd": "K000000852",
+   "jobNm": "생명과학 시험원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "122301": {
+   "ours": "농림어업시험원",
+   "jobCd": "K000001157",
+   "jobNm": "농림어업 관련 시험원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "131201": {
+   "ours": "통신기기·장비기술자",
+   "jobCd": "K000000924",
+   "jobNm": "통신기기·장비기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "131202": {
+   "ours": "통신기술개발자 ",
+   "jobCd": "K000000936",
+   "jobNm": "통신기술개발자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "131203": {
+   "ours": "통신망운영기술자",
+   "jobCd": "K000000900",
+   "jobNm": "통신망운영기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "132002": {
+   "ours": "컴퓨터시스템설계 및 분석가",
+   "jobCd": "K000000856",
+   "jobNm": "컴퓨터시스템설계 및 분석가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "133101": {
+   "ours": "시스템소프트웨어개발자",
+   "jobCd": "K000000853",
+   "jobNm": "시스템 소프트웨어 개발자(프로그래머)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "133201": {
+   "ours": "응용소프트웨어개발자",
+   "jobCd": "K000001176",
+   "jobNm": "응용소프트웨어개발자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "133202": {
+   "ours": "가상현실전문가",
+   "jobCd": "K000007452",
+   "jobNm": "가상현실전문가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "133204": {
+   "ours": "게임프로그래머",
+   "jobCd": "K000007580",
+   "jobNm": "게임프로그래머",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "133205": {
+   "ours": "모바일앱개발자",
+   "jobCd": "K000001042",
+   "jobNm": "모바일앱개발자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "133301": {
+   "ours": "웹개발자",
+   "jobCd": "K000001106",
+   "jobNm": "웹개발자(웹 프로그래머)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "133302": {
+   "ours": "웹기획자",
+   "jobCd": "K000001172",
+   "jobNm": "웹기획자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "133901": {
+   "ours": "IT테스터 및 IT QA전문가",
+   "jobCd": "K000001153",
+   "jobNm": "IT테스터 및 IT QA전문가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "134102": {
+   "ours": "데이터분석가(빅데이터분석가)",
+   "jobCd": "K000001080",
+   "jobNm": "데이터분석가(빅데이터분석가)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "134201": {
+   "ours": "네트워크시스템개발자",
+   "jobCd": "K000000968",
+   "jobNm": "네트워크시스템개발자(네트워크엔지니어)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "134301": {
+   "ours": "정보시스템운영자",
+   "jobCd": "K000001132",
+   "jobNm": "정보 시스템 운영자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "134302": {
+   "ours": "네트워크관리자",
+   "jobCd": "K000008481",
+   "jobNm": "네트워크관리자(클라우딩컴퓨터운영관리자)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "134303": {
+   "ours": "IT기술지원전문가",
+   "jobCd": "K000000978",
+   "jobNm": "IT기술지원전문가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "134401": {
+   "ours": "웹운영자",
+   "jobCd": "K000001061",
+   "jobNm": "웹 운영자(홈페이지 관리자)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "135001": {
+   "ours": "정보보안전문가",
+   "jobCd": "K000000832",
+   "jobNm": "정보 보안 전문가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "136001": {
+   "ours": "통신장비기사",
+   "jobCd": "K000001074",
+   "jobNm": "통신장비기사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "136002": {
+   "ours": "방송송출장비기사",
+   "jobCd": "K000001041",
+   "jobNm": "방송송출장비기사",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140101": {
+   "ours": "건축가(건축설계사)",
+   "jobCd": "K000001014",
+   "jobNm": "건축가(건축설계사)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140201": {
+   "ours": "건축구조기술자",
+   "jobCd": "K000000956",
+   "jobNm": "건축구조기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140204": {
+   "ours": "건축설비기술자",
+   "jobCd": "K000000922",
+   "jobNm": "건축설비기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140205": {
+   "ours": "건축감리기술자",
+   "jobCd": "K000000915",
+   "jobNm": "건축감리기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140206": {
+   "ours": "건축안전·환경기술자 및 건축품질기술자",
+   "jobCd": "K000001142",
+   "jobNm": "건축안전·환경기술자 및 건축품질기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140207": {
+   "ours": "건축시공기술자 및 견적원",
+   "jobCd": "K000000940",
+   "jobNm": "건축시공기술자 및 견적원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140301": {
+   "ours": "토목구조설계기술자",
+   "jobCd": "K000000992",
+   "jobNm": "토목구조설계기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140304": {
+   "ours": "토목감리기술자",
+   "jobCd": "K000001067",
+   "jobNm": "토목감리기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140305": {
+   "ours": "토목안전·환경기술자 및 토목품질기술자",
+   "jobCd": "K000000829",
+   "jobNm": "토목안전·환경기술자 및 토목품질기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140306": {
+   "ours": "토목시공기술자 및 견적원",
+   "jobCd": "K000001073",
+   "jobNm": "토목시공기술자 및 견적원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140401": {
+   "ours": "조경기술자",
+   "jobCd": "K000000985",
+   "jobNm": "조경 기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140501": {
+   "ours": "도시계획·설계가",
+   "jobCd": "K000000878",
+   "jobNm": "도시계획·설계가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140502": {
+   "ours": "교통계획·설계가",
+   "jobCd": "K000000891",
+   "jobNm": "교통계획·설계가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140503": {
+   "ours": "교통영향평가원",
+   "jobCd": "K000001120",
+   "jobNm": "교통영향평가원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140601": {
+   "ours": "지적 및 측량기술자",
+   "jobCd": "K000000888",
+   "jobNm": "지적 및 측량기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "140701": {
+   "ours": "건설자재시험원",
+   "jobCd": "K000001177",
+   "jobNm": "건설자재시험원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "151101": {
+   "ours": "건설기계공학기술자 및 연구원",
+   "jobCd": "K000001103",
+   "jobNm": "건설기계공학기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "151102": {
+   "ours": "플랜트기계공학기술자",
+   "jobCd": "K000000870",
+   "jobNm": "플랜트기계공학기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "151105": {
+   "ours": "항공공학기술자",
+   "jobCd": "K000000877",
+   "jobNm": "항공공학기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "151107": {
+   "ours": "자동차공학기술자",
+   "jobCd": "K000001185",
+   "jobNm": "자동차공학기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "151108": {
+   "ours": "조선·해양공학기술자",
+   "jobCd": "K000001101",
+   "jobNm": "조선·해양공학기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "152201": {
+   "ours": "금속·재료공학시험원",
+   "jobCd": "K000001189",
+   "jobNm": "금속 및 재료공학 시험원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "153101": {
+   "ours": "전기기기·제품개발기술자 및 연구원",
+   "jobCd": "K000000826",
+   "jobNm": "전기기기·제품개발기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "153102": {
+   "ours": "전기계측제어기술자",
+   "jobCd": "K000001202",
+   "jobNm": "전기계측제어기술자(전기패널, 계장, 공정자동화전기 등)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "153103": {
+   "ours": "발전설비기술자",
+   "jobCd": "K000000975",
+   "jobNm": "발전설비기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "153104": {
+   "ours": "송·배전설비기술자",
+   "jobCd": "K000000840",
+   "jobNm": "송·배전설비기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "153105": {
+   "ours": "전기감리기술자",
+   "jobCd": "K000000876",
+   "jobNm": "전기감리기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "153106": {
+   "ours": "전기안전기술자",
+   "jobCd": "K000007491",
+   "jobNm": "전기안전기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "153201": {
+   "ours": "전자제품 및 부품 개발기술자",
+   "jobCd": "K000000984",
+   "jobNm": "전자제품 및 부품 개발기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "153202": {
+   "ours": "반도체공학기술자 및 연구원",
+   "jobCd": "K000001184",
+   "jobNm": "반도체공학 기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "153203": {
+   "ours": "전자계측제어기술자",
+   "jobCd": "K000001191",
+   "jobNm": "전자계측제어기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "153204": {
+   "ours": "디스플레이연구 및 개발자",
+   "jobCd": "K000000879",
+   "jobNm": "디스플레이연구 및 개발자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "153301": {
+   "ours": "전기·전자공학시험원",
+   "jobCd": "K000001205",
+   "jobNm": "전기 및 전자공학 시험원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "154101": {
+   "ours": "석유화학공학기술자 및 연구원",
+   "jobCd": "K000000865",
+   "jobNm": "석유화학공학기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "154102": {
+   "ours": "고무 및 플라스틱화학공학기술자 및 연구원",
+   "jobCd": "K000001193",
+   "jobNm": "고무 및 플라스틱 화학공학기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "154103": {
+   "ours": "도료 및 농약품화학공학기술자 및 연구원",
+   "jobCd": "K000000946",
+   "jobNm": "도료 및 농약품 화학공학기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "154104": {
+   "ours": "비누 및 화장품화학공학기술자 및 연구원",
+   "jobCd": "K000001141",
+   "jobNm": "비누 및 화장품 화학공학기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "154105": {
+   "ours": "의약품공학기술자 및 연구원",
+   "jobCd": "K000000998",
+   "jobNm": "의약품공학기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "154201": {
+   "ours": "화학공학시험원",
+   "jobCd": "K000000934",
+   "jobNm": "화학공학 시험원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "155203": {
+   "ours": "가스·에너지시험원 및 진단전문가",
+   "jobCd": "K000001036",
+   "jobNm": "가스·에너지시험원 및 진단전문가",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "155303": {
+   "ours": "폐기물처리기술자",
+   "jobCd": "K000007554",
+   "jobNm": "폐기물처리기술자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "155304": {
+   "ours": "환경영향평가원",
+   "jobCd": "K000007582",
+   "jobNm": "환경영향평가원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "155305": {
+   "ours": "소음진동기술자 및 연구원",
+   "jobCd": "K000001026",
+   "jobNm": "소음진동기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "155306": {
+   "ours": "토양환경기술자 및 연구원",
+   "jobCd": "K000000920",
+   "jobNm": "토양환경기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "155501": {
+   "ours": "보건위생·환경검사원",
+   "jobCd": "K000001064",
+   "jobNm": "보건위생·환경검사원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "156201": {
+   "ours": "섬유공학시험원",
+   "jobCd": "K000001151",
+   "jobNm": "섬유공학 시험원(섬유·염료)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "157101": {
+   "ours": "식품공학기술자 및 연구원",
+   "jobCd": "K000001063",
+   "jobNm": "식품공학 기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "157201": {
+   "ours": "식품공학시험원",
+   "jobCd": "K000000970",
+   "jobNm": "식품공학 시험원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "158201": {
+   "ours": "소방공학기술자 및 연구원",
+   "jobCd": "K000000953",
+   "jobNm": "소방공학 기술자 및 연구원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "158401": {
+   "ours": "산업안전원 및 위험관리원",
+   "jobCd": "K000000835",
+   "jobNm": "산업안전원 및 위험관리원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "158501": {
+   "ours": "비파괴검사원",
+   "jobCd": "K000007545",
+   "jobNm": "비파괴검사원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "159104": {
+   "ours": "제도사(캐드원)",
+   "jobCd": "K000001090",
+   "jobNm": "제도사(캐드원)",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "562401": {
+   "ours": "검표원",
+   "jobCd": "K000007523",
+   "jobNm": "검표원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "901101": {
+   "ours": "곡식작물재배원",
+   "jobCd": "K000007484",
+   "jobNm": "곡식작물재배원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "901201": {
+   "ours": "채소·특용작물재배원",
+   "jobCd": "K000000907",
+   "jobNm": "채소 및 특용작물 재배원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "901301": {
+   "ours": "과수작물재배원",
+   "jobCd": "K000007486",
+   "jobNm": "과수작물재배원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "901401": {
+   "ours": "육묘 및 화훼작물재배자",
+   "jobCd": "K000000842",
+   "jobNm": "육묘 및 화훼작물재배자",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "901501": {
+   "ours": "조경원",
+   "jobCd": "K000001035",
+   "jobNm": "조경원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "902101": {
+   "ours": "낙농종사원",
+   "jobCd": "K000000902",
+   "jobNm": "낙농 관련 종사원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "902201": {
+   "ours": "가축사육종사원",
+   "jobCd": "K000000935",
+   "jobNm": "가축 사육 종사원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "903101": {
+   "ours": "조림·산림경영인 및 벌목원",
+   "jobCd": "K000000869",
+   "jobNm": "조림·산림경영인 및 벌목원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "904101": {
+   "ours": "양식원",
+   "jobCd": "K000001056",
+   "jobNm": "양식원",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "904201": {
+   "ours": "어부 및 해녀",
+   "jobCd": "K000000926",
+   "jobNm": "어부 및 해녀",
+   "method": "title-exact",
+   "score": 1.0
+  },
+  "013202": {
+   "ours": "초등학교 교장 및 교감",
+   "jobCd": "K000000838",
+   "jobNm": "초·중·고등학교 교장 및 교감",
+   "method": "title",
+   "score": 1.0
+  },
+  "013203": {
+   "ours": "중고등학교 교장 및 교감",
+   "jobCd": "K000000838",
+   "jobNm": "초·중·고등학교 교장 및 교감",
+   "method": "title",
+   "score": 1.0
+  },
+  "016301": {
+   "ours": "제조·생산관리자",
+   "jobCd": "K000001173",
+   "jobNm": "제품 생산 관련 관리자",
+   "method": "title",
+   "score": 1.0
+  },
+  "013305": {
+   "ours": "경찰·소방·교도관리자",
+   "jobCd": "K000000910",
+   "jobNm": "법률·경찰·소방 및 교도 관리자",
+   "method": "title",
+   "score": 1.0
+  },
+  "011201": {
+   "ours": "기업고위임원",
+   "jobCd": "K000000847",
+   "jobNm": "기업 대표 및 기업 고위 임원",
+   "method": "title",
+   "score": 1.0
+  },
+  "028401": {
+   "ours": "생산관리사무원",
+   "jobCd": "K000001001",
+   "jobNm": "생산 및 품질관리 사무원",
+   "method": "title",
+   "score": 1.0
+  },
+  "028203": {
+   "ours": "항공운송사무원",
+   "jobCd": "K000000929",
+   "jobNm": "수상 및 항공운송 사무원",
+   "method": "title",
+   "score": 1.0
+  },
+  "028201": {
+   "ours": "도로운송사무원",
+   "jobCd": "K000001010",
+   "jobNm": "도로 및 철도운송 사무원",
+   "method": "title",
+   "score": 1.0
+  },
+  "028202": {
+   "ours": "철도·지하철운송사무원",
+   "jobCd": "K000001010",
+   "jobNm": "도로 및 철도운송 사무원",
+   "method": "title",
+   "score": 0.937
+  },
+  "028402": {
+   "ours": "품질관리사무원",
+   "jobCd": "K000001001",
+   "jobNm": "생산 및 품질관리 사무원",
+   "method": "title",
+   "score": 1.0
+  },
+  "029303": {
+   "ours": "통계사무원",
+   "jobCd": "K000007487",
+   "jobNm": "회계사무원",
+   "method": "title",
+   "score": 1.0
+  },
+  "024101": {
+   "ours": "광고·홍보·마케팅전문가",
+   "jobCd": "K000001069",
+   "jobNm": "광고·홍보·마케팅사무원",
+   "method": "title",
+   "score": 1.0
+  },
+  "028204": {
+   "ours": "수상운송사무원",
+   "jobCd": "K000000929",
+   "jobNm": "수상 및 항공운송 사무원",
+   "method": "title",
+   "score": 1.0
+  },
+  "024301": {
+   "ours": "상품기획자",
+   "jobCd": "K000000997",
+   "jobNm": "상품 기획 전문가",
+   "method": "title",
+   "score": 1.0
+  },
+  "031301": {
+   "ours": "보험상품개발자",
+   "jobCd": "K000001093",
+   "jobNm": "여행상품 개발자",
+   "method": "title",
+   "score": 0.914
+  },
+  "032302": {
+   "ours": "보험보상사무원",
+   "jobCd": "K000001162",
+   "jobNm": "보험 심사원 및 사무원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "031302": {
+   "ours": "금융상품개발자",
+   "jobCd": "K000001093",
+   "jobNm": "여행상품 개발자",
+   "method": "title",
+   "score": 0.914
+  },
+  "211201": {
+   "ours": "대학시간강사",
+   "jobCd": "K000001220",
+   "jobNm": "대학 강사",
+   "method": "title",
+   "score": 0.9
+  },
+  "301102": {
+   "ours": "외과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "301108": {
+   "ours": "소아청소년과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "301104": {
+   "ours": "산부인과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "301101": {
+   "ours": "내과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "301109": {
+   "ours": "방사선과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "301107": {
+   "ours": "정신과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "301103": {
+   "ours": "성형외과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "215105": {
+   "ours": "교재·교구 및 이러닝교육전문가",
+   "jobCd": "K000001149",
+   "jobNm": "교재·교구 및 이러닝전문가",
+   "method": "title",
+   "score": 1.0
+  },
+  "301106": {
+   "ours": "안과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "301105": {
+   "ours": "이비인후과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "301110": {
+   "ours": "마취병리과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "411103": {
+   "ours": "영화시나리오작가",
+   "jobCd": "K000001029",
+   "jobNm": "영상시나리오작가",
+   "method": "title",
+   "score": 1.0
+  },
+  "304003": {
+   "ours": "보건교사",
+   "jobCd": "K000007494",
+   "jobNm": "간호사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "301112": {
+   "ours": "피부과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "301113": {
+   "ours": "가정의학과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "301111": {
+   "ours": "비뇨기과의사",
+   "jobCd": "K000001133",
+   "jobNm": "전문의사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "414301": {
+   "ours": "만화가",
+   "jobCd": "K000008495",
+   "jobNm": "만화가 및 만화영화 작가(애니메이터)",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "414102": {
+   "ours": "조각가",
+   "jobCd": "K000008501",
+   "jobNm": "화가 및 조각가",
+   "method": "title",
+   "score": 1.0
+  },
+  "414101": {
+   "ours": "화가",
+   "jobCd": "K000008501",
+   "jobNm": "화가 및 조각가",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "414303": {
+   "ours": "만화영화작가(애니메이터)",
+   "jobCd": "K000008495",
+   "jobNm": "만화가 및 만화영화 작가(애니메이터)",
+   "method": "title",
+   "score": 1.0
+  },
+  "420402": {
+   "ours": "스포츠트레이너",
+   "jobCd": "K000000957",
+   "jobNm": "스포츠강사 및 트레이너",
+   "method": "title",
+   "score": 1.0
+  },
+  "420401": {
+   "ours": "스포츠강사",
+   "jobCd": "K000000957",
+   "jobNm": "스포츠강사 및 트레이너",
+   "method": "title",
+   "score": 0.964
+  },
+  "522202": {
+   "ours": "열차객실승무원",
+   "jobCd": "K000008488",
+   "jobNm": "선박 및 열차 객실 승무원",
+   "method": "title",
+   "score": 1.0
+  },
+  "512102": {
+   "ours": "웨딩플래너",
+   "jobCd": "K000008489",
+   "jobNm": "결혼 상담원 및 웨딩플래너",
+   "method": "title",
+   "score": 1.0
+  },
+  "522201": {
+   "ours": "선박객실승무원",
+   "jobCd": "K000008488",
+   "jobNm": "선박 및 열차 객실 승무원",
+   "method": "title",
+   "score": 1.0
+  },
+  "531101": {
+   "ours": "주방장",
+   "jobCd": "K000007556",
+   "jobNm": "주방장 및 요리 연구가",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "531601": {
+   "ours": "바텐터",
+   "jobCd": "K000001044",
+   "jobNm": "바텐더(조주사)",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "621402": {
+   "ours": "선박교통관제사",
+   "jobCd": "K000008493",
+   "jobNm": "관제사",
+   "method": "title",
+   "score": 1.0
+  },
+  "621201": {
+   "ours": "선장 및 항해사",
+   "jobCd": "K000000974",
+   "jobNm": "선장 및 항해사·도선사",
+   "method": "title",
+   "score": 1.0
+  },
+  "621102": {
+   "ours": "헬리콥터조종사",
+   "jobCd": "K000007552",
+   "jobNm": "항공기조종사",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "561301": {
+   "ours": "방역원",
+   "jobCd": "K000008487",
+   "jobNm": "세정원 및 방역원",
+   "method": "title",
+   "score": 1.0
+  },
+  "621401": {
+   "ours": "항공교통관제사",
+   "jobCd": "K000008493",
+   "jobNm": "관제사",
+   "method": "title",
+   "score": 1.0
+  },
+  "621403": {
+   "ours": "철도교통관제사",
+   "jobCd": "K000008493",
+   "jobNm": "관제사",
+   "method": "title",
+   "score": 1.0
+  },
+  "615203": {
+   "ours": "통신기기·서비스판매원",
+   "jobCd": "K000001109",
+   "jobNm": "단말기 및 통신 서비스 판매원",
+   "method": "title",
+   "score": 0.962
+  },
+  "615301": {
+   "ours": "온라인판매원",
+   "jobCd": "K000001154",
+   "jobNm": "온라인 쇼핑 판매원",
+   "method": "title",
+   "score": 1.0
+  },
+  "611001": {
+   "ours": "부동산중개인",
+   "jobCd": "K000007536",
+   "jobNm": "부동산 컨설턴트 및 중개사",
+   "method": "secondary",
+   "score": 0.9
+  },
+  "701602": {
+   "ours": "전통건축기능원",
+   "jobCd": "K000001117",
+   "jobNm": "건축 목공(전통건축기능원 포함)",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "624201": {
+   "ours": "집배원",
+   "jobCd": "K000008483",
+   "jobNm": "우편집배원",
+   "method": "title",
+   "score": 1.0
+  },
+  "702701": {
+   "ours": "섀시조립·설치원",
+   "jobCd": "K000001034",
+   "jobNm": "새시 조립 및 설치원",
+   "method": "title",
+   "score": 1.0
+  },
+  "701701": {
+   "ours": "조적원",
+   "jobCd": "K000001208",
+   "jobNm": "조적공 및 석재 부설원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "812102": {
+   "ours": "헬리콥터정비원",
+   "jobCd": "K000000822",
+   "jobNm": "항공기 정비원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "873401": {
+   "ours": "과실·채소기계조작원",
+   "jobCd": "K000001045",
+   "jobNm": "과실 및 채소가공 관련 기계 조작원",
+   "method": "title",
+   "score": 1.0
+  },
+  "864201": {
+   "ours": "신발제조기계조작원 및 조립원",
+   "jobCd": "K000001015",
+   "jobNm": "신발 제조기계 조작원",
+   "method": "title",
+   "score": 1.0
+  },
+  "817301": {
+   "ours": "선박조립원",
+   "jobCd": "K000000909",
+   "jobNm": "운송장비 조립원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "811601": {
+   "ours": "건설·광업기계설치·정비원",
+   "jobCd": "K000001211",
+   "jobNm": "건설·광업용기계설치 및 정비원",
+   "method": "title",
+   "score": 1.0
+  },
+  "872101": {
+   "ours": "정육원 및 도축원",
+   "jobCd": "K000001209",
+   "jobNm": "정육원 가공원 및 도축원",
+   "method": "title",
+   "score": 1.0
+  },
+  "812902": {
+   "ours": "자전거판매 및 정비원",
+   "jobCd": "K000001070",
+   "jobNm": "자동차 정비원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "110101": {
+   "ours": "철학연구원",
+   "jobCd": "K000000949",
+   "jobNm": "인문과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "110102": {
+   "ours": "역사학연구원",
+   "jobCd": "K000000949",
+   "jobNm": "인문과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "110103": {
+   "ours": "언어학연구원",
+   "jobCd": "K000000949",
+   "jobNm": "인문과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "110104": {
+   "ours": "교육학연구원",
+   "jobCd": "K000000949",
+   "jobNm": "인문과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "110105": {
+   "ours": "심리학연구원",
+   "jobCd": "K000000949",
+   "jobNm": "인문과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "110201": {
+   "ours": "정치학연구원",
+   "jobCd": "K000008522",
+   "jobNm": "사회과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "110202": {
+   "ours": "경제학연구원",
+   "jobCd": "K000008522",
+   "jobNm": "사회과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "110203": {
+   "ours": "사회학연구원",
+   "jobCd": "K000008522",
+   "jobNm": "사회과학 연구원",
+   "method": "title",
+   "score": 1.0
+  },
+  "121101": {
+   "ours": "물리학연구원",
+   "jobCd": "K000008521",
+   "jobNm": "자연과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "121102": {
+   "ours": "화학연구원",
+   "jobCd": "K000008521",
+   "jobNm": "자연과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "121103": {
+   "ours": "수학 및 통계연구원",
+   "jobCd": "K000008521",
+   "jobNm": "자연과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "121104": {
+   "ours": "생물학연구원",
+   "jobCd": "K000008521",
+   "jobNm": "자연과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "121105": {
+   "ours": "지질학연구원",
+   "jobCd": "K000008521",
+   "jobNm": "자연과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "121106": {
+   "ours": "천문 및 기상학연구원",
+   "jobCd": "K000008521",
+   "jobNm": "자연과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "122101": {
+   "ours": "의학연구원",
+   "jobCd": "K000001140",
+   "jobNm": "생명과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "122102": {
+   "ours": "약학연구원",
+   "jobCd": "K000001140",
+   "jobNm": "생명과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "122103": {
+   "ours": "농학연구원",
+   "jobCd": "K000001140",
+   "jobNm": "생명과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "122104": {
+   "ours": "수산학연구원",
+   "jobCd": "K000001140",
+   "jobNm": "생명과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "122105": {
+   "ours": "임학 및 산림학연구원",
+   "jobCd": "K000001140",
+   "jobNm": "생명과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "122106": {
+   "ours": "축산학 및 수의학연구원",
+   "jobCd": "K000001140",
+   "jobNm": "생명과학 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "131101": {
+   "ours": "컴퓨터하드웨어기술자",
+   "jobCd": "K000000994",
+   "jobNm": "컴퓨터 하드웨어 기술자 및 연구원",
+   "method": "title",
+   "score": 1.0
+  },
+  "140602": {
+   "ours": "지리정보시스템전문가",
+   "jobCd": "K000001021",
+   "jobNm": "공간정보시스템전문가",
+   "method": "title",
+   "score": 0.914
+  },
+  "151201": {
+   "ours": "로봇공학기술자",
+   "jobCd": "K000000860",
+   "jobNm": "로봇공학기술자 및 연구원",
+   "method": "title",
+   "score": 1.0
+  },
+  "151301": {
+   "ours": "기계‧로봇공학시험원",
+   "jobCd": "K000001082",
+   "jobNm": "기계 및 로봇공학 시험원",
+   "method": "title",
+   "score": 1.0
+  },
+  "152101": {
+   "ours": "재료(금속)공학기술자",
+   "jobCd": "K000000942",
+   "jobNm": "금속·재료공학 기술자 및 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "155102": {
+   "ours": "태양광발전연구 및 개발자",
+   "jobCd": "K000001084",
+   "jobNm": "가스·에너지공학 기술자 및 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "155103": {
+   "ours": "풍력발전연구 및 개발자",
+   "jobCd": "K000001084",
+   "jobNm": "가스·에너지공학 기술자 및 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "155106": {
+   "ours": "원자력공학기술자",
+   "jobCd": "K000001084",
+   "jobNm": "가스·에너지공학 기술자 및 연구원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "155301": {
+   "ours": "대기환경기술자 및 연구원",
+   "jobCd": "K000000938",
+   "jobNm": "대기환경기술자",
+   "method": "title",
+   "score": 1.0
+  },
+  "155302": {
+   "ours": "수질환경기술자 및 연구원",
+   "jobCd": "K000000887",
+   "jobNm": "수질환경기술자",
+   "method": "title",
+   "score": 1.0
+  },
+  "155401": {
+   "ours": "환경시험원",
+   "jobCd": "K000001097",
+   "jobNm": "환경공학 시험원",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "156101": {
+   "ours": "섬유공학기술자",
+   "jobCd": "K000001123",
+   "jobNm": "섬유공학 기술자 및 연구원",
+   "method": "title",
+   "score": 1.0
+  },
+  "158402": {
+   "ours": "위험관리원",
+   "jobCd": "K000000835",
+   "jobNm": "산업안전원 및 위험관리원",
+   "method": "title",
+   "score": 1.0
+  },
+  "159103": {
+   "ours": "3D프린팅모델러",
+   "jobCd": "K000001090",
+   "jobNm": "제도사(캐드원)",
+   "method": "secondary",
+   "score": 1.0
+  },
+  "562301": {
+   "ours": "주차관리·안내원",
+   "jobCd": "K000000854",
+   "jobNm": "주차 관리원 및 안내원",
+   "method": "title",
+   "score": 1.0
+  },
+  "016101": {
+   "ours": "건설·채굴관리자",
+   "jobCd": "K000000895",
+   "jobNm": "건설 및 광업 관련 관리자",
+   "method": "manual",
+   "score": 1.0
+  },
+  "014301": {
+   "ours": "경비·청소관리자",
+   "jobCd": "K000000989",
+   "jobNm": "환경·청소 및 경비 관련 관리자",
+   "method": "manual",
+   "score": 1.0
+  },
+  "014103": {
+   "ours": "여행·호텔관리자",
+   "jobCd": "K000000991",
+   "jobNm": "여행·숙박(호텔)관리자",
+   "method": "manual",
+   "score": 1.0
+  },
+  "013601": {
+   "ours": "예술·디자인·방송관리자",
+   "jobCd": "K000000969",
+   "jobNm": "문화·예술 관련 관리자",
+   "method": "manual",
+   "score": 1.0
+  },
+  "028301": {
+   "ours": "자재·구매사무원",
+   "jobCd": "K000000843",
+   "jobNm": "자재관리 사무원(물류사무원)",
+   "method": "manual",
+   "score": 1.0
+  },
+  "029101": {
+   "ours": "안내 및 접수사무원",
+   "jobCd": "K000001170",
+   "jobNm": "안내·접수원",
+   "method": "manual",
+   "score": 1.0
+  },
+  "024404": {
+   "ours": "행사기획자",
+   "jobCd": "K000000955",
+   "jobNm": "행사·전시 및 회의 기획자",
+   "method": "manual",
+   "score": 1.0
+  },
+  "231501": {
+   "ours": "사회단체활동가",
+   "jobCd": "K000008502",
+   "jobNm": "시민사회활동가",
+   "method": "manual",
+   "score": 1.0
+  },
+  "306902": {
+   "ours": "청능사",
+   "jobCd": "K000001186",
+   "jobNm": "청능치료사",
+   "method": "manual",
+   "score": 1.0
+  },
+  "414201": {
+   "ours": "사진작가 및 사진사",
+   "jobCd": "K000001007",
+   "jobNm": "사진기자 및 사진사",
+   "method": "manual",
+   "score": 1.0
+  },
+  "524001": {
+   "ours": "오락시설서비스원",
+   "jobCd": "K000000979",
+   "jobNm": "오락시설 서비스 종사원",
+   "method": "manual",
+   "score": 1.0
+  },
+  "523001": {
+   "ours": "숙박시설서비스원",
+   "jobCd": "K000000904",
+   "jobNm": "숙박시설 서비스 종사원",
+   "method": "manual",
+   "score": 1.0
+  },
+  "561501": {
+   "ours": "세탁원(다림질원)",
+   "jobCd": "K000000999",
+   "jobNm": "세탁원 및 다림질원",
+   "method": "manual",
+   "score": 1.0
+  },
+  "025402": {
+   "ours": "법원공무원",
+   "jobCd": "K000001180",
+   "jobNm": "법률 관련 사무원",
+   "method": "manual",
+   "score": 1.0
+  },
+  "028302": {
+   "ours": "물류사무원",
+   "jobCd": "K000000843",
+   "jobNm": "자재관리 사무원(물류사무원)",
+   "method": "manual",
+   "score": 1.0
+  },
+  "134101": {
+   "ours": "데이터베이스운영·관리자",
+   "jobCd": "K000001134",
+   "jobNm": "데이터 시스템 전문가",
+   "method": "manual",
+   "score": 1.0
+  },
+  "031102": {
+   "ours": "신용분석가",
+   "jobCd": "K000001215",
+   "jobNm": "신용분석사",
+   "method": "manual",
+   "score": 1.0
+  },
+  "521304": {
+   "ours": "여행안내원",
+   "jobCd": "K000001203",
+   "jobNm": "관광 서비스 종사원",
+   "method": "manual",
+   "score": 1.0
+  },
+  "521303": {
+   "ours": "자연 및 문화해설사",
+   "jobCd": "K000001203",
+   "jobNm": "관광 서비스 종사원",
+   "method": "manual",
+   "score": 1.0
+  },
+  "812901": {
+   "ours": "오토바이정비원",
+   "jobCd": "K000001070",
+   "jobNm": "자동차 정비원",
+   "method": "manual",
+   "score": 1.0
+  },
+  "532401": {
+   "ours": "음식배달원",
+   "jobCd": "K000008492",
+   "jobNm": "택배원(늘찬배달원)",
+   "method": "manual",
+   "score": 1.0
+  }
+ }
+}
