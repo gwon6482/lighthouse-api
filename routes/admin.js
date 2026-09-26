@@ -13,6 +13,7 @@ const {
 } = require('../controllers/adminController');
 const { getAdminReviews, createAdminReview, updateAdminReview, deleteAdminReview } = require('../controllers/reviewController');
 const { getOnboardingStats } = require('../controllers/onboardingStatsController');
+const { listUsers, deleteUser } = require('../controllers/adminUserController');
 
 /**
  * @swagger
@@ -384,5 +385,64 @@ router.delete('/reviews/:id', deleteAdminReview);
  *         description: 조회 성공
  */
 router.get('/onboarding/stats', getOnboardingStats);
+
+/**
+ * @swagger
+ * /api/admin/users:
+ *   get:
+ *     summary: 회원 목록 조회 (관리자)
+ *     description: |
+ *       가입된 회원을 최신순으로 조회합니다. 각 회원의 딸린 데이터 건수를 함께 돌려줍니다.
+ *       ⚠️ 건수 집계는 컬렉션당 1회씩(총 4회)만 돕니다 — 유저마다 세면 N+1 입니다.
+ *     tags: [Admin]
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema: { type: integer, default: 1 }
+ *       - in: query
+ *         name: limit
+ *         schema: { type: integer, default: 20, maximum: 100 }
+ *       - in: query
+ *         name: search
+ *         schema: { type: string }
+ *         description: 이메일·이름 부분일치(대소문자 무시)
+ *       - in: query
+ *         name: provider
+ *         schema: { type: string, enum: [local, kakao, google] }
+ *       - in: query
+ *         name: isActive
+ *         schema: { type: string, enum: ['true', 'false'] }
+ *     responses:
+ *       200:
+ *         description: 조회 성공
+ *       401:
+ *         description: 관리자 인증 실패
+ */
+router.get('/users', listUsers);
+
+/**
+ * @swagger
+ * /api/admin/users/{uid}:
+ *   delete:
+ *     summary: 회원 영구 삭제 (관리자) — 되돌릴 수 없음
+ *     description: |
+ *       계정 문서와 딸린 데이터(진로계획·주간일정·달성기록·커리큘럼완료·검사결과)를 영구 삭제하고
+ *       S3 인증사진도 지웁니다. 직업 후기는 본문을 남기고 작성자 이메일만 비워 익명화합니다.
+ *       본인 탈퇴(`DELETE /api/user`)와 **같은 경로**(services/userPurge)를 사용합니다.
+ *     tags: [Admin]
+ *     parameters:
+ *       - in: path
+ *         name: uid
+ *         required: true
+ *         schema: { type: string }
+ *     responses:
+ *       200:
+ *         description: 삭제 완료. deleted 에 항목별 건수
+ *       404:
+ *         description: 유저를 찾을 수 없음
+ *       401:
+ *         description: 관리자 인증 실패
+ */
+router.delete('/users/:uid', deleteUser);
 
 module.exports = router;
