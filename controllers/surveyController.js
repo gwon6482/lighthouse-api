@@ -507,9 +507,25 @@ const getSurveyAnalysis = async (req, res) => {
     const t21DefMap = Object.fromEntries(t21Elements.map(e => [e.code, firstSentence(e.definition)]));
 
     // T23 이름 매핑 — T2_3_values 컬렉션에서 value_id 기준 조회
+    //
+    // ⚠️ 2026-09-26 에 고용24 가치관 체계 개편(13→9)으로 **4개 문항을 DB 에서 삭제**했다.
+    //    그런데 기존 survey_results 88건 중 33건(38%)이 그 4개를 우선순위로 갖고 있어서,
+    //    DB 조회만으로는 이름을 못 찾아 결과 화면에 `T23_5` 같은 **코드가 그대로 노출**된다
+    //    (아래 `|| code` 폴백 때문에 크래시는 안 나고 조용히 깨진다).
+    //    → 삭제된 4개의 이름·정의를 여기 박아둔다. 과거 결과를 다시 열어도 정상 표시된다.
+    const LEGACY_T23 = {
+      T23_5:  { name: '영향력',    definition: '다른 사람들의 생각이나 행동, 혹은 중요한 결정에 긍정적인 영향을 미치고 싶어 하는 경향을 의미합니다.' },
+      T23_10: { name: '헌신',      definition: '개인의 이익을 넘어 소속된 공동체나 더 큰 목표를 위해 기꺼이 자신을 바치고 기여하는 것을 중요하게 생각합니다.' },
+      T23_12: { name: '신체 활동',  definition: '업무를 수행하면서 육체적인 활동이나 움직임이 많지 않은 것을 선호하는 가치관입니다.' },
+      T23_13: { name: '개인 지향',  definition: '다른 사람들과 함께 어울려 일하기보다는 혼자 독립적으로 업무를 수행하는 것을 선호합니다.' },
+    };
     const T23Model = getQuestionModel('T2_3_values');
     const t23All = await T23Model.find({}, { value_id: 1, value_name: 1, value_definition: 1, _id: 0 }).lean();
-    const t23Map = Object.fromEntries(t23All.map(e => [e.value_id, { name: e.value_name, definition: firstSentence(e.value_definition) }]));
+    // 현행 문항이 레거시를 덮어쓰도록 LEGACY 를 먼저 편다(같은 id 가 살아나면 DB 값이 이긴다).
+    const t23Map = {
+      ...LEGACY_T23,
+      ...Object.fromEntries(t23All.map(e => [e.value_id, { name: e.value_name, definition: firstSentence(e.value_definition) }])),
+    };
 
     // T1/T21 그룹 점수 계산 헬퍼
     const calcGroupScores = (part, groups, nameMap) => {
