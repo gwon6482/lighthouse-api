@@ -13,7 +13,7 @@ const {
 } = require('../controllers/adminController');
 const { getAdminReviews, createAdminReview, updateAdminReview, deleteAdminReview } = require('../controllers/reviewController');
 const { getOnboardingStats } = require('../controllers/onboardingStatsController');
-const { listUsers, deleteUser } = require('../controllers/adminUserController');
+const { listUsers, getUserDetail, deleteUser, resetUser } = require('../controllers/adminUserController');
 
 /**
  * @swagger
@@ -419,6 +419,64 @@ router.get('/onboarding/stats', getOnboardingStats);
  *         description: 관리자 인증 실패
  */
 router.get('/users', listUsers);
+
+/**
+ * @swagger
+ * /api/admin/users/{uid}:
+ *   get:
+ *     summary: 회원 상세 조회 (관리자)
+ *     description: |
+ *       가입 설문(숫자 코드 원본) / 자기이해 검사 / 진로 탐색 / 진로 설계를 한 번에 돌려줍니다.
+ *       ⚠️ 가입 설문 선택지 **문구는 싣지 않습니다.** 정본은 FE `SignupWizardPage.vue` 이고
+ *       API 에 복사해두면 FE 가 문구를 바꿨을 때 조용히 어긋납니다.
+ *     tags: [Admin]
+ *     parameters:
+ *       - in: path
+ *         name: uid
+ *         required: true
+ *         schema: { type: string }
+ *     responses:
+ *       200: { description: 조회 성공 }
+ *       404: { description: 유저를 찾을 수 없음 }
+ */
+router.get('/users/:uid', getUserDetail);
+
+/**
+ * @swagger
+ * /api/admin/users/{uid}/reset:
+ *   post:
+ *     summary: 회원 단계별 리셋 (관리자) — 되돌릴 수 없음
+ *     description: |
+ *       계정은 남기고 해당 단계 **이후**의 데이터만 지웁니다. 단계는 누적입니다.
+ *       - `design` : 진로계획·주간일정·달성기록·커리큘럼완료·인증사진
+ *       - `survey` : 검사결과·추천직업·북마크·목표진로 + design
+ *       - `signup` : 이름·나이·성별·가입설문 + survey + design
+ *
+ *       ⚠️ `signup` 이 가입 위저드를 다시 띄우는 것은 **소셜 계정뿐**입니다.
+ *       앱 진입 가드가 `socialOnly && !onboarding.answeredAt` 일 때만 위저드로 보냅니다.
+ *       응답의 `wizardWillShow` 로 그 여부를 알려줍니다.
+ *     tags: [Admin]
+ *     parameters:
+ *       - in: path
+ *         name: uid
+ *         required: true
+ *         schema: { type: string }
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               stage:
+ *                 type: string
+ *                 enum: [design, survey, signup]
+ *     responses:
+ *       200: { description: 리셋 완료. cleared 에 항목별 건수 }
+ *       400: { description: stage 값이 올바르지 않음 }
+ *       404: { description: 유저를 찾을 수 없음 }
+ */
+router.post('/users/:uid/reset', resetUser);
 
 /**
  * @swagger

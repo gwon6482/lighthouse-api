@@ -90,4 +90,75 @@ async function purgeUser(uid) {
   return { deleted, user };
 }
 
-module.exports = { purgeUser, deleteUserUploads };
+// 단계별 리셋 — 계정은 남기고 특정 단계 **이후**의 데이터만 지운다.
+//
+// 테스트용이다. 같은 소셜 계정으로는 재가입이 불가능해서(providerId 가 같으면 같은 계정),
+// 가입 플로우를 다시 밟으려면 계정을 지우거나 이 리셋이 필요하다.
+//
+// 단계는 **누적**이다 — 앞 단계로 되돌리면 그 뒤 단계의 데이터도 전부 사라진다.
+//   design  : 진로설계 이후 (계획·일정·달성기록·커리큘럼·인증사진)
+//   survey  : 자기이해 검사 이후 (검사결과·추천직업·북마크·목표진로) + design
+//   signup  : 가입 위저드 이후 (이름·나이·성별·가입설문) + survey + design
+//
+// ⚠️ **`signup` 리셋이 위저드를 다시 띄우는 것은 소셜 계정뿐이다.**
+//    앱 진입 가드(`shared/router/app.ts`)가 `socialOnly && !onboarding.answeredAt` 일 때만
+//    위저드로 보낸다. 이메일 계정은 onboarding 을 지워도 /main/before 로 간다.
+//    가드를 "local 이 없으면 소셜"로 뒤집으면 authProviders 가 빈 옛 계정이 위저드에 갇힌다.
+const RESET_STAGES = ['design', 'survey', 'signup'];
+
+async function resetUserToStage(uid, stage) {
+  if (!RESET_STAGES.includes(stage)) {
+    throw Object.assign(new Error(`알 수 없는 단계: ${stage}`), { status: 400 });
+  }
+
+  const user = await User.findOne({ uid });
+  if (!user) return null;
+
+  const cleared = {};
+
+  // ── design 단계: 진로설계·달성 데이터 (모든 리셋에 공통으로 포함된다)
+  cleared.photos = await deleteUserUploads(uid);
+  cleared.achievementRecords = (await AchievementRecord.deleteMany({ userUid: uid })).deletedCount;
+  cleared.curriculumCompletions = (await CurriculumCompletion.deleteMany({ userUid: uid })).deletedCount;
+  cleared.weeklySchedules = (await WeeklySchedule.deleteMany({ userUid: uid })).deletedCount;
+  cleared.careerPlans = (await CareerPlan.deleteMany({ userUid: uid })).deletedCount;
+
+  const unset = {};
+  const set = {};
+
+  // ── survey 단계: 검사 결과와 그 파생물
+  if (stage === 'survey' || stage === 'signup') {
+    const surveyIds = Array.isArray(user.surveyResults) ? user.surveyResults : [];
+    const filter = surveyIds.length > 0
+      ? { $or: [{ survey_id: { $in: surveyIds } }, { respondent_id: uid }] }
+      : { respondent_id: uid };
+    cleared.surveyResults = (await SurveyResult.deleteMany(filter)).deletedCount;
+
+    set.surveyResults = [];
+    set.recommendedJobs = [];
+    set.bookmarkedJobs = [];
+    unset.targetCareer = 1;
+  }
+
+  // ── signup 단계: 위저드에서 받는 것들
+  if (stage === 'signup') {
+    unset.name = 1;
+    unset.age = 1;
+    unset.gender = 1;
+    unset.onboarding = 1;   // 앱 가드가 보는 값(answeredAt)이 여기 들어 있다
+  }
+
+  const update = {};
+  if (Object.keys(set).length > 0) update.$set = set;
+  if (Object.keys(unset).length > 0) update.$unset = unset;
+
+  if (Object.keys(update).length > 0) {
+    // ⚠️ save() 가 아니라 updateOne 이다. save() 는 문서 전체 검증을 다시 돌려서,
+    //    옛 계정에 스키마와 어긋난 값이 하나라도 있으면 리셋 자체가 실패한다.
+    await User.updateOne({ uid }, update);
+  }
+
+  return { cleared, user, stage };
+}
+
+module.exports = { purgeUser, deleteUserUploads, resetUserToStage, RESET_STAGES };
