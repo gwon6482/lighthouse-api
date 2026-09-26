@@ -54,6 +54,17 @@ function calcGroupScores(answers) {
 
 // 매핑 목록에 대해 직업 scoreMap으로 가중 평균 계산
 // 음수 가중치(PS11, R그룹)는 역방향으로 처리: (1 - score) * |w|
+// ⚠️ **`scoreMap[code] ?? 0` 이 "데이터 없음"과 "실제 0점"을 구분하지 않는다.**
+//
+//    2026-09-27 전까지 job_info.details 는 **상위 5개만** 있었다(크롤링 한계).
+//    그래서 아래가 참조하는 코드 대부분이 맵에 없어 `raw = 0` 이 됐고,
+//    거의 모든 직업의 j 가 0 에 수렴했다 → `1 - |u - j|` 가 **설계대로 동작하지 않았다**
+//    (점수를 낮게 답할수록 매칭이 높아지고, 변별력은 "우연히 상위 5개에 든 코드"로만 결정).
+//    고용24 전량 적재(632항목)로 정상화됐다. 실측: 맵 코드 수 5개 → 44개.
+//
+// ⚠️ 그래도 `dataSource: 'crawled'` 인 직업은 여전히 details 가 적어 구조적으로 불리하다.
+//    현재 해당 1건(경기심판 및 경기기록원)은 85개 검사결과 전체에서 최고 32위라
+//    실질 영향이 없어 예외 처리하지 않았다. 크롤링본이 늘어나면 재검토할 것.
 function weightedJobScore(mappings, scoreMap) {
   let totalW = 0;
   let totalScore = 0;
@@ -588,4 +599,9 @@ const getJobRecommendT2BySurveyId = async (req, res, next) => {
   }
 };
 
-module.exports = { getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore, getJobRecommendT2BySurveyId };
+module.exports = {
+  getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore, getJobRecommendT2BySurveyId,
+  // 아래는 **검증·테스트 전용 노출**이다. 라우트에서 쓰지 않는다.
+  // 점수 로직을 스크립트에서 다시 구현하면 원본과 조용히 갈라지므로 같은 함수를 부른다.
+  __test__: { calcTotalMatch, buildUserSurvey, getT3Parts, buildScoreMap },
+};
