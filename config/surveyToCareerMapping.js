@@ -8,6 +8,14 @@
 // T23 가치관 응답 코드 → VA 코드
 // T23 설문은 job_data의 value 카테고리와 1:1 대응하도록 설계됨.
 // DEDICATION(헌신)은 VA08(애국)을 대체하는 의도적 리네이밍.
+//
+// ⚠️ **이 파일은 어디서도 require 되지 않는다(죽은 코드).**
+//    실제로 쓰이는 표는 `config/matchingMaps.js` 의 T23_VA_MAP 과
+//    `controllers/recommendController.js` 의 T23_TO_VA_T2 두 개다. 고칠 때 여기를 고치면 안 된다.
+//
+// ⚠️ 2026-09-26: 고용24가 가치관 체계를 13→9 로 개편해 설문에서 4개를 제거했다.
+//    제거: INFLUENCE(영향력) / DEDICATION(헌신) / PHYSICAL_ACTIVITY(신체 활동) / INDIVIDUAL_FOCUS(개인 지향)
+//    아래 표는 손대지 않았다(죽은 코드이므로). 정본은 matchingMaps.js 다.
 const T23_TO_VA = {
   ACHIEVEMENT:         'VA01', // 성취
   INDIVIDUAL_FOCUS:    'VA02', // 개인지향 (T23: "개인 지향")
