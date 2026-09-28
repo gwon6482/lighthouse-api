@@ -29,7 +29,21 @@ const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
   const R = buildResolver(attrs);
 
   const rawByCd = Object.fromEntries((await jd.collection('work24_raw').find({}).toArray()).map((d) => [d.jobCd, d]));
+
+  // 통합 조사된 직업(work24-shared)의 설명은 **크롤링본**을 쓴다.
+  // 공식 API 는 그룹 대표 1명의 설명만 주기 때문이다 — 85건에 대해 overview 가 29개뿐이다.
+  // 그 결과 중고등학교 교장에 "초등학교에서…", 항공운송사무원에 "선박 사업체에서…",
+  // 원자력공학기술자에 "태양광발전시스템의…" 이 실렸다. 크롤링본은 537건 전부 고유하다.
+  // ⚠️ 원천은 `job_text_crawled` 다. 백업 컬렉션을 직접 읽지 않는다 —
+  //    백업은 되돌릴 수단이지 적재 의존 대상이 아니다(`scripts/seed-crawled-text.js`).
+  const crawledText = Object.fromEntries(
+    (await jd.collection('job_text_crawled').find({}).toArray()).map((d) => [d.jobCode, d]),
+  );
+  if (!Object.keys(crawledText).length) {
+    problems.push('job_text_crawled 가 비어 있다 — 통합 직업 설명을 복원할 수 없다. seed-crawled-text.js 를 먼저 돌릴 것');
+  }
   const current = await jd.collection('job_info').find({}).toArray();
+  const problems = [];
   console.log(`기존 job_info ${current.length}건 / work24_raw ${Object.keys(rawByCd).length}건`);
 
   // ── 전망 본문의 첫 문장이 **형제 직업 이름**으로 시작하는 문제 ──────────────
@@ -70,7 +84,7 @@ const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
   const shareCount = {};
   for (const m of Object.values(M.mapping)) shareCount[m.jobCd] = (shareCount[m.jobCd] || 0) + 1;
 
-  const docs = []; const problems = []; let unresolvedTotal = 0;
+  const docs = []; let unresolvedTotal = 0;
   for (const cur of current) {
     const m = M.mapping[cur.jobCode];
     if (!m) {
@@ -94,6 +108,36 @@ const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
       lastUpdated: new Date(),
     });
   }
+
+  // 통합 직업은 설명만 크롤링본으로 되돌린다. 상세·임금·전망·되는길은 API 그대로다.
+  let textRestored = 0;
+  for (const d of docs) {
+    if (d.dataSource !== 'work24-shared') continue;
+    const c = crawledText[d.jobCode];
+    if (!c || (!c.overview && !c.duties?.length)) continue;
+    if (c.overview) d.overview = c.overview;
+    if (c.duties?.length) d.duties = c.duties;
+    d.textSource = 'crawled';            // 이 문서의 설명이 어디서 왔는지 남긴다
+    textRestored++;
+  }
+  console.log(`  통합 직업 설명 복원: ${textRestored}건 (overview·duties ← 크롤링본)`);
+
+  // 텍스트 잔재 정리. API·크롤링 양쪽 모두에 적용된다.
+  // ⚠️ `<br>` 만 개행으로 바꾼다. 꺾쇠를 통째로 지우면 안 된다 —
+  //    컴퓨터하드웨어기술자 전망의 `<Fortune>` 은 **잡지 이름**이지 태그가 아니다.
+  const tidy = (t) => (typeof t === 'string'
+    ? t.replace(/<br\s*\/?>/gi, '\n').replace(/[ \t]{3,}/g, ' ').replace(/[ \t]+-\s*$/, '').trim()
+    : t);
+  let tidied = 0;
+  for (const d of docs) {
+    const before = JSON.stringify([d.overview, d.duties, d.work24?.way, d.work24?.prospect?.text]);
+    d.overview = tidy(d.overview);
+    if (Array.isArray(d.duties)) d.duties = d.duties.map(tidy).filter((x) => x && x.length);
+    if (d.work24?.way) d.work24.way = tidy(d.work24.way);
+    if (d.work24?.prospect?.text) d.work24.prospect.text = tidy(d.work24.prospect.text);
+    if (JSON.stringify([d.overview, d.duties, d.work24?.way, d.work24?.prospect?.text]) !== before) tidied++;
+  }
+  console.log(`  텍스트 잔재 정리: ${tidied}건 (<br>·연속공백·끝의 '-')`);
 
   docs.forEach(fixProspectLead);
   console.log(`  전망 첫 문장 직업명 정정: ${leadFixed}건 (형제 직업명 → 대표 직업명)`);
