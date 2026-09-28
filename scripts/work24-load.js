@@ -128,6 +128,26 @@ const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
   const tidy = (t) => (typeof t === 'string'
     ? t.replace(/<br\s*\/?>/gi, '\n').replace(/[ \t]{3,}/g, ' ').replace(/[ \t]+-\s*$/, '').trim()
     : t);
+  // 크롤링본 duties 는 `[소제목]` 으로 구획을 나누는데, 크롤링이 **소제목을 앞 항목 끝에
+  // 붙여놨다**(첫 소제목만 독립 항목이다). 목록으로 그리면 소제목이 앞 문장 꼬리에 매달린다.
+  //   "…감독하기도 한다.\n\n[변호사 사무소에 근무하는 법률관련사무원]"
+  // → 끝에 달린 소제목을 **떼어 다음 항목으로** 올린다. 실측 3건(법률사무원 등).
+  const HEAD_TAIL = /\n\s*(\[[^\]\n]{3,60}\])\s*$/;
+  let headSplit = 0;
+  for (const d of docs) {
+    if (!Array.isArray(d.duties)) continue;
+    const out = [];
+    for (const item of d.duties) {
+      if (typeof item !== 'string') { out.push(item); continue; }
+      const mm = item.match(HEAD_TAIL);
+      if (!mm) { out.push(item); continue; }
+      out.push(item.replace(HEAD_TAIL, '').trim(), mm[1]);
+      headSplit++;
+    }
+    d.duties = out.filter((x) => typeof x !== 'string' || x.length);
+  }
+  if (headSplit) console.log(`  duties 소제목 분리: ${headSplit}건`);
+
   let tidied = 0;
   for (const d of docs) {
     const before = JSON.stringify([d.overview, d.duties, d.work24?.way, d.work24?.prospect?.text]);
