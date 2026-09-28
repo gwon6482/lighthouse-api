@@ -32,6 +32,40 @@ const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
   const current = await jd.collection('job_info').find({}).toArray();
   console.log(`기존 job_info ${current.length}건 / work24_raw ${Object.keys(rawByCd).length}건`);
 
+  // ── 전망 본문의 첫 문장이 **형제 직업 이름**으로 시작하는 문제 ──────────────
+  //
+  // 고용24는 여러 직업을 하나로 묶어 조사하면서(예: 전문의 13종 → '전문의사')
+  // 전망 본문을 **묶음 중 한 직업 이름**으로 써 둔다. 그래서 피부과의사 페이지에
+  //   "향후 10년간 **내과의사**의 고용은 다소 증가할 것으로 전망된다"
+  // 가 그대로 뜬다. 화면 안내는 '전문의사 기준'이라고 하는데 본문은 '내과의사'라 앞뒤가 안 맞는다.
+  //
+  // → **첫 문장의 이름만** 대표 직업명(jobNm)으로 바꾼다. 본문 나머지는 건드리지 않는다.
+  //
+  // ⚠️ 전면 치환은 하지 말 것. 실측해보면 이름이 다른 176건 중 대부분은 고칠 대상이 아니다:
+  //    · 우리 title 쪽이 오타인 경우 — title '바텐터' vs 본문 '바텐더'
+  //    · 본문이 더 자연스러운 경우 — title '법무사 및 집행관' vs 본문 '법무사'(8회)
+  //    치환하면 오히려 문장이 틀리거나 어색해진다.
+  //
+  // ⚠️ 그래서 조건을 좁힌다: **공유 직업**이면서 본문 이름이 **우리 직업목록에 실재하는
+  //    다른 직업**일 때만. 이게 "형제 직업 이름이 박힌" 경우다. 실측 30건.
+  const norm = (x) => String(x || '').replace(/[\s·・‧/\-()]/g, '');
+  const ourTitles = new Set(current.map((c) => norm(c.title)));
+  const LEAD_RE = /(향후\s*\d+년간\s*)([가-힣A-Za-z0-9·\s]{2,20}?)(의\s*고용)/;
+  let leadFixed = 0;
+  const fixProspectLead = (doc) => {
+    const t = doc.work24?.prospect?.text;
+    if (!t || doc.dataSource !== 'work24-shared') return;
+    const mm = t.match(LEAD_RE);
+    if (!mm) return;
+    const lead = mm[2].trim();
+    const nm = doc.work24.jobNm;
+    if (!nm || norm(lead) === norm(nm) || norm(lead) === norm(doc.title)) return;
+    if (!ourTitles.has(norm(lead))) return;        // 표기 차이는 건드리지 않는다
+    doc.work24.prospect.text = t.replace(LEAD_RE, `$1${nm}$3`);
+    doc.work24.prospect.leadRenamedFrom = lead;    // 무엇을 바꿨는지 남긴다
+    leadFixed++;
+  };
+
   // 같은 jobCd 를 공유하는 우리 직업 수 — dataSource 판정에 쓴다
   const shareCount = {};
   for (const m of Object.values(M.mapping)) shareCount[m.jobCd] = (shareCount[m.jobCd] || 0) + 1;
@@ -60,6 +94,9 @@ const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
       lastUpdated: new Date(),
     });
   }
+
+  docs.forEach(fixProspectLead);
+  console.log(`  전망 첫 문장 직업명 정정: ${leadFixed}건 (형제 직업명 → 대표 직업명)`);
 
   // ── 검증 ──
   const bySrc = docs.reduce((a, d) => (a[d.dataSource] = (a[d.dataSource] || 0) + 1, a), {});
