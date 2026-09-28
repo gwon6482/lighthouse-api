@@ -479,17 +479,9 @@ const T22_TO_KN = {
   TEC_7: 'KN17', TEC_8: 'KN06',
 };
 
-// ⚠️ `config/matchingMaps.js` 의 T23_VA_MAP 과 **같은 표의 중복 사본**이다(recommend-t2 전용).
-//    한쪽만 고치면 두 추천기가 조용히 다른 결과를 낸다. 고칠 일이 있으면 반드시 둘 다 볼 것.
-// ⚠️ 13개를 유지하는 이유는 matchingMaps 쪽 주석 참조 — 설문은 9개로 줄었지만
-//    기존 응답 38%가 제거된 4개를 우선순위로 갖고 있어 지우면 과거 점수가 바뀐다.
-const T23_TO_VA_T2 = {
-  T23_1: 'VA10', T23_2: 'VA11',  T23_3: 'VA04',
-  T23_4: 'VA01', T23_6: 'VA09',  T23_7: 'VA05',
-  T23_8: 'VA12', T23_9: 'VA07',  T23_11: 'VA03',
-  // 레거시(2026-09-26 설문에서 제거): 영향력 / 헌신 / 신체 활동 / 개인 지향
-  T23_5: 'VA06', T23_10: 'VA08', T23_12: 'VA13', T23_13: 'VA02',
-};
+// ⚠️ 2026-09-28: 여기 있던 `T23_TO_VA_T2` 는 `config/matchingMaps.js` 의 `T23_VA_MAP` 을
+//    손으로 베낀 **중복 사본**이었다. 한쪽만 고치면 메인 추천과 recommend-t2 가
+//    조용히 다른 결과를 낸다 — 사본을 지우고 정본을 그대로 쓴다.
 
 // ─── T2 점수 함수 ─────────────────────────────────────────────────────────────
 
@@ -559,9 +551,9 @@ const getJobRecommendT2BySurveyId = async (req, res, next) => {
 
     const t23 = surveyResult.answers?.T23 ?? {};
     const userVaPriorities = {
-      priority_1: T23_TO_VA_T2[t23.priority_1] ?? null,
-      priority_2: T23_TO_VA_T2[t23.priority_2] ?? null,
-      priority_3: T23_TO_VA_T2[t23.priority_3] ?? null,
+      priority_1: T23_VA_MAP[t23.priority_1] ?? null,
+      priority_2: T23_VA_MAP[t23.priority_2] ?? null,
+      priority_3: T23_VA_MAP[t23.priority_3] ?? null,
     };
 
     const Job = getJobModel();
