@@ -28,10 +28,57 @@ function getJobModel() {
 const ANSWER_SCORE = { A: 1.0, B: 0.75, C: 0.5, D: 0.25, E: 0.0 };
 
 // details.중요도.직업간 배열 → { code: 0~1 } 맵
+//
+// 🔑 **그 직업 안에서의 순위로 0~1 을 다시 매긴다(2026-09-28).** 원본 값은 건드리지 않는다.
+//
+// 왜 필요한가 — **척도 불일치**:
+//   매칭은 전부 `1 - |u - j|` 인데
+//     u = 사용자의 **절대적 자기평가**(0~1)
+//     j = `직업간` = **다른 직업 대비 백분위**  ← 상대값
+//   단위가 다른 두 값을 빼고 있었다. 전 항목 백분위가 낮은 직업(경비원·청소원·검표원 등)은
+//   j 가 모든 축에서 0 근처에 고정돼 **어떤 사용자와도 거리가 벌어진다.**
+//   점수가 "당신에게 맞는 정도"가 아니라 **"이 직업이 얼마나 평균적인가"**를 재게 된다.
+//
+// 순위로 바꾸면 직업의 **전반적 높낮이**가 사라지고 **프로파일 모양**만 남는다.
+// "이 직업이 다른 직업보다 뭘 더 요구하나"가 아니라 "이 직업 안에서 뭐가 더 중요한가"를 본다.
+//
+// 실측 근거 — **도달가능성**(무작위 사용자 프로파일 1200개를 훑어
+//             "이 직업을 TOP-N 에 올리는 u 가 하나라도 있는가"를 판정):
+//   현행  TOP5 221/537  TOP30 389/537   ← **148개 직업이 어떤 응답으로도 TOP30 에 못 든다**
+//   순위  TOP5 524/537  TOP30 536/537
+//   변별력은 그대로다(한 사용자에 대한 점수 sd 0.0453 → 0.0426). 과교정이 아니다.
+//
+// ⚠️ 검사 응답 표본으로 검증하지 말 것. `survey_data.survey_results` 88건은 **전부 더미**다
+//    (respondent_id 가 users 에 0건, seed_test_responses.js). 실사용자 응답은 아직 없다.
+//    위 수치는 **채점 함수 + 직업 데이터만으로** 나온 것이라 표본과 무관하게 성립한다.
+//
+// ⚠️ 이 함수는 메인 5축 추천 경로 전용이다. `recommend-t2` 는 `top5codes` 로 다른 길을 탄다.
+// 분석 도구가 **전환 전 동작(직업간 백분위 그대로)** 과 비교할 수 있도록 끄는 스위치.
+// 운영 경로에서는 절대 끄지 않는다 — `__test__.setRankNormalize` 로만 접근한다.
+let RANK_NORMALIZE = true;
+
 function buildScoreMap(items) {
+  const arr = items || [];
   const map = {};
-  for (const { code, score } of (items || [])) {
-    map[code] = score / 100;
+  if (arr.length === 0) return map;
+
+  if (!RANK_NORMALIZE) {                          // 비교군: 원래의 직업간 백분위
+    for (const { code, score } of arr) map[code] = score / 100;
+    return map;
+  }
+  // 항목이 하나뿐이면 순위를 매길 수 없다 → 중립(0.5)
+  if (arr.length === 1) { map[arr[0].code] = 0.5; return map; }
+
+  // 동점은 **같은 순위**를 받아야 한다. 단순 인덱스를 쓰면 배열 순서가 점수를 가른다.
+  const sorted = [...arr].sort((a, b) => a.score - b.score);
+  let i = 0;
+  while (i < sorted.length) {
+    let k = i;
+    while (k + 1 < sorted.length && sorted[k + 1].score === sorted[i].score) k++;
+    const rank = (i + k) / 2;                      // 동점 구간의 평균 순위
+    const v = rank / (sorted.length - 1);          // 0~1
+    for (let x = i; x <= k; x++) map[sorted[x].code] = v;
+    i = k + 1;
   }
   return map;
 }
@@ -595,5 +642,9 @@ module.exports = {
   getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore, getJobRecommendT2BySurveyId,
   // 아래는 **검증·테스트 전용 노출**이다. 라우트에서 쓰지 않는다.
   // 점수 로직을 스크립트에서 다시 구현하면 원본과 조용히 갈라지므로 같은 함수를 부른다.
-  __test__: { calcTotalMatch, buildUserSurvey, getT3Parts, buildScoreMap },
+  __test__: {
+    calcTotalMatch, buildUserSurvey, getT3Parts, buildScoreMap,
+    // 분석 전용 — 순위정규화를 끄면 전환 전(직업간 백분위 그대로) 동작이 된다
+    setRankNormalize: (v) => { RANK_NORMALIZE = !!v; },
+  },
 };
