@@ -32,6 +32,27 @@ const DETAIL_SPEC = [
 ];
 
 /**
+ * XML 문자참조·엔티티를 한 번 더 푼다.
+ *
+ * ⚠️ 원문이 **이중 인코딩**돼 있다. 응답에 `&amp;#xd;` 로 들어 있어서 XML 파서가
+ *    `&amp;` 만 풀고 `&#xd;` 를 **문자열 그대로** 남긴다. 그대로 적재하면
+ *    화면에 "…적용한다. &#xd;" 가 노출된다(실제로 101건 그랬다).
+ * ⚠️ 한 번만 더 푼다. 반복해서 풀면 본문에 원래 있던 `&amp;` 같은 표기까지 망가진다.
+ */
+const NAMED_ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
+function decodeEntities(str) {
+  return String(str ?? '')
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&(amp|lt|gt|quot|apos|nbsp);/g, (_, n) => NAMED_ENTITIES[n]);
+}
+
+/** 엔티티를 풀고 CR 을 정리한다. 본문 줄바꿈(\n)은 살린다 — 되는 길·전망 산문에 의미가 있다. */
+function cleanText(str) {
+  return decodeEntities(str).replace(/\r\n?/g, '\n').replace(/[ \t]+$/gm, '').trim();
+}
+
+/**
  * 임금 문자열 파싱.
  * 원문: "조사년도:2025년, 임금 하위(25%) 8640만원, 평균(50%) 9300만원, 상위(25%) 10250만원"
  * ⚠️ 형식이 바뀌면 조용히 null 이 된다. 호출부가 null 비율을 감시해야 한다.
@@ -52,8 +73,8 @@ function parseSalary(sal) {
 
 // "- a\n- b" → ['a','b'].  선행 '-' 와 빈 줄을 털어낸다.
 function parseDuties(execJob) {
-  return String(execJob ?? '')
-    .split(/\r?\n/)
+  return cleanText(execJob)
+    .split(/\n/)
     .map((l) => l.replace(/^\s*[-·•]\s*/, '').trim())
     .filter(Boolean);
 }
@@ -109,16 +130,16 @@ function transform(rawDoc, resolver) {
   return {
     unresolved,
     patch: {
-      overview: String(du.jobSum ?? s.jobSum ?? '').trim() || null,
+      overview: cleanText(du.jobSum ?? s.jobSum) || null,
       duties: parseDuties(du.execJob),
       details,
       salary: { lower: salary.lower, median: salary.median, upper: salary.upper },
       jobSatisfaction: s.jobSatis != null && s.jobSatis !== '' ? Number(s.jobSatis) : null,
       // API 를 단일 기준으로 삼으므로 없으면 빈 배열이다(우리 옛 값을 남기지 않는다).
-      relatedCertifications: asArray(s.relCertList).map((x) => String(x.certNm ?? '').trim()).filter(Boolean),
+      relatedCertifications: asArray(s.relCertList).map((x) => cleanText(x.certNm)).filter(Boolean),
       relatedMajors: asArray(s.relMajorList).map((x) => ({
         code: String(x.majorCd ?? '').trim() || null,
-        name: String(x.majorNm ?? '').trim(),
+        name: cleanText(x.majorNm),
       })).filter((x) => x.name),
 
       work24: {
@@ -126,21 +147,21 @@ function transform(rawDoc, resolver) {
         jobNm: rawDoc.meta?.jobNm ?? s.jobSmclNm ?? null,
         classification: { large: s.jobLrclNm ?? null, middle: s.jobMdclNm ?? null, small: s.jobSmclNm ?? null },
         keco: e.kecoList ? { code: e.kecoList.kecoCd ?? null, name: e.kecoList.kecoNm ?? null } : null,
-        way: String(s.way ?? e.technKnow ?? '').trim() || null,
+        way: cleanText(s.way ?? e.technKnow) || null,
         education: parseRatioMap(e.edubg, EDU_LABELS),
         schoolDepartments: parseRatioMap(e.schDpt, DPT_LABELS),
         prospect: {
-          text: String(p.jobProspect ?? '').trim() || null,
+          text: cleanText(p.jobProspect) || null,
           distribution: asArray(p.jobSumProspect).map((x) => ({
             name: String(x.jobProspectNm ?? '').trim(),
             ratio: Number(x.jobProspectRatio ?? 0),
             year: x.jobProspectInqYr ? Number(x.jobProspectInqYr) : null,
           })).filter((x) => x.name),
         },
-        jobStatus: String(p.jobStatus ?? s.jobStatus ?? '').trim() || null,
+        jobStatus: cleanText(p.jobStatus ?? s.jobStatus) || null,
         relatedJobs: asArray(du.relJobList).map((x) => ({
           jobCd: String(x.jobCd ?? '').trim() || null,
-          jobNm: String(x.jobNm ?? '').trim(),
+          jobNm: cleanText(x.jobNm),
         })).filter((x) => x.jobNm),
         salarySurveyYear: salary.surveyYear,
         collectedAt: rawDoc.collectedAt ?? null,
@@ -149,4 +170,4 @@ function transform(rawDoc, resolver) {
   };
 }
 
-module.exports = { transform, parseSalary, parseDuties, parseRatioMap, DETAIL_SPEC };
+module.exports = { transform, parseSalary, parseDuties, parseRatioMap, cleanText, decodeEntities, DETAIL_SPEC };
