@@ -86,6 +86,18 @@ const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
   const backup = `job_info_backup_${stamp}`;
   await jd.collection(backup).drop().catch(() => {});
   await jd.collection('job_info').rename(backup);
+
+  // ⚠️ 백업은 갱신할 때마다 쌓인다(월 1회 × 3MB). 최신 2개만 남기고 정리한다.
+  //    단 **전환 전 크롤링본(20260926)은 영구 보존**한다 — 되돌릴 마지막 수단이다.
+  const KEEP_FOREVER = 'job_info_backup_20260926';
+  const all = (await jd.listCollections().toArray())
+    .map((c) => c.name)
+    .filter((n) => n.startsWith('job_info_backup_') && n !== KEEP_FOREVER)
+    .sort();                       // 이름이 날짜라 사전순 = 시간순
+  for (const old of all.slice(0, -2)) {
+    await jd.collection(old).drop().catch(() => {});
+    console.log(`  오래된 백업 삭제: ${old}`);
+  }
   await jd.collection('job_info_new').rename('job_info');
   // ⚠️ rename 은 인덱스를 함께 옮긴다. 원본에 jobCode 인덱스가 있었다면 백업 쪽으로 갔으므로
   //    새 job_info 에 다시 만들어 준다.
