@@ -10,8 +10,10 @@ name: Work24 직업정보 월간 갱신
 
 on:
   schedule:
-    # 매월 1일 03:00 KST (= 전날 18:00 UTC). 트래픽이 가장 적은 시간대.
-    - cron: '0 18 L * *'
+    # 매월 2일 03:00 KST (= 매월 1일 18:00 UTC). 트래픽이 가장 적은 시간대.
+    # ⚠️ GitHub Actions cron 은 **표준 POSIX 만** 지원한다. `L`(말일) 같은 확장 문법을 쓰면
+    #    워크플로 파싱 자체가 실패하고 `workflow_dispatch` 도 막힌다(422 Invalid cron).
+    - cron: '0 18 1 * *'
   workflow_dispatch:
     inputs:
       skip_collect:
