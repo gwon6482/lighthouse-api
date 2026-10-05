@@ -277,6 +277,13 @@ function calcTotalMatch(userSurvey, job, t3Parts) {
 
   return {
     total: round3(total),
+    // ⚠️ **정렬은 `totalExact` 로 한다.** `round3` 로 자르고 정렬하면
+    //    537개가 ~173개 점수 버킷에 몰려 **동점이 배열 순서(= MongoDB 문서 순서)로 갈린다.**
+    //    문서 순서는 안정적이라 **늘 같은 직업이 이긴다.**
+    //    실측(프로파일 200개): 5·6위 경계 동점이 **27%** 에서 발생, 평균 4.5개가 자리를 다퉜다.
+    //    원점수로 정렬하면 고유 점수가 173개 → **463개** 로 늘어난다.
+    //    응답에는 `total`(3자리)을 쓴다 — 0.7369999999 를 내보내지 않기 위해서다.
+    totalExact: total,
     detail: {
       T1:  round3(t1),
       T21: round3(t21),
@@ -319,7 +326,7 @@ async function runRecommend(userSurvey, { limit = 10, primary = null, minScore =
 
   const results = [];
   for (const job of jobs) {
-    const { total, detail } = calcTotalMatch(userSurvey, job, t3Parts);
+    const { total, totalExact, detail } = calcTotalMatch(userSurvey, job, t3Parts);
     if (total < minScore) continue;
     results.push({
       jobCode: job.jobCode,
@@ -329,10 +336,15 @@ async function runRecommend(userSurvey, { limit = 10, primary = null, minScore =
       match_detail: detail,
       salary: job.salary ?? null,
       jobSatisfaction: job.jobSatisfaction ?? null,
+      _exact: totalExact,          // 정렬 전용. 응답 직전에 제거한다
     });
   }
 
-  results.sort((a, b) => b.match_score - a.match_score);
+  // ⚠️ `match_score`(3자리) 가 아니라 **원점수**로 정렬한다. 위 calcTotalMatch 주석 참조.
+  // 그래도 남는 동점은 **공유 그룹**이다(전문의 13종처럼 details 가 실제로 동일한 경우).
+  // 그때는 직업코드로 끊어 **순서를 결정적으로** 만든다 — 문서 순서에 맡기지 않는다.
+  results.sort((a, b) => (b._exact - a._exact) || a.jobCode.localeCompare(b.jobCode));
+  for (const r of results) delete r._exact;
 
   return {
     total_jobs: jobs.length,
@@ -631,8 +643,10 @@ const getJobRecommendT2BySurveyId = async (req, res, next) => {
       const t21 = calcT21ScoreT2(job, userT21);
       const t22 = calcT22ScoreT2(job, userKnCodes);
       const t23Score = calcT23ScoreT2(job, userVaPriorities);
-      const score = round3(t21 * 0.36 + t22 * 0.36 + t23Score * 0.28);
+      const exact = t21 * 0.36 + t22 * 0.36 + t23Score * 0.28;
+      const score = round3(exact);
       results.push({
+        _exact: exact,              // 정렬 전용. 응답 직전에 제거한다
         jobCode: job.jobCode,
         title: job.title,
         classification: job.classification,
@@ -643,7 +657,11 @@ const getJobRecommendT2BySurveyId = async (req, res, next) => {
       });
     }
 
-    results.sort((a, b) => b.t2_match_score - a.t2_match_score);
+    // ⚠️ 메인 경로와 같은 이유로 **원점수**로 정렬한다 — `round3` 로 자르고 정렬하면
+    //    동점이 배열 순서(MongoDB 문서 순서)로 갈리고, 순서가 안정적이라 늘 같은 직업이 이긴다.
+    //    남는 동점(공유 그룹)은 직업코드로 끊어 결정적으로 만든다.
+    results.sort((a, b) => (b._exact - a._exact) || a.jobCode.localeCompare(b.jobCode));
+    for (const r of results) delete r._exact;
 
     res.json({ success: true, survey_id, count: Math.min(results.length, 5), data: results.slice(0, 5) });
   } catch (error) {
