@@ -91,9 +91,17 @@ function randomUser(rnd) {
   setRankNormalize(true);
   const now = run('현행(순위정규화)', JOBS);
 
+  // ⚠️ 경기심판 및 경기기록원(420301)은 **알고서 남긴 예외**다.
+  //    고용24 목록에 대응 직업이 없어 매핑을 못 만든 유일한 직업이고(details 가 카테고리당 5개),
+  //    2026-10-05 에 손대지 않기로 결정했다. 아래에 매번 잡히는 것은 **정상 출력**이다.
+  const KNOWN_OK = new Set(['420301']);
   const stuck = [...now.entries()].filter(([, v]) => v > 30);
-  console.log(`\n  현행에서 TOP30 에 한 번도 못 든 직업: ${stuck.length}건`);
-  stuck.forEach(([c, v]) => console.log(`    ${byCode[c]} — 최고 ${v === Infinity ? '진입 없음' : v + '위'}`));
+  const unexpected = stuck.filter(([c]) => !KNOWN_OK.has(c));
+  console.log(`\n  현행에서 TOP30 에 한 번도 못 든 직업: ${stuck.length}건`
+    + (unexpected.length === 0 ? '  → 전부 알려진 예외다 (정상)' : `  🚨 **예상 밖 ${unexpected.length}건**`));
+  stuck.forEach(([c, v]) => console.log(
+    `    ${byCode[c]} — 최고 ${v === Infinity ? '진입 없음' : v + '위'}`
+    + (KNOWN_OK.has(c) ? '   (알려진 예외: 매핑 없는 크롤링 잔존본)' : '   ← 조사할 것')));
 
   const worst = [...lvl.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
   const gone = [...lvl.entries()].filter(([, v]) => v > 30).length;
