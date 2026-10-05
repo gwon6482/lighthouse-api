@@ -883,26 +883,11 @@ function normalCDF(mean, stddev, x) {
 }
 
 // 응답값을 0~1로 정규화하는 함수
-// type_2 (OX): X=0.25, O=0.75 (극단 회피)
-// type_5 (ABCDE): 0, 0.25, 0.5, 0.75, 1.0
-// type_10 (0~9): raw / 9
-function normalizeScore(value, answer_type) {
-  if (answer_type === 'type_2') {
-    if (value === 'O') return 0.75;
-    if (value === 'X') return 0.25;
-    return null;
-  }
-  if (answer_type === 'type_5') {
-    const map = { A: 0, B: 0.25, C: 0.5, D: 0.75, E: 1 };
-    return map[value] ?? null;
-  }
-  if (answer_type === 'type_10') {
-    const raw = Number(value);
-    if (!isNaN(raw) && raw >= 1 && raw <= 10) return (raw - 1) / 9;
-    return null;
-  }
-  return null;
-}
+// 답변 → 0~1 환산. **정본은 `config/answerScale.js` 다.**
+// ⚠️ 2026-10-05: 이 표가 recommendController 에 **반대로** 복사돼 있어서 같은 답변이
+//    보고서와 추천에서 반대 점수가 됐다. 표를 다시 적지 말고 정본을 쓸 것.
+const { normalizeAnswer } = require('../config/answerScale');
+const normalizeScore = normalizeAnswer;
 
 // 시드 기반 Fisher-Yates 셔플 함수
 function seededShuffle(array, seed) {
