@@ -52,7 +52,8 @@ const ANSWER_SCORE = { A: 1.0, B: 0.75, C: 0.5, D: 0.25, E: 0.0 };
 //    (respondent_id 가 users 에 0건, seed_test_responses.js). 실사용자 응답은 아직 없다.
 //    위 수치는 **채점 함수 + 직업 데이터만으로** 나온 것이라 표본과 무관하게 성립한다.
 //
-// ⚠️ 이 함수는 메인 5축 추천 경로 전용이다. `recommend-t2` 는 `top5codes` 로 다른 길을 탄다.
+// ℹ️ 2026-10-05 부터 `recommend-t2` 도 이 함수를 쓴다(전에는 `top5codes` 로 상위 5개만 봤다).
+//    두 추천 경로가 같은 척도를 쓰게 됐다 — 한쪽만 고치면 다시 갈라진다.
 // 분석 도구가 **전환 전 동작(직업간 백분위 그대로)** 과 비교할 수 있도록 끄는 스위치.
 // 운영 경로에서는 절대 끄지 않는다 — `__test__.setRankNormalize` 로만 접근한다.
 let RANK_NORMALIZE = true;
@@ -578,64 +579,91 @@ const T22_TO_KN = {
   TEC_7: 'KN17', TEC_8: 'KN06',
 };
 
-// ⚠️ 2026-09-28: 여기 있던 `T23_TO_VA_T2` 는 `config/matchingMaps.js` 의 `T23_VA_MAP` 을
-//    손으로 베낀 **중복 사본**이었다. 한쪽만 고치면 메인 추천과 recommend-t2 가
-//    조용히 다른 결과를 낸다 — 사본을 지우고 정본을 그대로 쓴다.
-
-// ─── T2 점수 함수 ─────────────────────────────────────────────────────────────
-
-function top5codes(items) {
-  return [...(items || [])].sort((a, b) => b.score - a.score).slice(0, 5);
-}
-
-// ⚠️ **메인 5축과 다른 알고리즘이다.** 거리(`1 - |u - j|`)가 아니라 **곱**이다.
-//    그래서 2026-09-28 의 순위정규화(buildScoreMap)가 **이 경로에는 적용되지 않는다.**
+// ─── recommend-t2 점수 함수 ────────────────────────────────────────────────
 //
-// 도달가능성 실측(무작위 프로파일 800개, 2026-10-05):
-//   합산(T21 .36 + T22 .36 + T23 .28)  TOP30 **528/537** — 건강하다
-//   T21 단독                          TOP30 **82/537**  ← 심각
-//   T22 단독                          TOP30 519/537
-//   T23 단독                          TOP30 372/537
+// ⚠️ **메인 5축과 다른 알고리즘이다.** 거리(`1 - |u - j|`)가 아니라 **곱**이다
+//    ("이 직업이 내가 잘하는/중시하는 것을 얼마나 요구하나").
 //
-// T21 만 나쁜 이유: `item.score / 100` 이 **직업간 백분위(절대값)** 라서
-// 백분위가 전반적으로 낮은 직업은 어떤 사용자에게도 낮은 점수가 된다(곱이니까).
-// T22·T23 은 `top5codes` 로 **그 직업 안의 상위 5개 집합**을 쓰므로 수준 편향이 없다.
-// 지금은 T22·T23 이 희석해줘서 합산 결과가 괜찮지만, **가중치를 바꾸면 바로 드러난다.**
+// 🔑 **2026-10-05: 세 축 모두 `buildScoreMap`(직업내 순위정규화)으로 전량을 쓴다.**
+//    전에는 `top5codes` 로 **상위 5개만** 봤는데, 공식 API 전환으로 전량이 적재된 뒤에는
+//    버리는 양이 너무 컸다 — 업무수행능력 44개 중 5개 / 업무활동 41 중 5 / 지식 33 중 5.
+//    특히 `T22_TO_KN` 은 **KN 33개 전체**를 가리키는데 조회는 상위 5개만 했다.
+//
+//    그 결과 가중치 64% 를 차지하는 두 축이 거의 작동하지 않았다(실측 80,550쌍):
+//      T22  0점 **49.3%** / 서로 다른 값 **19개**   (matched ÷ 고른 개수 = 작은 정수의 비)
+//      T23  0점 4.9%      / 서로 다른 값 **8개**
+//      T21  0점 0.2%      / 6,489개  ← 이 축만 건강했다
+//
+//    전량 + 순위정규화로 바꾼 뒤(이 구현 실측):
+//      T22  0점 0.3% / 979개   T23  0점 0.1% / 263개
+//      TOP5 도달 302 → **334**   TOP30 497 → **528**   TOP100 537
+//      사용자간 ρ 0.152 → **0.088**(낮을수록 개인화 良)
+//      T21 단독 TOP30 66 → **197** ← 미뤄뒀던 T21 절대백분위 편향도 함께 해소
+//
+//    ℹ️ 설계 검토 때 쓴 프로토타입보다 수치가 조금 다르다(TOP5 345 / ρ 0.060 / T23 409개).
+//       프로토타입은 **메인 5축의 맵·가중치**(`T21_AB_MAP`, `T23_WEIGHTS`)를 썼고,
+//       이 구현은 **t2 전용 맵·가중치**(`AB_TO_T21`, `A_TO_T21`, priority 1.0/0.6/0.3)를 유지한다.
+//       t2 의 고유 설계를 건드리지 않는 쪽을 택했다 — 바꾼 것은 **전량 사용과 척도**뿐이다.
+//
+//    ⚠️ **T22·T23 만 바꾸면 오히려 나빠진다**(TOP30 497→441, TOP100 조차 507).
+//       현행 T21 의 절대 백분위 편향이 남아 지배하기 때문이다. 세 축을 함께 바꿔야 한다.
+//
+//    ⚠️ 표시 점수가 좁아진다 — 종합 sd 0.130 → 0.089. "매칭도 N%" 가 50%대에 더 몰리고
+//       상위권이 79% → 69% 로 보인다. 순위는 더 개인화되지만 숫자는 덜 인상적이다.
+//       사용자가 알고서 택했다(2026-10-05).
 function calcT21ScoreT2(job, userT21) {
-  const abItems = top5codes(job.details?.업무수행능력?.중요도?.직업간);
-  const aItems  = top5codes(job.details?.업무활동?.중요도?.직업간);
+  const ab = buildScoreMap(job.details?.업무수행능력?.중요도?.직업간);
+  const a  = buildScoreMap(job.details?.업무활동?.중요도?.직업간);
 
-  const intelScores = {};
-  for (const item of [...abItems, ...aItems]) {
-    const intel = AB_TO_T21[item.code] || A_TO_T21[item.code];
-    if (!intel) continue;
-    (intelScores[intel] = intelScores[intel] || []).push(item.score);
+  // 코드 → T21 그룹으로 모은다. 상위 5개가 아니라 **전량**이다.
+  const byGroup = {};
+  for (const [code, v] of Object.entries(ab)) {
+    const g = AB_TO_T21[code];
+    if (g) (byGroup[g] = byGroup[g] || []).push(v);
+  }
+  for (const [code, v] of Object.entries(a)) {
+    const g = A_TO_T21[code];
+    if (g) (byGroup[g] = byGroup[g] || []).push(v);
   }
 
   let total = 0, weightSum = 0;
-  for (const [intel, scores] of Object.entries(intelScores)) {
-    const jobScore = scores.reduce((a, b) => a + b, 0) / scores.length / 100;
-    const userScore = userT21[intel] ?? 0;
+  for (const [g, scores] of Object.entries(byGroup)) {
+    const jobScore = scores.reduce((x, y) => x + y, 0) / scores.length;   // 이미 0~1
+    const userScore = userT21[g] ?? 0;
     total += jobScore * userScore;
     weightSum += userScore;
   }
   return weightSum > 0 ? total / weightSum : 0;
 }
 
+// 사용자가 고른 흥미 분야(KN 코드)에 대해 **그 직업이 얼마나 그 지식을 요구하나**.
+// ⚠️ 전에는 "직업의 상위 5개 지식에 내 관심이 들어 있나"(집합 포함)였다. 33개 중 5개만 봐서
+//    절반이 0점이었고 값이 19종류뿐이었다. 지금은 전량에서 점수를 읽어 평균한다.
 function calcT22ScoreT2(job, userKnCodes) {
-  const jobKnCodes = top5codes(job.details?.지식?.중요도?.직업간).map(i => i.code);
-  const matched = userKnCodes.filter(kn => jobKnCodes.includes(kn)).length;
-  return userKnCodes.length > 0 ? matched / userKnCodes.length : 0;
+  if (!userKnCodes?.length) return 0;
+  const map = buildScoreMap(job.details?.지식?.중요도?.직업간);
+  let sum = 0, n = 0;
+  for (const kn of userKnCodes) {
+    const v = map[kn];
+    if (v === undefined) continue;        // 그 직업에 없는 지식 코드는 **센 수에서도 뺀다**
+    sum += v; n++;
+  }
+  return n > 0 ? sum / n : 0;
 }
 
+// 사용자 가치관 1~3순위에 대해 **그 직업이 그 가치를 얼마나 충족하나**.
+// ⚠️ 전에는 "직업의 상위 5개 가치관에 들어 있나"(집합 포함)여서 값이 8종류뿐이었다.
+//    9개 전량에서 점수를 읽는다. 가중치는 t2 전용(메인 5축의 T23_WEIGHTS 와 값이 다르다).
 function calcT23ScoreT2(job, userVaPriorities) {
-  const jobVaCodes = top5codes(job.details?.가치관?.중요도?.직업간).map(i => i.code);
+  const map = buildScoreMap(job.details?.가치관?.중요도?.직업간);
   const weights = { priority_1: 1.0, priority_2: 0.6, priority_3: 0.3 };
   let total = 0, weightSum = 0;
   for (const [priority, vaCode] of Object.entries(userVaPriorities)) {
     if (!weights[priority] || !vaCode) continue;
+    const v = map[vaCode];
+    if (v === undefined) continue;        // 직업에 없는 VA 는 가중치에서도 뺀다
+    total += v * weights[priority];
     weightSum += weights[priority];
-    if (jobVaCodes.includes(vaCode)) total += weights[priority];
   }
   return weightSum > 0 ? total / weightSum : 0;
 }
