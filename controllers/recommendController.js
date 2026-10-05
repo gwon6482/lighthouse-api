@@ -536,6 +536,19 @@ function top5codes(items) {
   return [...(items || [])].sort((a, b) => b.score - a.score).slice(0, 5);
 }
 
+// ⚠️ **메인 5축과 다른 알고리즘이다.** 거리(`1 - |u - j|`)가 아니라 **곱**이다.
+//    그래서 2026-09-28 의 순위정규화(buildScoreMap)가 **이 경로에는 적용되지 않는다.**
+//
+// 도달가능성 실측(무작위 프로파일 800개, 2026-10-05):
+//   합산(T21 .36 + T22 .36 + T23 .28)  TOP30 **528/537** — 건강하다
+//   T21 단독                          TOP30 **82/537**  ← 심각
+//   T22 단독                          TOP30 519/537
+//   T23 단독                          TOP30 372/537
+//
+// T21 만 나쁜 이유: `item.score / 100` 이 **직업간 백분위(절대값)** 라서
+// 백분위가 전반적으로 낮은 직업은 어떤 사용자에게도 낮은 점수가 된다(곱이니까).
+// T22·T23 은 `top5codes` 로 **그 직업 안의 상위 5개 집합**을 쓰므로 수준 편향이 없다.
+// 지금은 T22·T23 이 희석해줘서 합산 결과가 괜찮지만, **가중치를 바꾸면 바로 드러난다.**
 function calcT21ScoreT2(job, userT21) {
   const abItems = top5codes(job.details?.업무수행능력?.중요도?.직업간);
   const aItems  = top5codes(job.details?.업무활동?.중요도?.직업간);
@@ -644,6 +657,8 @@ module.exports = {
   // 점수 로직을 스크립트에서 다시 구현하면 원본과 조용히 갈라지므로 같은 함수를 부른다.
   __test__: {
     calcTotalMatch, buildUserSurvey, getT3Parts, buildScoreMap,
+    // recommend-t2 전용 — 메인 5축과 **다른 알고리즘**이다(거리 아님, 곱). 별도로 검증해야 한다.
+    calcT21ScoreT2, calcT22ScoreT2, calcT23ScoreT2, calcGroupScores,
     // 분석 전용 — 순위정규화를 끄면 전환 전(직업간 백분위 그대로) 동작이 된다
     setRankNormalize: (v) => { RANK_NORMALIZE = !!v; },
   },
