@@ -750,7 +750,7 @@ module.exports = {
   __test__: {
     calcTotalMatch, buildUserSurvey, getT3Parts, buildScoreMap,
     // recommend-t2 전용 — 메인 5축과 **다른 알고리즘**이다(거리 아님, 곱). 별도로 검증해야 한다.
-    calcT21ScoreT2, calcT22ScoreT2, calcT23ScoreT2, calcGroupScores,
+    calcT21ScoreT2, calcT22ScoreT2, calcT23ScoreT2, calcGroupScores, T22_TO_KN,
     collapseSharedGroups,
     // 분석 전용 — 순위정규화를 끄면 전환 전(직업간 백분위 그대로) 동작이 된다
     setRankNormalize: (v) => { RANK_NORMALIZE = !!v; },
