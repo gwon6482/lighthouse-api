@@ -16,6 +16,15 @@ permissions:
   contents: read
   packages: write   # ghcr.io 푸시
 
+# ⚠️ Lightsail 은 **한 번에 하나의 deployment 만** 허용한다. 앞 배포가 끝나기 전에 또 호출하면
+#    `InvalidInputException: deployment N is in progress` 로 **실패한다.**
+#    커밋을 연달아 push 하면 그대로 밟는다 — 2026-10-05 에 실제로 겹쳐서 3d3b5dc 가 배포되지 않았다.
+#    cancel-in-progress 는 쓰지 않는다. 뒤 커밋만 배포되면 되지만, 빌드까지 날리면
+#    어떤 이미지가 올라갔는지 추적이 어려워진다 — 줄을 세워 순서대로 보낸다.
+concurrency:
+  group: deploy-api
+  cancel-in-progress: false
+
 env:
   IMAGE: ghcr.io/gwon6482/lighthouse-api
   AWS_REGION: ap-northeast-2
@@ -125,8 +134,32 @@ jobs:
           with open("deploy.json", "w") as f:
               json.dump(spec, f)
           PY
-          aws lightsail create-container-service-deployment \
-            --cli-input-json file://deploy.json \
-            --region "$AWS_REGION"
+          # 진행 중인 배포가 끝날 때까지 기다린다. concurrency 로 워크플로는 직렬화되지만
+          # **Lightsail 쪽 배포는 워크플로가 끝난 뒤에도 수 분간 계속 진행된다** — 그래서 한 번 더 막는다.
+          for i in $(seq 1 30); do
+            STATE=$(aws lightsail get-container-services \
+              --service-name "$LIGHTSAIL_SERVICE" --region "$AWS_REGION" \
+              --query 'containerServices[0].state' --output text 2>/dev/null || echo UNKNOWN)
+            if [ "$STATE" != "DEPLOYING" ] && [ "$STATE" != "UPDATING" ]; then
+              echo "서비스 상태 $STATE — 배포 가능"
+              break
+            fi
+            echo "서비스가 $STATE 상태다. 20초 후 재확인 ($i/30)"
+            sleep 20
+          done
+
+          # 그래도 겹칠 수 있다(상태 조회와 생성 사이의 틈). 거부되면 재시도한다.
+          for i in $(seq 1 10); do
+            if aws lightsail create-container-service-deployment \
+                 --cli-input-json file://deploy.json \
+                 --region "$AWS_REGION"; then
+              echo "Lightsail deployment 트리거됨: $IMAGE_REF"
+              rm -f deploy.json
+              exit 0
+            fi
+            echo "배포 생성 거부됨. 30초 후 재시도 ($i/10)"
+            sleep 30
+          done
           rm -f deploy.json
-          echo "Lightsail deployment 트리거됨: $IMAGE_REF"
+          echo "::error::Lightsail 배포를 10회 시도 후에도 생성하지 못했다"
+          exit 1
