@@ -315,6 +315,8 @@ async function runRecommend(userSurvey, { limit = 10, primary = null, minScore =
 
   const jobs = await Job.find(filter, {
     jobCode: 1, title: 1, classification: 1, salary: 1, jobSatisfaction: 1,
+    // 공유 그룹 접기용. `work24.jobCd` 가 그룹의 정체성이다(같은 jobCd = 고용24가 한 직업으로 조사).
+    dataSource: 1, 'work24.jobCd': 1, 'work24.jobNm': 1,
     'details.성격.중요도.직업간':       1,
     'details.흥미.중요도.직업간':       1,
     'details.가치관.중요도.직업간':     1,
@@ -337,6 +339,8 @@ async function runRecommend(userSurvey, { limit = 10, primary = null, minScore =
       salary: job.salary ?? null,
       jobSatisfaction: job.jobSatisfaction ?? null,
       _exact: totalExact,          // 정렬 전용. 응답 직전에 제거한다
+      _groupKey: job.dataSource === 'work24-shared' ? (job.work24?.jobCd ?? null) : null,
+      _groupName: job.work24?.jobNm ?? null,
     });
   }
 
@@ -344,12 +348,48 @@ async function runRecommend(userSurvey, { limit = 10, primary = null, minScore =
   // 그래도 남는 동점은 **공유 그룹**이다(전문의 13종처럼 details 가 실제로 동일한 경우).
   // 그때는 직업코드로 끊어 **순서를 결정적으로** 만든다 — 문서 순서에 맡기지 않는다.
   results.sort((a, b) => (b._exact - a._exact) || a.jobCode.localeCompare(b.jobCode));
-  for (const r of results) delete r._exact;
+
+  const collapsed = collapseSharedGroups(results);
+  for (const r of collapsed) { delete r._exact; delete r._groupKey; delete r._groupName; }
 
   return {
     total_jobs: jobs.length,
-    data: results.slice(0, Math.min(limit, 30)),
+    data: collapsed.slice(0, Math.min(limit, 30)),
   };
+}
+
+// 고용24가 한 직업으로 묶어 조사한 그룹을 **추천 목록에서 한 자리로 접는다.**
+//
+// 왜: 그룹 구성원은 `details`·임금·만족도가 **전부 동일**해서(29개 그룹 전수 확인)
+//     점수가 완전히 같다. 접지 않으면 전문의 13종이 TOP5 다섯 자리를 독식하고,
+//     동점을 코드순으로 끊으면 **코드가 낮은 5개만 영원히 노출**된다
+//     (피부과·가정의학과 등 8개는 어떤 사용자에게도 안 나온다).
+//     데이터가 구분하지 못하는 것을 구분되는 척 보여주지 않는 쪽이 정직하다.
+//
+// 결과 항목: `title` 은 **그룹 대표명**(예: '전문의사'), `members` 에 세부 직업이 담긴다.
+//           `jobCode` 는 대표(점수 정렬 후 첫) 구성원 — 상세 페이지 링크가 그대로 동작한다.
+//           그 상세 페이지에는 "이 정보는 전문의사 기준" 배너가 이미 붙는다.
+//
+// ⚠️ 이미 점수순으로 정렬된 배열을 받는다는 전제다. 첫 등장 순서를 그대로 유지한다.
+function collapseSharedGroups(sorted) {
+  const out = [];
+  const seen = new Map();          // groupKey → out 배열에서의 항목
+  for (const r of sorted) {
+    if (!r._groupKey) { out.push(r); continue; }
+    const hit = seen.get(r._groupKey);
+    if (!hit) {
+      const entry = {
+        ...r,
+        title: r._groupName || r.title,
+        members: [{ jobCode: r.jobCode, title: r.title }],
+      };
+      seen.set(r._groupKey, entry);
+      out.push(entry);
+      continue;
+    }
+    hit.members.push({ jobCode: r.jobCode, title: r.title });
+  }
+  return out;
 }
 
 // ─── API 핸들러 ──────────────────────────────────────────────────────────────
@@ -631,6 +671,7 @@ const getJobRecommendT2BySurveyId = async (req, res, next) => {
     const Job = getJobModel();
     const jobs = await Job.find({}, {
       jobCode: 1, title: 1, classification: 1, salary: 1, jobSatisfaction: 1,
+      dataSource: 1, 'work24.jobCd': 1, 'work24.jobNm': 1,   // 공유 그룹 접기용
       'details.업무수행능력.중요도.직업간': 1,
       'details.업무활동.중요도.직업간':    1,
       'details.지식.중요도.직업간':        1,
@@ -647,6 +688,8 @@ const getJobRecommendT2BySurveyId = async (req, res, next) => {
       const score = round3(exact);
       results.push({
         _exact: exact,              // 정렬 전용. 응답 직전에 제거한다
+        _groupKey: job.dataSource === 'work24-shared' ? (job.work24?.jobCd ?? null) : null,
+        _groupName: job.work24?.jobNm ?? null,
         jobCode: job.jobCode,
         title: job.title,
         classification: job.classification,
@@ -661,9 +704,12 @@ const getJobRecommendT2BySurveyId = async (req, res, next) => {
     //    동점이 배열 순서(MongoDB 문서 순서)로 갈리고, 순서가 안정적이라 늘 같은 직업이 이긴다.
     //    남는 동점(공유 그룹)은 직업코드로 끊어 결정적으로 만든다.
     results.sort((a, b) => (b._exact - a._exact) || a.jobCode.localeCompare(b.jobCode));
-    for (const r of results) delete r._exact;
 
-    res.json({ success: true, survey_id, count: Math.min(results.length, 5), data: results.slice(0, 5) });
+    // 메인 경로와 같이 공유 그룹을 한 자리로 접는다 — 접지 않으면 전문의 13종이 5자리를 독식한다.
+    const collapsed = collapseSharedGroups(results);
+    for (const r of collapsed) { delete r._exact; delete r._groupKey; delete r._groupName; }
+
+    res.json({ success: true, survey_id, count: Math.min(collapsed.length, 5), data: collapsed.slice(0, 5) });
   } catch (error) {
     next(error);
   }
@@ -677,6 +723,7 @@ module.exports = {
     calcTotalMatch, buildUserSurvey, getT3Parts, buildScoreMap,
     // recommend-t2 전용 — 메인 5축과 **다른 알고리즘**이다(거리 아님, 곱). 별도로 검증해야 한다.
     calcT21ScoreT2, calcT22ScoreT2, calcT23ScoreT2, calcGroupScores,
+    collapseSharedGroups,
     // 분석 전용 — 순위정규화를 끄면 전환 전(직업간 백분위 그대로) 동작이 된다
     setRankNormalize: (v) => { RANK_NORMALIZE = !!v; },
   },
