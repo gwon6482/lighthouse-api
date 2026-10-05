@@ -11,6 +11,8 @@ const {
   getSurveyResultList
 } = require('../controllers/surveyController');
 const adminAuth = require('../middleware/adminAuth');
+const { researchSurveyLimiter } = require('../middleware/rateLimit');
+const { submitResearchResponse, getResearchStats } = require('../controllers/researchSurveyController');
 const { authenticate } = require('../middleware/auth');
 
 /**
@@ -658,5 +660,66 @@ router.get('/statistics', getSurveyStatistics);
  *                       type: integer
  */
 router.get('/result/list', adminAuth, getSurveyResultList);
+
+// ─── 연구용 설문 수집 ────────────────────────────────────────────────────────
+//
+// 목적: **검사·추천·통계의 신뢰성 확보.** 실무자 = 정답지 / 예비 사용자 = 분포 기준.
+// 설계 정본: 공유 docs `research/survey-collection-design.md`
+//
+// 🚨 이 경로는 `survey_results` 와 **다른 컬렉션**(`survey_results_research`)에 쓰고,
+//    `survey_statistics` 를 **갱신하지 않는다.** 모집단이 섞이면 사용자가 보는
+//    "상위 N%" 가 오염된다(더미 92건으로 백분위를 내던 사고와 같은 형태).
+
+/**
+ * @openapi
+ * /api/survey/research/response:
+ *   post:
+ *     tags: [Survey]
+ *     summary: 연구용 설문 응답 제출 (공개)
+ *     description: |
+ *       실무자/예비 사용자 데이터 수집용. **인증 불필요**, 레이트리밋 적용(60회/10분/IP).
+ *
+ *       - `role: practitioner` 이면 `jobCode` 필수 (정답지의 핵심)
+ *       - `role: prospective` 는 `desiredJobCodes` 최대 3개
+ *       - 부분 응답도 저장된다. 단 **집계는 완주본만** 쓴다
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [survey_id, answers, role]
+ *             properties:
+ *               survey_id: { type: string }
+ *               role: { type: string, enum: [practitioner, prospective] }
+ *               answers: { type: object, description: 'survey_results.answers 와 동일 구조' }
+ *               jobCode: { type: string, description: '실무자 필수' }
+ *               desiredJobCodes: { type: array, items: { type: string }, description: '예비 사용자, 최대 3개' }
+ *               careerYears: { type: string, enum: [lt1, 1to3, 3to5, 5to10, gte10] }
+ *               ageGroup: { type: string, enum: [teens, 20s, 30s, 40s, 50s, 60plus] }
+ *               gender: { type: string, enum: [M, F, none] }
+ *               fitScore: { type: number, minimum: 1, maximum: 5, description: '직무 적합감(실무자)' }
+ *               startedAt: { type: string, format: date-time, description: '소요시간 산출용' }
+ *               campaign: { type: string, description: '수집 경로 태그' }
+ *     responses:
+ *       201: { description: 저장됨 }
+ *       400: { description: 검증 실패 }
+ *       429: { description: 요청 과다 }
+ */
+router.post('/research/response', researchSurveyLimiter, submitResearchResponse);
+
+/**
+ * @openapi
+ * /api/survey/research/stats:
+ *   get:
+ *     tags: [Survey]
+ *     summary: 연구용 설문 수집 현황 (관리자)
+ *     description: |
+ *       **완주본만 집계**한다. 완주율·이탈지점·품질 플래그·대분류 쏠림 경고를 함께 준다.
+ *       Phase 1 목표는 실무자 100 / 예비 사용자 200.
+ *     responses:
+ *       200: { description: 현황 }
+ */
+router.get('/research/stats', adminAuth, getResearchStats);
 
 module.exports = router; 

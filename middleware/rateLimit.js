@@ -25,4 +25,17 @@ const checkEmailLimiter = rateLimit({
   message: { success: false, error: '요청이 너무 많습니다. 잠시 후 다시 시도해주세요.' },
 });
 
-module.exports = { loginLimiter, checkEmailLimiter };
+// 연구용 설문 제출(공개). 중복·자동 제출을 **줄이는** 장치다 — 공개 URL 에서
+// 완전 차단은 불가능하다(핑거프린팅은 과하다).
+// ⚠️ 한도를 너무 좁히면 **학교·기관의 공유 IP 에서 단체 응답이 막힌다.**
+//    수집이 목적이므로 넉넉하게 잡고, 중복은 통계적으로 감당한다.
+//    (부분 저장도 같은 경로를 타므로 한 사람이 여러 번 호출한다)
+const researchSurveyLimiter = rateLimit({
+  windowMs: 10 * 60 * 1000, // 10분
+  limit: 60,                // 60회/10분/IP
+  standardHeaders: 'draft-7',
+  legacyHeaders: false,
+  message: { success: false, error: '요청이 너무 많습니다. 잠시 후 다시 시도해주세요.' },
+});
+
+module.exports = { loginLimiter, checkEmailLimiter, researchSurveyLimiter };
