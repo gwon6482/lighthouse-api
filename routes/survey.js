@@ -682,6 +682,8 @@ router.get('/result/list', adminAuth, getSurveyResultList);
  *       - `role: practitioner` 이면 `jobCode` 필수 (정답지의 핵심)
  *       - `role: prospective` 는 `desiredJobCodes` 최대 3개
  *       - 부분 응답도 저장된다. 단 **집계는 완주본만** 쓴다
+ *       - 이어 쓰기: 첫 응답의 `respondent_id` 를 다시 보내면 **같은 문서를 갱신**한다(200).
+ *         완주본은 고칠 수 없다(409)
  *     requestBody:
  *       required: true
  *       content:
@@ -701,9 +703,13 @@ router.get('/result/list', adminAuth, getSurveyResultList);
  *               fitScore: { type: number, minimum: 1, maximum: 5, description: '직무 적합감(실무자)' }
  *               startedAt: { type: string, format: date-time, description: '소요시간 산출용' }
  *               campaign: { type: string, description: '수집 경로 태그' }
+ *               respondent_id: { type: string, description: '이어 쓰기 대상 (첫 응답이 돌려준 값)' }
  *     responses:
- *       201: { description: 저장됨 }
+ *       200: { description: 이어 쓰기로 갱신됨 }
+ *       201: { description: 새로 저장됨 }
  *       400: { description: 검증 실패 }
+ *       404: { description: 이어 쓸 응답 없음 }
+ *       409: { description: 이미 완주한 응답 / 설문지 불일치 }
  *       429: { description: 요청 과다 }
  */
 router.post('/research/response', researchSurveyLimiter, submitResearchResponse);

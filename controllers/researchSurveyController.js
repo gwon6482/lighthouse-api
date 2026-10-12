@@ -75,12 +75,37 @@ const oneOf = (v, list) => (v == null ? null : (list.includes(v) ? v : undefined
  * ⚠️ 공개 엔드포인트다. 레이트리밋이 라우트에 걸려 있다.
  * ⚠️ 중복 제출은 공개 URL 에서 **완전 차단이 불가능**하다. 핑거프린팅은 과하므로
  *    레이트리밋 + 소요시간 + respondent_id 로 **줄이고**, 남은 중복은 통계로 감당한다.
+ *
+ * 부분 저장: 첫 호출이 돌려준 `respondent_id` 를 다음 호출에 실어 보내면 **같은 문서를 갱신**한다.
+ * ⚠️ 이게 없으면 파트마다 저장할 때 한 사람이 문서 N개가 되어 완주율·이탈 지점이 부풀려진다.
+ *    respondent_id 는 서버가 만든 72비트 난수라 가진 사람만 갱신할 수 있다.
  */
+const RESPONDENT_ID_RE = /^res_[0-9a-f]{18}$/;
+
 const submitResearchResponse = async (req, res, next) => {
   try {
     const b = req.body || {};
     if (!b.survey_id || !b.answers) {
       return res.status(400).json({ success: false, error: 'survey_id 와 answers 는 필수입니다.' });
+    }
+
+    // 이어 쓰기라면 대상 문서부터 확인한다 (검증 실패 시 아무것도 쓰지 않도록 먼저).
+    let existing = null;
+    if (b.respondent_id != null) {
+      if (!RESPONDENT_ID_RE.test(String(b.respondent_id))) {
+        return res.status(400).json({ success: false, error: 'respondent_id 형식이 올바르지 않습니다.' });
+      }
+      existing = await ResearchSurveyResult.findOne({ respondent_id: b.respondent_id });
+      if (!existing) {
+        return res.status(404).json({ success: false, error: '이어 쓸 응답을 찾을 수 없습니다.' });
+      }
+      // ⚠️ 완주본은 고치지 않는다. 집계에 들어간 정답지가 사후에 바뀌면 재현이 깨진다.
+      if (existing.completed) {
+        return res.status(409).json({ success: false, error: '이미 제출이 끝난 응답입니다.' });
+      }
+      if (existing.survey_id !== String(b.survey_id)) {
+        return res.status(409).json({ success: false, error: '설문지가 다릅니다.' });
+      }
     }
 
     const role = oneOf(b.role, ROLES);
@@ -137,7 +162,11 @@ const submitResearchResponse = async (req, res, next) => {
     }
 
     // ── 품질 판정 ──
-    const startedAt = b.startedAt ? new Date(b.startedAt) : null;
+    // 이어 쓰기면 **처음 저장한 시작 시각**을 쓴다. 클라이언트가 다시 보낸 값을 믿으면
+    // 시작 시각을 늦춰 보내는 것만으로 소요시간이 줄어든다.
+    const startedAt = existing
+      ? (existing.quality?.startedAt ?? null)
+      : (b.startedAt ? new Date(b.startedAt) : null);
     const durationMs = (startedAt && !Number.isNaN(+startedAt)) ? (Date.now() - +startedAt) : null;
     const straight = maxStraightRun(b.answers);
     const reasons = [];
@@ -146,9 +175,7 @@ const submitResearchResponse = async (req, res, next) => {
 
     const completed = isCompleted(b.answers);
 
-    const doc = await ResearchSurveyResult.create({
-      survey_id: String(b.survey_id),
-      respondent_id: `res_${crypto.randomBytes(9).toString('hex')}`,
+    const fields = {
       respondent: {
         role, jobCode, jobTitle, jobPrimary,
         careerYears: careerYears ?? null,
@@ -170,10 +197,30 @@ const submitResearchResponse = async (req, res, next) => {
         campaign: b.campaign ? String(b.campaign).slice(0, 60) : null,
         userAgent: (req.get('user-agent') || '').slice(0, 300),
       },
-    });
+    };
+
+    let doc;
+    if (existing) {
+      // ⚠️ 조건에 completed:false 를 다시 건다 — 위 확인과 이 갱신 사이에 다른 요청이
+      //    완주 처리했으면 덮어쓰지 않는다.
+      doc = await ResearchSurveyResult.findOneAndUpdate(
+        { respondent_id: existing.respondent_id, completed: false },
+        { $set: fields },
+        { new: true },
+      );
+      if (!doc) {
+        return res.status(409).json({ success: false, error: '이미 제출이 끝난 응답입니다.' });
+      }
+    } else {
+      doc = await ResearchSurveyResult.create({
+        survey_id: String(b.survey_id),
+        respondent_id: `res_${crypto.randomBytes(9).toString('hex')}`,
+        ...fields,
+      });
+    }
 
     // ⚠️ 응답자에게 품질 플래그를 **알리지 않는다.** 알리면 다음 응답을 꾸미게 된다.
-    res.status(201).json({
+    res.status(existing ? 200 : 201).json({
       success: true,
       respondent_id: doc.respondent_id,
       completed,
