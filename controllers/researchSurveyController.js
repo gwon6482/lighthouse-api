@@ -9,6 +9,8 @@ const crypto = require('crypto');
 const mongoose = require('mongoose');
 const ResearchSurveyResult = require('../models/ResearchSurveyResult');
 const { ROLES, CAREER_YEARS, AGE_GROUPS, GENDERS } = ResearchSurveyResult;
+const { buildSurveyAnalysis } = require('./surveyController');
+const { runRecommend, buildUserSurvey } = require('./recommendController');
 
 // Phase 1 목표 (사용자 결정 2026-10-05). 어드민 현황판이 이 값을 기준으로 충족률을 보여준다.
 const PHASE1_TARGET = { practitioner: 100, prospective: 200 };
@@ -232,6 +234,43 @@ const submitResearchResponse = async (req, res, next) => {
 };
 
 /**
+ * GET /api/survey/research/result/:respondent_id  (공개)
+ *
+ * 응답자 본인에게 보여주는 결과지 + 추천 직업 5개. 앱 결과와 **같은 함수**로 계산한다
+ * (`buildSurveyAnalysis` · `runRecommend`). 화면도 앱과 같아야 참여 보상이 된다.
+ *
+ * ⚠️ 완주본만 준다(409). 부분 응답으로 결과를 내면 빈 파트가 '낮은 점수' 처럼 보인다.
+ * ⚠️ respondent_id 는 서버가 만든 72비트 난수라 **링크를 가진 사람만** 볼 수 있다.
+ *    이름·연락처가 없는 문서라 노출돼도 개인을 특정할 수 없다.
+ * ⚠️ 읽기 전용이다. 이 경로에서 `survey_statistics` 를 갱신하지 않는다.
+ */
+const getResearchResult = async (req, res, next) => {
+  try {
+    const { respondent_id } = req.params;
+    if (!RESPONDENT_ID_RE.test(String(respondent_id))) {
+      return res.status(400).json({ success: false, error: 'respondent_id 형식이 올바르지 않습니다.' });
+    }
+    const doc = await ResearchSurveyResult.findOne({ respondent_id }).lean();
+    if (!doc) {
+      return res.status(404).json({ success: false, error: '응답을 찾을 수 없습니다.' });
+    }
+    if (!doc.completed) {
+      return res.status(409).json({ success: false, error: '아직 끝나지 않은 응답입니다.' });
+    }
+
+    // 연구 설문은 5지선다(A~E)만 쓴다. answers 구조는 survey_results 와 같다.
+    const [analysis, recommend] = await Promise.all([
+      buildSurveyAnalysis({ answers: doc.answers, answer_type: 'type_5' }),
+      runRecommend(buildUserSurvey(doc), { limit: 5 }),
+    ]);
+
+    res.json({ success: true, respondent_id, analysis, recommend: recommend.data });
+  } catch (err) {
+    next(err);
+  }
+};
+
+/**
  * GET /api/survey/research/stats  (adminAuth)
  *
  * 수집 현황. ⚠️ **완주본만 집계**한다(사용자 결정). 완주율은 따로 보여준다.
@@ -331,6 +370,7 @@ const getResearchStats = async (req, res, next) => {
 
 module.exports = {
   submitResearchResponse,
+  getResearchResult,
   getResearchStats,
   PHASE1_TARGET,
   __test__: { maxStraightRun, isCompleted, lastPartOf },

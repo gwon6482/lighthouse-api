@@ -12,7 +12,7 @@ const {
 } = require('../controllers/surveyController');
 const adminAuth = require('../middleware/adminAuth');
 const { researchSurveyLimiter } = require('../middleware/rateLimit');
-const { submitResearchResponse, getResearchStats } = require('../controllers/researchSurveyController');
+const { submitResearchResponse, getResearchResult, getResearchStats } = require('../controllers/researchSurveyController');
 const { authenticate } = require('../middleware/auth');
 
 /**
@@ -713,6 +713,27 @@ router.get('/result/list', adminAuth, getSurveyResultList);
  *       429: { description: 요청 과다 }
  */
 router.post('/research/response', researchSurveyLimiter, submitResearchResponse);
+
+/**
+ * @openapi
+ * /api/survey/research/result/{respondent_id}:
+ *   get:
+ *     tags: [Survey]
+ *     summary: 연구용 설문 결과지 (공개, 응답자 본인용)
+ *     description: |
+ *       앱 결과(`/api/survey/analysis`)와 같은 계산으로 결과지와 추천 직업 5개를 준다.
+ *       완주한 응답만(409). respondent_id 는 제출 응답이 돌려준 값.
+ *     parameters:
+ *       - in: path
+ *         name: respondent_id
+ *         required: true
+ *         schema: { type: string }
+ *     responses:
+ *       200: { description: '{ analysis, recommend }' }
+ *       404: { description: 응답 없음 }
+ *       409: { description: 완주하지 않은 응답 }
+ */
+router.get('/research/result/:respondent_id', researchSurveyLimiter, getResearchResult);
 
 /**
  * @openapi

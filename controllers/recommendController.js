@@ -761,6 +761,8 @@ const getJobRecommendT2BySurveyId = async (req, res, next) => {
 
 module.exports = {
   getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore, getJobRecommendT2BySurveyId,
+  // 연구 설문 결과(`researchSurveyController.getResearchResult`)가 앱 추천과 **같은 경로**로 계산한다.
+  runRecommend, buildUserSurvey,
   // 아래는 **검증·테스트 전용 노출**이다. 라우트에서 쓰지 않는다.
   // 점수 로직을 스크립트에서 다시 구현하면 원본과 조용히 갈라지므로 같은 함수를 부른다.
   __test__: {

@@ -484,9 +484,26 @@ const getSurveyAnalysis = async (req, res) => {
 
     if (!(await ensureSurveyOwnership(req, res, survey_id))) return;
 
-    const answers = result.answers;
     const answer_type = result.raw_payload?.answer_type;
+    const analysis = await buildSurveyAnalysis({
+      answers: result.answers,
+      answer_type,
+      T1_result: result.T1_result || null,
+    });
 
+    res.json({ success: true, survey_id, answer_type, analysis });
+  } catch (error) {
+    console.error('설문 분석 조회 오류:', error);
+    res.status(500).json({ success: false, error: '설문 분석 조회 중 오류가 발생했습니다', message: error.message });
+  }
+};
+
+/**
+ * 검사 응답 → 결과지(analysis). 앱 결과(`getSurveyAnalysis`)와 연구 설문 결과
+ * (`researchSurveyController.getResearchResult`)가 **같은 함수**를 쓴다.
+ * ⚠️ 복사해 따로 두지 말 것 — 10-05 에 같은 표가 두 곳에서 서로 반대로 갈라져 있었다.
+ */
+async function buildSurveyAnalysis({ answers, answer_type, T1_result: savedT1 = null }) {
     // 최신 통계
     const statistics = await SurveyStatistics.findOne({}).sort({ generated_at: -1 }).lean();
     const groupStats = statistics?.group_stats || {};
@@ -692,7 +709,7 @@ const getSurveyAnalysis = async (req, res) => {
     };
 
     // T1 유형 결과
-    let T1_result = result.T1_result || null;
+    let T1_result = savedT1;
     if (!T1_result && answers.T1) {
       const t1GroupScores = calcT1GroupScores(answers.T1, answer_type);
       const t1TypeCalc = calcT1Type(t1GroupScores);
@@ -722,28 +739,19 @@ const getSurveyAnalysis = async (req, res) => {
       }
     }
 
-    res.json({
-      success: true,
-      survey_id,
-      answer_type,
-      analysis: {
-        personality_type: T1_result,
-        personality: { top3: personalityScores.slice(0, 3), all: personalityScores },
-        talent: { top3: talentScores.slice(0, 3), all: talentScores },
-        interest,
-        values,
-        environment: {
-          parts: environmentParts,
-          texts:   t3Result.texts,
-          weItems: t3Result.weItems
-        }
+    return {
+      personality_type: T1_result,
+      personality: { top3: personalityScores.slice(0, 3), all: personalityScores },
+      talent: { top3: talentScores.slice(0, 3), all: talentScores },
+      interest,
+      values,
+      environment: {
+        parts: environmentParts,
+        texts:   t3Result.texts,
+        weItems: t3Result.weItems
       }
-    });
-  } catch (error) {
-    console.error('설문 분석 조회 오류:', error);
-    res.status(500).json({ success: false, error: '설문 분석 조회 중 오류가 발생했습니다', message: error.message });
-  }
-};
+    };
+}
 
 // 통계치 갱신(누적) API 예시
 // POST /api/survey/statistics/update
@@ -1000,5 +1008,6 @@ module.exports = {
   getT1Result,
   updateSurveyStatistics,
   getSurveyStatistics,
-  getSurveyResultList
+  getSurveyResultList,
+  buildSurveyAnalysis
 };
