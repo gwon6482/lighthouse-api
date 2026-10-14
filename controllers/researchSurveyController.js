@@ -264,7 +264,10 @@ const getResearchResult = async (req, res, next) => {
       runRecommend(buildUserSurvey(doc), { limit: 5 }),
     ]);
 
-    res.json({ success: true, respondent_id, analysis, recommend: recommend.data });
+    // 결과지(PDF)의 '검사일'. ⚠️ submitted_at 은 **첫 중간 저장** 시각이라 쓰지 않는다.
+    //    완주본은 더 이상 갱신되지 않으므로(409) updated_at 이 곧 완주 시각이다.
+    // 연령대·성별·직업은 싣지 않는다 — 결과 링크는 주소만 알면 누구나 연다.
+    res.json({ success: true, respondent_id, completed_at: doc.updated_at, analysis, recommend: recommend.data });
   } catch (err) {
     next(err);
   }

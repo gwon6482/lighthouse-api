@@ -729,7 +729,7 @@ router.post('/research/response', researchSurveyLimiter, submitResearchResponse)
  *         required: true
  *         schema: { type: string }
  *     responses:
- *       200: { description: '{ analysis, recommend }' }
+ *       200: { description: '{ completed_at, analysis, recommend }' }
  *       404: { description: 응답 없음 }
  *       409: { description: 완주하지 않은 응답 }
  */
