@@ -260,15 +260,23 @@ const getResearchResult = async (req, res, next) => {
     }
 
     // 연구 설문은 5지선다(A~E)만 쓴다. answers 구조는 survey_results 와 같다.
+    // 실무자는 '현재 직업과의 매칭도' 를 함께 준다(추천 계산에서 꺼낸다 — 추가 계산 없음)
+    const currentJobCode = doc.respondent?.role === 'practitioner' ? doc.respondent?.jobCode : null;
     const [analysis, recommend] = await Promise.all([
       buildSurveyAnalysis({ answers: doc.answers, answer_type: 'type_5' }),
-      runRecommend(buildUserSurvey(doc), { limit: 5 }),
+      runRecommend(buildUserSurvey(doc), { limit: 5, focusJobCode: currentJobCode }),
     ]);
+
+    // 🔓 결과 링크(공개)에 현재 직업명이 실린다 — 사용자 결정(2026-10-16). 연령대·성별은 여전히 싣지 않는다.
+    // selected = 응답자가 고른 바로 그 직업. 공유 그룹이면 순위 항목(title)은 그룹 대표명이라 다를 수 있다
+    const currentJob = recommend.focus
+      ? { ...recommend.focus, selected: { jobCode: currentJobCode, title: doc.respondent.jobTitle ?? recommend.focus.title } }
+      : null;
 
     // 결과지(PDF)의 '검사일'. ⚠️ submitted_at 은 **첫 중간 저장** 시각이라 쓰지 않는다.
     //    완주본은 더 이상 갱신되지 않으므로(409) updated_at 이 곧 완주 시각이다.
     // 연령대·성별·직업은 싣지 않는다 — 결과 링크는 주소만 알면 누구나 연다.
-    res.json({ success: true, respondent_id, completed_at: doc.updated_at, analysis, recommend: recommend.data });
+    res.json({ success: true, respondent_id, completed_at: doc.updated_at, analysis, recommend: recommend.data, currentJob });
   } catch (err) {
     next(err);
   }

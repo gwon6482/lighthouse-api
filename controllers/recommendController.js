@@ -324,7 +324,14 @@ function buildUserSurvey(surveyResult) {
 }
 
 // 매칭 실행 (공통 로직)
-async function runRecommend(userSurvey, { limit = 10, primary = null, minScore = 0 } = {}) {
+// focusJobCode: 이 직업의 점수·순위도 함께 돌려준다(연구 설문 실무자의 '현재 직업과의 매칭도', 2026-10-16~).
+//   537개를 어차피 다 계산하므로 추가 비용이 없다. 순위는 **공유 그룹을 접은 뒤의 자리**다 —
+//   추천 목록과 같은 기준이어야 "Top 5 안" 판정과 숫자가 맞는다(research-recall.js 의 그룹 판정과도 같다).
+// 순위를 믿을 수 없는 직업 — 매칭 데이터가 없어 구조적으로 바닥에 깔린다(위 121행 주석, recommend-reachability.js KNOWN_OK).
+// '현재 직업과의 매칭도' 에서 이 직업 종사자에게 '481위' 를 보여주면 적합도가 아니라 데이터 공백을 보여주는 셈이다.
+const UNRANKABLE_JOBS = new Set(['420301']);
+
+async function runRecommend(userSurvey, { limit = 10, primary = null, minScore = 0, focusJobCode = null } = {}) {
   const [t3Parts, Job] = await Promise.all([getT3Parts(), Promise.resolve(getJobModel())]);
 
   const filter = {};
@@ -369,9 +376,29 @@ async function runRecommend(userSurvey, { limit = 10, primary = null, minScore =
   const collapsed = collapseSharedGroups(results);
   for (const r of collapsed) { delete r._exact; delete r._groupKey; delete r._groupName; }
 
+  const shown = Math.min(limit, 30);
+  let focus = null;
+  if (focusJobCode) {
+    const i = collapsed.findIndex((r) => r.jobCode === focusJobCode
+      || (r.members ?? []).some((m) => m.jobCode === focusJobCode));
+    if (i >= 0) {
+      focus = {
+        ...collapsed[i],
+        rank: i + 1,                    // 1 = 가장 잘 맞음
+        total: collapsed.length,        // 접은 뒤 자리 수(537 보다 작다)
+        // '상위 x%' — 1위도 0% 가 아니게 rank 기준. 소수 1자리
+        percentile: Math.round(((i + 1) / collapsed.length) * 1000) / 10,
+        inTop: i < shown,               // 이번 추천 목록 안에 들었나
+        // false 면 화면은 순위·해석 문구 없이 점수만 보여준다
+        rankable: !UNRANKABLE_JOBS.has(focusJobCode),
+      };
+    }
+  }
+
   return {
     total_jobs: jobs.length,
-    data: collapsed.slice(0, Math.min(limit, 30)),
+    data: collapsed.slice(0, shown),
+    focus,
   };
 }
 
