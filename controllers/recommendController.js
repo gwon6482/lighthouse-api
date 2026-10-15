@@ -391,6 +391,7 @@ async function runRecommend(userSurvey, { limit = 10, primary = null, minScore =
         inTop: i < shown,               // 이번 추천 목록 안에 들었나
         // false 면 화면은 순위·해석 문구 없이 점수만 보여준다
         rankable: !UNRANKABLE_JOBS.has(focusJobCode),
+        field: fieldOf(collapsed, i, focusJobCode),
       };
     }
   }
@@ -400,6 +401,31 @@ async function runRecommend(userSurvey, { limit = 10, primary = null, minScore =
     data: collapsed.slice(0, shown),
     focus,
   };
+}
+
+// '같은 분야' = 직업코드 앞 2자리(고용직업분류 KECO 중분류, 34개). 상위 분류(primary, 10개)는 너무 넓고
+// secondary 는 사실상 직업 자체라 그 사이를 쓴다. 예) 13 = 정보통신 연구개발·공학기술 24개 직업
+const FIELD_PREFIX_LEN = 2;
+const FIELD_PEERS = 3;
+
+// 현재 직업과 같은 분야 안에서의 순위, 그리고 **더 잘 맞는** 같은 분야 직업 상위 몇 개.
+// 순위는 접은 목록(collapsed) 기준이라 전체 순위와 같은 잣대다
+function fieldOf(collapsed, focusIndex, focusJobCode) {
+  const prefix = String(focusJobCode).slice(0, FIELD_PREFIX_LEN);
+  const inField = (r) => r.jobCode.slice(0, FIELD_PREFIX_LEN) === prefix
+    || (r.members ?? []).some((m) => m.jobCode.slice(0, FIELD_PREFIX_LEN) === prefix);
+  let fieldRank = 0;
+  let fieldTotal = 0;
+  const better = [];
+  collapsed.forEach((r, i) => {
+    if (!inField(r)) return;
+    fieldTotal += 1;
+    if (i <= focusIndex) fieldRank += 1;
+    if (i < focusIndex && better.length < FIELD_PEERS) {
+      better.push({ jobCode: r.jobCode, title: r.title, rank: i + 1, match_score: r.match_score, members: r.members });
+    }
+  });
+  return { prefix, rank: fieldRank, total: fieldTotal, better };
 }
 
 // 고용24가 한 직업으로 묶어 조사한 그룹을 **추천 목록에서 한 자리로 접는다.**
