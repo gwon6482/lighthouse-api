@@ -644,6 +644,7 @@ router.post('/:jobCode/match', postJobMatchScore);
  *     description: |
  *       지금 출처는 고용24 채용정보(KECO 상위 직종코드로 검색). 사람인·잡코리아는 services/recruit/providers 에 추가 예정.
  *       공고 상세는 원문(url)으로 보낸다. 직업별 6시간 캐시. 한 출처가 실패해도 나머지를 준다(sources[].ok).
+ *       openings = 기업 공개채용(고용24 공채속보). 직업이 아니라 **직종 중분류(분야)** 단위라 scope.name 을 함께 보여줄 것.
  *     parameters:
  *       - in: path
  *         name: jobCode
@@ -653,7 +654,7 @@ router.post('/:jobCode/match', postJobMatchScore);
  *         name: limit
  *         schema: { type: integer, default: 10, maximum: 20 }
  *     responses:
- *       200: { description: '{ postings: Posting[], sources: [{ id, name, ok, total, count, moreUrl }], cached }' }
+ *       200: { description: '{ postings: Posting[], sources: [{ id, name, ok, total, count, moreUrl }], openings: [{ source, sourceName, total, scope: { code, name }, items: Opening[] }], cached }' }
  *       404: { description: 직업 없음 }
  */
 router.get('/:jobCode/recruitment', getJobRecruitment);
