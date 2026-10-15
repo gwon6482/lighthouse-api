@@ -3,6 +3,7 @@ const router = express.Router();
 const { getJobByCode, searchJobByName, getJobList, createJob, updateJob, deleteJob, getClassifications, getMajors } = require('../controllers/jobController');
 const { getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore, getJobRecommendT2BySurveyId } = require('../controllers/recommendController');
 const { getApprovedReviews, submitReview } = require('../controllers/reviewController');
+const { getJobRecruitment } = require('../controllers/recruitmentController');
 const adminAuth = require('../middleware/adminAuth');
 
 /**
@@ -634,6 +635,28 @@ router.post('/', adminAuth, createJob);
  */
 router.get('/:jobCode/match', getJobMatchScore);
 router.post('/:jobCode/match', postJobMatchScore);
+/**
+ * @swagger
+ * /api/job/{jobCode}/recruitment:
+ *   get:
+ *     summary: 진로백과 채용 탭 — 이 직업의 채용공고(여러 출처를 한 모양으로)
+ *     tags: [Job]
+ *     description: |
+ *       지금 출처는 고용24 채용정보(KECO 상위 직종코드로 검색). 사람인·잡코리아는 services/recruit/providers 에 추가 예정.
+ *       공고 상세는 원문(url)으로 보낸다. 직업별 6시간 캐시. 한 출처가 실패해도 나머지를 준다(sources[].ok).
+ *     parameters:
+ *       - in: path
+ *         name: jobCode
+ *         required: true
+ *         schema: { type: string }
+ *       - in: query
+ *         name: limit
+ *         schema: { type: integer, default: 10, maximum: 20 }
+ *     responses:
+ *       200: { description: '{ postings: Posting[], sources: [{ id, name, ok, total, count, moreUrl }], cached }' }
+ *       404: { description: 직업 없음 }
+ */
+router.get('/:jobCode/recruitment', getJobRecruitment);
 router.get('/:jobCode/reviews', getApprovedReviews);
 router.post('/:jobCode/reviews', submitReview);
 router.get('/:jobCode', getJobByCode);
