@@ -14,6 +14,7 @@ const {
 const { getAdminReviews, createAdminReview, updateAdminReview, deleteAdminReview } = require('../controllers/reviewController');
 const { getOnboardingStats } = require('../controllers/onboardingStatsController');
 const { listUsers, getUserDetail, deleteUser, resetUser } = require('../controllers/adminUserController');
+const { listWork24Endpoints, callWork24 } = require('../controllers/work24ExplorerController');
 
 /**
  * @swagger
@@ -364,6 +365,10 @@ router.get('/t1-types', getAdminT1Types);
  *         description: 해당 type_code 없음
  */
 router.put('/t1-types/:type_code', updateAdminT1Type);
+
+// 고용24 API 탐색기 — 허용 목록 주소만, 키는 서버에서만(controllers/work24ExplorerController.js)
+router.get('/work24/endpoints', listWork24Endpoints);
+router.post('/work24/call', callWork24);
 
 router.get('/reviews', getAdminReviews);
 router.post('/reviews', createAdminReview);

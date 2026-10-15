@@ -72,6 +72,20 @@ jobs:
           # 구글 로그인. 카카오와 같은 규칙 — 키가 없어도 배포는 성공하고 기능만 꺼진다
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          # 고용24 OPEN-API 키 — **서비스마다 키가 다르다**(lighthouse-docs/work24-api/). 선택 항목: 없으면 그 API 만 꺼진다
+          WORK24_KEY_SMALL_GIANT: ${{ secrets.WORK24_KEY_SMALL_GIANT }}
+          WORK24_KEY_TRAIN_CARD: ${{ secrets.WORK24_KEY_TRAIN_CARD }}
+          WORK24_KEY_TRAIN_EMPLOYER: ${{ secrets.WORK24_KEY_TRAIN_EMPLOYER }}
+          WORK24_KEY_TRAIN_CONSORTIUM: ${{ secrets.WORK24_KEY_TRAIN_CONSORTIUM }}
+          WORK24_KEY_TRAIN_WORKSTUDY: ${{ secrets.WORK24_KEY_TRAIN_WORKSTUDY }}
+          WORK24_KEY_MAJOR: ${{ secrets.WORK24_KEY_MAJOR }}
+          WORK24_KEY_JOBSEEKER_PROGRAM: ${{ secrets.WORK24_KEY_JOBSEEKER_PROGRAM }}
+          WORK24_KEY_GOV_JOBS: ${{ secrets.WORK24_KEY_GOV_JOBS }}
+          WORK24_KEY_PSY_TEST: ${{ secrets.WORK24_KEY_PSY_TEST }}
+          WORK24_KEY_JOB_INFO: ${{ secrets.WORK24_KEY_JOB_INFO }}
+          WORK24_KEY_COMMON_CODE: ${{ secrets.WORK24_KEY_COMMON_CODE }}
+          WORK24_KEY_DUTY: ${{ secrets.WORK24_KEY_DUTY }}
+          WORK24_KEY_RECRUIT: ${{ secrets.WORK24_KEY_RECRUIT }}
         run: |
           # 시크릿 노출 방지: python 으로 env 에서 직접 읽어 배포 스펙 작성
           python3 - <<'PY'
@@ -126,8 +140,10 @@ jobs:
           # 소셜 로그인 키는 **선택**이다. 미등록이면 항목을 아예 빼고, 서버는 그 기능만 꺼진 채 뜬다
           # (/api/auth/providers → kakao:false / google:false, /api/auth/<제공자> → 503).
           # ⚠️ ADMIN_API_KEY 처럼 os.environ[] 로 읽으면 안 된다 — 키를 넣기 전까지 배포 전체가 죽는다.
+          # 고용24 키(WORK24_KEY_*)도 같은 규칙 — 어드민 고용24 API 탐색기·채용 탭이 쓴다.
           for k in ("KAKAO_REST_API_KEY", "KAKAO_CLIENT_SECRET",
-                    "GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET"):
+                    "GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET",
+                    *[n for n in os.environ if n.startswith("WORK24_KEY_")]):
               v = os.environ.get(k, "").strip()
               if v:
                   spec["containers"]["app"]["environment"][k] = v
