@@ -8,6 +8,7 @@
 const crypto = require('crypto');
 const mongoose = require('mongoose');
 const ResearchSurveyResult = require('../models/ResearchSurveyResult');
+const JobReview = require('../models/JobReview');
 const { ROLES, CAREER_YEARS, AGE_GROUPS, GENDERS } = ResearchSurveyResult;
 const { buildSurveyAnalysis } = require('./surveyController');
 const { runRecommend, buildUserSurvey } = require('./recommendController');
@@ -371,10 +372,87 @@ const getResearchStats = async (req, res, next) => {
   }
 };
 
+/**
+ * POST /api/survey/research/review — 연구 설문 실무자의 **직업 후기** (진로백과 후기 탭에 실린다)
+ *
+ * 공개 POST /api/job/:jobCode/reviews 와 달리 **응답 번호로 신원을 확인한다**:
+ *   - 완주한 실무자 응답만 쓸 수 있다 → 직업(jobCode)은 설문 응답에서 가져온다(조작 불가)
+ *   - 응답자당 1건(409) — 같은 사람이 여러 번 올려 한 직업의 후기를 채우지 못하게
+ * 성격 태그는 **방금 한 성격 검사의 상위 3개**, 경력은 설문 답 — 응답자가 다시 입력하지 않는다.
+ *
+ * ⚠️ 상태는 pending. 어드민 승인 후에야 진로백과에 보인다(자유 서술이라 개인정보·부적절 표현 검수).
+ * ⚠️ consent 가 true 가 아니면 받지 않는다 — 후기는 진로백과에 **공개되는** 글이다(처리방침 제2조).
+ */
+const REVIEW_LIMITS = { summary: 60, pros: 1000, cons: 1000, recommendation: 1000, preparation: 1000, dailyLife: 1000 };
+const REVIEW_MIN = { pros: 10, cons: 10, recommendation: 10 };
+
+const submitResearchReview = async (req, res, next) => {
+  try {
+    const b = req.body || {};
+    if (!RESPONDENT_ID_RE.test(String(b.respondent_id))) {
+      return res.status(400).json({ success: false, error: 'respondent_id 형식이 올바르지 않습니다.' });
+    }
+    if (b.consent !== true) {
+      return res.status(400).json({ success: false, error: '후기 공개에 동의해야 제출할 수 있습니다.' });
+    }
+
+    // 문자열 정리 — 앞뒤 공백 제거, 길이 제한
+    const text = {};
+    for (const [k, max] of Object.entries(REVIEW_LIMITS)) {
+      const v = typeof b[k] === 'string' ? b[k].trim() : '';
+      if (v.length > max) return res.status(400).json({ success: false, error: `${k} 는 ${max}자 이하여야 합니다.` });
+      text[k] = v;
+    }
+    if (!text.summary) return res.status(400).json({ success: false, error: '한 줄 요약을 입력해주세요.' });
+    for (const [k, min] of Object.entries(REVIEW_MIN)) {
+      if (text[k].length < min) return res.status(400).json({ success: false, error: `${k} 는 ${min}자 이상 입력해주세요.` });
+    }
+    const satisfaction = Number(b.satisfaction);
+    if (!Number.isInteger(satisfaction) || satisfaction < 0 || satisfaction > 100) {
+      return res.status(400).json({ success: false, error: '만족도는 0~100 사이 정수여야 합니다.' });
+    }
+
+    const doc = await ResearchSurveyResult.findOne({ respondent_id: b.respondent_id }).lean();
+    if (!doc) return res.status(404).json({ success: false, error: '응답을 찾을 수 없습니다.' });
+    if (!doc.completed) return res.status(409).json({ success: false, error: '설문을 끝까지 마친 뒤에 후기를 쓸 수 있습니다.' });
+    if (doc.respondent?.role !== 'practitioner' || !doc.respondent?.jobCode) {
+      return res.status(403).json({ success: false, error: '현재 일하고 계신 분만 직업 후기를 쓸 수 있습니다.' });
+    }
+
+    // 성격 태그 = 이 응답자의 성격 검사 상위 3개(결과지와 같은 계산)
+    let personalityTags = [];
+    try {
+      const analysis = await buildSurveyAnalysis({ answers: doc.answers, answer_type: 'type_5' });
+      personalityTags = (analysis?.personality?.top3 ?? []).map((f) => f.code).filter(Boolean).slice(0, 3);
+    } catch { /* 태그는 보조 정보 — 계산 실패로 후기를 막지 않는다 */ }
+
+    try {
+      const review = await JobReview.create({
+        jobCode: doc.respondent.jobCode,
+        ...text,
+        satisfaction,
+        personalityTags,
+        careerYears: doc.respondent.careerYears || undefined,
+        status: 'pending',
+        submittedBy: 'research',
+        respondentId: doc.respondent_id,
+        consentAt: new Date(),
+      });
+      return res.status(201).json({ success: true, id: review._id, jobCode: review.jobCode, status: review.status });
+    } catch (e) {
+      if (e?.code === 11000) return res.status(409).json({ success: false, error: '이미 후기를 보내주셨어요.' });
+      throw e;
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   submitResearchResponse,
   getResearchResult,
   getResearchStats,
+  submitResearchReview,
   PHASE1_TARGET,
   __test__: { maxStraightRun, isCompleted, lastPartOf },
 };

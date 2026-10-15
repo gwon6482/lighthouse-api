@@ -12,7 +12,7 @@ const {
 } = require('../controllers/surveyController');
 const adminAuth = require('../middleware/adminAuth');
 const { researchSurveyLimiter } = require('../middleware/rateLimit');
-const { submitResearchResponse, getResearchResult, getResearchStats } = require('../controllers/researchSurveyController');
+const { submitResearchResponse, getResearchResult, getResearchStats, submitResearchReview } = require('../controllers/researchSurveyController');
 const { authenticate } = require('../middleware/auth');
 
 /**
@@ -734,6 +734,39 @@ router.post('/research/response', researchSurveyLimiter, submitResearchResponse)
  *       409: { description: 완주하지 않은 응답 }
  */
 router.get('/research/result/:respondent_id', researchSurveyLimiter, getResearchResult);
+
+/**
+ * @swagger
+ * /api/survey/research/review:
+ *   post:
+ *     summary: 연구 설문 실무자의 직업 후기 제출 (공개, 응답 번호로 확인)
+ *     tags: [Survey]
+ *     description: |
+ *       완주한 실무자 응답만(403/409). 응답자당 1건(409). consent=true 필수.
+ *       직업·성격 태그·경력은 설문 응답에서 서버가 채운다. 상태 pending(어드민 승인 후 진로백과 노출).
+ *     requestBody:
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [respondent_id, summary, satisfaction, pros, cons, recommendation, consent]
+ *             properties:
+ *               respondent_id: { type: string }
+ *               summary: { type: string, maxLength: 60 }
+ *               satisfaction: { type: integer, minimum: 0, maximum: 100 }
+ *               pros: { type: string }
+ *               cons: { type: string }
+ *               recommendation: { type: string }
+ *               preparation: { type: string }
+ *               dailyLife: { type: string }
+ *               consent: { type: boolean }
+ *     responses:
+ *       201: { description: '{ id, jobCode, status }' }
+ *       400: { description: 입력 오류 · 동의 없음 }
+ *       403: { description: 실무자 아님 }
+ *       409: { description: 미완주 · 이미 제출 }
+ */
+router.post('/research/review', researchSurveyLimiter, submitResearchReview);
 
 /**
  * @openapi

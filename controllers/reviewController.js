@@ -5,7 +5,7 @@ const getApprovedReviews = async (req, res) => {
   try {
     const { jobCode } = req.params;
     const reviews = await JobReview.find({ jobCode, status: 'approved' })
-      .select('-adminNote -submitterEmail -__v')
+      .select('-adminNote -submitterEmail -respondentId -consentAt -__v') // 🔒 respondentId 로 결과지를 열 수 있다
       .sort({ createdAt: -1 });
 
     res.json({ success: true, count: reviews.length, data: reviews });
@@ -105,7 +105,7 @@ const createAdminReview = async (req, res) => {
 const updateAdminReview = async (req, res) => {
   try {
     const { id } = req.params;
-    const allowedFields = ['status', 'summary', 'satisfaction', 'pros', 'cons', 'recommendation', 'personalityTags', 'adminNote'];
+    const allowedFields = ['status', 'summary', 'satisfaction', 'pros', 'cons', 'recommendation', 'personalityTags', 'adminNote', 'preparation', 'dailyLife'];
     const updates = {};
     for (const field of allowedFields) {
       if (req.body[field] !== undefined) updates[field] = req.body[field];
