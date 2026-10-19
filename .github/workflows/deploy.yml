@@ -64,6 +64,8 @@ jobs:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
           ADMIN_API_KEY: ${{ secrets.ADMIN_API_KEY }}
+          # 설문 문항 수정 전용 키(x-question-key) — 선택. 없으면 그 경로만 닫힌다(2026-10-19, 팀원 문항 편집용)
+          QUESTION_EDITOR_KEY: ${{ secrets.QUESTION_EDITOR_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           # 카카오 로그인. 키가 없어도 배포는 성공해야 한다(기능만 꺼진 채 뜬다) → 아래에서 .get 사용
@@ -141,7 +143,7 @@ jobs:
           # (/api/auth/providers → kakao:false / google:false, /api/auth/<제공자> → 503).
           # ⚠️ ADMIN_API_KEY 처럼 os.environ[] 로 읽으면 안 된다 — 키를 넣기 전까지 배포 전체가 죽는다.
           # 고용24 키(WORK24_KEY_*)도 같은 규칙 — 어드민 고용24 API 탐색기·채용 탭이 쓴다.
-          for k in ("KAKAO_REST_API_KEY", "KAKAO_CLIENT_SECRET",
+          for k in ("KAKAO_REST_API_KEY", "KAKAO_CLIENT_SECRET", "QUESTION_EDITOR_KEY",
                     "GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET",
                     *[n for n in os.environ if n.startswith("WORK24_KEY_")]):
               v = os.environ.get(k, "").strip()
