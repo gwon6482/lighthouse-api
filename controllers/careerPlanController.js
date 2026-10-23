@@ -2,6 +2,7 @@ const crypto = require('crypto');
 const CareerPlan = require('../models/CareerPlan');
 const PublicCareerPlan = require('../models/PublicCareerPlan');
 const User = require('../models/User');
+const { purgePlan } = require('../services/userPurge');
 
 // 레거시 month 라벨('2026.03' / '2026년 3월' / '2026-03')을 계획 시작주 기준 주차로 환산.
 // 2026-08-27 타임라인 주차 전환 이전에 저장된 계획을 읽을 때만 쓴다.
@@ -111,15 +112,11 @@ const getPlan = async (req, res, next) => {
 const deletePlan = async (req, res, next) => {
   try {
     const { planId } = req.params;
-    const plan = await CareerPlan.findOneAndDelete({ planId, userUid: req.user.uid });
-    if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
+    // 딸린 주간 일정·실행 기록·커리큘럼 완료·인증사진까지 함께(services/userPurge.purgePlan)
+    const deleted = await purgePlan(req.user.uid, planId);
+    if (!deleted) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
 
-    await User.updateOne(
-      { uid: req.user.uid },
-      { $pull: { careerDesigns: planId } }
-    );
-
-    res.json({ success: true, message: '계획이 삭제되었습니다' });
+    res.json({ success: true, message: '계획이 삭제되었습니다', deleted });
   } catch (err) {
     next(err);
   }
