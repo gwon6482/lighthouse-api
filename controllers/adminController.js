@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const escapeRegex = require('../utils/escapeRegex');
 
 // 컬렉션별 ID 필드명 매핑
 const COLLECTION_ID_FIELDS = {
@@ -140,31 +141,31 @@ const getAllQuestions = async (req, res) => {
         case 'T1_personality':
         case 'T2_1_talent':
           searchFields.push(
-            { question_id: { $regex: search, $options: 'i' } },
-            { question_text: { $regex: search, $options: 'i' } },
-            { upper_element_name: { $regex: search, $options: 'i' } },
-            { sub_element_name: { $regex: search, $options: 'i' } }
+            { question_id: { $regex: escapeRegex(search), $options: 'i' } },
+            { question_text: { $regex: escapeRegex(search), $options: 'i' } },
+            { upper_element_name: { $regex: escapeRegex(search), $options: 'i' } },
+            { sub_element_name: { $regex: escapeRegex(search), $options: 'i' } }
           );
           break;
         case 'T2_2_interest':
           searchFields.push(
-            { field_id: { $regex: search, $options: 'i' } },
-            { field_name: { $regex: search, $options: 'i' } },
-            { upper_field_name: { $regex: search, $options: 'i' } }
+            { field_id: { $regex: escapeRegex(search), $options: 'i' } },
+            { field_name: { $regex: escapeRegex(search), $options: 'i' } },
+            { upper_field_name: { $regex: escapeRegex(search), $options: 'i' } }
           );
           break;
         case 'T2_3_values':
           searchFields.push(
-            { value_id: { $regex: search, $options: 'i' } },
-            { value_name: { $regex: search, $options: 'i' } },
-            { value_question: { $regex: search, $options: 'i' } }
+            { value_id: { $regex: escapeRegex(search), $options: 'i' } },
+            { value_name: { $regex: escapeRegex(search), $options: 'i' } },
+            { value_question: { $regex: escapeRegex(search), $options: 'i' } }
           );
           break;
         case 'T3_environmental':
           searchFields.push(
-            { part_code: { $regex: search, $options: 'i' } },
-            { part_name: { $regex: search, $options: 'i' } },
-            { part_question: { $regex: search, $options: 'i' } }
+            { part_code: { $regex: escapeRegex(search), $options: 'i' } },
+            { part_name: { $regex: escapeRegex(search), $options: 'i' } },
+            { part_question: { $regex: escapeRegex(search), $options: 'i' } }
           );
           break;
       }

@@ -10,6 +10,7 @@ const SurveyResult = require('../models/SurveyResult');
 const CareerPlan = require('../models/CareerPlan');
 const WeeklySchedule = require('../models/WeeklySchedule');
 const AchievementRecord = require('../models/AchievementRecord');
+const escapeRegex = require('../utils/escapeRegex');
 const CurriculumCompletion = require('../models/CurriculumCompletion');
 
 // 목록에 붙일 '딸린 데이터 건수'. 페이지의 uid 들을 한 번에 묶어 집계한다.
@@ -60,8 +61,7 @@ const listUsers = async (req, res, next) => {
     const search = (req.query.search || '').trim();
     if (search) {
       // ⚠️ 사용자 입력을 정규식에 그대로 넣으면 `(` 같은 문자로 터지고 ReDoS 도 가능하다. 이스케이프한다.
-      const escaped = search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const re = new RegExp(escaped, 'i');
+      const re = new RegExp(escapeRegex(search), 'i');
       filter.$or = [{ email: re }, { name: re }];
     }
 
