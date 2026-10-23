@@ -20,6 +20,7 @@ const PHASE1_TARGET = { practitioner: 100, prospective: 200 };
 // 다른 직업군 사용자에게는 **더 나빠진다.**
 const SKEW_LIMIT_RATIO = 0.4;
 const MIN_PRIMARY_KINDS = 5;
+const TEST_CAMPAIGN = '__local_test__';
 
 // 불성실 응답 판정선. ⚠️ 걸러내지 않고 **플래그만** 단다.
 const MIN_DURATION_MS = 3 * 60 * 1000;   // 103문항을 3분 미만이면 의심
@@ -290,9 +291,13 @@ const getResearchResult = async (req, res, next) => {
 const getResearchStats = async (req, res, next) => {
   try {
     const M = ResearchSurveyResult;
+    // 테스트 응답(meta.campaign '__local_test__')은 기본 제외 — 섞이면 진척·쏠림 판정이 틀어진다. ?includeTest=1 로 포함
+    const includeTest = req.query.includeTest === '1';
+    const base = includeTest ? {} : { 'meta.campaign': { $ne: TEST_CAMPAIGN } };
 
-    const [byRole, byPrimary, quality, funnel] = await Promise.all([
+    const [byRole, byPrimary, quality, funnel, testCount] = await Promise.all([
       M.aggregate([
+        { $match: base },
         { $group: {
           _id: { role: '$respondent.role', completed: '$completed' },
           n: { $sum: 1 },
@@ -300,13 +305,13 @@ const getResearchStats = async (req, res, next) => {
         } },
       ]),
       M.aggregate([
-        { $match: { completed: true, 'respondent.role': 'practitioner' } },
+        { $match: { ...base, completed: true, 'respondent.role': 'practitioner' } },
         { $group: { _id: '$respondent.jobPrimary', n: { $sum: 1 },
                     jobs: { $addToSet: '$respondent.jobCode' } } },
         { $sort: { n: -1 } },
       ]),
       M.aggregate([
-        { $match: { completed: true } },
+        { $match: { ...base, completed: true } },
         { $group: {
           _id: null,
           n: { $sum: 1 },
@@ -315,10 +320,11 @@ const getResearchStats = async (req, res, next) => {
         } },
       ]),
       M.aggregate([
-        { $match: { completed: false } },
+        { $match: { ...base, completed: false } },
         { $group: { _id: '$lastPart', n: { $sum: 1 } } },
         { $sort: { n: -1 } },
       ]),
+      M.countDocuments({ 'meta.campaign': TEST_CAMPAIGN }),
     ]);
 
     const valid = { practitioner: 0, prospective: 0 };
@@ -350,6 +356,8 @@ const getResearchStats = async (req, res, next) => {
 
     res.json({
       success: true,
+      includeTest,
+      testCount,
       target: PHASE1_TARGET,
       valid,
       partial,
