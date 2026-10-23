@@ -263,9 +263,11 @@ const getResearchResult = async (req, res, next) => {
     // 연구 설문은 5지선다(A~E)만 쓴다. answers 구조는 survey_results 와 같다.
     // 실무자는 '현재 직업과의 매칭도' 를 함께 준다(추천 계산에서 꺼낸다 — 추가 계산 없음)
     const currentJobCode = doc.respondent?.role === 'practitioner' ? doc.respondent?.jobCode : null;
-    const [analysis, recommend] = await Promise.all([
+    const [analysis, recommend, review] = await Promise.all([
       buildSurveyAnalysis({ answers: doc.answers, answer_type: 'type_5' }),
       runRecommend(buildUserSurvey(doc), { limit: 5, focusJobCode: currentJobCode }),
+      // 결과 링크로 다시 온 실무자에게 [직업 후기 남기기]를 띄울지 — 이미 보냈으면(응답자당 1건) 숨긴다
+      currentJobCode ? JobReview.exists({ respondentId: doc.respondent_id }) : null,
     ]);
 
     // 🔓 결과 링크(공개)에 현재 직업명이 실린다 — 사용자 결정(2026-10-16). 연령대·성별은 여전히 싣지 않는다.
@@ -277,7 +279,11 @@ const getResearchResult = async (req, res, next) => {
     // 결과지(PDF)의 '검사일'. ⚠️ submitted_at 은 **첫 중간 저장** 시각이라 쓰지 않는다.
     //    완주본은 더 이상 갱신되지 않으므로(409) updated_at 이 곧 완주 시각이다.
     // 연령대·성별·직업은 싣지 않는다 — 결과 링크는 주소만 알면 누구나 연다.
-    res.json({ success: true, respondent_id, completed_at: doc.updated_at, analysis, recommend: recommend.data, currentJob });
+    res.json({
+      success: true, respondent_id, completed_at: doc.updated_at, analysis, recommend: recommend.data, currentJob,
+      // null = 실무자가 아니라 후기 대상이 아님
+      reviewSubmitted: currentJobCode ? !!review : null,
+    });
   } catch (err) {
     next(err);
   }
