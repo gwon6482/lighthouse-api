@@ -16,7 +16,7 @@ const CurriculumWeekSchema = new mongoose.Schema({
 const ProjectSchema = new mongoose.Schema({
   id:               { type: String, default: () => crypto.randomUUID() },
   name:             { type: String, required: true, trim: true },
-  category:         { type: String, enum: ['qualification', 'knowledge', 'skill', 'portfolio'], required: true },
+  category:         { type: String, enum: ['qualification', 'knowledge', 'skill', 'portfolio', 'experience'], required: true },
   goal:             { type: String, default: '' },
   days:             { type: [String], default: [] },
   startTime:        { type: String, default: '' },
