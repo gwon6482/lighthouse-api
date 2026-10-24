@@ -19,10 +19,12 @@ const SYSTEM = `너는 진로 준비 코치다. 한 직업을 목표로 하는 '
 
 규칙:
 - 반드시 주어진 근거(채용공고 집계·직업정보) 안에서 설계한다. 근거에 없는 자격증·도구는 쓰지 않는다. 특정 학원·유료 강의·책 이름을 지어내지 않는다.
-- 프로젝트 10~14개. 순서는 실제로 해 나갈 순서(기초 지식 → 기술 → 자격 → 결과물). order 는 1부터.
-- category: qualification(자격증·면허 준비) / knowledge(이론·법규·개념 공부) / skill(도구·기술 연습) / portfolio(결과물로 남는 경험·프로젝트)
+- 프로젝트 10~14개. 순서는 실제로 해 나갈 순서(기초 지식 → 기술 → 자격 → 결과물·실무경험). order 는 1부터.
+- category: qualification(자격증·면허 준비) / knowledge(이론·법규·개념 공부) / skill(도구·기술 연습) / portfolio(결과물이 남는 프로젝트)
+  / experience(인턴십·현장실습·대외활동처럼 기간·시간을 채우는 활동 — 2026-10-25 추가). 실습·인턴은 portfolio 가 아니라 experience.
+  이 직업 채용에서 관행이 아닌 카테고리는 넣지 않는다(예: 간호사 결과물 포트폴리오를 지어내지 말 것).
 - 각 프로젝트: name(짧고 구체적), goal(끝나면 남는 것 한 문장), level("입문"|"중급"|"심화"),
-  curriculum(주마다 title + items 3개, 각 15자 안팎). 기간은 현실적으로: 국가자격 시험 준비 8~16주, 지식 3~8주, 기술 3~8주, 포트폴리오 4~10주.
+  curriculum(주마다 title + items 3개, 각 15자 안팎). 기간은 현실적으로: 국가자격 시험 준비 8~16주, 지식 3~8주, 기술 3~8주, 포트폴리오 4~10주, 실무경험은 실제 기간(인턴 8~12주, 법정 실습은 규정 시간).
   daysPerWeek(1~6), minutesPerSession(30~180), basis(근거 한 줄, 공고 비율이 있으면 숫자로).
 - neededForMajor: 이 직업 관련 학과를 졸업한 사람에게도 따로 필요한가? 대학 전공 수업에서 배우는 기초 이론·기본 실습이면 false.
   면허·자격시험 준비, 현장 도구, 실무형 포트폴리오처럼 대학이 대신해 주지 않는 것은 true.
@@ -36,7 +38,7 @@ const PROJECT = {
   type: 'object',
   properties: {
     order: { type: 'integer' },
-    category: { type: 'string', enum: ['qualification', 'knowledge', 'skill', 'portfolio'] },
+    category: { type: 'string', enum: ['qualification', 'knowledge', 'skill', 'portfolio', 'experience'] },
     name: { type: 'string' }, goal: { type: 'string' }, level: { type: 'string', enum: ['입문', '중급', '심화'] },
     daysPerWeek: { type: 'integer' }, minutesPerSession: { type: 'integer' }, basis: { type: 'string' },
     neededForMajor: { type: 'boolean' }, neededForCareer: { type: 'boolean' }, skipReason: { type: 'string' },

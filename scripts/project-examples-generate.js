@@ -20,7 +20,9 @@ const CATS = {
   qualification: '자격요건 — 자격증·면허 취득 준비',
   knowledge: '분야지식 — 이론·법규·개념 공부',
   skill: '직무기술 — 도구·기술을 손에 익히는 연습',
-  portfolio: '포트폴리오 — 결과물로 남는 경험·프로젝트',
+  portfolio: '포트폴리오 — 결과물이 남는 프로젝트(웹앱·기획서·콘텐츠·공모전 출품작 등)',
+  // 2026-10-25 추가: 인턴·현장실습처럼 '기간·시간을 채우는' 준비물. 예전엔 포트폴리오에 억지로 넣어 '실습 보고서' 같은 가짜 결과물이 생겼다
+  experience: '실무경험 — 인턴십·현장실습·대외활동·봉사처럼 기간이나 시간을 채우는 활동',
 };
 
 const SYSTEM = `너는 진로 준비 코치다. 한 직업을 목표로 하는 사람이 '진로계획'에 담을 프로젝트 예시를 만든다.
@@ -31,7 +33,11 @@ const SYSTEM = `너는 진로 준비 코치다. 한 직업을 목표로 하는 �
 - daysPerWeek(1~6), minutesPerSession(30~180), level("입문"|"중급").
 - basis: 이 예시의 근거를 한 문장으로. 공고 비율이 있으면 숫자로(예: "응용SW 공고 97건 중 20%가 정보처리기사를 요구").
 - 특정 학원·유료 강의·책 제목을 지어내지 않는다.
-- 같은 카테고리 안에서 예시끼리 겹치지 않게, 쉬운 것부터 어려운 것 순서로.`;
+- 같은 카테고리 안에서 예시끼리 겹치지 않게, 쉬운 것부터 어려운 것 순서로.
+- 개수를 억지로 채우지 않는다. 이 직업 채용에서 관행이 아닌 카테고리는 적게 만들거나 빈 배열로 둔다
+  (예: 간호사·사회복지사는 결과물 포트폴리오를 거의 보지 않는다 — '매뉴얼북 제작' 같은 항목을 지어내지 말 것).
+- 실습·인턴·대외활동은 portfolio 가 아니라 experience 다. 법정 필수 실습(예: 사회복지사 2급 현장실습 120시간)은 반드시 experience 에 넣는다.
+- experience 의 curriculum 은 '그 기간 동안 무엇을 하고 무엇을 정리하는지'로 쓴다(지원·준비 → 수행 → 기록·정리).`;
 
 const PROJECT = {
   type: 'object',
@@ -82,7 +88,8 @@ const fmt = (arr, n = 12) => (arr ?? []).slice(0, n).map((x) => `${x.name} ${Mat
 경험: ${fmt(r.experiences)}
 담당업무: ${fmt(r.duties, 10)}
 
-카테고리마다 예시 ${PER_CAT}개씩 만들어라.
+카테고리마다 예시를 최대 ${PER_CAT}개 만들어라(근거가 약한 카테고리는 적게, 관행이 없으면 0개).
+실무경험(experience)의 근거는 공고 집계의 '경험' 항목을 우선한다.
 ${Object.entries(CATS).map(([k, v]) => `- ${k}: ${v}`).join('\n')}`;
     const { data, usage: u } = await llm.json({ model: MODEL, system: SYSTEM, prompt, schema: SCHEMA, temperature: 0.4 });
     usage.input += u.input; usage.output += u.output;
