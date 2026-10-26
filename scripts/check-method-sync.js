@@ -2,7 +2,7 @@
 // 영역 × 진행 방식 동기화 검사 — 직업인 조사(랜딩)와 실제 서비스(앱)·서버가 같은 분류를 쓰는지 (사용자 원칙 2026-10-26)
 //
 // 쓰는 법(로컬, 세 레포가 나란히 있을 때):  node scripts/check-method-sync.js [--app ../lighthouse-test] [--landing ../lighthouse-landing]
-// 비교: API config/projectMethods.js(정본) ↔ 앱 projectMethods.ts(METHODS_BY_CATEGORY) ↔ 랜딩 useCareerPath.ts(KINDS·PREP_METHODS)
+// 비교: API config/projectMethods.js(정본) ↔ 앱 projectMethods.ts(METHODS_BY_CATEGORY)·usePlanTemplates.ts(STAGES) ↔ 랜딩 useCareerPath.ts(KINDS·PREP_METHODS·STAGES)
 // 다르면 exit 1. 분류를 바꾼 작업은 끝내기 전에 이걸 돌릴 것.
 const fs = require('fs');
 const path = require('path');
@@ -46,8 +46,16 @@ const prepStart = land.indexOf('= [', land.indexOf('export const PREP_METHODS'))
 const prepBlock = land.slice(prepStart, land.indexOf('\n]', prepStart));
 same('자격증·어학 준비 방식(랜딩 PREP_METHODS)', api.PREP_METHODS, [...prepBlock.matchAll(/value: '(\w+)'/g)].map((m) => m[1]));
 
+// ── 단계(비전공·전공 — '이직'은 2026-10-27 뺐다): API 조사 모델 ↔ 앱 템플릿 ↔ 랜딩 시작 단계 ──
+const apiStages = require('../models/CareerPathContribution').STAGES;
+const tplPath = path.join(path.dirname(APP), 'usePlanTemplates.ts');
+const tpl = fs.readFileSync(tplPath, 'utf8');
+same('단계(앱 usePlanTemplates STAGES)', apiStages, [...tpl.slice(tpl.indexOf('const STAGES'), tpl.indexOf('\n]', tpl.indexOf('const STAGES'))).matchAll(/key: '(\w+)'/g)].map((m) => m[1]));
+const landStart = land.indexOf('= [', land.indexOf('export const STAGES'));
+same('단계(랜딩 STAGES)', apiStages, [...land.slice(landStart, land.indexOf('\n]', landStart)).matchAll(/value: '(\w+)'/g)].map((m) => m[1]));
+
 if (problems.length) {
   console.error(`❌ 동기화 어긋남 ${problems.length}건\n- ` + problems.join('\n- '));
   process.exit(1);
 }
-console.log(`✅ 동기화 OK — 영역 ${api.CATEGORIES.length} · 방식 ${api.PROJECT_METHODS.length} · 조사 종류 ${api.CONTRIBUTION_KINDS.length}`);
+console.log(`✅ 동기화 OK — 영역 ${api.CATEGORIES.length} · 방식 ${api.PROJECT_METHODS.length} · 조사 종류 ${api.CONTRIBUTION_KINDS.length} · 단계 ${apiStages.join('/')}`);
