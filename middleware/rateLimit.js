@@ -38,4 +38,14 @@ const researchSurveyLimiter = rateLimit({
   message: { success: false, error: '요청이 너무 많습니다. 잠시 후 다시 시도해주세요.' },
 });
 
-module.exports = { loginLimiter, checkEmailLimiter, researchSurveyLimiter };
+// 직업인 진로과정 참여 제출(공개). 한 사람이 '등록'과 '살펴보기'를 각각 몇 번 내는 정도라 설문보다 좁게 잡는다.
+// ⚠️ 행사장 공유 IP 문제는 설문과 같다 — 단체 참여를 받게 되면 넓힐 것
+const careerPathLimiter = rateLimit({
+  windowMs: 10 * 60 * 1000, // 10분
+  limit: 20,                // 20회/10분/IP
+  standardHeaders: 'draft-7',
+  legacyHeaders: false,
+  message: { success: false, error: '요청이 너무 많습니다. 잠시 후 다시 시도해주세요.' },
+});
+
+module.exports = { loginLimiter, checkEmailLimiter, researchSurveyLimiter, careerPathLimiter };

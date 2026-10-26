@@ -21,6 +21,7 @@ const referenceRoutes = require('./routes/reference');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
 const careerPlanRoutes = require('./routes/careerPlan');
+const careerPathRoutes = require('./routes/careerPath');
 
 const app = express();
 
@@ -106,6 +107,7 @@ app.use('/api/survey', surveyRoutes);
 app.use('/api/job', jobRoutes);
 app.use('/api/reference', referenceRoutes);
 app.use('/api/career-plan', careerPlanRoutes);
+app.use('/api/career-path', careerPathRoutes);   // 직업인 진로과정 참여(랜딩 /career-path, 2026-10-26)
 
 // 기본 라우트
 /**
