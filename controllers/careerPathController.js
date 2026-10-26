@@ -136,7 +136,8 @@ const submitContribution = async (req, res, next) => {
       meta: { campaign: b.campaign ? String(b.campaign).slice(0, 60) : null },
     };
     if (type === 'mine') doc.mine = parseMine(b.mine);
-    else doc.review = { templateJobCode: jobCode, ...parseReview(b.review) };
+    // 살펴보기는 프로필 직업과 다른 직업의 템플릿을 볼 수도 있다(그 직업 템플릿이 없을 때 등) → 본 템플릿을 따로 받는다
+    else doc.review = { templateJobCode: str(b.review?.templateJobCode, 20, '템플릿 직업') || jobCode, ...parseReview(b.review) };
 
     const saved = await CareerPathContribution.create(doc);
     res.status(201).json({ success: true, contribution_id: saved.contribution_id });
