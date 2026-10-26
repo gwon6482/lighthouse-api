@@ -11,9 +11,8 @@ const mongoose = require('mongoose');
 //   - 이름·연락처·이메일·User-Agent 는 받지 않는다. 받는 항목을 늘리려면 처리방침부터 고칠 것
 //   - contribution_id = 제출 확인 번호. 삭제 요청은 이 번호로 받는다(제6조) → 완료 화면에 반드시 보여준다
 //   - 보유 3년(제3조) → createdAt TTL 인덱스로 자동 삭제
-const KINDS = ['qualification', 'course', 'book', 'lecture', 'portfolio', 'internship',
-  'content', 'language', 'contest', 'club', 'activity', 'etc'];
-const CATEGORIES = ['qualification', 'knowledge', 'skill', 'portfolio', 'experience'];
+// 종류·영역·방식은 config/projectMethods.js 가 정본(앱·랜딩과 동기화)
+const { CONTRIBUTION_KINDS: KINDS, CATEGORIES, PROJECT_METHODS, PREP_METHODS } = require('../config/projectMethods');
 const STAGES = ['nonmajor', 'major', 'career'];
 const CHANGE_TYPES = ['add', 'delete', 'edit', 'comment'];
 const STATUSES = ['pending', 'approved', 'rejected'];
@@ -23,6 +22,9 @@ const entrySchema = new mongoose.Schema({
   order: Number,
   kind: { type: String, enum: KINDS, required: true },
   category: { type: String, enum: CATEGORIES, required: true },   // 기본은 종류에서 정해진 값. 검수 때 바꿀 수 있다
+  method: { type: String, enum: [...PROJECT_METHODS, null], default: null },   // 앱 진행 방식(서버가 종류·prep 에서 정한다)
+  prep: { type: String, enum: [...PREP_METHODS, null], default: undefined },  // 자격증·어학을 어떻게 준비했나
+  amount: String,                  // 얼마나(반복 연습·콘텐츠·스터디) — 템플릿 목표량의 근거
   name: { type: String, required: true },
   link: String,                    // 책·강의는 필수(차시 구성은 우리가 조사)
   weeks: Number,

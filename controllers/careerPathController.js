@@ -6,6 +6,7 @@ const CareerPathContribution = require('../models/CareerPathContribution');
 const ResearchSurveyResult = require('../models/ResearchSurveyResult');
 const { KINDS, CATEGORIES, STAGES, CHANGE_TYPES, STATUSES } = CareerPathContribution;
 const { CAREER_YEARS } = ResearchSurveyResult;
+const { TARGET_KINDS, PREP_METHODS, methodOfKind } = require('../config/projectMethods');
 
 const TEST_CAMPAIGN = '__local_test__';
 const CONTRIBUTION_ID_RE = /^cpc_[0-9a-f]{18}$/;
@@ -54,9 +55,14 @@ function parseMine(m) {
     const kind = oneOf(e?.kind, KINDS, `${n} 종류`);
     const link = str(e.link, 300, `${n} 링크`);
     if ((kind === 'book' || kind === 'lecture') && !link) throw new Invalid(`${n}: 책·강의는 어디서 찾을 수 있는지 적어주세요.`);
+    // 자격증·어학은 어떻게 준비했는지가 앱 진행 방식이 된다(필수). 그 밖의 종류는 종류 자체가 방식
+    const prep = TARGET_KINDS.includes(kind) ? oneOf(e.prep, PREP_METHODS, `${n} 준비 방식`) : undefined;
     return {
       order: i + 1,
       kind,
+      prep,
+      method: methodOfKind(kind, prep),
+      amount: str(e.amount, 80, `${n} 양`),
       category: oneOf(e.category, CATEGORIES, `${n} 분류`),
       name: str(e.name, 80, `${n} 이름`, true),
       link,
