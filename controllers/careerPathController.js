@@ -148,7 +148,7 @@ const submitContribution = async (req, res, next) => {
 };
 
 /**
- * GET /api/admin/career-path?type=&status=&jobCode=&includeTest=1&page=&limit= — 검수 목록(최신 순)
+ * GET /api/admin/career-path?type=&status=&jobCode=&id=&includeTest=1&page=&limit= — 검수 목록(최신 순). id = 제출 확인 번호
  */
 const listContributions = async (req, res, next) => {
   try {
@@ -157,6 +157,11 @@ const listContributions = async (req, res, next) => {
     if (STATUSES.includes(req.query.status)) q.status = req.query.status;
     if (typeof req.query.jobCode === 'string' && req.query.jobCode) q['profile.jobCode'] = req.query.jobCode;
     if (req.query.includeTest !== '1') q['meta.campaign'] = { $ne: TEST_CAMPAIGN };
+    // 제출 확인 번호로 찾기(삭제 요청 처리) — 번호가 맞으면 다른 필터·테스트 여부와 상관없이 그 한 건
+    if (typeof req.query.id === 'string' && CONTRIBUTION_ID_RE.test(req.query.id.trim())) {
+      for (const k of Object.keys(q)) delete q[k];
+      q.contribution_id = req.query.id.trim();
+    }
     const limit = Math.min(Math.max(Number(req.query.limit) || 30, 1), 100);
     const page = Math.max(Number(req.query.page) || 1, 1);
     const [items, total, counts] = await Promise.all([
