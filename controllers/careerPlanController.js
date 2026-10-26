@@ -1,5 +1,6 @@
 const crypto = require('crypto');
 const CareerPlan = require('../models/CareerPlan');
+const { cleanMethod } = CareerPlan;
 const PublicCareerPlan = require('../models/PublicCareerPlan');
 const User = require('../models/User');
 const { purgePlan } = require('../services/userPurge');
@@ -127,7 +128,7 @@ const deletePlan = async (req, res, next) => {
 const addProject = async (req, res, next) => {
   try {
     const { planId } = req.params;
-    const { id, name, category, goal, days, startTime, endTime, curriculum } = req.body;
+    const { id, name, category, goal, days, startTime, endTime, curriculum, method, methodDetail } = req.body;
 
     if (!name || !category) {
       return res.status(400).json({ success: false, error: 'name과 category는 필수입니다' });
@@ -141,7 +142,8 @@ const addProject = async (req, res, next) => {
       days:       days       || [],
       startTime:  startTime  || '',
       endTime:    endTime    || '',
-      curriculum: curriculum || []
+      curriculum: curriculum || [],
+      ...cleanMethod(method, methodDetail),
     };
 
     const plan = await CareerPlan.findOneAndUpdate(
@@ -176,7 +178,8 @@ const bulkAddProjects = async (req, res, next) => {
       days:       p.days || [],
       startTime:  p.startTime || '',
       endTime:    p.endTime || '',
-      curriculum: p.curriculum || []
+      curriculum: p.curriculum || [],
+      ...cleanMethod(p.method, p.methodDetail),
     })).filter(p => p.name && p.category);
 
     const plan = await CareerPlan.findOneAndUpdate(
@@ -201,6 +204,12 @@ const updateProject = async (req, res, next) => {
     const setFields = {};
     for (const key of allowed) {
       if (req.body[key] !== undefined) setFields[`projects.$.${key}`] = req.body[key];
+    }
+    // 진행 방식은 정리해서 함께 바꾼다(방식을 보내지 않으면 그대로 둔다)
+    if (req.body.method !== undefined) {
+      const { method, methodDetail } = cleanMethod(req.body.method, req.body.methodDetail);
+      setFields['projects.$.method'] = method;
+      setFields['projects.$.methodDetail'] = methodDetail;
     }
 
     const plan = await CareerPlan.findOneAndUpdate(
