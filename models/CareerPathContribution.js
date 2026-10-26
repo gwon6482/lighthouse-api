@@ -13,7 +13,8 @@ const mongoose = require('mongoose');
 //   - 보유 3년(제3조) → createdAt TTL 인덱스로 자동 삭제
 // 종류·영역·방식은 config/projectMethods.js 가 정본(앱·랜딩과 동기화)
 const { CONTRIBUTION_KINDS: KINDS, CATEGORIES, PROJECT_METHODS, PREP_METHODS } = require('../config/projectMethods');
-const STAGES = ['nonmajor', 'major', 'career'];
+// '이직'(career)은 2026-10-27 뺐다 — 서비스 단계상 시기상조(사용자 결정). 앱 템플릿·랜딩과 함께
+const STAGES = ['nonmajor', 'major'];
 const CHANGE_TYPES = ['add', 'delete', 'edit', 'comment'];
 const STATUSES = ['pending', 'approved', 'rejected'];
 const RETENTION_SECONDS = 3 * 365 * 24 * 60 * 60;

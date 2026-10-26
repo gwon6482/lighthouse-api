@@ -25,7 +25,7 @@ const { submitContribution } = require('../controllers/careerPathController');
  *               consent: { type: boolean }
  *               jobCode: { type: string }
  *               careerYears: { type: string, enum: [lt1, 1to3, 3to5, 5to10, gte10] }
- *               startStage: { type: string, enum: [nonmajor, major, career] }
+ *               startStage: { type: string, enum: [nonmajor, major] }
  *               respondent_id: { type: string, description: 연구 설문 결과 링크에서 이어 온 경우 }
  *               campaign: { type: string, description: "'__local_test__' = 테스트" }
  *               mine: { type: object, description: "{ track{id?,name,desc?}, entries[{kind,category,name,link?,weeks?,hoursPerWeek?,why?,items[]}], retro{must,skip,redo} }" }
