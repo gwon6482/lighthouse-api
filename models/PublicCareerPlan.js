@@ -8,7 +8,7 @@ const CurriculumWeekSchema = new mongoose.Schema({
 
 const PublicProjectSchema = new mongoose.Schema({
   id:               { type: String, required: true },
-  category:         { type: String, enum: ['qualification', 'knowledge', 'skill', 'portfolio'], required: true },
+  category:         { type: String, enum: ['qualification', 'knowledge', 'skill', 'portfolio', 'experience'], required: true },
   name:             { type: String, required: true },
   goal:             { type: String, default: '' },
   days:             { type: [String], default: [] },

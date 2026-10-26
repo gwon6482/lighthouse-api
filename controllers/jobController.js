@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const escapeRegex = require('../utils/escapeRegex');
 
 // career_attributes code → name 맵 (첫 조회 후 캐싱)
 let _codeNameCache = null;
@@ -112,7 +113,7 @@ const searchJobByName = async (req, res, next) => {
 
     const Job = getJobModel();
     const jobs = await Job.find(
-      { title: { $regex: name.trim(), $options: 'i' } },
+      { title: { $regex: escapeRegex(name.trim()), $options: 'i' } },
       { jobCode: 1, title: 1, 'classification.primary': 1, 'classification.secondary': 1, _id: 0 }
     ).lean();
 

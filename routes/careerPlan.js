@@ -173,7 +173,7 @@ router.delete('/:planId', deletePlan);
  *             required: [name, category]
  *             properties:
  *               name:       { type: string }
- *               category:   { type: string, enum: [qualification, knowledge, skill, portfolio] }
+ *               category:   { type: string, enum: [qualification, knowledge, skill, portfolio, experience] }
  *               goal:       { type: string }
  *               days:       { type: array, items: { type: string } }
  *               startTime:  { type: string }

@@ -13,10 +13,30 @@ const CurriculumWeekSchema = new mongoose.Schema({
   items:       { type: [String], default: [] }   // legacy
 }, { _id: false });
 
+// 프로젝트 진행 방식 — 정본은 config/projectMethods.js(앱·랜딩 조사와 동기화)
+const { PROJECT_METHODS } = require('../config/projectMethods');
+const METHOD_DETAIL_KEYS = ['title', 'link', 'org', 'target', 'deadline', 'resultUrl', 'note'];
+
+// 들어온 방식·세부를 정리한다. 모르는 방식은 null(방식 미정), 세부는 정해진 키·문자열 300자만.
+// ⚠️ $set 수정은 스키마 검증을 안 거치므로(runValidators 꺼짐) 컨트롤러가 반드시 이걸 거친다
+function cleanMethod(method, detail) {
+  const m = PROJECT_METHODS.includes(method) ? method : null;
+  const d = {};
+  if (m && detail && typeof detail === 'object') {
+    for (const k of METHOD_DETAIL_KEYS) {
+      if (typeof detail[k] === 'string' && detail[k].trim()) d[k] = detail[k].trim().slice(0, 300);
+    }
+  }
+  return { method: m, methodDetail: d };
+}
+
 const ProjectSchema = new mongoose.Schema({
   id:               { type: String, default: () => crypto.randomUUID() },
   name:             { type: String, required: true, trim: true },
-  category:         { type: String, enum: ['qualification', 'knowledge', 'skill', 'portfolio'], required: true },
+  category:         { type: String, enum: ['qualification', 'knowledge', 'skill', 'portfolio', 'experience'], required: true },
+  // 진행 방식(영역 × 방식, 2026-10-26) — 앱 composables/projectMethods.ts 와 같은 목록. null = 방식 미정(예전·템플릿 프로젝트)
+  method:           { type: String, enum: [...PROJECT_METHODS, null], default: null },
+  methodDetail:     { type: Object, default: () => ({}) },   // title·link·org·target·deadline·resultUrl·note (cleanMethod 로 정리)
   goal:             { type: String, default: '' },
   days:             { type: [String], default: [] },
   startTime:        { type: String, default: '' },
@@ -91,3 +111,5 @@ const CareerPlanSchema = new mongoose.Schema({
 
 const userDataDb = mongoose.connection.useDb(process.env.USER_DATA_DB || 'user_data');
 module.exports = userDataDb.model('CareerPlan', CareerPlanSchema, 'career_plans');
+module.exports.cleanMethod = cleanMethod;
+module.exports.PROJECT_METHODS = PROJECT_METHODS;

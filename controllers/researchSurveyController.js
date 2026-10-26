@@ -20,6 +20,7 @@ const PHASE1_TARGET = { practitioner: 100, prospective: 200 };
 // 다른 직업군 사용자에게는 **더 나빠진다.**
 const SKEW_LIMIT_RATIO = 0.4;
 const MIN_PRIMARY_KINDS = 5;
+const TEST_CAMPAIGN = '__local_test__';
 
 // 불성실 응답 판정선. ⚠️ 걸러내지 않고 **플래그만** 단다.
 const MIN_DURATION_MS = 3 * 60 * 1000;   // 103문항을 3분 미만이면 의심
@@ -262,9 +263,11 @@ const getResearchResult = async (req, res, next) => {
     // 연구 설문은 5지선다(A~E)만 쓴다. answers 구조는 survey_results 와 같다.
     // 실무자는 '현재 직업과의 매칭도' 를 함께 준다(추천 계산에서 꺼낸다 — 추가 계산 없음)
     const currentJobCode = doc.respondent?.role === 'practitioner' ? doc.respondent?.jobCode : null;
-    const [analysis, recommend] = await Promise.all([
+    const [analysis, recommend, review] = await Promise.all([
       buildSurveyAnalysis({ answers: doc.answers, answer_type: 'type_5' }),
       runRecommend(buildUserSurvey(doc), { limit: 5, focusJobCode: currentJobCode }),
+      // 결과 링크로 다시 온 실무자에게 [직업 후기 남기기]를 띄울지 — 이미 보냈으면(응답자당 1건) 숨긴다
+      currentJobCode ? JobReview.exists({ respondentId: doc.respondent_id }) : null,
     ]);
 
     // 🔓 결과 링크(공개)에 현재 직업명이 실린다 — 사용자 결정(2026-10-16). 연령대·성별은 여전히 싣지 않는다.
@@ -276,7 +279,11 @@ const getResearchResult = async (req, res, next) => {
     // 결과지(PDF)의 '검사일'. ⚠️ submitted_at 은 **첫 중간 저장** 시각이라 쓰지 않는다.
     //    완주본은 더 이상 갱신되지 않으므로(409) updated_at 이 곧 완주 시각이다.
     // 연령대·성별·직업은 싣지 않는다 — 결과 링크는 주소만 알면 누구나 연다.
-    res.json({ success: true, respondent_id, completed_at: doc.updated_at, analysis, recommend: recommend.data, currentJob });
+    res.json({
+      success: true, respondent_id, completed_at: doc.updated_at, analysis, recommend: recommend.data, currentJob,
+      // null = 실무자가 아니라 후기 대상이 아님
+      reviewSubmitted: currentJobCode ? !!review : null,
+    });
   } catch (err) {
     next(err);
   }
@@ -290,9 +297,13 @@ const getResearchResult = async (req, res, next) => {
 const getResearchStats = async (req, res, next) => {
   try {
     const M = ResearchSurveyResult;
+    // 테스트 응답(meta.campaign '__local_test__')은 기본 제외 — 섞이면 진척·쏠림 판정이 틀어진다. ?includeTest=1 로 포함
+    const includeTest = req.query.includeTest === '1';
+    const base = includeTest ? {} : { 'meta.campaign': { $ne: TEST_CAMPAIGN } };
 
-    const [byRole, byPrimary, quality, funnel] = await Promise.all([
+    const [byRole, byPrimary, quality, funnel, testCount] = await Promise.all([
       M.aggregate([
+        { $match: base },
         { $group: {
           _id: { role: '$respondent.role', completed: '$completed' },
           n: { $sum: 1 },
@@ -300,13 +311,13 @@ const getResearchStats = async (req, res, next) => {
         } },
       ]),
       M.aggregate([
-        { $match: { completed: true, 'respondent.role': 'practitioner' } },
+        { $match: { ...base, completed: true, 'respondent.role': 'practitioner' } },
         { $group: { _id: '$respondent.jobPrimary', n: { $sum: 1 },
                     jobs: { $addToSet: '$respondent.jobCode' } } },
         { $sort: { n: -1 } },
       ]),
       M.aggregate([
-        { $match: { completed: true } },
+        { $match: { ...base, completed: true } },
         { $group: {
           _id: null,
           n: { $sum: 1 },
@@ -315,10 +326,11 @@ const getResearchStats = async (req, res, next) => {
         } },
       ]),
       M.aggregate([
-        { $match: { completed: false } },
+        { $match: { ...base, completed: false } },
         { $group: { _id: '$lastPart', n: { $sum: 1 } } },
         { $sort: { n: -1 } },
       ]),
+      M.countDocuments({ 'meta.campaign': TEST_CAMPAIGN }),
     ]);
 
     const valid = { practitioner: 0, prospective: 0 };
@@ -350,6 +362,8 @@ const getResearchStats = async (req, res, next) => {
 
     res.json({
       success: true,
+      includeTest,
+      testCount,
       target: PHASE1_TARGET,
       valid,
       partial,

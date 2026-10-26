@@ -15,6 +15,7 @@ const { getAdminReviews, createAdminReview, updateAdminReview, deleteAdminReview
 const { getOnboardingStats } = require('../controllers/onboardingStatsController');
 const { listUsers, getUserDetail, deleteUser, resetUser } = require('../controllers/adminUserController');
 const { listWork24Endpoints, callWork24 } = require('../controllers/work24ExplorerController');
+const { listContributions, updateContribution, deleteContribution } = require('../controllers/careerPathController');
 
 /**
  * @swagger
@@ -507,5 +508,26 @@ router.post('/users/:uid/reset', resetUser);
  *         description: 관리자 인증 실패
  */
 router.delete('/users/:uid', deleteUser);
+
+/**
+ * @swagger
+ * /api/admin/career-path:
+ *   get:
+ *     summary: 직업인 진로과정 제출 목록(검수)
+ *     description: 최신 순. type(mine|review)·status(pending|approved|rejected)·jobCode 필터, 테스트(__local_test__)는 includeTest=1 일 때만. counts 는 type×status 개수
+ *     tags: [Admin]
+ *     responses:
+ *       200: { description: "{ total, page, limit, counts[], data[] }" }
+ * /api/admin/career-path/{id}:
+ *   patch:
+ *     summary: "검수 — status·reviewNote, 해 온 것 분류 바로잡기(entryCategories: order → category)"
+ *     tags: [Admin]
+ *   delete:
+ *     summary: 작성자 삭제 요청 처리(제출 확인 번호)
+ *     tags: [Admin]
+ */
+router.get('/career-path', listContributions);
+router.patch('/career-path/:id', updateContribution);
+router.delete('/career-path/:id', deleteContribution);
 
 module.exports = router;

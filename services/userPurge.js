@@ -15,7 +15,7 @@ const WeeklySchedule = require('../models/WeeklySchedule');
 const AchievementRecord = require('../models/AchievementRecord');
 const CurriculumCompletion = require('../models/CurriculumCompletion');
 const JobReview = require('../models/JobReview');
-const { s3Client, UPLOAD_BUCKET, UPLOAD_PREFIX } = require('../config/s3');
+const { s3Client, UPLOAD_BUCKET, UPLOAD_PREFIX, PUBLIC_BASE } = require('../config/s3');
 
 // 인증사진 S3 정리.
 // 키가 `<prefix>/achievements/<uid>/<uuid>.<ext>` 라서 uid 접두사로 통째로 지울 수 있다.
@@ -161,4 +161,37 @@ async function resetUserToStage(uid, stage) {
   return { cleared, user, stage };
 }
 
-module.exports = { purgeUser, deleteUserUploads, resetUserToStage, RESET_STAGES };
+// 진로계획 하나와 딸린 데이터를 지운다 — 계획 삭제(DELETE /api/career-plan/:planId)의 단일 경로.
+// 2026-10-20 발견: 계획만 지우고 weekly_schedules·achievement_records·curriculum_completions 가 고아로 남았다.
+// ⚠️ 순서: 딸린 것 먼저, 계획 문서를 맨 마지막에(중간 실패 시 계획이 남아 다시 지울 수 있게 — purgeUser 와 같은 원칙)
+// 인증사진: 이 계획의 실행 기록에 적힌 사진만 지운다(사진 키는 uid 접두사라 계획 단위 접두사가 없다).
+//   presign 만 받고 기록하지 않은 고아 사진은 여기서 못 찾는다 — 탈퇴(purgeUser) 때 uid 접두사로 지워진다.
+async function purgePlan(uid, planId) {
+  const plan = await CareerPlan.findOne({ planId, userUid: uid }, { planId: 1 });
+  if (!plan) return null;
+
+  const deleted = {};
+  const ownPrefix = `${PUBLIC_BASE}/${UPLOAD_PREFIX}/achievements/${uid}/`;
+  const keys = (await AchievementRecord.find({ userUid: uid, planId }, { photoUrl: 1 }).lean())
+    .map((r) => r.photoUrl || '')
+    .filter((u) => u.startsWith(ownPrefix))        // 남의 접두사·외부 URL 은 절대 지우지 않는다
+    .map((u) => u.slice(PUBLIC_BASE.length + 1));
+  deleted.photos = 0;
+  for (let i = 0; i < keys.length; i += 1000) {
+    const Objects = keys.slice(i, i + 1000).map((Key) => ({ Key }));
+    const res = await s3Client.send(new DeleteObjectsCommand({ Bucket: UPLOAD_BUCKET, Delete: { Objects, Quiet: true } }));
+    if (res.Errors && res.Errors.length > 0) throw new Error(`S3 삭제 실패 ${res.Errors.length}건: ${res.Errors[0].Message}`);
+    deleted.photos += Objects.length;
+  }
+
+  const q = { userUid: uid, planId };
+  deleted.weeklySchedules = (await WeeklySchedule.deleteMany(q)).deletedCount;
+  deleted.achievementRecords = (await AchievementRecord.deleteMany(q)).deletedCount;
+  deleted.curriculumCompletions = (await CurriculumCompletion.deleteMany(q)).deletedCount;
+
+  await User.updateOne({ uid }, { $pull: { careerDesigns: planId } });
+  deleted.plan = (await CareerPlan.deleteOne({ planId, userUid: uid })).deletedCount;
+  return deleted;
+}
+
+module.exports = { purgeUser, purgePlan, deleteUserUploads, resetUserToStage, RESET_STAGES };
