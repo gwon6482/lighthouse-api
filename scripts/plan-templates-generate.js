@@ -10,6 +10,8 @@ const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
 const { pickProvider } = require('./lib/llm');
+const { gatePromptBlock, fixMethod } = require('./lib/gates');
+const { METHODS_BY_CATEGORY, PROJECT_METHODS } = require('../config/projectMethods');
 
 const arg = (k, d) => { const i = process.argv.indexOf(`--${k}`); return i > 0 ? process.argv[i + 1] : d; };
 const MODEL = arg('model', 'gemini-3.7-flash');
@@ -29,7 +31,10 @@ const SYSTEM = `너는 진로 준비 코치다. 한 직업을 목표로 하는 '
 - neededForMajor: 이 직업 관련 학과를 졸업한 사람에게도 따로 필요한가? 대학 전공 수업에서 배우는 기초 이론·기본 실습이면 false.
   면허·자격시험 준비, 현장 도구, 실무형 포트폴리오처럼 대학이 대신해 주지 않는 것은 true.
 - skipReason: neededForMajor 가 false 면 왜 빼도 되는지 한 문장(예: "간호학과 기본간호학 실습에서 배운다"). true 면 빈 문자열.
-- 비전공자 기준으로 빠진 기초가 없게: 전공자가 대학에서 배우는 기초 과목 중 이 직업에 꼭 필요한 것은 비전공 플랜에 반드시 넣는다.`;
+- 비전공자 기준으로 빠진 기초가 없게: 전공자가 대학에서 배우는 기초 과목 중 이 직업에 꼭 필요한 것은 비전공 플랜에 반드시 넣는다.
+- method(진행 방식, 2026-10-27~): 영역마다 고를 수 있는 것만 — ${Object.entries(METHODS_BY_CATEGORY).map(([c, m]) => `${c}: ${m.join('·')}`).join(' / ')}.
+  methodDetail 은 방식에 맞게 하나만: book·lecture → title(책·강의 이름), academy·required_course·school·internship·field_practice·parttime·club·activity → org(기관·과정), practice·study_group·content → target(목표량·범위).
+  책·강의·학원 이름은 실존 제품명을 지어내지 말고 일반 이름(예: "정보처리기사 필기 기본서")으로. 근거에 실제 이름이 있으면 그 이름.`;
 
 const PROJECT = {
   type: 'object',
@@ -38,8 +43,10 @@ const PROJECT = {
     category: { type: 'string', enum: ['qualification', 'knowledge', 'skill', 'portfolio', 'experience'] },
     name: { type: 'string' }, goal: { type: 'string' }, level: { type: 'string', enum: ['입문', '중급', '심화'] },
     daysPerWeek: { type: 'integer' }, minutesPerSession: { type: 'integer' }, basis: { type: 'string' },
+    method: { type: 'string', enum: PROJECT_METHODS },
+    methodDetail: { type: 'object', properties: { title: { type: 'string' }, org: { type: 'string' }, target: { type: 'string' } } },
     neededForMajor: { type: 'boolean' }, skipReason: { type: 'string' },
-    curriculum: { type: 'array', items: { type: 'object', properties: { week: { type: 'integer' }, title: { type: 'string' }, items: { type: 'array', items: { type: 'string' } } }, required: ['week', 'title', 'items'] } },
+    curriculum: { type: 'array', items: { type: 'object', properties: { week: { type: 'integer' }, title: { type: 'string' }, items: { type: 'array', items: { type: 'string' } } }, required: ['method', 'week', 'title', 'items'] } },
   },
   required: ['order', 'category', 'name', 'goal', 'level', 'daysPerWeek', 'minutesPerSession', 'basis', 'neededForMajor', 'skipReason', 'curriculum'],
 };
@@ -77,6 +84,8 @@ const fmt = (arr, n = 12) => (arr ?? []).slice(0, n).map((x) => `${x.name} ${Mat
 관련 학과(직업정보): ${(j.relatedMajors ?? []).map((m) => m.name ?? m).join(', ') || '(없음)'}
 중요 지식(직업정보, 5점 만점): ${knowledgeTop || '(없음)'}
 
+${gatePromptBlock(r.jobCode)}
+
 # 채용공고 집계 (고용24 ${r.posts}건, 비율 = 요구한 공고 비율)
 자격증: ${fmt(r.qualifications)}
 분야지식: ${fmt(r.knowledge)}
@@ -89,11 +98,12 @@ const fmt = (arr, n = 12) => (arr ?? []).slice(0, n).map((x) => `${x.name} ${Mat
     const { data, usage: u } = await llm.json({ model: MODEL, system: SYSTEM, prompt, schema: SCHEMA, temperature: 0.3 });
     usage.input += u.input; usage.output += u.output;
     data.projects.sort((a, b) => a.order - b.order);
+    const badMethod = data.projects.filter((p) => !fixMethod(p)).length;   // 영역에 없는 방식 → 미정
     out.push({ jobCode: r.jobCode, title: j.title, posts: r.posts, model: MODEL, ...data });
     const n = data.projects.length;
     const major = data.projects.filter((p) => p.neededForMajor).length;
     const weeks = (f) => data.projects.filter(f).reduce((s, p) => s + p.curriculum.length, 0);
-    console.log(`${j.title}: 비전공 ${n}개(${weeks(() => true)}주) · 전공 ${major}개(${weeks((p) => p.neededForMajor)}주)`);
+    console.log(`${j.title}${badMethod ? ` [방식 미정 ${badMethod}]` : ''}: 비전공 ${n}개(${weeks(() => true)}주) · 전공 ${major}개(${weeks((p) => p.neededForMajor)}주)`);
   }
   fs.writeFileSync(path.resolve(arg('out', 'temp/plan-templates-pilot.json')), JSON.stringify(out, null, 1));
   console.log(JSON.stringify({ model: MODEL, jobs: out.length, ...usage }));

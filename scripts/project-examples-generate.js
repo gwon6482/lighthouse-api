@@ -11,6 +11,8 @@ const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
 const { pickProvider } = require('./lib/llm');
+const { gatePromptBlock, fixMethod } = require('./lib/gates');
+const { METHODS_BY_CATEGORY, PROJECT_METHODS } = require('../config/projectMethods');
 
 const arg = (k, d) => { const i = process.argv.indexOf(`--${k}`); return i > 0 ? process.argv[i + 1] : d; };
 const MODEL = arg('model', 'gemini-pro-latest');
@@ -37,14 +39,19 @@ const SYSTEM = `너는 진로 준비 코치다. 한 직업을 목표로 하는 �
 - 개수를 억지로 채우지 않는다. 이 직업 채용에서 관행이 아닌 카테고리는 적게 만들거나 빈 배열로 둔다
   (예: 간호사·사회복지사는 결과물 포트폴리오를 거의 보지 않는다 — '매뉴얼북 제작' 같은 항목을 지어내지 말 것).
 - 실습·인턴·대외활동은 portfolio 가 아니라 experience 다. 법정 필수 실습(예: 사회복지사 2급 현장실습 120시간)은 반드시 experience 에 넣는다.
-- experience 의 curriculum 은 '그 기간 동안 무엇을 하고 무엇을 정리하는지'로 쓴다(지원·준비 → 수행 → 기록·정리).`;
+- experience 의 curriculum 은 '그 기간 동안 무엇을 하고 무엇을 정리하는지'로 쓴다(지원·준비 → 수행 → 기록·정리).
+- method(진행 방식, 2026-10-27~): 영역마다 고를 수 있는 것만 — ${Object.entries(METHODS_BY_CATEGORY).map(([c, m]) => `${c}: ${m.join('·')}`).join(' / ')}.
+  methodDetail 은 방식에 맞게 하나만: book·lecture → title(책·강의 이름), academy·required_course·school·internship·field_practice·parttime·club·activity → org(기관·과정), practice·study_group·content → target(목표량·범위).
+  책·강의·학원 이름은 실존 제품명을 지어내지 말고 일반 이름(예: "정보처리기사 필기 기본서")으로. 근거에 실제 이름이 있으면 그 이름.`;
 
 const PROJECT = {
   type: 'object',
   properties: {
     name: { type: 'string' }, goal: { type: 'string' }, level: { type: 'string', enum: ['입문', '중급'] },
     daysPerWeek: { type: 'integer' }, minutesPerSession: { type: 'integer' }, basis: { type: 'string' },
-    curriculum: { type: 'array', items: { type: 'object', properties: { week: { type: 'integer' }, title: { type: 'string' }, items: { type: 'array', items: { type: 'string' } } }, required: ['week', 'title', 'items'] } },
+    method: { type: 'string', enum: PROJECT_METHODS },
+    methodDetail: { type: 'object', properties: { title: { type: 'string' }, org: { type: 'string' }, target: { type: 'string' } } },
+    curriculum: { type: 'array', items: { type: 'object', properties: { week: { type: 'integer' }, title: { type: 'string' }, items: { type: 'array', items: { type: 'string' } } }, required: ['method', 'week', 'title', 'items'] } },
   },
   required: ['name', 'goal', 'level', 'daysPerWeek', 'minutesPerSession', 'basis', 'curriculum'],
 };
@@ -81,6 +88,8 @@ const fmt = (arr, n = 12) => (arr ?? []).slice(0, n).map((x) => `${x.name} ${Mat
 직업정보 관련 학과: ${(j.relatedMajors ?? []).map((m) => m.name ?? m).join(', ') || '(없음)'}
 직업정보 중요 지식: ${knowledgeTop || '(없음)'}
 
+${gatePromptBlock(r.jobCode)}
+
 # 채용공고 집계 (고용24 공고 ${r.posts}건, 비율 = 그 항목을 요구한 공고 비율)
 자격증: ${fmt(r.qualifications)}
 분야지식: ${fmt(r.knowledge)}
@@ -93,6 +102,7 @@ const fmt = (arr, n = 12) => (arr ?? []).slice(0, n).map((x) => `${x.name} ${Mat
 ${Object.entries(CATS).map(([k, v]) => `- ${k}: ${v}`).join('\n')}`;
     const { data, usage: u } = await llm.json({ model: MODEL, system: SYSTEM, prompt, schema: SCHEMA, temperature: 0.4 });
     usage.input += u.input; usage.output += u.output;
+    for (const [c, list] of Object.entries(data)) for (const p of list) fixMethod(p, c);   // 영역에 없는 방식 → 미정
     out.push({ jobCode: r.jobCode, title: j.title, posts: r.posts, model: MODEL, examples: data });
     console.log(`${j.title}: ${Object.entries(data).map(([k, v]) => `${k} ${v.length}`).join(' · ')}`);
   }
