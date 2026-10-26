@@ -13,14 +13,8 @@ const CurriculumWeekSchema = new mongoose.Schema({
   items:       { type: [String], default: [] }   // legacy
 }, { _id: false });
 
-// 프로젝트 진행 방식 — ⚠️ 앱 projectMethods.ts 의 ProjectMethod 와 같게 유지
-const PROJECT_METHODS = [
-  'book', 'lecture', 'academy', 'study_group',
-  'required_course', 'school', 'practice',
-  'personal_project', 'team_project', 'contest', 'content',
-  'internship', 'field_practice', 'parttime', 'club', 'activity',
-  'etc',
-];
+// 프로젝트 진행 방식 — 정본은 config/projectMethods.js(앱·랜딩 조사와 동기화)
+const { PROJECT_METHODS } = require('../config/projectMethods');
 const METHOD_DETAIL_KEYS = ['title', 'link', 'org', 'target', 'deadline', 'resultUrl', 'note'];
 
 // 들어온 방식·세부를 정리한다. 모르는 방식은 null(방식 미정), 세부는 정해진 키·문자열 300자만.
