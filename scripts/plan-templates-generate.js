@@ -1,11 +1,11 @@
-// 직업별 '단계 템플릿' 생성 — 비전공 > 전공 > 이직 (진로설계 '템플릿에서 수정하기' 더미/시범 데이터)
+// 직업별 '단계 템플릿' 생성 — 비전공 > 전공 (진로설계 '템플릿에서 수정하기'). '이직' 단계는 2026-10-27 사용자 결정으로 뺐다(시기상조)
 //   node --env-file=.env scripts/plan-templates-generate.js --req temp/job-requirements-pilot.json --out temp/plan-templates-pilot.json --model gemini-3.7-flash
 //
 // 사용자 원칙(2026-10-22):
-//   - 단계는 비전공 > 전공 > 이직. 기존 전문성이 낮을수록 준비가 길어야 한다
-//   - **비전공 단계를 가장 빈틈없이** 설계하고, 그 뒤 단계는 대학(전공)·실무(경력)에서 배우는 것을 **빼서** 만든다
-// 그래서 LLM 은 비전공 플랜 하나만 설계하고, 프로젝트마다 '전공자도 필요한가 / 관련 경력자도 필요한가'와 빠지는 이유를 단다.
-// 전공·이직 플랜은 앱에서 그 표시로 걸러 만든다(같은 프로젝트 = 같은 이름·커리큘럼이라 단계 간 비교가 된다).
+//   - 단계는 비전공 > 전공. 기존 전문성이 낮을수록 준비가 길어야 한다
+//   - **비전공 단계를 가장 빈틈없이** 설계하고, 전공 단계는 대학에서 배우는 것을 **빼서** 만든다
+// 그래서 LLM 은 비전공 플랜 하나만 설계하고, 프로젝트마다 '전공자도 필요한가'와 빠지는 이유를 단다.
+// 전공 플랜은 앱에서 그 표시로 걸러 만든다(같은 프로젝트 = 같은 이름·커리큘럼이라 단계 간 비교가 된다).
 const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -28,10 +28,7 @@ const SYSTEM = `너는 진로 준비 코치다. 한 직업을 목표로 하는 '
   daysPerWeek(1~6), minutesPerSession(30~180), basis(근거 한 줄, 공고 비율이 있으면 숫자로).
 - neededForMajor: 이 직업 관련 학과를 졸업한 사람에게도 따로 필요한가? 대학 전공 수업에서 배우는 기초 이론·기본 실습이면 false.
   면허·자격시험 준비, 현장 도구, 실무형 포트폴리오처럼 대학이 대신해 주지 않는 것은 true.
-- neededForCareer: 이 직업과 관련된 실무 경력(유사 직무 1년 이상)이 있는 사람에게도 따로 필요한가?
-  일하면서 이미 익혔을 업무 도구·기본 실무·업무 문서 작성 등은 false. 법정 면허·자격, 경력만으로 증명되지 않는 결과물은 true.
-  neededForMajor 가 false 인 것 중에도 경력자에게 필요한 게 있을 수 있다(예: 실무에서 안 다루는 이론 시험 과목)
-- skipReason: neededForMajor 나 neededForCareer 가 false 면 왜 빼도 되는지 한 문장(예: "간호학과 기본간호학 실습에서 배운다"). 둘 다 true 면 빈 문자열.
+- skipReason: neededForMajor 가 false 면 왜 빼도 되는지 한 문장(예: "간호학과 기본간호학 실습에서 배운다"). true 면 빈 문자열.
 - 비전공자 기준으로 빠진 기초가 없게: 전공자가 대학에서 배우는 기초 과목 중 이 직업에 꼭 필요한 것은 비전공 플랜에 반드시 넣는다.`;
 
 const PROJECT = {
@@ -41,10 +38,10 @@ const PROJECT = {
     category: { type: 'string', enum: ['qualification', 'knowledge', 'skill', 'portfolio', 'experience'] },
     name: { type: 'string' }, goal: { type: 'string' }, level: { type: 'string', enum: ['입문', '중급', '심화'] },
     daysPerWeek: { type: 'integer' }, minutesPerSession: { type: 'integer' }, basis: { type: 'string' },
-    neededForMajor: { type: 'boolean' }, neededForCareer: { type: 'boolean' }, skipReason: { type: 'string' },
+    neededForMajor: { type: 'boolean' }, skipReason: { type: 'string' },
     curriculum: { type: 'array', items: { type: 'object', properties: { week: { type: 'integer' }, title: { type: 'string' }, items: { type: 'array', items: { type: 'string' } } }, required: ['week', 'title', 'items'] } },
   },
-  required: ['order', 'category', 'name', 'goal', 'level', 'daysPerWeek', 'minutesPerSession', 'basis', 'neededForMajor', 'neededForCareer', 'skipReason', 'curriculum'],
+  required: ['order', 'category', 'name', 'goal', 'level', 'daysPerWeek', 'minutesPerSession', 'basis', 'neededForMajor', 'skipReason', 'curriculum'],
 };
 const SCHEMA = {
   type: 'object',
@@ -95,9 +92,8 @@ const fmt = (arr, n = 12) => (arr ?? []).slice(0, n).map((x) => `${x.name} ${Mat
     out.push({ jobCode: r.jobCode, title: j.title, posts: r.posts, model: MODEL, ...data });
     const n = data.projects.length;
     const major = data.projects.filter((p) => p.neededForMajor).length;
-    const career = data.projects.filter((p) => p.neededForCareer).length;
     const weeks = (f) => data.projects.filter(f).reduce((s, p) => s + p.curriculum.length, 0);
-    console.log(`${j.title}: 비전공 ${n}개(${weeks(() => true)}주) · 전공 ${major}개(${weeks((p) => p.neededForMajor)}주) · 이직 ${career}개(${weeks((p) => p.neededForCareer)}주)`);
+    console.log(`${j.title}: 비전공 ${n}개(${weeks(() => true)}주) · 전공 ${major}개(${weeks((p) => p.neededForMajor)}주)`);
   }
   fs.writeFileSync(path.resolve(arg('out', 'temp/plan-templates-pilot.json')), JSON.stringify(out, null, 1));
   console.log(JSON.stringify({ model: MODEL, jobs: out.length, ...usage }));
