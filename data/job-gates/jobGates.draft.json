@@ -1,0 +1,3257 @@
+{
+ "generatedAt": "2026-10-27",
+ "badgeOrder": [
+  "senior",
+  "degree",
+  "selection",
+  "license",
+  "experience"
+ ],
+ "rows": [
+  {
+   "jobCode": "012401",
+   "title": "금융관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "금융관리자는 해당 분야 대학졸업 이상의 학력과 실무자로서의 충분한 업무 경력이 있어야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "016101",
+   "title": "건설·채굴관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "건설 및 광업관련 관리자 대부분은 사원으로 입사하여 경험과 기술을 습득하고 승진을 통해 관리자가 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "015201",
+   "title": "운송관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "운송관련관리자는 해당 분야 대학졸업 이상의 학력과 실무자로서의 충분한 업무경력이 필요하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "012201",
+   "title": "경영지원관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "주로 경영지원, 일반행정 관련 부서의 사무원으로 일하다가 경력을 쌓아 승진해서 관리자가 되는 경우가 많다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "015101",
+   "title": "영업·판매관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "영업·판매관리자는 경영·경제, 사회과학, 전기·전자 전공자들이 많으며, 다른 부서관리자에 비해 고졸 및 전문대 졸업자들도 많은 편이다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "013601",
+   "title": "예술·디자인·방송관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "방송, 언론, 영상, 광고, 영화, 공연 관련 분야에서 경력을 쌓아 관리자로 승진하거나 스카우트 되는 경우가 많다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "013701",
+   "title": "정보통신관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "정보통신관련관리자는 해당 분야 대학졸업 이상의 학력과 실무자로서의 충분한 업무 경력이 있어야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "014301",
+   "title": "경비·청소관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "부서관리자는 부서의 성격에 따른 해당 분야 대학졸업 이상의 학력과 실무자로서의 충분한 업무경력이 요구된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "016201",
+   "title": "전기·가스·수도관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "주로 전기, 가스, 수도 관련 공기업(민영화 기업 포함)에서 경영 및 사업 부서 내 업무를 수행하다가 경력을 쌓아 승진해서 관리자가 되는 경우가 많다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "016301",
+   "title": "제조·생산관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "제조·생산관리자는 해당 제조업체에서의 경력을 쌓아 승진을 통해 관리자가 되는 경우가 많다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "011201",
+   "title": "기업고위임원",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "기업고위임원에게 특별히 요구되는 학력, 자격은 없지만 일반적으로 대학 이상의 학력 소지자가 대부분이고 사업체의 성격에 따라 해당 분야의 석사 또는 박사학위, 기술사 또는 기타 전문자격증이나 면허가 요구되기도 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "012402",
+   "title": "보험관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "보험관리자는 보험분야에서의 근무경험을 토대로 팀장, 영업소장, 국장(지점장) 등으로 승진하여 관리자가 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "013401",
+   "title": "보건·의료관리자",
+   "badges": [
+    "senior"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사원으로 입사해 경력을 쌓고 승진해서 된다(통상 20년 안팎)",
+   "status": "ok",
+   "evidence": "병원이나 보건소 등의 보건 및 의료서비스를 제공하는 기관 내에서 진단, 처치, 간호 및 치료 등의 건강관리 서비스를 기획, 지휘, 조정하는 보건의료관리자가 되려면 의료현장에서 의료인으로 종사하다가 관리자로 승진하는 경우가 있고 또한 병원의 행정업무를 담당하다가 관리 업무를 수행하는 경우가 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "011102",
+   "title": "행정부고위공무원",
+   "badges": [
+    "senior",
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "공무원 공채(또는 5급 공채) 합격 후 승진",
+   "status": "ok",
+   "evidence": "행정부고위공무원이 되기 위한 방법으로는 공무원 공개채용시험에 합격하여 승진경로를 밟거나 특별채용되는 방법이 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "012101",
+   "title": "정부행정관리자",
+   "badges": [
+    "senior",
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "공무원 공채(또는 5급 공채) 합격 후 승진",
+   "status": "ok",
+   "evidence": "정부행정관리자가 되려면 공무원 시험에 합격하거나 특별채용이 되어야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "013305",
+   "title": "경찰·소방·교도관리자",
+   "badges": [
+    "senior",
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [
+     "fitness"
+    ],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "경찰·소방·교정직 공채 또는 간부후보생 선발 후 승진",
+   "status": "ok",
+   "evidence": "먼저 경찰간부후보생의 경우는 경찰간부후보생시험에 합격하여 경찰종합학교에서 1년간 소정의 교육을 이수하면 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "013501",
+   "title": "사회복지관리자",
+   "badges": [
+    "senior",
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "사회복지사 자격 + 현장 경력 후 관리자",
+   "status": "ok",
+   "evidence": "사회복지관련관리자가 되기 위해서는 일반적으로 사회복지사 자격증을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "013201",
+   "title": "유치원 원장 및 원감",
+   "badges": [
+    "senior",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": true,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "유치원 정교사 1급 + 교육경력 3년 이상 + 연수",
+   "status": "ok",
+   "evidence": "유치원의 원감이 되려면 유치원 정교사 1급 자격증과 3년 이상의 교육경력이 있는자가 시도교육청의 교육연수를 받고 자격증을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "021001",
+   "title": "정부·공공행정전문가",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "대부분 공무원 신분 — 5급 공채(행정고시)가 현실적 경로",
+   "status": "ok",
+   "evidence": "정부정책기획전문가가는 민간인 신분 중 탁월한 업적이나 전문성이 있는 사람을 채용하기도 하지만 대부분 공무원 신분으로 중앙부처에 근무한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "025401",
+   "title": "일반행정공무원",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "국가·지방 공무원 공채 합격 — 고용24 설명에 관문 문장이 없어 제도로 판단",
+   "status": "check",
+   "evidence": "일반행정공무원은 각종 행정업무를 정확하고 꼼꼼하게 처리할 수 있어야 하며, 담당 직무에 대한 관련 법규의 지식도 필요하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "025201",
+   "title": "관세행정사무원",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "국가·지방 공무원 공채 합격",
+   "status": "ok",
+   "evidence": "관세행정은 국가가 담당하므로 관세행정사무원이 되려면 관세청 등의 채용공고를 보고 지원해서 공무원 시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "025301",
+   "title": "병무행정사무원",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "국가·지방 공무원 공채 합격",
+   "status": "ok",
+   "evidence": "국가공무원을 선발할 때 지원 후 합격해서 병무청에 배치되어야 병무행정사무원이 될 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "025101",
+   "title": "조세행정사무원",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "세무직 공무원 공채. ⚠️ 고용24 설명의 응시 연령 상한(만 28·32세)은 2009년 폐지된 내용",
+   "status": "check",
+   "evidence": "응시자격을 보면 국가직 공무원은 만 18세이상 ∼ 만 28세 이하이어야 하며 지방직 공무원은 만 18세이상 ∼ 만 32세 이하 (서울은 만 30세 이하) 이어야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "025402",
+   "title": "법원공무원",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "법원직 공무원 공채. ⚠️ 고용24 설명이 법률사무원 설명과 섞여 있음",
+   "status": "check",
+   "evidence": "법률관련사무원이 되기 위해서는 특별한 자격증을 취득하거나 국가시험을 치루지 않아도 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "240301",
+   "title": "교도관",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [
+     "fitness",
+     "physical"
+    ],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "교정직 공채 — 필기 후 체력검사",
+   "status": "ok",
+   "evidence": "교도관이 되기 위해서는 일반적으로 국가직 공무원 채용시험이나 특별채용 시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "240101",
+   "title": "경찰관",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [
+     "fitness",
+     "physical"
+    ],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "경찰 공채(순경·간부후보) — 체력·신체검사",
+   "status": "ok",
+   "evidence": "경찰관이 되기 위해서는 4년제 경찰행정학과를 졸업하고 순경 공개채용에 합격하면 일정 교육이수 후 순경으로 일할 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "240201",
+   "title": "소방관",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [
+     "fitness",
+     "physical"
+    ],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "소방 공채·간부후보생 — 체력·신체검사",
+   "status": "ok",
+   "evidence": "소방관이 되기 위해서는 소방직공무원 공개채용시험이나 소방간부후보생 선발시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "240102",
+   "title": "해양경찰관",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [
+     "fitness",
+     "physical"
+    ],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "해양경찰 공채 — 체력·신체 기준, 분야별 연령 기준",
+   "status": "ok",
+   "evidence": "해양경찰관이 되기 위해서는 해양경찰청 소속 경찰공무원 시험에 합격해야한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "250301",
+   "title": "부사관",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [
+     "fitness",
+     "physical"
+    ],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "서류·면접·체력평가·신체검사 선발 후 교육훈련",
+   "status": "ok",
+   "evidence": "부사관은 대체로 고등학교 졸업 이상의 학력을 갖춘 18세 이상~29세 미만의 대한민국 국민이면 지원가능하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "250201",
+   "title": "위관급 장교",
+   "badges": [
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [
+     "fitness",
+     "physical"
+    ],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "사관학교·ROTC·학사장교 등 선발 + 체력·신체검사",
+   "status": "ok",
+   "evidence": "위관급 장교는 대체로 4년제 대학 졸업 이상의 학력을 갖춘 20세이상~29세 미만의 대한민국 국민이면 지원이 가능하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "221201",
+   "title": "변호사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "graduate",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "법학전문대학원(로스쿨, LEET로 입학) 3년 → 변호사시험(졸업 후 5년 내 5회)",
+   "status": "ok",
+   "evidence": "일반 4년제 대학 이상의 학력을 소지한 사람이 LEET(법학적성시험), 학부성적(GPA), 외국어\n시험, 사회봉사활동 및 면접 등 다양한 평가를 거쳐야만 법학전문대학원에 입학할 수 있으며, 3년 과정을 이수하고 변호사시험에 합격하여야 변호사 자격이 주어진다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "221102",
+   "title": "검사",
+   "badges": [
+    "degree",
+    "selection"
+   ],
+   "conditions": {
+    "education": "graduate",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "로스쿨 → 변호사시험 → 검사 임용 선발",
+   "status": "ok",
+   "evidence": "검사가 되기 위해서는 변호사 자격이 있는 사람이나 사법시험에 합격하여\n 사법연수원 과정을 마친 후 임명되어야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "221101",
+   "title": "판사",
+   "badges": [
+    "senior",
+    "degree"
+   ],
+   "conditions": {
+    "education": "graduate",
+    "training": "none",
+    "exam": "none",
+    "experience": true,
+    "other": [],
+    "entry": "senior"
+   },
+   "weight": "heavy",
+   "note": "변호사 자격 + 법조 경력(2026년부터 10년) 후 임용",
+   "status": "ok",
+   "evidence": "판사가 되기 위해서는 변호사 자격 취득 후 일정기간 이상의 법조 경력이 있는 사람 중 임명된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "023201",
+   "title": "세무사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "세무사시험 → 실무수습 6개월 → 등록",
+   "status": "ok",
+   "evidence": "세무사가 되기 위해서는 세무사시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "022201",
+   "title": "노무사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "공인노무사시험(정원 선발에 가까움)",
+   "status": "ok",
+   "evidence": "노무사가 되기 위해서는 고용노동부가 주관하는 노무사시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "023401",
+   "title": "감정평가사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "감정평가사시험 → 실무수습 1년 → 등록",
+   "status": "ok",
+   "evidence": "감정평가사가 되려면 국토교통부에서 주관하고 한국산업인력공단에서 시행하는 감정평가사시험(제1차, 제2차)에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "023301",
+   "title": "관세사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "관세사시험",
+   "status": "ok",
+   "evidence": "관세사가 되기 위해서는 관세사 시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "221401",
+   "title": "변리사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "변리사시험 → 실무수습(집합 250시간 + 현장 6개월)",
+   "status": "ok",
+   "evidence": "특허청 소속 공무원으로 일정기간 이상 특허행정사무에 종사한 경력이 있는 경우에는 제1차 시험을 면제하고, 제2차시험의 일부과목을 면제받을 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "031501",
+   "title": "손해사정사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "손해사정사시험 → 실무수습 6개월 → 등록",
+   "status": "ok",
+   "evidence": "손해사정사가 되기 위해서는 금융감독원에서 주관하는 손해사정사 시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "029903",
+   "title": "행정사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "행정사 국가자격(일반·해사·외국어번역)",
+   "status": "ok",
+   "evidence": "행정사가 되기 위해서는 행정사 국가자격을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "221301",
+   "title": "법무사 및 집행관",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "법무사시험(일반 응시 선발 인원 고정)",
+   "status": "ok",
+   "evidence": "법무사법에 의해 법원, 헌법재판소, 검찰청 등 관련 공무원으로 10년 이상 근무한 경력이 있거나, 관련 공무원으로 일정 기간 이상 근무한 경력이 있는 자는 제1차 시험 면제와 2차 시험의 일부 과목을 면제받을 수 있으며, 제1차 시험에 합격한 경우 다음 회의 시험에 한해 제1차 시험을 면제받을 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "611001",
+   "title": "부동산중개인",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "공인중개사시험 → 실무교육 → 개설 등록",
+   "status": "ok",
+   "evidence": "부동산중개인이 되기 위해서는 국토교통부의 주관으로 한국산업인력공단이 매년 시행하는 공인중개사 시험에 합격하여 자격을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "023101",
+   "title": "회계사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "공인회계사시험(영어 점수 + 1·2차) → 실무수습 → 등록. 회계·경영 관련 학점 이수 요건도 있음",
+   "status": "check",
+   "evidence": "회계사가 되기 위해서는 금융감독원에서 시행하는 회계사 자격시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "033202",
+   "title": "보험모집인",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "보험설계사 자격시험 → 연수 → 등록",
+   "status": "ok",
+   "evidence": "보험중개사(보험개발원), 변액보험판매관리사(금융연수원), 보험설계사(생명보험협회), 등의 자격을 취득하면 업무에 도움이 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "413102",
+   "title": "문화재보존원",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "국가지정문화재 수리는 문화재수리기술자·기능자 자격 필요(그 외 업무는 아님)",
+   "status": "check",
+   "evidence": "국가지정문화재의 보수 및 수리 업무를 하기 위해서는 문화재청에서 시행하는 문화재수리기술자 및 기능자 자격시험에 응시하여 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301101",
+   "title": "내과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301109",
+   "title": "방사선과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301108",
+   "title": "소아청소년과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301102",
+   "title": "외과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301104",
+   "title": "산부인과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301107",
+   "title": "정신과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301106",
+   "title": "안과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301103",
+   "title": "성형외과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301105",
+   "title": "이비인후과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301112",
+   "title": "피부과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301110",
+   "title": "마취병리과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301113",
+   "title": "가정의학과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301111",
+   "title": "비뇨기과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "residency",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험. 전문의는 인턴 1년 + 레지던트 3~4년 + 전문의 시험이 더 필요",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301201",
+   "title": "일반의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의대(6년) 또는 의전원 → 의사 국가시험",
+   "status": "ok",
+   "evidence": "의사가 되려면 의과대학을 졸업한 후, 의사국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301401",
+   "title": "치과의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "치대(또는 치전원) → 치과의사 국가시험. 전문의는 수련 4년 추가",
+   "status": "ok",
+   "evidence": "치과의사가 되려면 치과대학 졸업 후에 치과의사 국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "301301",
+   "title": "한의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "한의대(또는 한의전) → 한의사 국가시험. 전문의는 수련 4년 추가",
+   "status": "ok",
+   "evidence": "한의사가 되기 위해서는 한의과대학이나 한의학전문대학원을 졸업한 후에 보건의료인 국가시험원의 한의사 면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "303001",
+   "title": "약사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "약학대학 → 약사 국가시험. ⚠️ 고용24의 PEET(2+4년제) 설명은 낡음 — 2022학년도부터 6년제 신입학",
+   "status": "check",
+   "evidence": "약사가 되기 위해서는 대학의 약학과를 졸업하고 보건의료인 국가시험원의 약사면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "302001",
+   "title": "수의사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "수의대(예과 2 + 본과 4) → 수의사 국가시험",
+   "status": "ok",
+   "evidence": "1~2학년에는 수의예과에서 기본적 교양과 수의학 공부에 필요한 기초 지식을 습득해야 하며, 수의본과에서 4년간 본격적으로 수의학을 공부한 후 수의사 국가시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "304004",
+   "title": "간호사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "간호학과(3·4년제) → 간호사 국가시험",
+   "status": "ok",
+   "evidence": "간호사가 되려면 정규대학 간호학과(4년제)나 간호전문대학(3년제)의 간호학과를 졸업하고 간호사 국가시험을 통해 간호사 면허증을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "306301",
+   "title": "치과기공사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "치기공학과 → 면허시험",
+   "status": "ok",
+   "evidence": "치과기공사가 되기 위해서는 4년제 대학교 혹은 전문대학의 치기공학과를 졸업하고 치과기공사 면허시험에 합격하여야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "307401",
+   "title": "보건의료정보관리사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "보건의료정보 관련 학과 → 국가시험",
+   "status": "ok",
+   "evidence": "의무기록사가 되기 위해서는 의무기록 관련 학과를 졸업하고 의무기록사 국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "306901",
+   "title": "언어치료사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "언어재활 관련 학과 → 언어재활사 국가시험",
+   "status": "ok",
+   "evidence": "언어치료사가 되기 위해서는 언어재활 관련학과(언어치료, 언어병리, 또는 언어재활이 포함된 학과)를 졸업하고 한국보건의료인국가시험원의 언어재활사 면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "307301",
+   "title": "안경사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "안경광학과 → 국가시험",
+   "status": "ok",
+   "evidence": "안경사가 되기 위해서는 전문대학 및 대학교에 개설되어 있는 안경광학과를 졸업하고 안경사 국가면허 시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "306201",
+   "title": "방사선사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "방사선학과 → 국가시험",
+   "status": "ok",
+   "evidence": "방사선사가 되기 위해서는 4년제 대학교 혹은 전문대학교의 방사선학과를 졸업하고 방사선사 국가면허 시험에 합격하여야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "306101",
+   "title": "임상병리사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "임상병리학과 → 국가시험",
+   "status": "ok",
+   "evidence": "임상병리사가 되기 위해서는 4년제 대학교 혹은 전문대학교의 임상병리학과를 졸업하고 임상병리사 국가면허 시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "306501",
+   "title": "물리치료사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "물리치료학과 → 국가시험",
+   "status": "ok",
+   "evidence": "물리치료사가 되기 위해서는 전문대학 및 대학교에 개설되어 있는 물리치료(학)과를 졸업하고 물리치료사 국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "303002",
+   "title": "한약사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "한약학과 → 국가시험",
+   "status": "ok",
+   "evidence": "한약사가 되기 위해서는 대학의 한약학과를 졸업하고 한약사 국가면허시험에 합격하여야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "306701",
+   "title": "재활공학기사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "의료보장구 관련 학과 → 의지·보조기기사 국가시험",
+   "status": "ok",
+   "evidence": "재활공학기사가 되기 위해서는 의료보장구학과 등 관련학과를 전공하여 한국보건의료인국가시험원에서 실시하는 의지보조기기사 시험에 합격해야만 활동할 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "306502",
+   "title": "작업치료사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "작업치료학과 → 국가시험",
+   "status": "ok",
+   "evidence": "작업치료사가 되기 위해서는 전문대학 및 대학교에 개설되어 있는 작업치료(학)과를 졸업하고 작업치료사 국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "306401",
+   "title": "치과위생사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "치위생학과 → 국가시험",
+   "status": "ok",
+   "evidence": "치과위생사가 되기 위해서는 4년제 대학교와 전문대학교에서 치과위생학과를 졸업한 후 치위생사 국가면허시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "305001",
+   "title": "영양사",
+   "badges": [
+    "degree",
+    "license"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "식품·영양 전공(지정 과목·학점 + 현장실습) → 영양사 국가시험",
+   "status": "ok",
+   "evidence": "영양사가 되귀 위해서는 전문대학(2~3년제) 및 대학교에서 식품학 또는 영양학을 전공하고 식품영양관련 과목을 이수(최소 18과목, 52학점 이상)한 뒤 영양사 현장 실습을 마친 후 영양사 국가시험에 합격해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "413202",
+   "title": "기록물관리사",
+   "badges": [
+    "degree"
+   ],
+   "conditions": {
+    "education": "graduate",
+    "training": "designated",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "공공기관은 법으로 기록물관리학 석사(또는 역사·문헌정보 학사 + 지정 교육과정) 요구. 민간은 아님",
+   "status": "ok",
+   "evidence": "기록물관리 전문인력 양성과 지원을 위한 ‘공공기관의 기록물관리에 관한 법률’ 시행으로 공공기관의 기록물관리사로 활동하기 위해서는 기록물관리학석사학위 이상, 혹은 역사학 또는 문헌정보학의 경우 학사학위 이상을 취득하고 행정자치부령으로 정하는 기록물관리학 교육과정을 이수해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "212101",
+   "title": "중·고등학교교사",
+   "badges": [
+    "degree",
+    "selection"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "교원자격(사범대·교직 이수·교육대학원) 필요. 공립은 임용시험, 사립은 학교별 선발",
+   "status": "ok",
+   "evidence": "중고등학교교사가 되기 위해서는 대학교의 사범계열 학과를 졸업하거나 비사범계열 학과에서 교직 과목을 이수하여 중등학교 2급 정교사 자격을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "212301",
+   "title": "특수교육교사",
+   "badges": [
+    "degree",
+    "selection"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "특수교육 관련 학과·교육대학원 → 특수교사 자격. 공립은 임용시험",
+   "status": "ok",
+   "evidence": "특수교사가 되기 위해서는 4년제 대학의 특수교육 관련 학과나 교육대학원 특수교육전공, 특수교육대학원 등을 졸업하여야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "304003",
+   "title": "보건교사",
+   "badges": [
+    "degree",
+    "selection"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "간호학과 + 교직 이수(간호사 면허·보건교사 자격) → 공립은 임용시험. ⚠️ 고용24 설명은 간호사 설명이 그대로 들어가 있음",
+   "status": "check",
+   "evidence": "간호사가 되려면 정규대학 간호학과(4년제)나 간호전문대학(3년제)의 간호학과를 졸업하고 간호사 국가시험을 통해 간호사 면허증을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "212201",
+   "title": "초등학교교사",
+   "badges": [
+    "degree",
+    "selection"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "교육대학(또는 초등교육과) → 초등 정교사 자격 → 공립은 임용시험",
+   "status": "check",
+   "evidence": "",
+   "source": "제도 지식(근거 문장 없음)"
+  },
+  {
+   "jobCode": "213001",
+   "title": "유치원교사",
+   "badges": [
+    "degree",
+    "selection"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "유아교육과 → 유치원 정교사 자격 → 공립은 임용시험, 사립은 기관별",
+   "status": "check",
+   "evidence": "",
+   "source": "제도 지식(근거 문장 없음)"
+  },
+  {
+   "jobCode": "231101",
+   "title": "사회복지사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "지정 교과목·현장실습 이수로 2급, 1급은 국가시험(학점은행제 가능)",
+   "status": "ok",
+   "evidence": "사회복지가사 되기 위해서는 대학에서 사회복지학을 전공하거나, 학점은행제, 평생교육원 등에서 필요한 수업을 이수하여 자격을 취득하여야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "232101",
+   "title": "보육교사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "보육 관련 지정 교과목(17과목 51학점) 또는 보육교사교육원 이수 → 자격",
+   "status": "ok",
+   "evidence": "보육교사가 되기 위해서는 대학에서 보건복지부령으로 정하는 보육 관련 교과목(17과목, 51학점)을 대학에서 이수하거나 대학원 또는 보육교사 관련 교육훈련시설(보육교사교육원)의 과정을 이수하여 보육교사 자격증을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "307501",
+   "title": "간호조무사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "지정 교육기관(학원) 이수 → 국가시험",
+   "status": "ok",
+   "evidence": "간호조무사가 되기 위해서는 간호조무사 자격증을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "307101",
+   "title": "응급구조사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "응급구조학과 또는 양성기관 과정 → 국가시험",
+   "status": "ok",
+   "evidence": "응급구조사가 되기 위해서는 전문대학이나 대학에서 응급구조학을 전공하거나 응급구조사 양성기관에서 개설하는 과정을 이수해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "307601",
+   "title": "안마사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "none",
+    "experience": false,
+    "other": [
+     "eligibility"
+    ],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "시각장애인만 자격 가능(법정) — 지정 기관 2년 교육",
+   "status": "ok",
+   "evidence": "안마사가 되기 위해서는 안마사 자격을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "413201",
+   "title": "사서",
+   "badges": [
+    "license",
+    "selection"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "selection",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "문헌정보학과·사서교육원 이수 → 사서 자격. 공공도서관은 사서직 공무원 시험, 공립학교 사서교사는 임용",
+   "status": "ok",
+   "evidence": "사서가 되기 위해서는 전문대학, 대학 및 사서교육원 등에서 관련 교육을 이수하고 사서자격증을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "231301",
+   "title": "청소년지도사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "청소년지도사 자격시험(급수별 학력·경력 응시 요건)",
+   "status": "ok",
+   "evidence": "2급은 청소년관련 분야 학사 학위 취득자 및 전문대학 졸업자로 실무경력이 3년 이상인 자, 그리고 3급은 청소년관련 분야의 전문대학 학위 취득자 및 고등학교 졸업자로 실무경력이 3년 이상인 자 등이 시험에 응시할 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "511201",
+   "title": "미용사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "미용사(일반) 국가기술자격 — 없으면 영업할 수 없음",
+   "status": "ok",
+   "evidence": "미용사로 종사하기 위해서는 공중위생법상 미용사 자격을 취득해야 하므로 관련 기술과 이론을 배우고 자격증을 취득하는 것이 필요하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "511101",
+   "title": "이용사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "이용사 자격 + 면허 — 없으면 영업할 수 없음",
+   "status": "ok",
+   "evidence": "이용사로 종사하기 위해서는 공중위생법상 한국산업인력공단에서 실시하는 이용사 자격을 취득해야 하며, 본인의 이용실을 개설할 때는 반드시 시?도지사의 면허를 발급받아야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "511302",
+   "title": "네일아티스트",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "미용사(네일) 자격 — 없으면 영업할 수 없음",
+   "status": "ok",
+   "evidence": "그러나, 기존에는 미용사(일반) 자격증을 취득해야만 영업을 할 수 있었으나, 2015년 4월 이후부터는 미용사(네일) 자격증을 취득한 사람만이 미용업(손톱·발톱) 영업신고를 할 수 있도록 변경되었다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "511301",
+   "title": "피부 및 체형관리사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "미용사(피부) 자격 — 없으면 영업할 수 없음",
+   "status": "ok",
+   "evidence": "2008년에 미용사(피부) 국가자격이 신설되어 피부관리사로 활동하려면 미용사(피부) 자격증을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "704001",
+   "title": "건설 및 채굴기계운전원",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "기종별 운전기능사 + 건설기계조종사 면허",
+   "status": "ok",
+   "evidence": "건설 및 채굴기계운전원이 되기 위해서는 반드시 국가기술자격법에 따른 관련 기술자격(기능사)을 취득하고 적성검사에 합격한 후, 건설기계 종류별로 주소지 관할 시장·군수 또는 구청장으로부터 ‘건설기계조종사면허’를 발급받아야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "623001",
+   "title": "크레인·호이스트운전원",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "기종별 자격(교육 이수)",
+   "status": "ok",
+   "evidence": "이들 교육과정을 이수한 후 기종별로 관련 자격을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "623002",
+   "title": "지게차운전원",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "지게차운전기능사(3톤 미만은 교육 12시간으로 면허)",
+   "status": "ok",
+   "evidence": "이들 교육과정을 이수한 후 기종별로 관련 자격을 취득해야 운전원으로 종사할 수 있으며, 3톤 미만의 지게차는 소정의 교육(이론 6시간, 실기 6시간)을 이수하면 면허증(3톤 미만 건설기계조종사 면허)을 발급받을 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "621301",
+   "title": "철도·전동차기관사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [
+     "physical"
+    ],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "지정 교육기관 이수 → 철도차량운전면허(필기·기능) + 신체·적성검사",
+   "status": "ok",
+   "evidence": "철도 및 지하철기관사가 되기 위한 학력 제한은 없으며 철도안전법에 따라 적성검사 및 신체검사 등에 합격하고 철도차량운전면허 지정 교육훈련기관(한국철도공사 철도인력개발원, 서울메트로, 부산교통공사, 우송대학교, 한국교통대학교, 동양대학교)에서 면허종류 및 관련 분야 경력에 따라 소정의 교육을 이수한 후 국가에서 시행하는 철도차량운전면허시험(필기시험 및 기능시험)에 합격하면 철도차량운전면허를 부",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "621201",
+   "title": "선장 및 항해사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "해기사 면허(해양계 학교·승선 경력) — 면허 유지 교육 필요",
+   "status": "check",
+   "evidence": "선장 및 항해사가 되기 위해서는 해양수산부가 지정한 교육기관인 관련 고등학교 및 대학교를 졸업하면 유리하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "621203",
+   "title": "선박기관사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "해기사 면허(해양계 학교·승선 경력) — 면허 유지 교육 필요",
+   "status": "check",
+   "evidence": "선박기관사가 되기 위해서는 국토해양부가 지정한 교육기관인 관련 고등학교 및 대학교를 졸업하면 유리하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "624301",
+   "title": "선박갑판원",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "none",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "선원수첩(만 18세 이상, 기초안전교육)",
+   "status": "ok",
+   "evidence": "선박갑판원이 되려면 수산계 고등학교의 항해 관련과를 졸업하거나 선원법에 의한 선원수첩을 소지해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "622101",
+   "title": "택시운전원",
+   "badges": [
+    "license",
+    "experience"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": true,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "운전면허 + 운전경력 1년 → 택시운전 자격시험",
+   "status": "ok",
+   "evidence": "「여객자동차 운수사업법」에 따라 택시운전을 하고자 하는 자는 해당 지역에서 시행되는 시험에 합격하여 자격을 취득하여야\n한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "622201",
+   "title": "버스운전원",
+   "badges": [
+    "license",
+    "experience"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": true,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "1종 대형면허 + 운전경력 1년 → 버스운전 자격시험",
+   "status": "ok",
+   "evidence": "버스운전원이 되는 데 학력제한은 없으며 1종 대형자동차운전면허를 소지해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "622304",
+   "title": "화물차·특수차운전원",
+   "badges": [
+    "license",
+    "experience"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "none",
+    "exam": "license",
+    "experience": true,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "light",
+   "note": "운전면허 + 운전경력 1~2년 → 화물운송종사 자격",
+   "status": "ok",
+   "evidence": "사업용(영업용)화물자동차를 운전하기 위해서는 반드시 화물운송종사자격을 취득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "140101",
+   "title": "건축가(건축설계사)",
+   "badges": [
+    "license",
+    "experience"
+   ],
+   "conditions": {
+    "education": "major",
+    "training": "none",
+    "exam": "license",
+    "experience": true,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "건축학(인증 5년제) 등 → 건축사사무소 실무수련 3~4년 → 건축사시험",
+   "status": "ok",
+   "evidence": "건축설계사(건축사)가 되기 위해서는 대학교 건축학과(5년제)나 건축공학과(4년제), 전문대학 건축과(2~3년제) 또는 건축전문대학원을 졸업한 후, 건축사사무소에 취업하여 건축사보로서 일정 기간 실무 경력을 쌓은 후 건축사(대한건축사협회에서 시험 주관, 국토교통부에서 자격 발급) 자격을 취득하는 것이 일반적이다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "621101",
+   "title": "항공기조종사",
+   "badges": [
+    "license",
+    "experience"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": true,
+    "other": [
+     "physical"
+    ],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "조종사 자격증명(비행시간 요건) + 항공신체검사",
+   "status": "check",
+   "evidence": "",
+   "source": "제도 지식(근거 문장 없음)"
+  },
+  {
+   "jobCode": "621102",
+   "title": "헬리콥터조종사",
+   "badges": [
+    "license",
+    "experience"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": true,
+    "other": [
+     "physical"
+    ],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "회전익 조종사 자격증명(비행시간) + 신체검사",
+   "status": "check",
+   "evidence": "",
+   "source": "제도 지식(근거 문장 없음)"
+  },
+  {
+   "jobCode": "621401",
+   "title": "항공교통관제사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "항공교통관제사 자격증명(지정 교육 + 시험)",
+   "status": "check",
+   "evidence": "",
+   "source": "제도 지식(근거 문장 없음)"
+  },
+  {
+   "jobCode": "621403",
+   "title": "철도교통관제사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "철도교통관제 자격증명",
+   "status": "check",
+   "evidence": "",
+   "source": "제도 지식(근거 문장 없음)"
+  },
+  {
+   "jobCode": "621402",
+   "title": "선박교통관제사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "해기사 등 응시 요건 + 관제 교육",
+   "status": "check",
+   "evidence": "",
+   "source": "제도 지식(근거 문장 없음)"
+  },
+  {
+   "jobCode": "705901",
+   "title": "점화·발파·화약관리원",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "화약류 관리·취급 자격",
+   "status": "check",
+   "evidence": "",
+   "source": "제도 지식(근거 문장 없음)"
+  },
+  {
+   "jobCode": "306601",
+   "title": "임상심리사",
+   "badges": [
+    "license"
+   ],
+   "conditions": {
+    "education": "none",
+    "training": "designated",
+    "exam": "license",
+    "experience": false,
+    "other": [],
+    "entry": "direct"
+   },
+   "weight": "heavy",
+   "note": "정신건강임상심리사·임상심리사 자격(수련 + 시험)",
+   "status": "check",
+   "evidence": "",
+   "source": "제도 지식(근거 문장 없음)"
+  },
+  {
+   "jobCode": "022103",
+   "title": "경영·진단전문가",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "석사(MBA) 많음 — 우대",
+   "status": "none",
+   "evidence": "특정 분야의 전문가로 3년 또는 5년 이상의 경력이 있으면 학사학위로도 채용될 수 있지만, 일반적으로 석사 또는 박사학위 소지자가 많고 특히 경영학석사(MBA) 출신자들이 많다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "022202",
+   "title": "인적자원전문가",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "공채 관행",
+   "status": "none",
+   "evidence": "기업체의 경우 공채를 통해 채용하는 반면, 컨설팅업체에서의 채용은 최근들어 공채보다는 경력자 중심 또는 추천에 의해 수시채용하는 추세이다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "214101",
+   "title": "문리학원강사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "학원법 강사 기준(전문대졸 이상 등) 정도 — 가벼움",
+   "status": "none",
+   "evidence": "학원강사는 교원자격 소지자, 전문대학 졸업자 또는 그 이상의 학력이 있는 사람으로 해당 분야의 전문적인 지식과 실기 능력을 갖추어야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "214102",
+   "title": "외국어강사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "전공·교원자격 등 기준 — 가벼움",
+   "status": "none",
+   "evidence": "외국어학원강사로 활동하려면 대학에서 외국어를 전공하였거나, 중등교원자격증을 소지한 자, 외국인으로서 교습활동에 관한 체류자격 외의 활동허가를 받은 자 등의 기준을 만족해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "214201",
+   "title": "컴퓨터강사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "자격 우대",
+   "status": "none",
+   "evidence": "정보처리학, 전자계산학 등을 전공하는 것이 유리하며, 관련 학과를 졸업하지 않더라도 개인적으로 컴퓨터에 재능이 있다면 충분하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "214401",
+   "title": "예능강사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "학원법 기준 — 가벼움",
+   "status": "none",
+   "evidence": "학원강사는 교원자격 소지자, 전문대학 졸업자 또는 그 이상의 학력이 있는 사람으로 해당 분야의 전문적인 지식과 실기 능력을 갖추어야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "032301",
+   "title": "보험인수심사원(언더라이터)",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "금융권 공채",
+   "status": "none",
+   "evidence": "보험인수심사원(언더라이터)이 되기 위해서는 상업계 고등학교나 대학의 상경계열 학과를 졸업하는 것이 유리하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "029902",
+   "title": "속기사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "공무원 속기직은 선택",
+   "status": "none",
+   "evidence": "일반적으로 속기사 양성학원에서 속기사 자격증을 취득하면서 업무능력을 배우는 편이며, 자격증을 취득하면 국회, 법원, 검찰과 경찰 등의 기록을 중요시 하는 기관에서 일할 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "031201",
+   "title": "자산운용가",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "투자자산운용사 등 업계 자격 — 확인 필요",
+   "status": "none",
+   "evidence": "또한, 투자신탁운용사나 자산운용사 등에 입사하여 일정기간 이상의 운용업무경력을 갖는 것이 필요하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "231201",
+   "title": "심리상담전문가",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "민간 자격·수련(법정 아님)",
+   "status": "none",
+   "evidence": "상담전문가가 되기 위해서는 상담심리에 대한 전문적 지식을 습득하고 일정 기간 수련을 거쳐야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "306902",
+   "title": "청능사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "민간 자격",
+   "status": "none",
+   "evidence": "청능사가 되기 위해서 반드시 이수해야 할 전공은 없으나 언어치료청각학과를 전공하면 청능사가 될 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "222001",
+   "title": "법률사무원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "자격 불필요",
+   "status": "none",
+   "evidence": "법률관련사무원이 되기 위해서는 특별한 자격증을 취득하거나 국가시험을 치루지 않아도 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "215105",
+   "title": "교재·교구 및 이러닝교육전문가",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "공채 관행",
+   "status": "none",
+   "evidence": "어느 정도 경력이 쌓이면 프리랜서로도 활동할 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "413101",
+   "title": "학예사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "국공립은 공무원 경로, 학예사 자격은 등록 박물관 요건 — 확인 필요",
+   "status": "none",
+   "evidence": "국공립 박물관 및 미술관 큐레이터의 경우 ‘학예연구사’로 입사하여 3∼5년의 경력을 쌓으면 ‘학예연구관’으로 승진할 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "412002",
+   "title": "방송기자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "언론사 공채(사실상 필기) → 2층",
+   "status": "none",
+   "evidence": "기자 채용에 전공, 학력, 연령 제한을 두지 않는 곳도 늘고 있으나 주요 언론사의 경우 4년제 대학교 졸업 이상자로 학력을 제한하고 있으며, 일부 신문사에서는 인턴, 대학생 기자 등의 경험이 있는 사람을 우대하기도 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "412001",
+   "title": "신문기자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "언론사 공채 → 2층",
+   "status": "none",
+   "evidence": "기자가 되기 위해서는 4년제 대학교 졸업 이상자의 학력이 필요하고, 일부 신문사에서는 인턴, 대학생 기자 등의 경험이 있는 사람을 우대하기도 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "412003",
+   "title": "잡지기자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "체력 언급뿐",
+   "status": "none",
+   "evidence": "출퇴근 시간이 일정치 않고, 사건·사고가 나면 현장에 바로 취재를 가야 하는 등 불규칙한 생활을 하므로 무엇보다 건강한 체력이 뒷받침되어야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "415201",
+   "title": "의상디자이너",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "포트폴리오 → 2층",
+   "status": "none",
+   "evidence": "규모가 큰 의류업체의 경우, 대부분 관련 전공의 대학교 졸업 이상인 자를 중심으로 채용하는 편이다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "415101",
+   "title": "제품디자이너",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "포트폴리오 → 2층",
+   "status": "none",
+   "evidence": "제품디자이너가 되기 위해서는 전문대학 및 대학교의 제품디자인 관련 학과를 졸업하는 것이 유리하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "411202",
+   "title": "통역가",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "필수 과정 없음",
+   "status": "none",
+   "evidence": "통역번역대학원 졸업 후에는 학교나 선배 추천으로 일하게 되는 경우가 많고, 요즘은 통역알선전문에이전시에 소속되어 일하는 경우도 많다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "416301",
+   "title": "아나운서",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "방송사 공채 → 2층",
+   "status": "none",
+   "evidence": "아나운서가 되기 위해 전공 제한은 없으며, 종합편성채널 방송사들이 생겨나며 대졸자로 응시자격을 제한하던 것들이 일부 폐지되고 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "416101",
+   "title": "방송연출가",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "방송사 공채 → 2층",
+   "status": "none",
+   "evidence": "지상파방송사의 경우 4년제 대학 졸업 이상, 독립프로덕션 등에서도 전문대 졸업 이상을 요구하고 있으나 점차 학력 제한을 폐지하는 추세이다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "416204",
+   "title": "개그맨 및 코미디언",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "공채·오디션",
+   "status": "none",
+   "evidence": "개그맨 및 코미디언이 되기 위해서 요구되는 학력이나 전공 등에 제약은 없다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "416205",
+   "title": "성우",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "방송사 공채",
+   "status": "none",
+   "evidence": "성우가 되기 위해서는 지상파와 케이블 방송국에서 매년 혹은 격년으로 실시하는 공채에 합격해하는데, 방송사에 따라 고졸 이상, 전문대졸 이상으로 학력 및 연령제한을 두기도 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "416302",
+   "title": "리포터",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "공채·추천",
+   "status": "none",
+   "evidence": "리포터가 되기 위해서 전공 제한은 없으며, 종합편성채널 방송사들이 생겨나며 대졸자로 응시자격을 제한하던 것들이 일부 폐지되고 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "417201",
+   "title": "연예인매니저",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "체력 언급뿐",
+   "status": "none",
+   "evidence": "체력을 비롯해 운전능력, 성실성 등을 평가하며, 무엇보다 매니저 일에 열정을 가지고 있는지를 중요하게 여긴다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "416601",
+   "title": "영상·녹화 및 편집기사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "체력 언급뿐",
+   "status": "none",
+   "evidence": "영상·녹화 및 편집기사가 되기 위해서는 전문대학 및 대학교의 전기, 전자, 통신 관련 학과, 또는 영상제작, 방송기술 관련 학과를 졸업하거나 사설학원에서 관련 교육을 받는 것이 필요하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "416401",
+   "title": "촬영기사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "체력 언급뿐",
+   "status": "none",
+   "evidence": "촬영기사가 되기 위해서는 전문대학 및 대학교의 전기, 전자, 통신 관련 학과, 또는 영상제작, 방송기술 관련 학과를 졸업하거나 사설학원에서 관련 교육을 받는 것이 필요하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "416501",
+   "title": "음향·녹음기사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "체력 언급뿐",
+   "status": "none",
+   "evidence": "음향 및 녹음기사가 되기 위해서는 전문대학 및 대학교의 전기, 전자, 통신 관련 학과, 또는 영상제작, 방송기술 관련 학과를 졸업하거나 사설학원에서 관련 교육을 받는 것이 필요하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "416105",
+   "title": "연극영화방송기술감독",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "경력 우대",
+   "status": "none",
+   "evidence": "연극영화방송기술감독이 되기 위해서는 보통 대졸 이상의 학력과 관련 실무경력이 필요하고, 창의력과 예술적 재능이 요구된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "511401",
+   "title": "메이크업아티스트 및 뷰티매니저",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "메이크업 자격은 영업 시 — 확인 필요",
+   "status": "none",
+   "evidence": "현장에서 전문 메이크업아티스트 및 분장사의 보조원으로 활동하며 실무경력을 쌓는 것도 도움이 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "531701",
+   "title": "음료조리사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "승진 언급뿐",
+   "status": "none",
+   "evidence": "바리스타가 되려면 우선 사설교육기관 등에서 바리스타 양성교육을 이수할 수도 있으며 대학의 조리관련학과나 바리스타전공을 통해 커피에 대한 이론과 실제 제조하는 실습을 체계적으로 배울 수도 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "541101",
+   "title": "경호원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "경비업법 신임교육 정도 — 가벼움",
+   "status": "none",
+   "evidence": "경호원이 되기 위해서는 전문대학 이상에서 경호관련 학과를 졸업하는 것이 유리한 편이다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "521304",
+   "title": "여행안내원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "국외여행인솔자 등록(관광통역안내사는 별도 자격) — 확인 필요",
+   "status": "none",
+   "evidence": "·여행안내원이 되기 위해서는 국내외 여행 경험이 많은 것이 유리하며, 대학에서 관광학 등 관광 관련 학과를 졸업하면 관광학의 기초이론을 비롯해 여행업, 호텔경영 등 관광산업과 관련된 전반적인 분야를 배울 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "541201",
+   "title": "청원경찰",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "공공기관만 선발 시험",
+   "status": "none",
+   "evidence": "보통 고등학교 졸업 이상의 학력이 필요하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "521303",
+   "title": "자연 및 문화해설사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "기관별 양성과정",
+   "status": "none",
+   "evidence": "·여행안내원이 되기 위해서는 국내외 여행 경험이 많은 것이 유리하며, 대학에서 관광학 등 관광 관련 학과를 졸업하면 관광학의 기초이론을 비롯해 여행업, 호텔경영 등 관광산업과 관련된 전반적인 분야를 배울 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "561201",
+   "title": "환경미화원 및 재활용품수거원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "지자체 채용만 체력·필기",
+   "status": "none",
+   "evidence": "환경미화원이 되기 위해 특별한 자격 및 학력, 나이 등의 조건은 없다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "561101",
+   "title": "청소원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "지자체 채용만 체력·필기",
+   "status": "none",
+   "evidence": "청소원이 되는 데 요구되는 특별한 자격 및 학력, 나이 등의 조건은 없다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "705201",
+   "title": "철로설치·보수원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "공기업 공채 → 2층",
+   "status": "none",
+   "evidence": "궤도와 구조물을 관리하고 보수하는 토목분야 모집(토목분야로 모집하고 일정기간 근무 후 장비운전면허를 취득하여 장비보수 분야 업무를 담당하기도 함)에서 전국 단위로 인력모집을 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "833001",
+   "title": "발전·배전장치조작원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "원자력 발전만 원자로조종면허",
+   "status": "none",
+   "evidence": "과거 특성화 고등학교의 전기과나 기계과 출신들이 주로 취업했으나, 최근에는 2~3년제 대학이나 4년제 대학교의 전기(공학)과, 기계(공학)과, 제어계측과, 화학과 원자력관련 학과 졸업자들이 주로 채용되고 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "140205",
+   "title": "건축감리기술자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "경력 등급제, 자격 우대",
+   "status": "none",
+   "evidence": "대학 졸업 후 곧바로 감리전문회사 또는 감리업무를 하는 건축사사무소나 엔지니어링회사에 취업하여 감리원으로 활동하는 경우가 있으나, 설계나 시공 분야에서 현장경력을 쌓은 후 관련 업체로 취업하는 경우가 많다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "140304",
+   "title": "토목감리기술자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "경력 등급제, 자격 우대",
+   "status": "none",
+   "evidence": "대학 졸업 후 곧바로 감리전문회사 또는 감리업무를 하는 엔지니어링회사에 취업하여 감리원으로 활동하는 경우가 있으나, 설계나 시공 분야에서 현장경력을 쌓은 후 관련 업체로 취업하는 경우가 많다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "140201",
+   "title": "건축구조기술자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "자격 우대",
+   "status": "none",
+   "evidence": "전문대학(2~3년제) 졸업자의 경우는 구조안전진단 분야에서 활동하는 경우가 많고, 실력을 쌓아 구조설계를 하는 경우도 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "140301",
+   "title": "토목구조설계기술자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "자격 우대",
+   "status": "none",
+   "evidence": "전문대학(2~3년제) 졸업자의 경우는 구조안전진단 분야에서 활동하는 경우가 많고, 실력을 쌓아 구조설계를 하는 경우도 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "140306",
+   "title": "토목시공기술자 및 견적원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "자격 우대",
+   "status": "none",
+   "evidence": "드물지만 특성화고등학교나 3년제 고등기술학교, 직업전문학교 등에서 토목을 전공한 후에 현장경력을 쌓아 성장하는 경우도 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "140305",
+   "title": "토목안전·환경기술자 및 토목품질기술자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "자격이 사실상 필수 → 2층",
+   "status": "none",
+   "evidence": "드물지만 특성화고등학교나 3년제 고등기술학교, 직업전문학교 등에서 토목을 전공한 후에 현장경력을 쌓아 토목공학기술자로 성장하는 경우도 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "140601",
+   "title": "지적 및 측량기술자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "자격 우대",
+   "status": "none",
+   "evidence": "측량사가 되기 위해서는 전문대학 및 대학교의 토목공학과, 측량 혹은 지적 관련 학과를 졸업하고 관련 자격증을 취득한 후 취업하는 것이 일반적이다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "140602",
+   "title": "지리정보시스템전문가",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "자격 우대",
+   "status": "none",
+   "evidence": "지리정보시스템전문가(GIS전문가)가 되기 위해서는 전문대학 및 대학교의 지리정보나 공간정보, 지적 관련 학과를 졸업하고 관련 자격증을 취득한 후 취업하는 것이 일반적이다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "131203",
+   "title": "통신망운영기술자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "자격 우대",
+   "status": "none",
+   "evidence": "통신망운영기술자가 되기 위해서는 전기, 전자 및 통신관련 공학분야의 대학 이상을 졸업하는 것이 좋다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "133204",
+   "title": "게임프로그래머",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "경력 우대",
+   "status": "none",
+   "evidence": "게임프로그래머가 되기 위해서는 고등학교, 전문대학의 게임관련 정규 교육과정을 이수하거나 게임 인력을 전문적으로 양성하는 게임아카데미 등의 사설학원, 대학의 사회교육원에서 교육훈련을 받으면 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "140401",
+   "title": "조경기술자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "공무원 진출은 선택",
+   "status": "none",
+   "evidence": "조경기술자가 되기 위해서는 특성화고등학교, 전문대학 및 대학교에서 조경 관련 전공을 하고 자격증을 취득한 후 취업하여 경력을 쌓는 것이 일반적이다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "154103",
+   "title": "도료 및 농약품화학공학기술자 및 연구원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "대학 졸업이 사실상 기준(법정 아님) → 2층",
+   "status": "none",
+   "evidence": "도료 및 농약품화학공학기술자 및 연구원이 되기 위해서는 전문대학이나 4년제 대학을 졸업해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "154102",
+   "title": "고무 및 플라스틱화학공학기술자 및 연구원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "대학 졸업 사실상 → 2층",
+   "status": "none",
+   "evidence": "고무 및 플라스틱화학공학기술자 및 연구원이 되기 위해서는 전문대학이나 4년제 대학을 졸업해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "154104",
+   "title": "비누 및 화장품화학공학기술자 및 연구원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "대학 졸업 사실상 → 2층",
+   "status": "none",
+   "evidence": "비누 및 화장품화학공학기술자 및 연구원이 되기 위해서는 전문대학이나 4년제 대학을 졸업해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "154105",
+   "title": "의약품공학기술자 및 연구원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "대학 졸업 사실상 → 2층",
+   "status": "none",
+   "evidence": "의약품화학공학기술자 및 연구원이 되기 위해서는 전문대학이나 4년제 대학을 졸업해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "154101",
+   "title": "석유화학공학기술자 및 연구원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "대학 졸업 사실상 → 2층",
+   "status": "none",
+   "evidence": "석유화학공학기술자 및 연구원이 되기 위해서는 전문대학이나 4년제 대학을 졸업해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "152101",
+   "title": "재료(금속)공학기술자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "관련 학과 졸업 사실상 → 2층",
+   "status": "none",
+   "evidence": "재료(금속)공학기술자가 되려면 전문대학 또는 대학에서 금속공학과, 세라믹공학과, 재료공학과, 신소재공학과 등의 관련 학과를 졸업해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "157201",
+   "title": "식품공학시험원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "관련 학과 사실상 → 2층",
+   "status": "none",
+   "evidence": "식품시험원이 되기 위해서는 식품의 위해를 평가하기 위한 기기들을 다룰 줄 알아야 하기 때문에 일반적으로 식품관련학과 이상을 졸업해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "122301",
+   "title": "농림어업시험원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "농약 사용 면허만",
+   "status": "none",
+   "evidence": "공인된 국가 자격증은 없으나 화학비료, 살균제, 제초제 및 살충제를 사용하는데 있어서는 면허증이 필요하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "122201",
+   "title": "생명과학시험원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "농약 사용 면허만",
+   "status": "none",
+   "evidence": "생명과학시험원이 되려면 고등학교 졸업 이상의 학력을 갖춰야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "615501",
+   "title": "노점 및 이동판매원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "대형판매점의 판매원들은 경험과 관리능력을 갖추면 판매관리분야의 사무직으로 승진이 가능하며, 이러한 경험을 살려 자영업을 할 수도 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "615401",
+   "title": "상품대여원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "상품대여원의 경우 사업체의 규모가 대부분 그렇게 크지 않아 승진보다는 일정한 경험을 쌓고 자금력을 가지게 되면 자영업을 하게 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "624401",
+   "title": "하역·적재종사원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "취업에 필요한 학력이나 연령, 자격 등에 제한이 없고 작업현장에서 숙련자로부터 간단한 작업지시와 주의사항을 들으면 일을 할 수 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "512201",
+   "title": "혼례종사원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "혼례종사원이 되기 위한 특별한 자격이나 면허 등은 없으며 학력이나 경험을 요구하지 않는다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "702701",
+   "title": "섀시조립·설치원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "샷시원이 되는 길은 대부분 고졸 정도의 학력을 요구하며 공업고등학교, 직업전문학교의 일반판금, 타출판금, 자동차판금 훈련 과정을 이수하면 취업시 유리하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "612201",
+   "title": "해외영업원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "일반적으로 취업 시 유리한 면허 및 자격으로 운전면허증이 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "862301",
+   "title": "재봉사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "자격증이 꼭 필요하지는 않지만 섬유관련 자격증이 있으면 취업 시 우대를 받는다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "882201",
+   "title": "펄프·종이제조장치조작원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "펄프 및 종이제조작치 조작원으로 활동하기 위해서 특별한 자격을 요하지 않는다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "864101",
+   "title": "제화원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "구두 및 가죽제품제조원이 되기 위해서는 고졸정도의 학력으로 특별한 자격이 요구되지는 않는다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "862101",
+   "title": "패턴사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "패턴사가 되기 위해서는 고졸 이상의 학력으로 특별한 자격이 요구되지는 않는다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "862201",
+   "title": "재단사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "자격증이 꼭 필요하지는 않지만 섬유관련 자격증이 있으면 취업 시 우대를 받는다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "863101",
+   "title": "한복제조원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "전문대 이상에서 한국의상디자인학과, 의상디자인과 등의 의상관련학과를 졸업하면 취업하기에 좀 더 유리하다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "832101",
+   "title": "사무용 전자기기설치·수리원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "대개 제조회사나 판매회사에서 제공하는 훈련프로그램을 이수하거나 취업한 후 사내 직무훈련을 받고 수리기사로 양성된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "136002",
+   "title": "방송송출장비기사",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "방송송출장비기사가 되기 위해 요구되는 자격이나 학력은 없다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "151101",
+   "title": "건설기계공학기술자 및 연구원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "따라서 전문대를 졸업한 경우에는 현장 실무경력을 통해 건설기계공학기술자가 될 수도 있지만 추가적인 교육을 통해 전문지식을 쌓을 필요가 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "151107",
+   "title": "자동차공학기술자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "기본적으로 기계계열 관련학과에서 이수하는 유체역학, 열역학, 고체역학, 동역학 등의 공학적 원리와 적용에 대한 이론적 지식이 요구되며, 자동차 제조에 관련된 특수공정분야의 지식도 습득해야 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "155301",
+   "title": "대기환경기술자 및 연구원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "연구, 개발 분야의 인력을 채용할 경우 석사이상 대학원졸업자에 한해 채용하기도 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "151108",
+   "title": "조선·해양공학기술자",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "따라서 전문대를 졸업한 경우에는 현장 실무경력을 통해 조선공학기술자가 될 수도 있지만 추가적인 교육을 통해 전문지식을 쌓을 필요가 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "152201",
+   "title": "금속·재료공학시험원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "최소 공업계 고등학교를 졸업해야 하고, 전문대학 또는 대학에서 금속공학과, 세라믹공학과, 재료공학과, 신소재공학과 등을 공부하고 진출할 수도 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "155501",
+   "title": "보건위생·환경검사원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "공공부문, 민간부문 전체에 걸쳐 고용되는데, 공해방지시설이 필요한 기업체의 환경전담 부서, 방위산업체, 보건연구소, 방재시설업체, 환경용역업체 등에서 일하고 환경부 등 환경과 관련된 전문공무원이나 보건직 공무원인 식품위생감시원으로 일하기도 한다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "158201",
+   "title": "소방공학기술자 및 연구원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "주로 진출가능한 전공분야로는 관련자격으로는 국가자격으로 방화관리(1,2급), 소방설비기계기사, 소방설비전기기사, 소방설비산업기사(전기/기계), 위험물관리기능사, 가스안전기사, 산업안전(기사·산업기사), 소방기술사, 소방설비산업기사(기사), 위험물기능사(산업기사?기능장) 등이 있다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "904101",
+   "title": "양식원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "숙련 종사자를 보조하면서 관련 실무경력을 쌓는 것이 좋으며, 수산(해양)고등학교 및 수산해양대학의 관련 학과에서 해양생태계, 수산생물의 질병 및 치료 등을 배우면 업무수행에 도움이 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "901501",
+   "title": "조경원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "다만 숙련공의 보조로 근무하며 경력을 쌓아 숙련공이 되는 것이 일반적이다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "904201",
+   "title": "어부 및 해녀",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "단서 단어만 걸림(승진·경력·체력 언급)",
+   "status": "none",
+   "evidence": "숙련 종사자를 보조하면서 관련 실무경력을 쌓는 것이 좋으며, 수산(해양)고등학교 및 수산해양대학의 관련 학과에서 해양생태계, 수산생물의 질병 및 치료 등을 배우면 업무수행에 도움이 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "705902",
+   "title": "잠수기능원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "산업 잠수는 잠수기능사 등 자격 요구 가능 — 확인 필요",
+   "status": "none",
+   "evidence": "산업잠수 및 수중기능원이 되기 위해  대학이나 폴리텍, 스킨스쿠버 민간양성기관, 직업훈련기관 등에서 교육훈련을 받거나 군대에서 관련 경력을 쌓은 후 국가기술자격인 잠수기능사, 잠수산업기사를 취득하면 된다",
+   "source": "고용24 직업정보(되는 길)"
+  },
+  {
+   "jobCode": "872301",
+   "title": "식품·담배등급원",
+   "badges": [],
+   "conditions": null,
+   "weight": null,
+   "note": "담배 등급원만 회사 필기시험",
+   "status": "none",
+   "evidence": "식품 및 담배등급원이 되기 위해서는 고등학교 졸업 정도의 학력이 필요하다",
+   "source": "고용24 직업정보(되는 길)"
+  }
+ ]
+}
