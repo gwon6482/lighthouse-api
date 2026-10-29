@@ -22,6 +22,7 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
 const careerPlanRoutes = require('./routes/careerPlan');
 const careerPathRoutes = require('./routes/careerPath');
+const newsRoutes = require('./routes/news');
 
 const app = express();
 
@@ -108,6 +109,7 @@ app.use('/api/job', jobRoutes);
 app.use('/api/reference', referenceRoutes);
 app.use('/api/career-plan', careerPlanRoutes);
 app.use('/api/career-path', careerPathRoutes);   // 직업인 진로과정 참여(랜딩 /career-path, 2026-10-26)
+app.use('/api/news', newsRoutes);                // 진로 뉴스(앱 진로정보 탭, 2026-10-29) — 진로엔뉴스 RSS 제목·링크만
 
 // 기본 라우트
 /**
