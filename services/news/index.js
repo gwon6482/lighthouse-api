@@ -4,7 +4,6 @@
 //    그래서 **썸네일·요약(description)은 내보내지 않는다.** 제목 + 날짜 + 출처 + 원문 링크만(사용자 결정 2026-10-29, 테스트 용도 위주).
 //    썸네일·요약을 쓰려면 먼저 승낙(저작권 담당 jinron@kakao.com).
 // 앱이 RSS 를 직접 부르면 CORS·속도 문제 → 서버가 받아 메모리에 1시간 캐시한다.
-const axios = require('axios');
 const { XMLParser } = require('fast-xml-parser');
 
 const SOURCE = { name: '진로엔뉴스', url: 'https://www.jinron.kr', rss: 'https://cdn.jinron.kr/rss/gns_allArticle.xml' };
@@ -54,8 +53,10 @@ async function getCareerNews({ limit = 10 } = {}) {
     return { items: cache.items.slice(0, n), source: { name: SOURCE.name, url: SOURCE.url }, cached: true };
   }
   try {
-    const res = await axios.get(SOURCE.rss, { timeout: TIMEOUT_MS, responseType: 'text', headers: { 'User-Agent': 'LighthouseBot/1.0 (+https://www.lighthouse.career)' } });
-    const items = parseRss(res.data);
+    // ⚠️ axios 는 devDependencies 라 운영 이미지에 없다(2026-10-29 배포 실패) — Node 내장 fetch 를 쓴다
+    const res = await fetch(SOURCE.rss, { signal: AbortSignal.timeout(TIMEOUT_MS), headers: { 'User-Agent': 'LighthouseBot/1.0 (+https://www.lighthouse.career)' } });
+    if (!res.ok) throw new Error(`RSS ${res.status}`);
+    const items = parseRss(await res.text());
     cache = { at: Date.now(), items };
     return { items: items.slice(0, n), source: { name: SOURCE.name, url: SOURCE.url }, cached: false };
   } catch (err) {
