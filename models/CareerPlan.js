@@ -45,6 +45,7 @@ const ProjectSchema = new mongoose.Schema({
   duration:         { type: Number, default: 0 },
   priority:         { type: String, default: 'normal' },
   notification:     { type: Boolean, default: false },
+  missedNotification: { type: Boolean, default: true },
   notificationTime: { type: String, default: '' },
   memo:             { type: String, default: '' },
   curriculum:       { type: [CurriculumWeekSchema], default: [] }

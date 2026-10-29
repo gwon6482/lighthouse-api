@@ -4,6 +4,22 @@ const { cleanMethod } = CareerPlan;
 const PublicCareerPlan = require('../models/PublicCareerPlan');
 const User = require('../models/User');
 const { purgePlan } = require('../services/userPurge');
+const { resetUpcomingSchedules } = require('../services/scheduleReset');
+
+// 프로젝트의 실행 설정 — ⚠️ 2026-10-29 전까지 추가·일괄·수정 모두 이 필드를 버려서 모든 프로젝트가 0분·보통·알림 꺼짐으로
+// 저장됐다(모델엔 있었다). 앱은 템플릿 '주 3회 60분'을 보여 주고 저장하면 0분이 되던 것.
+const PRIORITIES = ['high', 'normal', 'low'];
+function projectSettings(src, { partial = false } = {}) {
+  const out = {};
+  const put = (k, v) => { if (!partial || src[k] !== undefined) out[k] = v; };
+  put('duration', Math.max(0, Math.min(1440, Math.round(Number(src.duration) || 0))));
+  put('priority', PRIORITIES.includes(src.priority) ? src.priority : 'normal');
+  put('notification', !!src.notification);
+  put('missedNotification', src.missedNotification === undefined ? true : !!src.missedNotification);
+  put('notificationTime', typeof src.notificationTime === 'string' ? src.notificationTime.slice(0, 5) : '');
+  put('memo', typeof src.memo === 'string' ? src.memo.slice(0, 2000) : '');
+  return out;
+}
 
 // 레거시 month 라벨('2026.03' / '2026년 3월' / '2026-03')을 계획 시작주 기준 주차로 환산.
 // 2026-08-27 타임라인 주차 전환 이전에 저장된 계획을 읽을 때만 쓴다.
@@ -79,6 +95,9 @@ const updatePlan = async (req, res, next) => {
       { new: true }
     );
     if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
+    if (update.startDate !== undefined || update.endDate !== undefined) {
+      await resetUpcomingSchedules(planId, req.user.uid).catch((e) => console.warn('[schedule-reset]', e?.message)) // 바뀐 계획으로 이번 주부터 다시 만들게
+    }
 
     res.json({ success: true, plan });
   } catch (err) {
@@ -143,6 +162,7 @@ const addProject = async (req, res, next) => {
       startTime:  startTime  || '',
       endTime:    endTime    || '',
       curriculum: curriculum || [],
+      ...projectSettings(req.body),
       ...cleanMethod(method, methodDetail),
     };
 
@@ -179,6 +199,7 @@ const bulkAddProjects = async (req, res, next) => {
       startTime:  p.startTime || '',
       endTime:    p.endTime || '',
       curriculum: p.curriculum || [],
+      ...projectSettings(p),
       ...cleanMethod(p.method, p.methodDetail),
     })).filter(p => p.name && p.category);
 
@@ -205,6 +226,7 @@ const updateProject = async (req, res, next) => {
     for (const key of allowed) {
       if (req.body[key] !== undefined) setFields[`projects.$.${key}`] = req.body[key];
     }
+    for (const [k, v] of Object.entries(projectSettings(req.body, { partial: true }))) setFields[`projects.$.${k}`] = v;
     // 진행 방식은 정리해서 함께 바꾼다(방식을 보내지 않으면 그대로 둔다)
     if (req.body.method !== undefined) {
       const { method, methodDetail } = cleanMethod(req.body.method, req.body.methodDetail);
@@ -218,6 +240,9 @@ const updateProject = async (req, res, next) => {
       { new: true }
     );
     if (!plan) return res.status(404).json({ success: false, error: '프로젝트를 찾을 수 없습니다' });
+    if (req.body.days !== undefined || req.body.curriculum !== undefined) {
+      await resetUpcomingSchedules(planId, req.user.uid).catch((e) => console.warn('[schedule-reset]', e?.message)) // 바뀐 계획으로 이번 주부터 다시 만들게
+    }
 
     const updated = plan.projects.find(p => p.id === projId);
     res.json({ success: true, project: updated, plan });
@@ -243,6 +268,7 @@ const deleteProject = async (req, res, next) => {
       { new: true }
     );
     if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
+    await resetUpcomingSchedules(planId, req.user.uid).catch((e) => console.warn('[schedule-reset]', e?.message)) // 바뀐 계획으로 이번 주부터 다시 만들게
 
     res.json({ success: true, message: '프로젝트가 삭제되었습니다', plan: _withPopulatedTimeline(plan) });
   } catch (err) {
@@ -277,6 +303,7 @@ const addRoutine = async (req, res, next) => {
       { new: true }
     );
     if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
+    await resetUpcomingSchedules(planId, req.user.uid).catch((e) => console.warn('[schedule-reset]', e?.message)) // 바뀐 계획으로 이번 주부터 다시 만들게
 
     res.status(201).json({ success: true, routine, plan });
   } catch (err) {
@@ -301,6 +328,9 @@ const updateRoutine = async (req, res, next) => {
       { new: true }
     );
     if (!plan) return res.status(404).json({ success: false, error: '루틴을 찾을 수 없습니다' });
+    if (req.body.days !== undefined) {
+      await resetUpcomingSchedules(planId, req.user.uid).catch((e) => console.warn('[schedule-reset]', e?.message)) // 바뀐 계획으로 이번 주부터 다시 만들게
+    }
 
     const updated = plan.routines.find(r => r.id === routineId);
     res.json({ success: true, routine: updated, plan });
@@ -321,6 +351,7 @@ const deleteRoutine = async (req, res, next) => {
       { new: true }
     );
     if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
+    await resetUpcomingSchedules(planId, req.user.uid).catch((e) => console.warn('[schedule-reset]', e?.message)) // 바뀐 계획으로 이번 주부터 다시 만들게
 
     res.json({ success: true, message: '루틴이 삭제되었습니다', plan });
   } catch (err) {
@@ -356,6 +387,7 @@ const saveTimeline = async (req, res, next) => {
       { new: true }
     );
     if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
+    await resetUpcomingSchedules(planId, req.user.uid).catch((e) => console.warn('[schedule-reset]', e?.message)) // 바뀐 계획으로 이번 주부터 다시 만들게
 
     res.json({ success: true, plan: _withPopulatedTimeline(plan) });
   } catch (err) {
