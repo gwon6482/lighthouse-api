@@ -55,7 +55,7 @@ function _withPopulatedTimeline(plan) {
 // 계획 초안 생성. name/targetJob/startDate/endDate/reviewDay 받음
 const createPlan = async (req, res, next) => {
   try {
-    const { name, targetJob, startDate, endDate, reviewDay } = req.body;
+    const { name, targetJob, startDate, endDate, reviewDay, paceKey, paceHours } = req.body;
     const plan = await CareerPlan.create({
       userUid: req.user.uid,
       name:      name      || '',
@@ -63,6 +63,8 @@ const createPlan = async (req, res, next) => {
       startDate: startDate || '',
       endDate:   endDate   || '',
       reviewDay: reviewDay || '',
+      paceKey:   ['light', 'steady', 'focus', 'full', 'allin'].includes(paceKey) ? paceKey : '',
+      paceHours: Number.isFinite(Number(paceHours)) && paceHours !== null && paceHours !== '' ? Number(paceHours) : null,
       status: 'draft'
     });
 
@@ -83,7 +85,7 @@ const createPlan = async (req, res, next) => {
 const updatePlan = async (req, res, next) => {
   try {
     const { planId } = req.params;
-    const allowed = ['name', 'targetJob', 'startDate', 'endDate', 'reviewDay', 'status'];
+    const allowed = ['name', 'targetJob', 'startDate', 'endDate', 'reviewDay', 'status', 'paceKey', 'paceHours'];
     const update = {};
     for (const key of allowed) {
       if (req.body[key] !== undefined) update[key] = req.body[key];
@@ -95,7 +97,8 @@ const updatePlan = async (req, res, next) => {
       { new: true }
     );
     if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
-    if (update.startDate !== undefined || update.endDate !== undefined) {
+    // 시작 요일(reviewDay)이 바뀌면 주 경계가 바뀐다(2026-10-30~ 한 주 = 시작 요일부터 7일)
+    if (update.startDate !== undefined || update.endDate !== undefined || update.reviewDay !== undefined) {
       await resetUpcomingSchedules(planId, req.user.uid).catch((e) => console.warn('[schedule-reset]', e?.message)) // 바뀐 계획으로 이번 주부터 다시 만들게
     }
 

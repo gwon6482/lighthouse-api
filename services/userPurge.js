@@ -14,6 +14,7 @@ const CareerPlan = require('../models/CareerPlan');
 const WeeklySchedule = require('../models/WeeklySchedule');
 const AchievementRecord = require('../models/AchievementRecord');
 const CurriculumCompletion = require('../models/CurriculumCompletion');
+const WeeklyReview = require('../models/WeeklyReview');
 const JobReview = require('../models/JobReview');
 const { s3Client, UPLOAD_BUCKET, UPLOAD_PREFIX, PUBLIC_BASE } = require('../config/s3');
 
@@ -82,6 +83,7 @@ async function purgeUser(uid) {
   deleted.achievementRecords = (await AchievementRecord.deleteMany({ userUid: uid })).deletedCount;
   deleted.curriculumCompletions = (await CurriculumCompletion.deleteMany({ userUid: uid })).deletedCount;
   deleted.weeklySchedules = (await WeeklySchedule.deleteMany({ userUid: uid })).deletedCount;
+  deleted.weeklyReviews = (await WeeklyReview.deleteMany({ userUid: uid })).deletedCount;
   deleted.careerPlans = (await CareerPlan.deleteMany({ userUid: uid })).deletedCount;
 
   // 5) 계정 문서 — 반드시 마지막
@@ -121,6 +123,7 @@ async function resetUserToStage(uid, stage) {
   cleared.achievementRecords = (await AchievementRecord.deleteMany({ userUid: uid })).deletedCount;
   cleared.curriculumCompletions = (await CurriculumCompletion.deleteMany({ userUid: uid })).deletedCount;
   cleared.weeklySchedules = (await WeeklySchedule.deleteMany({ userUid: uid })).deletedCount;
+  cleared.weeklyReviews = (await WeeklyReview.deleteMany({ userUid: uid })).deletedCount;
   cleared.careerPlans = (await CareerPlan.deleteMany({ userUid: uid })).deletedCount;
 
   const unset = {};
@@ -186,6 +189,7 @@ async function purgePlan(uid, planId) {
 
   const q = { userUid: uid, planId };
   deleted.weeklySchedules = (await WeeklySchedule.deleteMany(q)).deletedCount;
+  deleted.weeklyReviews = (await WeeklyReview.deleteMany(q)).deletedCount;
   deleted.achievementRecords = (await AchievementRecord.deleteMany(q)).deletedCount;
   deleted.curriculumCompletions = (await CurriculumCompletion.deleteMany(q)).deletedCount;
 

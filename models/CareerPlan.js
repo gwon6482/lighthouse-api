@@ -98,6 +98,9 @@ const CareerPlanSchema = new mongoose.Schema({
   startDate:  { type: String, default: '' },   // 'YYYY-MM' 또는 'YYYY-MM-DD'
   endDate:    { type: String, default: '' },   // 'YYYY-MM' 또는 'YYYY-MM-DD'
   reviewDay:  { type: String, default: '' },   // 주간리뷰 요일 ('월'|'화'|...|'일'). 일주일의 끝이자 시작
+  // 진행 속도(2026-10-30) — 앱 usePlanPace 의 키와 주당 시간. 주간결산에서 바꿀 수 있다(바꾸면 남은 계획 재배치)
+  paceKey:    { type: String, enum: ['', 'light', 'steady', 'focus', 'full', 'allin'], default: '' },
+  paceHours:  { type: Number, default: null },
   projects:   { type: [ProjectSchema], default: [] },
   routines:   { type: [RoutineSchema], default: [] },
   timeline:   { type: [TimelineSlotSchema], default: [] },

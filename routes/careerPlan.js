@@ -11,6 +11,7 @@ const {
 const {
   listSchedules, getSchedule, createSchedule, updateSchedule, deleteSchedule
 } = require('../controllers/weeklyScheduleController');
+const { listReviews, getReview, upsertReview } = require('../controllers/weeklyReviewController');
 const {
   listAchievements, upsertAchievement, deleteAchievement,
   listCurriculum, upsertCurriculum, presignUpload
@@ -411,6 +412,40 @@ router.post('/:planId/weekly-schedule', createSchedule);
 router.get('/:planId/weekly-schedule/:weekStart', getSchedule);
 router.put('/:planId/weekly-schedule/:weekStart', updateSchedule);
 router.delete('/:planId/weekly-schedule/:weekStart', deleteSchedule);
+
+/**
+ * @swagger
+ * /api/career-plan/{planId}/weekly-reviews:
+ *   get:
+ *     summary: "주간결산 목록(마친 것, 최신 주부터)"
+ *     description: "?all=1 이면 팝업만 본 주도 포함. 결산하지 않고 지나간 주는 기록이 없다."
+ *     tags: [CareerPlan]
+ *     parameters:
+ *       - { in: path, name: planId, required: true, schema: { type: string } }
+ *     responses:
+ *       200: { description: 성공 }
+ * /api/career-plan/{planId}/weekly-reviews/{weekStart}:
+ *   get:
+ *     summary: "한 주 결산(없으면 null)"
+ *     tags: [CareerPlan]
+ *     parameters:
+ *       - { in: path, name: planId, required: true, schema: { type: string } }
+ *       - { in: path, name: weekStart, required: true, schema: { type: string, example: "2026-10-23" } }
+ *     responses:
+ *       200: { description: 성공 }
+ *   put:
+ *     summary: "결산 기록 저장(있으면 고치고 없으면 만듦)"
+ *     description: "{ prompted:true } = 팝업 띄움 표시 / { complete:true, satisfaction(1~5), note, pledge, feel, paceFrom, paceTo, endDateFrom, endDateTo, stats } = 결산 마침"
+ *     tags: [CareerPlan]
+ *     parameters:
+ *       - { in: path, name: planId, required: true, schema: { type: string } }
+ *       - { in: path, name: weekStart, required: true, schema: { type: string } }
+ *     responses:
+ *       200: { description: 성공 }
+ */
+router.get('/:planId/weekly-reviews', listReviews);
+router.get('/:planId/weekly-reviews/:weekStart', getReview);
+router.put('/:planId/weekly-reviews/:weekStart', upsertReview);
 
 /**
  * @swagger
