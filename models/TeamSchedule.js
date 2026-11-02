@@ -25,9 +25,13 @@ const TeamScheduleItemSchema = new mongoose.Schema({
   endDate:   { type: String, default: '', match: [/^$|^\d{4}-\d{2}-\d{2}$/, 'YYYY-MM-DD'] },   // 비면 startDate 하루
   done:      { type: Boolean, default: false },
   link:      { type: String, default: '', trim: true, maxlength: 300 },
+  // 자동 기록의 출처(예: 'tag:lighthouse-test:v0.1.21') — 같은 출처로 다시 오면 새로 만들지 않는다(워크플로 재실행 대비).
+  // 사람이 넣은 항목은 없음
+  source:    { type: String, trim: true, maxlength: 120 },
 }, { timestamps: true });
 
 TeamScheduleItemSchema.index({ startDate: 1 });
+TeamScheduleItemSchema.index({ source: 1 }, { unique: true, partialFilterExpression: { source: { $type: 'string' } } });
 
 const TeamMemberSchema = new mongoose.Schema({
   name:  { type: String, required: true, trim: true, maxlength: 30, unique: true },

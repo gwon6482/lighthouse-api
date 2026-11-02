@@ -9,6 +9,7 @@ require('dotenv').config();
 const connectDB = require('./config/database');
 const errorHandler = require('./middleware/error');
 const questionEditorAuth = require('./middleware/questionEditorAuth'); // x-question-key(문항 수정만) 또는 x-admin-key
+const scheduleKeyAuth = require('./middleware/scheduleKeyAuth'); // x-schedule-key(일정 항목 조회·추가·수정만)
 
 // Swagger 설정
 const swaggerSpecs = require('./config/swagger');
@@ -103,7 +104,7 @@ app.get(['/api-docs', '/api-docs/'], (req, res) => {
 // 라우터
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
-app.use('/api/admin', questionEditorAuth, adminRoutes);
+app.use('/api/admin', scheduleKeyAuth, questionEditorAuth, adminRoutes);
 app.use('/api/survey', surveyRoutes);
 app.use('/api/job', jobRoutes);
 app.use('/api/reference', referenceRoutes);

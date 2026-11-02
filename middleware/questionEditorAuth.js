@@ -23,6 +23,7 @@ function logQuestionEdit(req, res, keyName) {
 }
 
 const questionEditorAuth = (req, res, next) => {
+  if (req.scheduleKeyOk) return next();   // 앞단 scheduleKeyAuth 가 일정 전용 키로 이미 통과시킨 요청
   const isQuestionPut = req.method === 'PUT' && QUESTION_PUT.test(req.path);
   const provided = req.headers['x-question-key'];
 
