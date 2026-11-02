@@ -16,6 +16,7 @@ const { getOnboardingStats } = require('../controllers/onboardingStatsController
 const { listUsers, getUserDetail, deleteUser, resetUser } = require('../controllers/adminUserController');
 const { listWork24Endpoints, callWork24 } = require('../controllers/work24ExplorerController');
 const { listContributions, updateContribution, deleteContribution } = require('../controllers/careerPathController');
+const teamSchedule = require('../controllers/teamScheduleController');
 
 /**
  * @swagger
@@ -529,5 +530,42 @@ router.delete('/users/:uid', deleteUser);
 router.get('/career-path', listContributions);
 router.patch('/career-path/:id', updateContribution);
 router.delete('/career-path/:id', deleteContribution);
+
+/**
+ * @swagger
+ * /api/admin/schedule/items:
+ *   get:
+ *     summary: 일정관리 — 팀 기록·개발일정·향후 계획·할 일 목록
+ *     description: "from·to(YYYY-MM-DD)를 주면 그 기간과 겹치는 항목 + 날짜 없는 항목. 개발일지(devlog)는 여기 없다(어드민이 lighthouse-docs 에서 읽음)"
+ *     tags: [Admin]
+ *   post:
+ *     summary: "항목 추가 — kind(record|schedule|plan|todo)·title·category(api|app|admin|landing|planning|design|data|ops) 필수"
+ *     tags: [Admin]
+ * /api/admin/schedule/items/{id}:
+ *   put:
+ *     summary: 항목 수정(보낸 필드만)
+ *     tags: [Admin]
+ *   delete:
+ *     summary: 항목 삭제
+ *     tags: [Admin]
+ * /api/admin/schedule/members:
+ *   get:
+ *     summary: 팀원(담당자) 목록
+ *     tags: [Admin]
+ *   post:
+ *     summary: 팀원 추가 — name(중복 409)·color(#RRGGBB, 선택)
+ *     tags: [Admin]
+ * /api/admin/schedule/members/{id}:
+ *   delete:
+ *     summary: 팀원 삭제 — 담당했던 항목은 이름 그대로 남는다
+ *     tags: [Admin]
+ */
+router.get('/schedule/items', teamSchedule.listItems);
+router.post('/schedule/items', teamSchedule.createItem);
+router.put('/schedule/items/:id', teamSchedule.updateItem);
+router.delete('/schedule/items/:id', teamSchedule.deleteItem);
+router.get('/schedule/members', teamSchedule.listMembers);
+router.post('/schedule/members', teamSchedule.createMember);
+router.delete('/schedule/members/:id', teamSchedule.deleteMember);
 
 module.exports = router;
