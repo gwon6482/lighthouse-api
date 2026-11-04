@@ -108,7 +108,10 @@ const CareerPlanSchema = new mongoose.Schema({
     type: String,
     enum: ['draft', 'active', 'completed'],
     default: 'draft'
-  }
+  },
+  // 휴지통(2026-11-04) — 삭제하면 여기만 찍고 30일 보관(services/planTrash). null = 살아 있는 계획
+  deletedAt:          { type: Date, default: null },
+  statusBeforeDelete: { type: String, default: '' }, // 되돌릴 때 원래 상태로
 }, {
   timestamps: true
 });

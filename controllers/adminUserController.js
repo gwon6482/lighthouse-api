@@ -171,7 +171,7 @@ const getUserDetail = async (req, res, next) => {
     // 진로 설계. 응답이 비대해지지 않게 요약만 싣는다 — 프로젝트·타임라인 원문은 뺀다.
     const plans = await CareerPlan.find({ userUid: uid }, {
       planId: 1, name: 1, targetJob: 1, startDate: 1, endDate: 1, reviewDay: 1,
-      status: 1, projects: 1, routines: 1, createdAt: 1, _id: 0
+      status: 1, projects: 1, routines: 1, createdAt: 1, deletedAt: 1, _id: 0 // deletedAt: 휴지통(30일 보관) 표시용
     }).sort({ createdAt: -1 }).lean();
 
     const [weeklySchedules, achievementRecords, curriculumCompletions] = await Promise.all([

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { authenticate } = require('../middleware/auth');
 const {
-  createPlan, updatePlan, getMyPlans, getPlan, deletePlan,
+  createPlan, updatePlan, getMyPlans, getPlan, deletePlan, getDeletedPlans, restorePlan,
   addProject, bulkAddProjects, updateProject, deleteProject,
   addRoutine, updateRoutine, deleteRoutine,
   saveTimeline,
@@ -84,6 +84,47 @@ router.get('/', getMyPlans);
 
 /**
  * @swagger
+ * /api/career-plan/deleted:
+ *   get:
+ *     summary: 휴지통 — 30일 안에 삭제한 진로계획(되돌리기 가능). 지난 건 조회 때 영구 삭제
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: "{ trashDays, plans: [{ planId, name, targetJob, statusBeforeDelete, deletedAt, purgeAt, projectCount }] }"
+ */
+router.get('/deleted', getDeletedPlans); // ⚠️ '/:planId' 보다 위에
+
+/**
+ * @swagger
+ * /api/career-plan/{planId}/restore:
+ *   post:
+ *     summary: 휴지통에서 되돌리기
+ *     description: 원래 진행 중이던 계획인데 다른 계획이 진행 중이면 409 { conflict, activePlan } — makeActive 를 보내 다시 부른다
+ *     tags: [CareerPlan]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: planId
+ *         required: true
+ *         schema: { type: string }
+ *     requestBody:
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               makeActive: { type: boolean, description: "true 면 되돌린 계획이 진행 중(지금 계획은 초안), false 면 초안으로" }
+ *     responses:
+ *       200: { description: 되돌림 }
+ *       409: { description: 진행 중 계획과 충돌 }
+ */
+router.post('/:planId/restore', restorePlan);
+
+/**
+ * @swagger
  * /api/career-plan/{planId}:
  *   get:
  *     summary: 진로계획 상세 조회
@@ -137,7 +178,7 @@ router.put('/:planId', updatePlan);
  * @swagger
  * /api/career-plan/{planId}:
  *   delete:
- *     summary: 진로계획 삭제
+ *     summary: 진로계획 삭제 — 휴지통으로(30일 보관 뒤 딸린 기록까지 영구 삭제, 그 안에는 /restore)
  *     tags: [CareerPlan]
  *     security:
  *       - bearerAuth: []

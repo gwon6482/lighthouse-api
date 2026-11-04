@@ -3,8 +3,8 @@ const CareerPlan = require('../models/CareerPlan');
 const { cleanMethod } = CareerPlan;
 const PublicCareerPlan = require('../models/PublicCareerPlan');
 const User = require('../models/User');
-const { purgePlan } = require('../services/userPurge');
 const { resetUpcomingSchedules } = require('../services/scheduleReset');
+const { TRASH_DAYS, purgeAt, purgeExpiredPlans } = require('../services/planTrash');
 
 // 프로젝트의 실행 설정 — ⚠️ 2026-10-29 전까지 추가·일괄·수정 모두 이 필드를 버려서 모든 프로젝트가 0분·보통·알림 꺼짐으로
 // 저장됐다(모델엔 있었다). 앱은 템플릿 '주 3회 60분'을 보여 주고 저장하면 0분이 되던 것.
@@ -112,7 +112,9 @@ const updatePlan = async (req, res, next) => {
 // 내 계획 목록 (최신순) — 목록에는 timeline 생략
 const getMyPlans = async (req, res, next) => {
   try {
-    const plans = await CareerPlan.find({ userUid: req.user.uid }).sort({ createdAt: -1 });
+    await purgeExpiredPlans(req.user.uid).catch((e) => console.warn('[plan-trash]', e?.message));
+    // 휴지통에 있는 계획은 뺀다({ deletedAt: null } 은 필드가 없는 예전 문서도 포함)
+    const plans = await CareerPlan.find({ userUid: req.user.uid, deletedAt: null }).sort({ createdAt: -1 });
     res.json({ success: true, plans: plans.map(p => p.toObject()) });
   } catch (err) {
     next(err);
@@ -123,7 +125,7 @@ const getMyPlans = async (req, res, next) => {
 // 상세 조회 — timeline을 FE 형식으로 populate해서 반환
 const getPlan = async (req, res, next) => {
   try {
-    const plan = await CareerPlan.findOne({ planId: req.params.planId, userUid: req.user.uid });
+    const plan = await CareerPlan.findOne({ planId: req.params.planId, userUid: req.user.uid, deletedAt: null });
     if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
     res.json({ success: true, plan: _withPopulatedTimeline(plan) });
   } catch (err) {
@@ -132,14 +134,67 @@ const getPlan = async (req, res, next) => {
 };
 
 // ── DELETE /api/career-plan/:planId ─────────────────────────
+// 휴지통으로(2026-11-04~) — 30일 보관 뒤 딸린 기록까지 영구 삭제(services/planTrash). 그 안에는 POST /:planId/restore
 const deletePlan = async (req, res, next) => {
   try {
     const { planId } = req.params;
-    // 딸린 주간 일정·실행 기록·커리큘럼 완료·인증사진까지 함께(services/userPurge.purgePlan)
-    const deleted = await purgePlan(req.user.uid, planId);
-    if (!deleted) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
+    const plan = await CareerPlan.findOne({ planId, userUid: req.user.uid, deletedAt: null });
+    if (!plan) return res.status(404).json({ success: false, error: '계획을 찾을 수 없습니다' });
+    plan.statusBeforeDelete = plan.status;
+    plan.status = 'draft';            // 진행 중 계획 판정(status === 'active')에서 확실히 빠지게
+    plan.deletedAt = new Date();
+    await plan.save();
+    res.json({ success: true, message: '계획을 휴지통으로 옮겼습니다', planId, purgeAt: purgeAt(plan.deletedAt), trashDays: TRASH_DAYS });
+  } catch (err) {
+    next(err);
+  }
+};
 
-    res.json({ success: true, message: '계획이 삭제되었습니다', deleted });
+// ── GET /api/career-plan/deleted ────────────────────────────
+// 휴지통 — 30일 안에 지운 계획(최근 삭제부터). 요약만
+const getDeletedPlans = async (req, res, next) => {
+  try {
+    await purgeExpiredPlans(req.user.uid).catch((e) => console.warn('[plan-trash]', e?.message));
+    const plans = await CareerPlan.find({ userUid: req.user.uid, deletedAt: { $ne: null } }, {
+      planId: 1, name: 1, targetJob: 1, startDate: 1, endDate: 1, statusBeforeDelete: 1, deletedAt: 1, projects: 1, _id: 0,
+    }).sort({ deletedAt: -1 }).lean();
+    res.json({
+      success: true,
+      trashDays: TRASH_DAYS,
+      plans: plans.map(({ projects, ...p }) => ({ ...p, projectCount: (projects || []).length, purgeAt: purgeAt(p.deletedAt) })),
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
+// ── POST /api/career-plan/:planId/restore ───────────────────
+// 되돌리기. 원래 진행 중이던 계획인데 지금 다른 계획이 진행 중이면 409 { conflict } — 앱이 물어보고 makeActive 로 다시 부른다.
+//   makeActive: true  → 되돌린 계획이 진행 중, 지금 진행 중 계획은 초안으로
+//   makeActive: false → 되돌린 계획은 초안으로
+const restorePlan = async (req, res, next) => {
+  try {
+    const { planId } = req.params;
+    const uid = req.user.uid;
+    const plan = await CareerPlan.findOne({ planId, userUid: uid, deletedAt: { $ne: null } });
+    if (!plan) return res.status(404).json({ success: false, error: '되돌릴 계획을 찾을 수 없습니다(보관 기간이 지났을 수 있어요)' });
+
+    const wasActive = plan.statusBeforeDelete === 'active';
+    const current = wasActive
+      ? await CareerPlan.findOne({ userUid: uid, status: 'active', deletedAt: null, planId: { $ne: planId } }, { planId: 1, name: 1, targetJob: 1 }).lean()
+      : null;
+    const { makeActive } = req.body || {};
+    if (current && typeof makeActive !== 'boolean') {
+      return res.status(409).json({ success: false, conflict: true, activePlan: { planId: current.planId, name: current.name, targetJob: current.targetJob } });
+    }
+    if (current && makeActive) {
+      await CareerPlan.updateOne({ planId: current.planId, userUid: uid }, { $set: { status: 'draft' } });
+    }
+    plan.status = current && !makeActive ? 'draft' : (plan.statusBeforeDelete || 'draft');
+    plan.deletedAt = null;
+    plan.statusBeforeDelete = '';
+    await plan.save();
+    res.json({ success: true, plan: { planId: plan.planId, name: plan.name, status: plan.status }, demoted: current && makeActive ? current.planId : null });
   } catch (err) {
     next(err);
   }
@@ -419,6 +474,8 @@ module.exports = {
   getMyPlans,
   getPlan,
   deletePlan,
+  getDeletedPlans,
+  restorePlan,
   addProject,
   bulkAddProjects,
   updateProject,
