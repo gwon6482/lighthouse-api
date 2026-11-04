@@ -132,7 +132,7 @@ router.post('/logout', authenticate, logout);
  *       - bearerAuth: []
  *     responses:
  *       200:
- *         description: 현재 로그인된 유저 정보
+ *         description: 현재 로그인된 유저 정보. 발급 후 하루가 지난 토큰이면 새 토큰(`token`, 90일)을 같이 준다 — 앱은 바꿔 저장(자동로그인 연장)
  *       401:
  *         description: 인증 토큰 없음 또는 만료
  */

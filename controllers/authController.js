@@ -3,7 +3,10 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const { JWT_SECRET } = require('../middleware/auth');
 
-const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '7d';
+// 자동로그인(2026-11-04): 90일짜리 토큰을 쓰는 동안 계속 연장한다 — 마지막으로 앱을 연 날부터 90일 안 쓰면 로그아웃.
+// 연장은 /api/auth/me 가 한다(앱이 열릴 때마다 부른다). 발급 후 하루가 지난 토큰이면 새 토큰을 같이 내려 준다.
+const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '90d';
+const RENEW_AFTER_SEC = 24 * 60 * 60;
 
 const generateToken = (user) =>
   jwt.sign({ uid: user.uid, email: user.email }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
@@ -170,7 +173,10 @@ const me = async (req, res, next) => {
     if (!user) {
       return res.status(404).json({ success: false, error: '유저를 찾을 수 없습니다' });
     }
-    res.json({ success: true, user: user.toJSON() });
+    // 하루 넘은 토큰이면 새로 — 앱은 응답에 token 이 있으면 바꿔 저장한다
+    const age = Math.floor(Date.now() / 1000) - (req.user.iat ?? 0);
+    const token = age > RENEW_AFTER_SEC ? generateToken(user) : undefined;
+    res.json({ success: true, user: user.toJSON(), ...(token && { token }) });
   } catch (err) {
     next(err);
   }

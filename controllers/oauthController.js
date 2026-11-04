@@ -66,7 +66,7 @@ function issueAppToken(user) {
   return jwt.sign(
     { uid: user.uid, email: user.email },
     JWT_SECRET,
-    { expiresIn: process.env.JWT_EXPIRES_IN || '7d' },
+    { expiresIn: process.env.JWT_EXPIRES_IN || '90d' }, // authController 와 같은 기본값(자동로그인 90일)
   );
 }
 

@@ -104,7 +104,7 @@ jobs:
                   "PORT": "8080",
                   "MONGODB_URI": os.environ["MONGODB_URI"],
                   "JWT_SECRET": os.environ["JWT_SECRET"],
-                  "JWT_EXPIRES_IN": "7d",
+                  "JWT_EXPIRES_IN": "90d",  # 자동로그인 — /api/auth/me 가 하루 지난 토큰을 연장(2026-11-04)
                   # 관리자 API(/api/admin 및 job/reference 쓰기 등) 보호 공유키.
                   # GitHub Secret 미설정 시 여기서 KeyError→배포 실패(키 없이 배포돼 503 나는 것 방지).
                   "ADMIN_API_KEY": os.environ["ADMIN_API_KEY"],
