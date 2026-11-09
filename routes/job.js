@@ -3,8 +3,10 @@ const router = express.Router();
 const { getJobByCode, searchJobByName, getJobList, createJob, updateJob, deleteJob, getClassifications, getMajors } = require('../controllers/jobController');
 const { getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore, getJobRecommendT2BySurveyId } = require('../controllers/recommendController');
 const { getApprovedReviews, submitReview } = require('../controllers/reviewController');
-const { getJobRecruitment } = require('../controllers/recruitmentController');
+const { getJobRecruitment, getJobGroupRecruitment } = require('../controllers/recruitmentController');
+const { getJobGroupRecommend } = require('../controllers/jobGroupController');
 const adminAuth = require('../middleware/adminAuth');
+const { authenticate } = require('../middleware/auth');
 
 /**
  * @swagger
@@ -520,6 +522,55 @@ router.get('/search', searchJobByName);
 router.get('/recommend/:survey_id', getJobRecommendBySurveyId);
 router.get('/recommend-t2/:survey_id', getJobRecommendT2BySurveyId);
 router.post('/recommend', postJobRecommend);
+/**
+ * @swagger
+ * /api/job/recommend-groups/{survey_id}:
+ *   get:
+ *     summary: 나에게 맞는 직무 3가지 (결과지 종합 추천, 2026-11-09)
+ *     tags: [Job]
+ *     security: [{ bearerAuth: [] }]
+ *     description: |
+ *       직무 = 고용24 채용 직종 **중분류**(3자리, 114개). 직업 점수(537개)는 /recommend 와 같은 것을 묶어 다시 본다.
+ *       고르기는 직무 크기 보정 점수(무작위 응답 분포의 표준점수, 대분류당 2개까지), 순서는 막대 종합(.2/.7/.1).
+ *       match_detail = 대표 직업(jobs 앞 3개)의 영역별 일치도 평균. 막대 3개는 직업 추천과 같은 식으로 그린다.
+ *       reasons = 결과지 항목 이름(성격 Top 3·재능 Top 3·가치관 1~3순위·관심 분야) 중 이 직무의 대표 직업들이 중요하게 쓰는 것(0~2개).
+ *       jobs = 이 직무의 직업 전부(나와 맞는 순, 공유 그룹은 한 자리 + members). jobCount = 공유 그룹을 풀어 센 직업 수.
+ *       본인 검사만 조회할 수 있다(분석 API 와 같은 소유권 확인).
+ *     parameters:
+ *       - in: path
+ *         name: survey_id
+ *         required: true
+ *         schema: { type: string }
+ *     responses:
+ *       200: { description: '{ survey_id, groups: [{ code, name, fullName, match_detail: { T1, T21, T22, T23, T3 }, reasons: [{ axis: T1|T21|T22|T23, code, name }], jobs: [{ jobCode, title, members? }], jobCount }] }' }
+ *       401: { description: 로그인 필요 }
+ *       403: { description: 다른 사람의 검사 }
+ *       404: { description: 검사 결과 없음 }
+ */
+router.get('/recommend-groups/:survey_id', authenticate, getJobGroupRecommend);
+/**
+ * @swagger
+ * /api/job/groups/{code}/recruitment:
+ *   get:
+ *     summary: 직무 단위 채용공고 — 결과지 직무 카드의 '채용 공고' (2026-11-09)
+ *     tags: [Job]
+ *     description: |
+ *       code = 고용24 채용 직종 중분류(3자리, '01A' 처럼 영문자가 섞이기도 한다).
+ *       채용정보 occupation·공채속보 jobsCd 에 그 코드를 그대로 넣는다(하위 직종까지 검색된다).
+ *       응답 data 는 /{jobCode}/recruitment 와 같은 모양. 직무별 6시간 캐시.
+ *     parameters:
+ *       - in: path
+ *         name: code
+ *         required: true
+ *         schema: { type: string }
+ *       - in: query
+ *         name: limit
+ *         schema: { type: integer, default: 10, maximum: 20 }
+ *     responses:
+ *       200: { description: '{ group: { code, name, fullName }, data: { postings, sources, openings, cached } }' }
+ *       404: { description: 없는 직무 코드 }
+ */
+router.get('/groups/:code/recruitment', getJobGroupRecruitment);
 router.post('/', adminAuth, createJob);
 /**
  * @swagger

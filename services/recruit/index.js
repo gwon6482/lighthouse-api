@@ -3,6 +3,8 @@
 // 출처 추가(사람인·잡코리아 등): providers/<id>.js 를 만들고 아래 PROVIDERS 에 넣으면 끝이다.
 //   출처 모듈 약속: { id, name, enabled(): boolean, search(job, { limit, signal }) → { total, moreUrl, postings } }
 //   선택: searchOpenings(job, { limit, signal }) → { total, scope, openings } — 기업 공개채용(공채). 없는 출처는 안 만들면 된다
+//   선택: searchGroup(code, …) · searchGroupOpenings(code, …) — 직무(고용24 채용 직종 중분류 3자리) 단위.
+//         결과지 직무 카드의 '채용 공고'(2026-11-09). 없는 출처는 직무 화면에서 빠진다
 //   - 직업 연결은 출처마다 다르다(고용24 = KECO, 사람인·잡코리아 = 각자의 직종코드) → 출처 안에서 한다
 //   - 공고는 아래 Posting 모양으로 돌려준다. 앱은 이 모양만 안다
 //   - IP 등록이 필요한 출처(잡코리아)는 고정 출구 lighthouse-egress(54.117.34.116)를 거쳐 호출할 것
@@ -66,16 +68,28 @@ async function withTimeout(fn) {
  * @param {{ jobCode: string, title: string, work24?: object }} job
  * @returns {Promise<{ postings: Posting[], sources: object[], openings: object[], cached: boolean }>}
  */
-async function getRecruitment(job, { limit = 10 } = {}) {
-  const key = `${job.jobCode}:${limit}`;
+function getRecruitment(job, { limit = 10 } = {}) {
+  return collect(job, { key: `${job.jobCode}:${limit}`, label: `job=${job.jobCode}`, searchFn: 'search', openingsFn: 'searchOpenings' }, limit);
+}
+
+/**
+ * 직무(고용24 채용 직종 중분류 3자리) 단위 — 결과지 직무 카드의 '채용 공고'. 모양은 getRecruitment 와 같다
+ * @param {string} code  services/jobGroups/codes.js isGroupCode 로 확인한 코드
+ */
+function getGroupRecruitment(code, { limit = 10 } = {}) {
+  return collect(code, { key: `group:${code}:${limit}`, label: `group=${code}`, searchFn: 'searchGroup', openingsFn: 'searchGroupOpenings' }, limit);
+}
+
+// target = 직업 문서 또는 직무 코드. 출처 모듈의 어느 함수를 부를지(searchFn·openingsFn 이름)만 다르다
+async function collect(target, { key, label, searchFn, openingsFn }, limit) {
   const hit = cache.get(key);
   if (hit && Date.now() - hit.at < CACHE_TTL_MS) return { ...hit.value, cached: true };
 
-  const active = PROVIDERS.filter((p) => p.enabled());
+  const active = PROVIDERS.filter((p) => p.enabled() && p[searchFn]);
   const [settled, openSettled] = await Promise.all([
-    Promise.allSettled(active.map((p) => withTimeout((signal) => p.search(job, { limit, signal })))),
-    Promise.allSettled(active.filter((p) => p.searchOpenings).map((p) =>
-      withTimeout((signal) => p.searchOpenings(job, { limit: OPENINGS_LIMIT, signal })).then((r) => ({ ...r, p })))),
+    Promise.allSettled(active.map((p) => withTimeout((signal) => p[searchFn](target, { limit, signal })))),
+    Promise.allSettled(active.filter((p) => p[openingsFn]).map((p) =>
+      withTimeout((signal) => p[openingsFn](target, { limit: OPENINGS_LIMIT, signal })).then((r) => ({ ...r, p })))),
   ]);
 
   const sources = [];
@@ -88,7 +102,7 @@ async function getRecruitment(job, { limit = 10 } = {}) {
     } else {
       const msg = r.reason?.name === 'AbortError' ? '응답 지연' : String(r.reason?.message ?? r.reason).slice(0, 120);
       sources.push({ id: p.id, name: p.name, ok: false, error: msg });
-      console.warn(`[recruit] ${p.id} 실패 job=${job.jobCode}: ${msg}`);
+      console.warn(`[recruit] ${p.id} 실패 ${label}: ${msg}`);
     }
   });
 
@@ -106,7 +120,7 @@ async function getRecruitment(job, { limit = 10 } = {}) {
   const openings = openSettled
     .filter((r) => r.status === 'fulfilled' && r.value.openings.length)
     .map(({ value: { p, total, scope, openings: items } }) => ({ source: p.id, sourceName: p.name, total, scope, items }));
-  openSettled.filter((r) => r.status === 'rejected').forEach((r) => console.warn(`[recruit] 공채 실패 job=${job.jobCode}: ${String(r.reason?.message ?? r.reason).slice(0, 120)}`));
+  openSettled.filter((r) => r.status === 'rejected').forEach((r) => console.warn(`[recruit] 공채 실패 ${label}: ${String(r.reason?.message ?? r.reason).slice(0, 120)}`));
 
   const value = { postings: postings.slice(0, limit), sources, openings };
 
@@ -118,4 +132,4 @@ async function getRecruitment(job, { limit = 10 } = {}) {
   return { ...value, cached: false };
 }
 
-module.exports = { getRecruitment, PROVIDERS };
+module.exports = { getRecruitment, getGroupRecruitment, PROVIDERS };

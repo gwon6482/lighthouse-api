@@ -1,6 +1,7 @@
 // GET /api/job/:jobCode/recruitment — 진로백과 '채용' 탭. 출처별 채용공고를 한 모양으로(services/recruit)
 const mongoose = require('mongoose');
-const { getRecruitment } = require('../services/recruit');
+const { getRecruitment, getGroupRecruitment } = require('../services/recruit');
+const { groupInfo } = require('../services/jobGroups/codes');
 
 const jobInfo = () => mongoose.connection.useDb(process.env.JOB_DATA_DB || 'job_data').collection('job_info');
 const MAX_LIMIT = 20;
@@ -22,4 +23,19 @@ const getJobRecruitment = async (req, res, next) => {
   }
 };
 
-module.exports = { getJobRecruitment };
+// GET /api/job/groups/:code/recruitment — 결과지 직무 카드의 '채용 공고'(2026-11-09).
+// 직무 = 고용24 채용 직종 중분류(3자리, '01A' 처럼 영문자가 섞이기도 한다). 모양은 직업 채용 탭과 같고 group 이 더 붙는다
+const getJobGroupRecruitment = async (req, res, next) => {
+  try {
+    const info = groupInfo(String(req.params.code).toUpperCase());
+    if (!info) return res.status(404).json({ success: false, error: '직무를 찾을 수 없습니다.' });
+    const limit = Math.min(MAX_LIMIT, Math.max(1, parseInt(req.query.limit, 10) || 10));
+
+    const data = await getGroupRecruitment(info.code, { limit });
+    res.json({ success: true, group: { code: info.code, name: info.name, fullName: info.fullName }, data });
+  } catch (err) {
+    next(err);
+  }
+};
+
+module.exports = { getJobRecruitment, getJobGroupRecruitment };

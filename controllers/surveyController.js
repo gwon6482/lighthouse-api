@@ -1009,5 +1009,7 @@ module.exports = {
   updateSurveyStatistics,
   getSurveyStatistics,
   getSurveyResultList,
-  buildSurveyAnalysis
+  buildSurveyAnalysis,
+  // 직무 추천(jobGroupController)도 결과지 항목 이름을 내보내므로 같은 소유권 확인을 쓴다
+  ensureSurveyOwnership
 };

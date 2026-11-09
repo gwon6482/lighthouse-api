@@ -331,16 +331,20 @@ function buildUserSurvey(surveyResult) {
 // '현재 직업과의 매칭도' 에서 이 직업 종사자에게 '481위' 를 보여주면 적합도가 아니라 데이터 공백을 보여주는 셈이다.
 const UNRANKABLE_JOBS = new Set(['420301']);
 
-async function runRecommend(userSurvey, { limit = 10, primary = null, minScore = 0, focusJobCode = null } = {}) {
-  const [t3Parts, Job] = await Promise.all([getT3Parts(), Promise.resolve(getJobModel())]);
+// 채점에 쓰는 직업 데이터 — 메모리에 10분 둔다(2026-11-09).
+// 결과 화면이 직업 추천과 직무 추천을 **함께** 불러 요청마다 537개(약 2.5MB)를 Atlas 에서 두 번 받게 됐다.
+// 운영에서 직업 추천 응답(~2초)의 대부분이 이 조회였다. 직업 데이터는 한 달에 한 번 바뀐다(work24-refresh, 매월 2일)
+// — 갱신 뒤 최대 10분 옛 값을 쓰는 것은 괜찮다. ⚠️ 받은 문서를 고치지 말 것(모든 요청이 같은 객체를 쓴다)
+const JOBS_TTL_MS = 10 * 60 * 1000;
+let _jobsCache = null;   // { at, promise }
 
-  const filter = {};
-  if (primary) filter['classification.primary'] = primary;
-
-  const jobs = await Job.find(filter, {
+function loadScoringJobs() {
+  if (_jobsCache && Date.now() - _jobsCache.at < JOBS_TTL_MS) return _jobsCache.promise;
+  const promise = getJobModel().find({}, {
     jobCode: 1, title: 1, classification: 1, salary: 1, jobSatisfaction: 1,
     // 공유 그룹 접기용. `work24.jobCd` 가 그룹의 정체성이다(같은 jobCd = 고용24가 한 직업으로 조사).
     dataSource: 1, 'work24.jobCd': 1, 'work24.jobNm': 1,
+    'work24.keco.code': 1,             // 직무(채용 직종 중분류) 연결용
     'details.성격.중요도.직업간':       1,
     'details.흥미.중요도.직업간':       1,
     'details.가치관.중요도.직업간':     1,
@@ -348,11 +352,32 @@ async function runRecommend(userSurvey, { limit = 10, primary = null, minScore =
     'details.업무활동.중요도.직업간':   1,
     'details.업무환경.중요도.직업간':   1,
     _id: 0,
-  }).lean();
+  }).lean().exec();   // ⚠️ exec() — Query 는 thenable 이라 두 번 기다리면 'Query was already executed' 로 깨진다
+  _jobsCache = { at: Date.now(), promise };   // 동시에 들어온 요청은 같은 조회를 기다린다
+  promise.catch(() => { if (_jobsCache?.promise === promise) _jobsCache = null; });   // 실패를 10분 붙들지 않게
+  return promise;
+}
+
+// 직업 전부(537)의 점수 — **정렬된** `{ job, total, totalExact, detail }` 배열.
+// 직업 추천(runRecommend)과 직무 추천(services/jobGroups/recommend.js, 2026-11-09)이 같이 쓴다.
+// 정렬 규칙이 여기 한 곳에만 있어야 두 화면의 순위가 갈라지지 않는다.
+async function scoreJobs(userSurvey, { primary = null } = {}) {
+  const [t3Parts, all] = await Promise.all([getT3Parts(), loadScoringJobs()]);
+  const jobs = primary ? all.filter((j) => j.classification?.primary === primary) : all;
+
+  // ⚠️ `total`(3자리) 이 아니라 **원점수**로 정렬한다. 위 calcTotalMatch 주석 참조.
+  // 그래도 남는 동점은 **공유 그룹**이다(전문의 13종처럼 details 가 실제로 동일한 경우).
+  // 그때는 직업코드로 끊어 **순서를 결정적으로** 만든다 — 문서 순서에 맡기지 않는다.
+  return jobs
+    .map((job) => ({ job, ...calcTotalMatch(userSurvey, job, t3Parts) }))
+    .sort((a, b) => (b.totalExact - a.totalExact) || a.job.jobCode.localeCompare(b.job.jobCode));
+}
+
+async function runRecommend(userSurvey, { limit = 10, primary = null, minScore = 0, focusJobCode = null } = {}) {
+  const scored = await scoreJobs(userSurvey, { primary });
 
   const results = [];
-  for (const job of jobs) {
-    const { total, totalExact, detail } = calcTotalMatch(userSurvey, job, t3Parts);
+  for (const { job, total, detail } of scored) {
     if (total < minScore) continue;
     results.push({
       jobCode: job.jobCode,
@@ -362,19 +387,13 @@ async function runRecommend(userSurvey, { limit = 10, primary = null, minScore =
       match_detail: detail,
       salary: job.salary ?? null,
       jobSatisfaction: job.jobSatisfaction ?? null,
-      _exact: totalExact,          // 정렬 전용. 응답 직전에 제거한다
       _groupKey: job.dataSource === 'work24-shared' ? (job.work24?.jobCd ?? null) : null,
       _groupName: job.work24?.jobNm ?? null,
     });
   }
 
-  // ⚠️ `match_score`(3자리) 가 아니라 **원점수**로 정렬한다. 위 calcTotalMatch 주석 참조.
-  // 그래도 남는 동점은 **공유 그룹**이다(전문의 13종처럼 details 가 실제로 동일한 경우).
-  // 그때는 직업코드로 끊어 **순서를 결정적으로** 만든다 — 문서 순서에 맡기지 않는다.
-  results.sort((a, b) => (b._exact - a._exact) || a.jobCode.localeCompare(b.jobCode));
-
   const collapsed = collapseSharedGroups(results);
-  for (const r of collapsed) { delete r._exact; delete r._groupKey; delete r._groupName; }
+  for (const r of collapsed) { delete r._groupKey; delete r._groupName; }
 
   const shown = Math.min(limit, 30);
   let focus = null;
@@ -397,7 +416,7 @@ async function runRecommend(userSurvey, { limit = 10, primary = null, minScore =
   }
 
   return {
-    total_jobs: jobs.length,
+    total_jobs: scored.length,
     data: collapsed.slice(0, shown),
     focus,
   };
@@ -816,6 +835,8 @@ module.exports = {
   getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore, getJobRecommendT2BySurveyId,
   // 연구 설문 결과(`researchSurveyController.getResearchResult`)가 앱 추천과 **같은 경로**로 계산한다.
   runRecommend, buildUserSurvey,
+  // 직무 추천(services/jobGroups/recommend.js)이 직업 점수·순위정규화·공유 그룹 접기를 그대로 쓴다
+  scoreJobs, buildScoreMap, weightedJobScore, collapseSharedGroups,
   // 아래는 **검증·테스트 전용 노출**이다. 라우트에서 쓰지 않는다.
   // 점수 로직을 스크립트에서 다시 구현하면 원본과 조용히 갈라지므로 같은 함수를 부른다.
   __test__: {

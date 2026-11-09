@@ -9,7 +9,9 @@ const { XMLParser } = require('fast-xml-parser');
 
 const LIST_URL = 'https://www.work24.go.kr/cm/openApi/call/wk/callOpenApiSvcInfo210L01.do';
 const OPEN_URL = 'https://www.work24.go.kr/cm/openApi/call/wk/callOpenApiSvcInfo210L21.do'; // 공채속보
-const TREE = require('../../../config/work24OccupationTree.json'); // 세분류 → 중·대분류(scripts/work24-occupation-tree.js)
+// 직업 → 직무(채용 직종 중분류) 연결은 결과지 직무 카드와 **같은 규칙**을 쓴다(2026-11-09) —
+//   트리의 superCd 하나만 보면 여러 상위에 실린 세분류에서 엉뚱한 공채가 나왔다(한식 조리사 → 제과·제빵)
+const { groupOf, groupInfo } = require('../../jobGroups/codes');
 const SEARCH_PAGE = 'https://www.work24.go.kr/wk/a/b/1200/retriveDtlEmpSrchList.do';
 const parser = new XMLParser({ ignoreAttributes: true, parseTagValue: false, trimValues: true });
 const asArray = (v) => (v == null ? [] : Array.isArray(v) ? v : [v]);
@@ -43,6 +45,69 @@ function occupationOf(job) {
   return /^\d{4}$/.test(String(k ?? '')) ? `${k}00` : null;
 }
 
+/** 채용정보 목록 — occupation 은 세분류(6자리)든 중분류(3자리)든 하위 직종까지 찾는다 */
+async function postingsOf(occupation, { limit, signal }) {
+  const qs = new URLSearchParams({
+    authKey: process.env.WORK24_KEY_RECRUIT, callTp: 'L', returnType: 'XML',
+    startPage: '1', display: String(limit), occupation, sortOrderBy: 'DESC',
+  });
+  const root = (await fetchXml(`${LIST_URL}?${qs}`, signal))?.wantedRoot ?? {};
+
+  const postings = asArray(root.wanted).map((w) => {
+    const close = String(w.closeDt ?? '');
+    return {
+      id: `work24:${w.wantedAuthNo}`,
+      source: 'work24',
+      sourceName: '고용24',
+      title: w.title ?? '',
+      company: w.company ?? '',
+      region: w.region ?? '',
+      salary: [w.salTpNm, w.sal].filter(Boolean).join(' '),
+      career: w.career ?? '',
+      education: w.minEdubg ?? '',
+      employmentType: EMP_TYPE[w.empTpCd] ?? '',
+      workSchedule: w.holidayTpNm ?? '',
+      postedAt: ymd(w.regDt),
+      // '채용시까지 26-12-14' 처럼 문구와 날짜가 함께 오기도 한다
+      deadline: { date: ymd(close), untilFilled: close.includes('채용시까지'), label: close.replace(/\s+/g, ' ').trim() },
+      url: w.wantedInfoUrl ?? null,
+      mobileUrl: w.wantedMobileInfoUrl ?? null,
+    };
+  });
+  // 고용24 웹 검색도 중분류 코드로 걸러진다(024 → 3,958건, 2026-11-09 확인)
+  return { total: Number(root.total ?? postings.length), moreUrl: `${SEARCH_PAGE}?occupation=${occupation}`, postings };
+}
+
+/** 공채속보 — 중분류(3자리) 하나 */
+async function openingsOf(mid, { limit, signal }) {
+  const today = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10); // KST
+
+  const qs = new URLSearchParams({
+    authKey: process.env.WORK24_KEY_RECRUIT, callTp: 'L', returnType: 'XML',
+    startPage: '1', display: String(Math.max(limit * 2, 20)), jobsCd: mid, sortField: 'regDt', sortOrderBy: 'desc',
+  });
+  const root = (await fetchXml(`${OPEN_URL}?${qs}`, signal))?.dhsOpenEmpInfoList ?? {};
+  const openings = asArray(root.dhsOpenEmpInfo)
+    .map((o) => ({
+      id: `work24-open:${o.empSeqno}`,
+      source: 'work24',
+      sourceName: '고용24',
+      company: o.empBusiNm ?? '',
+      companyType: o.coClcdNm ?? '',
+      title: o.empWantedTitle ?? '',
+      startDate: ymd8(o.empWantedStdt),
+      endDate: ymd8(o.empWantedEndt),
+      employmentTypes: String(o.empWantedTypeNm ?? '').split('|').filter(Boolean),
+      // 로고는 http 로 온다 — 앱(https)에서 섞인 콘텐츠로 막히므로 https 로(같은 주소에서 응답 확인)
+      logoUrl: o.regLogImgNm ? String(o.regLogImgNm).replace(/^http:/, 'https:') : null,
+      url: o.empWantedMobileUrl || o.empWantedHomepgDetail || null,
+    }))
+    .filter((o) => !o.endDate || o.endDate >= today); // 마감 지난 공고가 섞여 오기도 한다
+  // 화면 이름 = 결과지 직무 카드와 같은 이름(공식 이름은 괄호 설명까지 길다: '수의사(수의사보조원 포함)·약사…')
+  const name = groupInfo(mid)?.name ?? mid;
+  return { total: Number(root.total ?? openings.length), scope: { code: mid, name }, openings: openings.slice(0, limit) };
+}
+
 module.exports = {
   id: 'work24',
   name: '고용24',
@@ -51,38 +116,10 @@ module.exports = {
   /**
    * @returns {Promise<{ total: number, moreUrl: string|null, postings: import('../index').Posting[] }>}
    */
-  async search(job, { limit, signal }) {
+  async search(job, opts) {
     const occupation = occupationOf(job);
     if (!occupation) return { total: 0, moreUrl: null, postings: [], skipped: '직종코드 연결 없음' };
-
-    const qs = new URLSearchParams({
-      authKey: process.env.WORK24_KEY_RECRUIT, callTp: 'L', returnType: 'XML',
-      startPage: '1', display: String(limit), occupation, sortOrderBy: 'DESC',
-    });
-    const root = (await fetchXml(`${LIST_URL}?${qs}`, signal))?.wantedRoot ?? {};
-
-    const postings = asArray(root.wanted).map((w) => {
-      const close = String(w.closeDt ?? '');
-      return {
-        id: `work24:${w.wantedAuthNo}`,
-        source: 'work24',
-        sourceName: '고용24',
-        title: w.title ?? '',
-        company: w.company ?? '',
-        region: w.region ?? '',
-        salary: [w.salTpNm, w.sal].filter(Boolean).join(' '),
-        career: w.career ?? '',
-        education: w.minEdubg ?? '',
-        employmentType: EMP_TYPE[w.empTpCd] ?? '',
-        workSchedule: w.holidayTpNm ?? '',
-        postedAt: ymd(w.regDt),
-        // '채용시까지 26-12-14' 처럼 문구와 날짜가 함께 오기도 한다
-        deadline: { date: ymd(close), untilFilled: close.includes('채용시까지'), label: close.replace(/\s+/g, ' ').trim() },
-        url: w.wantedInfoUrl ?? null,
-        mobileUrl: w.wantedMobileInfoUrl ?? null,
-      };
-    });
-    return { total: Number(root.total ?? postings.length), moreUrl: `${SEARCH_PAGE}?occupation=${occupation}`, postings };
+    return postingsOf(occupation, opts);
   },
 
   /**
@@ -92,35 +129,13 @@ module.exports = {
    * ⚠️ 대분류로 넓히지 않는다: 한식조리사 → '화학·섬유·식품가공' → 제약사 공채처럼 무관한 공고가 나온다(시험 후 뺐다)
    * @returns {Promise<{ total: number, scope: {code: string, name: string}|null, openings: Opening[] }>}
    */
-  async searchOpenings(job, { limit, signal }) {
-    const occ = occupationOf(job);
-    const mid = occ && TREE.parent[occ];
+  async searchOpenings(job, opts) {
+    const mid = groupOf(job);
     if (!mid) return { total: 0, scope: null, openings: [], skipped: '직종코드 연결 없음' };
-    const today = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10); // KST
-
-    const qs = new URLSearchParams({
-      authKey: process.env.WORK24_KEY_RECRUIT, callTp: 'L', returnType: 'XML',
-      startPage: '1', display: String(Math.max(limit * 2, 20)), jobsCd: mid, sortField: 'regDt', sortOrderBy: 'desc',
-    });
-    const root = (await fetchXml(`${OPEN_URL}?${qs}`, signal))?.dhsOpenEmpInfoList ?? {};
-    const openings = asArray(root.dhsOpenEmpInfo)
-      .map((o) => ({
-        id: `work24-open:${o.empSeqno}`,
-        source: 'work24',
-        sourceName: '고용24',
-        company: o.empBusiNm ?? '',
-        companyType: o.coClcdNm ?? '',
-        title: o.empWantedTitle ?? '',
-        startDate: ymd8(o.empWantedStdt),
-        endDate: ymd8(o.empWantedEndt),
-        employmentTypes: String(o.empWantedTypeNm ?? '').split('|').filter(Boolean),
-        // 로고는 http 로 온다 — 앱(https)에서 섞인 콘텐츠로 막히므로 https 로(같은 주소에서 응답 확인)
-        logoUrl: o.regLogImgNm ? String(o.regLogImgNm).replace(/^http:/, 'https:') : null,
-        url: o.empWantedMobileUrl || o.empWantedHomepgDetail || null,
-      }))
-      .filter((o) => !o.endDate || o.endDate >= today); // 마감 지난 공고가 섞여 오기도 한다
-    // 괄호 설명은 화면 이름으로 길다: '수의사(수의사보조원 포함)·약사…' → '수의사·약사…'
-    const name = String(TREE.names[mid] ?? '').replace(/\s*\([^)]*\)/g, '');
-    return { total: Number(root.total ?? openings.length), scope: { code: mid, name }, openings: openings.slice(0, limit) };
+    return openingsOf(mid, opts);
   },
+
+  // 직무(중분류 3자리) — 결과지 직무 카드의 '채용 공고'(2026-11-09). 채용정보·공채속보 둘 다 3자리를 받는다(024 → 138건·20건 실측)
+  searchGroup: (code, opts) => postingsOf(code, opts),
+  searchGroupOpenings: (code, opts) => openingsOf(code, opts),
 };
