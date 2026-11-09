@@ -12,6 +12,7 @@ const JobReview = require('../models/JobReview');
 const { ROLES, CAREER_YEARS, AGE_GROUPS, GENDERS } = ResearchSurveyResult;
 const { buildSurveyAnalysis } = require('./surveyController');
 const { runRecommend, buildUserSurvey } = require('./recommendController');
+const { recommendJobGroups } = require('../services/jobGroups/recommend');
 
 // Phase 1 목표 (사용자 결정 2026-10-05). 어드민 현황판이 이 값을 기준으로 충족률을 보여준다.
 const PHASE1_TARGET = { practitioner: 100, prospective: 200 };
@@ -238,8 +239,8 @@ const submitResearchResponse = async (req, res, next) => {
 /**
  * GET /api/survey/research/result/:respondent_id  (공개)
  *
- * 응답자 본인에게 보여주는 결과지 + 추천 직업 5개. 앱 결과와 **같은 함수**로 계산한다
- * (`buildSurveyAnalysis` · `runRecommend`). 화면도 앱과 같아야 참여 보상이 된다.
+ * 응답자 본인에게 보여주는 결과지 + 추천 직업 5개 + 직무 3가지(`groups`, 2026-11-09). 앱 결과와 **같은 함수**로 계산한다
+ * (`buildSurveyAnalysis` · `runRecommend` · `recommendJobGroups`). 화면도 앱과 같아야 참여 보상이 된다.
  *
  * ⚠️ 완주본만 준다(409). 부분 응답으로 결과를 내면 빈 파트가 '낮은 점수' 처럼 보인다.
  * ⚠️ respondent_id 는 서버가 만든 72비트 난수라 **링크를 가진 사람만** 볼 수 있다.
@@ -263,9 +264,10 @@ const getResearchResult = async (req, res, next) => {
     // 연구 설문은 5지선다(A~E)만 쓴다. answers 구조는 survey_results 와 같다.
     // 실무자는 '현재 직업과의 매칭도' 를 함께 준다(추천 계산에서 꺼낸다 — 추가 계산 없음)
     const currentJobCode = doc.respondent?.role === 'practitioner' ? doc.respondent?.jobCode : null;
+    const userSurvey = buildUserSurvey(doc);
     const [analysis, recommend, review] = await Promise.all([
       buildSurveyAnalysis({ answers: doc.answers, answer_type: 'type_5' }),
-      runRecommend(buildUserSurvey(doc), { limit: 5, focusJobCode: currentJobCode }),
+      runRecommend(userSurvey, { limit: 5, focusJobCode: currentJobCode }),
       // 결과 링크로 다시 온 실무자에게 [직업 후기 남기기]를 띄울지 — 이미 보냈으면(응답자당 1건) 숨긴다
       currentJobCode ? JobReview.exists({ respondentId: doc.respondent_id }) : null,
     ]);
@@ -276,11 +278,20 @@ const getResearchResult = async (req, res, next) => {
       ? { ...recommend.focus, selected: { jobCode: currentJobCode, title: doc.respondent.jobTitle ?? recommend.focus.title } }
       : null;
 
+    // 나에게 맞는 직무 3가지(2026-11-09) — 앱 결과지와 같은 계산. 이유 문장의 이름이 결과지와 같아야 해서 analysis 다음에 부른다.
+    // 실패해도 결과지는 준다 — 랜딩은 groups 가 비면 예전 직업 Top 5 를 보여 준다
+    let groups = [];
+    try {
+      groups = await recommendJobGroups(userSurvey, analysis);
+    } catch (e) {
+      console.warn(`[research-result] 직무 추천 실패 ${respondent_id}: ${String(e?.message ?? e).slice(0, 120)}`);
+    }
+
     // 결과지(PDF)의 '검사일'. ⚠️ submitted_at 은 **첫 중간 저장** 시각이라 쓰지 않는다.
     //    완주본은 더 이상 갱신되지 않으므로(409) updated_at 이 곧 완주 시각이다.
     // 연령대·성별·직업은 싣지 않는다 — 결과 링크는 주소만 알면 누구나 연다.
     res.json({
-      success: true, respondent_id, completed_at: doc.updated_at, analysis, recommend: recommend.data, currentJob,
+      success: true, respondent_id, completed_at: doc.updated_at, analysis, recommend: recommend.data, currentJob, groups,
       // null = 실무자가 아니라 후기 대상이 아님
       reviewSubmitted: currentJobCode ? !!review : null,
     });
