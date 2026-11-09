@@ -5,6 +5,8 @@ const {
   submitSurveyResponse,
   getSurveyReport,
   getSurveyAnalysis,
+  getGuestSurveyAnalysis,
+  deleteGuestSurvey,
   getT1Result,
   updateSurveyStatistics,
   getSurveyStatistics,
@@ -484,6 +486,30 @@ router.post('/report', adminAuth, getSurveyReport);
  *                       description: 분석 결과 데이터
  */
 router.get('/analysis/:survey_id', authenticate, getSurveyAnalysis);
+/**
+ * @swagger
+ * /api/survey/guest/{survey_id}/analysis:
+ *   get:
+ *     summary: 비회원(회원 가입 전) 검사 결과 — 열람 키 필요 (2026-11-09)
+ *     tags: [Survey]
+ *     description: |
+ *       로그인 없이 제출한 검사는 응답에 guestKey 를 받는다(서버엔 해시만). 이 키를 헤더 x-guest-key 로 보내야 결과를 준다.
+ *       결과는 전부 준다(본인 응답) — 일부 공개·잠금은 화면이 한다. 없거나 키가 틀리면 똑같이 404.
+ *       가입하지 않으면 제출 24시간 뒤 TTL 로 삭제된다(처리방침 제3조).
+ *     parameters:
+ *       - { in: path, name: survey_id, required: true, schema: { type: string } }
+ *       - { in: header, name: x-guest-key, required: true, schema: { type: string } }
+ *     responses:
+ *       200: { description: '{ survey_id, answer_type, analysis, expireAt }' }
+ *       404: { description: 없음·키 틀림·삭제됨 }
+ *   delete:
+ *     summary: 비회원 검사 응답 즉시 삭제 — 가입하지 않고 나갈 때 (열람 키 필요)
+ *     tags: [Survey]
+ *     responses:
+ *       200: { description: 늘 성공(없어도) }
+ */
+router.get('/guest/:survey_id/analysis', researchSurveyLimiter, getGuestSurveyAnalysis);
+router.delete('/guest/:survey_id', researchSurveyLimiter, deleteGuestSurvey);
 
 /**
  * @swagger

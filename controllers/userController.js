@@ -1,5 +1,6 @@
 const User = require('../models/User');
 const SurveyResult = require('../models/SurveyResult');
+const { guestKeyMatches } = require('../services/guestSurvey');
 // 삭제 로직은 services/userPurge 한 곳에만 둔다 — 관리자 삭제(adminUserController)와 공유한다.
 const { purgeUser } = require('../services/userPurge');
 const mongoose = require('mongoose');
@@ -108,8 +109,22 @@ const addSurveyResult = async (req, res, next) => {
       return res.status(409).json({ success: false, error: '이미 연결된 survey_id입니다' });
     }
 
+    // 🔒 2026-11-09: 남의 검사는 연결하지 않는다(전에는 로그인만 하면 아무 survey_id 나 붙일 수 있었다).
+    //    비회원 응답은 열람 키(guestKey)가 맞아야 한다 — survey_id 는 시각 형식이라 추측할 수 있다
+    const owner = await User.findOne({ surveyResults: survey_id }).select('uid').lean();
+    if (owner) {
+      return res.status(403).json({ success: false, error: '다른 계정에 연결된 검사입니다' });
+    }
+    if (survey.guest?.keyHash && !guestKeyMatches(survey, req.body.guestKey)) {
+      return res.status(403).json({ success: false, error: '이 기기에서 한 검사만 연결할 수 있습니다' });
+    }
+
     user.surveyResults.push(survey_id);
     await user.save();
+    // 계정에 연결된 순간부터는 회원 정보와 같은 기간 — 열람 키와 24시간 삭제를 거둔다
+    if (survey.guest?.keyHash) {
+      await SurveyResult.updateOne({ _id: survey._id }, { $set: { 'guest.keyHash': null, expireAt: null } });
+    }
 
     res.status(201).json({
       success: true,

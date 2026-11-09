@@ -7,6 +7,7 @@ const T1Type = require('../models/T1Type');
 const CareerAttribute = require('../models/CareerAttribute');
 const User = require('../models/User');
 const T3_RESULT_TEXTS = require('../config/t3ResultTexts');
+const { newGuestKey, hashGuestKey, guestKeyMatches, optionalUser } = require('../services/guestSurvey');
 
 // 검사결과 소유권 확인. 인증된 사용자의 것이면 허용하고,
 // 아직 아무에게도 연결되지 않은(orphan/링크 지연) survey_id는 본인에게 귀속(claim-on-read)해
@@ -24,6 +25,13 @@ async function ensureSurveyOwnership(req, res, survey_id) {
     return false;
   }
   if (!owner) {
+    // 🔒 비회원 응답은 조회만으로 가져가지 못한다(2026-11-09) — survey_id 는 추측할 수 있다.
+    //    열람 키를 들고 계정 연결(POST /api/user/survey-results)을 거쳐야 한다
+    const doc = await SurveyResult.findOne({ survey_id }, { 'guest.keyHash': 1 }).lean();
+    if (doc?.guest?.keyHash) {
+      res.status(403).json({ success: false, error: '가입 후 계정에 연결된 검사만 볼 수 있습니다' });
+      return false;
+    }
     await User.updateOne({ uid }, { $addToSet: { surveyResults: survey_id } });
   }
   return true;
@@ -221,6 +229,10 @@ const submitSurveyResponse = async (req, res) => {
     }
 
     // 4. 응답원본 + 환산응답 + T1_result DB에 업로드
+    // 로그인했으면 그 자리에서 계정에 연결한다(전에는 FE 가 따로 연결해, 그 사이 추측한 survey_id 로 가로챌 틈이 있었다).
+    // 비회원이면 열람 키를 만들어 응답자에게만 주고, 24시간 뒤 TTL 이 지운다(처리방침 제3조, 2026-11-09)
+    const viewer = optionalUser(req);
+    const guestKey = viewer ? null : newGuestKey();
     const saved = await SurveyResult.create({
       survey_id: data.survey_id,
       respondent_id: data.respondent_id || null,
@@ -228,8 +240,10 @@ const submitSurveyResponse = async (req, res) => {
       converted_answers,
       T1_result,
       raw_payload: data,
-      submitted_at: new Date()
+      submitted_at: new Date(),
+      ...(guestKey ? { guest: { keyHash: hashGuestKey(guestKey) }, expireAt: new Date(Date.now() + SurveyResult.GUEST_RETENTION_MS) } : {}),
     });
+    if (viewer?.uid) await User.updateOne({ uid: viewer.uid }, { $addToSet: { surveyResults: data.survey_id } });
     //console.log('save:', saved);
 
 
@@ -386,7 +400,8 @@ const submitSurveyResponse = async (req, res) => {
     updatedStats.generated_at = new Date();
     await SurveyStatistics.create(updatedStats);
 
-    res.status(201).json({ success: true, result: saved, converted_answers });
+    const { guest, ...result } = saved.toObject();   // 키 해시는 내보내지 않는다
+    res.status(201).json({ success: true, result, converted_answers, ...(guestKey ? { guestKey } : {}) });
   } catch (error) {
     console.error('설문 응답 저장/통계 갱신 오류:', error);
     res.status(500).json({ success: false, error: '설문 응답 저장/통계 갱신 중 오류가 발생했습니다', message: error.message });
@@ -469,6 +484,41 @@ const getSurveyReport = async (req, res) => {
   } catch (error) {
     console.error('설문 결과 조회 오류:', error);
     res.status(500).json({ success: false, error: '설문 결과 조회 중 오류가 발생했습니다', message: error.message });
+  }
+};
+
+// 비회원 결과 조회 (GET /api/survey/guest/:survey_id/analysis, 헤더 x-guest-key) — 2026-11-09
+// 결과는 전부 준다(본인 응답이다). 일부만 보여 주고 나머지를 잠그는 것은 화면이 한다
+const getGuestSurveyAnalysis = async (req, res) => {
+  try {
+    const { survey_id } = req.params;
+    const doc = await SurveyResult.findOne({ survey_id }).lean();
+    if (!doc || !guestKeyMatches(doc, req.get('x-guest-key'))) {
+      // 없는 검사와 키가 틀린 경우를 구분하지 않는다(번호 추측에 단서를 주지 않게)
+      return res.status(404).json({ success: false, error: '결과를 찾을 수 없습니다. 이미 삭제됐을 수 있어요.' });
+    }
+    const answer_type = doc.raw_payload?.answer_type;
+    const analysis = await buildSurveyAnalysis({ answers: doc.answers, answer_type, T1_result: doc.T1_result || null });
+    res.json({ success: true, survey_id, answer_type, analysis, expireAt: doc.expireAt });
+  } catch (error) {
+    console.error('비회원 결과 조회 오류:', error);
+    res.status(500).json({ success: false, error: '결과 조회 중 오류가 발생했습니다' });
+  }
+};
+
+// 비회원 응답 삭제 (DELETE /api/survey/guest/:survey_id, 헤더 x-guest-key) — 가입하지 않고 나갈 때(처리방침 '즉시 삭제')
+const deleteGuestSurvey = async (req, res) => {
+  try {
+    const { survey_id } = req.params;
+    const doc = await SurveyResult.findOne({ survey_id }, { guest: 1 }).lean();
+    if (doc && guestKeyMatches(doc, req.get('x-guest-key'))) {
+      await SurveyResult.deleteOne({ _id: doc._id, 'guest.keyHash': doc.guest.keyHash });
+    }
+    // 없거나 이미 지워졌어도 성공으로 — 나가는 사람에게 실패를 보일 이유가 없다
+    res.json({ success: true });
+  } catch (error) {
+    console.error('비회원 응답 삭제 오류:', error);
+    res.status(500).json({ success: false, error: '삭제 중 오류가 발생했습니다' });
   }
 };
 
@@ -1011,5 +1061,7 @@ module.exports = {
   getSurveyResultList,
   buildSurveyAnalysis,
   // 직무 추천(jobGroupController)도 결과지 항목 이름을 내보내므로 같은 소유권 확인을 쓴다
-  ensureSurveyOwnership
+  ensureSurveyOwnership,
+  getGuestSurveyAnalysis,
+  deleteGuestSurvey
 };
