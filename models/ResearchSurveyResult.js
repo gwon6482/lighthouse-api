@@ -82,10 +82,37 @@ const researchSurveyResultSchema = new mongoose.Schema({
   },
 
   submitted_at: { type: Date, default: Date.now, index: true },
+
+  // 보유기간이 끝나는 시각 — 이 시각이 지나면 Mongo TTL 이 문서를 지운다(아래 인덱스, 2026-11-09).
+  // 처리방침 제3조: "끝까지 완료한 응답은 수집일로부터 3년, 중간에 그만둔 응답은 수집일로부터 6개월".
+  // 수집일 = 첫 저장(submitted_at). 이어 쓰기로 완주하면 같은 수집일에서 3년으로 다시 잡는다(expireAtOf).
+  // ⚠️ 값이 없는 문서는 TTL 이 건드리지 않는다 — 배포 때 services/researchRetention.js 가 채운다
+  expireAt: { type: Date, default: null },
 }, { timestamps: { createdAt: 'submitted_at', updatedAt: 'updated_at' } });
 
 // 수집 현황 집계용. 어드민이 "대분류별 유효 응답 수" 를 자주 본다.
 researchSurveyResultSchema.index({ 'respondent.role': 1, completed: 1, 'respondent.jobPrimary': 1 });
+// 보유기간 자동 삭제 — 문서마다 expireAt 에 지운다(완주·미완주 기간이 달라 문서별 시각을 쓴다)
+researchSurveyResultSchema.index({ expireAt: 1 }, { expireAfterSeconds: 0 });
+
+// 보유 개월 수 — 처리방침 제3조와 같게. ⚠️ 바꾸려면 처리방침부터 고칠 것
+const RETENTION_MONTHS = { completed: 36, incomplete: 6 };
+
+// 달 더하기 — 없는 날은 그달 말일로(8/31 + 6개월 = 2/28). Date#setMonth 는 3/3 으로 넘어가 약속한 기간을 며칠 넘긴다
+function addMonths(date, months) {
+  const d = new Date(date);
+  const day = d.getUTCDate();
+  d.setUTCDate(1);
+  d.setUTCMonth(d.getUTCMonth() + months);
+  const last = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 0)).getUTCDate();
+  d.setUTCDate(Math.min(day, last));
+  return d;
+}
+
+/** 수집일·완주 여부 → 보유기간이 끝나는 시각 */
+function expireAtOf(collectedAt, completed) {
+  return addMonths(collectedAt, completed ? RETENTION_MONTHS.completed : RETENTION_MONTHS.incomplete);
+}
 
 const surveyDataDb = mongoose.connection.useDb(process.env.SURVEY_DATA_DB || 'survey_data');
 
@@ -95,6 +122,8 @@ module.exports = surveyDataDb.model(
   'survey_results_research',
 );
 module.exports.ROLES = ROLES;
+module.exports.RETENTION_MONTHS = RETENTION_MONTHS;
+module.exports.expireAtOf = expireAtOf;
 module.exports.CAREER_YEARS = CAREER_YEARS;
 module.exports.AGE_GROUPS = AGE_GROUPS;
 module.exports.GENDERS = GENDERS;

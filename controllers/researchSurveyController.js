@@ -9,7 +9,7 @@ const crypto = require('crypto');
 const mongoose = require('mongoose');
 const ResearchSurveyResult = require('../models/ResearchSurveyResult');
 const JobReview = require('../models/JobReview');
-const { ROLES, CAREER_YEARS, AGE_GROUPS, GENDERS } = ResearchSurveyResult;
+const { ROLES, CAREER_YEARS, AGE_GROUPS, GENDERS, expireAtOf } = ResearchSurveyResult;
 const { buildSurveyAnalysis } = require('./surveyController');
 const { runRecommend, buildUserSurvey } = require('./recommendController');
 const { recommendJobGroups } = require('../services/jobGroups/recommend');
@@ -203,6 +203,10 @@ const submitResearchResponse = async (req, res, next) => {
         userAgent: (req.get('user-agent') || '').slice(0, 300),
       },
     };
+
+    // 보유기간(처리방침 제3조) — 수집일(첫 저장)부터 완주 3년 · 중간에 그만둔 응답 6개월. 지나면 TTL 이 지운다
+    // 이어 쓰기는 처음 저장한 날을 기준으로 다시 잡는다(완주하면 6개월 → 3년)
+    fields.expireAt = expireAtOf(existing ? existing.submitted_at : new Date(), completed);
 
     let doc;
     if (existing) {

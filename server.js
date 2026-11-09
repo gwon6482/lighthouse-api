@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const connectDB = require('./config/database');
+const { ensureResearchExpireAt } = require('./services/researchRetention');
 const errorHandler = require('./middleware/error');
 const questionEditorAuth = require('./middleware/questionEditorAuth'); // x-question-key(문항 수정만) 또는 x-admin-key
 const scheduleKeyAuth = require('./middleware/scheduleKeyAuth'); // x-schedule-key(일정 항목 조회·추가·수정만)
@@ -31,8 +32,9 @@ const app = express();
 // 1로 한정해 클라이언트가 위조한 XFF 값은 무시되도록 한다(레이트리밋 우회 방지).
 app.set('trust proxy', 1);
 
-// MongoDB 연결
-connectDB();
+// MongoDB 연결 — 연결되면 연구 설문 응답의 보유기간(expireAt)이 빈 문서를 채운다(services/researchRetention.js).
+// 실제 삭제는 TTL 인덱스가 한다. 연결 실패는 connectDB 가 프로세스를 끝낸다
+connectDB().then(() => ensureResearchExpireAt());
 
 // 미들웨어
 // ⚠️ **압축은 다른 미들웨어보다 먼저** 둔다. 뒤에 두면 이미 전송이 시작된 응답을 못 잡는다.
