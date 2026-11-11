@@ -12,6 +12,7 @@ const {
   getSurveyStatistics,
   getSurveyResultList
 } = require('../controllers/surveyController');
+const { getGuestJobGroupTeaser } = require('../controllers/jobGroupController');
 const adminAuth = require('../middleware/adminAuth');
 const { researchSurveyLimiter } = require('../middleware/rateLimit');
 const { submitResearchResponse, getResearchResult, getResearchStats, submitResearchReview } = require('../controllers/researchSurveyController');
@@ -510,6 +511,23 @@ router.get('/analysis/:survey_id', authenticate, getSurveyAnalysis);
  */
 router.get('/guest/:survey_id/analysis', researchSurveyLimiter, getGuestSurveyAnalysis);
 router.delete('/guest/:survey_id', researchSurveyLimiter, deleteGuestSurvey);
+/**
+ * @swagger
+ * /api/survey/guest/{survey_id}/job-groups:
+ *   get:
+ *     summary: 비회원 결과지의 '직무 맛보기' — 1위 직무 이름과 개수만 (열람 키 필요, 2026-11-11)
+ *     tags: [Survey]
+ *     description: |
+ *       잠금 화면에 '나에게 맞는 직무 1위'와 '관련 직업 n개'만 보여주려고 쓴다. 계산은 /api/job/recommend-groups 와 같다.
+ *       2·3위·추천 이유·직업 목록은 주지 않는다(가입 뒤 회원 API 로). 없거나 키가 틀리면 404.
+ *     parameters:
+ *       - { in: path, name: survey_id, required: true, schema: { type: string } }
+ *       - { in: header, name: x-guest-key, required: true, schema: { type: string } }
+ *     responses:
+ *       200: { description: '{ survey_id, top: { code, name } | null, groupCount, jobCount }' }
+ *       404: { description: 없음·키 틀림·삭제됨 }
+ */
+router.get('/guest/:survey_id/job-groups', researchSurveyLimiter, getGuestJobGroupTeaser);
 
 /**
  * @swagger
