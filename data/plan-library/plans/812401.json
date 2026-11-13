@@ -1,0 +1,161 @@
+{
+ "jobCode": "812401",
+ "title": "자동차정비원",
+ "displayName": "자동차 정비사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 자동차정비기능사가 기본 증빙이다. 자격과 정비소 경험을 함께 쌓는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.am-basics",
+   "name": "자동차 구조와 원리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "엔진·변속기·제동·전기 장치의 구조와 작동을 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "구조",
+     "items": [
+      "엔진·동력 전달",
+      "제동·조향·현가",
+      "전기·전자 장치"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.am-diag",
+   "name": "진단기 사용과 고장 진단",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "진단기로 고장 코드를 읽고 원인을 좁혀 간다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "도구",
+     "items": [
+      "진단기·멀티미터 사용",
+      "회로도 읽기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "진단",
+     "items": [
+      "증상별 점검 순서",
+      "실습 차량 고장 찾기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.am-ev",
+   "name": "전기차·하이브리드 정비 교육",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "고전압 안전과 전기차 구조 교육을 수료한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "교육",
+     "items": [
+      "고전압 안전",
+      "배터리·모터 구조",
+      "점검 실습"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "제조사·공공 교육 과정이 있다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.am-basics",
+   "step": 2,
+   "major": false,
+   "skip": "자동차 전공 과목에서 배운다"
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 3,
+   "major": true,
+   "note": "폴리텍·직업훈련 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "자동차정비기능사"
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.am-diag",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 7,
+   "major": true,
+   "note": "정비소 근무"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 8,
+   "major": true,
+   "note": "자동차정비산업기사",
+   "optional": true
+  },
+  {
+   "ref": "p.am-ev",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

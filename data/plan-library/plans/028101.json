@@ -23,39 +23,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.tr-basics",
-   "name": "무역 실무 기본",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "lecture",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "계약부터 통관·결제까지 수출입의 흐름을 설명한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "흐름",
-     "items": [
-      "무역 계약과 인코텀즈",
-      "결제 방식(송금·신용장)",
-      "통관과 관세"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "서류",
-     "items": [
-      "인보이스·패킹리스트",
-      "선하증권",
-      "원산지 증명"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.tr-docs",
    "name": "수출입 서류 작성 실습",
    "type": "skill",
@@ -127,7 +94,7 @@
    "major": true
   },
   {
-   "ref": "p.tr-basics",
+   "ref": "cp.trade-basics",
    "step": 2,
    "major": true
   },

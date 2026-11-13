@@ -1,0 +1,255 @@
+{
+ "jobCode": "414301",
+ "title": "만화가",
+ "displayName": "웹툰 작가",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이나 채용 절차가 없다. 그림·이야기 실력을 단편과 연재로 보여 주고 공모전·플랫폼 투고로 데뷔한다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.wt-draw",
+   "name": "드로잉 기초",
+   "type": "skill",
+   "subtype": "design",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "인체·원근·구도를 갖춘 컷을 그린다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "기초",
+     "items": [
+      "인체 비례와 동세",
+      "원근과 배경",
+      "표정과 손"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "응용",
+     "items": [
+      "컷 구도 연습",
+      "컬러와 명암",
+      "매일 크로키"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.wt-tool",
+   "name": "디지털 작화 도구 익히기",
+   "type": "skill",
+   "subtype": "design",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "작화 프로그램으로 스케치부터 채색·식자까지 한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기능",
+     "items": [
+      "레이어·펜 설정",
+      "컷 나누기·말풍선",
+      "3D 소재·배경"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "작업",
+     "items": [
+      "한 화 분량 따라 그리기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.wt-story",
+   "name": "스토리와 콘티 작법",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "로그라인·시놉시스·콘티로 이야기를 설계한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이야기",
+     "items": [
+      "캐릭터와 갈등",
+      "3막 구조",
+      "세로 스크롤 연출"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "콘티",
+     "items": [
+      "단편 콘티 2편",
+      "피드백 받아 고치기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.wt-short",
+   "name": "단편 완성하기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 150,
+   "goal": "30~60컷 단편을 끝까지 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "시놉시스·콘티"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "작화",
+     "items": [
+      "스케치",
+      "선화·채색",
+      "식자·효과"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "공개",
+     "items": [
+      "공개하고 반응 확인"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.wt-serial",
+   "name": "도전 연재와 공모전 투고",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 180,
+   "goal": "플랫폼 도전 코너에 10화 이상 연재하고 공모전에 낸다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "3화 분량 비축",
+      "연재 계획"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "연재",
+     "items": [
+      "주 1화 업로드",
+      "댓글·지표 확인",
+      "공모전·투고"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "플랫폼별 투고 방식과 공모전 일정 확인"
+  },
+  {
+   "id": "p.wt-assist",
+   "name": "어시스턴트 경험",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 300,
+   "goal": "작가 작업실에서 배경·채색을 맡아 본다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "구인 글 찾기",
+      "포트폴리오 제출"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "작업",
+     "items": [
+      "맡은 공정 작업",
+      "마감 흐름 익히기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.wt-draw",
+   "step": 1,
+   "major": false,
+   "skip": "만화·애니메이션 전공 실기에서 배운다"
+  },
+  {
+   "ref": "p.wt-tool",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.wt-story",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.wt-short",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.wt-assist",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.wt-serial",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 7,
+   "major": true,
+   "note": "SNS 연재",
+   "optional": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,201 @@
+{
+ "jobCode": "615301",
+ "title": "온라인판매원",
+ "displayName": "이커머스 운영자",
+ "family": "sales",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 직접 팔아 본 경험과 숫자로 보여 주는 운영 기록이 가장 강한 증빙이다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ec-store",
+   "name": "스토어 열고 상품 등록하기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "오픈마켓에 스토어를 열고 상품을 등록한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "개설",
+     "items": [
+      "판매자 가입과 정산 구조",
+      "통신판매업 신고"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "등록",
+     "items": [
+      "상품 소싱",
+      "상품명·옵션·가격",
+      "배송 설정"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "사업자 등록과 신고 절차를 확인할 것"
+  },
+  {
+   "id": "p.ec-detail",
+   "name": "상세페이지 기획과 제작",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "구매를 이끄는 상세페이지를 기획해 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "잘 팔리는 상세페이지 분석"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "제작",
+     "items": [
+      "구성안·카피",
+      "촬영·디자인",
+      "전환율 보고 고치기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ec-ad",
+   "name": "쇼핑 광고 운영",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "검색·쇼핑 광고를 집행하고 수익률로 판단한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "구조",
+     "items": [
+      "쇼핑 광고 방식",
+      "키워드와 입찰"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "집행",
+     "items": [
+      "소액 집행",
+      "광고 수익률 기록",
+      "상품·키워드 조정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ec-own",
+   "name": "내 스토어 3개월 운영 기록",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "매출·광고·재고 지표와 개선 과정을 문서로 남긴다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "운영",
+     "items": [
+      "주간 지표 기록",
+      "상품·가격·광고 실험",
+      "고객 문의 대응"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "성과와 배운 점 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ec-store",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.ec-detail",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.adobe",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.ec-ad",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.ga4",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "p.ec-own",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

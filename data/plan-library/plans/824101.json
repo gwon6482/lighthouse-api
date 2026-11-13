@@ -1,0 +1,154 @@
+{
+ "jobCode": "824101",
+ "title": "용접원(용접기조작원)",
+ "displayName": "용접사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 용접 기능사가 기본 증빙이고, 현장에서는 실력 검정과 경력을 본다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.wd-basics",
+   "name": "용접 기초와 안전",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "용접법의 원리와 화재·감전·흄에 대한 안전 수칙을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기초",
+     "items": [
+      "용접법 종류와 원리",
+      "보호구와 안전 수칙",
+      "결함 종류"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.wd-skill",
+   "name": "용접법별 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 180,
+   "goal": "주요 용접법으로 자세별 용접을 해낸다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "기본",
+     "items": [
+      "피복 아크 용접",
+      "이산화탄소 아크 용접"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "응용",
+     "items": [
+      "가스 텅스텐 아크(TIG) 용접",
+      "자세별 맞대기·필릿",
+      "파괴 시험 통과 수준까지"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.wd-pipe",
+   "name": "배관·특수 용접 검정",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "academy",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 180,
+   "goal": "배관 용접 등 현장이 요구하는 기량 검정에 합격한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "훈련",
+     "items": [
+      "파이프 전 자세 용접",
+      "재료별 용접",
+      "검정 응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "검정 종류는 업종(조선·플랜트)마다 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.wd-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 3,
+   "major": true,
+   "note": "국비 용접 과정"
+  },
+  {
+   "ref": "p.wd-skill",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 5,
+   "major": true,
+   "note": "용접 종목 기능사(종목 구성은 큐넷 확인)"
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 7,
+   "major": true,
+   "note": "조선·플랜트·제작 업체"
+  },
+  {
+   "ref": "p.wd-pipe",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 10,
+   "major": true,
+   "note": "실기 테스트를 본다"
+  }
+ ],
+ "byTrack": {}
+}

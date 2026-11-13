@@ -1,0 +1,158 @@
+{
+ "jobCode": "812101",
+ "title": "항공기정비원",
+ "displayName": "항공 정비사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "항공정비사 자격증명이 있어야 정비 확인 업무를 할 수 있다. 국토교통부 지정 전문교육기관을 거치는 길이 일반적이다.",
+ "gate": "항공정비사 자격증명(항공안전법) — 지정 전문교육기관 이수 또는 정비 경력 뒤 학과·실기 시험",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.av-school",
+   "name": "항공정비 전문교육기관 과정",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "지정 교육기관의 과정을 이수한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "선택",
+     "items": [
+      "대학·전문교육기관 비교",
+      "지정 여부 확인"
+     ]
+    },
+    {
+     "weeks": 80,
+     "title": "과정",
+     "items": [
+      "항공 역학·기체·엔진·전자",
+      "정비 실습",
+      "항공 법규"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "군 정비 경력으로 응시하는 길도 있다"
+  },
+  {
+   "id": "p.av-license",
+   "name": "항공정비사 자격증명 시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "학과 시험과 실기 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "학과",
+     "items": [
+      "정비 일반·기체",
+      "발동기·전자 전기 계기",
+      "항공 법규"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기",
+     "items": [
+      "구술 예상 문제",
+      "작업형 실기"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.av-english",
+   "name": "항공 영어",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "영문 정비 교범과 작업 카드를 읽는다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "읽기",
+     "items": [
+      "정비 용어",
+      "교범 구조",
+      "작업 카드 해석"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.av-school",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.av-english",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.av-license",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 5,
+   "major": true,
+   "note": "항공사 지원 기준"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 6,
+   "major": true,
+   "note": "항공산업기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 7,
+   "major": true,
+   "note": "항공사·정비 업체 인턴",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "자격증명 요건은 항공안전법 시행규칙이 정본"
+}

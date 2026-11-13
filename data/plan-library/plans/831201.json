@@ -1,0 +1,142 @@
+{
+ "jobCode": "831201",
+ "title": "내선전기공",
+ "displayName": "전기공",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "전기기능사가 기본 증빙이다. 자격과 현장 경력을 쌓아 전기공사 기술자로 올라간다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ew-basics",
+   "name": "전기 기초와 안전",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "전압·전류·접지의 기본과 감전 예방 수칙을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이론",
+     "items": [
+      "회로 기초",
+      "전선·차단기 종류"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "안전",
+     "items": [
+      "감전·화재 예방",
+      "정전 작업 절차"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ew-wiring",
+   "name": "배관·배선 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 180,
+   "goal": "도면대로 배관·배선하고 기구를 결선한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "기본",
+     "items": [
+      "전선 접속",
+      "배관 가공",
+      "스위치·콘센트 결선"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "응용",
+     "items": [
+      "제어반 결선",
+      "도면대로 과제 완성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ew-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 3,
+   "major": true,
+   "note": "국비 전기 과정",
+   "optional": true
+  },
+  {
+   "ref": "p.ew-wiring",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 5,
+   "major": true,
+   "note": "전기기능사"
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 8,
+   "major": true,
+   "note": "전기공사 업체"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 9,
+   "major": true,
+   "note": "전기산업기사·전기공사산업기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

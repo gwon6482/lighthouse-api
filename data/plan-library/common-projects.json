@@ -4238,6 +4238,109 @@
     }
    ],
    "verify": "언론사에 따라 지원 요건이거나 가점이다"
+  },
+  {
+   "id": "cp.trade-basics",
+   "name": "무역 실무 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "계약부터 통관·결제까지 수출입의 흐름을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "흐름",
+     "items": [
+      "무역 계약과 인코텀즈",
+      "결제 방식(송금·신용장)",
+      "통관과 관세"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "서류",
+     "items": [
+      "인보이스·패킹리스트",
+      "선하증권",
+      "원산지 증명"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "biz",
+    "sales"
+   ],
+   "promotedFrom": "028101:p.tr-basics"
+  },
+  {
+   "id": "cp.shop-work",
+   "name": "현장 근무로 기술 익히기",
+   "type": "activity",
+   "subtype": "work",
+   "scope": "family",
+   "families": [
+    "tech",
+    "service"
+   ],
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "업체에서 일하며 작업 순서와 현장 규칙을 몸에 익힌다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "일하고 싶은 업체 찾기",
+      "근로 조건 확인",
+      "지원"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "근무",
+     "items": [
+      "보조 작업부터 맡기",
+      "선배 작업 방식 기록",
+      "혼자 하는 작업 늘리기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.drawing-reading",
+   "name": "도면 읽기",
+   "type": "skill",
+   "subtype": "field",
+   "scope": "family",
+   "families": [
+    "tech",
+    "eng"
+   ],
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "기계·전기·건축 도면의 기호와 치수를 읽는다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기호",
+     "items": [
+      "투상도·단면도",
+      "치수·공차·기호",
+      "실제 도면 10장 읽기"
+     ]
+    }
+   ]
   }
  ]
 }

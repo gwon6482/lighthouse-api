@@ -1,0 +1,191 @@
+{
+ "jobCode": "523001",
+ "title": "숙박시설서비스원",
+ "displayName": "호텔리어",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 외국어와 서비스 경험이 핵심이고 호텔 실습·아르바이트 경력을 본다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "front",
+   "name": "프런트",
+   "desc": "객실 예약·체크인"
+  },
+  {
+   "id": "fnb",
+   "name": "식음(F&B)",
+   "desc": "레스토랑·연회"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ht-basics",
+   "name": "호텔 운영 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "호텔의 부서 구조와 객실 상품, 등급 체계를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "구조",
+     "items": [
+      "객실·식음·연회 부서",
+      "객실 유형과 요금",
+      "호텔 브랜드와 등급"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ht-front",
+   "name": "프런트 업무와 응대 외국어",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "예약·체크인·컴플레인 응대를 외국어로 한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "업무",
+     "items": [
+      "예약·체크인·정산 흐름",
+      "호텔 관리 시스템 개념"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "응대",
+     "items": [
+      "상황별 영어 표현",
+      "컴플레인 응대 역할극"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ht-fnb",
+   "name": "식음 서비스 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "테이블 세팅과 서비스 순서, 음료 기초를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "서비스",
+     "items": [
+      "테이블 세팅·서빙 순서",
+      "메뉴·와인 기초",
+      "연회 서비스"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "응대",
+     "items": [
+      "주문 응대 역할극"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ht-basics",
+   "step": 2,
+   "major": false,
+   "skip": "호텔경영 전공 과목에서 배운다"
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.second-language",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 8,
+   "major": true,
+   "note": "호텔·연회 아르바이트"
+  },
+  {
+   "ref": "cp.internship",
+   "step": 9,
+   "major": true,
+   "note": "호텔 실습"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "front": [
+   {
+    "ref": "p.ht-front",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "fnb": [
+   {
+    "ref": "p.ht-fnb",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 7.5,
+    "major": true,
+    "note": "조주기능사",
+    "optional": true
+   }
+  ]
+ }
+}
