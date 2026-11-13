@@ -1,0 +1,110 @@
+{
+ "jobCode": "852201",
+ "title": "플라스틱제품생산기계조작원",
+ "displayName": "고무·플라스틱·화학제품 생산직",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 성형 설비를 운전하고 제품을 검사·조립한다. 화학 물질을 다루는 공정은 안전이 먼저다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "852401",
+   "title": "고무·플라스틱 제품 조립원",
+   "track": null
+  },
+  {
+   "jobCode": "852301",
+   "title": "화학제품생산기계조작원(고무·플라스틱 제외)",
+   "track": null
+  },
+  {
+   "jobCode": "852101",
+   "title": "타이어·고무제품생산기계조작원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.pl-molding",
+   "name": "사출·압출 성형 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "원료와 성형 조건이 제품 품질에 미치는 영향을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "원료와 배합",
+      "사출·압출 조건",
+      "성형 불량과 원인"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.operator-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.pl-molding",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "사출·화학 분야 기능사",
+   "optional": true
+  },
+  {
+   "ref": "cp.hazmat-cert",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 7,
+   "major": true,
+   "note": "대기업 생산직 인적성",
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 8,
+   "major": true,
+   "note": "제조 공장"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

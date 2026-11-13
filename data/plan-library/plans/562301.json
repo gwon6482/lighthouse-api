@@ -1,0 +1,97 @@
+{
+ "jobCode": "562301",
+ "title": "주차관리·안내원",
+ "displayName": "주차·검침·검표원",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 응대 태도와 성실함을 보고, 가스 점검원은 관련 자격을 우대한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "parking",
+   "name": "주차 관리",
+   "desc": "주차장 안내·정산"
+  },
+  {
+   "id": "meter",
+   "name": "검침·점검",
+   "desc": "전기·수도·가스 검침과 점검"
+  },
+  {
+   "id": "ticket",
+   "name": "검표",
+   "desc": "입장권 확인"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "562101",
+   "title": "계기검침원 및 가스점검원",
+   "track": "meter"
+  },
+  {
+   "jobCode": "562401",
+   "title": "검표원",
+   "track": "ticket"
+  }
+ ],
+ "projects": [],
+ "common": [
+  {
+   "ref": "cp.customer-service",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.computer-2",
+   "step": 3,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "parking": [
+   {
+    "ref": "cp.shop-work",
+    "step": 5,
+    "major": true,
+    "note": "주차 관리 업체·시설 공단"
+   }
+  ],
+  "meter": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "가스기능사 — 가스 점검원 우대",
+    "optional": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 5,
+    "major": true,
+    "note": "도시가스 고객 센터·검침 위탁 업체"
+   }
+  ],
+  "ticket": [
+   {
+    "ref": "cp.shop-work",
+    "step": 5,
+    "major": true,
+    "note": "극장·경기장·교통 시설"
+   }
+  ]
+ }
+}

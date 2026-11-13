@@ -1,0 +1,82 @@
+{
+ "jobCode": "532201",
+ "title": "홀서빙원",
+ "displayName": "식당 서비스·주방 보조",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 건강 진단을 받고 일하면서 익힌다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "hall",
+   "name": "홀",
+   "desc": "주문·서빙·계산"
+  },
+  {
+   "id": "kitchen",
+   "name": "주방 보조",
+   "desc": "재료 준비·설거지·조리 보조"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "532301",
+   "title": "주방보조원",
+   "track": "kitchen"
+  },
+  {
+   "jobCode": "532101",
+   "title": "패스트푸드준비원",
+   "track": "kitchen"
+  }
+ ],
+ "projects": [],
+ "common": [
+  {
+   "ref": "cp.health-cert",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.food-hygiene",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 4,
+   "major": true,
+   "note": "식당 근무"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "hall": [],
+  "kitchen": [
+   {
+    "ref": "cp.cooking-basics",
+    "step": 5,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 6,
+    "major": true,
+    "note": "조리기능사로 넓히기",
+    "optional": true
+   }
+  ]
+ }
+}

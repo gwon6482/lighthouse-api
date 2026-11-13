@@ -54,39 +54,6 @@
  ],
  "projects": [
   {
-   "id": "p.ck-basics",
-   "name": "칼질과 기본 조리법",
-   "type": "skill",
-   "subtype": "field",
-   "category": "skill",
-   "method": "practice",
-   "level": "입문",
-   "daysPerWeek": 4,
-   "minutesPerSession": 90,
-   "goal": "썰기와 굽기·볶기·끓이기·튀기기의 기본을 일정한 품질로 해낸다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "칼",
-     "items": [
-      "칼 잡는 법과 관리",
-      "기본 썰기 반복",
-      "재료 손질"
-     ]
-    },
-    {
-     "weeks": 4,
-     "title": "조리법",
-     "items": [
-      "불 조절",
-      "육수·소스 기본",
-      "같은 메뉴 반복해 맛 맞추기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.ck-menu",
    "name": "전공 요리 대표 메뉴 익히기",
    "type": "skill",
@@ -190,7 +157,7 @@
    "major": true
   },
   {
-   "ref": "p.ck-basics",
+   "ref": "cp.cooking-basics",
    "step": 2,
    "major": true
   },

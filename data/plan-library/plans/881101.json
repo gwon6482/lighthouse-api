@@ -1,0 +1,164 @@
+{
+ "jobCode": "881101",
+ "title": "인쇄기계조작원",
+ "displayName": "인쇄·목재·종이·포장 생산직",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 담당 설비를 운전하며 익히고, 인쇄는 색과 파일을 보는 눈이 필요하다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "print",
+   "name": "인쇄",
+   "desc": "인쇄·사진 출력"
+  },
+  {
+   "id": "wood",
+   "name": "목재·종이",
+   "desc": "목재 가공·제지"
+  },
+  {
+   "id": "pack",
+   "name": "포장",
+   "desc": "충전·포장·라벨"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "881201",
+   "title": "사진인화·현상기조작원(사진수정 포함)",
+   "track": "print"
+  },
+  {
+   "jobCode": "882301",
+   "title": "종이제품생산기계조작원",
+   "track": "wood"
+  },
+  {
+   "jobCode": "882101",
+   "title": "목재가공기계조작원",
+   "track": "wood"
+  },
+  {
+   "jobCode": "882201",
+   "title": "펄프·종이제조장치조작원",
+   "track": "wood"
+  },
+  {
+   "jobCode": "885902",
+   "title": "주입·포장·상표부착기계조작원",
+   "track": "pack"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.pr-process",
+   "name": "인쇄 공정 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "출력 준비부터 인쇄·후가공까지의 공정과 색 관리를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "출력 준비와 판",
+      "인쇄 방식과 색 맞추기",
+      "재단·제본 등 후가공"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.operator-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 6,
+   "major": true,
+   "note": "인쇄소·제조 공장"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "print": [
+   {
+    "ref": "p.pr-process",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "인쇄기능사",
+    "optional": true
+   },
+   {
+    "ref": "cp.adobe",
+    "step": 4.5,
+    "major": true,
+    "note": "인쇄용 파일 확인",
+    "optional": true
+   }
+  ],
+  "wood": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "목재 가공 분야 기능사",
+    "optional": true
+   },
+   {
+    "ref": "cp.drawing-reading",
+    "step": 4.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "pack": [
+   {
+    "ref": "cp.food-hygiene",
+    "step": 3,
+    "major": true,
+    "note": "식품 포장 라인",
+    "optional": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "지게차운전기능사",
+    "optional": true
+   }
+  ]
+ }
+}

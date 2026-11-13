@@ -63,31 +63,6 @@
    "basis": "law"
   },
   {
-   "id": "p.sg-train",
-   "name": "경비원 신임 교육",
-   "type": "cert",
-   "subtype": "basic",
-   "category": "qualification",
-   "method": "required_course",
-   "level": "입문",
-   "daysPerWeek": 5,
-   "minutesPerSession": 480,
-   "goal": "일반 또는 특수 경비원 신임 교육을 이수한다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "이수",
-     "items": [
-      "교육 기관 신청",
-      "이론·실무 교육",
-      "이수증"
-     ]
-    }
-   ],
-   "basis": "law",
-   "verify": "특수 경비는 교육 시간이 더 길다"
-  },
-  {
    "id": "p.sg-martial",
    "name": "무도 수련과 단증",
    "type": "skill",
@@ -109,37 +84,6 @@
     }
    ],
    "basis": "practice"
-  },
-  {
-   "id": "p.sg-manager",
-   "name": "경비지도사",
-   "type": "cert",
-   "subtype": "national-license",
-   "category": "qualification",
-   "method": "book",
-   "level": "중급",
-   "daysPerWeek": 5,
-   "minutesPerSession": 90,
-   "goal": "경비지도사 1차·2차 시험에 합격한다.",
-   "phases": [
-    {
-     "weeks": 8,
-     "title": "1차",
-     "items": [
-      "법학개론",
-      "민간 경비론"
-     ]
-    },
-    {
-     "weeks": 8,
-     "title": "2차",
-     "items": [
-      "경비업법",
-      "경호학 등 선택"
-     ]
-    }
-   ],
-   "basis": "law"
   }
  ],
  "common": [
@@ -154,7 +98,7 @@
    "major": true
   },
   {
-   "ref": "p.sg-train",
+   "ref": "cp.guard-training",
    "step": 3,
    "major": true
   },
@@ -176,7 +120,7 @@
    "major": true
   },
   {
-   "ref": "p.sg-manager",
+   "ref": "cp.security-manager",
    "step": 8,
    "major": true,
    "optional": true

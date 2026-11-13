@@ -1,0 +1,75 @@
+{
+ "jobCode": "616101",
+ "title": "매장계산원 및 요금정산원",
+ "displayName": "계산·매표원",
+ "family": "sales",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 정확한 계산과 친절한 응대가 기본이다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "616201",
+   "title": "매표원 및 복권판매원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.cs-pos",
+   "name": "계산대와 정산 업무 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "계산·환불·마감 정산을 실수 없이 한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "익히기",
+     "items": [
+      "계산대 사용",
+      "결제 수단과 환불",
+      "마감 정산"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.customer-service",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.cs-pos",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.computer-2",
+   "step": 3,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 4,
+   "major": true,
+   "note": "마트·편의점·매표소 근무"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 5,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

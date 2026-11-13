@@ -23,37 +23,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.fd-haccp",
-   "name": "HACCP 이해와 관리 계획",
-   "type": "edu",
-   "subtype": "required-course",
-   "category": "knowledge",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 2,
-   "minutesPerSession": 90,
-   "goal": "위해 요소를 분석하고 중요 관리점을 정하는 절차를 안다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "원칙",
-     "items": [
-      "HACCP 7원칙",
-      "선행 요건"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "적용",
-     "items": [
-      "공정 흐름도 그리기",
-      "관리 계획서 초안"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.fd-dev",
    "name": "제품 개발 프로젝트",
    "type": "output",
@@ -174,7 +143,7 @@
    "major": true
   },
   {
-   "ref": "p.fd-haccp",
+   "ref": "cp.haccp",
    "step": 5,
    "major": true
   },

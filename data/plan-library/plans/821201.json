@@ -1,0 +1,149 @@
+{
+ "jobCode": "821201",
+ "title": "금속가공기계조작원",
+ "displayName": "금속·비금속 생산기계 조작원",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 담당 설비를 표준대로 운전하고 품질과 안전을 지키는 일이다. 관련 기능사가 있으면 유리하다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "metal",
+   "name": "금속 가공",
+   "desc": "압연·열처리·가공 설비"
+  },
+  {
+   "id": "mineral",
+   "name": "비금속 제품",
+   "desc": "시멘트·유리·점토·석제품"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "821101",
+   "title": "금속가공제어장치조작원",
+   "track": "metal"
+  },
+  {
+   "jobCode": "826301",
+   "title": "시멘트·광물제품생산기계조작원",
+   "track": "mineral"
+  },
+  {
+   "jobCode": "826101",
+   "title": "유리·유리제품생산기계조작원",
+   "track": "mineral"
+  },
+  {
+   "jobCode": "826201",
+   "title": "점토제품생산기계조작원",
+   "track": "mineral"
+  },
+  {
+   "jobCode": "826401",
+   "title": "광석·석제품생산기계조작원",
+   "track": "mineral"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.op-process",
+   "name": "담당 공정과 설비 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "원료가 제품이 되는 공정과 설비의 운전 변수를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "공정 흐름",
+      "설비 구조와 운전 변수",
+      "불량 유형"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.operator-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.op-process",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.safety-law",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 7,
+   "major": true,
+   "note": "대기업 생산직 인적성",
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 8,
+   "major": true,
+   "note": "제조 공장"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "metal": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3.5,
+    "major": true,
+    "note": "금속 재료·압연·열처리 등 해당 분야 기능사",
+    "optional": true
+   }
+  ],
+  "mineral": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3.5,
+    "major": true,
+    "note": "세라믹·유리 등 해당 분야 기능사",
+    "optional": true
+   }
+  ]
+ }
+}

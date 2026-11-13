@@ -6045,6 +6045,413 @@
     "agri"
    ],
    "promotedFrom": "901201:p.fa-plan"
+  },
+  {
+   "id": "cp.store-management",
+   "name": "매장 손익과 인력 관리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "매출·원가·인건비로 매장 손익을 계산한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "관리",
+     "items": [
+      "손익 구조",
+      "근무표와 인력 관리",
+      "발주 계획"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "sales",
+    "service"
+   ],
+   "promotedFrom": "614001:p.rt-manage"
+  },
+  {
+   "id": "cp.security-manager",
+   "name": "경비지도사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "경비지도사 1차·2차 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "1차",
+     "items": [
+      "법학개론",
+      "민간 경비론"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "2차",
+     "items": [
+      "경비업법",
+      "경호학 등 선택"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "service"
+   ],
+   "promotedFrom": "541101:p.sg-manager"
+  },
+  {
+   "id": "cp.guard-training",
+   "name": "경비원 신임 교육",
+   "type": "cert",
+   "subtype": "basic",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "일반 또는 특수 경비원 신임 교육을 이수한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "이수",
+     "items": [
+      "교육 기관 신청",
+      "이론·실무 교육",
+      "이수증"
+     ]
+    }
+   ],
+   "verify": "특수 경비는 교육 시간이 더 길다",
+   "scope": "family",
+   "families": [
+    "service"
+   ],
+   "promotedFrom": "541101:p.sg-train"
+  },
+  {
+   "id": "cp.cooking-basics",
+   "name": "칼질과 기본 조리법",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "썰기와 굽기·볶기·끓이기·튀기기의 기본을 일정한 품질로 해낸다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "칼",
+     "items": [
+      "칼 잡는 법과 관리",
+      "기본 썰기 반복",
+      "재료 손질"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "조리법",
+     "items": [
+      "불 조절",
+      "육수·소스 기본",
+      "같은 메뉴 반복해 맛 맞추기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "service"
+   ],
+   "promotedFrom": "531201:p.ck-basics"
+  },
+  {
+   "id": "cp.cargo-license",
+   "name": "화물운송종사 자격시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "운전 적성 정밀검사를 받고 자격시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "운전 적성 정밀검사",
+      "화물 취급·안전 운행",
+      "응시와 교육"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "transport"
+   ],
+   "promotedFrom": "622201:p.dr-truck"
+  },
+  {
+   "id": "cp.textile-process",
+   "name": "방적·제직·염색 가공 공정 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "실에서 원단, 가공까지의 공정과 품질 항목을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "공정",
+     "items": [
+      "방적·제직·편직",
+      "염색·가공",
+      "원단 품질 시험"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "eng",
+    "tech"
+   ],
+   "promotedFrom": "156101:p.tx-process"
+  },
+  {
+   "id": "cp.haccp",
+   "name": "HACCP 이해와 관리 계획",
+   "type": "edu",
+   "subtype": "required-course",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "위해 요소를 분석하고 중요 관리점을 정하는 절차를 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "원칙",
+     "items": [
+      "HACCP 7원칙",
+      "선행 요건"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "공정 흐름도 그리기",
+      "관리 계획서 초안"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "eng",
+    "service",
+    "tech"
+   ],
+   "promotedFrom": "157101:p.fd-haccp"
+  },
+  {
+   "id": "cp.field-career",
+   "name": "분야 실무 경력 쌓기",
+   "type": "activity",
+   "subtype": "work",
+   "scope": "family",
+   "families": [
+    "biz",
+    "public",
+    "edu",
+    "sales",
+    "eng",
+    "service"
+   ],
+   "category": "experience",
+   "method": "etc",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "관리자가 되기 전에 그 분야의 실무자로 일하며 성과와 신뢰를 쌓는다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "진입",
+     "items": [
+      "관련 실무 직업으로 들어가기(해당 직업의 계획 참고)"
+     ]
+    },
+    {
+     "weeks": 150,
+     "title": "경력",
+     "items": [
+      "맡은 업무에서 성과 내기",
+      "여러 직무 경험하기",
+      "작은 조직·프로젝트 책임 맡기"
+     ]
+    }
+   ],
+   "verify": "필요한 경력 기간은 조직과 분야에 따라 크게 다르다"
+  },
+  {
+   "id": "cp.leadership",
+   "name": "리더십과 조직 관리",
+   "type": "skill",
+   "subtype": "common",
+   "scope": "family",
+   "families": [
+    "biz",
+    "public",
+    "edu",
+    "sales",
+    "eng",
+    "service"
+   ],
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "목표를 세워 팀을 이끌고 구성원을 평가·육성한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "목표 설정과 업무 배분",
+      "피드백과 면담",
+      "갈등 조정"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "작은 팀 이끌어 보기",
+      "회의 운영",
+      "성과 평가 해 보기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.mba",
+   "name": "경영 대학원(MBA)·전문 석사",
+   "type": "edu",
+   "subtype": "graduate",
+   "scope": "family",
+   "families": [
+    "biz",
+    "public",
+    "sales",
+    "eng",
+    "service"
+   ],
+   "category": "knowledge",
+   "method": "school",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "일을 하면서 경영이나 전문 분야 석사 과정을 마친다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "준비",
+     "items": [
+      "과정과 일정 비교",
+      "지원"
+     ]
+    },
+    {
+     "weeks": 90,
+     "title": "과정",
+     "items": [
+      "수업과 과제",
+      "학위 논문 또는 프로젝트"
+     ]
+    }
+   ],
+   "verify": "필수는 아니다. 야간·주말 과정이 많다"
+  },
+  {
+   "id": "cp.health-cert",
+   "name": "건강진단결과서(보건증) 발급",
+   "type": "cert",
+   "subtype": "basic",
+   "scope": "family",
+   "families": [
+    "service"
+   ],
+   "category": "qualification",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 60,
+   "goal": "식품을 다루는 일에 필요한 건강 진단을 받는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "발급",
+     "items": [
+      "보건소·병원 검사",
+      "결과서 발급"
+     ]
+    }
+   ],
+   "verify": "식품위생법에 따른 정기 검진 대상이다"
+  },
+  {
+   "id": "cp.operator-basics",
+   "name": "생산 설비 운전 기본",
+   "type": "skill",
+   "subtype": "field",
+   "scope": "family",
+   "families": [
+    "tech"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "표준 작업서대로 설비를 운전하고 품질과 안전을 지킨다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기본",
+     "items": [
+      "표준 작업서 읽기",
+      "설비 조작부와 비상 정지",
+      "보호구와 끼임 예방"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "운전",
+     "items": [
+      "일상 점검",
+      "불량 발견과 보고",
+      "정리 정돈"
+     ]
+    }
+   ]
   }
  ]
 }

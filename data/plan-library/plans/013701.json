@@ -1,0 +1,223 @@
+{
+ "jobCode": "013701",
+ "title": "정보통신관리자",
+ "displayName": "전문 분야 관리자",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "전문 분야의 실무자로 경력과 대표 성과를 쌓은 뒤 조직을 맡는 자리다. 분야마다 요구하는 자격과 경력이 다르다.",
+ "gate": "공개 채용으로 바로 들어가는 자리가 아니다. 해당 분야의 실무 경력을 쌓아 승진하거나 경력직으로 옮긴다",
+ "tracks": [
+  {
+   "id": "it",
+   "name": "정보 통신",
+   "desc": "IT 부서장·CTO"
+  },
+  {
+   "id": "research",
+   "name": "연구",
+   "desc": "연구소장·연구 책임자"
+  },
+  {
+   "id": "creative",
+   "name": "예술·디자인·방송",
+   "desc": "제작·디자인 책임자"
+  },
+  {
+   "id": "health",
+   "name": "보건·의료",
+   "desc": "병원 행정·의료 관리자"
+  },
+  {
+   "id": "welfare",
+   "name": "사회복지",
+   "desc": "복지 시설장"
+  },
+  {
+   "id": "safety",
+   "name": "경찰·소방·교정",
+   "desc": "간부"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "013101",
+   "title": "연구관리자",
+   "track": "research"
+  },
+  {
+   "jobCode": "013601",
+   "title": "예술·디자인·방송관리자",
+   "track": "creative"
+  },
+  {
+   "jobCode": "013401",
+   "title": "보건·의료관리자",
+   "track": "health"
+  },
+  {
+   "jobCode": "013501",
+   "title": "사회복지관리자",
+   "track": "welfare"
+  },
+  {
+   "jobCode": "013305",
+   "title": "경찰·소방·교도관리자",
+   "track": "safety"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.pm-cert",
+   "name": "프로젝트 관리 자격(PMP 등)",
+   "type": "cert",
+   "subtype": "international",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "프로젝트 관리 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "지식 체계 학습",
+      "모의 문제",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "응시하려면 프로젝트 관리 경력이 필요하다"
+  },
+  {
+   "id": "p.hm-cert",
+   "name": "병원 행정 관련 자격",
+   "type": "cert",
+   "subtype": "private-certified",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "병원 행정사 등 의료 경영 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "병원 경영·원무",
+      "의료 법규",
+      "기출"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "필수는 아니다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.leadership",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.fs-reading",
+   "step": 4,
+   "major": true,
+   "note": "예산 관리",
+   "optional": true
+  },
+  {
+   "ref": "cp.mba",
+   "step": 6,
+   "major": true,
+   "optional": true
+  }
+ ],
+ "byTrack": {
+  "it": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "개발·인프라 실무와 프로젝트 책임"
+   },
+   {
+    "ref": "p.pm-cert",
+    "step": 2,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "research": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "연구원 경력과 연구 책임자 경험"
+   },
+   {
+    "ref": "cp.lab-grad",
+    "step": 2,
+    "major": true,
+    "note": "박사 학위가 일반적이다"
+   }
+  ],
+  "creative": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "PD·디자이너 등 현업 경력과 대표작"
+   }
+  ],
+  "health": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "의료인 또는 병원 행정 경력"
+   },
+   {
+    "ref": "p.hm-cert",
+    "step": 2,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "welfare": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "사회복지사 경력 — 시설장은 법정 자격·경력 기준이 있다"
+   },
+   {
+    "ref": "cp.sw1",
+    "step": 2,
+    "major": true,
+    "note": "사회복지사 1급"
+   }
+  ],
+  "safety": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "경찰·소방·교정 공무원 임용 뒤 승진"
+   },
+   {
+    "ref": "cp.civil-special",
+    "step": 2,
+    "major": true,
+    "note": "간부 후보생 등 간부 선발",
+    "optional": true
+   }
+  ]
+ }
+}

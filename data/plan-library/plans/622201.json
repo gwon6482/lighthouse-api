@@ -88,30 +88,6 @@
    "basis": "law"
   },
   {
-   "id": "p.dr-truck",
-   "name": "화물운송종사 자격시험",
-   "type": "cert",
-   "subtype": "national-license",
-   "category": "qualification",
-   "method": "book",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 60,
-   "goal": "운전 적성 정밀검사를 받고 자격시험에 합격한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "준비",
-     "items": [
-      "운전 적성 정밀검사",
-      "화물 취급·안전 운행",
-      "응시와 교육"
-     ]
-    }
-   ],
-   "basis": "law"
-  },
-  {
    "id": "p.dr-taxi",
    "name": "택시운전 자격시험",
    "type": "cert",
@@ -233,7 +209,7 @@
     "major": true
    },
    {
-    "ref": "p.dr-truck",
+    "ref": "cp.cargo-license",
     "step": 3,
     "major": true
    }

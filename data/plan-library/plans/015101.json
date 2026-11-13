@@ -1,0 +1,154 @@
+{
+ "jobCode": "015101",
+ "title": "영업·판매관리자",
+ "displayName": "영업·서비스 관리자(점장·매니저)",
+ "family": "sales",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "현장에서 일하며 매출과 사람을 관리하는 경험을 쌓아 점장·매니저가 된다.",
+ "gate": "공개 채용으로 바로 들어가는 자리가 아니다. 해당 분야의 실무 경력을 쌓아 승진하거나 경력직으로 옮긴다",
+ "tracks": [
+  {
+   "id": "sales",
+   "name": "영업·판매",
+   "desc": "영업 팀장·판매 점장"
+  },
+  {
+   "id": "facility",
+   "name": "경비·청소",
+   "desc": "시설 관리 소장"
+  },
+  {
+   "id": "food",
+   "name": "음식 서비스",
+   "desc": "식당 점장·매니저"
+  },
+  {
+   "id": "hotel",
+   "name": "여행·호텔",
+   "desc": "호텔 지배인·지점장"
+  },
+  {
+   "id": "transport",
+   "name": "운송",
+   "desc": "운수·물류 관리자"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "014301",
+   "title": "경비·청소관리자",
+   "track": "facility"
+  },
+  {
+   "jobCode": "014201",
+   "title": "음식서비스관리자",
+   "track": "food"
+  },
+  {
+   "jobCode": "014103",
+   "title": "여행·호텔관리자",
+   "track": "hotel"
+  },
+  {
+   "jobCode": "015201",
+   "title": "운송관리자",
+   "track": "transport"
+  }
+ ],
+ "projects": [],
+ "common": [
+  {
+   "ref": "cp.customer-service",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.leadership",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.store-management",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.labor-law",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 6,
+   "major": true,
+   "optional": true
+  }
+ ],
+ "byTrack": {
+  "sales": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "영업·판매 실무와 실적"
+   }
+  ],
+  "facility": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "경비·미화 현장 경력"
+   },
+   {
+    "ref": "cp.security-manager",
+    "step": 7,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "food": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "식당·주방 실무"
+   },
+   {
+    "ref": "cp.food-hygiene",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "hotel": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "호텔·여행사 실무"
+   },
+   {
+    "ref": "cp.toeic",
+    "step": 7,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "transport": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "운수·물류 현장 실무"
+   },
+   {
+    "ref": "cp.logistics-cert",
+    "step": 7,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}

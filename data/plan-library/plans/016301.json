@@ -1,0 +1,116 @@
+{
+ "jobCode": "016301",
+ "title": "제조·생산관리자",
+ "displayName": "생산·건설 관리자",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "생산·시공·설비 운영의 실무 경력을 쌓아 공장장이나 현장 소장이 된다. 분야별 기술 자격이 법정 요건인 경우가 많다.",
+ "gate": "공개 채용으로 바로 들어가는 자리가 아니다. 해당 분야의 실무 경력을 쌓아 승진하거나 경력직으로 옮긴다",
+ "tracks": [
+  {
+   "id": "mfg",
+   "name": "제조",
+   "desc": "공장장·생산 부서장"
+  },
+  {
+   "id": "construction",
+   "name": "건설",
+   "desc": "현장 소장"
+  },
+  {
+   "id": "utility",
+   "name": "전기·가스·수도",
+   "desc": "설비 운영 책임자"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "016101",
+   "title": "건설·채굴관리자",
+   "track": "construction"
+  },
+  {
+   "jobCode": "016201",
+   "title": "전기·가스·수도관리자",
+   "track": "utility"
+  }
+ ],
+ "projects": [],
+ "common": [
+  {
+   "ref": "cp.leadership",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.safety-law",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.six-sigma",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.mba",
+   "step": 7,
+   "major": true,
+   "optional": true
+  }
+ ],
+ "byTrack": {
+  "mfg": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "생산 관리·품질·생산 기술 실무"
+   },
+   {
+    "ref": "cp.engineer-cert",
+    "step": 2,
+    "major": true,
+    "note": "분야 기사",
+    "optional": true
+   }
+  ],
+  "construction": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "시공 기술자 경력 — 현장 대리인은 기술 등급·경력 기준이 있다"
+   },
+   {
+    "ref": "cp.engineer-cert",
+    "step": 2,
+    "major": true,
+    "note": "건축·토목기사"
+   },
+   {
+    "ref": "cp.estimate-schedule",
+    "step": 6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "utility": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "전기·가스·상하수도 설비 운영 경력"
+   },
+   {
+    "ref": "cp.engineer-cert",
+    "step": 2,
+    "major": true,
+    "note": "전기·가스·에너지 분야 기사 — 법정 선임 자격"
+   }
+  ]
+ }
+}

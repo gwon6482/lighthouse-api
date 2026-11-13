@@ -1,0 +1,149 @@
+{
+ "jobCode": "861101",
+ "title": "섬유제조기계조작원",
+ "displayName": "섬유·의복·신발 생산직",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 담당 설비를 운전하며 익히고, 제화처럼 손기술이 필요한 분야는 기술을 따로 배운다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "textile",
+   "name": "섬유",
+   "desc": "방적·제직·염색 설비"
+  },
+  {
+   "id": "shoes",
+   "name": "제화·신발",
+   "desc": "구두·신발 제조"
+  },
+  {
+   "id": "laundry",
+   "name": "세탁 기계",
+   "desc": "산업 세탁 설비"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "861201",
+   "title": "직조기 및 편직기조작원",
+   "track": "textile"
+  },
+  {
+   "jobCode": "861301",
+   "title": "표백·염색기조작원",
+   "track": "textile"
+  },
+  {
+   "jobCode": "864301",
+   "title": "세탁기계조작원",
+   "track": "laundry"
+  },
+  {
+   "jobCode": "864101",
+   "title": "제화원",
+   "track": "shoes"
+  },
+  {
+   "jobCode": "864201",
+   "title": "신발제조기계조작원 및 조립원",
+   "track": "shoes"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.sh-make",
+   "name": "제화 기술 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "가죽을 재단하고 갑피와 저부를 만들어 구두를 완성한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "기술",
+     "items": [
+      "패턴과 재단",
+      "갑피 봉제",
+      "저부 작업과 마감"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.operator-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 6,
+   "major": true,
+   "note": "제조 공장·공방"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "textile": [
+   {
+    "ref": "cp.textile-process",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "염색 등 섬유 분야 기능사",
+    "optional": true
+   }
+  ],
+  "shoes": [
+   {
+    "ref": "p.sh-make",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "신발 분야 기능사",
+    "optional": true
+   }
+  ],
+  "laundry": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "세탁기능사",
+    "optional": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "jobCode": "617101",
+ "title": "홍보도우미 및 판촉원",
+ "displayName": "판촉 도우미",
+ "family": "sales",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 행사 대행사에 등록해 일을 받고, 제품 숙지와 응대로 평가받는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pr-product",
+   "name": "행사 제품 숙지와 시연 연습",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "제품의 특징을 외우고 시연과 권유 멘트를 준비한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "제품 특징과 가격",
+      "시연 순서",
+      "권유 멘트"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.customer-service",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.sales-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.voice-training",
+   "step": 3,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.pr-product",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 5,
+   "major": true,
+   "note": "판촉 대행사 등록·행사 근무"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

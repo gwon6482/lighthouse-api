@@ -53,30 +53,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.rt-manage",
-   "name": "매장 손익과 인력 관리",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "book",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 60,
-   "goal": "매출·원가·인건비로 매장 손익을 계산한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "관리",
-     "items": [
-      "손익 구조",
-      "근무표와 인력 관리",
-      "발주 계획"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.rt-plan",
    "name": "창업 계획서",
    "type": "output",
@@ -157,7 +133,7 @@
   ],
   "owner": [
    {
-    "ref": "p.rt-manage",
+    "ref": "cp.store-management",
     "step": 6,
     "major": true
    },

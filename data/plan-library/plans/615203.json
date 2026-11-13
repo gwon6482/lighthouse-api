@@ -1,0 +1,191 @@
+{
+ "jobCode": "615203",
+ "title": "통신기기·서비스판매원",
+ "displayName": "판매·대여 서비스원",
+ "family": "sales",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 상품 지식과 응대, 판매 경험으로 일한다. 노점·방문 판매는 스스로 사업을 꾸린다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "telecom",
+   "name": "통신 매장",
+   "desc": "휴대폰·인터넷 판매"
+  },
+  {
+   "id": "rental",
+   "name": "대여·렌털",
+   "desc": "상품 대여"
+  },
+  {
+   "id": "fuel",
+   "name": "주유소",
+   "desc": "주유·충전"
+  },
+  {
+   "id": "street",
+   "name": "노점·방문 판매",
+   "desc": "이동·방문 판매"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "615401",
+   "title": "상품대여원",
+   "track": "rental"
+  },
+  {
+   "jobCode": "615701",
+   "title": "주유원",
+   "track": "fuel"
+  },
+  {
+   "jobCode": "615501",
+   "title": "노점 및 이동판매원",
+   "track": "street"
+  },
+  {
+   "jobCode": "615601",
+   "title": "방문판매원",
+   "track": "street"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.tc-plan",
+   "name": "요금제와 단말기 상품 지식",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "요금제·약정·단말기를 비교해 고객에게 맞게 권한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "익히기",
+     "items": [
+      "요금제와 약정 구조",
+      "단말기 비교",
+      "개통 절차와 서류"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.st-biz",
+   "name": "사업자 등록과 원가 계산",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "영업 신고 요건을 확인하고 원가와 판매가를 계산한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "사업자 등록·영업 신고",
+      "원가·마진 계산",
+      "판매 장소와 방법"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "업종에 따라 신고·허가 요건이 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.customer-service",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.sales-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "telecom": [
+   {
+    "ref": "p.tc-plan",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.parttime",
+    "step": 4,
+    "major": true,
+    "note": "통신 매장 근무"
+   }
+  ],
+  "rental": [
+   {
+    "ref": "cp.driver-license",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.parttime",
+    "step": 4,
+    "major": true,
+    "note": "렌털·대여점 근무"
+   }
+  ],
+  "fuel": [
+   {
+    "ref": "cp.hazmat-cert",
+    "step": 3,
+    "major": true,
+    "note": "위험물 안전 관리자로 넓힐 때",
+    "optional": true
+   },
+   {
+    "ref": "cp.parttime",
+    "step": 4,
+    "major": true,
+    "note": "주유소 근무"
+   }
+  ],
+  "street": [
+   {
+    "ref": "p.st-biz",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.food-hygiene",
+    "step": 4,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.health-cert",
+    "step": 5,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.driver-license",
+    "step": 6,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}

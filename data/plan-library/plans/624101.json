@@ -1,0 +1,178 @@
+{
+ "jobCode": "624101",
+ "title": "택배원",
+ "displayName": "택배·배달·하역",
+ "family": "transport",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "택배는 화물 운송 종사 자격이 필요하고, 위탁 계약으로 일하는 경우가 많다. 배달과 하역은 필수 자격 없이 시작한다.",
+ "gate": "택배 — 화물운송종사 자격. 음식 배달·하역은 필수 자격 없음",
+ "tracks": [
+  {
+   "id": "parcel",
+   "name": "택배",
+   "desc": "구역 배송"
+  },
+  {
+   "id": "food",
+   "name": "음식 배달",
+   "desc": "이륜차 배달"
+  },
+  {
+   "id": "loading",
+   "name": "하역",
+   "desc": "상하차·적재"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "532401",
+   "title": "음식배달원",
+   "track": "food"
+  },
+  {
+   "jobCode": "624401",
+   "title": "하역·적재종사원",
+   "track": "loading"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.dl-contract",
+   "name": "위탁 계약과 수수료 구조 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "계약 형태와 차량·보험 비용, 수수료 구조를 따져 본다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "위탁·플랫폼 계약 조건",
+      "차량·보험·유류 비용",
+      "수수료와 실수입 계산"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "계약 전 구역·물량·비용 부담을 반드시 확인할 것"
+  },
+  {
+   "id": "p.dl-bike",
+   "name": "이륜차 면허와 유상 운송 보험",
+   "type": "cert",
+   "subtype": "basic",
+   "category": "qualification",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "이륜차 면허를 따고 유상 운송 보험에 가입한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "면허 취득",
+      "보험 가입",
+      "안전 장구 준비"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.dl-safe",
+   "name": "안전 운전과 몸 관리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "사고를 줄이는 운전과 허리·어깨 부담을 줄이는 작업 방법을 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "익히기",
+     "items": [
+      "방어 운전",
+      "무거운 물건 드는 법",
+      "휴식과 스트레칭"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.driver-license",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.dl-safe",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "parcel": [
+   {
+    "ref": "cp.cargo-license",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "p.dl-contract",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.customer-service",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "food": [
+   {
+    "ref": "p.dl-bike",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "p.dl-contract",
+    "step": 3,
+    "major": true
+   }
+  ],
+  "loading": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 2,
+    "major": true,
+    "note": "지게차운전기능사",
+    "optional": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 3,
+    "major": true,
+    "note": "물류센터·항만"
+   }
+  ]
+ }
+}

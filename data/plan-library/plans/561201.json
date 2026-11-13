@@ -1,0 +1,147 @@
+{
+ "jobCode": "561201",
+ "title": "환경미화원 및 재활용품수거원",
+ "displayName": "청소·환경미화원",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "지자체 환경미화원은 공개 채용으로 뽑고 체력 시험을 본다. 건물 청소와 세탁은 필수 자격 없이 시작한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "public",
+   "name": "환경미화",
+   "desc": "지자체 가로 청소·수거"
+  },
+  {
+   "id": "cleaning",
+   "name": "건물 청소",
+   "desc": "건물·시설 청소"
+  },
+  {
+   "id": "laundry",
+   "name": "세탁",
+   "desc": "세탁·다림질"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "561101",
+   "title": "청소원",
+   "track": "cleaning"
+  },
+  {
+   "jobCode": "561501",
+   "title": "세탁원(다림질원)",
+   "track": "laundry"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.sw-apply",
+   "name": "지자체 채용 공고 확인",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 60,
+   "goal": "지역의 채용 방식과 체력 종목을 확인한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "공고 주기와 응시 요건",
+      "체력 시험 종목",
+      "서류 준비"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "전형은 지자체마다 다르다"
+  },
+  {
+   "id": "p.cl-skill",
+   "name": "청소 장비와 약품 사용법",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "바닥·유리 등 대상별 장비와 세제를 안전하게 쓴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "익히기",
+     "items": [
+      "장비 종류와 사용",
+      "세제 희석과 안전",
+      "공간별 청소 순서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.driver-license",
+   "step": 1,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "public": [
+   {
+    "ref": "p.sw-apply",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "cp.fitness-test",
+    "step": 3,
+    "major": true,
+    "note": "체력 시험"
+   }
+  ],
+  "cleaning": [
+   {
+    "ref": "p.cl-skill",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 3,
+    "major": true,
+    "note": "청소 용역 업체"
+   }
+  ],
+  "laundry": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 2,
+    "major": true,
+    "note": "세탁기능사",
+    "optional": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 3,
+    "major": true,
+    "note": "세탁소·세탁 공장"
+   }
+  ]
+ }
+}

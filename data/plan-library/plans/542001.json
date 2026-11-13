@@ -1,0 +1,75 @@
+{
+ "jobCode": "542001",
+ "title": "경비원",
+ "displayName": "경비원",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "경비원으로 일하려면 법이 정한 신임 교육을 받아야 한다.",
+ "gate": "일반 경비원 신임 교육 이수(경비업법) — 결격 사유가 없어야 한다",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.gd-work",
+   "name": "순찰·출입 관리·민원 응대",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "근무 수칙과 순찰·출입 관리, 비상 대응을 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "업무",
+     "items": [
+      "순찰과 출입 관리",
+      "화재·응급 상황 대응",
+      "입주민·방문객 응대"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.guard-training",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.gd-work",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.security-manager",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "공동 주택 경비원은 채용 형태에 따라 교육 요건이 다를 수 있다"
+}

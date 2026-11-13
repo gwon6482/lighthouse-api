@@ -10,32 +10,7 @@
  "gate": "법정 요건은 없으나 채용 공고가 관련 전공과 기사 자격을 요구·우대한다",
  "tracks": [],
  "covers": [],
- "projects": [
-  {
-   "id": "p.tx-process",
-   "name": "방적·제직·염색 가공 공정 이해",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "book",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 60,
-   "goal": "실에서 원단, 가공까지의 공정과 품질 항목을 안다.",
-   "phases": [
-    {
-     "weeks": 3,
-     "title": "공정",
-     "items": [
-      "방적·제직·편직",
-      "염색·가공",
-      "원단 품질 시험"
-     ]
-    }
-   ],
-   "basis": "practice"
-  }
- ],
+ "projects": [],
  "common": [
   {
    "ref": "cp.job-research",
@@ -57,7 +32,7 @@
    "optional": true
   },
   {
-   "ref": "p.tx-process",
+   "ref": "cp.textile-process",
    "step": 4,
    "major": true
   },

@@ -1,0 +1,122 @@
+{
+ "jobCode": "705201",
+ "title": "철로설치·보수원",
+ "displayName": "철로·채석 기능원",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "선로 유지 보수는 철도 분야 기능사와 현장 경력으로, 채석·광산은 장비 운전과 현장 경험으로 일한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "rail",
+   "name": "선로 유지 보수",
+   "desc": "철도 궤도 설치·보수"
+  },
+  {
+   "id": "quarry",
+   "name": "채석·광산",
+   "desc": "채굴·석재 가공"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "705101",
+   "title": "광원·채석원 및 석재절단원",
+   "track": "quarry"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.rw-track",
+   "name": "궤도 구조와 선로 보수 작업",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "레일·침목·도상의 구조와 보수 작업 순서, 열차 방호를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "궤도 구조",
+      "보수 장비와 작업 순서",
+      "열차 운행선 작업 안전"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.construction-safety",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "rail": [
+   {
+    "ref": "p.rw-track",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "철도토목기능사"
+   },
+   {
+    "ref": "cp.ncs",
+    "step": 5,
+    "major": true,
+    "note": "철도 운영 기관·유지 보수 회사 필기",
+    "optional": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 6,
+    "major": true,
+    "note": "궤도 공사·유지 보수 업체"
+   }
+  ],
+  "quarry": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "굴착기운전기능사 등",
+    "optional": true
+   },
+   {
+    "ref": "cp.equipment-license",
+    "step": 5,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 6,
+    "major": true,
+    "note": "석산·광산"
+   }
+  ]
+ }
+}

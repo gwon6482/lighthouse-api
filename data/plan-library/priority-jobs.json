@@ -6136,6 +6136,909 @@
      "track": "fishing"
     }
    ]
+  },
+  {
+   "no": 258,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-01",
+   "jobCode": "012201",
+   "title": "경영지원관리자",
+   "displayName": "경영·금융 관리자",
+   "family": "biz",
+   "group": "011",
+   "groupName": "행정·경영·금융·보험 관리",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "support",
+     "name": "경영 지원",
+     "desc": "인사·총무·재무 부서장"
+    },
+    {
+     "id": "marketing",
+     "name": "마케팅·홍보",
+     "desc": "마케팅 부서장"
+    },
+    {
+     "id": "finance",
+     "name": "금융·보험",
+     "desc": "지점장·금융 부서장"
+    },
+    {
+     "id": "exec",
+     "name": "임원",
+     "desc": "기업 고위 임원"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "012301",
+     "title": "마케팅·광고·홍보관리자",
+     "track": "marketing"
+    },
+    {
+     "jobCode": "012401",
+     "title": "금융관리자",
+     "track": "finance"
+    },
+    {
+     "jobCode": "012402",
+     "title": "보험관리자",
+     "track": "finance"
+    },
+    {
+     "jobCode": "011201",
+     "title": "기업고위임원",
+     "track": "exec"
+    }
+   ]
+  },
+  {
+   "no": 259,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-01",
+   "jobCode": "012101",
+   "title": "정부행정관리자",
+   "displayName": "고위 공무원",
+   "family": "public",
+   "group": "011",
+   "groupName": "행정·경영·금융·보험 관리",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "011102",
+     "title": "행정부고위공무원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 260,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-01",
+   "jobCode": "013202",
+   "title": "초등학교 교장 및 교감",
+   "displayName": "학교 관리자(교장·교감)",
+   "family": "edu",
+   "group": "012",
+   "groupName": "전문서비스 관리",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "school",
+     "name": "초·중·고등학교",
+     "desc": "교감·교장"
+    },
+    {
+     "id": "kinder",
+     "name": "유치원",
+     "desc": "원감·원장"
+    },
+    {
+     "id": "univ",
+     "name": "대학",
+     "desc": "학장·총장"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "013203",
+     "title": "중고등학교 교장 및 교감",
+     "track": "school"
+    },
+    {
+     "jobCode": "013201",
+     "title": "유치원 원장 및 원감",
+     "track": "kinder"
+    },
+    {
+     "jobCode": "013204",
+     "title": "대학교 총장 및 대학학장",
+     "track": "univ"
+    }
+   ]
+  },
+  {
+   "no": 261,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-01",
+   "jobCode": "013701",
+   "title": "정보통신관리자",
+   "displayName": "전문 분야 관리자",
+   "family": "biz",
+   "group": "012",
+   "groupName": "전문서비스 관리",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "it",
+     "name": "정보 통신",
+     "desc": "IT 부서장·CTO"
+    },
+    {
+     "id": "research",
+     "name": "연구",
+     "desc": "연구소장·연구 책임자"
+    },
+    {
+     "id": "creative",
+     "name": "예술·디자인·방송",
+     "desc": "제작·디자인 책임자"
+    },
+    {
+     "id": "health",
+     "name": "보건·의료",
+     "desc": "병원 행정·의료 관리자"
+    },
+    {
+     "id": "welfare",
+     "name": "사회복지",
+     "desc": "복지 시설장"
+    },
+    {
+     "id": "safety",
+     "name": "경찰·소방·교정",
+     "desc": "간부"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "013101",
+     "title": "연구관리자",
+     "track": "research"
+    },
+    {
+     "jobCode": "013601",
+     "title": "예술·디자인·방송관리자",
+     "track": "creative"
+    },
+    {
+     "jobCode": "013401",
+     "title": "보건·의료관리자",
+     "track": "health"
+    },
+    {
+     "jobCode": "013501",
+     "title": "사회복지관리자",
+     "track": "welfare"
+    },
+    {
+     "jobCode": "013305",
+     "title": "경찰·소방·교도관리자",
+     "track": "safety"
+    }
+   ]
+  },
+  {
+   "no": 262,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-01",
+   "jobCode": "015101",
+   "title": "영업·판매관리자",
+   "displayName": "영업·서비스 관리자(점장·매니저)",
+   "family": "sales",
+   "group": "013",
+   "groupName": "개인서비스·영업·운송 관리",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "sales",
+     "name": "영업·판매",
+     "desc": "영업 팀장·판매 점장"
+    },
+    {
+     "id": "facility",
+     "name": "경비·청소",
+     "desc": "시설 관리 소장"
+    },
+    {
+     "id": "food",
+     "name": "음식 서비스",
+     "desc": "식당 점장·매니저"
+    },
+    {
+     "id": "hotel",
+     "name": "여행·호텔",
+     "desc": "호텔 지배인·지점장"
+    },
+    {
+     "id": "transport",
+     "name": "운송",
+     "desc": "운수·물류 관리자"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "014301",
+     "title": "경비·청소관리자",
+     "track": "facility"
+    },
+    {
+     "jobCode": "014201",
+     "title": "음식서비스관리자",
+     "track": "food"
+    },
+    {
+     "jobCode": "014103",
+     "title": "여행·호텔관리자",
+     "track": "hotel"
+    },
+    {
+     "jobCode": "015201",
+     "title": "운송관리자",
+     "track": "transport"
+    }
+   ]
+  },
+  {
+   "no": 263,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-01",
+   "jobCode": "016301",
+   "title": "제조·생산관리자",
+   "displayName": "생산·건설 관리자",
+   "family": "eng",
+   "group": "014",
+   "groupName": "건설·제조·생산 관리",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "mfg",
+     "name": "제조",
+     "desc": "공장장·생산 부서장"
+    },
+    {
+     "id": "construction",
+     "name": "건설",
+     "desc": "현장 소장"
+    },
+    {
+     "id": "utility",
+     "name": "전기·가스·수도",
+     "desc": "설비 운영 책임자"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "016101",
+     "title": "건설·채굴관리자",
+     "track": "construction"
+    },
+    {
+     "jobCode": "016201",
+     "title": "전기·가스·수도관리자",
+     "track": "utility"
+    }
+   ]
+  },
+  {
+   "no": 264,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-01",
+   "jobCode": "532201",
+   "title": "홀서빙원",
+   "displayName": "식당 서비스·주방 보조",
+   "family": "service",
+   "group": "065",
+   "groupName": "식당 서비스",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "hall",
+     "name": "홀",
+     "desc": "주문·서빙·계산"
+    },
+    {
+     "id": "kitchen",
+     "name": "주방 보조",
+     "desc": "재료 준비·설거지·조리 보조"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "532301",
+     "title": "주방보조원",
+     "track": "kitchen"
+    },
+    {
+     "jobCode": "532101",
+     "title": "패스트푸드준비원",
+     "track": "kitchen"
+    }
+   ]
+  },
+  {
+   "no": 265,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-01",
+   "jobCode": "542001",
+   "title": "경비원",
+   "displayName": "경비원",
+   "family": "service",
+   "group": "067",
+   "groupName": "경비원",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 266,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-01",
+   "jobCode": "561201",
+   "title": "환경미화원 및 재활용품수거원",
+   "displayName": "청소·환경미화원",
+   "family": "service",
+   "group": "069",
+   "groupName": "청소·방역·가사 서비스",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "public",
+     "name": "환경미화",
+     "desc": "지자체 가로 청소·수거"
+    },
+    {
+     "id": "cleaning",
+     "name": "건물 청소",
+     "desc": "건물·시설 청소"
+    },
+    {
+     "id": "laundry",
+     "name": "세탁",
+     "desc": "세탁·다림질"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "561101",
+     "title": "청소원",
+     "track": "cleaning"
+    },
+    {
+     "jobCode": "561501",
+     "title": "세탁원(다림질원)",
+     "track": "laundry"
+    }
+   ]
+  },
+  {
+   "no": 267,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-01",
+   "jobCode": "562301",
+   "title": "주차관리·안내원",
+   "displayName": "주차·검침·검표원",
+   "family": "service",
+   "group": "06A",
+   "groupName": "검침·주차관리 등 서비스",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "parking",
+     "name": "주차 관리",
+     "desc": "주차장 안내·정산"
+    },
+    {
+     "id": "meter",
+     "name": "검침·점검",
+     "desc": "전기·수도·가스 검침과 점검"
+    },
+    {
+     "id": "ticket",
+     "name": "검표",
+     "desc": "입장권 확인"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "562101",
+     "title": "계기검침원 및 가스점검원",
+     "track": "meter"
+    },
+    {
+     "jobCode": "562401",
+     "title": "검표원",
+     "track": "ticket"
+    }
+   ]
+  },
+  {
+   "no": 268,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-02",
+   "jobCode": "524001",
+   "title": "오락시설서비스원",
+   "displayName": "오락시설 서비스원",
+   "family": "service",
+   "group": "063",
+   "groupName": "여행·승무·숙박·오락 서비스",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 269,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-02",
+   "jobCode": "615203",
+   "title": "통신기기·서비스판매원",
+   "displayName": "판매·대여 서비스원",
+   "family": "sales",
+   "group": "076",
+   "groupName": "온라인판매·통신서비스",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "telecom",
+     "name": "통신 매장",
+     "desc": "휴대폰·인터넷 판매"
+    },
+    {
+     "id": "rental",
+     "name": "대여·렌털",
+     "desc": "상품 대여"
+    },
+    {
+     "id": "fuel",
+     "name": "주유소",
+     "desc": "주유·충전"
+    },
+    {
+     "id": "street",
+     "name": "노점·방문 판매",
+     "desc": "이동·방문 판매"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "615401",
+     "title": "상품대여원",
+     "track": "rental"
+    },
+    {
+     "jobCode": "615701",
+     "title": "주유원",
+     "track": "fuel"
+    },
+    {
+     "jobCode": "615501",
+     "title": "노점 및 이동판매원",
+     "track": "street"
+    },
+    {
+     "jobCode": "615601",
+     "title": "방문판매원",
+     "track": "street"
+    }
+   ]
+  },
+  {
+   "no": 270,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-02",
+   "jobCode": "616101",
+   "title": "매장계산원 및 요금정산원",
+   "displayName": "계산·매표원",
+   "family": "sales",
+   "group": "077",
+   "groupName": "매장 계산·매표",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "616201",
+     "title": "매표원 및 복권판매원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 271,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-02",
+   "jobCode": "617101",
+   "title": "홍보도우미 및 판촉원",
+   "displayName": "판촉 도우미",
+   "family": "sales",
+   "group": "078",
+   "groupName": "판촉·기타 판매",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 272,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-02",
+   "jobCode": "624101",
+   "title": "택배원",
+   "displayName": "택배·배달·하역",
+   "family": "transport",
+   "group": "07C",
+   "groupName": "택배·배달·하역 등 운송",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "parcel",
+     "name": "택배",
+     "desc": "구역 배송"
+    },
+    {
+     "id": "food",
+     "name": "음식 배달",
+     "desc": "이륜차 배달"
+    },
+    {
+     "id": "loading",
+     "name": "하역",
+     "desc": "상하차·적재"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "532401",
+     "title": "음식배달원",
+     "track": "food"
+    },
+    {
+     "jobCode": "624401",
+     "title": "하역·적재종사원",
+     "track": "loading"
+    }
+   ]
+  },
+  {
+   "no": 273,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-02",
+   "jobCode": "705201",
+   "title": "철로설치·보수원",
+   "displayName": "철로·채석 기능원",
+   "family": "tech",
+   "group": "085",
+   "groupName": "기타 건설 기능",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "rail",
+     "name": "선로 유지 보수",
+     "desc": "철도 궤도 설치·보수"
+    },
+    {
+     "id": "quarry",
+     "name": "채석·광산",
+     "desc": "채굴·석재 가공"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "705101",
+     "title": "광원·채석원 및 석재절단원",
+     "track": "quarry"
+    }
+   ]
+  },
+  {
+   "no": 274,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-02",
+   "jobCode": "706001",
+   "title": "건설·채굴단순종사원",
+   "displayName": "건설 현장 일용직",
+   "family": "tech",
+   "group": "086",
+   "groupName": "건설·채굴 단순 종사자",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 275,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-02",
+   "jobCode": "821201",
+   "title": "금속가공기계조작원",
+   "displayName": "금속·비금속 생산기계 조작원",
+   "family": "tech",
+   "group": "096",
+   "groupName": "금속 기계·설비 조작",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "metal",
+     "name": "금속 가공",
+     "desc": "압연·열처리·가공 설비"
+    },
+    {
+     "id": "mineral",
+     "name": "비금속 제품",
+     "desc": "시멘트·유리·점토·석제품"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "821101",
+     "title": "금속가공제어장치조작원",
+     "track": "metal"
+    },
+    {
+     "jobCode": "826301",
+     "title": "시멘트·광물제품생산기계조작원",
+     "track": "mineral"
+    },
+    {
+     "jobCode": "826101",
+     "title": "유리·유리제품생산기계조작원",
+     "track": "mineral"
+    },
+    {
+     "jobCode": "826201",
+     "title": "점토제품생산기계조작원",
+     "track": "mineral"
+    },
+    {
+     "jobCode": "826401",
+     "title": "광석·석제품생산기계조작원",
+     "track": "mineral"
+    }
+   ]
+  },
+  {
+   "no": 276,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-02",
+   "jobCode": "852201",
+   "title": "플라스틱제품생산기계조작원",
+   "displayName": "고무·플라스틱·화학제품 생산직",
+   "family": "tech",
+   "group": "112",
+   "groupName": "고무·플라스틱·화학제품 생산",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "852401",
+     "title": "고무·플라스틱 제품 조립원",
+     "track": null
+    },
+    {
+     "jobCode": "852301",
+     "title": "화학제품생산기계조작원(고무·플라스틱 제외)",
+     "track": null
+    },
+    {
+     "jobCode": "852101",
+     "title": "타이어·고무제품생산기계조작원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 277,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-02",
+   "jobCode": "861101",
+   "title": "섬유제조기계조작원",
+   "displayName": "섬유·의복·신발 생산직",
+   "family": "tech",
+   "group": "114",
+   "groupName": "섬유 제조·가공 기계 조작",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "textile",
+     "name": "섬유",
+     "desc": "방적·제직·염색 설비"
+    },
+    {
+     "id": "shoes",
+     "name": "제화·신발",
+     "desc": "구두·신발 제조"
+    },
+    {
+     "id": "laundry",
+     "name": "세탁 기계",
+     "desc": "산업 세탁 설비"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "861201",
+     "title": "직조기 및 편직기조작원",
+     "track": "textile"
+    },
+    {
+     "jobCode": "861301",
+     "title": "표백·염색기조작원",
+     "track": "textile"
+    },
+    {
+     "jobCode": "864301",
+     "title": "세탁기계조작원",
+     "track": "laundry"
+    },
+    {
+     "jobCode": "864101",
+     "title": "제화원",
+     "track": "shoes"
+    },
+    {
+     "jobCode": "864201",
+     "title": "신발제조기계조작원 및 조립원",
+     "track": "shoes"
+    }
+   ]
+  },
+  {
+   "no": 278,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-03",
+   "jobCode": "872101",
+   "title": "정육원 및 도축원",
+   "displayName": "식품 가공·생산직",
+   "family": "tech",
+   "group": "119",
+   "groupName": "식품가공 기능원",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "meat",
+     "name": "정육·도축",
+     "desc": "발골·정형·판매"
+    },
+    {
+     "id": "kimchi",
+     "name": "김치·반찬",
+     "desc": "반찬 제조"
+    },
+    {
+     "id": "line",
+     "name": "식품 생산 라인",
+     "desc": "곡물·육류·음료·과채 가공 설비"
+    },
+    {
+     "id": "grading",
+     "name": "등급 판정",
+     "desc": "농축산물 등급"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "872201",
+     "title": "김치·밑반찬 제조종사원",
+     "track": "kimchi"
+    },
+    {
+     "jobCode": "872301",
+     "title": "식품·담배등급원",
+     "track": "grading"
+    },
+    {
+     "jobCode": "873301",
+     "title": "곡물가공제품기계조작원",
+     "track": "line"
+    },
+    {
+     "jobCode": "873101",
+     "title": "육류·어패류·낙농품가공기계조작원",
+     "track": "line"
+    },
+    {
+     "jobCode": "873501",
+     "title": "음료제조기계조작원",
+     "track": "line"
+    },
+    {
+     "jobCode": "873401",
+     "title": "과실·채소기계조작원",
+     "track": "line"
+    },
+    {
+     "jobCode": "873201",
+     "title": "제분·도정기계조작원",
+     "track": "line"
+    }
+   ]
+  },
+  {
+   "no": 279,
+   "tier": null,
+   "wave": 4,
+   "batch": "4-03",
+   "jobCode": "881101",
+   "title": "인쇄기계조작원",
+   "displayName": "인쇄·목재·종이·포장 생산직",
+   "family": "tech",
+   "group": "121",
+   "groupName": "인쇄기계·사진현상기 조작",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "print",
+     "name": "인쇄",
+     "desc": "인쇄·사진 출력"
+    },
+    {
+     "id": "wood",
+     "name": "목재·종이",
+     "desc": "목재 가공·제지"
+    },
+    {
+     "id": "pack",
+     "name": "포장",
+     "desc": "충전·포장·라벨"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "881201",
+     "title": "사진인화·현상기조작원(사진수정 포함)",
+     "track": "print"
+    },
+    {
+     "jobCode": "882301",
+     "title": "종이제품생산기계조작원",
+     "track": "wood"
+    },
+    {
+     "jobCode": "882101",
+     "title": "목재가공기계조작원",
+     "track": "wood"
+    },
+    {
+     "jobCode": "882201",
+     "title": "펄프·종이제조장치조작원",
+     "track": "wood"
+    },
+    {
+     "jobCode": "885902",
+     "title": "주입·포장·상표부착기계조작원",
+     "track": "pack"
+    }
+   ]
   }
  ]
 }

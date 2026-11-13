@@ -1,0 +1,76 @@
+{
+ "jobCode": "524001",
+ "title": "오락시설서비스원",
+ "displayName": "오락시설 서비스원",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 응대 태도와 안전 수칙 준수가 기본이다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.am-safety",
+   "name": "시설 운영과 안전 수칙",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "기구 운영 절차와 이용 제한, 비상 대응을 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "익히기",
+     "items": [
+      "운영 절차와 이용 제한 안내",
+      "비상 정지와 대피",
+      "분실물·미아 대응"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.customer-service",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.am-safety",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 3,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 4,
+   "major": true,
+   "note": "외국인 응대",
+   "optional": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 5,
+   "major": true,
+   "note": "놀이공원·리조트·영화관 근무"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,78 @@
+{
+ "jobCode": "012101",
+ "title": "정부행정관리자",
+ "displayName": "고위 공무원",
+ "family": "public",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "공무원으로 임용된 뒤 승진해서 오르는 자리다. 고위공무원단은 역량 평가를 통과해야 한다.",
+ "gate": "공무원 임용 뒤 승진. 고위공무원단은 역량 평가 통과가 필요하다",
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "011102",
+   "title": "행정부고위공무원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.gm-assess",
+   "name": "승진 심사와 역량 평가 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "심화",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "승진 요건을 채우고 역량 평가에 대비한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "요건",
+     "items": [
+      "승진 소요 연수·평정 확인",
+      "교육 이수"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "평가",
+     "items": [
+      "역량 평가 과제 연습",
+      "정책 기획·조정 사례 정리"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.field-career",
+   "step": 1,
+   "major": true,
+   "note": "5급 공채나 7·9급 임용 뒤 근무(정책 전문가·일반행정 공무원 계획 참고)"
+  },
+  {
+   "ref": "cp.leadership",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.gm-assess",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.mba",
+   "step": 4,
+   "major": true,
+   "note": "정책 대학원·교육 파견",
+   "optional": true
+  }
+ ],
+ "byTrack": {}
+}

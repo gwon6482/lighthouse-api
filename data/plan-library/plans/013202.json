@@ -1,0 +1,157 @@
+{
+ "jobCode": "013202",
+ "title": "초등학교 교장 및 교감",
+ "displayName": "학교 관리자(교장·교감)",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "교사 경력을 쌓고 승진 평정과 자격 연수를 거쳐 오르는 자리다. 대학은 교수가 보직을 거쳐 맡는다.",
+ "gate": "교감·교장(원감·원장) 자격 — 교육 경력 + 자격 연수. 승진 평정을 거친다",
+ "tracks": [
+  {
+   "id": "school",
+   "name": "초·중·고등학교",
+   "desc": "교감·교장"
+  },
+  {
+   "id": "kinder",
+   "name": "유치원",
+   "desc": "원감·원장"
+  },
+  {
+   "id": "univ",
+   "name": "대학",
+   "desc": "학장·총장"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "013203",
+   "title": "중고등학교 교장 및 교감",
+   "track": "school"
+  },
+  {
+   "jobCode": "013201",
+   "title": "유치원 원장 및 원감",
+   "track": "kinder"
+  },
+  {
+   "jobCode": "013204",
+   "title": "대학교 총장 및 대학학장",
+   "track": "univ"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.pr-cert",
+   "name": "교감·교장 자격 연수",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "승진 평정을 통과해 자격 연수를 이수한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "평정",
+     "items": [
+      "경력·근무 성적·연수 성적 관리",
+      "가산점 요건 확인"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "연수",
+     "items": [
+      "자격 연수 이수"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "평정 기준은 시도 교육청마다 다르다. 공모 교장 제도도 있다"
+  },
+  {
+   "id": "p.pr-admin",
+   "name": "학교 경영과 교육 행정 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "학교 회계·인사·교육과정 운영의 원리를 안다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "이해",
+     "items": [
+      "학교 회계와 예산",
+      "교원 인사·복무",
+      "교육과정 편성과 평가"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.leadership",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.pr-admin",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.lab-grad",
+   "step": 5,
+   "major": true,
+   "note": "교육 대학원",
+   "optional": true
+  }
+ ],
+ "byTrack": {
+  "school": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "교사 임용 뒤 경력 쌓기(초등·중등 교사 계획 참고)"
+   },
+   {
+    "ref": "p.pr-cert",
+    "step": 2,
+    "major": true
+   }
+  ],
+  "kinder": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "유치원 교사 경력(유치원 교사 계획 참고)"
+   },
+   {
+    "ref": "p.pr-cert",
+    "step": 2,
+    "major": true
+   }
+  ],
+  "univ": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "교수 임용과 보직 경험(대학 교수 계획 참고)"
+   }
+  ]
+ }
+}

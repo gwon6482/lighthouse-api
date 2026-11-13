@@ -1,0 +1,213 @@
+{
+ "jobCode": "872101",
+ "title": "정육원 및 도축원",
+ "displayName": "식품 가공·생산직",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "식품을 다루는 일이라 건강 진단과 위생이 기본이다. 정육은 기술을 배워 자격을 따고, 생산 라인은 설비 운전을 익힌다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "meat",
+   "name": "정육·도축",
+   "desc": "발골·정형·판매"
+  },
+  {
+   "id": "kimchi",
+   "name": "김치·반찬",
+   "desc": "반찬 제조"
+  },
+  {
+   "id": "line",
+   "name": "식품 생산 라인",
+   "desc": "곡물·육류·음료·과채 가공 설비"
+  },
+  {
+   "id": "grading",
+   "name": "등급 판정",
+   "desc": "농축산물 등급"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "872201",
+   "title": "김치·밑반찬 제조종사원",
+   "track": "kimchi"
+  },
+  {
+   "jobCode": "872301",
+   "title": "식품·담배등급원",
+   "track": "grading"
+  },
+  {
+   "jobCode": "873301",
+   "title": "곡물가공제품기계조작원",
+   "track": "line"
+  },
+  {
+   "jobCode": "873101",
+   "title": "육류·어패류·낙농품가공기계조작원",
+   "track": "line"
+  },
+  {
+   "jobCode": "873501",
+   "title": "음료제조기계조작원",
+   "track": "line"
+  },
+  {
+   "jobCode": "873401",
+   "title": "과실·채소기계조작원",
+   "track": "line"
+  },
+  {
+   "jobCode": "873201",
+   "title": "제분·도정기계조작원",
+   "track": "line"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.mt-cut",
+   "name": "발골과 정형 기술 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "부위를 나누고 용도에 맞게 손질한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "기술",
+     "items": [
+      "칼 다루기와 안전",
+      "부위별 발골",
+      "정형과 포장"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.gr-route",
+   "name": "등급 판정 기관 채용 요건 확인",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 60,
+   "goal": "등급 판정 업무를 하는 기관의 채용 요건을 확인한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "기관과 직무",
+      "전공·자격 요건",
+      "채용 일정"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "축산물 등급 판정은 전문 기관 소속 평가사가 맡는다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.food-hygiene",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.health-cert",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.operator-basics",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 7,
+   "major": true,
+   "note": "정육점·식품 공장"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "meat": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 5,
+    "major": true,
+    "note": "식육처리기능사"
+   },
+   {
+    "ref": "p.mt-cut",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "kimchi": [
+   {
+    "ref": "cp.cooking-basics",
+    "step": 5,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 6,
+    "major": true,
+    "note": "한식조리기능사",
+    "optional": true
+   }
+  ],
+  "line": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 5,
+    "major": true,
+    "note": "식품가공기능사",
+    "optional": true
+   },
+   {
+    "ref": "cp.haccp",
+    "step": 6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "grading": [
+   {
+    "ref": "p.gr-route",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "cp.ncs",
+    "step": 6,
+    "major": true,
+    "note": "공공 기관 필기",
+    "optional": true
+   }
+  ]
+ }
+}

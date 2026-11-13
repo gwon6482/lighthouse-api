@@ -2467,7 +2467,7 @@
       }
      ],
      "batch": "4-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2484,7 +2484,7 @@
       }
      ],
      "batch": "4-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2509,7 +2509,7 @@
       }
      ],
      "batch": "4-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2542,7 +2542,7 @@
       }
      ],
      "batch": "4-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2571,7 +2571,7 @@
       }
      ],
      "batch": "4-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2592,7 +2592,7 @@
       }
      ],
      "batch": "4-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2613,7 +2613,7 @@
       }
      ],
      "batch": "4-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2625,7 +2625,7 @@
      "groupName": "경비원",
      "covers": [],
      "batch": "4-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2646,7 +2646,7 @@
       }
      ],
      "batch": "4-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2667,7 +2667,7 @@
       }
      ],
      "batch": "4-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2679,7 +2679,7 @@
      "groupName": "여행·승무·숙박·오락 서비스",
      "covers": [],
      "batch": "4-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2708,7 +2708,7 @@
       }
      ],
      "batch": "4-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2725,7 +2725,7 @@
       }
      ],
      "batch": "4-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2737,7 +2737,7 @@
      "groupName": "판촉·기타 판매",
      "covers": [],
      "batch": "4-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2758,7 +2758,7 @@
       }
      ],
      "batch": "4-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2775,7 +2775,7 @@
       }
      ],
      "batch": "4-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2787,7 +2787,7 @@
      "groupName": "건설·채굴 단순 종사자",
      "covers": [],
      "batch": "4-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2820,7 +2820,7 @@
       }
      ],
      "batch": "4-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2845,7 +2845,7 @@
       }
      ],
      "batch": "4-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2878,7 +2878,7 @@
       }
      ],
      "batch": "4-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2919,7 +2919,7 @@
       }
      ],
      "batch": "4-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 4,
@@ -2952,7 +2952,7 @@
       }
      ],
      "batch": "4-03",
-     "done": false
+     "done": true
     }
    ]
   }

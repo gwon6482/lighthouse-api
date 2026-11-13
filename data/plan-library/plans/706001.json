@@ -1,0 +1,71 @@
+{
+ "jobCode": "706001",
+ "title": "건설·채굴단순종사원",
+ "displayName": "건설 현장 일용직",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "기초 안전 보건 교육을 받으면 현장에서 일할 수 있다. 일하면서 한 가지 기능을 정해 기능공으로 올라간다.",
+ "gate": "건설업 기초 안전 보건 교육 이수",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cs-site",
+   "name": "현장 용어와 작업 순서",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "현장에서 쓰는 말과 자재 이름, 작업 순서를 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "익히기",
+     "items": [
+      "현장 용어·자재 이름",
+      "공정별 보조 작업",
+      "위험 구역과 신호"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.construction-safety",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.cs-site",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 3,
+   "major": true,
+   "note": "인력 사무소·현장 팀"
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "기능을 정해 기능사로 넓히기(철근·형틀·도장 등)",
+   "optional": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 5,
+   "major": true,
+   "optional": true
+  }
+ ],
+ "byTrack": {}
+}

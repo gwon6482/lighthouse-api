@@ -1,0 +1,126 @@
+{
+ "jobCode": "012201",
+ "title": "경영지원관리자",
+ "displayName": "경영·금융 관리자",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "실무자로 들어가 경력과 성과를 쌓아 올라가는 자리다. 숫자를 읽는 힘과 사람을 이끄는 힘이 함께 필요하다.",
+ "gate": "공개 채용으로 바로 들어가는 자리가 아니다. 해당 분야의 실무 경력을 쌓아 승진하거나 경력직으로 옮긴다",
+ "tracks": [
+  {
+   "id": "support",
+   "name": "경영 지원",
+   "desc": "인사·총무·재무 부서장"
+  },
+  {
+   "id": "marketing",
+   "name": "마케팅·홍보",
+   "desc": "마케팅 부서장"
+  },
+  {
+   "id": "finance",
+   "name": "금융·보험",
+   "desc": "지점장·금융 부서장"
+  },
+  {
+   "id": "exec",
+   "name": "임원",
+   "desc": "기업 고위 임원"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "012301",
+   "title": "마케팅·광고·홍보관리자",
+   "track": "marketing"
+  },
+  {
+   "jobCode": "012401",
+   "title": "금융관리자",
+   "track": "finance"
+  },
+  {
+   "jobCode": "012402",
+   "title": "보험관리자",
+   "track": "finance"
+  },
+  {
+   "jobCode": "011201",
+   "title": "기업고위임원",
+   "track": "exec"
+  }
+ ],
+ "projects": [],
+ "common": [
+  {
+   "ref": "cp.biz-basics",
+   "step": 2,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.fs-reading",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.leadership",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.labor-law",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.mba",
+   "step": 6,
+   "major": true,
+   "optional": true
+  }
+ ],
+ "byTrack": {
+  "support": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "인사·총무·회계·기획 실무"
+   }
+  ],
+  "marketing": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "마케팅·홍보 실무"
+   }
+  ],
+  "finance": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "은행·증권·보험 실무"
+   },
+   {
+    "ref": "cp.investment-manager",
+    "step": 5.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "exec": [
+   {
+    "ref": "cp.field-career",
+    "step": 1,
+    "major": true,
+    "note": "부서장·사업 책임자 경력"
+   }
+  ]
+ }
+}
