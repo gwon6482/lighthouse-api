@@ -1,0 +1,357 @@
+{
+ "jobCode": "134301",
+ "title": "정보시스템운영자",
+ "displayName": "인프라·시스템 엔지니어",
+ "family": "it",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 리눅스·네트워크 기초 위에 맡을 분야의 실습 환경을 직접 만들어 운영해 본 경험으로 증명한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "sys",
+   "name": "서버·시스템 운영",
+   "desc": "서버·OS·모니터링"
+  },
+  {
+   "id": "cloud",
+   "name": "클라우드·DevOps",
+   "desc": "AWS·배포 자동화"
+  },
+  {
+   "id": "network",
+   "name": "네트워크",
+   "desc": "라우팅·스위칭·보안장비"
+  },
+  {
+   "id": "dba",
+   "name": "DBA",
+   "desc": "데이터베이스 운영·튜닝"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "134303",
+   "title": "IT기술지원전문가",
+   "track": "sys"
+  },
+  {
+   "jobCode": "134302",
+   "title": "네트워크관리자",
+   "track": "network"
+  },
+  {
+   "jobCode": "134101",
+   "title": "데이터베이스운영·관리자",
+   "track": "dba"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.inf-server",
+   "name": "서버 구축과 모니터링 실습",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "웹 서비스를 올린 서버를 구성하고 모니터링·백업을 건다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "구성",
+     "items": [
+      "서버·웹·DB 설치",
+      "방화벽과 계정 관리"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "운영",
+     "items": [
+      "모니터링 대시보드",
+      "백업·복구 연습",
+      "장애 상황 만들어 대응 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.inf-aws",
+   "name": "클라우드 자격(AWS SAA 등)",
+   "type": "cert",
+   "subtype": "international",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "클라우드 아키텍트 자격에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "서비스",
+     "items": [
+      "컴퓨팅·스토리지·네트워크",
+      "보안·권한",
+      "고가용성 설계"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "문제",
+     "items": [
+      "모의 문제 풀이",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.inf-iac",
+   "name": "코드로 인프라 관리하기",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "practice",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "컨테이너와 코드로 인프라를 만들고 배포한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "컨테이너",
+     "items": [
+      "Docker 심화",
+      "쿠버네티스 기초"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "자동화",
+     "items": [
+      "Terraform으로 인프라 생성",
+      "배포 파이프라인",
+      "구성 문서화"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.inf-net",
+   "name": "네트워크 장비 실습",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "시뮬레이터로 스위치·라우터를 설정해 망을 구성한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "설정",
+     "items": [
+      "VLAN·라우팅 프로토콜",
+      "ACL·NAT"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "구성",
+     "items": [
+      "사무실 망 설계 과제",
+      "장애 원인 찾기 연습"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.inf-netcert",
+   "name": "네트워크 자격(네트워크관리사·CCNA)",
+   "type": "cert",
+   "subtype": "private-certified",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "네트워크 자격에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "이론·실습",
+     "items": [
+      "네트워크 일반",
+      "장비 설정 문제",
+      "기출"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "응시",
+     "items": [
+      "모의고사",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.inf-dba",
+   "name": "데이터베이스 운영 실습",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "DB를 설치하고 백업·복구·튜닝을 해 본다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "운영",
+     "items": [
+      "설치와 계정·권한",
+      "백업·복구",
+      "복제 구성"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "튜닝",
+     "items": [
+      "느린 쿼리 찾기",
+      "인덱스·실행 계획",
+      "운영 점검표"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.cs-basics",
+   "step": 2,
+   "major": false,
+   "skip": "전공 필수 과목에서 배운다"
+  },
+  {
+   "ref": "cp.linux-network",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.git",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.info-eng",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.bootcamp",
+   "step": 5.5,
+   "major": true,
+   "note": "클라우드·인프라 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 9,
+   "major": true,
+   "note": "구성도와 운영 기록"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "sys": [
+   {
+    "ref": "p.inf-server",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "cloud": [
+   {
+    "ref": "cp.cloud-deploy",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.inf-aws",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.inf-iac",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "network": [
+   {
+    "ref": "p.inf-net",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.inf-netcert",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "dba": [
+   {
+    "ref": "cp.sql",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.data-modeling",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.inf-dba",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.sqld",
+    "step": 8.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}

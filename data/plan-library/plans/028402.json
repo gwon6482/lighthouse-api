@@ -1,0 +1,230 @@
+{
+ "jobCode": "028402",
+ "title": "품질관리사무원",
+ "displayName": "품질관리(QC·QA) 담당자",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 품질경영기사가 대표 증빙이다. 통계로 품질을 보는 힘과 현장 이해를 함께 갖춘다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "qc",
+   "name": "품질관리(QC)",
+   "desc": "검사·공정 품질"
+  },
+  {
+   "id": "qa",
+   "name": "품질보증(QA)",
+   "desc": "품질 시스템·인증·고객 대응"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.qc-basics",
+   "name": "품질관리 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "검사·공정 관리·개선 활동의 기본 개념과 도구를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "품질 비용과 관리 체계",
+      "QC 7가지 도구",
+      "검사 방식과 샘플링"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "불량 데이터로 파레토·특성요인도 그리기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.qc-measure",
+   "name": "측정·검사 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "도면을 읽고 측정기로 치수를 재서 검사 성적서를 쓴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "도면",
+     "items": [
+      "도면 기호·공차 읽기",
+      "검사 기준서 이해"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "측정",
+     "items": [
+      "버니어·마이크로미터 사용",
+      "측정 오차 이해",
+      "검사 성적서 작성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.qa-iso",
+   "name": "ISO 9001과 품질 시스템",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "품질경영시스템의 요구사항과 문서 체계를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "요구사항",
+     "items": [
+      "ISO 9001 구조",
+      "프로세스와 문서 체계",
+      "부적합과 시정 조치"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "절차서 예시 분석",
+      "고객 불만 처리 흐름"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.qa-audit",
+   "name": "내부 심사원 과정",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "ISO 내부 심사원 과정을 수료한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "수료",
+     "items": [
+      "과정 신청",
+      "심사 기법 교육",
+      "모의 심사와 평가"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간 교육 과정이다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.qc-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.six-sigma",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 4,
+   "major": true,
+   "note": "품질경영기사(응시자격이 안 되면 산업기사)"
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.eng-field",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "qc": [
+   {
+    "ref": "p.qc-measure",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.cad",
+    "step": 7.5,
+    "major": true,
+    "note": "도면 확인용",
+    "optional": true
+   }
+  ],
+  "qa": [
+   {
+    "ref": "p.qa-iso",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.qa-audit",
+    "step": 7.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}

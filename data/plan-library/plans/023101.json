@@ -1,0 +1,196 @@
+{
+ "jobCode": "023101",
+ "title": "회계사",
+ "displayName": "공인회계사(CPA)",
+ "family": "pro",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "공인회계사 시험(1차·2차)에 합격하고 실무수습을 마쳐야 한다. 응시하려면 정해진 학점 이수와 영어 성적이 먼저 필요하다.",
+ "gate": "공인회계사 시험 합격 + 실무수습. 응시 요건: 관련 과목 학점 이수, 공인 영어 성적",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cpa-req",
+   "name": "응시 요건 갖추기",
+   "type": "edu",
+   "subtype": "required-course",
+   "category": "knowledge",
+   "method": "school",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "학점 이수 요건을 채워 인정받는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "과목별 필요 학점 확인",
+      "이수한 과목 대조"
+     ]
+    },
+    {
+     "weeks": 15,
+     "title": "이수",
+     "items": [
+      "부족한 과목 수강(대학·학점은행제)",
+      "학점 인정 신청"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "과목 구분과 학점 기준은 금융감독원 공고 확인"
+  },
+  {
+   "id": "p.cpa-first",
+   "name": "공인회계사 1차",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 300,
+   "goal": "1차 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 20,
+     "title": "기본 이론",
+     "items": [
+      "회계학",
+      "세법·상법",
+      "경영학·경제원론"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "문제 풀이",
+     "items": [
+      "객관식 회독",
+      "과목별 기출",
+      "과락 과목 보강"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실전",
+     "items": [
+      "전 과목 모의고사",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.cpa-second",
+   "name": "공인회계사 2차",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 360,
+   "goal": "2차 시험 전 과목에 합격한다.",
+   "phases": [
+    {
+     "weeks": 20,
+     "title": "심화 이론",
+     "items": [
+      "재무회계·원가회계",
+      "세법·재무관리",
+      "회계감사"
+     ]
+    },
+    {
+     "weeks": 16,
+     "title": "답안 연습",
+     "items": [
+      "서술형 답안 작성",
+      "기출 회독",
+      "모의고사"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "부분 합격 제도가 있다"
+  },
+  {
+   "id": "p.cpa-train",
+   "name": "회계법인 입사와 실무수습",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "internship",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "회계법인 등에서 실무수습을 마친다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "지원",
+     "items": [
+      "법인별 채용 일정 확인",
+      "서류·면접"
+     ]
+    },
+    {
+     "weeks": 50,
+     "title": "수습",
+     "items": [
+      "감사 현장 업무",
+      "연수 과정 이수",
+      "수습 기간 채우기"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "수습 기간은 기관에 따라 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.cpa-req",
+   "step": 1,
+   "major": false,
+   "skip": "상경 계열 전공 과목으로 채워진다"
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 2,
+   "major": true,
+   "note": "공인 영어 성적이 응시 요건(기준 점수는 공고 확인)"
+  },
+  {
+   "ref": "p.cpa-first",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.cpa-second",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.cpa-train",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "시험 과목·응시 요건은 금융감독원 공인회계사 시험 공고가 정본"
+}

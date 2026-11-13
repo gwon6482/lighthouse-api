@@ -1,0 +1,293 @@
+{
+ "jobCode": "031101",
+ "title": "투자분석가",
+ "displayName": "증권·자산운용 전문가",
+ "family": "finance",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법정 자격은 없지만 금융 자격증과 분석 결과물, 금융권 인턴 경험을 본다. 상경 계열 지식이 바탕이다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "research",
+   "name": "리서치(애널리스트)",
+   "desc": "기업·산업 분석"
+  },
+  {
+   "id": "am",
+   "name": "자산운용",
+   "desc": "펀드·포트폴리오 운용"
+  },
+  {
+   "id": "ib",
+   "name": "IB",
+   "desc": "기업금융·인수합병"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "031201",
+   "title": "자산운용가",
+   "track": "am"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.ia-valuation",
+   "name": "기업 가치 평가",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "현금흐름할인과 상대가치로 기업의 적정 가치를 추정한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "방법",
+     "items": [
+      "현금흐름할인(DCF)",
+      "상대가치(PER·EV/EBITDA)",
+      "할인율 추정"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실습",
+     "items": [
+      "상장 기업 1곳 가치 평가",
+      "가정 바꿔 가며 비교"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ia-report",
+   "name": "기업 분석 보고서 쓰기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "기업 분석 보고서 3편을 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "형식",
+     "items": [
+      "증권사 보고서 구조 분석",
+      "기업 고르기"
+     ]
+    },
+    {
+     "weeks": 5,
+     "title": "작성",
+     "items": [
+      "산업·실적 분석",
+      "가치 평가와 투자 의견",
+      "발표와 피드백"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ia-portfolio",
+   "name": "모의 포트폴리오 운용",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "운용 원칙을 세워 6개월간 모의 운용하고 성과를 분석한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "원칙",
+     "items": [
+      "투자 원칙과 자산 배분",
+      "종목 선정 기준"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "운용",
+     "items": [
+      "월 1회 리밸런싱",
+      "매매 근거 기록",
+      "성과와 위험 지표 분석"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ia-model",
+   "name": "재무 모델링",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "재무제표 세 표가 연동되는 추정 모델을 만든다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "모델",
+     "items": [
+      "매출·비용 가정",
+      "세 표 연동",
+      "시나리오 분석"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "응용",
+     "items": [
+      "인수합병 기초 모델",
+      "한 장 요약"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ia-cfa",
+   "name": "CFA 레벨 1",
+   "type": "cert",
+   "subtype": "international",
+   "category": "qualification",
+   "method": "book",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "CFA 레벨 1에 합격한다.",
+   "phases": [
+    {
+     "weeks": 14,
+     "title": "과목",
+     "items": [
+      "윤리·계량",
+      "재무회계·기업재무",
+      "주식·채권·파생"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "문제",
+     "items": [
+      "문제 은행 풀이",
+      "모의고사"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "응시 요건과 일정은 CFA 협회 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.fs-reading",
+   "step": 2,
+   "major": false,
+   "skip": "상경 계열 전공 과목에서 배운다"
+  },
+  {
+   "ref": "cp.econ-test",
+   "step": 3,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.ia-valuation",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.industry-report",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.investment-manager",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.study-club",
+   "step": 8,
+   "major": true,
+   "note": "투자·금융 학회"
+  },
+  {
+   "ref": "p.ia-cfa",
+   "step": 9.5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 10,
+   "major": true,
+   "note": "리서치 보조·금융권 인턴"
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 11,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 12,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 13,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "research": [
+   {
+    "ref": "p.ia-report",
+    "step": 9,
+    "major": true
+   }
+  ],
+  "am": [
+   {
+    "ref": "p.ia-portfolio",
+    "step": 9,
+    "major": true
+   }
+  ],
+  "ib": [
+   {
+    "ref": "p.ia-model",
+    "step": 9,
+    "major": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,180 @@
+{
+ "jobCode": "026103",
+ "title": "영업기획·관리·지원사무원",
+ "displayName": "영업관리 담당자",
+ "family": "sales",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 숫자 관리와 문서, 거래처를 대하는 힘을 인턴·판매 경험으로 보여 준다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "salesops",
+   "name": "영업관리",
+   "desc": "매출·거래처·채권 관리"
+  },
+  {
+   "id": "salesplan",
+   "name": "영업기획",
+   "desc": "목표·판촉 기획"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.so-ops",
+   "name": "매출·채권·거래처 관리 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "매출 실적표와 채권 현황을 만들고 거래처별로 관리한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "구조",
+     "items": [
+      "수주→출고→매출→수금 흐름",
+      "거래처 원장 이해"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실습",
+     "items": [
+      "엑셀로 실적 대시보드",
+      "미수 채권 관리표",
+      "월간 영업 보고서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.so-plan",
+   "name": "판매 계획과 판촉 기획서",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "상품 하나의 분기 판매 목표와 판촉 계획을 기획서로 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "시장·경쟁 조사",
+      "지난 실적 분석"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "계획",
+     "items": [
+      "목표 배분",
+      "판촉안과 예산",
+      "성과 측정 계획"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.sales-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.fs-reading",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 6,
+   "major": true,
+   "note": "거래처 방문"
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 8,
+   "major": true,
+   "note": "판매·영업 경험",
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 10,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 11,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 12,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 13,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "salesops": [
+   {
+    "ref": "p.so-ops",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "salesplan": [
+   {
+    "ref": "p.so-plan",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.industry-report",
+    "step": 7.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}

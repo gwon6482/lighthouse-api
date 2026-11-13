@@ -3788,6 +3788,190 @@
      ]
     }
    ]
+  },
+  {
+   "id": "cp.sales-basics",
+   "name": "영업 기본(제안·협상)",
+   "type": "skill",
+   "subtype": "common",
+   "scope": "family",
+   "families": [
+    "sales",
+    "biz"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "고객의 필요를 묻고 제안서를 만들어 협상하는 흐름을 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "흐름",
+     "items": [
+      "영업 단계(발굴→제안→계약)",
+      "고객 질문법",
+      "제안서 구성"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연습",
+     "items": [
+      "가상 고객 제안서 1건",
+      "협상 역할극",
+      "거절 대응 정리"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.trade-cert",
+   "name": "무역 자격(국제무역사·무역영어)",
+   "type": "cert",
+   "subtype": "private-certified",
+   "scope": "family",
+   "families": [
+    "biz",
+    "sales"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "국제무역사 또는 무역영어 자격에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "이론",
+     "items": [
+      "무역 규범·계약",
+      "결제·운송·보험",
+      "무역 영어 서신"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "기출",
+     "items": [
+      "기출 회독",
+      "서류 문제 연습",
+      "응시"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.logistics-cert",
+   "name": "물류관리사",
+   "type": "cert",
+   "subtype": "national-license",
+   "scope": "family",
+   "families": [
+    "biz",
+    "sales"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "물류관리사 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "이론",
+     "items": [
+      "물류관리론·화물운송론",
+      "보관하역론·국제물류론",
+      "물류 관련 법규"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "기출",
+     "items": [
+      "기출 회독",
+      "계산 문제",
+      "모의고사"
+     ]
+    }
+   ],
+   "verify": "시험은 연 1회"
+  },
+  {
+   "id": "cp.linux-network",
+   "name": "리눅스와 네트워크 기초",
+   "type": "skill",
+   "subtype": "dev",
+   "scope": "family",
+   "families": [
+    "it"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "리눅스 서버를 다루고 네트워크 통신을 직접 확인한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "리눅스",
+     "items": [
+      "기본 명령·권한",
+      "프로세스·서비스 관리",
+      "셸 스크립트"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "네트워크",
+     "items": [
+      "IP·서브넷·라우팅",
+      "DNS·HTTP 확인 도구",
+      "패킷 캡처로 흐름 보기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.eng-major",
+   "name": "공학 전공 기초 다지기",
+   "type": "edu",
+   "subtype": "major",
+   "scope": "family",
+   "families": [
+    "eng"
+   ],
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "지원 분야의 전공 핵심 과목을 면접에서 설명할 수 있는 수준으로 정리한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "핵심 과목",
+     "items": [
+      "분야별 핵심 과목 복습",
+      "개념 정리 노트",
+      "전공 문제 풀이"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "정리",
+     "items": [
+      "면접 기출 질문에 답하기",
+      "약한 과목 보강"
+     ]
+    }
+   ],
+   "verify": "비전공자는 학위 과정(편입·대학원) 없이 엔지니어 직무로 가기 어렵다"
   }
  ]
 }

@@ -1,0 +1,207 @@
+{
+ "jobCode": "140101",
+ "title": "건축가(건축설계사)",
+ "displayName": "건축설계사",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "건축사가 되려면 인증받은 건축학 교육과정을 마치고 실무수련을 거쳐 건축사 자격시험에 합격해야 한다. 설계사무소 취업은 포트폴리오로 평가받는다.",
+ "gate": "건축사 — 건축학 인증 교육과정(5년제 등) 이수 + 실무수련 + 건축사 자격시험",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ar-studio",
+   "name": "설계 스튜디오 작업",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 180,
+   "goal": "설계 과제를 개념부터 도면·모형까지 완성한다.",
+   "phases": [
+    {
+     "weeks": 15,
+     "title": "학기 중",
+     "items": [
+      "대지 분석과 개념",
+      "도면·모형 발전",
+      "중간·최종 크리틱"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "학기 말",
+     "items": [
+      "작업 기록 정리",
+      "포트폴리오용 재편집"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "note": "매 학기 반복한다"
+  },
+  {
+   "id": "p.ar-tools",
+   "name": "설계 도구 익히기(3D·BIM·렌더)",
+   "type": "skill",
+   "subtype": "design",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "3D 모델링과 BIM, 렌더링으로 설계안을 표현한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "모델링",
+     "items": [
+      "3D 모델링 도구",
+      "BIM 기초"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "표현",
+     "items": [
+      "렌더링",
+      "다이어그램·패널 구성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ar-train",
+   "name": "실무수련",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "internship",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "건축사사무소에서 법정 실무수련 기간을 채운다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "등록",
+     "items": [
+      "실무수련 신고",
+      "수련 계획"
+     ]
+    },
+    {
+     "weeks": 150,
+     "title": "수련",
+     "items": [
+      "설계·인허가·감리 업무",
+      "수련 내용 기록"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "수련 기간과 인정 기준은 대한건축사협회 확인"
+  },
+  {
+   "id": "p.ar-exam",
+   "name": "건축사 자격시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "academy",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 180,
+   "goal": "건축사 자격시험 세 과목에 합격한다.",
+   "phases": [
+    {
+     "weeks": 20,
+     "title": "과목별 작도",
+     "items": [
+      "대지 계획",
+      "건축 설계",
+      "구조·설비 계획"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실전",
+     "items": [
+      "시간 안에 작도 연습",
+      "모의시험"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 건축학과에 다니고 있다",
+   "note": "건축학 인증 과정"
+  },
+  {
+   "ref": "p.ar-studio",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.cad",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.ar-tools",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.contest",
+   "step": 5,
+   "major": true,
+   "note": "건축 설계 공모전",
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 6,
+   "major": true,
+   "note": "설계사무소 인턴"
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "p.ar-train",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "p.ar-exam",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "자격 요건은 건축사법이 정본"
+}

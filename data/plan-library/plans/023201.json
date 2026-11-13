@@ -1,0 +1,155 @@
+{
+ "jobCode": "023201",
+ "title": "세무사",
+ "displayName": "세무사",
+ "family": "pro",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "세무사 시험(1차·2차)에 합격하고 실무교육을 받아야 한다. 응시에는 공인 영어 성적이 필요하다.",
+ "gate": "세무사 시험 합격 + 실무교육. 응시 요건: 공인 영어 성적",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cta-first",
+   "name": "세무사 1차",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 240,
+   "goal": "1차 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 16,
+     "title": "기본 이론",
+     "items": [
+      "재정학",
+      "세법학개론",
+      "회계학개론·선택 과목"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "문제 풀이",
+     "items": [
+      "객관식 회독",
+      "기출",
+      "과락 과목 보강"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.cta-second",
+   "name": "세무사 2차",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 300,
+   "goal": "2차 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 18,
+     "title": "심화 이론",
+     "items": [
+      "회계학 1부·2부",
+      "세법학 1부·2부"
+     ]
+    },
+    {
+     "weeks": 14,
+     "title": "답안 연습",
+     "items": [
+      "서술형 답안 작성",
+      "기출 회독",
+      "모의고사"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.cta-train",
+   "name": "실무교육과 취업",
+   "type": "edu",
+   "subtype": "required-course",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "실무교육을 마치고 세무법인이나 사무소에서 일을 시작한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "지원",
+     "items": [
+      "세무법인 채용 확인",
+      "면접"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "교육",
+     "items": [
+      "실무교육 이수",
+      "신고 업무 익히기"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "교육 기간은 한국세무사회 안내 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.toeic",
+   "step": 1,
+   "major": true,
+   "note": "공인 영어 성적이 응시 요건(기준 점수는 공고 확인)"
+  },
+  {
+   "ref": "p.cta-first",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.cta-second",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.cta-train",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "시험 과목·응시 요건은 한국산업인력공단 세무사 시험 공고가 정본"
+}

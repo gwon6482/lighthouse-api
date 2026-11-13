@@ -1,0 +1,283 @@
+{
+ "jobCode": "135001",
+ "title": "정보보안전문가",
+ "displayName": "정보보안 전문가",
+ "family": "it",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 정보보안기사가 대표 증빙이다. 시스템·네트워크 기초 위에 분야별 실습 결과물을 쌓는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "soc",
+   "name": "보안관제",
+   "desc": "탐지·대응 운영"
+  },
+  {
+   "id": "pentest",
+   "name": "모의해킹",
+   "desc": "취약점 진단"
+  },
+  {
+   "id": "grc",
+   "name": "보안 컨설팅",
+   "desc": "관리체계·인증(ISMS)"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.sec-basics",
+   "name": "정보보안 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "암호·인증·접근 통제와 대표 공격 유형을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "암호·인증·접근 통제",
+      "웹·네트워크 공격 유형",
+      "보안 장비 역할"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실습",
+     "items": [
+      "취약한 실습 환경 구축",
+      "공격과 방어 한 번씩 해 보기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sec-soc",
+   "name": "보안 관제 실습",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "로그와 패킷에서 침해 흔적을 찾아 보고한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "도구",
+     "items": [
+      "로그 수집·검색(SIEM)",
+      "탐지 규칙 이해",
+      "패킷 분석"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "대응",
+     "items": [
+      "침해 시나리오 분석",
+      "대응 보고서 작성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sec-web",
+   "name": "웹 해킹 실습",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "대표 웹 취약점을 실습 환경에서 찾아낸다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "취약점",
+     "items": [
+      "인젝션·XSS·인증 우회",
+      "프록시 도구 사용",
+      "워게임 문제 풀이"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "심화",
+     "items": [
+      "시큐어 코딩 대책",
+      "문제 풀이 기록 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sec-report",
+   "name": "취약점 진단 보고서",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "실습 대상을 진단해 위험도와 대책을 담은 보고서를 쓴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "범위",
+     "items": [
+      "진단 대상과 체크리스트",
+      "진단 계획"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "진단",
+     "items": [
+      "항목별 점검",
+      "증적 정리",
+      "위험도 평가와 대책"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "허가받은 실습 환경에서만 진단한다"
+  },
+  {
+   "id": "p.sec-isms",
+   "name": "정보보호 관리체계(ISMS-P) 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "인증 기준의 구조와 주요 통제 항목을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기준",
+     "items": [
+      "관리체계 수립·운영",
+      "보호 대책 요구사항",
+      "개인정보 처리 단계"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "가상 조직 점검표 작성",
+      "관련 법 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.cs-basics",
+   "step": 2,
+   "major": false,
+   "skip": "전공 필수 과목에서 배운다"
+  },
+  {
+   "ref": "cp.linux-network",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.sec-basics",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 5,
+   "major": true,
+   "note": "정보보안기사"
+  },
+  {
+   "ref": "cp.study-club",
+   "step": 5.5,
+   "major": true,
+   "note": "보안 동아리",
+   "optional": true
+  },
+  {
+   "ref": "cp.contest",
+   "step": 8,
+   "major": true,
+   "note": "해킹 방어 대회(CTF)",
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "soc": [
+   {
+    "ref": "p.sec-soc",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "pentest": [
+   {
+    "ref": "p.sec-web",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.sec-report",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "grc": [
+   {
+    "ref": "p.sec-isms",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.office-docs",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
+}

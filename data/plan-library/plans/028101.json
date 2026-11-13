@@ -1,0 +1,205 @@
+{
+ "jobCode": "028101",
+ "title": "무역사무원",
+ "displayName": "무역 사무 담당자",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 무역 실무 지식과 영어, 서류를 정확히 다루는 힘을 자격증과 실습으로 보여 준다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "trade",
+   "name": "수출입 사무",
+   "desc": "서류·결제·통관 진행"
+  },
+  {
+   "id": "forwarding",
+   "name": "포워딩(국제물류)",
+   "desc": "선적·운송 주선"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.tr-basics",
+   "name": "무역 실무 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "계약부터 통관·결제까지 수출입의 흐름을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "흐름",
+     "items": [
+      "무역 계약과 인코텀즈",
+      "결제 방식(송금·신용장)",
+      "통관과 관세"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "서류",
+     "items": [
+      "인보이스·패킹리스트",
+      "선하증권",
+      "원산지 증명"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tr-docs",
+   "name": "수출입 서류 작성 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "가상 거래 한 건의 서류를 처음부터 끝까지 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "거래 조건 정하기",
+      "서류 목록"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "작성",
+     "items": [
+      "계약서·인보이스 작성",
+      "선적 서류 묶음",
+      "영문 이메일 주고받기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tr-fwd",
+   "name": "국제물류와 포워딩 실무",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "해상·항공 운송의 절차와 운임 구조를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "운송",
+     "items": [
+      "해상·항공 운송 절차",
+      "운임과 부대 비용",
+      "컨테이너와 선적 예약"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "실무",
+     "items": [
+      "운송 견적 내기",
+      "화물 추적과 문제 대응"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.tr-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.trade-cert",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.second-language",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 10,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 11,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 12,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "trade": [
+   {
+    "ref": "p.tr-docs",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "forwarding": [
+   {
+    "ref": "p.tr-fwd",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.logistics-cert",
+    "step": 8.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}

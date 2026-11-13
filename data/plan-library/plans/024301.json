@@ -1,0 +1,317 @@
+{
+ "jobCode": "024301",
+ "title": "상품기획자",
+ "displayName": "MD·상품기획자",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 시장을 읽고 숫자로 판단하는 힘을 매장 경험과 기획 결과물로 보여 준다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "retail",
+   "name": "유통 MD(바이어)",
+   "desc": "백화점·마트·편의점 상품 소싱"
+  },
+  {
+   "id": "online",
+   "name": "온라인 MD",
+   "desc": "이커머스 상품·프로모션 운영"
+  },
+  {
+   "id": "product",
+   "name": "상품기획",
+   "desc": "제조·PB 상품 기획"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.md-basics",
+   "name": "유통과 상품 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "유통 구조와 상품 손익(매입가·마진·재고)을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "유통 채널 구조",
+      "마진·회전율·재고",
+      "카테고리 관리"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "매장 3곳 상품 구성 비교",
+      "정리 글"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.md-market",
+   "name": "시장 조사와 트렌드 리포트",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "한 카테고리의 시장·경쟁·트렌드를 리포트로 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "판매 순위·리뷰 수집",
+      "경쟁 상품 비교"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "리포트",
+     "items": [
+      "트렌드와 기회 정리",
+      "추천 상품안",
+      "발표 자료"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.md-buy",
+   "name": "상품 소싱과 협상 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "공급처를 찾아 조건을 비교하고 매입 계획을 세운다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "소싱",
+     "items": [
+      "공급처 조사",
+      "견적 비교표"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "계획",
+     "items": [
+      "협상 시나리오",
+      "매입량·가격 계획",
+      "손익 추정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.md-promo",
+   "name": "온라인 프로모션 기획",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "온라인 기획전 하나를 상품 구성부터 성과 지표까지 기획한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "기획전 사례 분석",
+      "대상 고객과 목표"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기획",
+     "items": [
+      "상품 구성과 가격",
+      "상세페이지·배너 기획",
+      "성과 지표와 일정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.md-plan",
+   "name": "상품 기획서 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "새 상품의 콘셉트·원가·출시 계획을 기획서로 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기회",
+     "items": [
+      "소비자 조사",
+      "콘셉트 정하기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "기획",
+     "items": [
+      "사양과 원가",
+      "가격·채널 전략",
+      "출시 일정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.md-cert",
+   "name": "유통관리사 2급",
+   "type": "cert",
+   "subtype": "private-certified",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "유통관리사 2급에 합격한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이론",
+     "items": [
+      "유통·물류 일반",
+      "상권 분석",
+      "유통 마케팅·정보"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "기출",
+     "items": [
+      "기출 풀이",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.md-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.md-market",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.md-cert",
+   "step": 5.5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 8,
+   "major": true,
+   "note": "매장 판매 경험"
+  },
+  {
+   "ref": "cp.internship",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 10,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 11,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 12,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 13,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "retail": [
+   {
+    "ref": "p.md-buy",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "online": [
+   {
+    "ref": "p.md-promo",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.ga4",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "product": [
+   {
+    "ref": "p.md-plan",
+    "step": 6,
+    "major": true
+   }
+  ]
+ }
+}
