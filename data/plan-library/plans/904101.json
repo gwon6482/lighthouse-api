@@ -1,0 +1,166 @@
+{
+ "jobCode": "904101",
+ "title": "양식원",
+ "displayName": "수산 양식·어업인",
+ "family": "agri",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "양식과 어선 어업은 창업형 진로다. 교육과 현장 실습을 거치고, 어선을 타려면 선원 교육과 면허가 필요하다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "aqua",
+   "name": "양식",
+   "desc": "어류·패류·해조류 양식"
+  },
+  {
+   "id": "fishing",
+   "name": "어선 어업",
+   "desc": "연안 어업·나잠 어업"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "904201",
+   "title": "어부 및 해녀",
+   "track": "fishing"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.fs-aqua",
+   "name": "양식 기술",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "수질·사료·질병 관리로 양식 생물을 기른다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "기술",
+     "items": [
+      "품종별 양식 방법",
+      "수질과 사료 관리",
+      "질병 예방"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fs-boat",
+   "name": "소형 선박 조종 면허",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "소형 선박을 몰 수 있는 면허를 딴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "취득",
+     "items": [
+      "필기",
+      "실기 또는 교육 이수",
+      "면허 발급"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "배의 크기에 따라 해기사 면허가 필요하다"
+  },
+  {
+   "id": "p.fs-fish",
+   "name": "어업 허가와 조업 안전",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "어업 허가·어촌계 제도와 조업 안전 수칙을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "어업 허가·면허 제도",
+      "어촌계 가입",
+      "조업 안전과 기상"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.farm-explore",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.farm-edu",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.farm-plan",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "aqua": [
+   {
+    "ref": "p.fs-aqua",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "수산양식기능사",
+    "optional": true
+   },
+   {
+    "ref": "cp.farm-practice",
+    "step": 5,
+    "major": true,
+    "note": "양식장 실습"
+   }
+  ],
+  "fishing": [
+   {
+    "ref": "cp.seafarer-safety",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "p.fs-boat",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "p.fs-fish",
+    "step": 5,
+    "major": true
+   }
+  ]
+ }
+}

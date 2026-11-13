@@ -1,0 +1,123 @@
+{
+ "jobCode": "813101",
+ "title": "금형원",
+ "displayName": "금형 기술자",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "금형기능사가 기본 증빙이다. 도면을 읽고 가공·조립해 금형을 완성하는 기술을 쌓는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.md-basics",
+   "name": "금형 구조와 재료",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "사출·프레스 금형의 구조와 금형 재료를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "구조",
+     "items": [
+      "사출 금형",
+      "프레스 금형",
+      "금형 재료와 열처리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.md-make",
+   "name": "금형 가공과 조립 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "부품을 가공해 금형을 조립하고 시험한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "밀링·연삭·방전 가공",
+      "조립과 맞춤",
+      "시험 사출·수정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "금형기능사"
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.md-basics",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.md-make",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.cad-3d",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 8,
+   "major": true,
+   "note": "금형 분야 산업기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "금형 제작 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

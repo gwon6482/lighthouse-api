@@ -1,0 +1,119 @@
+{
+ "jobCode": "903101",
+ "title": "조림·산림경영인 및 벌목원",
+ "displayName": "임업인(산림 경영)",
+ "family": "agri",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "산림기능사가 기본 증빙이다. 산림조합이나 산림 사업 법인에서 일하며 숲 가꾸기와 벌목 기술을 쌓는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.fr-forest",
+   "name": "산림 경영과 임산물 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "조림·숲 가꾸기·수확의 주기와 임산물 소득을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "조림과 숲 가꾸기",
+      "수확과 운반",
+      "임산물 재배"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fr-saw",
+   "name": "기계톱과 임업 기계 안전 작업",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "기계톱으로 안전하게 벌도하고 조재한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "실습",
+     "items": [
+      "기계톱 정비",
+      "벌도 방향 잡기",
+      "안전 수칙"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.fr-forest",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 3,
+   "major": true,
+   "note": "산림기능사"
+  },
+  {
+   "ref": "p.fr-saw",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.equipment-license",
+   "step": 6,
+   "major": true,
+   "note": "굴착기 등",
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 7,
+   "major": true,
+   "note": "산림조합·산림 사업 법인"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 8,
+   "major": true,
+   "note": "산림산업기사·기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.farm-plan",
+   "step": 9,
+   "major": true,
+   "note": "임업 후계자·산림 소득 사업",
+   "optional": true
+  }
+ ],
+ "byTrack": {}
+}

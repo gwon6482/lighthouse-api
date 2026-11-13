@@ -1,0 +1,105 @@
+{
+ "jobCode": "833001",
+ "title": "발전·배전장치조작원",
+ "displayName": "발전·전기 설비 운전원",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "발전 공기업이나 민간 발전소, 공장의 유틸리티 부서에서 설비를 운전한다. 전기·에너지 분야 자격과 필기가 관문이다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "834001",
+   "title": "전기·전자설비조작원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.pw-plant",
+   "name": "발전 원리와 설비 운전 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "보일러·터빈·발전기와 송배전 설비의 운전 원리를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "발전 방식과 계통",
+      "주요 설비와 운전 변수",
+      "보호 장치와 비상 대응"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.pw-plant",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 3,
+   "major": true,
+   "note": "전기기능사·에너지관리기능사"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 4,
+   "major": true,
+   "note": "전기·에너지관리 산업기사 이상",
+   "optional": true
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.ncs",
+   "step": 6,
+   "major": true,
+   "note": "발전 공기업 필기"
+  },
+  {
+   "ref": "cp.major-written",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.safety-law",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

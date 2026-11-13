@@ -2142,7 +2142,7 @@
      "groupName": "운송장비 정비",
      "covers": [],
      "batch": "3-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2154,7 +2154,7 @@
      "groupName": "금형·공작기계 조작",
      "covers": [],
      "batch": "3-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2166,7 +2166,7 @@
      "groupName": "설비·자동화 조작",
      "covers": [],
      "batch": "3-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2183,7 +2183,7 @@
       }
      ],
      "batch": "3-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2208,7 +2208,7 @@
       }
      ],
      "batch": "3-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2225,7 +2225,7 @@
       }
      ],
      "batch": "3-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2250,7 +2250,7 @@
       }
      ],
      "batch": "3-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2267,7 +2267,7 @@
       }
      ],
      "batch": "3-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2288,7 +2288,7 @@
       }
      ],
      "batch": "3-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2305,7 +2305,7 @@
       }
      ],
      "batch": "3-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2326,7 +2326,7 @@
       }
      ],
      "batch": "3-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2347,7 +2347,7 @@
       }
      ],
      "batch": "3-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2359,7 +2359,7 @@
      "groupName": "악기·간판·기타 제조",
      "covers": [],
      "batch": "3-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2371,7 +2371,7 @@
      "groupName": "악기·간판·기타 제조",
      "covers": [],
      "batch": "3-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2383,7 +2383,7 @@
      "groupName": "작물재배",
      "covers": [],
      "batch": "3-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2400,7 +2400,7 @@
       }
      ],
      "batch": "3-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2412,7 +2412,7 @@
      "groupName": "임업",
      "covers": [],
      "batch": "3-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2429,7 +2429,7 @@
       }
      ],
      "batch": "3-08",
-     "done": false
+     "done": true
     }
    ]
   },

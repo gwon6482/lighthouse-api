@@ -1,0 +1,117 @@
+{
+ "jobCode": "812201",
+ "title": "선박정비원",
+ "displayName": "선박 정비사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 기관 정비 분야 기능사가 기본 증빙이다. 조선소와 수리 업체에서 경력을 쌓는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.sr-basics",
+   "name": "선박 기관과 추진 장치 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "디젤 기관과 축계·프로펠러, 보조 기계의 구조를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "구조",
+     "items": [
+      "디젤 기관",
+      "축계·추진 장치",
+      "보조 기계·전기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sr-work",
+   "name": "선박 정비 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "기관을 분해·점검하고 선체를 보수한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "기관 분해·조립",
+      "계측과 조정",
+      "선체·의장 보수"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "선박기관정비기능사·동력기계정비기능사"
+  },
+  {
+   "ref": "p.sr-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.sr-work",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.welding-practice",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "조선소·선박 수리 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

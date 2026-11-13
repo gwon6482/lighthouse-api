@@ -1,0 +1,132 @@
+{
+ "jobCode": "885101",
+ "title": "악기제조원 및 조율사",
+ "displayName": "악기 제작·조율사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "피아노 조율은 조율 기능사가 증빙이 된다. 악기 제작과 수리는 공방에서 도제식으로 배우는 경우가 많다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "tuner",
+   "name": "조율",
+   "desc": "피아노 조율·수리"
+  },
+  {
+   "id": "maker",
+   "name": "제작",
+   "desc": "현악기·관악기 제작·수리"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.tn-tune",
+   "name": "조율·조정·정음 기술",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "피아노의 음을 맞추고 액션을 조정한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "기술",
+     "items": [
+      "음정 듣기와 조율",
+      "액션 조정",
+      "정음"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tn-make",
+   "name": "악기 제작과 수리 기술",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "현악기나 관악기를 만들고 고친다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "기술",
+     "items": [
+      "재료와 구조",
+      "제작 공정",
+      "수리와 세팅"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "피아노조율기능사",
+   "optional": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.work-record",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "악기사·조율 업체·제작 공방"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "tuner": [
+   {
+    "ref": "p.tn-tune",
+    "step": 3,
+    "major": true
+   }
+  ],
+  "maker": [
+   {
+    "ref": "p.tn-make",
+    "step": 3,
+    "major": true
+   }
+  ]
+ }
+}

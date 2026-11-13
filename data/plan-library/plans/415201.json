@@ -49,37 +49,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.fs-pattern",
-   "name": "패턴과 봉제 기초",
-   "type": "skill",
-   "subtype": "field",
-   "category": "skill",
-   "method": "academy",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 180,
-   "goal": "기본 패턴을 뜨고 옷 한 벌을 만든다.",
-   "phases": [
-    {
-     "weeks": 4,
-     "title": "패턴",
-     "items": [
-      "원형 제도",
-      "디자인 패턴 전개"
-     ]
-    },
-    {
-     "weeks": 4,
-     "title": "봉제",
-     "items": [
-      "재봉 기초",
-      "스커트·셔츠 제작"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.fs-collection",
    "name": "컬렉션 포트폴리오",
    "type": "output",
@@ -142,7 +111,7 @@
    "major": true
   },
   {
-   "ref": "p.fs-pattern",
+   "ref": "cp.pattern-sewing",
    "step": 5,
    "major": true
   },

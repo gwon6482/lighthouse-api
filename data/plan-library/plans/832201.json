@@ -1,0 +1,173 @@
+{
+ "jobCode": "832201",
+ "title": "가전제품설치·수리원",
+ "displayName": "가전·IT기기 수리 기사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 전자·전기 분야 기능사가 증빙이 된다. 제조사 서비스 센터나 수리 업체에서 일한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "appliance",
+   "name": "가전",
+   "desc": "가전·에어컨 설치·수리"
+  },
+  {
+   "id": "office",
+   "name": "사무기기",
+   "desc": "복합기·프린터"
+  },
+  {
+   "id": "pc",
+   "name": "컴퓨터",
+   "desc": "PC 조립·수리·설치"
+  },
+  {
+   "id": "phone",
+   "name": "휴대폰",
+   "desc": "스마트폰 수리"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "832101",
+   "title": "사무용 전자기기설치·수리원",
+   "track": "office"
+  },
+  {
+   "jobCode": "841101",
+   "title": "컴퓨터설치·수리원",
+   "track": "pc"
+  },
+  {
+   "jobCode": "841201",
+   "title": "이동전화기수리원",
+   "track": "phone"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.ap-basics",
+   "name": "전기·전자 회로와 측정",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "기본 회로를 이해하고 계측기로 이상을 찾는다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "기초",
+     "items": [
+      "전기·전자 회로",
+      "멀티미터 사용",
+      "부품 판별"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ap-repair",
+   "name": "분해·진단·수리 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "제품을 분해해 고장을 찾고 부품을 교체한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "분해·조립",
+      "고장 진단",
+      "부품 교체와 시험"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "전자기기기능사·전기기능사",
+   "optional": true
+  },
+  {
+   "ref": "p.ap-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.ap-repair",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "제조사 서비스 센터·수리 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "appliance": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4.5,
+    "major": true,
+    "note": "공조냉동기계기능사 — 에어컨 설치",
+    "optional": true
+   }
+  ],
+  "office": [],
+  "pc": [
+   {
+    "ref": "cp.linux-network",
+    "step": 6.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "phone": []
+ }
+}

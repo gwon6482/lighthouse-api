@@ -1,0 +1,131 @@
+{
+ "jobCode": "815001",
+ "title": "자동조립라인·산업용 로봇조작원",
+ "displayName": "자동화 설비 운전원",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 자동화·설비 분야 기능사가 증빙이 된다. 자동화 라인을 운전하고 간단한 이상에 대응한다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ar-line",
+   "name": "자동화 라인 구성과 안전",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "센서·구동기·로봇으로 이어진 라인의 구성과 안전 장치를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "라인 구성 요소",
+      "안전 펜스·인터록",
+      "품질 확인 지점"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ar-teach",
+   "name": "산업용 로봇 티칭과 운전",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "로봇에 동작을 가르치고 프로그램을 수정한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "실습",
+     "items": [
+      "좌표계와 조작",
+      "티칭·프로그램",
+      "이상 발생 시 복구"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "생산자동화기능사·설비보전기능사"
+  },
+  {
+   "ref": "p.ar-line",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.plc",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.ar-teach",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.safety-law",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 8,
+   "major": true,
+   "note": "생산자동화산업기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 9,
+   "major": true,
+   "note": "대기업 생산직 인적성",
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "제조 공장 자동화 라인"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "산업용 로봇 작업은 특별 안전 보건 교육 대상이다"
+}

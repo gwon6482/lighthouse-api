@@ -1,0 +1,152 @@
+{
+ "jobCode": "816103",
+ "title": "일반기계조립원",
+ "displayName": "기계·선박 조립원",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 도면을 보고 부품을 조립·측정하는 기술을 익혀 기계·조선 제조 업체에서 일한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "machine",
+   "name": "기계 조립",
+   "desc": "산업 기계·장비"
+  },
+  {
+   "id": "ship",
+   "name": "선박 조립",
+   "desc": "조선소 선체·의장"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "817301",
+   "title": "선박조립원",
+   "track": "ship"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.as-skill",
+   "name": "조립과 측정 기술 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "도면대로 조립하고 치수와 작동을 확인한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기초",
+     "items": [
+      "공구와 체결",
+      "측정기 사용"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "조립",
+     "items": [
+      "유닛 조립",
+      "정렬·조정",
+      "작동 시험"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.as-ship",
+   "name": "선체 블록 조립 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "선체 블록의 조립 순서와 취부 작업을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "블록 공법",
+      "취부와 가용접",
+      "치수 정도 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "기계가공조립기능사 등",
+   "optional": true
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.as-skill",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "기계·조선 제조 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "machine": [],
+  "ship": [
+   {
+    "ref": "p.as-ship",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.welding-practice",
+    "step": 8,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}

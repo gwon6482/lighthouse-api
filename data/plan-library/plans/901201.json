@@ -28,93 +28,6 @@
  ],
  "projects": [
   {
-   "id": "p.fa-explore",
-   "name": "농업 체험과 작목 정하기",
-   "type": "network",
-   "subtype": "research",
-   "category": "knowledge",
-   "method": "etc",
-   "level": "입문",
-   "daysPerWeek": 2,
-   "minutesPerSession": 180,
-   "goal": "농장을 체험하고 지역과 작목을 정한다.",
-   "phases": [
-    {
-     "weeks": 4,
-     "title": "체험",
-     "items": [
-      "농가 체험·일손 돕기",
-      "작목별 수익·노동 조사"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "결정",
-     "items": [
-      "지역과 작목 정하기",
-      "필요 자금 어림"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.fa-edu",
-   "name": "영농 교육 이수",
-   "type": "edu",
-   "subtype": "bootcamp",
-   "category": "knowledge",
-   "method": "academy",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 240,
-   "goal": "귀농·청년농 교육과 작목 재배 교육을 이수한다.",
-   "phases": [
-    {
-     "weeks": 12,
-     "title": "교육",
-     "items": [
-      "기초 영농 교육",
-      "작목별 재배 기술",
-      "농업 경영·회계"
-     ]
-    }
-   ],
-   "basis": "practice",
-   "verify": "지원 사업 신청에 교육 시간이 요건인 경우가 있다"
-  },
-  {
-   "id": "p.fa-farm",
-   "name": "선도 농가 실습",
-   "type": "activity",
-   "subtype": "work",
-   "category": "experience",
-   "method": "field_practice",
-   "level": "입문",
-   "daysPerWeek": 5,
-   "minutesPerSession": 480,
-   "goal": "한 작기 동안 농가에서 일하며 재배 전 과정을 익힌다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "연결",
-     "items": [
-      "실습 농가 찾기"
-     ]
-    },
-    {
-     "weeks": 24,
-     "title": "실습",
-     "items": [
-      "육묘부터 수확까지",
-      "시설·기계 관리",
-      "출하·판매 과정"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.fa-smart",
    "name": "스마트팜 기술 교육",
    "type": "edu",
@@ -138,53 +51,21 @@
    ],
    "basis": "practice",
    "verify": "공공 장기 교육과정이 있다. 모집 시기 확인"
-  },
-  {
-   "id": "p.fa-plan",
-   "name": "영농 계획과 지원 사업 신청",
-   "type": "output",
-   "subtype": "project",
-   "category": "portfolio",
-   "method": "personal_project",
-   "level": "중급",
-   "daysPerWeek": 2,
-   "minutesPerSession": 120,
-   "goal": "영농 계획서를 쓰고 청년농 지원 사업에 신청한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "계획",
-     "items": [
-      "재배·판매 계획",
-      "자금 계획"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "신청",
-     "items": [
-      "지원 사업 요건 확인",
-      "서류·면접"
-     ]
-    }
-   ],
-   "basis": "practice",
-   "verify": "지원 사업의 대상·내용은 해마다 바뀐다"
   }
  ],
  "common": [
   {
-   "ref": "p.fa-explore",
+   "ref": "cp.farm-explore",
    "step": 1,
    "major": true
   },
   {
-   "ref": "p.fa-edu",
+   "ref": "cp.farm-edu",
    "step": 2,
    "major": true
   },
   {
-   "ref": "p.fa-farm",
+   "ref": "cp.farm-practice",
    "step": 3,
    "major": true
   },
@@ -207,7 +88,7 @@
    "major": true
   },
   {
-   "ref": "p.fa-plan",
+   "ref": "cp.farm-plan",
    "step": 7,
    "major": true
   },

@@ -12,30 +12,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.la-plants",
-   "name": "수목과 식재 지식",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "book",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 60,
-   "goal": "주요 조경 수목을 구별하고 식재 계획에 쓴다.",
-   "phases": [
-    {
-     "weeks": 3,
-     "title": "수목",
-     "items": [
-      "수목 100종 익히기",
-      "생육 조건",
-      "식재 설계 원칙"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.la-design",
    "name": "조경 설계 프로젝트",
    "type": "output",
@@ -93,7 +69,7 @@
    "major": true
   },
   {
-   "ref": "p.la-plants",
+   "ref": "cp.plants-knowledge",
    "step": 5,
    "major": true
   },

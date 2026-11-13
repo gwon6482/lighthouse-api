@@ -1,0 +1,139 @@
+{
+ "jobCode": "842201",
+ "title": "통신장비설치·수리원",
+ "displayName": "통신·인터넷 설치 기사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 통신 분야 기능사가 증빙이 된다. 통신 공사 업체와 인터넷 설치 업체에서 일한다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "842301",
+   "title": "방송·통신·인터넷케이블 설치·수리원",
+   "track": null
+  },
+  {
+   "jobCode": "842101",
+   "title": "방송장비설치·수리원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.cm-basics",
+   "name": "통신망과 선로·장비 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "가입자 망의 구조와 광·동선 선로, 단말 장비를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "통신망 구조",
+      "광케이블·동선",
+      "단말·공유 장비"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cm-install",
+   "name": "선로·장비 설치와 측정 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "선로를 포설·접속하고 장비를 설치해 품질을 잰다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "실습",
+     "items": [
+      "포설과 접속",
+      "장비 설치·설정",
+      "측정과 장애 처리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "통신선로기능사·방송통신기능사 등",
+   "optional": true
+  },
+  {
+   "ref": "p.cm-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.cm-install",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.linux-network",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.construction-safety",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "통신 공사·인터넷 설치 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

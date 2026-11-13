@@ -60,7 +60,7 @@
  "projects": [
   {
    "id": "p.fs-skill",
-   "name": "직종 기술 익히기",
+   "name": "마감 직종 기술 익히기",
    "type": "skill",
    "subtype": "field",
    "category": "skill",

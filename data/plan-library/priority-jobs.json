@@ -5635,6 +5635,507 @@
    "work24Postings": null,
    "tracks": [],
    "covers": []
+  },
+  {
+   "no": 240,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-07",
+   "jobCode": "812201",
+   "title": "선박정비원",
+   "displayName": "선박 정비사",
+   "family": "tech",
+   "group": "092",
+   "groupName": "운송장비 정비",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 241,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-07",
+   "jobCode": "813101",
+   "title": "금형원",
+   "displayName": "금형 기술자",
+   "family": "tech",
+   "group": "093",
+   "groupName": "금형·공작기계 조작",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 242,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-07",
+   "jobCode": "815001",
+   "title": "자동조립라인·산업용 로봇조작원",
+   "displayName": "자동화 설비 운전원",
+   "family": "tech",
+   "group": "094",
+   "groupName": "설비·자동화 조작",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 243,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-07",
+   "jobCode": "816103",
+   "title": "일반기계조립원",
+   "displayName": "기계·선박 조립원",
+   "family": "tech",
+   "group": "095",
+   "groupName": "기계·운송장비 조립",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "machine",
+     "name": "기계 조립",
+     "desc": "산업 기계·장비"
+    },
+    {
+     "id": "ship",
+     "name": "선박 조립",
+     "desc": "조선소 선체·의장"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "817301",
+     "title": "선박조립원",
+     "track": "ship"
+    }
+   ]
+  },
+  {
+   "no": 244,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-07",
+   "jobCode": "822101",
+   "title": "판금원(판금기조작원)",
+   "displayName": "판금·제관·주조 기능공",
+   "family": "tech",
+   "group": "097",
+   "groupName": "판금·제관·단조·주조",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "sheet",
+     "name": "판금·제관",
+     "desc": "철판 가공·구조물 제작"
+    },
+    {
+     "id": "cast",
+     "name": "주조",
+     "desc": "주물 제작"
+    },
+    {
+     "id": "forge",
+     "name": "단조",
+     "desc": "단조품 제작"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "822301",
+     "title": "제관원(제관기조작원)",
+     "track": "sheet"
+    },
+    {
+     "jobCode": "823301",
+     "title": "주조원(주조기조작원)",
+     "track": "cast"
+    },
+    {
+     "jobCode": "823101",
+     "title": "단조원(단조기조작원)",
+     "track": "forge"
+    }
+   ]
+  },
+  {
+   "no": 245,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-07",
+   "jobCode": "825101",
+   "title": "도장원(도장기조작원)",
+   "displayName": "도장·도금 기능공",
+   "family": "tech",
+   "group": "099",
+   "groupName": "도장·도금",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "paint",
+     "name": "도장",
+     "desc": "자동차·금속 제품 도장"
+    },
+    {
+     "id": "plating",
+     "name": "도금",
+     "desc": "표면 처리"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "825201",
+     "title": "도금·금속분무기조작원",
+     "track": "plating"
+    }
+   ]
+  },
+  {
+   "no": 246,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-07",
+   "jobCode": "832201",
+   "title": "가전제품설치·수리원",
+   "displayName": "가전·IT기기 수리 기사",
+   "family": "tech",
+   "group": "102",
+   "groupName": "전기·전자 기기 설치·수리",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "appliance",
+     "name": "가전",
+     "desc": "가전·에어컨 설치·수리"
+    },
+    {
+     "id": "office",
+     "name": "사무기기",
+     "desc": "복합기·프린터"
+    },
+    {
+     "id": "pc",
+     "name": "컴퓨터",
+     "desc": "PC 조립·수리·설치"
+    },
+    {
+     "id": "phone",
+     "name": "휴대폰",
+     "desc": "스마트폰 수리"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "832101",
+     "title": "사무용 전자기기설치·수리원",
+     "track": "office"
+    },
+    {
+     "jobCode": "841101",
+     "title": "컴퓨터설치·수리원",
+     "track": "pc"
+    },
+    {
+     "jobCode": "841201",
+     "title": "이동전화기수리원",
+     "track": "phone"
+    }
+   ]
+  },
+  {
+   "no": 247,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-07",
+   "jobCode": "833001",
+   "title": "발전·배전장치조작원",
+   "displayName": "발전·전기 설비 운전원",
+   "family": "tech",
+   "group": "103",
+   "groupName": "발전·전기 설비 조작",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "834001",
+     "title": "전기·전자설비조작원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 248,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-07",
+   "jobCode": "842201",
+   "title": "통신장비설치·수리원",
+   "displayName": "통신·인터넷 설치 기사",
+   "family": "tech",
+   "group": "107",
+   "groupName": "방송·통신장비 설치·수리",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "842301",
+     "title": "방송·통신·인터넷케이블 설치·수리원",
+     "track": null
+    },
+    {
+     "jobCode": "842101",
+     "title": "방송장비설치·수리원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 249,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-07",
+   "jobCode": "853101",
+   "title": "상·하수도처리장치조작원",
+   "displayName": "환경 시설 운전원",
+   "family": "tech",
+   "group": "113",
+   "groupName": "환경 장치 조작",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "water",
+     "name": "상하수도",
+     "desc": "정수장·하수 처리장"
+    },
+    {
+     "id": "waste",
+     "name": "폐기물",
+     "desc": "소각·재활용 시설"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "853201",
+     "title": "재활용 처리장치·소각로조작원",
+     "track": "waste"
+    }
+   ]
+  },
+  {
+   "no": 250,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-08",
+   "jobCode": "862101",
+   "title": "패턴사",
+   "displayName": "패턴·봉제사",
+   "family": "tech",
+   "group": "115",
+   "groupName": "패턴·재단·재봉",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "pattern",
+     "name": "패턴",
+     "desc": "패턴 설계·그레이딩"
+    },
+    {
+     "id": "sewing",
+     "name": "재단·봉제",
+     "desc": "재단과 봉제"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "862201",
+     "title": "재단사",
+     "track": "sewing"
+    },
+    {
+     "jobCode": "862301",
+     "title": "재봉사",
+     "track": "sewing"
+    }
+   ]
+  },
+  {
+   "no": 251,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-08",
+   "jobCode": "863201",
+   "title": "양장·양복제조원",
+   "displayName": "의류 제작·수선사",
+   "family": "tech",
+   "group": "116",
+   "groupName": "의복 제조·수선",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "tailor",
+     "name": "양장·양복",
+     "desc": "맞춤 정장·드레스"
+    },
+    {
+     "id": "hanbok",
+     "name": "한복",
+     "desc": "전통·생활 한복"
+    },
+    {
+     "id": "repair",
+     "name": "수선",
+     "desc": "의류·가죽 수선"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "863101",
+     "title": "한복제조원",
+     "track": "hanbok"
+    },
+    {
+     "jobCode": "863401",
+     "title": "의복·가죽·모피수선원",
+     "track": "repair"
+    }
+   ]
+  },
+  {
+   "no": 252,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-08",
+   "jobCode": "885201",
+   "title": "간판제작·설치원",
+   "displayName": "간판·사인 제작자",
+   "family": "tech",
+   "group": "125",
+   "groupName": "악기·간판·기타 제조",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 253,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-08",
+   "jobCode": "885101",
+   "title": "악기제조원 및 조율사",
+   "displayName": "악기 제작·조율사",
+   "family": "tech",
+   "group": "125",
+   "groupName": "악기·간판·기타 제조",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "tuner",
+     "name": "조율",
+     "desc": "피아노 조율·수리"
+    },
+    {
+     "id": "maker",
+     "name": "제작",
+     "desc": "현악기·관악기 제작·수리"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 254,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-08",
+   "jobCode": "901501",
+   "title": "조경원",
+   "displayName": "조경 관리원",
+   "family": "agri",
+   "group": "131",
+   "groupName": "작물재배",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 255,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-08",
+   "jobCode": "902201",
+   "title": "가축사육종사원",
+   "displayName": "축산 농업인",
+   "family": "agri",
+   "group": "132",
+   "groupName": "낙농·사육",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "livestock",
+     "name": "한우·양돈·양계",
+     "desc": "고기·알 생산"
+    },
+    {
+     "id": "dairy",
+     "name": "낙농",
+     "desc": "젖소·우유 생산"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "902101",
+     "title": "낙농종사원",
+     "track": "dairy"
+    }
+   ]
+  },
+  {
+   "no": 256,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-08",
+   "jobCode": "903101",
+   "title": "조림·산림경영인 및 벌목원",
+   "displayName": "임업인(산림 경영)",
+   "family": "agri",
+   "group": "133",
+   "groupName": "임업",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 257,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-08",
+   "jobCode": "904101",
+   "title": "양식원",
+   "displayName": "수산 양식·어업인",
+   "family": "agri",
+   "group": "134",
+   "groupName": "어업",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "aqua",
+     "name": "양식",
+     "desc": "어류·패류·해조류 양식"
+    },
+    {
+     "id": "fishing",
+     "name": "어선 어업",
+     "desc": "연안 어업·나잠 어업"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "904201",
+     "title": "어부 및 해녀",
+     "track": "fishing"
+    }
+   ]
   }
  ]
 }

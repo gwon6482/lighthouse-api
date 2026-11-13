@@ -1,0 +1,121 @@
+{
+ "jobCode": "853101",
+ "title": "상·하수도처리장치조작원",
+ "displayName": "환경 시설 운전원",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "처리 시설을 운전하고 수질·배출 기준을 지킨다. 환경 분야 자격을 따고 위탁 운영 업체나 지방 공기업으로 간다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "water",
+   "name": "상하수도",
+   "desc": "정수장·하수 처리장"
+  },
+  {
+   "id": "waste",
+   "name": "폐기물",
+   "desc": "소각·재활용 시설"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "853201",
+   "title": "재활용 처리장치·소각로조작원",
+   "track": "waste"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.ev-plant",
+   "name": "수처리·폐기물 처리 공정 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "정수·하수 처리와 소각·재활용 공정의 단계와 운전 변수를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "정수·하수 처리 공정",
+      "소각·재활용 공정",
+      "배출 기준과 측정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ev-plant",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 3,
+   "major": true,
+   "note": "환경기능사 등"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 4,
+   "major": true,
+   "note": "수질환경·폐기물처리 산업기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.hazmat-cert",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.safety-law",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.ncs",
+   "step": 7,
+   "major": true,
+   "note": "지방 공기업·공단 필기",
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 8,
+   "major": true,
+   "note": "처리 시설 위탁 운영 업체",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "water": [],
+  "waste": []
+ }
+}

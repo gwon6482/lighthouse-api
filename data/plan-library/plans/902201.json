@@ -1,0 +1,129 @@
+{
+ "jobCode": "902201",
+ "title": "가축사육종사원",
+ "displayName": "축산 농업인",
+ "family": "agri",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "축산은 허가·등록과 교육 이수가 필요한 창업형 진로다. 농장에서 일하며 배우고 지원 사업으로 기반을 마련한다.",
+ "gate": "가축 사육업 허가·등록 — 축산 관련 교육 이수 의무",
+ "tracks": [
+  {
+   "id": "livestock",
+   "name": "한우·양돈·양계",
+   "desc": "고기·알 생산"
+  },
+  {
+   "id": "dairy",
+   "name": "낙농",
+   "desc": "젖소·우유 생산"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "902101",
+   "title": "낙농종사원",
+   "track": "dairy"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.ls-care",
+   "name": "가축 사양 관리와 방역",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "먹이·환경·번식 관리와 가축 전염병 방역을 안다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "관리",
+     "items": [
+      "사료와 급여",
+      "축사 환경·분뇨 처리",
+      "질병 예방과 방역"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ls-edu",
+   "name": "축산업 허가·등록 교육",
+   "type": "cert",
+   "subtype": "basic",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "허가·등록에 필요한 교육을 이수한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "이수",
+     "items": [
+      "교육 신청",
+      "이수"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "교육 시간과 시설 기준은 축산법 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.farm-explore",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.farm-edu",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.farm-practice",
+   "step": 3,
+   "major": true,
+   "note": "축산 농가 실습"
+  },
+  {
+   "ref": "p.ls-care",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.ls-edu",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 6,
+   "major": true,
+   "note": "축산기능사",
+   "optional": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.farm-plan",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "livestock": [],
+  "dairy": []
+ }
+}

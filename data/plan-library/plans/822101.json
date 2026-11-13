@@ -1,0 +1,131 @@
+{
+ "jobCode": "822101",
+ "title": "판금원(판금기조작원)",
+ "displayName": "판금·제관·주조 기능공",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 직종 기능사가 증빙이 된다. 금속을 자르고 굽히고 녹여 모양을 만드는 기술을 쌓는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "sheet",
+   "name": "판금·제관",
+   "desc": "철판 가공·구조물 제작"
+  },
+  {
+   "id": "cast",
+   "name": "주조",
+   "desc": "주물 제작"
+  },
+  {
+   "id": "forge",
+   "name": "단조",
+   "desc": "단조품 제작"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "822301",
+   "title": "제관원(제관기조작원)",
+   "track": "sheet"
+  },
+  {
+   "jobCode": "823301",
+   "title": "주조원(주조기조작원)",
+   "track": "cast"
+  },
+  {
+   "jobCode": "823101",
+   "title": "단조원(단조기조작원)",
+   "track": "forge"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.sm-skill",
+   "name": "금속 성형 기술 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 240,
+   "goal": "직종의 장비를 다뤄 도면대로 제품을 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기초",
+     "items": [
+      "재료와 장비",
+      "안전 수칙"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "작업",
+     "items": [
+      "전개·절단·성형",
+      "치수 검사"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "판금제관기능사·주조기능사 등 해당 직종 기능사",
+   "optional": true
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.sm-skill",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "금속 가공·주물 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "sheet": [
+   {
+    "ref": "cp.welding-practice",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "cast": [],
+  "forge": []
+ }
+}

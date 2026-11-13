@@ -36,38 +36,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.wd-skill",
-   "name": "용접법별 실습",
-   "type": "skill",
-   "subtype": "field",
-   "category": "skill",
-   "method": "academy",
-   "level": "입문",
-   "daysPerWeek": 5,
-   "minutesPerSession": 180,
-   "goal": "주요 용접법으로 자세별 용접을 해낸다.",
-   "phases": [
-    {
-     "weeks": 4,
-     "title": "기본",
-     "items": [
-      "피복 아크 용접",
-      "이산화탄소 아크 용접"
-     ]
-    },
-    {
-     "weeks": 4,
-     "title": "응용",
-     "items": [
-      "가스 텅스텐 아크(TIG) 용접",
-      "자세별 맞대기·필릿",
-      "파괴 시험 통과 수준까지"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.wd-pipe",
    "name": "배관·특수 용접 검정",
    "type": "cert",
@@ -111,7 +79,7 @@
    "note": "국비 용접 과정"
   },
   {
-   "ref": "p.wd-skill",
+   "ref": "cp.welding-practice",
    "step": 4,
    "major": true
   },

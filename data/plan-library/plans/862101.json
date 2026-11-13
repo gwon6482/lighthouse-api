@@ -1,0 +1,167 @@
+{
+ "jobCode": "862101",
+ "title": "패턴사",
+ "displayName": "패턴·봉제사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 패턴과 봉제 실력을 샘플로 보여 주고 의류 업체 개발실이나 샘플실에서 일한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "pattern",
+   "name": "패턴",
+   "desc": "패턴 설계·그레이딩"
+  },
+  {
+   "id": "sewing",
+   "name": "재단·봉제",
+   "desc": "재단과 봉제"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "862201",
+   "title": "재단사",
+   "track": "sewing"
+  },
+  {
+   "jobCode": "862301",
+   "title": "재봉사",
+   "track": "sewing"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.pt-cad",
+   "name": "패턴 캐드와 그레이딩",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "캐드로 패턴을 만들고 치수별로 늘린다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "캐드",
+     "items": [
+      "패턴 캐드 사용",
+      "그레이딩",
+      "마커"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sw-speed",
+   "name": "공업용 재봉과 생산 봉제",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "공업용 재봉기로 일정한 품질과 속도로 박는다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "봉제",
+     "items": [
+      "공업용 재봉기 다루기",
+      "부위별 봉제 순서",
+      "속도와 품질 맞추기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pt-sample",
+   "name": "샘플 제작 포트폴리오",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "디자인을 패턴으로 풀어 샘플 3벌을 만든다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "제작",
+     "items": [
+      "패턴 설계",
+      "가봉·수정",
+      "완성과 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "양장기능사",
+   "optional": true
+  },
+  {
+   "ref": "cp.pattern-sewing",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.pt-sample",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "의류 업체 개발실·샘플실"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "pattern": [
+   {
+    "ref": "p.pt-cad",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "sewing": [
+   {
+    "ref": "p.sw-speed",
+    "step": 5,
+    "major": true
+   }
+  ]
+ }
+}
