@@ -1,0 +1,281 @@
+{
+ "jobCode": "231201",
+ "title": "심리상담전문가",
+ "displayName": "심리상담사",
+ "family": "welfare",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "상담 전반을 묶는 단일 국가 면허는 없다. 대부분 심리·상담 석사 과정과 수련을 거쳐 학회 자격이나 국가자격(청소년상담사·임상심리사)을 딴다.",
+ "gate": "법정 단일 면허는 없으나 채용 공고가 관련 석사 학위와 자격(학회 상담심리사, 청소년상담사, 임상심리사 등)을 요구한다",
+ "tracks": [
+  {
+   "id": "counsel",
+   "name": "상담심리",
+   "desc": "상담센터·대학 상담실"
+  },
+  {
+   "id": "youth",
+   "name": "청소년 상담",
+   "desc": "청소년상담사·Wee센터"
+  },
+  {
+   "id": "clinical",
+   "name": "임상심리",
+   "desc": "병원·정신건강"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pc-major",
+   "name": "심리학 기초 과정",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "심리학 개론·발달·이상·상담 이론을 이수한다.",
+   "phases": [
+    {
+     "weeks": 15,
+     "title": "과목",
+     "items": [
+      "발달·성격·이상 심리",
+      "상담 이론",
+      "심리 검사·통계"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "대학원 지원 과목 요건 확인"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pc-grad",
+   "name": "상담·임상 대학원 진학",
+   "type": "edu",
+   "subtype": "graduate",
+   "category": "knowledge",
+   "method": "school",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "상담·임상 전공 석사 과정에 입학한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "조사",
+     "items": [
+      "대학원·교수 연구 분야 조사",
+      "전형 요건"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "준비",
+     "items": [
+      "전공 시험·영어",
+      "연구 계획서",
+      "면접"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "대부분의 자격과 채용이 석사 학위를 요구한다"
+  },
+  {
+   "id": "p.pc-training",
+   "name": "상담 수련",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 240,
+   "goal": "지도 감독을 받으며 상담 실습 시간을 채운다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "수련 기관 찾기",
+      "자격별 수련 요건 확인"
+     ]
+    },
+    {
+     "weeks": 48,
+     "title": "수련",
+     "items": [
+      "개인 상담 진행",
+      "슈퍼비전 받기",
+      "사례 발표·수련 기록"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "필요 시간은 자격마다 다르다"
+  },
+  {
+   "id": "p.pc-kca",
+   "name": "학회 상담심리사 자격",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "book",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "학회 자격 시험과 심사에 합격한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "필기",
+     "items": [
+      "상담 이론·심리 검사",
+      "이상 심리·연구 방법"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "심사",
+     "items": [
+      "수련 기록 정리",
+      "면접"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간(학회) 자격이다. 응시하려면 학회 수련 요건을 채워야 한다"
+  },
+  {
+   "id": "p.pc-youth",
+   "name": "청소년상담사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "청소년상담사 필기·면접에 합격하고 연수를 마친다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "필기",
+     "items": [
+      "급수별 과목 정리",
+      "기출"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "면접·연수",
+     "items": [
+      "면접",
+      "자격 연수"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "급수별 응시자격(학위·경력)이 다르다"
+  },
+  {
+   "id": "p.pc-clinical",
+   "name": "임상심리사 2급",
+   "type": "cert",
+   "subtype": "national-tech",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "임상심리사 2급 필기와 실기에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "필기",
+     "items": [
+      "심리학 개론·이상 심리",
+      "심리 검사·임상 심리·상담"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실기",
+     "items": [
+      "서술형 답안",
+      "사례형 문제"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "응시하려면 실습 수련이나 경력이 필요하다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.pc-major",
+   "step": 1,
+   "major": false,
+   "skip": "심리학 전공 과목에서 배운다"
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 2,
+   "major": true,
+   "note": "상담 기관·청소년 기관 봉사"
+  },
+  {
+   "ref": "p.pc-grad",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.pc-training",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "counsel": [
+   {
+    "ref": "p.pc-kca",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "youth": [
+   {
+    "ref": "p.pc-youth",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "clinical": [
+   {
+    "ref": "p.pc-clinical",
+    "step": 5,
+    "major": true
+   }
+  ]
+ }
+}

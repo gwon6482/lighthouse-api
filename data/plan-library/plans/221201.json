@@ -1,0 +1,190 @@
+{
+ "jobCode": "221201",
+ "title": "변호사",
+ "displayName": "변호사",
+ "family": "pro",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법학전문대학원(로스쿨)을 졸업하고 변호사시험에 합격해야 한다. 로스쿨 입학 준비가 첫 관문이다.",
+ "gate": "법학전문대학원 석사 학위 + 변호사시험 합격",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.law-leet",
+   "name": "법학적성시험(LEET)",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "book",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "언어이해·추리논증·논술에서 목표 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "영역별 훈련",
+     "items": [
+      "언어이해 기출",
+      "추리논증 기출",
+      "논술 답안 쓰기"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실전",
+     "items": [
+      "시간 재고 모의",
+      "오답 원인 분류"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "시험은 연 1회"
+  },
+  {
+   "id": "p.law-apply",
+   "name": "로스쿨 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "자기소개서를 쓰고 면접에 대비해 지원한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "전략",
+     "items": [
+      "학교별 반영 비율 확인",
+      "지원 학교 정하기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "준비",
+     "items": [
+      "자기소개서",
+      "면접(제시문) 연습",
+      "서류 제출"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.law-school",
+   "name": "로스쿨 과정",
+   "type": "edu",
+   "subtype": "graduate",
+   "category": "knowledge",
+   "method": "school",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 360,
+   "goal": "3년 과정을 이수하며 변호사시험 과목을 익힌다.",
+   "phases": [
+    {
+     "weeks": 100,
+     "title": "과정",
+     "items": [
+      "기본 삼법과 선택 과목",
+      "기록형·사례형 연습",
+      "성적 관리"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "실무 수습",
+     "items": [
+      "법원·검찰·로펌 수습",
+      "진로 분야 정하기"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.law-bar",
+   "name": "변호사시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 480,
+   "goal": "변호사시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 16,
+     "title": "과목 정리",
+     "items": [
+      "공법·민사법·형사법",
+      "선택 과목"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "실전",
+     "items": [
+      "선택형·사례형·기록형 모의",
+      "판례 최신화"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "응시 횟수와 기간에 제한이 있다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.major-grades",
+   "step": 1,
+   "major": true,
+   "note": "학부 성적이 입학에 반영된다"
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 2,
+   "major": true,
+   "note": "공인 영어 성적 제출"
+  },
+  {
+   "ref": "p.law-leet",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.law-apply",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.law-school",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.law-bar",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "입학·시험 요건은 법학전문대학원 협의회와 법무부 공고가 정본"
+}

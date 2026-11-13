@@ -95,38 +95,6 @@
    "basis": "law"
   },
   {
-   "id": "p.cc-curriculum",
-   "name": "표준보육과정·누리과정 이해",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "book",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 60,
-   "goal": "놀이 중심 보육과정의 영역과 연령별 내용을 설명한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "과정",
-     "items": [
-      "표준보육과정 영역",
-      "누리과정 영역",
-      "연령별 발달 특성"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "적용",
-     "items": [
-      "놀이 사례 분석",
-      "관찰 기록 써 보기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.cc-plan",
    "name": "보육계획안·보육일지 작성 연습",
    "type": "skill",
@@ -198,7 +166,7 @@
    "skip": "보육·유아교육 관련 학과 교육과정에 포함돼 있다"
   },
   {
-   "ref": "p.cc-curriculum",
+   "ref": "cp.nuri-curriculum",
    "step": 2,
    "major": true
   },

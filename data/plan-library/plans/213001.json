@@ -1,0 +1,113 @@
+{
+ "jobCode": "213001",
+ "title": "유치원교사",
+ "displayName": "유치원 교사",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "유아교육과를 졸업해 유치원 정교사 2급을 받는다. 국공립은 임용시험, 사립은 유치원별 채용이다.",
+ "gate": "유치원 정교사 2급(유아교육과 졸업) + 국공립은 임용시험 합격",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.kd-private",
+   "name": "사립 유치원 채용 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "사립 유치원의 채용 일정과 면접·수업 실연을 준비한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "지역 유치원 채용 시기 확인",
+      "원별 교육 방식 조사"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "수업 실연 준비",
+      "면접 답변",
+      "포트폴리오(실습 기록)"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 유아교육과에 다니고 있다",
+   "note": "유아교육과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.nuri-curriculum",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.edu-volunteer",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.teaching-practicum",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 6,
+   "major": true,
+   "note": "임용시험 응시 요건(급수는 공고 확인)"
+  },
+  {
+   "ref": "cp.teacher-exam",
+   "step": 7,
+   "major": true,
+   "note": "유치원 임용 1차",
+   "optional": true
+  },
+  {
+   "ref": "cp.teaching-demo",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.kd-private",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "국공립과 사립 중 목표에 따라 임용 준비 또는 사립 채용 준비를 고른다"
+}

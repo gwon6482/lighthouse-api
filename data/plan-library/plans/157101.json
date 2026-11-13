@@ -1,0 +1,232 @@
+{
+ "jobCode": "157101",
+ "title": "식품공학기술자 및 연구원",
+ "displayName": "식품 연구·품질 담당자",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 식품 전공과 식품기사가 기본 증빙이다. 전공 지식에 위생 관리와 실험·개발 경험을 더한다.",
+ "gate": "법정 요건은 없으나 채용 공고가 식품 관련 전공과 식품기사를 요구·우대한다",
+ "tracks": [
+  {
+   "id": "rnd",
+   "name": "연구개발",
+   "desc": "제품 개발·배합"
+  },
+  {
+   "id": "qc",
+   "name": "품질관리",
+   "desc": "HACCP·위생·검사"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.fd-haccp",
+   "name": "HACCP 이해와 관리 계획",
+   "type": "edu",
+   "subtype": "required-course",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "위해 요소를 분석하고 중요 관리점을 정하는 절차를 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "원칙",
+     "items": [
+      "HACCP 7원칙",
+      "선행 요건"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "공정 흐름도 그리기",
+      "관리 계획서 초안"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fd-dev",
+   "name": "제품 개발 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "team_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "새 제품을 배합부터 관능 평가까지 개발한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "시장 조사",
+      "콘셉트와 목표 원가"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "개발",
+     "items": [
+      "배합 시험",
+      "관능 평가",
+      "유통기한·표시 검토"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "개발 보고서",
+      "발표"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fd-lab",
+   "name": "식품 분석과 미생물 검사 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "성분 분석과 미생물 검사를 하고 성적서를 쓴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "일반 성분 분석",
+      "기기 분석 기초"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "미생물",
+     "items": [
+      "일반 세균·대장균군 검사",
+      "검사 성적서 작성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fd-law",
+   "name": "식품 표시와 법규 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "식품 표시 기준과 주요 법규를 제품에 적용한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "법규",
+     "items": [
+      "식품위생법 주요 내용",
+      "표시·광고 기준",
+      "알레르기·영양 표시"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.eng-major",
+   "step": 2,
+   "major": false,
+   "skip": "식품 전공 과목에서 배운다",
+   "note": "식품화학·미생물·가공"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 3,
+   "major": true,
+   "note": "식품기사"
+  },
+  {
+   "ref": "cp.food-hygiene",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.fd-haccp",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.eng-field",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "rnd": [
+   {
+    "ref": "p.fd-dev",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.contest",
+    "step": 7,
+    "major": true,
+    "note": "식품 개발 공모전",
+    "optional": true
+   }
+  ],
+  "qc": [
+   {
+    "ref": "p.fd-lab",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.fd-law",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
+}

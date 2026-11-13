@@ -1,0 +1,320 @@
+{
+ "jobCode": "151107",
+ "title": "자동차공학기술자",
+ "displayName": "기계·자동차 엔지니어",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법정 자격은 없지만 사실상 기계·전기전자 계열 전공을 본다. 전공 지식에 설계 도구와 프로젝트 경험을 더하고 대기업 채용 절차를 통과한다.",
+ "gate": "법정 요건은 없으나 채용 공고가 이공계 관련 전공 학사 이상을 요구하는 경우가 대부분",
+ "tracks": [
+  {
+   "id": "design",
+   "name": "설계·개발(R&D)",
+   "desc": "기구 설계·해석"
+  },
+  {
+   "id": "mfg",
+   "name": "생산기술",
+   "desc": "공정·설비·양산"
+  },
+  {
+   "id": "elec",
+   "name": "전장·제어",
+   "desc": "전장 부품·제어 SW"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.me-3d",
+   "name": "3D 설계 도구 익히기",
+   "type": "skill",
+   "subtype": "design",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "3D CAD로 부품을 모델링하고 도면을 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "모델링",
+     "items": [
+      "스케치·피처",
+      "조립품",
+      "도면화"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실습",
+     "items": [
+      "기계 부품 10개 모델링",
+      "공차 표기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.me-cae",
+   "name": "구조·열 해석 기초",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "해석 도구로 강도와 열 문제를 풀어 설계에 반영한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "유한요소법 개념",
+      "경계 조건·메시"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실습",
+     "items": [
+      "부품 강도 해석",
+      "설계 변경 전후 비교"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.me-project",
+   "name": "설계 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "team_project",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "설계부터 제작·시험까지 한 사이클을 돌린 결과물을 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "과제와 사양 정하기",
+      "역할 분담"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "제작",
+     "items": [
+      "설계·해석",
+      "제작·조립",
+      "시험과 개선"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "보고서",
+      "발표"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "note": "자작 자동차·졸업 작품·경진대회"
+  },
+  {
+   "id": "p.me-mfg",
+   "name": "생산 공정과 설비 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "프레스·용접·도장·조립 공정과 생산 지표를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "공정",
+     "items": [
+      "주요 공정 흐름",
+      "설비와 자동화",
+      "생산 지표(택트·가동률)"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "개선",
+     "items": [
+      "공정 개선 사례 분석"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.me-control",
+   "name": "제어와 임베디드 기초",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "제어 이론을 시뮬레이션하고 마이크로컨트롤러로 구현한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "제어",
+     "items": [
+      "전달 함수·PID",
+      "시뮬레이션"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "구현",
+     "items": [
+      "C로 모터 제어",
+      "센서 연동",
+      "통신(CAN) 이해"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.me-ev",
+   "name": "전기차·자율주행 기술 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "배터리·모터·인버터와 자율주행 센서의 역할을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기술",
+     "items": [
+      "전기 구동계 구조",
+      "배터리 관리",
+      "센서와 인지·판단·제어"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.eng-major",
+   "step": 1,
+   "major": false,
+   "skip": "전공 필수 과목에서 배운다",
+   "note": "4대 역학"
+  },
+  {
+   "ref": "p.me-3d",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 3,
+   "major": true,
+   "note": "일반기계기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.study-club",
+   "step": 4,
+   "major": true,
+   "note": "자작 자동차·로봇 동아리",
+   "optional": true
+  },
+  {
+   "ref": "cp.eng-field",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true,
+   "note": "전공 질문이 나오는 직무 면접"
+  }
+ ],
+ "byTrack": {
+  "design": [
+   {
+    "ref": "p.me-cae",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "p.me-project",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "mfg": [
+   {
+    "ref": "p.me-mfg",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "cp.six-sigma",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "elec": [
+   {
+    "ref": "p.me-control",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "p.me-ev",
+    "step": 5.5,
+    "major": true
+   },
+   {
+    "ref": "p.me-project",
+    "step": 6,
+    "major": true
+   }
+  ]
+ }
+}

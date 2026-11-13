@@ -1,0 +1,168 @@
+{
+ "jobCode": "231401",
+ "title": "직업상담사",
+ "displayName": "직업상담사",
+ "family": "welfare",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법정 필수는 아니지만 직업상담사 2급이 사실상 기본이다. 자격과 상담 실습, 고용 제도 이해를 갖춘다.",
+ "gate": "법정 요건은 없으나 채용 공고 대부분이 직업상담사 2급을 요구한다",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.jc-cert",
+   "name": "직업상담사 2급",
+   "type": "cert",
+   "subtype": "national-tech",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "직업상담사 2급 필기와 실기에 합격한다.",
+   "phases": [
+    {
+     "weeks": 5,
+     "title": "필기",
+     "items": [
+      "직업상담학·직업심리학",
+      "직업정보론·노동시장론",
+      "노동관계 법규"
+     ]
+    },
+    {
+     "weeks": 5,
+     "title": "실기",
+     "items": [
+      "서술형 답안 암기",
+      "기출 복원"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "2급은 응시자격 제한이 없다"
+  },
+  {
+   "id": "p.jc-policy",
+   "name": "고용 정책과 직업 정보 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "주요 취업 지원 제도와 직업 정보 찾는 법을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "제도와 정보",
+     "items": [
+      "취업 지원 제도 구조",
+      "직업·훈련 정보망 사용",
+      "노동시장 통계 읽기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.jc-practice",
+   "name": "상담 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "모의 상담을 진행하고 이력서·자기소개서를 첨삭한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기법",
+     "items": [
+      "초기 면담 구조",
+      "심리검사 해석 기초"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "실습",
+     "items": [
+      "모의 상담 5회",
+      "이력서 첨삭 10건",
+      "상담 기록 작성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비 직업상담사 과정",
+   "optional": true
+  },
+  {
+   "ref": "p.jc-cert",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.jc-policy",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.jc-practice",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.computer-2",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.sw2",
+   "step": 8,
+   "major": true,
+   "note": "사회복지사 2급을 함께 요구하는 기관이 있다",
+   "optional": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

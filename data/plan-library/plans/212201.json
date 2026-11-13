@@ -55,47 +55,6 @@
    "verify": "편입·학사편입 모집은 매우 적다"
   },
   {
-   "id": "p.elem-practicum",
-   "name": "교육실습",
-   "type": "edu",
-   "subtype": "required-course",
-   "category": "experience",
-   "method": "field_practice",
-   "level": "중급",
-   "daysPerWeek": 5,
-   "minutesPerSession": 480,
-   "goal": "학교 현장에서 참관·수업·실무 실습을 마친다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "참관 실습",
-     "items": [
-      "수업 참관 기록",
-      "학급 운영 관찰"
-     ]
-    },
-    {
-     "weeks": 4,
-     "title": "수업 실습",
-     "items": [
-      "지도안 작성",
-      "수업 진행",
-      "협의회 피드백"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "실무 실습",
-     "items": [
-      "학급 업무 맡아 보기",
-      "실습록 정리"
-     ]
-    }
-   ],
-   "basis": "law",
-   "note": "학년에 따라 나눠서 한다"
-  },
-  {
    "id": "p.elem-courses",
    "name": "교과교육·교육과정 공부",
    "type": "edu",
@@ -146,7 +105,7 @@
    "major": true
   },
   {
-   "ref": "p.elem-practicum",
+   "ref": "cp.teaching-practicum",
    "step": 4,
    "major": true
   },

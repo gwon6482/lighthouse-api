@@ -1,0 +1,285 @@
+{
+ "jobCode": "214101",
+ "title": "문리학원강사",
+ "displayName": "학원 강사",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법이 정한 학원 강사 자격 기준(학력 등)만 채우면 된다. 과목 실력과 강의력, 학생 관리 경험으로 평가받는다.",
+ "gate": "학원 강사 자격 기준(학원법 시행령 — 전문대 졸업 이상 등)",
+ "tracks": [
+  {
+   "id": "exam",
+   "name": "중·고등 입시",
+   "desc": "과목 전문 강사"
+  },
+  {
+   "id": "elementary",
+   "name": "초등·보습",
+   "desc": "초등·중등 내신"
+  },
+  {
+   "id": "english",
+   "name": "영어·외국어",
+   "desc": "영어 학원·회화"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "214102",
+   "title": "외국어강사",
+   "track": "english"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.ac-subject",
+   "name": "담당 과목 실력 다지기",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "담당 과목의 교육과정과 기출을 꿰고 문제를 막힘없이 푼다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "분석",
+     "items": [
+      "교육과정·교과서 분석",
+      "기출 유형 정리"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "풀이",
+     "items": [
+      "기출 전 범위 풀이",
+      "설명 방식 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ac-lecture",
+   "name": "강의 시연 연습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "한 단원을 판서와 함께 20분 강의로 풀어낸다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "설계",
+     "items": [
+      "수업 목표와 흐름",
+      "판서 계획"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "시연",
+     "items": [
+      "녹화하며 강의",
+      "피드백 받아 고치기",
+      "시범 강의 3종 준비"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ac-material",
+   "name": "교재와 수업 자료 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "단원별 개념서와 문제 자료를 직접 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "대상 학년과 수준",
+      "구성"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "제작",
+     "items": [
+      "개념 정리 자료",
+      "유형별 문제",
+      "테스트지"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ac-csat",
+   "name": "입시 분석",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "수능·내신의 출제 경향과 입시 제도를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "수능·모의고사 경향",
+      "학교별 내신 분석",
+      "입시 전형 구조"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ac-manage",
+   "name": "학습 관리와 학부모 소통",
+   "type": "skill",
+   "subtype": "common",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "학생별 진도와 성적을 관리하고 학부모에게 안내한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "관리",
+     "items": [
+      "진도·과제 관리표",
+      "성적 분석 보고",
+      "상담 대화 연습"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ac-tesol",
+   "name": "영어 교수법 과정(TESOL)",
+   "type": "edu",
+   "subtype": "online",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "영어 교수법 과정을 수료한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "과정",
+     "items": [
+      "교수법 이론",
+      "수업 설계",
+      "모의 수업"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간·대학 부설 과정이라 기관마다 차이가 크다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ac-subject",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.ac-lecture",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.ac-material",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 6,
+   "major": true,
+   "note": "조교·보조 강사"
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 7,
+   "major": true,
+   "note": "학부모 상담"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true,
+   "note": "시범 강의로 평가한다"
+  }
+ ],
+ "byTrack": {
+  "exam": [
+   {
+    "ref": "p.ac-csat",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "elementary": [
+   {
+    "ref": "p.ac-manage",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "english": [
+   {
+    "ref": "cp.toeic",
+    "step": 5,
+    "major": true,
+    "note": "영어 실력 증빙"
+   },
+   {
+    "ref": "cp.speaking",
+    "step": 5.3,
+    "major": true
+   },
+   {
+    "ref": "p.ac-tesol",
+    "step": 5.6,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}
