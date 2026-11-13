@@ -1,0 +1,169 @@
+{
+ "jobCode": "413202",
+ "title": "기록물관리사",
+ "displayName": "기록물관리 전문요원",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "기록물관리 전문요원 자격이 필요하다. 기록관리학 석사 학위가 가장 일반적인 길이다.",
+ "gate": "기록물관리 전문요원 — 기록관리학 석사 이상, 또는 관련 학사 + 지정 교육과정 이수 + 시험",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ar-grad",
+   "name": "기록관리학 대학원 진학",
+   "type": "edu",
+   "subtype": "graduate",
+   "category": "knowledge",
+   "method": "school",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "기록관리학 석사 과정에 입학한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "조사",
+     "items": [
+      "대학원과 전형 확인"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "준비",
+     "items": [
+      "전공 지식",
+      "연구 계획서",
+      "면접"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.ar-law",
+   "name": "공공 기록물 관리 제도와 표준",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "기록물의 생산부터 폐기까지의 절차와 기준을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "제도",
+     "items": [
+      "공공기록물 관리 법령",
+      "분류·평가 기준",
+      "전자 기록 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ar-practice",
+   "name": "기록관 실습",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "기록관에서 정리·기술 업무를 해 본다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "실습 기관 찾기"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "실습",
+     "items": [
+      "기록물 정리·기술",
+      "시스템 등록",
+      "열람 서비스 보조"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ar-exam",
+   "name": "기록물관리 전문요원 시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "교육과정을 이수하고 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "기록 관리학 개론",
+      "전자 기록 관리",
+      "기출"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "석사 학위자는 시험 없이 자격이 인정된다. 학사는 지정 교육과정 이수 뒤 시험"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.ar-grad",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ar-law",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.ar-practice",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.ar-exam",
+   "step": 4,
+   "major": true,
+   "note": "학사 + 교육과정 경로일 때",
+   "optional": true
+  },
+  {
+   "ref": "cp.ncs",
+   "step": 5,
+   "major": true,
+   "note": "공공기관 채용 필기",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "자격 요건은 공공기록물 관리에 관한 법률 시행령이 정본"
+}

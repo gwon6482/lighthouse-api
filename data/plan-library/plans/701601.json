@@ -1,0 +1,146 @@
+{
+ "jobCode": "701601",
+ "title": "건축목공",
+ "displayName": "목수",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 기술을 배우고 시공 팀에서 보조로 시작해 실력으로 일을 얻는다. 전통 건축은 따로 배운다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "modern",
+   "name": "인테리어·주택 목공",
+   "desc": "실내 목공·목조 주택"
+  },
+  {
+   "id": "hanok",
+   "name": "전통 건축",
+   "desc": "한옥 대목"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "701602",
+   "title": "전통건축기능원",
+   "track": "hanok"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.cp-skill",
+   "name": "목공 기술 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 240,
+   "goal": "공구를 다루고 틀을 짜서 벽체·천장을 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기초",
+     "items": [
+      "수공구·전동 공구",
+      "먹매김과 치수"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "시공",
+     "items": [
+      "벽체·천장 틀",
+      "문틀·몰딩",
+      "마감"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cp-hanok",
+   "name": "한옥 구조와 전통 결구",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "한옥의 부재와 짜맞춤 방식을 이해한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "구조",
+     "items": [
+      "부재 이름과 역할",
+      "이음과 맞춤",
+      "치목 실습"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "문화재 수리는 별도 자격(문화재수리기능자)이 필요하다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "건축목공기능사",
+   "optional": true
+  },
+  {
+   "ref": "p.cp-skill",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "인테리어·목조 주택 시공 팀"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "modern": [],
+  "hanok": [
+   {
+    "ref": "p.cp-hanok",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,164 @@
+{
+ "jobCode": "420101",
+ "title": "스포츠감독 및 코치",
+ "displayName": "스포츠 지도자",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "선수 경력이 바탕이다. 학교·실업팀 지도자는 전문스포츠지도사 자격을 요구한다.",
+ "gate": "전문스포츠지도사 자격(해당 종목 경기 경력 요건) — 학교·실업팀 지도자 채용에서 요구",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.sc-career",
+   "name": "선수 경력과 지도 보조 경험",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "종목 경력을 쌓고 지도 보조로 현장을 익힌다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "찾기",
+     "items": [
+      "팀·클럽 지도 보조 자리 찾기"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "현장",
+     "items": [
+      "훈련 진행 보조",
+      "경기 분석",
+      "선수 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sc-coach",
+   "name": "지도법과 훈련 계획 세우기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "연령·수준에 맞는 훈련 계획을 짜고 지도한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이론",
+     "items": [
+      "트레이닝 원리",
+      "주기화",
+      "스포츠 심리 기초"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "계획",
+     "items": [
+      "시즌 훈련 계획서",
+      "세션 지도안"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sc-cert",
+   "name": "전문스포츠지도사 2급",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "필기·실기·구술과 연수를 거쳐 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "선택 과목 이론",
+      "기출"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기·구술",
+     "items": [
+      "종목 실기",
+      "구술"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연수",
+     "items": [
+      "연수 이수"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "해당 종목의 경기 경력이 응시 요건이다. 체육지도자 자격 공고 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.sc-career",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.sc-coach",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.sports-rehab",
+   "step": 3,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.sc-cert",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.sports-instructor-cert",
+   "step": 5,
+   "major": true,
+   "note": "생활 체육 지도를 겸할 때",
+   "optional": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

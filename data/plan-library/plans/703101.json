@@ -1,0 +1,145 @@
+{
+ "jobCode": "703101",
+ "title": "건설배관공",
+ "displayName": "배관공",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 배관기능사가 기본 증빙이다. 건물 배관과 공장·플랜트 배관으로 나뉜다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "building",
+   "name": "건물 배관",
+   "desc": "급배수·난방·가스"
+  },
+  {
+   "id": "plant",
+   "name": "공업·플랜트 배관",
+   "desc": "공장·플랜트"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "703201",
+   "title": "공업배관공",
+   "track": "plant"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.pp-skill",
+   "name": "배관 기술 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 240,
+   "goal": "관을 절단·접합하고 누수 없이 설치한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기초",
+     "items": [
+      "관 종류와 이음 방식",
+      "절단·나사 가공"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "시공",
+     "items": [
+      "급배수·난방 배관",
+      "용접 접합",
+      "수압 시험"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pp-plant",
+   "name": "플랜트 배관 도면과 용접 검정",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "배관 입체 도면을 읽고 배관 용접 검정을 준비한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "플랜트",
+     "items": [
+      "입체 배관 도면 읽기",
+      "파이프 용접 연습",
+      "기량 검정 응시"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "배관기능사"
+  },
+  {
+   "ref": "p.pp-skill",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "설비·배관 시공 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "building": [],
+  "plant": [
+   {
+    "ref": "p.pp-plant",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
+}

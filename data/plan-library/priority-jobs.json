@@ -3682,6 +3682,476 @@
      "track": "conserve"
     }
    ]
+  },
+  {
+   "no": 161,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-07",
+   "jobCode": "413202",
+   "title": "기록물관리사",
+   "displayName": "기록물관리 전문요원",
+   "family": "edu",
+   "group": "053",
+   "groupName": "학예사·사서·기록물관리사",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 162,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-07",
+   "jobCode": "420101",
+   "title": "스포츠감독 및 코치",
+   "displayName": "스포츠 지도자",
+   "family": "service",
+   "group": "059",
+   "groupName": "스포츠·레크리에이션",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 163,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-07",
+   "jobCode": "511501",
+   "title": "반려동물미용사",
+   "displayName": "반려동물 미용사",
+   "family": "service",
+   "group": "061",
+   "groupName": "미용·반려동물 서비스",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 164,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-07",
+   "jobCode": "512102",
+   "title": "웨딩플래너",
+   "displayName": "웨딩플래너",
+   "family": "service",
+   "group": "062",
+   "groupName": "결혼·장례 등 예식 서비스",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "512201",
+     "title": "혼례종사원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 165,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-07",
+   "jobCode": "512301",
+   "title": "장례지도사 및 장례상담원",
+   "displayName": "장례지도사",
+   "family": "service",
+   "group": "062",
+   "groupName": "결혼·장례 등 예식 서비스",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 166,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-07",
+   "jobCode": "521101",
+   "title": "여행상품개발자",
+   "displayName": "여행 기획자",
+   "family": "service",
+   "group": "063",
+   "groupName": "여행·승무·숙박·오락 서비스",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "521201",
+     "title": "여행사무원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 167,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-07",
+   "jobCode": "521304",
+   "title": "여행안내원",
+   "displayName": "관광 가이드·해설사",
+   "family": "service",
+   "group": "063",
+   "groupName": "여행·승무·숙박·오락 서비스",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "guide",
+     "name": "관광통역안내사",
+     "desc": "외국인 대상 관광 안내"
+    },
+    {
+     "id": "docent",
+     "name": "문화·숲 해설사",
+     "desc": "유적·자연 해설"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "521303",
+     "title": "자연 및 문화해설사",
+     "track": "docent"
+    }
+   ]
+  },
+  {
+   "no": 168,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-07",
+   "jobCode": "621201",
+   "title": "선장 및 항해사",
+   "displayName": "항해사·기관사",
+   "family": "transport",
+   "group": "079",
+   "groupName": "항공기·선박·철도 조종·관제",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "deck",
+     "name": "항해사",
+     "desc": "항해·화물 담당"
+    },
+    {
+     "id": "engine",
+     "name": "기관사",
+     "desc": "기관·전기 담당"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "621203",
+     "title": "선박기관사",
+     "track": "engine"
+    },
+    {
+     "jobCode": "624301",
+     "title": "선박갑판원",
+     "track": "deck"
+    }
+   ]
+  },
+  {
+   "no": 169,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-07",
+   "jobCode": "621401",
+   "title": "항공교통관제사",
+   "displayName": "교통 관제사",
+   "family": "transport",
+   "group": "079",
+   "groupName": "항공기·선박·철도 조종·관제",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "air",
+     "name": "항공 교통 관제",
+     "desc": "공항 관제탑·접근 관제소"
+    },
+    {
+     "id": "vessel",
+     "name": "해상 교통 관제",
+     "desc": "항만·연안 관제 센터"
+    },
+    {
+     "id": "rail",
+     "name": "철도 교통 관제",
+     "desc": "철도 관제 센터"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "621402",
+     "title": "선박교통관제사",
+     "track": "vessel"
+    },
+    {
+     "jobCode": "621403",
+     "title": "철도교통관제사",
+     "track": "rail"
+    }
+   ]
+  },
+  {
+   "no": 170,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-07",
+   "jobCode": "622201",
+   "title": "버스운전원",
+   "displayName": "버스·화물·택시 운전기사",
+   "family": "transport",
+   "group": "07A",
+   "groupName": "자동차 운전",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "bus",
+     "name": "버스",
+     "desc": "시내·고속·전세버스"
+    },
+    {
+     "id": "truck",
+     "name": "화물",
+     "desc": "화물차·특수차"
+    },
+    {
+     "id": "taxi",
+     "name": "택시",
+     "desc": "법인·개인택시"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "622304",
+     "title": "화물차·특수차운전원",
+     "track": "truck"
+    },
+    {
+     "jobCode": "622101",
+     "title": "택시운전원",
+     "track": "taxi"
+    }
+   ]
+  },
+  {
+   "no": 171,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-08",
+   "jobCode": "701601",
+   "title": "건축목공",
+   "displayName": "목수",
+   "family": "tech",
+   "group": "081",
+   "groupName": "건설구조 기능",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "modern",
+     "name": "인테리어·주택 목공",
+     "desc": "실내 목공·목조 주택"
+    },
+    {
+     "id": "hanok",
+     "name": "전통 건축",
+     "desc": "한옥 대목"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "701602",
+     "title": "전통건축기능원",
+     "track": "hanok"
+    }
+   ]
+  },
+  {
+   "no": 172,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-08",
+   "jobCode": "702401",
+   "title": "타일·대리석시공원",
+   "displayName": "타일 기술자",
+   "family": "tech",
+   "group": "082",
+   "groupName": "건축마감 기능",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 173,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-08",
+   "jobCode": "703101",
+   "title": "건설배관공",
+   "displayName": "배관공",
+   "family": "tech",
+   "group": "083",
+   "groupName": "배관",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "building",
+     "name": "건물 배관",
+     "desc": "급배수·난방·가스"
+    },
+    {
+     "id": "plant",
+     "name": "공업·플랜트 배관",
+     "desc": "공장·플랜트"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "703201",
+     "title": "공업배관공",
+     "track": "plant"
+    }
+   ]
+  },
+  {
+   "no": 174,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-08",
+   "jobCode": "811201",
+   "title": "승강기설치·정비원",
+   "displayName": "승강기 기술자",
+   "family": "tech",
+   "group": "091",
+   "groupName": "기계장비 설치·정비",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 175,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-08",
+   "jobCode": "811401",
+   "title": "냉동·냉장·공조기설치·정비원",
+   "displayName": "냉동공조 기술자",
+   "family": "tech",
+   "group": "091",
+   "groupName": "기계장비 설치·정비",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "hvac",
+     "name": "냉동·공조",
+     "desc": "에어컨·냉동 설비"
+    },
+    {
+     "id": "boiler",
+     "name": "보일러",
+     "desc": "난방·열원 설비"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "811501",
+     "title": "보일러설치·정비원",
+     "track": "boiler"
+    }
+   ]
+  },
+  {
+   "no": 176,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-08",
+   "jobCode": "814001",
+   "title": "냉·난방설비조작원",
+   "displayName": "시설관리 기사",
+   "family": "tech",
+   "group": "094",
+   "groupName": "설비·자동화 조작",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 177,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-08",
+   "jobCode": "851201",
+   "title": "화학물가공장치조작원",
+   "displayName": "정유·화학 생산직",
+   "family": "tech",
+   "group": "111",
+   "groupName": "석유·화학물 가공장치 조작",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "851101",
+     "title": "석유·천연가스제조제어장치조작원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 178,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-08",
+   "jobCode": "883101",
+   "title": "가구제조·수리원",
+   "displayName": "가구 제작자(목공)",
+   "family": "tech",
+   "group": "123",
+   "groupName": "가구·목제품 제조·수리",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "883201",
+     "title": "가구조립원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 179,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-08",
+   "jobCode": "884201",
+   "title": "귀금속·보석세공원",
+   "displayName": "주얼리·공예 작가",
+   "family": "tech",
+   "group": "124",
+   "groupName": "공예·귀금속 세공",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "jewelry",
+     "name": "주얼리",
+     "desc": "귀금속·보석 세공"
+    },
+    {
+     "id": "craft",
+     "name": "공예",
+     "desc": "도자·금속·목·섬유 공예"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "884101",
+     "title": "공예원",
+     "track": "craft"
+    }
+   ]
   }
  ]
 }

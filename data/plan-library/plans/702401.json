@@ -1,0 +1,96 @@
+{
+ "jobCode": "702401",
+ "title": "타일·대리석시공원",
+ "displayName": "타일 기술자",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 기술을 배우고 시공 팀에서 보조로 시작한다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.tl-skill",
+   "name": "타일 시공 기술 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 240,
+   "goal": "바탕 처리부터 줄눈까지 혼자 시공한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기초",
+     "items": [
+      "도구와 재료",
+      "바탕 처리·나누기"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "시공",
+     "items": [
+      "벽·바닥 붙이기",
+      "커팅과 모서리",
+      "줄눈·마감"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "타일기능사",
+   "optional": true
+  },
+  {
+   "ref": "p.tl-skill",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.work-record",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "타일 시공 팀 보조"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

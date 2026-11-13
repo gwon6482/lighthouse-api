@@ -849,7 +849,7 @@
      "groupName": "학예사·사서·기록물관리사",
      "covers": [],
      "batch": "2-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -861,7 +861,7 @@
      "groupName": "스포츠·레크리에이션",
      "covers": [],
      "batch": "2-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -873,7 +873,7 @@
      "groupName": "미용·반려동물 서비스",
      "covers": [],
      "batch": "2-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -890,7 +890,7 @@
       }
      ],
      "batch": "2-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -902,7 +902,7 @@
      "groupName": "결혼·장례 등 예식 서비스",
      "covers": [],
      "batch": "2-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -919,7 +919,7 @@
       }
      ],
      "batch": "2-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -936,7 +936,7 @@
       }
      ],
      "batch": "2-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -957,7 +957,7 @@
       }
      ],
      "batch": "2-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -978,7 +978,7 @@
       }
      ],
      "batch": "2-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -999,7 +999,7 @@
       }
      ],
      "batch": "2-07",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -1016,7 +1016,7 @@
       }
      ],
      "batch": "2-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -1028,7 +1028,7 @@
      "groupName": "건축마감 기능",
      "covers": [],
      "batch": "2-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -1045,7 +1045,7 @@
       }
      ],
      "batch": "2-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -1057,7 +1057,7 @@
      "groupName": "기계장비 설치·정비",
      "covers": [],
      "batch": "2-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -1074,7 +1074,7 @@
       }
      ],
      "batch": "2-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -1086,7 +1086,7 @@
      "groupName": "설비·자동화 조작",
      "covers": [],
      "batch": "2-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -1103,7 +1103,7 @@
       }
      ],
      "batch": "2-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -1120,7 +1120,7 @@
       }
      ],
      "batch": "2-08",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -1137,7 +1137,7 @@
       }
      ],
      "batch": "2-08",
-     "done": false
+     "done": true
     }
    ]
   },

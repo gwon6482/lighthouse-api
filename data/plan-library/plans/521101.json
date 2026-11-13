@@ -1,0 +1,187 @@
+{
+ "jobCode": "521101",
+ "title": "여행상품개발자",
+ "displayName": "여행 기획자",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 여행지 지식과 외국어, 상품을 숫자로 짜는 능력을 본다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "521201",
+   "title": "여행사무원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.tv-industry",
+   "name": "여행 산업과 상품 구조",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "항공·숙박·현지 수배가 묶여 상품이 되는 구조와 원가를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "구조",
+     "items": [
+      "패키지·자유 여행 상품",
+      "원가와 마진",
+      "판매 채널"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tv-res",
+   "name": "예약·발권 시스템 이해",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "항공 예약 시스템과 숙박 예약의 기본을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "시스템",
+     "items": [
+      "항공 운임 규정",
+      "예약 기록 읽기",
+      "숙박·현지 수배"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tv-product",
+   "name": "여행 상품 기획서",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "지역과 대상을 정해 일정·원가·판매가를 짠 상품을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "지역과 고객 조사",
+      "경쟁 상품 분석"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기획",
+     "items": [
+      "일정표",
+      "원가 계산",
+      "판매 문구"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tv-tc",
+   "name": "국외여행 인솔자 자격",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "인솔자 자격 요건을 채운다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "과정",
+     "items": [
+      "양성 교육 이수",
+      "자격증 발급"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "관광 관련 학과 졸업이나 여행사 경력 등에 따라 요건이 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.tv-industry",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.second-language",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.tv-res",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.tv-product",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.tv-tc",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 9,
+   "major": true,
+   "note": "여행사 인턴",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

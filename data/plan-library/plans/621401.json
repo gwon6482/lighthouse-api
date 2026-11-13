@@ -1,0 +1,239 @@
+{
+ "jobCode": "621401",
+ "title": "항공교통관제사",
+ "displayName": "교통 관제사",
+ "family": "transport",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "분야마다 자격과 채용 경로가 다르다. 항공은 관제사 자격증명, 철도는 관제 자격증명, 해상은 해기사 면허와 승선 경력이 바탕이다.",
+ "gate": "항공교통관제사 자격증명(전문교육기관 + 시험) / 철도교통관제 자격증명 / 해상은 해기사 면허·경력",
+ "tracks": [
+  {
+   "id": "air",
+   "name": "항공 교통 관제",
+   "desc": "공항 관제탑·접근 관제소"
+  },
+  {
+   "id": "vessel",
+   "name": "해상 교통 관제",
+   "desc": "항만·연안 관제 센터"
+  },
+  {
+   "id": "rail",
+   "name": "철도 교통 관제",
+   "desc": "철도 관제 센터"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "621402",
+   "title": "선박교통관제사",
+   "track": "vessel"
+  },
+  {
+   "jobCode": "621403",
+   "title": "철도교통관제사",
+   "track": "rail"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.atc-school",
+   "name": "항공교통관제 전문교육기관 과정",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "지정 교육기관의 관제 교육과정을 이수한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "선택",
+     "items": [
+      "지정 교육기관 확인"
+     ]
+    },
+    {
+     "weeks": 40,
+     "title": "과정",
+     "items": [
+      "항공 법규·관제 절차",
+      "모의 관제 실습"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.atc-license",
+   "name": "항공교통관제사 자격증명",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "학과와 실기 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "학과",
+     "items": [
+      "항공 법규",
+      "관제 일반·항행 안전 시설",
+      "항공 기상"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기",
+     "items": [
+      "구술",
+      "모의 관제"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.vts-req",
+   "name": "해상교통관제사 채용 요건 갖추기",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "해상교통관제 채용의 면허·경력 요건을 확인하고 채운다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "채용 공고의 면허·승선 경력 요건",
+      "관제 교육 과정"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "해기사 면허와 승선 경력을 요구한다. 해양경찰청 채용 공고 확인"
+  },
+  {
+   "id": "p.rtc-license",
+   "name": "철도교통관제 자격증명",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "교육훈련을 이수하고 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "검사",
+     "items": [
+      "신체·적성 검사"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "교육",
+     "items": [
+      "관제 이론",
+      "관제 실습"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "시험",
+     "items": [
+      "필기·실기"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "air": [
+   {
+    "ref": "cp.aviation-medical",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "p.atc-school",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "p.atc-license",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "cp.aviation-english",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.civil-special",
+    "step": 7,
+    "major": true,
+    "note": "항공교통관제 분야 공무원 채용"
+   }
+  ],
+  "vessel": [
+   {
+    "ref": "p.vts-req",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.civil-special",
+    "step": 7,
+    "major": true,
+    "note": "해상교통관제 분야 공무원 채용"
+   }
+  ],
+  "rail": [
+   {
+    "ref": "p.rtc-license",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.ncs",
+    "step": 7,
+    "major": true,
+    "note": "철도 운영 기관 필기"
+   }
+  ]
+ },
+ "verify": "자격 요건은 항공안전법·철도안전법이 정본"
+}

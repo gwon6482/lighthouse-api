@@ -1,0 +1,142 @@
+{
+ "jobCode": "511501",
+ "title": "반려동물미용사",
+ "displayName": "반려동물 미용사",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법정 필수 자격은 없다. 학원에서 기술을 익히고 자격과 현장 경험으로 시작한다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pg-care",
+   "name": "견종·피부·행동 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "견종별 털과 피부 특성, 스트레스 신호를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "견종별 미용 스타일",
+      "피부·피모 관리",
+      "보정과 안전"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pg-skill",
+   "name": "미용 기술 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 180,
+   "goal": "목욕·클리핑·가위컷을 견체 모형과 실제 반려견에게 한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "기본",
+     "items": [
+      "목욕·드라이",
+      "클리핑",
+      "가위 다루기"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "스타일",
+     "items": [
+      "견종별 스타일",
+      "실견 미용"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pg-cert",
+   "name": "반려견 스타일리스트 자격",
+   "type": "cert",
+   "subtype": "private-certified",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "자격 급수 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "준비",
+     "items": [
+      "필기",
+      "실기 연습",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간 자격이다(일부는 국가공인). 급수와 발급 기관을 확인할 것"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.pg-care",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.pg-skill",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.pg-cert",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 6,
+   "major": true,
+   "note": "미용실·동물병원"
+  },
+  {
+   "ref": "cp.channel",
+   "step": 7,
+   "major": true,
+   "note": "작업 사진",
+   "optional": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,105 @@
+{
+ "jobCode": "851201",
+ "title": "화학물가공장치조작원",
+ "displayName": "정유·화학 생산직",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "학력 제한이 낮은 공개 채용으로 뽑는다. 공정 이해와 위험물·가스 관련 자격, 교대 근무 적응이 중요하다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "851101",
+   "title": "석유·천연가스제조제어장치조작원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.cp-process",
+   "name": "화학 공정과 설비 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "증류·반응 등 단위 공정과 운전 화면의 의미를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "공정",
+     "items": [
+      "정유·석유화학 공정 흐름",
+      "펌프·열교환기·탑",
+      "운전 변수와 안전 장치"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.cp-process",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.hazmat-cert",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "가스기능사·화학분석기능사 등"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 5,
+   "major": true,
+   "note": "화공산업기사·산업안전산업기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.safety-law",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 8,
+   "major": true,
+   "note": "생산직 인적성"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "모집 대상과 전형은 회사 공고마다 다르다"
+}

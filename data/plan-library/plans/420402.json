@@ -67,48 +67,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.tr-ssi",
-   "name": "생활스포츠지도사 2급",
-   "type": "cert",
-   "subtype": "national-license",
-   "category": "qualification",
-   "method": "book",
-   "level": "중급",
-   "daysPerWeek": 4,
-   "minutesPerSession": 90,
-   "goal": "필기·실기·구술과 연수를 거쳐 자격을 딴다.",
-   "phases": [
-    {
-     "weeks": 4,
-     "title": "필기",
-     "items": [
-      "선택 과목 이론",
-      "기출 회독",
-      "응시"
-     ]
-    },
-    {
-     "weeks": 4,
-     "title": "실기·구술",
-     "items": [
-      "종목 실기 연습",
-      "구술 예상 문제",
-      "응시"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "연수",
-     "items": [
-      "연수 과정 이수",
-      "현장 실습"
-     ]
-    }
-   ],
-   "basis": "law",
-   "verify": "종목(보디빌딩 등)과 일정은 체육지도자 자격 공고 확인. 연 1회 시행"
-  },
-  {
    "id": "p.tr-own",
    "name": "내 운동 경력 만들기",
    "type": "activity",
@@ -281,7 +239,7 @@
    "skip": "체육 전공 과목에서 배운다"
   },
   {
-   "ref": "p.tr-ssi",
+   "ref": "cp.sports-instructor-cert",
    "step": 4,
    "major": true
   },

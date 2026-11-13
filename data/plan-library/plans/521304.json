@@ -1,0 +1,191 @@
+{
+ "jobCode": "521304",
+ "title": "여행안내원",
+ "displayName": "관광 가이드·해설사",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "외국인에게 관광 안내를 하려면 관광통역안내사 자격이 필요하다. 문화·숲 해설사는 양성 과정을 거친다.",
+ "gate": "관광통역안내사 자격(외국인 대상 안내) — 필기·면접 + 외국어 공인 성적",
+ "tracks": [
+  {
+   "id": "guide",
+   "name": "관광통역안내사",
+   "desc": "외국인 대상 관광 안내"
+  },
+  {
+   "id": "docent",
+   "name": "문화·숲 해설사",
+   "desc": "유적·자연 해설"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "521303",
+   "title": "자연 및 문화해설사",
+   "track": "docent"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.tg-history",
+   "name": "한국사와 관광 자원 공부",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "주요 유적과 지역의 역사·문화를 이야기로 풀어 설명한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "공부",
+     "items": [
+      "한국사 흐름",
+      "지역별 관광 자원",
+      "관광 법규 기초"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tg-cert",
+   "name": "관광통역안내사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "필기와 면접에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "필기",
+     "items": [
+      "국사",
+      "관광 자원 해설",
+      "관광 법규·관광학 개론"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "면접",
+     "items": [
+      "외국어 면접 답변",
+      "해설 시연"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "외국어 공인 성적이 응시 요건이다"
+  },
+  {
+   "id": "p.tg-docent",
+   "name": "해설사 양성 과정",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "문화관광 해설사나 숲 해설가 양성 과정을 수료한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "신청",
+     "items": [
+      "지자체·기관 모집 확인"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "과정",
+     "items": [
+      "이론 교육",
+      "현장 실습",
+      "평가"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "모집 주체와 선발 방식은 지자체·산림청 공고 확인"
+  },
+  {
+   "id": "p.tg-guide",
+   "name": "안내 시연과 동선 짜기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "코스를 짜고 실제로 안내해 본다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "코스",
+     "items": [
+      "동선과 시간표",
+      "해설 원고"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "시연",
+     "items": [
+      "지인 대상 시범 안내",
+      "피드백 반영"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.tg-history",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.tg-guide",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 5,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "guide": [
+   {
+    "ref": "cp.second-language",
+    "step": 2,
+    "major": true,
+    "note": "외국어 공인 성적이 응시 요건"
+   },
+   {
+    "ref": "p.tg-cert",
+    "step": 3,
+    "major": true
+   }
+  ],
+  "docent": [
+   {
+    "ref": "p.tg-docent",
+    "step": 3,
+    "major": true
+   }
+  ]
+ }
+}

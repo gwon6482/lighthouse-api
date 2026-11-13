@@ -1,0 +1,118 @@
+{
+ "jobCode": "814001",
+ "title": "냉·난방설비조작원",
+ "displayName": "시설관리 기사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "건물의 전기·기계·소방 설비를 운전하고 점검한다. 건물 규모에 따라 법정 선임 자격이 필요해 자격증이 곧 경쟁력이다.",
+ "gate": "건물 규모에 따라 전기·소방·에너지 분야의 법정 선임 자격이 필요하다",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.fm-basics",
+   "name": "건물 설비 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "전기·기계·소방 설비의 구성과 점검 항목을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "설비",
+     "items": [
+      "수변전·전기 설비",
+      "공조·보일러·급배수",
+      "소방 설비"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fm-work",
+   "name": "시설 점검과 일지 작성",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "점검 순서대로 돌고 이상을 기록·조치한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "점검",
+     "items": [
+      "일일·정기 점검표",
+      "이상 징후 기록",
+      "민원 대응"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "에너지관리기능사·공조냉동기계기능사·전기기능사 중에서"
+  },
+  {
+   "ref": "p.fm-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.fm-work",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 6,
+   "major": true,
+   "note": "산업기사 이상이면 선임할 수 있는 범위가 넓어진다",
+   "optional": true
+  },
+  {
+   "ref": "cp.safety-law",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "건물·시설 관리 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,250 @@
+{
+ "jobCode": "622201",
+ "title": "버스운전원",
+ "displayName": "버스·화물·택시 운전기사",
+ "family": "transport",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "운전면허에 더해 업종별 운전 자격이 필요하다. 버스는 대형 면허와 버스운전 자격, 화물은 화물운송종사 자격, 택시는 택시운전 자격이다.",
+ "gate": "1종 대형 면허 + 버스운전 자격(버스) / 화물운송종사 자격(화물) / 택시운전 자격(택시)",
+ "tracks": [
+  {
+   "id": "bus",
+   "name": "버스",
+   "desc": "시내·고속·전세버스"
+  },
+  {
+   "id": "truck",
+   "name": "화물",
+   "desc": "화물차·특수차"
+  },
+  {
+   "id": "taxi",
+   "name": "택시",
+   "desc": "법인·개인택시"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "622304",
+   "title": "화물차·특수차운전원",
+   "track": "truck"
+  },
+  {
+   "jobCode": "622101",
+   "title": "택시운전원",
+   "track": "taxi"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.dr-large",
+   "name": "1종 대형·특수 면허",
+   "type": "cert",
+   "subtype": "basic",
+   "category": "qualification",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "대형 또는 특수 면허를 딴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "취득",
+     "items": [
+      "학원 등록",
+      "기능 교육",
+      "시험"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "응시하려면 일정 기간의 운전 경력이 필요하다"
+  },
+  {
+   "id": "p.dr-bus",
+   "name": "버스운전 자격시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "운전 적성 정밀검사를 받고 자격시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "운전 적성 정밀검사",
+      "교통 법규·안전 운행",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.dr-truck",
+   "name": "화물운송종사 자격시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "운전 적성 정밀검사를 받고 자격시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "운전 적성 정밀검사",
+      "화물 취급·안전 운행",
+      "응시와 교육"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.dr-taxi",
+   "name": "택시운전 자격시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "운전 적성 정밀검사를 받고 자격시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "운전 적성 정밀검사",
+      "지리·법규",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.dr-safe",
+   "name": "안전 운전과 운수 법규",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "사고 예방 운전법과 운수 종사자 준수 사항을 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "익히기",
+     "items": [
+      "방어 운전",
+      "차량 일상 점검",
+      "승객·화물 안전"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dr-exp",
+   "name": "운전 경력 쌓기",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "작은 노선부터 시작해 경력을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "마을버스·전세버스 회사 지원"
+     ]
+    },
+    {
+     "weeks": 50,
+     "title": "근무",
+     "items": [
+      "노선 숙지",
+      "무사고 경력 쌓기"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "시내버스는 경력을 요구하는 회사가 많다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.driver-license",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.dr-safe",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "bus": [
+   {
+    "ref": "p.dr-large",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "p.dr-bus",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "p.dr-exp",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "truck": [
+   {
+    "ref": "p.dr-large",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "p.dr-truck",
+    "step": 3,
+    "major": true
+   }
+  ],
+  "taxi": [
+   {
+    "ref": "p.dr-taxi",
+    "step": 3,
+    "major": true
+   }
+  ]
+ },
+ "verify": "자격 요건은 여객자동차·화물자동차 운수사업법이 정본"
+}

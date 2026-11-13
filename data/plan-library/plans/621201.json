@@ -1,0 +1,250 @@
+{
+ "jobCode": "621201",
+ "title": "선장 및 항해사",
+ "displayName": "항해사·기관사",
+ "family": "transport",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "해기사 면허가 필요하다. 지정 교육기관을 거쳐 승선 실습을 하고 면허 시험에 합격한다.",
+ "gate": "해기사 면허(항해사·기관사) — 지정 교육기관 과정 + 승선 실습 + 면허 시험",
+ "tracks": [
+  {
+   "id": "deck",
+   "name": "항해사",
+   "desc": "항해·화물 담당"
+  },
+  {
+   "id": "engine",
+   "name": "기관사",
+   "desc": "기관·전기 담당"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "621203",
+   "title": "선박기관사",
+   "track": "engine"
+  },
+  {
+   "jobCode": "624301",
+   "title": "선박갑판원",
+   "track": "deck"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.sm-school",
+   "name": "해기 교육기관 과정",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "해양대·해사고·단기 양성 과정 중 하나를 이수한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "선택",
+     "items": [
+      "교육기관과 과정 비교",
+      "입학 요건 확인"
+     ]
+    },
+    {
+     "weeks": 60,
+     "title": "과정",
+     "items": [
+      "전공 이론",
+      "선박 실습"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "대학 과정 외에 단기 양성 과정도 있다"
+  },
+  {
+   "id": "p.sm-safety",
+   "name": "법정 안전 교육과 선원 건강진단",
+   "type": "cert",
+   "subtype": "basic",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "승선에 필요한 기초 안전 교육을 이수하고 건강진단을 받는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "이수",
+     "items": [
+      "기초 안전 교육",
+      "선원 건강진단",
+      "선원 수첩 발급"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.sm-onboard",
+   "name": "승선 실습",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "실습선이나 상선에서 승선 경력을 채운다.",
+   "phases": [
+    {
+     "weeks": 26,
+     "title": "승선",
+     "items": [
+      "당직 근무 실습",
+      "실습 기록부 작성"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.sm-license",
+   "name": "해기사 면허 시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "해기사 필기와 면접에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "필기",
+     "items": [
+      "과목별 이론",
+      "기출"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "면접",
+     "items": [
+      "면접 준비"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.sm-nav",
+   "name": "항해와 선박 운용",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "항법·해상 교통 법규·화물 운송을 안다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "항해",
+     "items": [
+      "항해술과 항법 장비",
+      "해상 충돌 예방 규칙",
+      "선박 운용·적화"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sm-eng",
+   "name": "선박 기관과 전기",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "주기관·보조 기계·전기 설비의 운전과 정비를 안다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "기관",
+     "items": [
+      "주기관과 보조 기계",
+      "전기·자동 제어",
+      "정비 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.sm-school",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.sm-safety",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.sm-onboard",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.sm-license",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 6,
+   "major": true,
+   "note": "외항선은 영어를 본다",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "deck": [
+   {
+    "ref": "p.sm-nav",
+    "step": 2,
+    "major": true
+   }
+  ],
+  "engine": [
+   {
+    "ref": "p.sm-eng",
+    "step": 2,
+    "major": true
+   }
+  ]
+ },
+ "verify": "면허 요건은 선박직원법이 정본"
+}

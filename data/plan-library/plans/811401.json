@@ -1,0 +1,151 @@
+{
+ "jobCode": "811401",
+ "title": "냉동·냉장·공조기설치·정비원",
+ "displayName": "냉동공조 기술자",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "공조냉동 분야 기능사가 기본 증빙이다. 설치·정비 업체에서 경력을 쌓는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "hvac",
+   "name": "냉동·공조",
+   "desc": "에어컨·냉동 설비"
+  },
+  {
+   "id": "boiler",
+   "name": "보일러",
+   "desc": "난방·열원 설비"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "811501",
+   "title": "보일러설치·정비원",
+   "track": "boiler"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.hv-basics",
+   "name": "냉동 사이클과 공조 설비 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "냉매가 도는 원리와 설비 구성을 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "원리",
+     "items": [
+      "냉동 사이클",
+      "압축기·응축기·증발기",
+      "냉매와 법규"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.hv-skill",
+   "name": "설치·정비 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "배관을 잇고 냉매를 충전해 시운전한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "배관",
+     "items": [
+      "동관 가공·용접",
+      "진공·기밀 시험"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "정비",
+     "items": [
+      "냉매 충전",
+      "고장 진단"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "공조냉동기계기능사"
+  },
+  {
+   "ref": "p.hv-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.hv-skill",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 6,
+   "major": true,
+   "note": "공조냉동기계산업기사·에너지관리산업기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "공조·냉동 설비 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "hvac": [],
+  "boiler": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4.5,
+    "major": true,
+    "note": "에너지관리기능사"
+   }
+  ]
+ }
+}

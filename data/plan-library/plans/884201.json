@@ -1,0 +1,244 @@
+{
+ "jobCode": "884201",
+ "title": "귀금속·보석세공원",
+ "displayName": "주얼리·공예 작가",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 기술을 익혀 공방이나 제조 업체에서 일하거나 내 작품을 만들어 판다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "jewelry",
+   "name": "주얼리",
+   "desc": "귀금속·보석 세공"
+  },
+  {
+   "id": "craft",
+   "name": "공예",
+   "desc": "도자·금속·목·섬유 공예"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "884101",
+   "title": "공예원",
+   "track": "craft"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.jw-skill",
+   "name": "세공 기술 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 180,
+   "goal": "톱질·줄질·땜으로 반지와 펜던트를 만든다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "기본",
+     "items": [
+      "금속 다루기",
+      "땜과 광내기"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "응용",
+     "items": [
+      "난집 만들기",
+      "보석 물림"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.jw-cad",
+   "name": "주얼리 3D 모델링",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "3D로 디자인해 원본을 출력한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "모델링",
+     "items": [
+      "주얼리 캐드 사용",
+      "출력·주물 이해"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cr-skill",
+   "name": "공예 기법 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "도자·금속·목·섬유 중 한 분야의 기법을 익힌다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "기법",
+     "items": [
+      "재료와 도구",
+      "기본 기법 반복",
+      "나만의 표현 찾기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.jw-collection",
+   "name": "작품 컬렉션 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "주제를 정해 작품 10점을 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "콘셉트와 스케치"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "제작",
+     "items": [
+      "작품 제작",
+      "촬영과 설명"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cr-market",
+   "name": "판매 채널 열기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "플리마켓과 온라인으로 작품을 판다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "가격 정하기",
+      "포장·사진"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "판매",
+     "items": [
+      "플리마켓 참가",
+      "온라인 상점 운영",
+      "주문 제작 응대"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.design-basics",
+   "step": 2,
+   "major": false,
+   "skip": "공예·디자인 전공 실기에서 배운다"
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 3,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.jw-collection",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "jewelry": [
+   {
+    "ref": "p.jw-skill",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 5,
+    "major": true,
+    "note": "귀금속가공기능사"
+   },
+   {
+    "ref": "p.jw-cad",
+    "step": 5.5,
+    "major": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 6.5,
+    "major": true,
+    "note": "주얼리 공방·제조 업체"
+   }
+  ],
+  "craft": [
+   {
+    "ref": "p.cr-skill",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "p.cr-market",
+    "step": 6.5,
+    "major": true
+   }
+  ]
+ }
+}

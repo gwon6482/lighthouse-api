@@ -5222,6 +5222,139 @@
      ]
     }
    ]
+  },
+  {
+   "id": "cp.sports-instructor-cert",
+   "name": "생활스포츠지도사 2급",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "필기·실기·구술과 연수를 거쳐 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "선택 과목 이론",
+      "기출 회독",
+      "응시"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기·구술",
+     "items": [
+      "종목 실기 연습",
+      "구술 예상 문제",
+      "응시"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연수",
+     "items": [
+      "연수 과정 이수",
+      "현장 실습"
+     ]
+    }
+   ],
+   "verify": "종목(보디빌딩 등)과 일정은 체육지도자 자격 공고 확인. 연 1회 시행",
+   "scope": "family",
+   "families": [
+    "service",
+    "edu"
+   ],
+   "promotedFrom": "420402:p.tr-ssi"
+  },
+  {
+   "id": "cp.aviation-english",
+   "name": "항공영어구술능력증명",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "항공영어 구술 능력에서 필요 등급을 받는다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "준비",
+     "items": [
+      "항공 교신 표현",
+      "듣기·말하기 연습",
+      "응시"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "transport"
+   ],
+   "promotedFrom": "621101:p.fly-epta"
+  },
+  {
+   "id": "cp.aviation-medical",
+   "name": "항공 신체검사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 120,
+   "goal": "항공 신체검사 기준을 통과한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "검사",
+     "items": [
+      "지정 병원 예약",
+      "검사",
+      "증명 발급"
+     ]
+    }
+   ],
+   "verify": "교육 시작 전에 먼저 확인하는 것이 안전하다",
+   "scope": "family",
+   "families": [
+    "transport"
+   ],
+   "promotedFrom": "621101:p.fly-medical"
+  },
+  {
+   "id": "cp.work-record",
+   "name": "시공 기록 남기기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 60,
+   "goal": "작업 전후 사진과 내용을 모아 알린다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "기록",
+     "items": [
+      "현장별 전후 사진",
+      "작업 내용 정리",
+      "온라인에 올리기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "tech",
+    "service"
+   ],
+   "promotedFrom": "702501:p.wp-record"
   }
  ]
 }

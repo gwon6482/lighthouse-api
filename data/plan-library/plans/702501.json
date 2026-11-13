@@ -41,30 +41,6 @@
     }
    ],
    "basis": "practice"
-  },
-  {
-   "id": "p.wp-record",
-   "name": "시공 기록 남기기",
-   "type": "output",
-   "subtype": "portfolio",
-   "category": "portfolio",
-   "method": "content",
-   "level": "입문",
-   "daysPerWeek": 1,
-   "minutesPerSession": 60,
-   "goal": "작업 전후 사진과 내용을 모아 알린다.",
-   "phases": [
-    {
-     "weeks": 8,
-     "title": "기록",
-     "items": [
-      "현장별 전후 사진",
-      "작업 내용 정리",
-      "온라인에 올리기"
-     ]
-    }
-   ],
-   "basis": "practice"
   }
  ],
  "common": [
@@ -104,7 +80,7 @@
    "note": "도배 팀 보조"
   },
   {
-   "ref": "p.wp-record",
+   "ref": "cp.work-record",
    "step": 7,
    "major": true,
    "optional": true

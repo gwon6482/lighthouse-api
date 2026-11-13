@@ -1,0 +1,163 @@
+{
+ "jobCode": "512102",
+ "title": "웨딩플래너",
+ "displayName": "웨딩플래너",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 상담과 영업이 일의 중심이고 웨딩 업체에서 일을 배우며 시작한다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "512201",
+   "title": "혼례종사원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.wd-industry",
+   "name": "웨딩 산업과 상품 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "예식장·촬영·드레스·메이크업 등 상품 구성과 비용 구조를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "상품",
+     "items": [
+      "상품 종류와 가격대",
+      "계절·지역별 차이",
+      "계약과 위약 규정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.wd-consult",
+   "name": "상담과 일정·견적 설계",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "예산에 맞춘 견적과 준비 일정표를 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "틀",
+     "items": [
+      "상담 질문지",
+      "견적서 양식"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연습",
+     "items": [
+      "가상 고객 3쌍 설계",
+      "상담 역할극"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.wd-work",
+   "name": "웨딩 업체에서 일하기",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "컨설팅 업체나 예식장에서 실무를 익힌다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "업체 지원"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "근무",
+     "items": [
+      "상담 보조",
+      "업체 동행",
+      "예식 당일 진행"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.wd-industry",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.sales-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.wd-consult",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.wd-work",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 8,
+   "major": true,
+   "note": "후기와 사례 알리기",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

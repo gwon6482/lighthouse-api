@@ -34,31 +34,6 @@
  ],
  "projects": [
   {
-   "id": "p.fly-medical",
-   "name": "항공 신체검사",
-   "type": "cert",
-   "subtype": "national-license",
-   "category": "qualification",
-   "method": "etc",
-   "level": "입문",
-   "daysPerWeek": 1,
-   "minutesPerSession": 120,
-   "goal": "항공 신체검사 기준을 통과한다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "검사",
-     "items": [
-      "지정 병원 예약",
-      "검사",
-      "증명 발급"
-     ]
-    }
-   ],
-   "basis": "law",
-   "verify": "교육 시작 전에 먼저 확인하는 것이 안전하다"
-  },
-  {
    "id": "p.fly-license",
    "name": "조종사 자격증명 따기",
    "type": "cert",
@@ -91,30 +66,6 @@
    ],
    "basis": "law",
    "verify": "필요 비행 시간과 비용이 크다. 교육 기관별로 비교할 것"
-  },
-  {
-   "id": "p.fly-epta",
-   "name": "항공영어구술능력증명",
-   "type": "cert",
-   "subtype": "national-license",
-   "category": "qualification",
-   "method": "book",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 60,
-   "goal": "항공영어 구술 능력에서 필요 등급을 받는다.",
-   "phases": [
-    {
-     "weeks": 4,
-     "title": "준비",
-     "items": [
-      "항공 교신 표현",
-      "듣기·말하기 연습",
-      "응시"
-     ]
-    }
-   ],
-   "basis": "law"
   },
   {
    "id": "p.fly-hours",
@@ -236,7 +187,7 @@
  ],
  "common": [
   {
-   "ref": "p.fly-medical",
+   "ref": "cp.aviation-medical",
    "step": 1,
    "major": true
   },
@@ -252,7 +203,7 @@
    "major": true
   },
   {
-   "ref": "p.fly-epta",
+   "ref": "cp.aviation-english",
    "step": 5,
    "major": true
   },
