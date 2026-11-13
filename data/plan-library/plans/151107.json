@@ -39,37 +39,6 @@
  ],
  "projects": [
   {
-   "id": "p.me-cae",
-   "name": "구조·열 해석 기초",
-   "type": "skill",
-   "subtype": "data",
-   "category": "skill",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "해석 도구로 강도와 열 문제를 풀어 설계에 반영한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "기본",
-     "items": [
-      "유한요소법 개념",
-      "경계 조건·메시"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "실습",
-     "items": [
-      "부품 강도 해석",
-      "설계 변경 전후 비교"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.me-project",
    "name": "설계 프로젝트",
    "type": "output",
@@ -136,38 +105,6 @@
      "title": "개선",
      "items": [
       "공정 개선 사례 분석"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.me-control",
-   "name": "제어와 임베디드 기초",
-   "type": "skill",
-   "subtype": "dev",
-   "category": "skill",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "제어 이론을 시뮬레이션하고 마이크로컨트롤러로 구현한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "제어",
-     "items": [
-      "전달 함수·PID",
-      "시뮬레이션"
-     ]
-    },
-    {
-     "weeks": 3,
-     "title": "구현",
-     "items": [
-      "C로 모터 제어",
-      "센서 연동",
-      "통신(CAN) 이해"
      ]
     }
    ],
@@ -256,7 +193,7 @@
  "byTrack": {
   "design": [
    {
-    "ref": "p.me-cae",
+    "ref": "cp.cae-basics",
     "step": 5,
     "major": true
    },
@@ -280,7 +217,7 @@
   ],
   "elec": [
    {
-    "ref": "p.me-control",
+    "ref": "cp.control-embedded",
     "step": 5,
     "major": true
    },

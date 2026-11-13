@@ -1,0 +1,194 @@
+{
+ "jobCode": "024203",
+ "title": "조사전문가",
+ "displayName": "리서처(시장·여론 조사)",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 사회조사분석사가 대표 증빙이다. 조사 설계와 통계 분석 능력을 프로젝트로 보인다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.rs-method",
+   "name": "조사 방법론",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "설문 설계·표본 추출·척도의 원리를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "설계",
+     "items": [
+      "조사 목적과 가설",
+      "표본 추출",
+      "설문 문항과 척도"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "실습",
+     "items": [
+      "설문지 만들어 예비 조사"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.rs-tool",
+   "name": "통계 패키지 다루기(SPSS·R)",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "조사 자료를 분석해 표와 그래프로 낸다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "빈도·교차 분석",
+      "평균 비교·회귀"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "보고",
+     "items": [
+      "분석 결과표 작성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.rs-cert",
+   "name": "사회조사분석사 2급",
+   "type": "cert",
+   "subtype": "national-tech",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "사회조사분석사 2급에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "조사 방법론",
+      "사회 통계"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기",
+     "items": [
+      "작업형(통계 패키지)",
+      "필답형"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.rs-project",
+   "name": "조사 프로젝트",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "설문을 직접 돌려 보고서까지 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "설계",
+     "items": [
+      "주제와 설문"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "수행",
+     "items": [
+      "응답 수집",
+      "분석",
+      "보고서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.stats",
+   "step": 2,
+   "major": false,
+   "skip": "통계·사회과학 전공 과목에서 배운다"
+  },
+  {
+   "ref": "p.rs-method",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.rs-tool",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.rs-cert",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.rs-project",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 8,
+   "major": true,
+   "note": "조사 회사 인턴",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,141 @@
+{
+ "jobCode": "132002",
+ "title": "컴퓨터시스템설계 및 분석가",
+ "displayName": "IT 컨설턴트·시스템 분석가",
+ "family": "it",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 업무를 이해해 시스템으로 옮기는 설계 능력을 본다. 개발 경험을 쌓은 뒤 가는 경우가 많다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "132004",
+   "title": "정보통신컨설턴트 및 감리원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.sa-req",
+   "name": "요구사항 분석과 설계 문서",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "요구사항을 정리해 설계 문서로 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "업무 흐름 조사",
+      "요구사항 명세"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "설계",
+     "items": [
+      "UML 다이어그램",
+      "화면·데이터 설계"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sa-domain",
+   "name": "업무 분야 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "금융·공공·제조 중 한 분야의 업무와 시스템을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "분야",
+     "items": [
+      "업무 용어와 절차",
+      "대표 시스템 구조",
+      "구축 사례 분석"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.cs-basics",
+   "step": 2,
+   "major": false,
+   "skip": "전공 필수 과목에서 배운다"
+  },
+  {
+   "ref": "cp.sql",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.data-modeling",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.sa-req",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.info-eng",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.sa-domain",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.team-project",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 10,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

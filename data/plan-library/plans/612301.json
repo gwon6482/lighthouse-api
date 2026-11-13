@@ -1,0 +1,118 @@
+{
+ "jobCode": "612301",
+ "title": "자동차영업원",
+ "displayName": "자동차 영업사원(카마스터)",
+ "family": "sales",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 차량 지식과 금융 상품 이해, 고객 관리가 실적을 좌우한다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cm-product",
+   "name": "차량 상품 지식",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "차종·사양·경쟁 모델을 비교해 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "상품",
+     "items": [
+      "차종별 사양·가격",
+      "경쟁 모델 비교",
+      "시승 안내 요령"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cm-finance",
+   "name": "할부·리스·보험 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "구매 방식별 비용을 계산해 안내한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "금융",
+     "items": [
+      "할부·리스·렌트 차이",
+      "견적 계산",
+      "보험·등록 절차"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.car-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.cm-product",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.cm-finance",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.sales-basics",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 8,
+   "major": true,
+   "note": "SNS로 고객 만나기",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

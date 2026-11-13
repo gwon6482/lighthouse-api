@@ -1,0 +1,152 @@
+{
+ "jobCode": "415101",
+ "title": "제품디자이너",
+ "displayName": "제품 디자이너",
+ "family": "design",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 스케치·3D·시제품으로 이어지는 디자인 과정을 포트폴리오로 보인다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pd-sketch",
+   "name": "제품 스케치와 렌더링",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "아이디어를 스케치와 렌더 이미지로 표현한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "스케치",
+     "items": [
+      "투시와 형태",
+      "아이디어 스케치"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "렌더",
+     "items": [
+      "디지털 렌더링",
+      "표현 기법"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pd-project",
+   "name": "제품 디자인 프로젝트",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "사용자 조사부터 시제품까지 한 제품을 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "사용자·시장 조사",
+      "문제 정의"
+     ]
+    },
+    {
+     "weeks": 5,
+     "title": "디자인",
+     "items": [
+      "콘셉트 전개",
+      "3D 모델링",
+      "목업 제작"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "패널·영상"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.design-basics",
+   "step": 2,
+   "major": false,
+   "skip": "디자인 전공 기초 과목에서 배운다"
+  },
+  {
+   "ref": "p.pd-sketch",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.cad-3d",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.adobe",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.pd-project",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 7,
+   "major": true,
+   "note": "제품디자인기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.contest",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -28,38 +28,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.bp-basics",
-   "name": "경영학 기본",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "book",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 60,
-   "goal": "전략·재무·마케팅·조직의 기본 개념으로 기업 사례를 설명한다.",
-   "phases": [
-    {
-     "weeks": 3,
-     "title": "개념",
-     "items": [
-      "전략(산업 구조·경쟁 우위)",
-      "재무·회계 기초",
-      "마케팅·조직"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "적용",
-     "items": [
-      "기업 사례 2개 분석",
-      "정리 글 쓰기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.bp-plan",
    "name": "사업계획과 실적 관리 실습",
    "type": "output",
@@ -175,7 +143,7 @@
    "major": true
   },
   {
-   "ref": "p.bp-basics",
+   "ref": "cp.biz-basics",
    "step": 2,
    "major": false,
    "skip": "경영학 전공 과목에서 배운다"

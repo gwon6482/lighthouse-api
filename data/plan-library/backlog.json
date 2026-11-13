@@ -273,7 +273,7 @@
      "groupName": "경영지원 사무",
      "covers": [],
      "batch": "2-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -285,7 +285,7 @@
      "groupName": "무역·구매·생산·품질 사무",
      "covers": [],
      "batch": "2-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -297,7 +297,7 @@
      "groupName": "무역·구매·생산·품질 사무",
      "covers": [],
      "batch": "2-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -309,7 +309,7 @@
      "groupName": "통계·비서·사무보조",
      "covers": [],
      "batch": "2-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -321,7 +321,7 @@
      "groupName": "경영·회계·광고·상품기획",
      "covers": [],
      "batch": "2-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -333,7 +333,7 @@
      "groupName": "경영·회계·광고·상품기획",
      "covers": [],
      "batch": "2-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -345,7 +345,7 @@
      "groupName": "경영·회계·광고·상품기획",
      "covers": [],
      "batch": "2-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -362,7 +362,7 @@
       }
      ],
      "batch": "2-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -374,7 +374,7 @@
      "groupName": "자동차·제품·기타 영업",
      "covers": [],
      "batch": "2-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -386,7 +386,7 @@
      "groupName": "자동차·제품·기타 영업",
      "covers": [],
      "batch": "2-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -403,7 +403,7 @@
       }
      ],
      "batch": "2-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -424,7 +424,7 @@
       }
      ],
      "batch": "2-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -436,7 +436,7 @@
      "groupName": "미디어·UX/UI 디자인",
      "covers": [],
      "batch": "2-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -448,7 +448,7 @@
      "groupName": "제품·패션·실내·시각 디자인",
      "covers": [],
      "batch": "2-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -460,7 +460,7 @@
      "groupName": "기계·로봇·금속·재료 공학",
      "covers": [],
      "batch": "2-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -472,7 +472,7 @@
      "groupName": "기계·로봇·금속·재료 공학",
      "covers": [],
      "batch": "2-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -484,7 +484,7 @@
      "groupName": "기계·로봇·금속·재료 공학",
      "covers": [],
      "batch": "2-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -501,7 +501,7 @@
       }
      ],
      "batch": "2-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -526,7 +526,7 @@
       }
      ],
      "batch": "2-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,
@@ -543,7 +543,7 @@
       }
      ],
      "batch": "2-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 2,

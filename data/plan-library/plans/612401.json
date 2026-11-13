@@ -1,0 +1,108 @@
+{
+ "jobCode": "612401",
+ "title": "제품광고영업원",
+ "displayName": "영업사원",
+ "family": "sales",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 사람을 만나 설득하는 경험과 숫자로 관리하는 습관을 본다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.sl-activity",
+   "name": "고객 발굴과 영업 활동 기록",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "잠재 고객 목록을 만들고 접촉·결과를 기록한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "발굴",
+     "items": [
+      "목표 고객 정의",
+      "목록 만들기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "활동",
+     "items": [
+      "전화·방문 연습",
+      "활동 기록표",
+      "거절 사유 분석"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.sales-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.sl-activity",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 7,
+   "major": true,
+   "note": "판매·영업 경험"
+  },
+  {
+   "ref": "cp.internship",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

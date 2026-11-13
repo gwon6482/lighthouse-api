@@ -12,39 +12,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.wt-draw",
-   "name": "드로잉 기초",
-   "type": "skill",
-   "subtype": "design",
-   "category": "skill",
-   "method": "practice",
-   "level": "입문",
-   "daysPerWeek": 5,
-   "minutesPerSession": 90,
-   "goal": "인체·원근·구도를 갖춘 컷을 그린다.",
-   "phases": [
-    {
-     "weeks": 4,
-     "title": "기초",
-     "items": [
-      "인체 비례와 동세",
-      "원근과 배경",
-      "표정과 손"
-     ]
-    },
-    {
-     "weeks": 4,
-     "title": "응용",
-     "items": [
-      "컷 구도 연습",
-      "컬러와 명암",
-      "매일 크로키"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.wt-tool",
    "name": "디지털 작화 도구 익히기",
    "type": "skill",
@@ -212,7 +179,7 @@
  ],
  "common": [
   {
-   "ref": "p.wt-draw",
+   "ref": "cp.drawing-basics",
    "step": 1,
    "major": false,
    "skip": "만화·애니메이션 전공 실기에서 배운다"

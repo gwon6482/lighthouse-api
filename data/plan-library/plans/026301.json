@@ -1,0 +1,97 @@
+{
+ "jobCode": "026301",
+ "title": "총무사무원",
+ "displayName": "총무 담당자",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 회사 살림 전반을 맡아 문서·엑셀 능력과 꼼꼼함, 관련 법 기초를 본다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ga-work",
+   "name": "총무 업무 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "자산·계약·행사·문서 관리 등 총무 업무의 범위를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "업무",
+     "items": [
+      "자산·비품·시설 관리",
+      "계약·인감·문서 관리",
+      "사내 행사·복리후생"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ga-work",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.computer-2",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.labor-law",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.accounting-basic",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.payroll",
+   "step": 7,
+   "major": true,
+   "note": "인사·급여를 함께 맡는 회사가 많다",
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

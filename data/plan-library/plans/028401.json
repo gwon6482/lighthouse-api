@@ -1,0 +1,141 @@
+{
+ "jobCode": "028401",
+ "title": "생산관리사무원",
+ "displayName": "생산관리 담당자",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 생산 계획과 재고·납기를 숫자로 관리하는 일이라 엑셀과 공정 이해, 현장 경험을 본다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pm-basics",
+   "name": "생산관리 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "수요 예측부터 생산 계획·재고 관리까지의 흐름을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "생산 계획과 일정",
+      "자재 소요 계획",
+      "재고와 납기 지표"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "사례",
+     "items": [
+      "공장 운영 사례 분석"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pm-erp",
+   "name": "ERP 정보관리사(생산)",
+   "type": "cert",
+   "subtype": "private-certified",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 60,
+   "goal": "ERP 정보관리사 생산 2급 이상에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이론",
+     "items": [
+      "생산·자재 관리 이론"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실무",
+     "items": [
+      "ERP 실습",
+      "기출"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.pm-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.pm-erp",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.six-sigma",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 7,
+   "major": true,
+   "note": "품질경영기사·산업기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.eng-field",
+   "step": 8,
+   "major": true,
+   "note": "공장 현장 실습",
+   "optional": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

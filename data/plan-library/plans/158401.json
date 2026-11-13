@@ -201,38 +201,6 @@
     }
    ],
    "basis": "practice"
-  },
-  {
-   "id": "p.sm-hazmat",
-   "name": "위험물산업기사",
-   "type": "cert",
-   "subtype": "national-tech",
-   "category": "qualification",
-   "method": "book",
-   "level": "중급",
-   "daysPerWeek": 4,
-   "minutesPerSession": 90,
-   "goal": "위험물산업기사에 합격한다.",
-   "phases": [
-    {
-     "weeks": 5,
-     "title": "필기",
-     "items": [
-      "일반화학",
-      "화재 예방·소화",
-      "위험물 성질·취급"
-     ]
-    },
-    {
-     "weeks": 5,
-     "title": "실기",
-     "items": [
-      "필답형 암기",
-      "기출 복원"
-     ]
-    }
-   ],
-   "basis": "practice"
   }
  ],
  "common": [
@@ -308,7 +276,7 @@
     "major": true
    },
    {
-    "ref": "p.sm-hazmat",
+    "ref": "cp.hazmat-cert",
     "step": 8,
     "major": true,
     "optional": true

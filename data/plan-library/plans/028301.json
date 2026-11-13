@@ -1,0 +1,135 @@
+{
+ "jobCode": "028301",
+ "title": "자재·구매사무원",
+ "displayName": "구매 담당자",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 공급처를 찾고 원가와 조건을 따져 계약하는 일이라 숫자 감각과 협상력을 본다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pu-basics",
+   "name": "구매 관리 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "소싱·원가 분석·계약·납기 관리의 흐름을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "구매 절차와 소싱",
+      "원가 구조와 견적 비교",
+      "계약과 납기 관리"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "실습",
+     "items": [
+      "견적 비교표 만들기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pu-cert",
+   "name": "구매 자격(구매자재관리사 등)",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 60,
+   "goal": "구매 관련 민간 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "준비",
+     "items": [
+      "이론",
+      "기출",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간자격이다. 필수는 아니다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.pu-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.sales-basics",
+   "step": 5,
+   "major": true,
+   "note": "협상 연습"
+  },
+  {
+   "ref": "cp.trade-basics",
+   "step": 6,
+   "major": true,
+   "note": "해외 구매",
+   "optional": true
+  },
+  {
+   "ref": "p.pu-cert",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

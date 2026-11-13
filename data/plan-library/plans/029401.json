@@ -1,0 +1,130 @@
+{
+ "jobCode": "029401",
+ "title": "비서",
+ "displayName": "비서",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 비서 자격과 어학, 문서 능력이 기본 증빙이다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.se-work",
+   "name": "비서 실무 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "일정·회의·출장·의전·문서 관리를 해낸다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "업무",
+     "items": [
+      "일정·회의 관리",
+      "출장·의전 준비",
+      "문서·보안 관리"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "연습",
+     "items": [
+      "상황별 대응 역할극"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.se-cert",
+   "name": "비서 자격",
+   "type": "cert",
+   "subtype": "private-certified",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 60,
+   "goal": "비서 1급 또는 2급에 합격한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "필기",
+     "items": [
+      "비서 실무",
+      "경영 일반",
+      "사무 영어·정보 관리"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실기",
+     "items": [
+      "문서 작성 실기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.se-work",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.computer-2",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.se-cert",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

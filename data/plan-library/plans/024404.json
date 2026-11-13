@@ -1,0 +1,165 @@
+{
+ "jobCode": "024404",
+ "title": "행사기획자",
+ "displayName": "행사·전시 기획자",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 현장 스태프 경험과 직접 치러 본 행사가 가장 강한 증빙이다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ev-basics",
+   "name": "행사 기획 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "목적·예산·동선·안전 계획의 구성을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "구성",
+     "items": [
+      "행사 목적과 대상",
+      "예산·견적",
+      "동선·안전 계획"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ev-plan",
+   "name": "행사 기획서와 운영 매뉴얼",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "행사 하나의 기획서와 시간표·역할표를 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "콘셉트와 프로그램"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "운영",
+     "items": [
+      "시간표·역할표",
+      "협력 업체 견적",
+      "비상 대응"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ev-cert",
+   "name": "컨벤션기획사 2급",
+   "type": "cert",
+   "subtype": "national-tech",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "컨벤션기획사 2급에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "컨벤션 산업·영어",
+      "호텔·관광 실무"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기",
+     "items": [
+      "기획서 작성",
+      "영어 서신"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ev-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.ev-plan",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 5,
+   "major": true,
+   "note": "예산표"
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 6,
+   "major": true,
+   "note": "행사·전시 현장 스태프"
+  },
+  {
+   "ref": "p.ev-cert",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 8,
+   "major": true,
+   "note": "국제 행사",
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 9,
+   "major": true,
+   "note": "기획사·전시장"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

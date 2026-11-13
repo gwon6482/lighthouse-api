@@ -1,0 +1,118 @@
+{
+ "jobCode": "033202",
+ "title": "보험모집인",
+ "displayName": "보험설계사",
+ "family": "finance",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "보험설계사 자격시험에 합격하고 협회에 등록해야 영업할 수 있다.",
+ "gate": "보험설계사 자격시험 합격 + 등록(생명·손해보험협회)",
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "033201",
+   "title": "보험대리인 및 중개인",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.fc-exam",
+   "name": "보험설계사 자격시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 60,
+   "goal": "생명보험 또는 손해보험 설계사 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "보험 이론·법규",
+      "상품별 약관",
+      "모의 문제"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "소속 회사의 교육을 거쳐 응시한다"
+  },
+  {
+   "id": "p.fc-product",
+   "name": "보험 상품과 보장 분석",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "상품 구조를 이해하고 고객의 보장을 분석한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "상품",
+     "items": [
+      "보장성·저축성 상품 구조",
+      "약관 읽기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "보장 분석표 만들기",
+      "설계 연습"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.fc-exam",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.fc-product",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.sales-basics",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.afpk",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 7,
+   "major": true,
+   "note": "온라인 고객 유치",
+   "optional": true
+  }
+ ],
+ "byTrack": {}
+}
