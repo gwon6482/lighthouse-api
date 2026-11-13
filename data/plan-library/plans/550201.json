@@ -1,0 +1,81 @@
+{
+ "jobCode": "550201",
+ "title": "육아도우미",
+ "displayName": "아이돌보미",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "정부 아이돌봄 서비스는 양성 교육을 받은 아이돌보미가 맡는다. 민간 베이비시터는 필수 자격이 없다.",
+ "gate": "아이돌보미 — 양성 교육 이수(아이돌봄 지원법). 민간은 필수 자격 없음",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cs-train",
+   "name": "아이돌보미 양성 교육",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "양성 교육과 실습을 이수한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "신청",
+     "items": [
+      "서비스 제공 기관 모집 확인"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "교육",
+     "items": [
+      "이론 교육",
+      "현장 실습"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "보육교사 등 자격 보유자는 교육이 줄어든다. 선발·교육은 지역 기관 공고 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.cs-train",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.child-safety",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.youth-understanding",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 5,
+   "major": true,
+   "note": "보호자 소통"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

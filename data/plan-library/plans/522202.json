@@ -1,0 +1,130 @@
+{
+ "jobCode": "522202",
+ "title": "열차객실승무원",
+ "displayName": "열차·선박 승무원",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 서비스 경험과 외국어, 안전 대응 능력을 본다. 선박은 선원 안전 교육이 필요하다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "train",
+   "name": "열차",
+   "desc": "철도 객실 서비스"
+  },
+  {
+   "id": "ship",
+   "name": "선박",
+   "desc": "여객선·크루즈"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "522201",
+   "title": "선박객실승무원",
+   "track": "ship"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.cr-safety",
+   "name": "객실 안전과 비상 대응",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "비상 상황의 대응 절차와 응급 처치를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "절차",
+     "items": [
+      "비상 대피 안내",
+      "응급 환자 대응",
+      "승객 불편 처리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.second-language",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.cr-safety",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 8,
+   "major": true,
+   "note": "서비스직 경험"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "train": [
+   {
+    "ref": "cp.ncs",
+    "step": 9,
+    "major": true,
+    "note": "채용 필기가 있는 곳",
+    "optional": true
+   }
+  ],
+  "ship": [
+   {
+    "ref": "cp.seafarer-safety",
+    "step": 6.5,
+    "major": true
+   }
+  ]
+ }
+}

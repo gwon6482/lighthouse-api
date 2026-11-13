@@ -186,38 +186,6 @@
     }
    ],
    "basis": "practice"
-  },
-  {
-   "id": "p.md-cert",
-   "name": "유통관리사 2급",
-   "type": "cert",
-   "subtype": "private-certified",
-   "category": "qualification",
-   "method": "book",
-   "level": "입문",
-   "daysPerWeek": 4,
-   "minutesPerSession": 60,
-   "goal": "유통관리사 2급에 합격한다.",
-   "phases": [
-    {
-     "weeks": 3,
-     "title": "이론",
-     "items": [
-      "유통·물류 일반",
-      "상권 분석",
-      "유통 마케팅·정보"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "기출",
-     "items": [
-      "기출 풀이",
-      "응시"
-     ]
-    }
-   ],
-   "basis": "practice"
   }
  ],
  "common": [
@@ -247,7 +215,7 @@
    "major": true
   },
   {
-   "ref": "p.md-cert",
+   "ref": "cp.distribution-cert",
    "step": 5.5,
    "major": true,
    "optional": true

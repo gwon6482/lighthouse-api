@@ -1,0 +1,122 @@
+{
+ "jobCode": "531601",
+ "title": "바텐터",
+ "displayName": "바텐더",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 조주기능사가 대표 증빙이다. 주류 지식과 조주 실력, 업장 경험을 쌓는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.bd-liquor",
+   "name": "주류 지식",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "증류주·리큐어·와인의 종류와 특징을 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "지식",
+     "items": [
+      "증류주와 리큐어",
+      "와인·맥주 기초",
+      "잔과 도구"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.bd-mix",
+   "name": "칵테일 조주 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "표준 레시피대로 빠르고 정확하게 만든다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "기본 기법(셰이킹·스터링)",
+      "표준 칵테일 반복",
+      "나만의 칵테일"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "조주기능사"
+  },
+  {
+   "ref": "p.bd-liquor",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.bd-mix",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.food-hygiene",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 8,
+   "major": true,
+   "note": "호텔 바",
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "바·호텔 식음 업장"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

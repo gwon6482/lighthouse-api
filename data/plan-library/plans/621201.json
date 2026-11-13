@@ -66,30 +66,6 @@
    "verify": "대학 과정 외에 단기 양성 과정도 있다"
   },
   {
-   "id": "p.sm-safety",
-   "name": "법정 안전 교육과 선원 건강진단",
-   "type": "cert",
-   "subtype": "basic",
-   "category": "qualification",
-   "method": "required_course",
-   "level": "입문",
-   "daysPerWeek": 5,
-   "minutesPerSession": 480,
-   "goal": "승선에 필요한 기초 안전 교육을 이수하고 건강진단을 받는다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "이수",
-     "items": [
-      "기초 안전 교육",
-      "선원 건강진단",
-      "선원 수첩 발급"
-     ]
-    }
-   ],
-   "basis": "law"
-  },
-  {
    "id": "p.sm-onboard",
    "name": "승선 실습",
    "type": "activity",
@@ -198,7 +174,7 @@
    "major": true
   },
   {
-   "ref": "p.sm-safety",
+   "ref": "cp.seafarer-safety",
    "step": 3,
    "major": true
   },

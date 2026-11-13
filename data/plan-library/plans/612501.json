@@ -1,0 +1,118 @@
+{
+ "jobCode": "612501",
+ "title": "상품중개인 및 경매사",
+ "displayName": "경매사·상품 중개인",
+ "family": "sales",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "농수산물 도매시장의 경매사는 자격시험에 합격해야 한다. 도매시장 법인에서 일하며 품목 지식을 쌓는다.",
+ "gate": "경매사 자격(농수산물 도매시장) — 자격시험 합격",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ac-market",
+   "name": "도매시장 유통 구조와 품목 지식",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "경매 절차와 품목별 등급·시세를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "도매시장 유통 구조",
+      "경매 절차",
+      "품목별 등급과 시세"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ac-cert",
+   "name": "경매사 자격시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "경매사 1차·2차 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "1차",
+     "items": [
+      "관련 법령",
+      "유통론"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "2차",
+     "items": [
+      "품목별 상품성 평가",
+      "모의 경매"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "부류(청과·수산·축산 등)별로 시험이 나뉜다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ac-market",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 3,
+   "major": true,
+   "note": "도매시장 법인·중도매인 점포"
+  },
+  {
+   "ref": "p.ac-cert",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.sales-basics",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "자격 요건은 농수산물 유통 및 가격 안정에 관한 법률이 정본"
+}

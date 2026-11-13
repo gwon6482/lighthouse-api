@@ -1,0 +1,125 @@
+{
+ "jobCode": "705902",
+ "title": "잠수기능원",
+ "displayName": "산업 잠수사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "수중 작업에는 잠수 자격이 사실상 필수다. 잠수 훈련을 받고 수중 공사 업체에서 경력을 쌓는다.",
+ "gate": "잠수기능사·잠수산업기사 — 수중 작업에 사실상 필수. 건강 진단을 통과해야 한다",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.dv-train",
+   "name": "잠수 훈련",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 240,
+   "goal": "표면 공급식 잠수와 스쿠버 잠수를 안전하게 한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이론",
+     "items": [
+      "잠수 물리·생리",
+      "감압과 응급 처치"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실습",
+     "items": [
+      "장비 운용",
+      "수중 작업 기초"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dv-work",
+   "name": "수중 작업 기술",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "수중 용접·절단·검사 작업의 방법을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "기술",
+     "items": [
+      "수중 용접·절단",
+      "구조물 검사·촬영",
+      "인양 작업"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "잠수기능사"
+  },
+  {
+   "ref": "p.dv-train",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.dv-work",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 6,
+   "major": true,
+   "note": "잠수산업기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "수중 공사·해양 구조 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "고기압 작업 종사자는 특수 건강 진단을 받는다"
+}

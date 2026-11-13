@@ -1,0 +1,134 @@
+{
+ "jobCode": "561601",
+ "title": "가사관리사",
+ "displayName": "가사관리사",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 가사 서비스 기관의 교육을 받고 소속되어 일하는 형태가 늘고 있다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.hk-edu",
+   "name": "가사 서비스 교육 과정",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "서비스 기관의 입문 교육을 이수한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "교육",
+     "items": [
+      "서비스 범위와 기준",
+      "안전·위생",
+      "고객 응대"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.hk-skill",
+   "name": "정리 수납·청소·세탁 기술",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "공간별 청소 순서와 정리 수납을 익힌다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "기술",
+     "items": [
+      "공간별 청소 순서",
+      "세제와 도구",
+      "정리 수납"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.hk-cert",
+   "name": "정리 수납 자격",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "정리 수납 관련 민간 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "준비",
+     "items": [
+      "교육",
+      "실습",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간 자격이다. 필수는 아니다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.hk-edu",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.hk-skill",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.hk-cert",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.food-hygiene",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 7,
+   "major": true,
+   "note": "가사 서비스 제공 기관"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,118 @@
+{
+ "jobCode": "705901",
+ "title": "점화·발파·화약관리원",
+ "displayName": "화약류 관리 기술자",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "화약류를 다루려면 경찰청이 발급하는 면허가 필요하다. 화약 분야 자격을 따고 면허를 받는다.",
+ "gate": "화약류 관리 보안 책임자 면허(화약류 분야 국가기술자격 기반, 경찰청 발급)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.bl-law",
+   "name": "화약류 단속 법규와 발파 안전",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "화약류의 저장·운반·사용 기준과 발파 안전 거리를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "법과 안전",
+     "items": [
+      "화약류 단속 법규",
+      "발파 설계 기초",
+      "진동·비산 관리"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.bl-license",
+   "name": "화약류 관리 보안 책임자 면허",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "자격 취득 뒤 면허를 발급받는다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "발급",
+     "items": [
+      "자격·결격 사유 확인",
+      "면허 시험·교육",
+      "면허증 발급"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "면허 종류와 요건은 총포화약법 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "화약취급기능사"
+  },
+  {
+   "ref": "p.bl-law",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.bl-license",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 6,
+   "major": true,
+   "note": "화약류관리산업기사·기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "발파 전문 업체·건설 현장"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

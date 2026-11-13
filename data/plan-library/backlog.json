@@ -1832,7 +1832,7 @@
      "groupName": "스포츠·레크리에이션",
      "covers": [],
      "batch": "3-05",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1844,7 +1844,7 @@
      "groupName": "스포츠·레크리에이션",
      "covers": [],
      "batch": "3-05",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1856,7 +1856,7 @@
      "groupName": "미용·반려동물 서비스",
      "covers": [],
      "batch": "3-05",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1868,7 +1868,7 @@
      "groupName": "주방장·조리사",
      "covers": [],
      "batch": "3-05",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1885,7 +1885,7 @@
       }
      ],
      "batch": "3-05",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1906,7 +1906,7 @@
       }
      ],
      "batch": "3-05",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1918,7 +1918,7 @@
      "groupName": "돌봄 서비스",
      "covers": [],
      "batch": "3-05",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1930,7 +1930,7 @@
      "groupName": "청소·방역·가사 서비스",
      "covers": [],
      "batch": "3-05",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1942,7 +1942,7 @@
      "groupName": "청소·방역·가사 서비스",
      "covers": [],
      "batch": "3-05",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1954,7 +1954,7 @@
      "groupName": "기술·의약품·해외 영업",
      "covers": [],
      "batch": "3-05",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1971,7 +1971,7 @@
       }
      ],
      "batch": "3-06",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1983,7 +1983,7 @@
      "groupName": "항공기·선박·철도 조종·관제",
      "covers": [],
      "batch": "3-06",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1995,7 +1995,7 @@
      "groupName": "물품이동장비 조작",
      "covers": [],
      "batch": "3-06",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2007,7 +2007,7 @@
      "groupName": "택배·배달·하역 등 운송",
      "covers": [],
      "batch": "3-06",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2040,7 +2040,7 @@
       }
      ],
      "batch": "3-06",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2073,7 +2073,7 @@
       }
      ],
      "batch": "3-06",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2085,7 +2085,7 @@
      "groupName": "기타 건설 기능",
      "covers": [],
      "batch": "3-06",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2097,7 +2097,7 @@
      "groupName": "기타 건설 기능",
      "covers": [],
      "batch": "3-06",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2118,7 +2118,7 @@
       }
      ],
      "batch": "3-06",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -2130,7 +2130,7 @@
      "groupName": "운송장비 정비",
      "covers": [],
      "batch": "3-06",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,

@@ -1,0 +1,156 @@
+{
+ "jobCode": "811601",
+ "title": "건설·광업기계설치·정비원",
+ "displayName": "중장비·농기계 정비사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 정비 기능사가 기본 증빙이다. 엔진·유압·전기 장치를 진단하고 고친다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "heavy",
+   "name": "건설 기계",
+   "desc": "굴착기·크레인·지게차"
+  },
+  {
+   "id": "agri",
+   "name": "농기계",
+   "desc": "트랙터·콤바인 등"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "811301",
+   "title": "크레인 및 지게차설치 및 정비원",
+   "track": "heavy"
+  },
+  {
+   "jobCode": "811901",
+   "title": "농업용 및 기타기계장비설치 및 정비원",
+   "track": "agri"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.hm-basics",
+   "name": "엔진·유압·전기 장치 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "디젤 엔진과 유압 회로, 전기 장치의 구조를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "구조",
+     "items": [
+      "디젤 엔진",
+      "유압 펌프·실린더",
+      "전기·전자 제어"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.hm-diag",
+   "name": "고장 진단과 정비 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "증상을 보고 원인을 찾아 정비한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "진단",
+     "items": [
+      "진단 장비 사용",
+      "유압 회로 점검"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "정비",
+     "items": [
+      "분해·조립",
+      "부품 교환",
+      "시운전"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "건설기계정비기능사·농기계정비기능사"
+  },
+  {
+   "ref": "p.hm-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.hm-diag",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 7,
+   "major": true,
+   "note": "건설기계정비산업기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "중장비·농기계 정비 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "heavy": [],
+  "agri": []
+ }
+}

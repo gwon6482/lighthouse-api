@@ -1,0 +1,220 @@
+{
+ "jobCode": "541101",
+ "title": "경호원",
+ "displayName": "경호·특수경비원",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "경비 업무를 하려면 법이 정한 신임 교육을 받아야 한다. 신변 보호는 무도와 체력을, 시설 경비는 성실함을 본다.",
+ "gate": "경비원 신임 교육 이수(경비업법) — 결격 사유가 없어야 한다",
+ "tracks": [
+  {
+   "id": "guard",
+   "name": "신변 보호",
+   "desc": "경호·수행"
+  },
+  {
+   "id": "facility",
+   "name": "시설·특수 경비",
+   "desc": "건물·국가 중요 시설"
+  },
+  {
+   "id": "police",
+   "name": "청원경찰",
+   "desc": "공공 기관 청원경찰"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "541301",
+   "title": "시설·특수경비원",
+   "track": "facility"
+  },
+  {
+   "jobCode": "541201",
+   "title": "청원경찰",
+   "track": "police"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.sg-law",
+   "name": "경비업법과 직무 범위",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "경비원이 할 수 있는 일과 해서는 안 되는 일을 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "법",
+     "items": [
+      "경비 업무의 종류",
+      "직무 범위와 금지 행위",
+      "장비 사용 기준"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.sg-train",
+   "name": "경비원 신임 교육",
+   "type": "cert",
+   "subtype": "basic",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "일반 또는 특수 경비원 신임 교육을 이수한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "이수",
+     "items": [
+      "교육 기관 신청",
+      "이론·실무 교육",
+      "이수증"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "특수 경비는 교육 시간이 더 길다"
+  },
+  {
+   "id": "p.sg-martial",
+   "name": "무도 수련과 단증",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "무도 단증을 따고 호신 기술을 익힌다.",
+   "phases": [
+    {
+     "weeks": 24,
+     "title": "수련",
+     "items": [
+      "태권도·유도·검도 등 수련",
+      "승단 심사"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sg-manager",
+   "name": "경비지도사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "경비지도사 1차·2차 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "1차",
+     "items": [
+      "법학개론",
+      "민간 경비론"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "2차",
+     "items": [
+      "경비업법",
+      "경호학 등 선택"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.sg-law",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.sg-train",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.fitness-test",
+   "step": 4,
+   "major": true,
+   "note": "체력"
+  },
+  {
+   "ref": "cp.bls",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.sg-manager",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "guard": [
+   {
+    "ref": "p.sg-martial",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.speaking",
+    "step": 7.5,
+    "major": true,
+    "note": "외빈 의전",
+    "optional": true
+   }
+  ],
+  "facility": [],
+  "police": [
+   {
+    "ref": "cp.civil-special",
+    "step": 7,
+    "major": true,
+    "note": "청원경찰 채용(기관별 공고)"
+   }
+  ]
+ }
+}

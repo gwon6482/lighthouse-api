@@ -5158,6 +5158,483 @@
    "work24Postings": null,
    "tracks": [],
    "covers": []
+  },
+  {
+   "no": 220,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-05",
+   "jobCode": "420403",
+   "title": "레크리에이션전문가",
+   "displayName": "레크리에이션 지도자",
+   "family": "service",
+   "group": "059",
+   "groupName": "스포츠·레크리에이션",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 221,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-05",
+   "jobCode": "420301",
+   "title": "경기심판 및 경기기록원",
+   "displayName": "경기 심판",
+   "family": "service",
+   "group": "059",
+   "groupName": "스포츠·레크리에이션",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 222,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-05",
+   "jobCode": "511101",
+   "title": "이용사",
+   "displayName": "이용사(바버)",
+   "family": "service",
+   "group": "061",
+   "groupName": "미용·반려동물 서비스",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 223,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-05",
+   "jobCode": "531601",
+   "title": "바텐터",
+   "displayName": "바텐더",
+   "family": "service",
+   "group": "064",
+   "groupName": "주방장·조리사",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 224,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-05",
+   "jobCode": "522202",
+   "title": "열차객실승무원",
+   "displayName": "열차·선박 승무원",
+   "family": "service",
+   "group": "063",
+   "groupName": "여행·승무·숙박·오락 서비스",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "train",
+     "name": "열차",
+     "desc": "철도 객실 서비스"
+    },
+    {
+     "id": "ship",
+     "name": "선박",
+     "desc": "여객선·크루즈"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "522201",
+     "title": "선박객실승무원",
+     "track": "ship"
+    }
+   ]
+  },
+  {
+   "no": 225,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-05",
+   "jobCode": "541101",
+   "title": "경호원",
+   "displayName": "경호·특수경비원",
+   "family": "service",
+   "group": "066",
+   "groupName": "경호·보안",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "guard",
+     "name": "신변 보호",
+     "desc": "경호·수행"
+    },
+    {
+     "id": "facility",
+     "name": "시설·특수 경비",
+     "desc": "건물·국가 중요 시설"
+    },
+    {
+     "id": "police",
+     "name": "청원경찰",
+     "desc": "공공 기관 청원경찰"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "541301",
+     "title": "시설·특수경비원",
+     "track": "facility"
+    },
+    {
+     "jobCode": "541201",
+     "title": "청원경찰",
+     "track": "police"
+    }
+   ]
+  },
+  {
+   "no": 226,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-05",
+   "jobCode": "550201",
+   "title": "육아도우미",
+   "displayName": "아이돌보미",
+   "family": "service",
+   "group": "068",
+   "groupName": "돌봄 서비스",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 227,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-05",
+   "jobCode": "561301",
+   "title": "방역원",
+   "displayName": "방역 기술자",
+   "family": "service",
+   "group": "069",
+   "groupName": "청소·방역·가사 서비스",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 228,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-05",
+   "jobCode": "561601",
+   "title": "가사관리사",
+   "displayName": "가사관리사",
+   "family": "service",
+   "group": "069",
+   "groupName": "청소·방역·가사 서비스",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 229,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-05",
+   "jobCode": "612501",
+   "title": "상품중개인 및 경매사",
+   "displayName": "경매사·상품 중개인",
+   "family": "sales",
+   "group": "072",
+   "groupName": "기술·의약품·해외 영업",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 230,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-06",
+   "jobCode": "614001",
+   "title": "소규모판매점장",
+   "displayName": "매장 판매·점장",
+   "family": "sales",
+   "group": "075",
+   "groupName": "판매점장·상점 판매",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "staff",
+     "name": "판매 사원",
+     "desc": "매장 판매·응대"
+    },
+    {
+     "id": "owner",
+     "name": "점장·창업",
+     "desc": "매장 운영 책임"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "615101",
+     "title": "상점판매원",
+     "track": "staff"
+    }
+   ]
+  },
+  {
+   "no": 231,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-06",
+   "jobCode": "621901",
+   "title": "신호원 및 수송원",
+   "displayName": "철도 신호·수송원",
+   "family": "transport",
+   "group": "079",
+   "groupName": "항공기·선박·철도 조종·관제",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 232,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-06",
+   "jobCode": "623001",
+   "title": "크레인·호이스트운전원",
+   "displayName": "크레인 운전원",
+   "family": "tech",
+   "group": "07B",
+   "groupName": "물품이동장비 조작",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 233,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-06",
+   "jobCode": "624201",
+   "title": "집배원",
+   "displayName": "집배원(우정직)",
+   "family": "public",
+   "group": "07C",
+   "groupName": "택배·배달·하역 등 운송",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 234,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-06",
+   "jobCode": "701301",
+   "title": "철근공",
+   "displayName": "골조 기능공",
+   "family": "tech",
+   "group": "081",
+   "groupName": "건설구조 기능",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "rebar",
+     "name": "철근",
+     "desc": "철근 가공·배근"
+    },
+    {
+     "id": "steel",
+     "name": "철골",
+     "desc": "철골·경량 철골 조립"
+    },
+    {
+     "id": "concrete",
+     "name": "콘크리트",
+     "desc": "타설·마감"
+    },
+    {
+     "id": "masonry",
+     "name": "석공·조적",
+     "desc": "돌·벽돌 쌓기"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "701101",
+     "title": "철골공(강구조물건립원)",
+     "track": "steel"
+    },
+    {
+     "jobCode": "701201",
+     "title": "경량철골공",
+     "track": "steel"
+    },
+    {
+     "jobCode": "701401",
+     "title": "콘크리트공",
+     "track": "concrete"
+    },
+    {
+     "jobCode": "701501",
+     "title": "건축석공",
+     "track": "masonry"
+    },
+    {
+     "jobCode": "701701",
+     "title": "조적원",
+     "track": "masonry"
+    }
+   ]
+  },
+  {
+   "no": 235,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-06",
+   "jobCode": "702601",
+   "title": "건물도장공",
+   "displayName": "건축 마감 기능공",
+   "family": "tech",
+   "group": "082",
+   "groupName": "건축마감 기능",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "paint",
+     "name": "도장",
+     "desc": "건물 내외부 칠"
+    },
+    {
+     "id": "plaster",
+     "name": "미장",
+     "desc": "벽·바닥 바름"
+    },
+    {
+     "id": "waterproof",
+     "name": "방수·단열",
+     "desc": "방수층·단열재 시공"
+    },
+    {
+     "id": "glass",
+     "name": "유리·창호",
+     "desc": "유리·섀시 설치"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "702101",
+     "title": "미장공",
+     "track": "plaster"
+    },
+    {
+     "jobCode": "702201",
+     "title": "방수공",
+     "track": "waterproof"
+    },
+    {
+     "jobCode": "702301",
+     "title": "단열공",
+     "track": "waterproof"
+    },
+    {
+     "jobCode": "702502",
+     "title": "유리부착원",
+     "track": "glass"
+    },
+    {
+     "jobCode": "702701",
+     "title": "섀시조립·설치원",
+     "track": "glass"
+    }
+   ]
+  },
+  {
+   "no": 236,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-06",
+   "jobCode": "705902",
+   "title": "잠수기능원",
+   "displayName": "산업 잠수사",
+   "family": "tech",
+   "group": "085",
+   "groupName": "기타 건설 기능",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 237,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-06",
+   "jobCode": "705901",
+   "title": "점화·발파·화약관리원",
+   "displayName": "화약류 관리 기술자",
+   "family": "tech",
+   "group": "085",
+   "groupName": "기타 건설 기능",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 238,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-06",
+   "jobCode": "811601",
+   "title": "건설·광업기계설치·정비원",
+   "displayName": "중장비·농기계 정비사",
+   "family": "tech",
+   "group": "091",
+   "groupName": "기계장비 설치·정비",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "heavy",
+     "name": "건설 기계",
+     "desc": "굴착기·크레인·지게차"
+    },
+    {
+     "id": "agri",
+     "name": "농기계",
+     "desc": "트랙터·콤바인 등"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "811301",
+     "title": "크레인 및 지게차설치 및 정비원",
+     "track": "heavy"
+    },
+    {
+     "jobCode": "811901",
+     "title": "농업용 및 기타기계장비설치 및 정비원",
+     "track": "agri"
+    }
+   ]
+  },
+  {
+   "no": 239,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-06",
+   "jobCode": "812301",
+   "title": "철도기관차·전동차정비원",
+   "displayName": "철도 차량 정비사",
+   "family": "tech",
+   "group": "092",
+   "groupName": "운송장비 정비",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
   }
  ]
 }

@@ -1,0 +1,124 @@
+{
+ "jobCode": "511101",
+ "title": "이용사",
+ "displayName": "이용사(바버)",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "이용사 면허가 있어야 일할 수 있다. 이용사 국가기술자격을 따서 면허를 발급받는 길이 일반적이다.",
+ "gate": "이용사 면허 — 이용사 국가기술자격 취득 또는 관련 학과 졸업 뒤 시·군·구에서 발급",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.bb-skill",
+   "name": "커트와 면도 기술 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "클리퍼·가위 커트와 면도를 한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "기본",
+     "items": [
+      "클리퍼·가위 커트",
+      "면도·세발"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "응용",
+     "items": [
+      "스타일별 커트",
+      "모델 시술"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.bb-license",
+   "name": "이용사 면허 발급",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 60,
+   "goal": "자격 취득 뒤 면허를 발급받는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "발급",
+     "items": [
+      "건강진단서 등 서류",
+      "시·군·구청 신청"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "이용사"
+  },
+  {
+   "ref": "p.bb-skill",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.bb-license",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 7,
+   "major": true,
+   "note": "작업 사진",
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "이용원·바버숍"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "면허 요건은 공중위생관리법이 정본"
+}

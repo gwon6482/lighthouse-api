@@ -5648,6 +5648,167 @@
     "media"
    ],
    "promotedFrom": "416301:p.an-voice"
+  },
+  {
+   "id": "cp.seafarer-safety",
+   "name": "법정 안전 교육과 선원 건강진단",
+   "type": "cert",
+   "subtype": "basic",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "승선에 필요한 기초 안전 교육을 이수하고 건강진단을 받는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "이수",
+     "items": [
+      "기초 안전 교육",
+      "선원 건강진단",
+      "선원 수첩 발급"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "transport",
+    "service",
+    "agri"
+   ],
+   "promotedFrom": "621201:p.sm-safety"
+  },
+  {
+   "id": "cp.child-safety",
+   "name": "영유아 안전·응급처치와 아동학대 예방",
+   "type": "edu",
+   "subtype": "required-course",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "영유아 응급처치와 아동학대 신고 의무를 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "안전",
+     "items": [
+      "영유아 심폐소생술",
+      "안전사고 유형과 대처"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "아동 권리",
+     "items": [
+      "아동학대 유형과 신고 절차",
+      "훈육과 학대 구분"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "edu",
+    "welfare",
+    "service"
+   ],
+   "promotedFrom": "232101:p.cc-safety"
+  },
+  {
+   "id": "cp.distribution-cert",
+   "name": "유통관리사 2급",
+   "type": "cert",
+   "subtype": "private-certified",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "유통관리사 2급에 합격한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이론",
+     "items": [
+      "유통·물류 일반",
+      "상권 분석",
+      "유통 마케팅·정보"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "기출",
+     "items": [
+      "기출 풀이",
+      "응시"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "biz",
+    "sales"
+   ],
+   "promotedFrom": "024301:p.md-cert"
+  },
+  {
+   "id": "cp.athlete-next",
+   "name": "선수 이후의 진로 준비",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "지도자·심판·관련 직업으로 이어질 준비를 한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "준비",
+     "items": [
+      "학업 병행 계획",
+      "지도자 자격 요건 확인",
+      "관련 직업 조사"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "service"
+   ],
+   "promotedFrom": "420201:p.at-career"
+  },
+  {
+   "id": "cp.construction-safety",
+   "name": "건설업 기초 안전 보건 교육",
+   "type": "cert",
+   "subtype": "basic",
+   "scope": "family",
+   "families": [
+    "tech",
+    "eng"
+   ],
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 240,
+   "goal": "건설 현장에 들어가기 전에 받아야 하는 기초 안전 보건 교육을 이수한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "이수",
+     "items": [
+      "지정 교육 기관 신청",
+      "교육 이수",
+      "이수증 발급"
+     ]
+    }
+   ],
+   "verify": "건설 현장 근로자의 법정 교육이다(산업안전보건법)"
   }
  ]
 }

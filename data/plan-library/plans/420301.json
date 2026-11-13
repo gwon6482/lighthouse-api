@@ -1,0 +1,129 @@
+{
+ "jobCode": "420301",
+ "title": "경기심판 및 경기기록원",
+ "displayName": "경기 심판",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "종목 단체가 운영하는 심판 자격을 따고 하위 경기부터 배정받아 급수를 올린다.",
+ "gate": "종목 단체(협회)의 심판 자격 — 강습회 이수와 시험, 급수 승급",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.rf-rules",
+   "name": "경기 규칙과 판정 사례",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "규칙서를 숙지하고 판정 사례를 영상으로 분석한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "공부",
+     "items": [
+      "규칙서 정독",
+      "판정 사례 영상 분석",
+      "수신호·위치 선정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.rf-cert",
+   "name": "종목 협회 심판 자격",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "강습회를 이수하고 심판 자격시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "신청",
+     "items": [
+      "협회 강습회 일정 확인"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "강습",
+     "items": [
+      "이론·실기 강습",
+      "필기·실기 평가"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "자격 체계와 요건은 종목 단체마다 다르다"
+  },
+  {
+   "id": "p.rf-games",
+   "name": "경기 배정 경험 쌓기",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 180,
+   "goal": "아마추어·하위 리그 경기에 배정받아 경험을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 30,
+     "title": "활동",
+     "items": [
+      "경기 배정",
+      "평가 받고 보완",
+      "급수 승급 준비"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.rf-rules",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.rf-cert",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.fitness-test",
+   "step": 4,
+   "major": true,
+   "note": "심판 체력 측정이 있는 종목"
+  },
+  {
+   "ref": "p.rf-games",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.sports-instructor-cert",
+   "step": 6,
+   "major": true,
+   "optional": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,108 @@
+{
+ "jobCode": "561301",
+ "title": "방역원",
+ "displayName": "방역 기술자",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "소독업체에서 일하려면 법정 종사자 교육을 받아야 한다. 약제와 장비를 안전하게 다루는 것이 기본이다.",
+ "gate": "소독업 종사자 교육 이수(감염병예방법)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pc-basics",
+   "name": "해충과 소독 약제 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "해충별 방제 방법과 약제 안전 수칙을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "해충 종류와 습성",
+      "약제 종류와 희석",
+      "보호구와 안전"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pc-edu",
+   "name": "소독업 종사자 교육",
+   "type": "cert",
+   "subtype": "basic",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "법정 종사자 교육을 이수한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "이수",
+     "items": [
+      "교육 신청",
+      "이수"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.pc-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.pc-edu",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.sanitarian",
+   "step": 6,
+   "major": true,
+   "note": "위생사 면허",
+   "optional": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "방역·소독 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

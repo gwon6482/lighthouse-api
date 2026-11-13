@@ -125,37 +125,6 @@
     }
    ],
    "basis": "practice"
-  },
-  {
-   "id": "p.cc-safety",
-   "name": "영유아 안전·응급처치와 아동학대 예방",
-   "type": "edu",
-   "subtype": "required-course",
-   "category": "knowledge",
-   "method": "lecture",
-   "level": "입문",
-   "daysPerWeek": 2,
-   "minutesPerSession": 90,
-   "goal": "영유아 응급처치와 아동학대 신고 의무를 안다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "안전",
-     "items": [
-      "영유아 심폐소생술",
-      "안전사고 유형과 대처"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "아동 권리",
-     "items": [
-      "아동학대 유형과 신고 절차",
-      "훈육과 학대 구분"
-     ]
-    }
-   ],
-   "basis": "law"
   }
  ],
  "common": [
@@ -188,7 +157,7 @@
    "major": true
   },
   {
-   "ref": "p.cc-safety",
+   "ref": "cp.child-safety",
    "step": 6,
    "major": true
   },
