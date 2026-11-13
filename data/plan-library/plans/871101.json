@@ -1,0 +1,207 @@
+{
+ "jobCode": "871101",
+ "title": "제과·제빵원",
+ "displayName": "제과·제빵사",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 제과기능사·제빵기능사가 기본 증빙이다. 자격과 매장 경험, 내 제품으로 실력을 보인다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.bk-theory",
+   "name": "반죽·발효·굽기의 원리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "재료의 역할과 공정별 온도·시간의 의미를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "원리",
+     "items": [
+      "밀가루·유지·설탕의 역할",
+      "발효와 온도",
+      "오븐과 굽기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "실패 원인 분석",
+      "배합표 읽기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.bk-items",
+   "name": "기본 품목 반복 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "식빵·단과자빵·쿠키·케이크 기본 품목을 일정하게 만든다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "제빵",
+     "items": [
+      "식빵·단과자빵",
+      "성형 연습",
+      "발효 판단"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "제과",
+     "items": [
+      "쿠키·파운드",
+      "제누아즈·무스",
+      "아이싱·마무리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.bk-shop",
+   "name": "베이커리 근무 경험",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "매장에서 새벽 생산부터 마감까지 흐름을 익힌다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "일하고 싶은 매장 찾기",
+      "지원"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "근무",
+     "items": [
+      "반죽·성형·굽기 보조",
+      "생산 계획 이해",
+      "위생·재고 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.bk-portfolio",
+   "name": "내 제품 포트폴리오",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 120,
+   "goal": "직접 개발한 제품 5가지를 사진과 배합표로 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "콘셉트 정하기",
+      "원가 계산"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "개발",
+     "items": [
+      "시제품 반복",
+      "배합표 확정",
+      "사진·설명 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.bk-theory",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 3,
+   "major": true,
+   "note": "제과기능사·제빵기능사"
+  },
+  {
+   "ref": "p.bk-items",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.food-hygiene",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 5.5,
+   "major": true,
+   "note": "국비 제과·제빵 과정",
+   "optional": true
+  },
+  {
+   "ref": "p.bk-shop",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.bk-portfolio",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 7.5,
+   "major": true,
+   "note": "SNS에 제품 사진 쌓기",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

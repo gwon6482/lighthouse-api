@@ -1,0 +1,316 @@
+{
+ "jobCode": "416601",
+ "title": "영상·녹화 및 편집기사",
+ "displayName": "영상 편집자",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 편집 툴과 편집 문법을 익히고 작업물 모음(쇼릴)으로 평가받는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "online",
+   "name": "유튜브·숏폼",
+   "desc": "채널 편집·썸네일"
+  },
+  {
+   "id": "post",
+   "name": "방송·광고 후반작업",
+   "desc": "종합편집·색보정"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ve-grammar",
+   "name": "편집 문법과 스토리텔링",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "컷의 길이·순서·리듬으로 이야기를 만드는 원리를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "원리",
+     "items": [
+      "숏 크기와 연결",
+      "리듬·호흡",
+      "구성(기승전결)"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "좋아하는 영상 컷 단위로 분석",
+      "같은 소스 다르게 편집해 보기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ve-ae",
+   "name": "애프터 이펙트 기초",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "자막 모션과 간단한 효과를 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "키프레임·이징",
+      "텍스트 애니메이션",
+      "마스크·트래킹"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "적용",
+     "items": [
+      "인트로 3개",
+      "자막 템플릿 만들기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ve-shoot",
+   "name": "촬영 기초",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 120,
+   "goal": "카메라·조명·마이크를 다뤄 편집하기 좋은 소스를 찍는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "장비",
+     "items": [
+      "노출·초점·프레임레이트",
+      "조명 기본 배치",
+      "마이크와 녹음"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "촬영",
+     "items": [
+      "인터뷰 촬영",
+      "브이로그 촬영",
+      "소스 정리 습관"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ve-shorts",
+   "name": "유튜브·숏폼 편집 포트폴리오",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "긴 영상 3편과 숏폼 10편을 완성해 모은다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "채널 유형별 편집 스타일 분석",
+      "작업 목록"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "제작",
+     "items": [
+      "긴 영상 3편",
+      "숏폼 10편",
+      "썸네일 제작"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "쇼릴 1분",
+      "작업 설명 붙이기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ve-color",
+   "name": "색보정(다빈치 리졸브)",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "촬영 소스를 보정하고 톤을 맞춘다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "스코프 읽기",
+      "1차·2차 보정",
+      "로그·LUT"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "적용",
+     "items": [
+      "장면 간 톤 맞추기",
+      "룩 만들기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ve-sound",
+   "name": "사운드 편집과 믹싱 기초",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "대사·음악·효과음을 정리해 듣기 좋게 맞춘다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "잡음 제거",
+      "대사 레벨 맞추기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "믹싱",
+     "items": [
+      "음악·효과음 배치",
+      "라우드니스 기준 맞추기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.video-edit",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.ve-grammar",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.ve-ae",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.ve-shoot",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 8,
+   "major": true,
+   "note": "편집 외주·보조",
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 9,
+   "major": true,
+   "note": "1분 쇼릴과 작업 설명"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "online": [
+   {
+    "ref": "p.ve-shorts",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.adobe",
+    "step": 7,
+    "major": true,
+    "note": "썸네일용 포토샵",
+    "optional": true
+   },
+   {
+    "ref": "cp.channel",
+    "step": 7.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "post": [
+   {
+    "ref": "p.ve-color",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.ve-sound",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.internship",
+    "step": 8.5,
+    "major": true,
+    "note": "프로덕션·후반작업 업체"
+   }
+  ]
+ }
+}

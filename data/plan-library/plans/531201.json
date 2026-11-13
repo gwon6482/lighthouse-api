@@ -1,0 +1,285 @@
+{
+ "jobCode": "531201",
+ "title": "한식조리사",
+ "displayName": "조리사",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "식당 취업에 자격이 필수는 아니지만 조리기능사가 기본 증빙이고, 집단급식소 등은 조리사 면허를 요구한다. 자격과 주방 경험을 함께 쌓는다.",
+ "gate": "조리사 면허(조리기능사 취득 뒤 발급)는 집단급식소 등 일부 업장에서 필요하다",
+ "tracks": [
+  {
+   "id": "korean",
+   "name": "한식",
+   "desc": "한식조리기능사"
+  },
+  {
+   "id": "western",
+   "name": "양식",
+   "desc": "양식조리기능사"
+  },
+  {
+   "id": "chinese",
+   "name": "중식",
+   "desc": "중식조리기능사"
+  },
+  {
+   "id": "japanese",
+   "name": "일식",
+   "desc": "일식조리기능사"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "531401",
+   "title": "양식조리사",
+   "track": "western"
+  },
+  {
+   "jobCode": "531301",
+   "title": "중식조리사",
+   "track": "chinese"
+  },
+  {
+   "jobCode": "531501",
+   "title": "일식조리사",
+   "track": "japanese"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.ck-basics",
+   "name": "칼질과 기본 조리법",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "썰기와 굽기·볶기·끓이기·튀기기의 기본을 일정한 품질로 해낸다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "칼",
+     "items": [
+      "칼 잡는 법과 관리",
+      "기본 썰기 반복",
+      "재료 손질"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "조리법",
+     "items": [
+      "불 조절",
+      "육수·소스 기본",
+      "같은 메뉴 반복해 맛 맞추기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ck-menu",
+   "name": "전공 요리 대표 메뉴 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "고른 분야의 대표 메뉴 20가지를 레시피 없이 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "목록",
+     "items": [
+      "대표 메뉴 20가지 정하기",
+      "표준 레시피 정리"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "숙련",
+     "items": [
+      "주 2~3가지 반복 조리",
+      "맛·시간 기록",
+      "플레이팅 사진"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ck-kitchen",
+   "name": "주방 근무 경험",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "업장 주방에서 일하며 준비·조리·마감의 흐름을 익힌다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "일하고 싶은 업장 찾기",
+      "지원"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "근무",
+     "items": [
+      "재료 준비와 라인 보조",
+      "위생·재고 관리",
+      "선배 레시피 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ck-recipe",
+   "name": "레시피 노트와 메뉴 개발",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 120,
+   "goal": "나만의 메뉴 5가지를 개발해 사진과 레시피로 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "콘셉트와 재료 정하기",
+      "원가 계산"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "개발",
+     "items": [
+      "시식·수정 반복",
+      "표준 레시피 작성",
+      "사진 촬영"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ck-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.food-hygiene",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 4.5,
+   "major": true,
+   "note": "국비 조리 과정",
+   "optional": true
+  },
+  {
+   "ref": "p.ck-kitchen",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.ck-recipe",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true,
+   "note": "실기 테스트를 보는 업장이 있다"
+  }
+ ],
+ "byTrack": {
+  "korean": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3,
+    "major": true,
+    "note": "한식조리기능사"
+   },
+   {
+    "ref": "p.ck-menu",
+    "step": 5,
+    "major": true,
+    "note": "한식"
+   }
+  ],
+  "western": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3,
+    "major": true,
+    "note": "양식조리기능사"
+   },
+   {
+    "ref": "p.ck-menu",
+    "step": 5,
+    "major": true,
+    "note": "양식"
+   }
+  ],
+  "chinese": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3,
+    "major": true,
+    "note": "중식조리기능사"
+   },
+   {
+    "ref": "p.ck-menu",
+    "step": 5,
+    "major": true,
+    "note": "중식"
+   }
+  ],
+  "japanese": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3,
+    "major": true,
+    "note": "일식조리기능사"
+   },
+   {
+    "ref": "p.ck-menu",
+    "step": 5,
+    "major": true,
+    "note": "일식"
+   }
+  ]
+ },
+ "verify": "조리사 면허 요건은 식품위생법이 정본"
+}

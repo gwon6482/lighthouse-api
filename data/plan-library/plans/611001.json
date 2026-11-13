@@ -1,0 +1,228 @@
+{
+ "jobCode": "611001",
+ "title": "부동산중개인",
+ "displayName": "공인중개사",
+ "family": "pro",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "공인중개사 자격시험(1차·2차)에 합격하고 실무교육을 받아야 개업하거나 소속 공인중개사로 일할 수 있다.",
+ "gate": "공인중개사 자격시험 합격 + 실무교육 이수 뒤 개설 등록(또는 소속 공인중개사)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.re-first",
+   "name": "공인중개사 1차(부동산학개론·민법)",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "1차 두 과목에서 합격 기준을 넘는다.",
+   "phases": [
+    {
+     "weeks": 10,
+     "title": "기본 이론",
+     "items": [
+      "부동산학개론 강의",
+      "민법·민사특별법 강의",
+      "단원별 문제"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "기출 회독",
+      "판례 정리",
+      "계산 문제 연습"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "취약 단원 보강"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.re-second",
+   "name": "공인중개사 2차(중개사법·공법·공시법·세법)",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "2차 과목에서 합격 기준을 넘는다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "기본 이론",
+     "items": [
+      "공인중개사법·실무",
+      "부동산공법",
+      "공시법·세법"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "기출 회독",
+      "법령 개정 사항 정리",
+      "암기 노트"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "과락 과목 보강"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "시험은 연 1회. 1차 합격은 다음 해까지 인정된다"
+  },
+  {
+   "id": "p.re-training",
+   "name": "실무교육과 등록",
+   "type": "edu",
+   "subtype": "required-course",
+   "category": "knowledge",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "실무교육을 이수하고 개설 등록 또는 소속 신고를 한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "교육",
+     "items": [
+      "실무교육 신청·이수",
+      "수료증"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "등록",
+     "items": [
+      "사무소 확보 또는 취업",
+      "등록·신고 서류",
+      "공제 가입"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.re-field",
+   "name": "중개사무소 실무 경험",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "사무소에서 일하며 매물 확보·안내·계약 과정을 익힌다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "지역·사무소 고르기",
+      "지원"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "근무",
+     "items": [
+      "매물 접수와 현장 안내",
+      "계약서·확인설명서 작성 보조",
+      "지역 시세 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.re-market",
+   "name": "지역 분석과 매물 홍보",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "담당 지역의 시세·수요를 정리하고 온라인으로 매물을 알린다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지역 분석",
+     "items": [
+      "단지·상권 조사",
+      "실거래가 정리"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "홍보",
+     "items": [
+      "매물 소개 글·영상",
+      "온라인 채널 운영",
+      "문의 응대 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.re-first",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.re-second",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.re-training",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.re-field",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.re-market",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "자격·등록 요건은 공인중개사법이 정본"
+}

@@ -1,0 +1,383 @@
+{
+ "jobCode": "415404",
+ "title": "시각디자이너",
+ "displayName": "시각디자이너",
+ "family": "design",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 디자인 기초와 툴을 익힌 뒤 분야에 맞는 포트폴리오로 평가받는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "brand",
+   "name": "브랜드(BX)",
+   "desc": "로고·아이덴티티"
+  },
+  {
+   "id": "editorial",
+   "name": "편집·출판",
+   "desc": "책·잡지·인쇄물"
+  },
+  {
+   "id": "ad",
+   "name": "광고·마케팅 디자인",
+   "desc": "배너·상세페이지·프로모션"
+  },
+  {
+   "id": "package",
+   "name": "패키지",
+   "desc": "제품 포장 디자인"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.vd-basics",
+   "name": "디자인 기초(타이포·색·레이아웃)",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "타이포그래피·색·그리드 원리를 작업에 적용한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "원리",
+     "items": [
+      "타이포그래피 기본",
+      "색 이론·배색",
+      "그리드와 여백"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연습",
+     "items": [
+      "포스터 따라 만들기 5개",
+      "같은 내용 다른 레이아웃",
+      "피드백 받기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.vd-bx",
+   "name": "브랜드 아이덴티티 프로젝트",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "가상의 브랜드 로고와 적용 시안을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "브랜드 과제 정하기",
+      "경쟁 브랜드 조사",
+      "콘셉트 키워드"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "제작",
+     "items": [
+      "로고 스케치·정리",
+      "색·서체 시스템",
+      "명함·패키지 적용"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "가이드 문서",
+      "포트폴리오 페이지"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.vd-indesign",
+   "name": "인디자인과 편집 디자인",
+   "type": "skill",
+   "subtype": "design",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "인디자인으로 여러 쪽 문서를 조판한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기능",
+     "items": [
+      "마스터 페이지·스타일",
+      "표·이미지 배치",
+      "인쇄용 내보내기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "조판",
+     "items": [
+      "본문 조판 규칙",
+      "잡지 펼침면 4개"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.vd-book",
+   "name": "책·잡지 한 권 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "기획부터 인쇄 파일까지 소책자 한 권을 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "주제와 구성",
+      "판형·종이 정하기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "제작",
+     "items": [
+      "표지·본문 디자인",
+      "교정",
+      "인쇄 파일"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "실물 촬영",
+      "제작 과정 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.vd-ad",
+   "name": "상세페이지·배너 제작",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "상품 상세페이지와 프로모션 배너 묶음을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "잘된 상세페이지 분석",
+      "상품과 고객 정하기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "제작",
+     "items": [
+      "상세페이지 1건",
+      "배너 규격별 5종",
+      "SNS 광고 소재"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.vd-package",
+   "name": "패키지 디자인 프로젝트",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "제품 패키지를 전개도부터 목업까지 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "제품과 매대 조사",
+      "콘셉트"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "제작",
+     "items": [
+      "전개도 그리기",
+      "그래픽 적용",
+      "실물 목업·인쇄 사양"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.vd-color",
+   "name": "컬러리스트산업기사",
+   "type": "cert",
+   "subtype": "national-tech",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "컬러리스트산업기사에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "색채 심리·마케팅",
+      "색채 디자인·관리",
+      "기출 풀이"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기",
+     "items": [
+      "색 조색·배색 연습",
+      "기출 과제"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.vd-basics",
+   "step": 2,
+   "major": false,
+   "skip": "디자인 전공 기초 과목에서 배운다"
+  },
+  {
+   "ref": "cp.adobe",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.figma",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.gtq",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.vd-color",
+   "step": 5.5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.contest",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 11,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 12,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "brand": [
+   {
+    "ref": "p.vd-bx",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "editorial": [
+   {
+    "ref": "p.vd-indesign",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.vd-book",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "ad": [
+   {
+    "ref": "p.vd-ad",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.video-edit",
+    "step": 7,
+    "major": true,
+    "note": "움직이는 광고 소재",
+    "optional": true
+   }
+  ],
+  "package": [
+   {
+    "ref": "p.vd-package",
+    "step": 6,
+    "major": true
+   }
+  ]
+ }
+}

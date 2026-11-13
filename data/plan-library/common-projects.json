@@ -3566,6 +3566,228 @@
     "health"
    ],
    "promotedFrom": "304004:p.nurse-apply"
+  },
+  {
+   "id": "cp.civil-bonus",
+   "name": "가산점 자격 준비",
+   "type": "cert",
+   "subtype": "basic",
+   "category": "qualification",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "공고가 인정하는 가산점 자격을 갖춘다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "가산점 인정 목록 확인",
+      "내게 맞는 것 고르기"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "취득",
+     "items": [
+      "인정 자격증·단증 준비",
+      "응시",
+      "증빙 제출"
+     ]
+    }
+   ],
+   "verify": "인정 자격과 점수는 공고마다 다르다",
+   "scope": "family",
+   "families": [
+    "public"
+   ],
+   "promotedFrom": "240101:p.pol-bonus"
+  },
+  {
+   "id": "cp.civil-special",
+   "name": "경력경쟁채용 요건 갖추기",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "지원할 분야의 자격·경력·전공 요건을 확인하고 채운다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "분야별 채용 공고 모으기",
+      "요건(학위·경력·자격) 정리"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "계획",
+     "items": [
+      "부족한 요건 채울 계획",
+      "시험 과목 확인"
+     ]
+    }
+   ],
+   "verify": "분야와 요건은 기관·연도마다 다르다",
+   "scope": "family",
+   "families": [
+    "public"
+   ],
+   "promotedFrom": "240101:p.pol-special"
+  },
+  {
+   "id": "cp.web-basics",
+   "name": "웹 기초(HTML·CSS·JS·HTTP)",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "브라우저와 서버가 주고받는 과정을 이해하고 정적 페이지를 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "화면",
+     "items": [
+      "HTML 구조·시맨틱",
+      "CSS 레이아웃(Flex·Grid)",
+      "페이지 3개 따라 만들기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "동작과 통신",
+     "items": [
+      "JS로 DOM 다루기",
+      "HTTP·REST·JSON",
+      "공개 API 불러와 보여 주기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "it",
+    "design"
+   ],
+   "promotedFrom": "133201:p.web-basics"
+  },
+  {
+   "id": "cp.sports-rehab",
+   "name": "스포츠 손상과 운동 재활",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "주요 스포츠 손상의 기전과 단계별 재활을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "손상",
+     "items": [
+      "부위별 손상 기전",
+      "응급 처치·테이핑",
+      "복귀 기준"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "재활",
+     "items": [
+      "단계별 운동 프로그램",
+      "선수 현장 참관·봉사"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "health",
+    "service"
+   ],
+   "promotedFrom": "306501:p.pt-sports"
+  },
+  {
+   "id": "cp.food-hygiene",
+   "name": "식품 위생과 안전(HACCP 기초)",
+   "type": "edu",
+   "subtype": "required-course",
+   "scope": "family",
+   "families": [
+    "service",
+    "eng"
+   ],
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "교차 오염·온도 관리 등 주방 위생 원칙과 HACCP 개념을 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "원칙",
+     "items": [
+      "개인 위생·교차 오염",
+      "보관 온도와 유통기한",
+      "식중독 원인"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "주방 위생 점검표 만들기",
+      "HACCP 기본 개념"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.customer-service",
+   "name": "고객 응대와 상담",
+   "type": "skill",
+   "subtype": "common",
+   "scope": "family",
+   "families": [
+    "service",
+    "sales",
+    "health"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "고객의 요구를 듣고 설명하며 불만에 대응한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기본",
+     "items": [
+      "인사·경청·설명 순서",
+      "전화·메시지 응대",
+      "자주 받는 질문 답변"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "어려운 상황",
+     "items": [
+      "불만 응대 단계",
+      "역할극 연습",
+      "응대 기록 남기기"
+     ]
+    }
+   ]
   }
  ]
 }

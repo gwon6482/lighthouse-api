@@ -91,38 +91,6 @@
     }
    ],
    "basis": "practice"
-  },
-  {
-   "id": "p.pt-sports",
-   "name": "스포츠 손상과 운동 재활",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "주요 스포츠 손상의 기전과 단계별 재활을 설명한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "손상",
-     "items": [
-      "부위별 손상 기전",
-      "응급 처치·테이핑",
-      "복귀 기준"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "재활",
-     "items": [
-      "단계별 운동 프로그램",
-      "선수 현장 참관·봉사"
-     ]
-    }
-   ],
-   "basis": "practice"
   }
  ],
  "common": [
@@ -194,7 +162,7 @@
   ],
   "sports": [
    {
-    "ref": "p.pt-sports",
+    "ref": "cp.sports-rehab",
     "step": 6,
     "major": true
    },

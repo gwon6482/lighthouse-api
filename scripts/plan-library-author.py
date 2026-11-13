@@ -39,3 +39,11 @@ def save(title, summary, gate, projects, common, byTrack, verify=None):
     if verify: out['verify'] = verify
     _dump(f"plans/{j['jobCode']}.json", out)
     print('저장', j['jobCode'], j['displayName'], '| 전용', len(projects), '| 공통', len(common), '|', {k: len(v) for k, v in byTrack.items()})
+def relink(jobCode, pid, cid):
+    """이미 보편에 있는 프로젝트와 같은 직업 전용 프로젝트를 지우고 ref 만 바꾼다"""
+    plan = _load(f'plans/{jobCode}.json')
+    plan['projects'] = [x for x in plan['projects'] if x['id'] != pid]
+    for items in [plan['common'], *plan['byTrack'].values()]:
+        for it in items:
+            if it['ref'] == pid: it['ref'] = cid
+    _dump(f'plans/{jobCode}.json', plan)

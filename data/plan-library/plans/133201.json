@@ -111,39 +111,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.web-basics",
-   "name": "웹 기초(HTML·CSS·JS·HTTP)",
-   "type": "skill",
-   "subtype": "dev",
-   "category": "skill",
-   "method": "lecture",
-   "level": "입문",
-   "daysPerWeek": 4,
-   "minutesPerSession": 90,
-   "goal": "브라우저와 서버가 주고받는 과정을 이해하고 정적 페이지를 만든다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "화면",
-     "items": [
-      "HTML 구조·시맨틱",
-      "CSS 레이아웃(Flex·Grid)",
-      "페이지 3개 따라 만들기"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "동작과 통신",
-     "items": [
-      "JS로 DOM 다루기",
-      "HTTP·REST·JSON",
-      "공개 API 불러와 보여 주기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.be-framework",
    "name": "API 서버 만들기(Spring 또는 Node)",
    "type": "skill",
@@ -875,7 +842,7 @@
    "major": true
   },
   {
-   "ref": "p.web-basics",
+   "ref": "cp.web-basics",
    "step": 6,
    "major": true
   },

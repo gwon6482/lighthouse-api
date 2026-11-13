@@ -64,71 +64,6 @@
    ],
    "basis": "law",
    "verify": "과목은 연도와 채용 분야에 따라 바뀐다"
-  },
-  {
-   "id": "p.fire-bonus",
-   "name": "가산점 자격 준비",
-   "type": "cert",
-   "subtype": "basic",
-   "category": "qualification",
-   "method": "academy",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "공고가 인정하는 가산점 자격을 갖춘다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "확인",
-     "items": [
-      "가산점 인정 목록 확인",
-      "내게 맞는 것 고르기"
-     ]
-    },
-    {
-     "weeks": 8,
-     "title": "취득",
-     "items": [
-      "자격증 준비(소방·응급·운전 등)",
-      "응시",
-      "증빙 제출"
-     ]
-    }
-   ],
-   "basis": "practice",
-   "verify": "인정 자격과 점수는 공고마다 다르다"
-  },
-  {
-   "id": "p.fire-special",
-   "name": "경력경쟁채용 요건 갖추기",
-   "type": "network",
-   "subtype": "research",
-   "category": "knowledge",
-   "method": "etc",
-   "level": "중급",
-   "daysPerWeek": 2,
-   "minutesPerSession": 90,
-   "goal": "지원할 분야의 자격·경력 요건을 확인하고 채운다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "조사",
-     "items": [
-      "구급·구조·화학 등 분야별 공고 모으기",
-      "요건 정리"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "계획",
-     "items": [
-      "자격·경력 채울 계획",
-      "분야별 시험 과목 확인"
-     ]
-    }
-   ],
-   "basis": "law",
-   "verify": "구급은 응급구조사 1급·간호사, 구조는 관련 경력 등 분야마다 요건이 다르다"
   }
  ],
  "common": [
@@ -161,7 +96,7 @@
    "major": true
   },
   {
-   "ref": "p.fire-bonus",
+   "ref": "cp.civil-bonus",
    "step": 6,
    "major": true,
    "optional": true
@@ -181,7 +116,7 @@
   "open": [],
   "special": [
    {
-    "ref": "p.fire-special",
+    "ref": "cp.civil-special",
     "step": 1.5,
     "major": true
    }

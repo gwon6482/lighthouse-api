@@ -1,0 +1,233 @@
+{
+ "jobCode": "522101",
+ "title": "항공기객실승무원",
+ "displayName": "객실 승무원",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법정 자격은 없고 항공사 공개 채용으로 뽑는다. 어학 성적과 서비스 경험을 갖추고 여러 단계의 면접을 준비한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "domestic",
+   "name": "국내 항공사",
+   "desc": "국내 FSC·LCC"
+  },
+  {
+   "id": "foreign",
+   "name": "외국 항공사",
+   "desc": "외항사 채용"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ca-image",
+   "name": "서비스 매너와 이미지 메이킹",
+   "type": "skill",
+   "subtype": "common",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "표정·자세·말투를 점검하고 면접 복장과 인상을 갖춘다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "점검",
+     "items": [
+      "영상으로 표정·자세 확인",
+      "발음·말 속도 점검"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연습",
+     "items": [
+      "워킹·인사 연습",
+      "답변 영상 찍고 고치기",
+      "복장·헤어 준비"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ca-fitness",
+   "name": "체력과 수영 준비",
+   "type": "hiring",
+   "subtype": "physical",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "항공사 체력 측정과 수영 기준을 통과할 수 있다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기준 확인",
+     "items": [
+      "항공사별 체력·수영 기준 확인",
+      "현재 기록 재기"
+     ]
+    },
+    {
+     "weeks": 7,
+     "title": "훈련",
+     "items": [
+      "기초 체력 운동",
+      "수영 강습",
+      "기록 측정"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "체력·수영 평가 여부와 기준은 항공사마다 다르다"
+  },
+  {
+   "id": "p.ca-domestic",
+   "name": "국내 항공사 전형 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "영상 면접·실무 면접·임원 면접에 대비한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "전형 파악",
+     "items": [
+      "항공사별 전형과 인재상 정리",
+      "기출 질문 모으기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "연습",
+     "items": [
+      "기내 방송문 낭독",
+      "상황 대처 답변",
+      "스터디 모의 면접"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ca-foreign",
+   "name": "외국 항공사 전형 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "영문 이력서를 쓰고 영어 면접·그룹 토론에 대비한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "전형 파악",
+     "items": [
+      "항공사별 채용 방식 확인",
+      "영문 이력서(CV) 작성"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "연습",
+     "items": [
+      "영어 자기소개·경험 답변",
+      "그룹 토론 연습",
+      "모의 면접"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "채용 방식(오픈데이·대행사 등)과 거주 조건은 항공사마다 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 2,
+   "major": true,
+   "note": "항공사별 지원 기준 점수 확인"
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 4,
+   "major": true,
+   "note": "서비스직 경험"
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.ca-image",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.ca-fitness",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.second-language",
+   "step": 7.5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 10,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "domestic": [
+   {
+    "ref": "p.ca-domestic",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "foreign": [
+   {
+    "ref": "p.ca-foreign",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.overseas",
+    "step": 4.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}

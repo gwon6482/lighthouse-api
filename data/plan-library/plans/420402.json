@@ -1,0 +1,358 @@
+{
+ "jobCode": "420402",
+ "title": "스포츠트레이너",
+ "displayName": "트레이너",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "체육지도자 국가자격(생활스포츠지도사)이 사실상 기본이다. 해부·생리 지식, 자격, 지도 경험을 차례로 쌓는다.",
+ "gate": "법정 필수는 아니지만 체육시설은 체육지도자를 두어야 해서 생활스포츠지도사 2급을 요구하는 곳이 많다",
+ "tracks": [
+  {
+   "id": "pt",
+   "name": "퍼스널 트레이너",
+   "desc": "피트니스 센터 개인 지도"
+  },
+  {
+   "id": "at",
+   "name": "선수·재활 트레이너",
+   "desc": "팀·재활 센터"
+  },
+  {
+   "id": "pilates",
+   "name": "필라테스·요가",
+   "desc": "그룹·개인 레슨"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "420401",
+   "title": "스포츠강사",
+   "track": "pt"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.tr-anatomy",
+   "name": "기능 해부학과 운동 생리학",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "주요 근육의 기능과 운동에 따른 몸의 변화를 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "해부",
+     "items": [
+      "관절 움직임 용어",
+      "부위별 근육 기능",
+      "자세 평가 기초"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "생리",
+     "items": [
+      "에너지 대사",
+      "근비대·지구력 원리",
+      "회복과 부상"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tr-ssi",
+   "name": "생활스포츠지도사 2급",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "필기·실기·구술과 연수를 거쳐 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "선택 과목 이론",
+      "기출 회독",
+      "응시"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기·구술",
+     "items": [
+      "종목 실기 연습",
+      "구술 예상 문제",
+      "응시"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연수",
+     "items": [
+      "연수 과정 이수",
+      "현장 실습"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "종목(보디빌딩 등)과 일정은 체육지도자 자격 공고 확인. 연 1회 시행"
+  },
+  {
+   "id": "p.tr-own",
+   "name": "내 운동 경력 만들기",
+   "type": "activity",
+   "subtype": "club",
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "6개월 이상 꾸준히 훈련하며 기록을 남긴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "계획",
+     "items": [
+      "목표와 프로그램 정하기",
+      "자세 영상 기록"
+     ]
+    },
+    {
+     "weeks": 22,
+     "title": "훈련",
+     "items": [
+      "주 4회 훈련",
+      "기록·식단 일지",
+      "변화 사진·수치"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tr-program",
+   "name": "운동 프로그램 설계 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "체력 수준과 목표에 맞는 프로그램을 짜고 지도한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "평가",
+     "items": [
+      "상담·체력 평가",
+      "목표 설정"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "지도",
+     "items": [
+      "지인 2명 무료 지도",
+      "주기화 프로그램",
+      "변화 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tr-nutrition",
+   "name": "영양과 체중 관리 기초",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "열량·영양소 기본과 식단 구성 원리를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "열량과 3대 영양소",
+      "체중 감량·증량 원리",
+      "보충제 근거 읽기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tr-kata",
+   "name": "건강운동관리사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "건강운동관리사 필기·실기에 합격한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "필기",
+     "items": [
+      "운동 생리·처방",
+      "병태 생리·운동 부하 검사",
+      "기출"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기·구술",
+     "items": [
+      "검사·처방 실기",
+      "구술"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "응시하려면 체육 분야 학위가 필요하다"
+  },
+  {
+   "id": "p.tr-pilates",
+   "name": "필라테스·요가 지도자 과정",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 180,
+   "goal": "지도자 과정을 수료하고 수업을 진행할 수 있다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "과정",
+     "items": [
+      "매트·기구 동작",
+      "시퀀스 구성",
+      "티칭 실습"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "평가",
+     "items": [
+      "수업 시연",
+      "수료"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간 과정이라 기관마다 내용과 비용 차이가 크다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.tr-own",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.tr-anatomy",
+   "step": 3,
+   "major": false,
+   "skip": "체육 전공 과목에서 배운다"
+  },
+  {
+   "ref": "p.tr-ssi",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 5,
+   "major": true,
+   "note": "응급처치",
+   "optional": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 8,
+   "major": true,
+   "note": "센터 안내·보조 근무"
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 9,
+   "major": true,
+   "note": "회원 상담"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true,
+   "note": "시범 수업을 보는 곳이 많다"
+  }
+ ],
+ "byTrack": {
+  "pt": [
+   {
+    "ref": "p.tr-program",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.tr-nutrition",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "at": [
+   {
+    "ref": "cp.sports-rehab",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.tr-kata",
+    "step": 7,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "pilates": [
+   {
+    "ref": "p.tr-pilates",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.tr-program",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
+}
