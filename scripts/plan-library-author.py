@@ -38,6 +38,13 @@ def save(title, summary, gate, projects, common, byTrack, verify=None):
                summary=summary, gate=gate, tracks=j['tracks'], covers=j['covers'], projects=projects, common=common, byTrack=byTrack)
     if verify: out['verify'] = verify
     _dump(f"plans/{j['jobCode']}.json", out)
+    # 계열 공통 보편 프로젝트를 다른 계열의 계획이 쓰면 그 계열도 families 에 넣는다(검사 스크립트가 어긋남을 오류로 본다)
+    refs = {i['ref'] for i in common + [x for v in byTrack.values() for x in v]}
+    c = _load('common-projects.json'); grew = [x['id'] for x in c['items'] if x['id'] in refs and x['scope'] == 'family' and j['family'] not in x['families']]
+    if grew:
+        for x in c['items']:
+            if x['id'] in grew: x['families'].append(j['family'])
+        _dump('common-projects.json', c)
     print('저장', j['jobCode'], j['displayName'], '| 전용', len(projects), '| 공통', len(common), '|', {k: len(v) for k, v in byTrack.items()})
 def relink(jobCode, pid, cid):
     """이미 보편에 있는 프로젝트와 같은 직업 전용 프로젝트를 지우고 ref 만 바꾼다"""

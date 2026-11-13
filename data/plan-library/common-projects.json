@@ -914,7 +914,12 @@
     "public",
     "biz",
     "eng",
-    "finance"
+    "finance",
+    "it",
+    "edu",
+    "tech",
+    "service",
+    "transport"
    ],
    "category": "qualification",
    "method": "book",
@@ -962,7 +967,8 @@
     "public",
     "biz",
     "eng",
-    "finance"
+    "finance",
+    "tech"
    ],
    "category": "qualification",
    "method": "book",
@@ -1007,7 +1013,12 @@
    "subtype": "civil",
    "scope": "family",
    "families": [
-    "public"
+    "public",
+    "data",
+    "health",
+    "edu",
+    "welfare",
+    "eng"
    ],
    "category": "qualification",
    "method": "lecture",
@@ -1098,7 +1109,10 @@
    "subtype": "physical",
    "scope": "family",
    "families": [
-    "public"
+    "public",
+    "tech",
+    "service",
+    "transport"
    ],
    "category": "skill",
    "method": "practice",
@@ -1147,7 +1161,9 @@
     "biz",
     "eng",
     "sales",
-    "finance"
+    "finance",
+    "it",
+    "tech"
    ],
    "category": "qualification",
    "method": "book",
@@ -1193,7 +1209,8 @@
    "scope": "family",
    "families": [
     "biz",
-    "finance"
+    "finance",
+    "public"
    ],
    "category": "qualification",
    "method": "lecture",
@@ -1232,7 +1249,10 @@
     "biz",
     "sales",
     "finance",
-    "data"
+    "data",
+    "media",
+    "eng",
+    "research"
    ],
    "category": "skill",
    "method": "practice",
@@ -1268,7 +1288,8 @@
    "subtype": "private-certified",
    "scope": "family",
    "families": [
-    "finance"
+    "finance",
+    "biz"
    ],
    "category": "qualification",
    "method": "book",
@@ -1463,7 +1484,8 @@
    "families": [
     "it",
     "data",
-    "biz"
+    "biz",
+    "finance"
    ],
    "category": "skill",
    "method": "practice",
@@ -1680,7 +1702,8 @@
    "families": [
     "data",
     "biz",
-    "it"
+    "it",
+    "finance"
    ],
    "category": "qualification",
    "method": "book",
@@ -1754,7 +1777,9 @@
    "scope": "family",
    "families": [
     "data",
-    "it"
+    "it",
+    "finance",
+    "research"
    ],
    "category": "skill",
    "method": "lecture",
@@ -1800,7 +1825,9 @@
    "scope": "family",
    "families": [
     "data",
-    "research"
+    "research",
+    "biz",
+    "finance"
    ],
    "category": "knowledge",
    "method": "lecture",
@@ -1874,7 +1901,10 @@
    "scope": "family",
    "families": [
     "design",
-    "media"
+    "media",
+    "eng",
+    "tech",
+    "sales"
    ],
    "category": "skill",
    "method": "lecture",
@@ -2038,7 +2068,10 @@
    "subtype": "basic",
    "scope": "family",
    "families": [
-    "health"
+    "health",
+    "edu",
+    "tech",
+    "service"
    ],
    "category": "qualification",
    "method": "academy",
@@ -2065,7 +2098,8 @@
    "subtype": "required-course",
    "scope": "family",
    "families": [
-    "edu"
+    "edu",
+    "health"
    ],
    "category": "knowledge",
    "method": "school",
@@ -2156,7 +2190,8 @@
    "subtype": "civil",
    "scope": "family",
    "families": [
-    "edu"
+    "edu",
+    "health"
    ],
    "category": "qualification",
    "method": "lecture",
@@ -2202,7 +2237,8 @@
    "subtype": "interview",
    "scope": "family",
    "families": [
-    "edu"
+    "edu",
+    "health"
    ],
    "category": "skill",
    "method": "practice",
@@ -2338,7 +2374,8 @@
    "subtype": "national-license",
    "scope": "family",
    "families": [
-    "welfare"
+    "welfare",
+    "biz"
    ],
    "category": "qualification",
    "method": "book",
@@ -2385,7 +2422,8 @@
    "families": [
     "media",
     "design",
-    "biz"
+    "biz",
+    "edu"
    ],
    "category": "skill",
    "method": "practice",
@@ -2432,7 +2470,12 @@
    "families": [
     "media",
     "biz",
-    "sales"
+    "sales",
+    "finance",
+    "edu",
+    "tech",
+    "service",
+    "agri"
    ],
    "category": "portfolio",
    "method": "content",
@@ -2478,7 +2521,9 @@
    "scope": "family",
    "families": [
     "media",
-    "biz"
+    "biz",
+    "welfare",
+    "eng"
    ],
    "category": "skill",
    "method": "practice",
@@ -2515,7 +2560,15 @@
    "scope": "family",
    "families": [
     "eng",
-    "tech"
+    "tech",
+    "biz",
+    "it",
+    "design",
+    "health",
+    "edu",
+    "research",
+    "transport",
+    "agri"
    ],
    "category": "qualification",
    "method": "book",
@@ -2562,7 +2615,13 @@
    "scope": "family",
    "families": [
     "tech",
-    "service"
+    "service",
+    "biz",
+    "design",
+    "media",
+    "eng",
+    "transport",
+    "agri"
    ],
    "category": "qualification",
    "method": "academy",
@@ -2637,7 +2696,9 @@
    "subtype": "work",
    "scope": "family",
    "families": [
-    "eng"
+    "eng",
+    "biz",
+    "it"
    ],
    "category": "experience",
    "method": "field_practice",
@@ -2684,7 +2745,11 @@
    "families": [
     "tech",
     "service",
-    "biz"
+    "biz",
+    "health",
+    "welfare",
+    "eng",
+    "agri"
    ],
    "category": "knowledge",
    "method": "academy",
@@ -2791,7 +2856,9 @@
    ],
    "scope": "family",
    "families": [
-    "biz"
+    "biz",
+    "sales",
+    "pro"
    ],
    "promotedFrom": "027101:p.ap-labor"
   },
@@ -2869,7 +2936,10 @@
    "families": [
     "biz",
     "it",
-    "data"
+    "data",
+    "design",
+    "media",
+    "sales"
    ],
    "promotedFrom": "024101:p.mkt-ga"
   },
@@ -3297,7 +3367,8 @@
    "scope": "family",
    "families": [
     "eng",
-    "tech"
+    "tech",
+    "biz"
    ],
    "category": "skill",
    "method": "lecture",
@@ -3445,7 +3516,7 @@
   },
   {
    "id": "cp.dept-admission",
-   "name": "면허 학과 진학(입시·편입)",
+   "name": "전공 학과 진학(입시·편입)",
    "type": "edu",
    "subtype": "major",
    "category": "knowledge",
@@ -3453,7 +3524,7 @@
    "level": "중급",
    "daysPerWeek": 5,
    "minutesPerSession": 180,
-   "goal": "면허 시험 응시 자격이 되는 학과에 입학하거나 편입한다.",
+   "goal": "그 직업으로 가는 길이 되는 학과에 입학하거나 편입한다.",
    "phases": [
     {
      "weeks": 2,
@@ -3469,6 +3540,7 @@
      "title": "준비",
      "items": [
       "전형별 시험 과목 공부",
+      "실기 준비(예체능 계열)",
       "성적·어학 관리",
       "면접 준비"
      ]
@@ -3483,10 +3555,14 @@
      ]
     }
    ],
-   "verify": "전형 요소는 대학마다 다르다",
+   "verify": "전형 요소는 대학마다 다르다. 면허·자격이 걸린 학과는 인증·지정 여부를 확인할 것",
    "scope": "family",
    "families": [
-    "health"
+    "health",
+    "edu",
+    "media",
+    "eng",
+    "transport"
    ],
    "promotedFrom": "304004:p.nurse-admission"
   },
@@ -3525,7 +3601,10 @@
    "scope": "family",
    "families": [
     "health",
-    "edu"
+    "edu",
+    "public",
+    "pro",
+    "research"
    ],
    "promotedFrom": "304004:p.nurse-courses"
   },
@@ -3636,7 +3715,12 @@
    "verify": "분야와 요건은 기관·연도마다 다르다",
    "scope": "family",
    "families": [
-    "public"
+    "public",
+    "biz",
+    "health",
+    "service",
+    "research",
+    "transport"
    ],
    "promotedFrom": "240101:p.pol-special"
   },
@@ -3711,7 +3795,8 @@
    "scope": "family",
    "families": [
     "health",
-    "service"
+    "service",
+    "media"
    ],
    "promotedFrom": "306501:p.pt-sports"
   },
@@ -3723,7 +3808,10 @@
    "scope": "family",
    "families": [
     "service",
-    "eng"
+    "eng",
+    "health",
+    "tech",
+    "sales"
    ],
    "category": "knowledge",
    "method": "lecture",
@@ -3760,7 +3848,14 @@
    "families": [
     "service",
     "sales",
-    "health"
+    "health",
+    "biz",
+    "finance",
+    "edu",
+    "media",
+    "tech",
+    "pro",
+    "transport"
    ],
    "category": "skill",
    "method": "practice",
@@ -3797,7 +3892,11 @@
    "scope": "family",
    "families": [
     "sales",
-    "biz"
+    "biz",
+    "finance",
+    "edu",
+    "media",
+    "service"
    ],
    "category": "skill",
    "method": "practice",
@@ -3908,7 +4007,8 @@
    "subtype": "dev",
    "scope": "family",
    "families": [
-    "it"
+    "it",
+    "tech"
    ],
    "category": "skill",
    "method": "practice",
@@ -3945,7 +4045,8 @@
    "scope": "family",
    "families": [
     "eng",
-    "research"
+    "research",
+    "it"
    ],
    "category": "knowledge",
    "method": "school",
@@ -4126,7 +4227,8 @@
    "scope": "family",
    "families": [
     "design",
-    "media"
+    "media",
+    "tech"
    ],
    "promotedFrom": "415404:p.vd-basics"
   },
@@ -4286,7 +4388,12 @@
    "scope": "family",
    "families": [
     "tech",
-    "service"
+    "service",
+    "health",
+    "eng",
+    "sales",
+    "transport",
+    "agri"
    ],
    "category": "experience",
    "method": "parttime",
@@ -4323,7 +4430,9 @@
    "scope": "family",
    "families": [
     "tech",
-    "eng"
+    "eng",
+    "sales",
+    "research"
    ],
    "category": "skill",
    "method": "lecture",
@@ -4377,7 +4486,9 @@
    "scope": "family",
    "families": [
     "eng",
-    "research"
+    "research",
+    "biz",
+    "edu"
    ],
    "promotedFrom": "154105:p.ph-lab"
   },
@@ -4544,7 +4655,8 @@
    "scope": "family",
    "families": [
     "eng",
-    "tech"
+    "tech",
+    "design"
    ],
    "promotedFrom": "151107:p.me-3d"
   },
@@ -4626,7 +4738,8 @@
    "scope": "family",
    "families": [
     "welfare",
-    "edu"
+    "edu",
+    "service"
    ],
    "promotedFrom": "231101:p.swy-youth"
   },
@@ -4655,7 +4768,8 @@
    "scope": "family",
    "families": [
     "tech",
-    "eng"
+    "eng",
+    "sales"
    ],
    "promotedFrom": "812401:p.am-basics"
   },
@@ -4704,7 +4818,8 @@
    "subtype": "national-license",
    "scope": "family",
    "families": [
-    "tech"
+    "tech",
+    "agri"
    ],
    "category": "qualification",
    "method": "etc",
@@ -4941,7 +5056,8 @@
    "scope": "family",
    "families": [
     "eng",
-    "tech"
+    "tech",
+    "sales"
    ],
    "promotedFrom": "158401:p.sm-hazmat"
   },
@@ -4977,7 +5093,8 @@
    ],
    "scope": "family",
    "families": [
-    "edu"
+    "edu",
+    "media"
    ],
    "promotedFrom": "214101:p.ac-lecture"
   },
@@ -5461,7 +5578,8 @@
    "scope": "family",
    "families": [
     "research",
-    "eng"
+    "eng",
+    "edu"
    ],
    "promotedFrom": "121104:p.bio-paper"
   },
@@ -5610,7 +5728,8 @@
    "scope": "family",
    "families": [
     "health",
-    "eng"
+    "eng",
+    "service"
    ],
    "promotedFrom": "305001:p.nt-sanitarian"
   },
@@ -5645,7 +5764,9 @@
    ],
    "scope": "family",
    "families": [
-    "media"
+    "media",
+    "service",
+    "sales"
    ],
    "promotedFrom": "416301:p.an-voice"
   },
@@ -6106,7 +6227,8 @@
    ],
    "scope": "family",
    "families": [
-    "service"
+    "service",
+    "sales"
    ],
    "promotedFrom": "541101:p.sg-manager"
   },
@@ -6172,7 +6294,8 @@
    ],
    "scope": "family",
    "families": [
-    "service"
+    "service",
+    "tech"
    ],
    "promotedFrom": "531201:p.ck-basics"
   },
@@ -6397,7 +6520,9 @@
    "subtype": "basic",
    "scope": "family",
    "families": [
-    "service"
+    "service",
+    "tech",
+    "sales"
    ],
    "category": "qualification",
    "method": "etc",

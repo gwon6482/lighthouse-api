@@ -2,6 +2,7 @@
 //   node scripts/plan-library-validate.js          오류가 있으면 1 로 끝난다
 // 보는 것: id 중복, 분류(type·subtype)·계열·영역·진행 방식, 주차(1 이상)·할 일(1~4개), ref 가 가리키는 프로젝트의 존재,
 //         세부 카테고리 id 가 priority-jobs.json 과 같은지, 전공자 제외 항목에 이유(skip)가 있는지
+//         계열 공통 보편 프로젝트의 families 가 그것을 쓰는 계획의 계열을 담고 있는지
 const fs = require('fs');
 const path = require('path');
 const { CATEGORIES, METHODS_BY_CATEGORY } = require('../config/projectMethods');
@@ -82,7 +83,11 @@ for (const f of planFiles) {
       if (typeof it.step !== 'number') err(w, `${label} ${it.ref}: step`);
       if (it.major === false && !it.skip) err(w, `${label} ${it.ref}: 전공자 제외인데 이유(skip)가 없음`);
       used.add(it.ref);
-      if (it.ref.startsWith('cp.')) usedCommon.set(it.ref, (usedCommon.get(it.ref) || new Set()).add(plan.displayName));
+      if (it.ref.startsWith('cp.')) {
+        usedCommon.set(it.ref, (usedCommon.get(it.ref) || new Set()).add(plan.displayName));
+        // 계열 공통 프로젝트는 그것을 쓰는 계획의 계열을 모두 담고 있어야 계열로 꺼내 쓸 수 있다
+        if (p.scope === 'family' && !p.families.includes(plan.family)) err(w, `${it.ref} 의 families 에 이 계획의 계열 '${plan.family}' 가 없음`);
+      }
     }
   };
   checkItems('common', plan.common);
