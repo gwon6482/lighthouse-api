@@ -23,39 +23,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.gov-pick",
-   "name": "직렬·지역 정하기와 시험 제도 파악",
-   "type": "network",
-   "subtype": "research",
-   "category": "knowledge",
-   "method": "etc",
-   "level": "입문",
-   "daysPerWeek": 2,
-   "minutesPerSession": 90,
-   "goal": "응시할 직렬·지역을 정하고 과목·일정·경쟁률을 정리한다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "조사",
-     "items": [
-      "국가직·지방직 차이 알기",
-      "직렬별 과목·하는 일 조사",
-      "최근 합격선·경쟁률 확인"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "계획",
-     "items": [
-      "응시 시험 정하기",
-      "연간 공부 일정표",
-      "강의·교재 고르기"
-     ]
-    }
-   ],
-   "basis": "law"
-  },
-  {
    "id": "p.g9-major",
    "name": "9급 전문과목(행정법총론·행정학개론)",
    "type": "hiring",
@@ -140,49 +107,16 @@
    ],
    "basis": "law",
    "verify": "과목은 직렬·연도에 따라 바뀐다"
-  },
-  {
-   "id": "p.gov-interview",
-   "name": "공무원 면접",
-   "type": "hiring",
-   "subtype": "interview",
-   "category": "skill",
-   "method": "practice",
-   "level": "중급",
-   "daysPerWeek": 4,
-   "minutesPerSession": 120,
-   "goal": "발표·경험·상황 면접에 공직 가치와 내 경험으로 답한다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "제도 이해",
-     "items": [
-      "면접 방식과 평가 요소 확인",
-      "공직 가치 정리",
-      "지원 기관 정책 조사"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "답변 준비",
-     "items": [
-      "경험·상황 질문 답변",
-      "발표 과제 연습",
-      "스터디 모의 면접"
-     ]
-    }
-   ],
-   "basis": "law"
   }
  ],
  "common": [
   {
-   "ref": "p.gov-pick",
+   "ref": "cp.civil-pick",
    "step": 1,
    "major": true
   },
   {
-   "ref": "p.gov-interview",
+   "ref": "cp.civil-interview",
    "step": 5,
    "major": true
   }

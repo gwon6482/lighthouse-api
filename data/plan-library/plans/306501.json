@@ -1,0 +1,209 @@
+{
+ "jobCode": "306501",
+ "title": "물리치료사",
+ "displayName": "물리치료사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "물리치료학과를 졸업하고 국가시험에 합격해 면허를 받아야 한다. 학과 과정·임상실습·국가시험이 뼈대다.",
+ "gate": "물리치료학과(3·4년제) 졸업 + 물리치료사 국가시험 합격(면허)",
+ "tracks": [
+  {
+   "id": "ortho",
+   "name": "근골격",
+   "desc": "정형외과·도수치료"
+  },
+  {
+   "id": "neuro",
+   "name": "신경계",
+   "desc": "재활병원·뇌졸중 재활"
+  },
+  {
+   "id": "sports",
+   "name": "스포츠",
+   "desc": "선수·운동 재활"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pt-manual",
+   "name": "근골격계 평가와 도수치료 기초",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 180,
+   "goal": "관절·근육 평가와 기본 도수 기법을 익힌다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "평가",
+     "items": [
+      "자세·관절 가동 범위 평가",
+      "근력·특수 검사"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "기법",
+     "items": [
+      "관절 가동술 기초",
+      "연부 조직 기법",
+      "운동 처방 연결"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "졸업 뒤 학회·협회 교육 과정으로 이어 배우는 분야다"
+  },
+  {
+   "id": "p.pt-neuro",
+   "name": "신경계 재활 접근법 입문",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "뇌졸중·척수 손상 환자의 평가와 치료 접근을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "신경계 질환과 회복 과정",
+      "평가 도구",
+      "보행·균형 훈련"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "접근법",
+     "items": [
+      "대표 치료 개념 입문",
+      "사례 보고서 읽기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pt-sports",
+   "name": "스포츠 손상과 운동 재활",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "주요 스포츠 손상의 기전과 단계별 재활을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "손상",
+     "items": [
+      "부위별 손상 기전",
+      "응급 처치·테이핑",
+      "복귀 기준"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "재활",
+     "items": [
+      "단계별 운동 프로그램",
+      "선수 현장 참관·봉사"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 물리치료학과에 다니고 있다"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "재활·의료 봉사",
+   "optional": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 7,
+   "major": true,
+   "note": "물리치료사 국가시험"
+  },
+  {
+   "ref": "cp.hospital-apply",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 10,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "ortho": [
+   {
+    "ref": "p.pt-manual",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "neuro": [
+   {
+    "ref": "p.pt-neuro",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "sports": [
+   {
+    "ref": "p.pt-sports",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.pt-manual",
+    "step": 6.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}

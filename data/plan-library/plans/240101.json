@@ -1,0 +1,191 @@
+{
+ "jobCode": "240101",
+ "title": "경찰관",
+ "displayName": "경찰공무원",
+ "family": "public",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "공개경쟁채용 시험으로 뽑는다. 필기 → 신체·체력 → 적성 → 면접 순이고, 영어와 한국사는 공인 성적으로 대신한다.",
+ "gate": "순경 공채 시험 합격. 운전면허(1종 보통) 등 응시 요건은 시험 공고 확인",
+ "tracks": [
+  {
+   "id": "open",
+   "name": "순경 공채",
+   "desc": "일반 공개채용"
+  },
+  {
+   "id": "special",
+   "name": "경력경쟁채용",
+   "desc": "전공·경력 특채"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pol-major",
+   "name": "경찰 필기(헌법·형사법·경찰학)",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "필기 세 과목에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 10,
+     "title": "기본 이론",
+     "items": [
+      "헌법 강의",
+      "형사법(형법·형사소송법) 강의",
+      "경찰학 강의"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "기출 회독",
+     "items": [
+      "기출 3회독",
+      "판례·조문 정리",
+      "오답 노트"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "최신 판례",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "과목은 연도에 따라 바뀐다"
+  },
+  {
+   "id": "p.pol-bonus",
+   "name": "가산점 자격 준비",
+   "type": "cert",
+   "subtype": "basic",
+   "category": "qualification",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "공고가 인정하는 가산점 자격을 갖춘다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "가산점 인정 목록 확인",
+      "내게 맞는 것 고르기"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "취득",
+     "items": [
+      "무도 단증·자격증 준비",
+      "응시",
+      "증빙 제출"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "인정 자격과 점수는 공고마다 다르다"
+  },
+  {
+   "id": "p.pol-special",
+   "name": "경력경쟁채용 요건 갖추기",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "지원할 분야의 자격·경력·전공 요건을 확인하고 채운다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "분야별 채용 공고 모으기",
+      "요건(학위·경력·자격) 정리"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "계획",
+     "items": [
+      "부족한 요건 채울 계획",
+      "시험 과목 확인"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "분야(경찰행정, 사이버, 무도 등)와 요건은 해마다 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.civil-pick",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 2,
+   "major": true,
+   "note": "1종 보통이 응시 요건"
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 3,
+   "major": true,
+   "note": "필기 과목 대신 공인 성적 제출"
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 4,
+   "major": true,
+   "note": "영어 과목 대신 공인 성적 제출(기준 점수는 공고 확인)"
+  },
+  {
+   "ref": "p.pol-major",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.pol-bonus",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.fitness-test",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.civil-interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "open": [],
+  "special": [
+   {
+    "ref": "p.pol-special",
+    "step": 1.5,
+    "major": true
+   }
+  ]
+ },
+ "verify": "시험 과목·체력 종목·가산점은 경찰청 채용 공고가 정본"
+}

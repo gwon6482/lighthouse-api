@@ -1,0 +1,166 @@
+{
+ "jobCode": "307501",
+ "title": "간호조무사",
+ "displayName": "간호조무사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "지정 교육기관에서 정해진 시간의 이론과 실습을 마치고 국가시험에 합격해야 자격을 받는다.",
+ "gate": "간호조무사 교육과정 1,520시간(이론 + 실습) 이수 + 국가시험 합격",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.na-course",
+   "name": "간호조무사 양성 과정 이수",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "qualification",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "지정 교육기관에서 이론과 실습 과정을 마친다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기관 고르기",
+     "items": [
+      "지정 학원·학교 확인",
+      "국비 지원 여부 확인",
+      "등록"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "이론",
+     "items": [
+      "기초 간호학",
+      "보건 간호학·공중 보건",
+      "출석 관리"
+     ]
+    },
+    {
+     "weeks": 20,
+     "title": "의료기관 실습",
+     "items": [
+      "병원 실습",
+      "간호 보조 업무 익히기",
+      "실습 일지"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "응시자격 기준 시간(이론 740 + 실습 780)을 채워야 한다"
+  },
+  {
+   "id": "p.na-exam",
+   "name": "간호조무사 국가시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "간호조무사 국가시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "과목 정리",
+     "items": [
+      "기초 간호학",
+      "보건 간호학·공중 보건학",
+      "실기"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "기출",
+     "items": [
+      "기출 회독",
+      "오답 정리",
+      "모의고사"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.na-desk",
+   "name": "병원 접수·보험 청구 기초",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "접수·수납 흐름과 건강보험 청구의 기본을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "업무",
+     "items": [
+      "접수·수납 흐름",
+      "건강보험 기본 구조",
+      "청구 프로그램 화면 익히기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "응대",
+     "items": [
+      "환자 응대 대화",
+      "전화 예약 응대"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.training-course",
+   "step": 1,
+   "major": true,
+   "note": "국민내일배움카드로 지원받는 과정이 있다",
+   "optional": true
+  },
+  {
+   "ref": "p.na-course",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 3,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.na-exam",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.na-desk",
+   "step": 5,
+   "major": true,
+   "note": "의원급 취업에 도움",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

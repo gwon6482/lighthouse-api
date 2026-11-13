@@ -3368,6 +3368,204 @@
      ]
     }
    ]
+  },
+  {
+   "id": "cp.civil-interview",
+   "name": "공무원 면접",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "발표·경험·상황 면접에 공직 가치와 내 경험으로 답한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "제도 이해",
+     "items": [
+      "면접 방식과 평가 요소 확인",
+      "공직 가치 정리",
+      "지원 기관 정책 조사"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "답변 준비",
+     "items": [
+      "경험·상황 질문 답변",
+      "발표 과제 연습",
+      "스터디 모의 면접"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "public"
+   ],
+   "promotedFrom": "025401:p.gov-interview"
+  },
+  {
+   "id": "cp.civil-pick",
+   "name": "직렬·분야 정하기와 시험 제도 파악",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "응시할 직렬·지역을 정하고 과목·일정·경쟁률을 정리한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "국가직·지방직 차이 알기",
+      "직렬별 과목·하는 일 조사",
+      "최근 합격선·경쟁률 확인"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "계획",
+     "items": [
+      "응시 시험 정하기",
+      "연간 공부 일정표",
+      "강의·교재 고르기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "public"
+   ],
+   "promotedFrom": "025401:p.gov-pick"
+  },
+  {
+   "id": "cp.dept-admission",
+   "name": "면허 학과 진학(입시·편입)",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 180,
+   "goal": "면허 시험 응시 자격이 되는 학과에 입학하거나 편입한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "경로 정하기",
+     "items": [
+      "신입학·편입·학사편입 비교",
+      "지원 대학 요건 확인",
+      "일정 정리"
+     ]
+    },
+    {
+     "weeks": 20,
+     "title": "준비",
+     "items": [
+      "전형별 시험 과목 공부",
+      "성적·어학 관리",
+      "면접 준비"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "지원",
+     "items": [
+      "원서 접수",
+      "면접",
+      "등록"
+     ]
+    }
+   ],
+   "verify": "전형 요소는 대학마다 다르다",
+   "scope": "family",
+   "families": [
+    "health"
+   ],
+   "promotedFrom": "304004:p.nurse-admission"
+  },
+  {
+   "id": "cp.major-grades",
+   "name": "전공 성적 관리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "전공 과목에서 지원에 필요한 성적을 유지한다.",
+   "phases": [
+    {
+     "weeks": 15,
+     "title": "학기 중",
+     "items": [
+      "수업 뒤 당일 복습",
+      "실습 전 이론 정리",
+      "시험 2주 전 회독"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "학기 말",
+     "items": [
+      "성적 확인",
+      "부족한 과목 보완 계획",
+      "다음 학기 수강 계획"
+     ]
+    }
+   ],
+   "note": "매 학기 반복한다",
+   "scope": "family",
+   "families": [
+    "health",
+    "edu"
+   ],
+   "promotedFrom": "304004:p.nurse-courses"
+  },
+  {
+   "id": "cp.hospital-apply",
+   "name": "병원 채용 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "지원할 병원의 전형 일정과 기준을 정리하고 서류·면접을 준비한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "병원 고르기",
+     "items": [
+      "병원별 채용 시기·전형 조사",
+      "성적·어학 기준 확인",
+      "지원 목록 만들기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "전형 준비",
+     "items": [
+      "병원별 자기소개서",
+      "인성·직무 면접 답변",
+      "간호 지식·술기 질문 대비"
+     ]
+    }
+   ],
+   "verify": "대학병원은 졸업 전 해에 채용하는 곳이 많다",
+   "scope": "family",
+   "families": [
+    "health"
+   ],
+   "promotedFrom": "304004:p.nurse-apply"
   }
  ]
 }

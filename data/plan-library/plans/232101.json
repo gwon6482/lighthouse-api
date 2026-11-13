@@ -1,0 +1,240 @@
+{
+ "jobCode": "232101",
+ "title": "보육교사",
+ "displayName": "보육교사",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "보육교사 자격증이 있어야 어린이집에서 일할 수 있다. 관련 과목 이수와 보육실습으로 2급을 받는 길이 가장 일반적이다.",
+ "gate": "보육교사 2급(법정 과목 이수 + 보육실습) 또는 3급(교육훈련시설 과정)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cc-cert",
+   "name": "보육교사 2급 과목 이수",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "법정 보육 관련 과목을 이수해 보육교사 2급 자격을 받는다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "경로 정하기",
+     "items": [
+      "대학·학점은행제 중 선택",
+      "대면 필수 과목 확인",
+      "수강 신청"
+     ]
+    },
+    {
+     "weeks": 30,
+     "title": "과목 이수",
+     "items": [
+      "보육 필수 과목",
+      "발달·지도 과목",
+      "과제·출석 수업"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "자격 신청",
+     "items": [
+      "실습 이수 확인",
+      "학위 요건 확인",
+      "자격증 발급 신청"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "17과목 51학점 + 보육실습. 일부 과목은 대면 수업이 필수다"
+  },
+  {
+   "id": "p.cc-practicum",
+   "name": "보육실습(240시간)",
+   "type": "edu",
+   "subtype": "required-course",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "어린이집에서 보육실습을 마친다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "실습 어린이집 선정",
+      "건강검진·사전 교육"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실습",
+     "items": [
+      "일과 참여와 관찰",
+      "보육 활동 계획·실행",
+      "실습 일지"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "평가",
+     "items": [
+      "실습 평가",
+      "진로 정리"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.cc-curriculum",
+   "name": "표준보육과정·누리과정 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "놀이 중심 보육과정의 영역과 연령별 내용을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "과정",
+     "items": [
+      "표준보육과정 영역",
+      "누리과정 영역",
+      "연령별 발달 특성"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "놀이 사례 분석",
+      "관찰 기록 써 보기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cc-plan",
+   "name": "보육계획안·보육일지 작성 연습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "주간 보육계획안과 일지를 형식에 맞게 쓴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "형식",
+     "items": [
+      "계획안 구성",
+      "일지·관찰 기록 형식"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "작성",
+     "items": [
+      "연령별 주간 계획안 2개",
+      "놀이 지원 기록",
+      "부모 안내문"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cc-safety",
+   "name": "영유아 안전·응급처치와 아동학대 예방",
+   "type": "edu",
+   "subtype": "required-course",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "영유아 응급처치와 아동학대 신고 의무를 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "안전",
+     "items": [
+      "영유아 심폐소생술",
+      "안전사고 유형과 대처"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "아동 권리",
+     "items": [
+      "아동학대 유형과 신고 절차",
+      "훈육과 학대 구분"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.cc-cert",
+   "step": 1,
+   "major": false,
+   "skip": "보육·유아교육 관련 학과 교육과정에 포함돼 있다"
+  },
+  {
+   "ref": "p.cc-curriculum",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "어린이집·아동 기관 봉사",
+   "optional": true
+  },
+  {
+   "ref": "p.cc-practicum",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.cc-plan",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.cc-safety",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "자격 기준은 영유아보육법 시행규칙이 정본. 유치원 교사(유아교육과 + 임용)와는 다른 자격이다"
+}

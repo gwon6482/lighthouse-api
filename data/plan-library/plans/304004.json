@@ -39,117 +39,6 @@
  ],
  "projects": [
   {
-   "id": "p.nurse-admission",
-   "name": "간호학과 진학(입시·편입)",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "school",
-   "level": "중급",
-   "daysPerWeek": 5,
-   "minutesPerSession": 180,
-   "goal": "간호학과에 입학하거나 편입한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "경로 정하기",
-     "items": [
-      "신입학·편입·학사편입 비교",
-      "지원 대학 요건 확인",
-      "일정 정리"
-     ]
-    },
-    {
-     "weeks": 20,
-     "title": "준비",
-     "items": [
-      "전형별 시험 과목 공부",
-      "성적·어학 관리",
-      "면접 준비"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "지원",
-     "items": [
-      "원서 접수",
-      "면접",
-      "등록"
-     ]
-    }
-   ],
-   "basis": "law",
-   "verify": "전형 요소는 대학마다 다르다"
-  },
-  {
-   "id": "p.nurse-courses",
-   "name": "전공 성적 관리",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "school",
-   "level": "중급",
-   "daysPerWeek": 5,
-   "minutesPerSession": 120,
-   "goal": "기본간호학·성인간호학 등 전공 과목에서 병원 지원에 필요한 성적을 유지한다.",
-   "phases": [
-    {
-     "weeks": 15,
-     "title": "학기 중",
-     "items": [
-      "수업 뒤 당일 복습",
-      "실습 전 이론 정리",
-      "시험 2주 전 회독"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "학기 말",
-     "items": [
-      "성적 확인",
-      "부족한 과목 보완 계획",
-      "다음 학기 수강 계획"
-     ]
-    }
-   ],
-   "basis": "practice",
-   "note": "매 학기 반복한다"
-  },
-  {
-   "id": "p.nurse-apply",
-   "name": "병원 채용 준비",
-   "type": "hiring",
-   "subtype": "interview",
-   "category": "knowledge",
-   "method": "etc",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "지원할 병원의 전형 일정과 기준을 정리하고 서류·면접을 준비한다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "병원 고르기",
-     "items": [
-      "병원별 채용 시기·전형 조사",
-      "성적·어학 기준 확인",
-      "지원 목록 만들기"
-     ]
-    },
-    {
-     "weeks": 3,
-     "title": "전형 준비",
-     "items": [
-      "병원별 자기소개서",
-      "인성·직무 면접 답변",
-      "간호 지식·술기 질문 대비"
-     ]
-    }
-   ],
-   "basis": "practice",
-   "verify": "대학병원은 졸업 전 해에 채용하는 곳이 많다"
-  },
-  {
    "id": "p.nw-skills",
    "name": "핵심 기본간호술 복습",
    "type": "skill",
@@ -320,13 +209,13 @@
  ],
  "common": [
   {
-   "ref": "p.nurse-admission",
+   "ref": "cp.dept-admission",
    "step": 1,
    "major": false,
    "skip": "이미 간호학과에 다니고 있다"
   },
   {
-   "ref": "p.nurse-courses",
+   "ref": "cp.major-grades",
    "step": 2,
    "major": true
   },
@@ -362,7 +251,7 @@
    "note": "간호사 국가시험"
   },
   {
-   "ref": "p.nurse-apply",
+   "ref": "cp.hospital-apply",
    "step": 10,
    "major": true
   },
