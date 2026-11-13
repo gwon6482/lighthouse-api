@@ -1,0 +1,130 @@
+{
+ "jobCode": "416205",
+ "title": "성우",
+ "displayName": "성우",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "방송사 성우 공채나 프리랜서 오디션으로 시작한다. 목소리 연기를 데모로 보여 준다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.va-acting",
+   "name": "목소리 연기 훈련",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "더빙·내레이션·광고를 장르에 맞게 연기한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "훈련",
+     "items": [
+      "캐릭터 연기",
+      "내레이션",
+      "입 맞추기(더빙)"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.va-demo",
+   "name": "보이스 데모 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "장르별 음성 샘플을 녹음해 정리한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "원고 고르기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "녹음",
+     "items": [
+      "장르별 녹음",
+      "편집"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.va-exam",
+   "name": "성우 공채와 오디션 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "공채 전형과 녹음실 오디션에 지원한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "공채 일정과 전형"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "지원",
+     "items": [
+      "실기 시험 준비",
+      "오디션 응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "공채 규모와 전형은 방송사마다 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.voice-training",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.va-acting",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.va-demo",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.va-exam",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 5,
+   "major": true,
+   "note": "오디오 콘텐츠",
+   "optional": true
+  }
+ ],
+ "byTrack": {}
+}

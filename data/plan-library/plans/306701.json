@@ -1,0 +1,101 @@
+{
+ "jobCode": "306701",
+ "title": "재활공학기사",
+ "displayName": "의지·보조기 기사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "의지·보조기 관련 학과를 졸업하고 국가시험에 합격해 면허를 받아야 한다.",
+ "gate": "의지·보조기 기사 면허 — 관련 학과 졸업 + 국가시험 합격",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.po-make",
+   "name": "의지·보조기 제작 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "본을 뜨고 제작해 착용자에게 맞춘다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "채형",
+     "items": [
+      "측정과 본뜨기",
+      "석고 모형 수정"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "제작",
+     "items": [
+      "성형·조립",
+      "착용 적합 조정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 의지·보조기(재활공학) 관련 학과에 다니고 있다",
+   "note": "의지·보조기(재활공학) 관련 학과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "분야 관련 봉사",
+   "optional": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 4,
+   "major": true,
+   "note": "학과가 정한 실습"
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 6,
+   "major": true,
+   "note": "의지·보조기 기사 국가시험"
+  },
+  {
+   "ref": "p.po-make",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 7,
+   "major": true,
+   "note": "의지·보조기 제작 업체"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

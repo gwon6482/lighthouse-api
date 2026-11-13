@@ -1547,7 +1547,7 @@
      "groupName": "약사·간호사·영양사 등",
      "covers": [],
      "batch": "3-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1564,7 +1564,7 @@
       }
      ],
      "batch": "3-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1576,7 +1576,7 @@
      "groupName": "의료기사·치료사·재활사",
      "covers": [],
      "batch": "3-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1588,7 +1588,7 @@
      "groupName": "그 외 보건·의료",
      "covers": [],
      "batch": "3-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1600,7 +1600,7 @@
      "groupName": "그 외 보건·의료",
      "covers": [],
      "batch": "3-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1612,7 +1612,7 @@
      "groupName": "예능·학습지·기타 강사",
      "covers": [],
      "batch": "3-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1624,7 +1624,7 @@
      "groupName": "예능·학습지·기타 강사",
      "covers": [],
      "batch": "3-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1636,7 +1636,7 @@
      "groupName": "장학관·교육조교·보조 교사",
      "covers": [],
      "batch": "3-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1648,7 +1648,7 @@
      "groupName": "사회복지·상담",
      "covers": [],
      "batch": "3-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1660,7 +1660,7 @@
      "groupName": "작가·통번역·출판",
      "covers": [],
      "batch": "3-03",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1685,7 +1685,7 @@
       }
      ],
      "batch": "3-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1697,7 +1697,7 @@
      "groupName": "연극·영화·방송",
      "covers": [],
      "batch": "3-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1709,7 +1709,7 @@
      "groupName": "연극·영화·방송",
      "covers": [],
      "batch": "3-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1721,7 +1721,7 @@
      "groupName": "연극·영화·방송",
      "covers": [],
      "batch": "3-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1746,7 +1746,7 @@
       }
      ],
      "batch": "3-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1758,7 +1758,7 @@
      "groupName": "창작·공연",
      "covers": [],
      "batch": "3-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1779,7 +1779,7 @@
       }
      ],
      "batch": "3-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1796,7 +1796,7 @@
       }
      ],
      "batch": "3-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1808,7 +1808,7 @@
      "groupName": "스포츠·레크리에이션",
      "covers": [],
      "batch": "3-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1820,7 +1820,7 @@
      "groupName": "스포츠·레크리에이션",
      "covers": [],
      "batch": "3-04",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,

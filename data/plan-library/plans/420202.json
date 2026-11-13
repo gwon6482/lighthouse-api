@@ -1,0 +1,169 @@
+{
+ "jobCode": "420202",
+ "title": "프로게이머",
+ "displayName": "프로게이머",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이 없다. 최상위 실력을 증명해 프로팀의 연습생 테스트를 통과해야 한다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pg-rank",
+   "name": "실력과 랭크 올리기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 300,
+   "goal": "한 종목에서 최상위 랭크에 오른다.",
+   "phases": [
+    {
+     "weeks": 24,
+     "title": "훈련",
+     "items": [
+      "매일 연습과 복기",
+      "상위 선수 경기 분석",
+      "포지션 전문화"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pg-health",
+   "name": "손목·수면·멘탈 관리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "장시간 훈련을 버티는 몸과 마음을 관리한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "관리",
+     "items": [
+      "자세와 스트레칭",
+      "수면 규칙",
+      "패배 뒤 회복 방법"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pg-team",
+   "name": "아마추어 팀과 대회 출전",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "club",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 240,
+   "goal": "팀을 이뤄 아마추어 대회에 나간다.",
+   "phases": [
+    {
+     "weeks": 24,
+     "title": "활동",
+     "items": [
+      "팀 연습",
+      "대회 출전",
+      "경기 기록 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pg-tryout",
+   "name": "프로팀 연습생 테스트",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "심화",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "프로팀의 모집에 지원한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "지원",
+     "items": [
+      "모집 공고 확인",
+      "지원·테스트"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "선수 생활 기간이 짧다. 계약 조건을 보호자와 함께 확인할 것"
+  },
+  {
+   "id": "p.pg-after",
+   "name": "선수 이후의 진로 준비",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "코치·분석가·방송 등으로 이어질 준비를 한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "관련 직업 조사",
+      "학업 병행 계획"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.pg-rank",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.pg-health",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.pg-team",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 4,
+   "major": true,
+   "note": "방송·영상",
+   "optional": true
+  },
+  {
+   "ref": "p.pg-tryout",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.pg-after",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

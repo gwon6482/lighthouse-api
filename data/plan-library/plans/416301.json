@@ -18,37 +18,6 @@
  ],
  "projects": [
   {
-   "id": "p.an-voice",
-   "name": "발성과 발음 훈련",
-   "type": "skill",
-   "subtype": "field",
-   "category": "skill",
-   "method": "practice",
-   "level": "입문",
-   "daysPerWeek": 5,
-   "minutesPerSession": 60,
-   "goal": "표준 발음과 안정된 호흡으로 원고를 읽는다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "기초",
-     "items": [
-      "복식 호흡·발성",
-      "표준 발음 규칙"
-     ]
-    },
-    {
-     "weeks": 4,
-     "title": "훈련",
-     "items": [
-      "매일 낭독 녹음",
-      "교정 받기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.an-read",
    "name": "뉴스 낭독과 진행 연습",
    "type": "skill",
@@ -142,7 +111,7 @@
    "major": true
   },
   {
-   "ref": "p.an-voice",
+   "ref": "cp.voice-training",
    "step": 2,
    "major": true
   },

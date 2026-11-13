@@ -1,0 +1,128 @@
+{
+ "jobCode": "214401",
+ "title": "예능강사",
+ "displayName": "예체능 강사",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "학원 강사 자격 기준만 채우면 된다. 전공 실기 실력과 가르치는 능력으로 평가받는다.",
+ "gate": "학원 강사 자격 기준(학원법 시행령 — 전문대 졸업 이상 등)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ag-major",
+   "name": "전공 실기와 지도 레퍼토리 준비",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "수준별로 가르칠 곡·작품·동작 목록을 갖춘다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "준비",
+     "items": [
+      "입문·중급·입시 단계별 과제 정리",
+      "시범 연주·작품 준비"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ag-school",
+   "name": "학교 예술 강사 선발 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "학교 예술 교육 지원 사업 등의 강사 선발에 지원한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "모집 분야와 자격 요건"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "지원",
+     "items": [
+      "서류",
+      "수업 시연",
+      "면접"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "모집 시기와 요건은 해당 사업 공고 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ag-major",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.lecture-demo",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.teaching-material",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 5,
+   "major": true,
+   "note": "학원 보조 강사"
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 6,
+   "major": true,
+   "note": "학부모 상담"
+  },
+  {
+   "ref": "p.ag-school",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 8,
+   "major": true,
+   "note": "수강생 모집",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

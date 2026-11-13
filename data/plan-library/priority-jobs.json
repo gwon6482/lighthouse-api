@@ -4711,6 +4711,453 @@
    "work24Postings": null,
    "tracks": [],
    "covers": []
+  },
+  {
+   "no": 200,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-03",
+   "jobCode": "303002",
+   "title": "한약사",
+   "displayName": "한약사",
+   "family": "health",
+   "group": "042",
+   "groupName": "약사·간호사·영양사 등",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 201,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-03",
+   "jobCode": "306903",
+   "title": "놀이치료사",
+   "displayName": "놀이·예술 치료사",
+   "family": "health",
+   "group": "043",
+   "groupName": "의료기사·치료사·재활사",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "play",
+     "name": "놀이 치료",
+     "desc": "아동 놀이 치료"
+    },
+    {
+     "id": "art",
+     "name": "예술 치료",
+     "desc": "미술·음악 치료"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "306904",
+     "title": "예술치료사",
+     "track": "art"
+    }
+   ]
+  },
+  {
+   "no": 202,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-03",
+   "jobCode": "306701",
+   "title": "재활공학기사",
+   "displayName": "의지·보조기 기사",
+   "family": "health",
+   "group": "043",
+   "groupName": "의료기사·치료사·재활사",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 203,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-03",
+   "jobCode": "511502",
+   "title": "수의사보조원",
+   "displayName": "동물보건사",
+   "family": "health",
+   "group": "044",
+   "groupName": "그 외 보건·의료",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 204,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-03",
+   "jobCode": "307601",
+   "title": "안마사",
+   "displayName": "안마사",
+   "family": "health",
+   "group": "044",
+   "groupName": "그 외 보건·의료",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 205,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-03",
+   "jobCode": "214401",
+   "title": "예능강사",
+   "displayName": "예체능 강사",
+   "family": "edu",
+   "group": "034",
+   "groupName": "예능·학습지·기타 강사",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 206,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-03",
+   "jobCode": "214501",
+   "title": "학습지·교육교구방문강사",
+   "displayName": "방문 학습 교사",
+   "family": "edu",
+   "group": "034",
+   "groupName": "예능·학습지·기타 강사",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 207,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-03",
+   "jobCode": "212901",
+   "title": "보조교사",
+   "displayName": "보조 교사·방과후 강사",
+   "family": "edu",
+   "group": "035",
+   "groupName": "장학관·교육조교·보조 교사",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "assistant",
+     "name": "학교 지원 인력",
+     "desc": "특수 교육 실무사 등"
+    },
+    {
+     "id": "afterschool",
+     "name": "방과후·돌봄 강사",
+     "desc": "방과후 학교 프로그램"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 208,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-03",
+   "jobCode": "231501",
+   "title": "사회단체활동가",
+   "displayName": "비영리 단체 활동가",
+   "family": "welfare",
+   "group": "037",
+   "groupName": "사회복지·상담",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 209,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-03",
+   "jobCode": "411102",
+   "title": "소설가",
+   "displayName": "소설가·웹소설 작가",
+   "family": "media",
+   "group": "051",
+   "groupName": "작가·통번역·출판",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "literary",
+     "name": "문학",
+     "desc": "공모전·문예지 등단"
+    },
+    {
+     "id": "web",
+     "name": "웹소설",
+     "desc": "플랫폼 연재"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 210,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-04",
+   "jobCode": "416102",
+   "title": "영화감독",
+   "displayName": "영화·연극 연출가",
+   "family": "media",
+   "group": "057",
+   "groupName": "연극·영화·방송",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "film",
+     "name": "영화",
+     "desc": "극영화·다큐멘터리"
+    },
+    {
+     "id": "stage",
+     "name": "연극·공연",
+     "desc": "무대 연출·기술 감독"
+    },
+    {
+     "id": "ad",
+     "name": "광고·뮤직비디오",
+     "desc": "짧은 영상 연출"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "416103",
+     "title": "연극연출가",
+     "track": "stage"
+    },
+    {
+     "jobCode": "416104",
+     "title": "광고영상감독",
+     "track": "ad"
+    },
+    {
+     "jobCode": "416105",
+     "title": "연극영화방송기술감독",
+     "track": "stage"
+    }
+   ]
+  },
+  {
+   "no": 211,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-04",
+   "jobCode": "416205",
+   "title": "성우",
+   "displayName": "성우",
+   "family": "media",
+   "group": "057",
+   "groupName": "연극·영화·방송",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 212,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-04",
+   "jobCode": "416202",
+   "title": "모델",
+   "displayName": "모델",
+   "family": "media",
+   "group": "057",
+   "groupName": "연극·영화·방송",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 213,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-04",
+   "jobCode": "416204",
+   "title": "개그맨 및 코미디언",
+   "displayName": "코미디언",
+   "family": "media",
+   "group": "057",
+   "groupName": "연극·영화·방송",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 214,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-04",
+   "jobCode": "414503",
+   "title": "연주가",
+   "displayName": "클래식·국악 음악가",
+   "family": "media",
+   "group": "054",
+   "groupName": "창작·공연",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "inst",
+     "name": "기악",
+     "desc": "피아노·현악·관악 등"
+    },
+    {
+     "id": "vocal",
+     "name": "성악",
+     "desc": "오페라·합창"
+    },
+    {
+     "id": "conduct",
+     "name": "지휘",
+     "desc": "오케스트라·합창 지휘"
+    },
+    {
+     "id": "gugak",
+     "name": "국악",
+     "desc": "국악 기악·성악"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "414602",
+     "title": "성악가",
+     "track": "vocal"
+    },
+    {
+     "jobCode": "414501",
+     "title": "지휘자",
+     "track": "conduct"
+    },
+    {
+     "jobCode": "414401",
+     "title": "국악인",
+     "track": "gugak"
+    }
+   ]
+  },
+  {
+   "no": 215,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-04",
+   "jobCode": "414502",
+   "title": "작곡가",
+   "displayName": "작곡가",
+   "family": "media",
+   "group": "054",
+   "groupName": "창작·공연",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "pop",
+     "name": "대중음악",
+     "desc": "가요·K팝 작곡"
+    },
+    {
+     "id": "media",
+     "name": "영상·게임 음악",
+     "desc": "영화·드라마·게임 음악"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 216,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-04",
+   "jobCode": "414701",
+   "title": "무용가",
+   "displayName": "무용가·안무가",
+   "family": "media",
+   "group": "054",
+   "groupName": "창작·공연",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "art",
+     "name": "순수 무용",
+     "desc": "발레·현대 무용·한국 무용"
+    },
+    {
+     "id": "street",
+     "name": "실용 무용",
+     "desc": "방송·스트리트 댄스·안무"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "414702",
+     "title": "안무가",
+     "track": null
+    },
+    {
+     "jobCode": "414703",
+     "title": "대중무용수",
+     "track": "street"
+    }
+   ]
+  },
+  {
+   "no": 217,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-04",
+   "jobCode": "414101",
+   "title": "화가",
+   "displayName": "미술 작가",
+   "family": "media",
+   "group": "054",
+   "groupName": "창작·공연",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "414102",
+     "title": "조각가",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 218,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-04",
+   "jobCode": "420201",
+   "title": "직업운동선수",
+   "displayName": "운동선수",
+   "family": "service",
+   "group": "059",
+   "groupName": "스포츠·레크리에이션",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 219,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-04",
+   "jobCode": "420202",
+   "title": "프로게이머",
+   "displayName": "프로게이머",
+   "family": "service",
+   "group": "059",
+   "groupName": "스포츠·레크리에이션",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
   }
  ]
 }

@@ -1,0 +1,220 @@
+{
+ "jobCode": "306903",
+ "title": "놀이치료사",
+ "displayName": "놀이·예술 치료사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법정 단일 면허는 없다. 관련 석사 학위와 학회 자격, 수련 경력을 요구하는 기관이 많다.",
+ "gate": "법정 단일 면허는 없으나 채용 공고가 관련 학위·학회 자격을 요구한다. 바우처 기관은 제공 인력 자격 기준이 따로 있다",
+ "tracks": [
+  {
+   "id": "play",
+   "name": "놀이 치료",
+   "desc": "아동 놀이 치료"
+  },
+  {
+   "id": "art",
+   "name": "예술 치료",
+   "desc": "미술·음악 치료"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "306904",
+   "title": "예술치료사",
+   "track": "art"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.th-dev",
+   "name": "아동 발달과 심리 치료 이론",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "발달 단계와 주요 치료 이론을 설명한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "이론",
+     "items": [
+      "발달 심리",
+      "이상 심리",
+      "상담·치료 이론"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.th-grad",
+   "name": "관련 대학원 진학",
+   "type": "edu",
+   "subtype": "graduate",
+   "category": "knowledge",
+   "method": "school",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "놀이·예술 치료 전공 석사 과정에 입학한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "조사",
+     "items": [
+      "대학원과 전공 확인"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "준비",
+     "items": [
+      "전공 지식",
+      "연구 계획서",
+      "면접"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.th-training",
+   "name": "임상 수련",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 240,
+   "goal": "지도 감독을 받으며 치료 사례 시간을 채운다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "수련 기관 찾기",
+      "자격별 수련 요건 확인"
+     ]
+    },
+    {
+     "weeks": 48,
+     "title": "수련",
+     "items": [
+      "치료 회기 진행",
+      "슈퍼비전",
+      "사례 발표"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.th-play",
+   "name": "놀이 치료 자격(학회)",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "book",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "학회 자격 심사에 합격한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "필기",
+      "수련 기록 정리",
+      "면접"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간(학회) 자격이다. 학회마다 요건이 다르다"
+  },
+  {
+   "id": "p.th-art",
+   "name": "예술 치료 자격(학회)",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "book",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "미술·음악 치료 등 학회 자격 심사에 합격한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "필기",
+      "수련 기록 정리",
+      "면접"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간(학회) 자격이다. 분야와 학회마다 요건이 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.th-dev",
+   "step": 1,
+   "major": false,
+   "skip": "심리·아동 관련 전공 과목에서 배운다"
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 2,
+   "major": true,
+   "note": "아동·복지 기관"
+  },
+  {
+   "ref": "p.th-grad",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.th-training",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "play": [
+   {
+    "ref": "p.th-play",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "art": [
+   {
+    "ref": "p.th-art",
+    "step": 5,
+    "major": true
+   }
+  ]
+ },
+ "verify": "발달재활서비스 제공 인력의 자격 기준은 보건복지부 고시 확인"
+}

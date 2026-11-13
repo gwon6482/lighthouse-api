@@ -1,0 +1,147 @@
+{
+ "jobCode": "420201",
+ "title": "직업운동선수",
+ "displayName": "운동선수",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "종목 단체에 선수로 등록해 대회 성적을 쌓고, 드래프트나 입단 테스트로 프로·실업팀에 들어간다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.at-train",
+   "name": "종목 훈련과 대회 출전",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "club",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 300,
+   "goal": "팀에 소속돼 훈련하고 대회에 나간다.",
+   "phases": [
+    {
+     "weeks": 50,
+     "title": "훈련",
+     "items": [
+      "팀 훈련",
+      "대회 출전",
+      "경기 영상 분석"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.at-body",
+   "name": "체력·영양·부상 관리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "시즌에 맞춰 몸을 관리하고 부상을 예방한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "관리",
+     "items": [
+      "체력 훈련 계획",
+      "영양·수면",
+      "부상 예방과 재활"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.at-draft",
+   "name": "입단 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "심화",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "드래프트·입단 테스트·실업팀 선발에 대비한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "선발 방식 확인",
+      "기록·영상 자료 정리",
+      "테스트 응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "선발 방식은 종목과 리그마다 다르다"
+  },
+  {
+   "id": "p.at-career",
+   "name": "선수 이후의 진로 준비",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "지도자·심판·관련 직업으로 이어질 준비를 한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "준비",
+     "items": [
+      "학업 병행 계획",
+      "지도자 자격 요건 확인",
+      "관련 직업 조사"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.at-train",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.at-body",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.sports-rehab",
+   "step": 3,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.at-draft",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.sports-instructor-cert",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.at-career",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

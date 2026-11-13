@@ -1,0 +1,206 @@
+{
+ "jobCode": "411102",
+ "title": "소설가",
+ "displayName": "소설가·웹소설 작가",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이나 채용이 없다. 문학은 공모전과 문예지로 등단하고, 웹소설은 플랫폼 연재로 시작한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "literary",
+   "name": "문학",
+   "desc": "공모전·문예지 등단"
+  },
+  {
+   "id": "web",
+   "name": "웹소설",
+   "desc": "플랫폼 연재"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.nv-craft",
+   "name": "작법 공부와 습작",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "study_group",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "인물·구조·문장을 공부하며 꾸준히 쓴다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "공부",
+     "items": [
+      "작법서와 좋은 작품 분석",
+      "장면 쓰기 연습"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "습작",
+     "items": [
+      "주 1편 쓰기",
+      "합평 모임"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.nv-short",
+   "name": "단편 완성하기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "단편 소설 3편을 끝까지 쓴다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "집필",
+     "items": [
+      "초고",
+      "퇴고",
+      "합평 반영"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.nv-debut",
+   "name": "공모전과 신춘문예 투고",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "contest",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "완성작을 공모전에 낸다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "공모전 일정과 분량"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "투고",
+     "items": [
+      "작품 다듬기",
+      "투고",
+      "결과 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.nv-serial",
+   "name": "웹소설 연재",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "플랫폼에 꾸준히 연재해 독자를 모은다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "장르와 독자 분석",
+      "초반 분량 비축"
+     ]
+    },
+    {
+     "weeks": 16,
+     "title": "연재",
+     "items": [
+      "주 5회 안팎 연재",
+      "지표 확인",
+      "계약 제안 검토"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.nv-contract",
+   "name": "출판·연재 계약 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "인세·선인세·배분 비율과 2차 저작권 조항을 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "계약",
+     "items": [
+      "표준 계약서 조항",
+      "수익 배분 구조",
+      "2차 저작권"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.writing",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.nv-craft",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.nv-short",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.nv-contract",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "literary": [
+   {
+    "ref": "p.nv-debut",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "web": [
+   {
+    "ref": "p.nv-serial",
+    "step": 4,
+    "major": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "jobCode": "414101",
+ "title": "화가",
+ "displayName": "미술 작가",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이나 채용이 없다. 작업을 꾸준히 쌓아 전시와 공모, 판매로 작가 활동을 이어 간다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "414102",
+   "title": "조각가",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.ar-practice",
+   "name": "작업을 이어 가며 작품 세계 만들기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 180,
+   "goal": "주제와 재료를 정해 연작을 만든다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "탐색",
+     "items": [
+      "주제·재료 실험",
+      "작가 노트 쓰기"
+     ]
+    },
+    {
+     "weeks": 20,
+     "title": "작업",
+     "items": [
+      "연작 10점 이상",
+      "기록 촬영"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ar-show",
+   "name": "전시 열기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "단체전에 참여하고 개인전을 연다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "단체전",
+     "items": [
+      "공모·기획전 참여"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "개인전",
+     "items": [
+      "공간 섭외",
+      "설치·홍보",
+      "전시 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ar-open",
+   "name": "공모전·레지던시·지원 사업 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "작가 공모와 창작 지원 사업에 지원한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "지원",
+     "items": [
+      "공모 일정 정리",
+      "지원서·포트폴리오 제출"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ar-sell",
+   "name": "작품 판매 채널 열기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "아트 페어와 온라인으로 작품을 판다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "판매",
+     "items": [
+      "가격 정하기",
+      "아트 페어 참가",
+      "온라인 판매"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.drawing-basics",
+   "step": 1,
+   "major": false,
+   "skip": "미술 전공 실기에서 배운다"
+  },
+  {
+   "ref": "cp.dept-admission",
+   "step": 2,
+   "major": true,
+   "note": "미술 대학 — 필수는 아니다",
+   "optional": true
+  },
+  {
+   "ref": "p.ar-practice",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.ar-show",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.ar-open",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.ar-sell",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

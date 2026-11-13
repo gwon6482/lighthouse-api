@@ -1,0 +1,145 @@
+{
+ "jobCode": "416202",
+ "title": "모델",
+ "displayName": "모델",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이나 정해진 채용이 없다. 훈련과 프로필을 갖추고 에이전시 지원과 오디션으로 일을 얻는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.md-body",
+   "name": "체형과 컨디션 관리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "촬영·쇼 일정에 맞춰 몸 상태를 관리한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "관리",
+     "items": [
+      "운동·식단 계획",
+      "피부·자세 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.md-walk",
+   "name": "워킹과 포즈 훈련",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "워킹과 촬영 포즈를 훈련한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "훈련",
+     "items": [
+      "워킹",
+      "포즈·표정",
+      "카메라 테스트"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.md-book",
+   "name": "프로필과 포트폴리오 촬영",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "에이전시 지원용 사진을 준비한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "촬영",
+     "items": [
+      "콘셉트별 촬영",
+      "컴포지트 카드 만들기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.md-agency",
+   "name": "에이전시 지원과 오디션",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "에이전시와 광고·쇼 오디션에 지원한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "에이전시 조건 비교"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "지원",
+     "items": [
+      "지원·오디션",
+      "계약 조건 검토"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "계약 전 전속 조건과 비용 부담을 확인할 것"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.md-body",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.md-walk",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.md-book",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.md-agency",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 5,
+   "major": true,
+   "optional": true
+  }
+ ],
+ "byTrack": {}
+}

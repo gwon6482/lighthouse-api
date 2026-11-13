@@ -1,0 +1,293 @@
+{
+ "jobCode": "416102",
+ "title": "영화감독",
+ "displayName": "영화·연극 연출가",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이나 채용이 없다. 직접 만든 작품과 현장 경험으로 기회를 얻는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "film",
+   "name": "영화",
+   "desc": "극영화·다큐멘터리"
+  },
+  {
+   "id": "stage",
+   "name": "연극·공연",
+   "desc": "무대 연출·기술 감독"
+  },
+  {
+   "id": "ad",
+   "name": "광고·뮤직비디오",
+   "desc": "짧은 영상 연출"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "416103",
+   "title": "연극연출가",
+   "track": "stage"
+  },
+  {
+   "jobCode": "416104",
+   "title": "광고영상감독",
+   "track": "ad"
+  },
+  {
+   "jobCode": "416105",
+   "title": "연극영화방송기술감독",
+   "track": "stage"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.dr-language",
+   "name": "연출 기초",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "시나리오를 분석해 숏과 동선으로 옮기는 방법을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "기초",
+     "items": [
+      "시나리오 분석",
+      "콘티·숏 설계",
+      "배우 연기 지도"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dr-short",
+   "name": "단편 영화 연출",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "team_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "단편 영화를 기획부터 완성까지 연출한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기획",
+     "items": [
+      "시나리오",
+      "스태프·배우 구성"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "제작",
+     "items": [
+      "촬영",
+      "편집·후반 작업"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dr-festival",
+   "name": "영화제 출품",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "contest",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "완성작을 영화제와 지원 사업에 낸다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "영화제 일정·규정"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "출품",
+     "items": [
+      "출품과 상영",
+      "제작 지원 사업 신청"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dr-play",
+   "name": "연극 연출 작품 올리기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "team_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "소극장 공연을 연출해 무대에 올린다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "희곡 분석",
+      "배우·스태프 구성"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "공연",
+     "items": [
+      "연습",
+      "무대·조명 협의",
+      "공연"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dr-reel",
+   "name": "광고·뮤직비디오 연출 릴",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "짧은 영상 작품을 모아 연출 릴을 만든다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "제작",
+     "items": [
+      "작품 3편 연출",
+      "후반 작업"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "릴 편집"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dr-crew",
+   "name": "연출부로 현장 경험",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "현장에서 연출부 일을 맡아 제작 과정을 익힌다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "제작사·극단 구인 확인"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "현장",
+     "items": [
+      "일정·현장 진행",
+      "스크립트 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.dr-language",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.shooting-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.video-edit",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.writing",
+   "step": 4,
+   "major": true,
+   "note": "시나리오·기획서"
+  },
+  {
+   "ref": "cp.dept-admission",
+   "step": 5,
+   "major": true,
+   "note": "영화·연극 관련 학과 — 필수는 아니다",
+   "optional": true
+  },
+  {
+   "ref": "p.dr-crew",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "film": [
+   {
+    "ref": "p.dr-short",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.dr-festival",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "stage": [
+   {
+    "ref": "p.dr-play",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "ad": [
+   {
+    "ref": "p.dr-reel",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.after-effects",
+    "step": 8,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}

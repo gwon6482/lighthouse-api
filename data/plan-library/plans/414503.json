@@ -1,0 +1,260 @@
+{
+ "jobCode": "414503",
+ "title": "연주가",
+ "displayName": "클래식·국악 음악가",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "음악 대학에서 전공 실기를 쌓고 콩쿠르·오디션으로 무대에 선다. 유학이나 대학원을 거치는 경우가 많다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "inst",
+   "name": "기악",
+   "desc": "피아노·현악·관악 등"
+  },
+  {
+   "id": "vocal",
+   "name": "성악",
+   "desc": "오페라·합창"
+  },
+  {
+   "id": "conduct",
+   "name": "지휘",
+   "desc": "오케스트라·합창 지휘"
+  },
+  {
+   "id": "gugak",
+   "name": "국악",
+   "desc": "국악 기악·성악"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "414602",
+   "title": "성악가",
+   "track": "vocal"
+  },
+  {
+   "jobCode": "414501",
+   "title": "지휘자",
+   "track": "conduct"
+  },
+  {
+   "jobCode": "414401",
+   "title": "국악인",
+   "track": "gugak"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.mu-practice",
+   "name": "전공 실기 연습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 240,
+   "goal": "레슨을 받으며 레퍼토리를 넓힌다.",
+   "phases": [
+    {
+     "weeks": 50,
+     "title": "연습",
+     "items": [
+      "매일 연습",
+      "정기 레슨",
+      "레퍼토리 확장"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mu-ensemble",
+   "name": "앙상블·오케스트라 활동",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "club",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 180,
+   "goal": "함께 연주하는 경험을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 30,
+     "title": "활동",
+     "items": [
+      "정기 연습",
+      "연주회 참여"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mu-competition",
+   "name": "콩쿠르 참가",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "contest",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "콩쿠르에 나가 실력을 검증받는다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "지정곡·자유곡 준비",
+      "참가"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mu-recital",
+   "name": "독주회와 연주 영상",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "독주회를 열고 연주 영상을 남긴다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "프로그램 구성",
+      "리허설"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "공연",
+     "items": [
+      "공연과 녹화"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mu-audition",
+   "name": "단체 오디션 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "심화",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "오케스트라·합창단·국악단 오디션에 지원한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "지원",
+     "items": [
+      "오디션 곡 준비",
+      "지원·응시"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mu-score",
+   "name": "총보 읽기와 지휘법",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "총보를 분석하고 기본 지휘 기법을 익힌다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "공부",
+     "items": [
+      "총보 분석",
+      "지휘 기법",
+      "앙상블 지휘 실습"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.mu-practice",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.dept-admission",
+   "step": 2,
+   "major": false,
+   "skip": "이미 음악 대학에 다니고 있다",
+   "note": "음악 대학(실기 입시)"
+  },
+  {
+   "ref": "p.mu-ensemble",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.mu-competition",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.mu-recital",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.overseas",
+   "step": 6,
+   "major": true,
+   "note": "유학",
+   "optional": true
+  },
+  {
+   "ref": "p.mu-audition",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.lecture-demo",
+   "step": 8,
+   "major": true,
+   "note": "레슨·강의 병행",
+   "optional": true
+  }
+ ],
+ "byTrack": {
+  "inst": [],
+  "vocal": [],
+  "conduct": [
+   {
+    "ref": "p.mu-score",
+    "step": 3.5,
+    "major": true
+   }
+  ],
+  "gugak": []
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "jobCode": "231501",
+ "title": "사회단체활동가",
+ "displayName": "비영리 단체 활동가",
+ "family": "welfare",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 관심 의제의 활동 경험과 글쓰기·기획 능력으로 단체에 들어간다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.np-sector",
+   "name": "비영리 영역 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "단체의 종류와 재원, 관련 제도를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "단체 유형과 의제",
+      "회비·후원·보조금 구조",
+      "관련 법과 회계 투명성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.np-campaign",
+   "name": "캠페인과 모금 기획",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "의제 하나의 캠페인과 모금 계획을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "의제와 이해 관계자"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "기획",
+     "items": [
+      "메시지와 행동 제안",
+      "모금 계획",
+      "성과 지표"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.np-sector",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.writing",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.program-plan",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.np-campaign",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 8,
+   "major": true,
+   "note": "단체 인턴·활동가 양성 과정"
+  },
+  {
+   "ref": "cp.second-language",
+   "step": 9,
+   "major": true,
+   "note": "국제 개발 협력 분야",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

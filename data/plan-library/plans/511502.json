@@ -1,0 +1,117 @@
+{
+ "jobCode": "511502",
+ "title": "수의사보조원",
+ "displayName": "동물보건사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "동물보건사 자격이 생기면서 인증받은 양성 기관을 졸업하고 자격시험에 합격하는 길이 표준이 됐다.",
+ "gate": "동물보건사 자격 — 평가 인증을 받은 양성 기관 졸업 + 자격시험 합격",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.vn-exam",
+   "name": "동물보건사 자격시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "동물보건사 자격시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "준비",
+     "items": [
+      "기초·예방 동물 보건학",
+      "임상 동물 보건학",
+      "관련 법규"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.vn-skills",
+   "name": "동물 간호와 보정 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "진료 보조와 입원 동물 간호를 한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "실습",
+     "items": [
+      "보정과 활력 징후 측정",
+      "투약·수술 보조",
+      "위생·소독 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 동물보건 관련 학과에 다니고 있다",
+   "note": "평가 인증을 받은 동물보건 관련 학과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 3,
+   "major": true,
+   "note": "동물병원 실습"
+  },
+  {
+   "ref": "p.vn-skills",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.vn-exam",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 6,
+   "major": true,
+   "note": "보호자 응대"
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 7,
+   "major": true,
+   "note": "동물병원"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "자격 요건은 수의사법이 정본"
+}

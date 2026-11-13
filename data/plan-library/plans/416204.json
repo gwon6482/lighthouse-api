@@ -1,0 +1,128 @@
+{
+ "jobCode": "416204",
+ "title": "개그맨 및 코미디언",
+ "displayName": "코미디언",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이나 정해진 채용이 없다. 무대와 영상으로 웃음을 검증받으며 이름을 알린다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cm-write",
+   "name": "코미디 대본 쓰기와 캐릭터 만들기",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "아이디어를 짜서 코너 대본으로 쓴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "좋아하는 코미디 구조 분석"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "쓰기",
+     "items": [
+      "주 2편 대본",
+      "캐릭터 만들기",
+      "동료와 합 맞추기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cm-stage",
+   "name": "무대 경험 쌓기",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 180,
+   "goal": "소극장과 공개 무대에서 관객 반응을 본다.",
+   "phases": [
+    {
+     "weeks": 24,
+     "title": "무대",
+     "items": [
+      "오픈 마이크·소극장 공연",
+      "반응 기록하고 고치기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cm-audition",
+   "name": "공채와 오디션 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "방송사 공채와 극단·기획사 오디션에 지원한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "지원",
+     "items": [
+      "오디션용 코너 준비",
+      "지원·응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "방송사 공채는 시행하지 않는 해가 있다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.cm-write",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.voice-training",
+   "step": 2,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.cm-stage",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.video-edit",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.cm-audition",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

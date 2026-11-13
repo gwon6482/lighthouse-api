@@ -1,0 +1,101 @@
+{
+ "jobCode": "307601",
+ "title": "안마사",
+ "displayName": "안마사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "안마사 자격은 법에 따라 시각장애인만 받을 수 있다. 안마 수련 과정을 마치고 시·도지사의 자격 인정을 받는다.",
+ "gate": "안마사 자격 — 시각장애인만 취득할 수 있다(의료법). 안마 수련 과정 이수 뒤 시·도지사 자격 인정",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ms-route",
+   "name": "자격 요건 확인",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 60,
+   "goal": "자격 요건과 수련 기관을 확인한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "자격 인정 요건",
+      "수련 기관(특수학교 과정·안마 수련원)",
+      "지원 제도"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.ms-course",
+   "name": "안마 수련 과정 이수",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 300,
+   "goal": "수련 과정을 마치고 자격을 인정받는다.",
+   "phases": [
+    {
+     "weeks": 80,
+     "title": "수련",
+     "items": [
+      "해부·생리·병리",
+      "안마·마사지·지압 실기",
+      "임상 실습"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "자격",
+     "items": [
+      "자격 인정 신청"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "과정 기간은 기관에 따라 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.ms-route",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ms-course",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 4,
+   "major": true,
+   "note": "안마원·기업 건강 관리실"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 5,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "자격 요건은 의료법과 안마사에 관한 규칙이 정본"
+}

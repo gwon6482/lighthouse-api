@@ -1,0 +1,219 @@
+{
+ "jobCode": "414502",
+ "title": "작곡가",
+ "displayName": "작곡가",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이나 정해진 채용이 없다. 곡을 만들어 들려 주는 것이 전부이고, 기획사·퍼블리싱 회사나 영상 제작사에 데모를 보낸다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "pop",
+   "name": "대중음악",
+   "desc": "가요·K팝 작곡"
+  },
+  {
+   "id": "media",
+   "name": "영상·게임 음악",
+   "desc": "영화·드라마·게임 음악"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.co-theory",
+   "name": "화성학과 편곡 이론",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "화성·선율·편곡의 기본을 곡에 쓴다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "이론",
+     "items": [
+      "화성학",
+      "선율·리듬",
+      "편곡 기초"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.co-daw",
+   "name": "작곡 프로그램과 미디",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "작곡 프로그램으로 곡을 만들고 다듬는다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "도구",
+     "items": [
+      "시퀀싱",
+      "가상 악기·샘플",
+      "녹음과 편집"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.co-tracks",
+   "name": "곡 포트폴리오 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "완성곡 5곡 이상을 데모로 만든다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "작곡",
+     "items": [
+      "곡 쓰기",
+      "편곡·믹싱",
+      "데모 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.co-pitch",
+   "name": "데모 보내기와 협업",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "기획사·퍼블리싱 회사에 데모를 보내고 공동 작업에 참여한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "활동",
+     "items": [
+      "데모 투고",
+      "송캠프·공동 작곡",
+      "피드백 반영"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.co-score",
+   "name": "영상에 음악 붙이기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "단편 영화·게임 영상에 음악을 만들어 붙인다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "작업",
+     "items": [
+      "영상 분석",
+      "작곡·녹음",
+      "싱크 맞추기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.co-rights",
+   "name": "저작권 등록과 수익 구조",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "저작권 신탁과 저작권료가 나뉘는 구조를 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "이해",
+     "items": [
+      "저작권 등록·신탁",
+      "저작권료 분배",
+      "계약 조항"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.co-theory",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.co-daw",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.sound-mixing",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.co-tracks",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.co-rights",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "pop": [
+   {
+    "ref": "p.co-pitch",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "media": [
+   {
+    "ref": "p.co-score",
+    "step": 5,
+    "major": true
+   }
+  ]
+ }
+}

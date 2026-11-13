@@ -1,0 +1,220 @@
+{
+ "jobCode": "414701",
+ "title": "무용가",
+ "displayName": "무용가·안무가",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "순수 무용은 무용과와 콩쿠르·무용단 오디션으로, 실용 무용은 영상과 현장 활동으로 길을 연다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "art",
+   "name": "순수 무용",
+   "desc": "발레·현대 무용·한국 무용"
+  },
+  {
+   "id": "street",
+   "name": "실용 무용",
+   "desc": "방송·스트리트 댄스·안무"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "414702",
+   "title": "안무가",
+   "track": null
+  },
+  {
+   "jobCode": "414703",
+   "title": "대중무용수",
+   "track": "street"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.dn-train",
+   "name": "전공 실기 훈련",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "매일 훈련하며 기본기와 표현을 다진다.",
+   "phases": [
+    {
+     "weeks": 50,
+     "title": "훈련",
+     "items": [
+      "기본기 클래스",
+      "작품 연습",
+      "컨디션 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dn-work",
+   "name": "작품 창작과 공연",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "작품을 만들어 무대에 올린다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "창작",
+     "items": [
+      "안무 구성",
+      "연습"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "공연",
+     "items": [
+      "공연과 영상 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dn-video",
+   "name": "안무 영상 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "직접 짠 안무를 영상으로 공개한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "제작",
+     "items": [
+      "안무 짜기",
+      "촬영·편집",
+      "공개"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dn-teach",
+   "name": "강사·백업 댄서 활동",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "수업과 무대에서 경력을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 24,
+     "title": "활동",
+     "items": [
+      "학원 수업",
+      "공연·방송 백업 댄서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dn-audition",
+   "name": "무용단·오디션 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "심화",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "무용단·기획사·공연 오디션에 지원한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "지원",
+     "items": [
+      "오디션 작품 준비",
+      "지원·응시"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.dn-train",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.sports-rehab",
+   "step": 2,
+   "major": true,
+   "note": "부상 관리",
+   "optional": true
+  },
+  {
+   "ref": "p.dn-audition",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "art": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 1.5,
+    "major": false,
+    "skip": "이미 무용과에 다니고 있다",
+    "note": "무용과(실기 입시)"
+   },
+   {
+    "ref": "p.dn-work",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.contest",
+    "step": 4,
+    "major": true,
+    "note": "무용 콩쿠르",
+    "optional": true
+   }
+  ],
+  "street": [
+   {
+    "ref": "p.dn-video",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.channel",
+    "step": 3.5,
+    "major": true
+   },
+   {
+    "ref": "p.dn-teach",
+    "step": 4,
+    "major": true
+   }
+  ]
+ }
+}

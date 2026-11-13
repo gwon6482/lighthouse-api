@@ -1,0 +1,179 @@
+{
+ "jobCode": "212901",
+ "title": "보조교사",
+ "displayName": "보조 교사·방과후 강사",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 학교의 지원 인력은 교육청 공개 채용으로, 방과후 강사는 학교별 공모로 뽑는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "assistant",
+   "name": "학교 지원 인력",
+   "desc": "특수 교육 실무사 등"
+  },
+  {
+   "id": "afterschool",
+   "name": "방과후·돌봄 강사",
+   "desc": "방과후 학교 프로그램"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.as-special",
+   "name": "장애 학생 지원 방법",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "장애 유형별 지원 방법과 학교에서의 역할을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "지원",
+     "items": [
+      "장애 유형별 특성",
+      "이동·식사·학습 지원",
+      "안전과 인권"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.as-apply",
+   "name": "교육청 공개 채용 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "교육 공무직 채용 전형에 대비한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "직종별 자격 요건·전형"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "준비",
+     "items": [
+      "서류",
+      "면접",
+      "일부 지역의 필기"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "직종과 전형은 시도 교육청 공고마다 다르다"
+  },
+  {
+   "id": "p.as-program",
+   "name": "방과후 프로그램 계획서",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "한 학기 프로그램 계획서를 만들어 학교 공모에 낸다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "대상 학년과 주제"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "작성",
+     "items": [
+      "차시별 계획",
+      "준비물·안전 계획",
+      "강사 이력"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.youth-understanding",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "학교·아동 기관",
+   "optional": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "assistant": [
+   {
+    "ref": "p.as-special",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "p.as-apply",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "afterschool": [
+   {
+    "ref": "p.as-program",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "cp.lecture-demo",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.teaching-material",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
+}
