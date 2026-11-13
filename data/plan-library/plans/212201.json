@@ -1,0 +1,174 @@
+{
+ "jobCode": "212201",
+ "title": "초등학교교사",
+ "displayName": "초등교사",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "교육대학교나 초등교육과를 졸업해 정교사 자격을 받고, 시도 교육청 임용시험에 합격해야 한다.",
+ "gate": "교육대학교·초등교육과 졸업(초등 정교사 2급) + 초등 임용시험 합격",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.elem-admission",
+   "name": "교육대학교 진학",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 180,
+   "goal": "교육대학교나 초등교육과에 입학한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "전형 파악",
+     "items": [
+      "대학별 전형 요소 확인",
+      "수시·정시 계획",
+      "면접 유형 확인"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "준비",
+     "items": [
+      "수능·내신 공부",
+      "교직 적성 면접 준비",
+      "교육 관련 활동"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "지원",
+     "items": [
+      "원서",
+      "면접",
+      "등록"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "편입·학사편입 모집은 매우 적다"
+  },
+  {
+   "id": "p.elem-practicum",
+   "name": "교육실습",
+   "type": "edu",
+   "subtype": "required-course",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "학교 현장에서 참관·수업·실무 실습을 마친다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "참관 실습",
+     "items": [
+      "수업 참관 기록",
+      "학급 운영 관찰"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "수업 실습",
+     "items": [
+      "지도안 작성",
+      "수업 진행",
+      "협의회 피드백"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실무 실습",
+     "items": [
+      "학급 업무 맡아 보기",
+      "실습록 정리"
+     ]
+    }
+   ],
+   "basis": "law",
+   "note": "학년에 따라 나눠서 한다"
+  },
+  {
+   "id": "p.elem-courses",
+   "name": "교과교육·교육과정 공부",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "초등 전 교과의 교육과정과 지도 방법을 익힌다.",
+   "phases": [
+    {
+     "weeks": 15,
+     "title": "학기 중",
+     "items": [
+      "교과교육론 수업",
+      "교육과정 총론·각론 정리",
+      "수업 시연 과제"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "학기 말",
+     "items": [
+      "임용 과목과 연결해 정리"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "note": "매 학기 반복한다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.elem-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 교육대학교에 다니고 있다"
+  },
+  {
+   "ref": "p.elem-courses",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.edu-volunteer",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.elem-practicum",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 5,
+   "major": true,
+   "note": "임용시험 응시 요건(급수는 공고 확인)"
+  },
+  {
+   "ref": "cp.teacher-exam",
+   "step": 6,
+   "major": true,
+   "note": "초등 임용 1차 — 교직 논술 + 교육과정"
+  },
+  {
+   "ref": "cp.teaching-demo",
+   "step": 7,
+   "major": true,
+   "note": "2차 — 수업 실연·심층 면접·영어 면접"
+  }
+ ],
+ "byTrack": {},
+ "verify": "임용 과목·가산점은 시도 교육청 시행 계획이 정본"
+}

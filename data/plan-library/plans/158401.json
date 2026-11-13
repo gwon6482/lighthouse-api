@@ -1,0 +1,319 @@
+{
+ "jobCode": "158401",
+ "title": "산업안전원 및 위험관리원",
+ "displayName": "안전관리자",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "사업장 안전관리자로 선임되려면 법이 정한 자격이 필요하다. 산업안전(산업)기사 같은 국가기술자격이 가장 일반적인 길이다.",
+ "gate": "안전관리자 선임 자격(산업안전보건법 시행령) — 산업안전기사·산업기사, 건설안전기사 등",
+ "tracks": [
+  {
+   "id": "construction",
+   "name": "건설 안전",
+   "desc": "건설 현장 안전관리"
+  },
+  {
+   "id": "mfg",
+   "name": "제조 안전",
+   "desc": "공장·설비 안전관리"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "158402",
+   "title": "위험관리원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.safe-cert",
+   "name": "산업안전기사",
+   "type": "cert",
+   "subtype": "national-tech",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "산업안전기사 필기와 실기에 합격한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "응시자격과 일정",
+     "items": [
+      "큐넷에서 응시자격 확인",
+      "접수",
+      "교재 준비"
+     ]
+    },
+    {
+     "weeks": 7,
+     "title": "필기",
+     "items": [
+      "안전관리론·인간공학",
+      "기계·전기·화학·건설 안전",
+      "기출 회독"
+     ]
+    },
+    {
+     "weeks": 7,
+     "title": "실기",
+     "items": [
+      "필답형 암기",
+      "작업형 영상 문제",
+      "기출 복원"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "응시자격(관련 학과·경력)에 못 미치면 산업안전산업기사부터"
+  },
+  {
+   "id": "p.safe-ra",
+   "name": "위험성평가 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "작업 공정의 유해·위험 요인을 찾아 위험성평가서를 작성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "방법",
+     "items": [
+      "위험성평가 절차",
+      "평가 기법(빈도·강도 등)",
+      "서식 익히기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실습",
+     "items": [
+      "공정 사례 2개 평가",
+      "감소 대책 세우기",
+      "평가서 완성"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.sc-cert",
+   "name": "건설안전기사",
+   "type": "cert",
+   "subtype": "national-tech",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "건설안전기사 필기와 실기에 합격한다.",
+   "phases": [
+    {
+     "weeks": 7,
+     "title": "필기",
+     "items": [
+      "건설 시공·재료",
+      "건설 안전 기술",
+      "기출 회독"
+     ]
+    },
+    {
+     "weeks": 7,
+     "title": "실기",
+     "items": [
+      "필답형 암기",
+      "작업형 문제",
+      "기출 복원"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.sc-field",
+   "name": "건설 현장 안전 실무",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "현장의 안전 점검·교육·서류 업무 흐름을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "업무",
+     "items": [
+      "공종별 위험과 대책",
+      "안전 점검·작업 전 회의",
+      "안전보건관리비·서류"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "사례",
+     "items": [
+      "사고 사례 분석",
+      "점검표 만들기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sm-process",
+   "name": "기계·공정 안전(방호장치·PSM)",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "설비 방호와 공정안전관리 제도의 기본을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "설비",
+     "items": [
+      "끼임·감전 방호",
+      "안전 인증·검사",
+      "잠금·표지 절차"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "공정",
+     "items": [
+      "공정안전보고서 구성",
+      "화학물질 관리",
+      "비상 대응"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sm-hazmat",
+   "name": "위험물산업기사",
+   "type": "cert",
+   "subtype": "national-tech",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "위험물산업기사에 합격한다.",
+   "phases": [
+    {
+     "weeks": 5,
+     "title": "필기",
+     "items": [
+      "일반화학",
+      "화재 예방·소화",
+      "위험물 성질·취급"
+     ]
+    },
+    {
+     "weeks": 5,
+     "title": "실기",
+     "items": [
+      "필답형 암기",
+      "기출 복원"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.safety-law",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.safe-cert",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.safe-ra",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 5,
+   "major": true,
+   "note": "안전 서류·교육 자료 작성"
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 6,
+   "major": true,
+   "note": "현장 이동",
+   "optional": true
+  },
+  {
+   "ref": "cp.eng-field",
+   "step": 9,
+   "major": true,
+   "note": "현장 실습·안전 보조 경험",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "construction": [
+   {
+    "ref": "p.sc-cert",
+    "step": 7,
+    "major": true,
+    "note": "건설 현장은 건설안전기사를 우대한다"
+   },
+   {
+    "ref": "p.sc-field",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "mfg": [
+   {
+    "ref": "p.sm-process",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.sm-hazmat",
+    "step": 8,
+    "major": true,
+    "optional": true
+   }
+  ]
+ },
+ "verify": "선임 자격·선임 대상 사업장 기준은 산업안전보건법 시행령이 정본"
+}

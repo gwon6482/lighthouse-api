@@ -1,0 +1,405 @@
+{
+ "jobCode": "022202",
+ "title": "인적자원전문가",
+ "displayName": "인사 담당자(HR)",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 인사 제도와 노동법의 기본을 알고, 맡고 싶은 분야의 기획 경험과 인턴으로 증명한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "recruit",
+   "name": "채용",
+   "desc": "채용 기획·운영·브랜딩"
+  },
+  {
+   "id": "hrd",
+   "name": "교육(HRD)",
+   "desc": "교육 기획·조직문화"
+  },
+  {
+   "id": "hrm",
+   "name": "인사운영·보상",
+   "desc": "평가·보상·급여·제도"
+  },
+  {
+   "id": "er",
+   "name": "노무",
+   "desc": "노동법·노사 관계"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "026201",
+   "title": "인사·교육·훈련사무원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.hr-basics",
+   "name": "인사관리 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "채용·평가·보상·교육이 이어지는 인사 업무의 흐름을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "인사 기능 전체 그림",
+      "직무 분석·역량 모델",
+      "평가·보상 기본"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "적용",
+     "items": [
+      "기업 인사 제도 사례 3개",
+      "채용 공고 뜯어보기",
+      "정리 글 쓰기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.hr-recruit",
+   "name": "채용 프로세스 설계 실습",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "가상의 직무 채용을 공고부터 평가표까지 설계한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "직무 정의",
+     "items": [
+      "직무 기술서 쓰기",
+      "필요 역량 정하기",
+      "채용 채널 고르기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "전형 설계",
+     "items": [
+      "공고문 작성",
+      "면접 질문·평가표",
+      "지원자 경험 점검"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "전형 일정표",
+      "지표(전환율) 설계",
+      "기획서 완성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.hr-brand",
+   "name": "채용 브랜딩 콘텐츠 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "회사를 알리는 채용 콘텐츠를 기획해 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "채용 페이지 사례 분석",
+      "지원자 관점 조사",
+      "메시지 정하기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "제작",
+     "items": [
+      "인터뷰 글 1편",
+      "채용 소개 카드",
+      "채널 운영안"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.hr-program",
+   "name": "교육 프로그램 기획안",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "신입 교육이나 리더십 과정 하나를 기획안으로 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "요구 분석",
+     "items": [
+      "대상과 문제 정하기",
+      "필요 역량 조사",
+      "학습 목표"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "설계",
+     "items": [
+      "커리큘럼·시간표",
+      "교수 방법 고르기",
+      "평가·만족도 설계"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "예산·운영 계획",
+      "기획안 완성",
+      "피드백 반영"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.hr-facil",
+   "name": "퍼실리테이션·강의 경험",
+   "type": "activity",
+   "subtype": "club",
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 180,
+   "goal": "모임이나 교육을 직접 진행해 본다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "진행할 자리 찾기",
+      "진행안 짜기",
+      "도구 준비"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "진행",
+     "items": [
+      "워크숍·스터디 진행",
+      "참여자 피드백",
+      "진행안 고치기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.hr-comp",
+   "name": "평가·보상 제도 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "평가 방식과 임금 체계의 종류를 비교해 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "평가",
+     "items": [
+      "MBO·OKR·역량 평가",
+      "평가 오류와 보정",
+      "사례 분석"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "보상",
+     "items": [
+      "연봉제·직무급",
+      "인센티브 설계",
+      "총보상 관점"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.hr-er",
+   "name": "노사관계와 노동법 심화",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "징계·해고·노동조합 관련 규정을 사례로 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "법",
+     "items": [
+      "해고·징계 절차",
+      "노동조합·단체교섭",
+      "비정규직·파견"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "사례",
+     "items": [
+      "노동위원회 사례 읽기",
+      "취업규칙 조항 분석",
+      "쟁점 정리"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "note": "공인노무사 1차 과목과 겹친다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.hr-basics",
+   "step": 2,
+   "major": false,
+   "skip": "경영학 인사관리 과목에서 배운다"
+  },
+  {
+   "ref": "cp.labor-law",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 10,
+   "major": true,
+   "note": "대기업에 지원할 때",
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 11,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 12,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 13,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "recruit": [
+   {
+    "ref": "p.hr-recruit",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.hr-brand",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "hrd": [
+   {
+    "ref": "p.hr-program",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.hr-facil",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "hrm": [
+   {
+    "ref": "p.hr-comp",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.payroll",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.sql",
+    "step": 8,
+    "major": true,
+    "note": "인사 데이터를 다룰 때",
+    "optional": true
+   }
+  ],
+  "er": [
+   {
+    "ref": "p.hr-er",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.payroll",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
+}

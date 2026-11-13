@@ -1,0 +1,182 @@
+{
+ "jobCode": "212101",
+ "title": "중·고등학교교사",
+ "displayName": "중등교사",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "교과 교원자격증(정교사 2급)이 있어야 한다. 사범대, 일반 학과의 교직이수, 교육대학원 가운데 한 경로로 자격을 받고 임용시험이나 사립 채용에 지원한다.",
+ "gate": "중등 정교사 2급(사범대·교직이수·교육대학원) + 국공립은 임용시험 합격",
+ "tracks": [
+  {
+   "id": "public",
+   "name": "국공립 임용",
+   "desc": "임용시험"
+  },
+  {
+   "id": "private",
+   "name": "사립학교",
+   "desc": "사립 채용·기간제"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.sec-route",
+   "name": "교원자격 취득 경로 정하기",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "내 상황에서 가능한 자격 취득 경로와 표시 과목을 정한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "사범대·교직이수·교육대학원 비교",
+      "표시 과목과 선발 인원 확인",
+      "학교 규정 확인"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "계획",
+     "items": [
+      "경로 정하기",
+      "이수 일정표",
+      "임용 선발 인원 추이 확인"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.sec-major",
+   "name": "전공 교과 내용학 공부",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "표시 과목의 전공 내용을 임용 수준으로 정리한다.",
+   "phases": [
+    {
+     "weeks": 15,
+     "title": "학기 중",
+     "items": [
+      "전공 과목 수업",
+      "개념 정리 노트",
+      "기출과 연결"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "학기 말",
+     "items": [
+      "부족 영역 보완 계획"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "note": "매 학기 반복한다"
+  },
+  {
+   "id": "p.sec-private",
+   "name": "사립학교 채용 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "사립학교 전형(필기·수업 실연·면접)을 준비한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "공고",
+     "items": [
+      "교육청 위탁 채용 일정 확인",
+      "학교별 공고 모으기",
+      "서류 준비"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "전형",
+     "items": [
+      "전공 필기",
+      "수업 실연 연습",
+      "학교 인재상 면접 답변"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "1차 필기를 교육청에 위탁하는 학교가 많다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.sec-route",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.teaching-course",
+   "step": 2,
+   "major": false,
+   "skip": "사범대는 학과 과정에 포함돼 있다"
+  },
+  {
+   "ref": "p.sec-major",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.edu-volunteer",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 5,
+   "major": true,
+   "note": "임용시험 응시 요건(급수는 공고 확인)"
+  },
+  {
+   "ref": "cp.teacher-exam",
+   "step": 6,
+   "major": true,
+   "note": "중등 임용 1차 — 교육학 논술 + 전공"
+  },
+  {
+   "ref": "cp.teaching-demo",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "public": [],
+  "private": [
+   {
+    "ref": "p.sec-private",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.temp-teacher",
+    "step": 9,
+    "major": true,
+    "optional": true
+   }
+  ]
+ },
+ "verify": "교직이수는 선발 인원이 적다. 임용 과목·선발 인원은 시도 교육청 공고가 정본"
+}

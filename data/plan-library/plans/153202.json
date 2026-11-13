@@ -1,0 +1,410 @@
+{
+ "jobCode": "153202",
+ "title": "반도체공학기술자 및 연구원",
+ "displayName": "반도체 엔지니어",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법정 자격은 없지만 사실상 이공계 전공(전자·재료·화공·기계·물리)을 본다. 전공 지식에 공정 이해와 실습 경험을 더하고 대기업 공채 절차를 통과한다.",
+ "gate": "법정 요건은 없으나 채용 공고가 이공계 관련 전공 학사 이상을 요구하는 경우가 대부분",
+ "tracks": [
+  {
+   "id": "process",
+   "name": "공정 엔지니어",
+   "desc": "8대 공정·수율"
+  },
+  {
+   "id": "equip",
+   "name": "설비 엔지니어",
+   "desc": "장비 유지보수·개선"
+  },
+  {
+   "id": "design",
+   "name": "회로 설계",
+   "desc": "디지털·아날로그 설계"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.semi-major",
+   "name": "전공 기초(반도체 소자·전자회로)",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "반도체 소자의 동작 원리와 기본 회로를 설명한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "소자",
+     "items": [
+      "에너지 밴드·PN 접합",
+      "MOSFET 동작",
+      "소자 특성 곡선 읽기"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "회로·물성",
+     "items": [
+      "전자회로 기본",
+      "재료·물리 기초",
+      "전공 문제 풀이"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "비전공자는 학위 과정(편입·대학원) 없이 엔지니어 직무로 가기 어렵다"
+  },
+  {
+   "id": "p.semi-process",
+   "name": "반도체 8대 공정 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "웨이퍼에서 패키징까지 공정의 순서와 역할을 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "전공정",
+     "items": [
+      "산화·포토·식각",
+      "증착·이온주입",
+      "금속 배선"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "후공정과 산업",
+     "items": [
+      "테스트·패키징",
+      "메모리·파운드리 구조",
+      "기업별 사업 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.semi-training",
+   "name": "반도체 공정 실습 교육",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "클린룸에서 공정 장비를 직접 다뤄 보고 수료한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "신청",
+     "items": [
+      "공공 실습 교육 찾기",
+      "선발 요건 확인",
+      "신청"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실습",
+     "items": [
+      "클린룸 안전 교육",
+      "단위 공정 실습",
+      "측정·분석"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "실습 보고서",
+      "자기소개서에 반영"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "대학·공공기관의 단기 실습 과정이 있다. 모집 시기와 대상이 정해져 있다"
+  },
+  {
+   "id": "p.sp-yield",
+   "name": "공정 데이터 분석 과제",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "공정 변수와 수율의 관계를 분석한 과제를 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "주제",
+     "items": [
+      "공정·불량 유형 조사",
+      "데이터 구하기(공개·실습)",
+      "가설"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "분석",
+     "items": [
+      "변수 영향 분석",
+      "개선 조건 제안",
+      "보고서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.se-equip",
+   "name": "설비 기초(진공·플라즈마·PLC)",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "공정 장비의 기본 원리와 유지보수 개념을 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "원리",
+     "items": [
+      "진공·펌프",
+      "플라즈마",
+      "센서·제어(PLC)"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "유지보수",
+     "items": [
+      "예방 보전",
+      "고장 분석 방법",
+      "설비 지표(가동률)"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sd-hdl",
+   "name": "디지털 회로 설계(Verilog·FPGA)",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "Verilog로 회로를 설계하고 FPGA에서 검증한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "언어",
+     "items": [
+      "조합·순차 회로",
+      "상태 기계",
+      "테스트벤치"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "구현",
+     "items": [
+      "FPGA 합성",
+      "타이밍 분석",
+      "소규모 프로세서·인터페이스 구현"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sd-analog",
+   "name": "아날로그 회로와 시뮬레이션(SPICE)",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "증폭기 등 기본 아날로그 회로를 설계해 시뮬레이션한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "회로",
+     "items": [
+      "증폭기 설계",
+      "바이어스·주파수 응답",
+      "잡음·안정성"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "시뮬레이션",
+     "items": [
+      "SPICE 사용법",
+      "설계 사양 맞추기",
+      "결과 보고서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sd-project",
+   "name": "회로 설계 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "team_project",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "설계 사양을 정하고 구현·검증한 결과를 문서로 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "사양",
+     "items": [
+      "주제와 사양 정하기",
+      "구조 설계"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "설계·검증",
+     "items": [
+      "블록별 설계",
+      "시뮬레이션 검증",
+      "문제 해결 기록"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "결과 문서",
+      "발표"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.semi-major",
+   "step": 1,
+   "major": false,
+   "skip": "전공 필수 과목에서 배운다"
+  },
+  {
+   "ref": "p.semi-process",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.semi-training",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.study-club",
+   "step": 4,
+   "major": true,
+   "note": "전공 학회·스터디",
+   "optional": true
+  },
+  {
+   "ref": "cp.eng-field",
+   "step": 8,
+   "major": true,
+   "note": "학부연구생·현장실습",
+   "optional": true
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 9,
+   "major": true,
+   "note": "대기업은 영어 말하기 성적을 본다"
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 11,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 12,
+   "major": true,
+   "note": "전공 질문이 나오는 직무 면접"
+  }
+ ],
+ "byTrack": {
+  "process": [
+   {
+    "ref": "cp.six-sigma",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "p.sp-yield",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "equip": [
+   {
+    "ref": "p.se-equip",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "cp.six-sigma",
+    "step": 6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "design": [
+   {
+    "ref": "p.sd-hdl",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "p.sd-analog",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.sd-project",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
+}

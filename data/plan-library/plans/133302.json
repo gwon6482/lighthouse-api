@@ -1,0 +1,282 @@
+{
+ "jobCode": "133302",
+ "title": "웹기획자",
+ "displayName": "서비스 기획자·PM",
+ "family": "it",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 서비스를 뜯어보고 문제를 정의하는 힘, 화면과 정책을 문서로 만드는 힘을 결과물로 증명한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "planner",
+   "name": "서비스 기획",
+   "desc": "요구사항·화면 설계·정책"
+  },
+  {
+   "id": "pm",
+   "name": "PM·PO",
+   "desc": "제품 목표·우선순위·지표"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pl-basics",
+   "name": "서비스 기획 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "문제 정의에서 요구사항 정리까지 기획의 흐름을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "사용자 문제 정의",
+      "요구사항과 우선순위",
+      "개발 과정 이해"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "자주 쓰는 앱 기능 흐름 그리기",
+      "용어 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pl-reverse",
+   "name": "역기획(서비스 뜯어보기)",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "서비스 하나를 골라 구조·정책·지표를 분석한 문서를 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "핵심 기능과 사용자 흐름",
+      "정책·예외 처리 추정",
+      "수익 모델"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "개선",
+     "items": [
+      "문제 구간 찾기",
+      "개선안과 기대 효과",
+      "문서로 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pl-spec",
+   "name": "화면 설계서와 정책서 쓰기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "개발자가 보고 만들 수 있는 화면 설계서와 정책서를 쓴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "화면",
+     "items": [
+      "정보 구조·플로우 차트",
+      "와이어프레임",
+      "상태·예외 화면"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "정책",
+     "items": [
+      "기능 정의서",
+      "정책·권한·오류 문구",
+      "QA 시나리오"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pl-ops",
+   "name": "운영·관리자 화면 기획",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "서비스 운영에 필요한 관리자 화면과 업무 흐름을 기획한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "업무 파악",
+     "items": [
+      "운영 업무 목록",
+      "데이터 흐름"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "설계",
+     "items": [
+      "관리자 화면 설계",
+      "권한·이력 정책",
+      "운영 지표"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pl-metrics",
+   "name": "지표 설계와 로드맵",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "제품의 핵심 지표를 정하고 분기 로드맵을 짠다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지표",
+     "items": [
+      "북극성 지표 정하기",
+      "지표 나무 그리기",
+      "측정 방법"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "로드맵",
+     "items": [
+      "과제 목록과 우선순위",
+      "분기 계획",
+      "이해관계자 설득 문서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.pl-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.pl-reverse",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.figma",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.pl-spec",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.sql",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.ga4",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.bootcamp",
+   "step": 7.5,
+   "major": true,
+   "note": "기획·PM 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.team-project",
+   "step": 10,
+   "major": true,
+   "note": "개발자·디자이너와 함께"
+  },
+  {
+   "ref": "cp.internship",
+   "step": 11,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 12,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 13,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 14,
+   "major": true,
+   "note": "과제 전형이 있는 곳이 많다"
+  }
+ ],
+ "byTrack": {
+  "planner": [
+   {
+    "ref": "p.pl-ops",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "pm": [
+   {
+    "ref": "p.pl-metrics",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.ab-test",
+    "step": 9,
+    "major": true
+   }
+  ]
+ }
+}

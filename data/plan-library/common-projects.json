@@ -2721,6 +2721,653 @@
      ]
     }
    ]
+  },
+  {
+   "id": "cp.payroll",
+   "name": "급여와 4대보험 실무",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "급여를 계산하고 4대보험 취득·상실 신고를 처리한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "급여",
+     "items": [
+      "급여 항목과 공제",
+      "원천세 계산",
+      "급여 대장 만들기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "4대보험",
+     "items": [
+      "취득·상실 신고",
+      "보수총액 신고",
+      "연말정산 흐름"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "biz"
+   ],
+   "promotedFrom": "027101:p.ap-payroll"
+  },
+  {
+   "id": "cp.labor-law",
+   "name": "노동법 기초",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "근로기준법의 임금·근로시간·연차 규정을 급여에 적용한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "핵심 규정",
+     "items": [
+      "근로계약·임금",
+      "근로시간·연장수당",
+      "연차·퇴직금"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "사례로 수당 계산",
+      "자주 틀리는 사례 정리"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "biz"
+   ],
+   "promotedFrom": "027101:p.ap-labor"
+  },
+  {
+   "id": "cp.jaegyeong",
+   "name": "재경관리사",
+   "type": "cert",
+   "subtype": "private-certified",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "재경관리사에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "과목별 이론",
+     "items": [
+      "재무회계",
+      "세무회계",
+      "원가관리회계"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "기출",
+     "items": [
+      "기출 회독",
+      "과락 과목 보강",
+      "모의고사"
+     ]
+    }
+   ],
+   "note": "기업 회계팀을 목표로 할 때",
+   "scope": "family",
+   "families": [
+    "biz",
+    "finance"
+   ],
+   "promotedFrom": "027101:p.ac-jaegyeong"
+  },
+  {
+   "id": "cp.ga4",
+   "name": "GA4로 지표 읽기",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "웹·앱 지표를 읽고 유입과 전환을 설명한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기본",
+     "items": [
+      "이벤트·세션·전환 개념",
+      "GA4 화면 익히기",
+      "데모 계정 살펴보기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "유입 경로별 성과 보기",
+      "퍼널·리텐션 보고서",
+      "한 장 리포트 쓰기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "biz",
+    "it",
+    "data"
+   ],
+   "promotedFrom": "024101:p.mkt-ga"
+  },
+  {
+   "id": "cp.ab-test",
+   "name": "A/B 테스트와 퍼널 분석",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "가설을 세워 실험을 설계하고 결과를 통계로 해석한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "퍼널·코호트 분석",
+      "핵심 지표(AARRR) 정하기",
+      "SQL로 지표 뽑기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "실험",
+     "items": [
+      "가설과 실험 설계",
+      "표본·유의성 이해",
+      "결과 해석과 회고"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "biz",
+    "it",
+    "data"
+   ],
+   "promotedFrom": "024101:p.gr-experiment"
+  },
+  {
+   "id": "cp.ml-math",
+   "name": "AI를 위한 수학 기초",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "선형대수·확률·미분의 핵심을 모델과 연결해 이해한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "선형대수",
+     "items": [
+      "벡터·행렬 연산",
+      "고유값·분해",
+      "넘파이로 확인"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "확률·통계",
+     "items": [
+      "확률분포",
+      "추정·검정",
+      "베이즈 기초"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "미분과 최적화",
+     "items": [
+      "편미분·연쇄 법칙",
+      "경사하강법",
+      "직접 구현해 보기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "it",
+    "data"
+   ],
+   "promotedFrom": "133201:p.ai-math"
+  },
+  {
+   "id": "cp.ml-basics",
+   "name": "머신러닝 기초",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "대표 알고리즘을 쓰고 평가·튜닝까지 한 번 돌려 본다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "지도 학습",
+     "items": [
+      "회귀·분류",
+      "평가 지표",
+      "과적합과 검증"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "모델 다루기",
+     "items": [
+      "트리·앙상블",
+      "특성 공학",
+      "하이퍼파라미터 튜닝"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실습",
+     "items": [
+      "공개 데이터 문제 풀기",
+      "결과 해석",
+      "노트북 정리"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "it",
+    "data"
+   ],
+   "promotedFrom": "133201:p.ai-ml"
+  },
+  {
+   "id": "cp.data-modeling",
+   "name": "데이터 모델링과 SQL 심화",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "분석용 테이블을 설계하고 느린 쿼리를 고친다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "모델링",
+     "items": [
+      "정규화와 반정규화",
+      "분석용 스키마(스타)",
+      "파티션·인덱스"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "쿼리",
+     "items": [
+      "윈도 함수 심화",
+      "실행 계획 읽기",
+      "느린 쿼리 개선"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "it",
+    "data"
+   ],
+   "promotedFrom": "133201:p.de-modeling"
+  },
+  {
+   "id": "cp.data-pipeline",
+   "name": "데이터 파이프라인 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "수집→적재→가공→대시보드까지 자동으로 도는 파이프라인을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "설계",
+     "items": [
+      "데이터 원천 정하기",
+      "구조도 그리기",
+      "도구 선택"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "구현",
+     "items": [
+      "수집·적재 자동화",
+      "배치 스케줄(Airflow)",
+      "데이터 품질 검사"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "대시보드 연결",
+      "장애 대응 기록",
+      "README"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "it",
+    "data"
+   ],
+   "promotedFrom": "133201:p.de-pipeline"
+  },
+  {
+   "id": "cp.cloud-deploy",
+   "name": "배포와 운영 기초(AWS·Docker)",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "만든 서버를 클라우드에 올리고 자동 배포를 건다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "배포",
+     "items": [
+      "리눅스 기본 명령",
+      "Docker 이미지 만들기",
+      "클라우드 서버에 올리기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "자동화",
+     "items": [
+      "CI/CD 파이프라인",
+      "환경 변수·비밀 관리",
+      "모니터링 기초"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "it",
+    "data"
+   ],
+   "promotedFrom": "133201:p.be-deploy"
+  },
+  {
+   "id": "cp.fs-reading",
+   "name": "재무제표 읽기",
+   "type": "edu",
+   "subtype": "major",
+   "scope": "family",
+   "families": [
+    "biz",
+    "finance",
+    "sales"
+   ],
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "재무상태표·손익계산서·현금흐름표로 회사의 상태를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "구조",
+     "items": [
+      "세 가지 표의 관계",
+      "주요 계정과목",
+      "재무 비율(수익성·안정성)"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "읽기 연습",
+     "items": [
+      "관심 기업 사업보고서 읽기",
+      "경쟁사와 비율 비교",
+      "한 장 분석 메모"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.industry-report",
+   "name": "산업·기업 분석 리포트 쓰기",
+   "type": "output",
+   "subtype": "portfolio",
+   "scope": "family",
+   "families": [
+    "biz",
+    "finance",
+    "sales"
+   ],
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "관심 산업과 기업 하나를 분석한 리포트를 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "자료",
+     "items": [
+      "산업 보고서·공시 모으기",
+      "시장 규모·경쟁 구도 정리",
+      "핵심 질문 정하기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "사업 구조·실적 분석",
+      "강점·위험 요인",
+      "전망과 내 의견"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "10장 안팎 리포트",
+      "피드백 받기",
+      "포트폴리오에 넣기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.dashboard",
+   "name": "대시보드 만들기(Tableau·Power BI)",
+   "type": "skill",
+   "subtype": "data",
+   "scope": "family",
+   "families": [
+    "data",
+    "biz",
+    "it"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "데이터를 연결해 지표를 한눈에 보는 대시보드를 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "도구 익히기",
+     "items": [
+      "데이터 연결",
+      "차트 종류와 쓰임",
+      "필터·계산 필드"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "대시보드",
+     "items": [
+      "지표 정하기",
+      "화면 구성",
+      "공개 데이터로 대시보드 2개"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.safety-law",
+   "name": "산업안전보건법·중대재해처벌법 이해",
+   "type": "edu",
+   "subtype": "major",
+   "scope": "family",
+   "families": [
+    "eng",
+    "tech"
+   ],
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "사업주와 관리자의 안전 의무, 위험성평가 제도를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "법 체계",
+     "items": [
+      "산업안전보건법 주요 조항",
+      "중대재해처벌법 의무",
+      "안전보건관리체제"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "사례",
+     "items": [
+      "재해 사례와 판결 읽기",
+      "현장 적용 점검표 만들기"
+     ]
+    }
+   ],
+   "verify": "법 개정이 잦다"
+  },
+  {
+   "id": "cp.six-sigma",
+   "name": "통계적 품질관리 기초(6시그마·Minitab)",
+   "type": "skill",
+   "subtype": "data",
+   "scope": "family",
+   "families": [
+    "eng",
+    "tech"
+   ],
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "공정 데이터를 통계로 분석해 불량 원인을 찾는다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "도구",
+     "items": [
+      "기초 통계·관리도",
+      "공정능력(Cp·Cpk)",
+      "실험계획법 기초"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "적용",
+     "items": [
+      "예제 데이터 분석",
+      "개선 과제 보고서"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.temp-teacher",
+   "name": "기간제 교사·강사 경험",
+   "type": "activity",
+   "subtype": "work",
+   "scope": "family",
+   "families": [
+    "edu"
+   ],
+   "category": "experience",
+   "method": "parttime",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "학교 현장에서 한 학기 이상 수업과 업무를 맡아 본다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "교육청 구인 공고 확인",
+      "서류·수업 실연",
+      "계약"
+     ]
+    },
+    {
+     "weeks": 16,
+     "title": "근무",
+     "items": [
+      "수업 준비와 진행",
+      "학급·행정 업무",
+      "수업 기록 남기기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "경력 증명",
+      "수업 자료 정리"
+     ]
+    }
+   ]
   }
  ]
 }

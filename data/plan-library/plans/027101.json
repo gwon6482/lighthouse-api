@@ -199,40 +199,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.ac-jaegyeong",
-   "name": "재경관리사",
-   "type": "cert",
-   "subtype": "private-certified",
-   "category": "qualification",
-   "method": "lecture",
-   "level": "심화",
-   "daysPerWeek": 5,
-   "minutesPerSession": 90,
-   "goal": "재경관리사에 합격한다.",
-   "phases": [
-    {
-     "weeks": 6,
-     "title": "과목별 이론",
-     "items": [
-      "재무회계",
-      "세무회계",
-      "원가관리회계"
-     ]
-    },
-    {
-     "weeks": 4,
-     "title": "기출",
-     "items": [
-      "기출 회독",
-      "과락 과목 보강",
-      "모의고사"
-     ]
-    }
-   ],
-   "basis": "practice",
-   "note": "기업 회계팀을 목표로 할 때"
-  },
-  {
    "id": "p.at-filing",
    "name": "세무 신고 실무",
    "type": "skill",
@@ -260,71 +226,6 @@
       "종합소득세 신고 흐름",
       "법인세 조정 기초",
       "가상 사례로 신고서 작성"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.ap-payroll",
-   "name": "급여와 4대보험 실무",
-   "type": "skill",
-   "subtype": "field",
-   "category": "skill",
-   "method": "practice",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "급여를 계산하고 4대보험 취득·상실 신고를 처리한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "급여",
-     "items": [
-      "급여 항목과 공제",
-      "원천세 계산",
-      "급여 대장 만들기"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "4대보험",
-     "items": [
-      "취득·상실 신고",
-      "보수총액 신고",
-      "연말정산 흐름"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.ap-labor",
-   "name": "노동법 기초",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "book",
-   "level": "입문",
-   "daysPerWeek": 2,
-   "minutesPerSession": 60,
-   "goal": "근로기준법의 임금·근로시간·연차 규정을 급여에 적용한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "핵심 규정",
-     "items": [
-      "근로계약·임금",
-      "근로시간·연장수당",
-      "연차·퇴직금"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "적용",
-     "items": [
-      "사례로 수당 계산",
-      "자주 틀리는 사례 정리"
      ]
     }
    ],
@@ -401,7 +302,7 @@
     "optional": true
    },
    {
-    "ref": "p.ac-jaegyeong",
+    "ref": "cp.jaegyeong",
     "step": 9,
     "major": true,
     "optional": true
@@ -416,12 +317,12 @@
   ],
   "payroll": [
    {
-    "ref": "p.ap-payroll",
+    "ref": "cp.payroll",
     "step": 8,
     "major": true
    },
    {
-    "ref": "p.ap-labor",
+    "ref": "cp.labor-law",
     "step": 9,
     "major": true
    }

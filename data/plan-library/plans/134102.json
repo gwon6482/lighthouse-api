@@ -1,0 +1,330 @@
+{
+ "jobCode": "134102",
+ "title": "데이터분석가(빅데이터분석가)",
+ "displayName": "데이터 분석가",
+ "family": "data",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. SQL·파이썬·통계를 갖추고, 실제 데이터로 질문에 답한 분석 결과물로 증명한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "analyst",
+   "name": "데이터 분석",
+   "desc": "지표·대시보드·비즈니스 분석"
+  },
+  {
+   "id": "ds",
+   "name": "데이터 사이언스",
+   "desc": "통계·머신러닝 모델링"
+  },
+  {
+   "id": "de",
+   "name": "데이터 엔지니어링",
+   "desc": "수집·적재·파이프라인"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.da-project",
+   "name": "분석 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "공개 데이터로 질문을 세우고 답을 찾아 글로 공개한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "질문",
+     "items": [
+      "데이터 고르기",
+      "질문 3개 세우기",
+      "분석 계획"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "분석",
+     "items": [
+      "정제·탐색",
+      "가설 검증",
+      "시각화"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "공개",
+     "items": [
+      "결론과 한계 쓰기",
+      "코드·글 공개",
+      "피드백 반영"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.da-biz",
+   "name": "비즈니스 지표 분석 리포트",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "서비스 지표를 분석해 의사결정에 쓸 리포트를 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지표 이해",
+     "items": [
+      "서비스 지표 정의",
+      "퍼널·코호트 설계"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "SQL로 지표 추출",
+      "원인 가설과 검증",
+      "대시보드 연결"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "보고",
+     "items": [
+      "한 장 요약",
+      "액션 제안"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ds-cert",
+   "name": "빅데이터분석기사",
+   "type": "cert",
+   "subtype": "national-tech",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "빅데이터분석기사 필기와 실기에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "분석 기획·탐색",
+      "모형·결과 해석",
+      "기출 풀이"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기",
+     "items": [
+      "파이썬·R 작업형 연습",
+      "통계 검정 문제",
+      "기출 복원"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "응시자격을 큐넷·데이터자격검정에서 확인할 것"
+  },
+  {
+   "id": "p.ds-kaggle",
+   "name": "데이터 경진대회 참가",
+   "type": "output",
+   "subtype": "award",
+   "category": "portfolio",
+   "method": "contest",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 150,
+   "goal": "경진대회 하나를 끝까지 제출하고 풀이를 정리한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "대회 고르기",
+      "기준 모델 만들기"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "개선",
+     "items": [
+      "특성 공학",
+      "모델 실험",
+      "검증 전략"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "풀이 글 쓰기",
+      "상위 풀이와 비교"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.stats",
+   "step": 2,
+   "major": false,
+   "skip": "통계·수학 전공 과목에서 배운다"
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.sql",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.python-data",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.adsp",
+   "step": 5.5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.sqld",
+   "step": 5.7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.dashboard",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.git",
+   "step": 6.5,
+   "major": true
+  },
+  {
+   "ref": "p.da-project",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.bootcamp",
+   "step": 7.5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 12,
+   "major": true
+  },
+  {
+   "ref": "cp.coding-test",
+   "step": 12.5,
+   "major": true,
+   "note": "SQL·파이썬 테스트",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 13,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 14,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "analyst": [
+   {
+    "ref": "cp.ga4",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.ab-test",
+    "step": 9,
+    "major": true
+   },
+   {
+    "ref": "p.da-biz",
+    "step": 10,
+    "major": true
+   }
+  ],
+  "ds": [
+   {
+    "ref": "cp.ml-math",
+    "step": 8,
+    "major": false,
+    "skip": "전공 수학 과목에서 배운다"
+   },
+   {
+    "ref": "cp.ml-basics",
+    "step": 9,
+    "major": true
+   },
+   {
+    "ref": "p.ds-cert",
+    "step": 9.5,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.ds-kaggle",
+    "step": 10,
+    "major": true
+   }
+  ],
+  "de": [
+   {
+    "ref": "cp.data-modeling",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.cloud-deploy",
+    "step": 9,
+    "major": true
+   },
+   {
+    "ref": "cp.data-pipeline",
+    "step": 10,
+    "major": true
+   }
+  ]
+ }
+}

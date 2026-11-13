@@ -82,39 +82,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.mkt-ga",
-   "name": "GA4로 지표 읽기",
-   "type": "skill",
-   "subtype": "data",
-   "category": "skill",
-   "method": "lecture",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 60,
-   "goal": "웹·앱 지표를 읽고 유입과 전환을 설명한다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "기본",
-     "items": [
-      "이벤트·세션·전환 개념",
-      "GA4 화면 익히기",
-      "데모 계정 살펴보기"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "분석",
-     "items": [
-      "유입 경로별 성과 보기",
-      "퍼널·리텐션 보고서",
-      "한 장 리포트 쓰기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.pf-ads",
    "name": "검색·SNS 광고 직접 집행",
    "type": "skill",
@@ -209,39 +176,6 @@
       "문제-가설-결과 구조",
       "차트로 보여 주기",
       "다음 액션 제안"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.gr-experiment",
-   "name": "A/B 테스트와 퍼널 분석",
-   "type": "skill",
-   "subtype": "data",
-   "category": "skill",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 4,
-   "minutesPerSession": 90,
-   "goal": "가설을 세워 실험을 설계하고 결과를 통계로 해석한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "분석",
-     "items": [
-      "퍼널·코호트 분석",
-      "핵심 지표(AARRR) 정하기",
-      "SQL로 지표 뽑기"
-     ]
-    },
-    {
-     "weeks": 3,
-     "title": "실험",
-     "items": [
-      "가설과 실험 설계",
-      "표본·유의성 이해",
-      "결과 해석과 회고"
      ]
     }
    ],
@@ -562,7 +496,7 @@
    "major": true
   },
   {
-   "ref": "p.mkt-ga",
+   "ref": "cp.ga4",
    "step": 5,
    "major": true
   },
@@ -627,7 +561,7 @@
     "major": true
    },
    {
-    "ref": "p.gr-experiment",
+    "ref": "cp.ab-test",
     "step": 7,
     "major": true
    },

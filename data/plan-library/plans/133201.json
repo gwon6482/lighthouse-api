@@ -219,39 +219,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.be-deploy",
-   "name": "배포와 운영 기초(AWS·Docker)",
-   "type": "skill",
-   "subtype": "dev",
-   "category": "skill",
-   "method": "practice",
-   "level": "중급",
-   "daysPerWeek": 4,
-   "minutesPerSession": 90,
-   "goal": "만든 서버를 클라우드에 올리고 자동 배포를 건다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "배포",
-     "items": [
-      "리눅스 기본 명령",
-      "Docker 이미지 만들기",
-      "클라우드 서버에 올리기"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "자동화",
-     "items": [
-      "CI/CD 파이프라인",
-      "환경 변수·비밀 관리",
-      "모니터링 기초"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.be-project",
    "name": "백엔드 중심 프로젝트",
    "type": "output",
@@ -561,90 +528,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.ai-math",
-   "name": "AI를 위한 수학 기초",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 4,
-   "minutesPerSession": 90,
-   "goal": "선형대수·확률·미분의 핵심을 모델과 연결해 이해한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "선형대수",
-     "items": [
-      "벡터·행렬 연산",
-      "고유값·분해",
-      "넘파이로 확인"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "확률·통계",
-     "items": [
-      "확률분포",
-      "추정·검정",
-      "베이즈 기초"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "미분과 최적화",
-     "items": [
-      "편미분·연쇄 법칙",
-      "경사하강법",
-      "직접 구현해 보기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.ai-ml",
-   "name": "머신러닝 기초",
-   "type": "skill",
-   "subtype": "data",
-   "category": "skill",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 4,
-   "minutesPerSession": 120,
-   "goal": "대표 알고리즘을 쓰고 평가·튜닝까지 한 번 돌려 본다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "지도 학습",
-     "items": [
-      "회귀·분류",
-      "평가 지표",
-      "과적합과 검증"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "모델 다루기",
-     "items": [
-      "트리·앙상블",
-      "특성 공학",
-      "하이퍼파라미터 튜닝"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "실습",
-     "items": [
-      "공개 데이터 문제 풀기",
-      "결과 해석",
-      "노트북 정리"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.ai-dl",
    "name": "딥러닝(PyTorch)",
    "type": "skill",
@@ -723,81 +606,6 @@
       "실험 결과 표",
       "한계와 개선안",
       "공개 링크"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.de-modeling",
-   "name": "데이터 모델링과 SQL 심화",
-   "type": "skill",
-   "subtype": "data",
-   "category": "skill",
-   "method": "practice",
-   "level": "중급",
-   "daysPerWeek": 4,
-   "minutesPerSession": 90,
-   "goal": "분석용 테이블을 설계하고 느린 쿼리를 고친다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "모델링",
-     "items": [
-      "정규화와 반정규화",
-      "분석용 스키마(스타)",
-      "파티션·인덱스"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "쿼리",
-     "items": [
-      "윈도 함수 심화",
-      "실행 계획 읽기",
-      "느린 쿼리 개선"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.de-pipeline",
-   "name": "데이터 파이프라인 프로젝트",
-   "type": "output",
-   "subtype": "project",
-   "category": "portfolio",
-   "method": "personal_project",
-   "level": "중급",
-   "daysPerWeek": 4,
-   "minutesPerSession": 150,
-   "goal": "수집→적재→가공→대시보드까지 자동으로 도는 파이프라인을 만든다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "설계",
-     "items": [
-      "데이터 원천 정하기",
-      "구조도 그리기",
-      "도구 선택"
-     ]
-    },
-    {
-     "weeks": 6,
-     "title": "구현",
-     "items": [
-      "수집·적재 자동화",
-      "배치 스케줄(Airflow)",
-      "데이터 품질 검사"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "정리",
-     "items": [
-      "대시보드 연결",
-      "장애 대응 기록",
-      "README"
      ]
     }
    ],
@@ -1133,7 +941,7 @@
     "major": true
    },
    {
-    "ref": "p.be-deploy",
+    "ref": "cp.cloud-deploy",
     "step": 9,
     "major": true
    },
@@ -1189,13 +997,13 @@
     "major": true
    },
    {
-    "ref": "p.ai-math",
+    "ref": "cp.ml-math",
     "step": 7,
     "major": false,
     "skip": "전공 수학 과목에서 배운다"
    },
    {
-    "ref": "p.ai-ml",
+    "ref": "cp.ml-basics",
     "step": 8,
     "major": true
    },
@@ -1212,7 +1020,7 @@
   ],
   "data": [
    {
-    "ref": "p.de-modeling",
+    "ref": "cp.data-modeling",
     "step": 7,
     "major": true
    },
@@ -1223,12 +1031,12 @@
     "optional": true
    },
    {
-    "ref": "p.be-deploy",
+    "ref": "cp.cloud-deploy",
     "step": 9,
     "major": true
    },
    {
-    "ref": "p.de-pipeline",
+    "ref": "cp.data-pipeline",
     "step": 10,
     "major": true
    }
