@@ -3939,12 +3939,13 @@
   },
   {
    "id": "cp.eng-major",
-   "name": "공학 전공 기초 다지기",
+   "name": "이공계 전공 기초 다지기",
    "type": "edu",
    "subtype": "major",
    "scope": "family",
    "families": [
-    "eng"
+    "eng",
+    "research"
    ],
    "category": "knowledge",
    "method": "school",
@@ -5355,6 +5356,263 @@
     "service"
    ],
    "promotedFrom": "702501:p.wp-record"
+  },
+  {
+   "id": "cp.social-survey-cert",
+   "name": "사회조사분석사 2급",
+   "type": "cert",
+   "subtype": "national-tech",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "사회조사분석사 2급에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "조사 방법론",
+      "사회 통계"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기",
+     "items": [
+      "작업형(통계 패키지)",
+      "필답형"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "biz",
+    "data",
+    "research"
+   ],
+   "promotedFrom": "024203:p.rs-cert"
+  },
+  {
+   "id": "cp.stat-tools",
+   "name": "통계 패키지 다루기(SPSS·R)",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "조사 자료를 분석해 표와 그래프로 낸다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "빈도·교차 분석",
+      "평균 비교·회귀"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "보고",
+     "items": [
+      "분석 결과표 작성"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "biz",
+    "data",
+    "research"
+   ],
+   "promotedFrom": "024203:p.rs-tool"
+  },
+  {
+   "id": "cp.paper-reading",
+   "name": "논문 읽기와 연구 계획",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "study_group",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 120,
+   "goal": "분야 논문을 읽고 연구 질문을 세운다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "읽기",
+     "items": [
+      "주 1편 정독",
+      "방법·결과 비판적으로 보기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "계획",
+     "items": [
+      "연구 질문과 계획서 초안"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "research",
+    "eng"
+   ],
+   "promotedFrom": "121104:p.bio-paper"
+  },
+  {
+   "id": "cp.bio-lab",
+   "name": "실험 기법 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "분자·세포 실험의 기본 기법을 혼자 수행한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "기법",
+     "items": [
+      "PCR·전기영동",
+      "세포 배양",
+      "단백질 분석"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기록",
+     "items": [
+      "실험 노트 작성",
+      "결과 재현"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "research",
+    "eng",
+    "health"
+   ],
+   "promotedFrom": "121104:p.bio-tech"
+  },
+  {
+   "id": "cp.instrument-analysis",
+   "name": "분석 기기 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "주요 분석 기기로 시험하고 결과를 기록한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기기",
+     "items": [
+      "크로마토그래피(HPLC)",
+      "분광 분석",
+      "미생물 시험"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기록",
+     "items": [
+      "시험 기록서 작성",
+      "기준 일탈 처리 흐름"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "eng",
+    "research"
+   ],
+   "promotedFrom": "154105:p.ph-qc"
+  },
+  {
+   "id": "cp.material-analysis",
+   "name": "재료 분석 장비 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "현미경·회절 분석으로 재료의 구조를 본다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "장비",
+     "items": [
+      "시편 준비",
+      "전자현미경·X선 회절",
+      "기계적 시험"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "보고",
+     "items": [
+      "분석 보고서"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "eng",
+    "research"
+   ],
+   "promotedFrom": "152101:p.mt-analysis"
+  },
+  {
+   "id": "cp.sanitarian",
+   "name": "위생사 면허",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "위생사 국가시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 5,
+     "title": "과목",
+     "items": [
+      "공중보건·환경 위생",
+      "식품 위생·위생 곤충",
+      "관련 법규"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "기출",
+     "items": [
+      "기출 회독",
+      "실기 문제"
+     ]
+    }
+   ],
+   "verify": "응시자격은 관련 학과·과목 이수",
+   "scope": "family",
+   "families": [
+    "health",
+    "eng"
+   ],
+   "promotedFrom": "305001:p.nt-sanitarian"
   }
  ]
 }

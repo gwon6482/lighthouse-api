@@ -1,0 +1,88 @@
+{
+ "jobCode": "155501",
+ "title": "보건위생·환경검사원",
+ "displayName": "위생·환경 검사원(위생사)",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "위생사 면허가 기본이다. 관련 학과에서 과목을 이수하고 국가시험에 합격한다.",
+ "gate": "위생사 면허 — 보건·환경·식품 관련 학과(과목 이수) + 국가시험",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.hi-inspect",
+   "name": "위생 점검과 환경 측정 실무",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "업소 위생 점검 항목과 수질·실내 공기 측정 방법을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "실무",
+     "items": [
+      "위생 점검 기준",
+      "수질·공기 측정",
+      "소독·방역 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 관련 학과에 다니고 있다",
+   "note": "보건·환경·식품 관련 학과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.sanitarian",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.hi-inspect",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 5,
+   "major": true,
+   "note": "환경 분야 기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.civil9-common",
+   "step": 6,
+   "major": true,
+   "note": "보건직·환경직 공무원을 목표로 할 때",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

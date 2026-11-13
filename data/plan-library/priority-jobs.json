@@ -4152,6 +4152,565 @@
      "track": "craft"
     }
    ]
+  },
+  {
+   "no": 180,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-01",
+   "jobCode": "021001",
+   "title": "정부·공공행정전문가",
+   "displayName": "정책 전문가(5급 공채)",
+   "family": "public",
+   "group": "015",
+   "groupName": "경영·회계·광고·상품기획",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 181,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-01",
+   "jobCode": "026401",
+   "title": "감사사무원",
+   "displayName": "감사 담당자",
+   "family": "biz",
+   "group": "017",
+   "groupName": "경영지원 사무",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 182,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-01",
+   "jobCode": "029303",
+   "title": "통계사무원",
+   "displayName": "통계 담당자",
+   "family": "data",
+   "group": "018",
+   "groupName": "회계·경리 사무",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 183,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-01",
+   "jobCode": "028203",
+   "title": "항공운송사무원",
+   "displayName": "운송 사무원",
+   "family": "biz",
+   "group": "019",
+   "groupName": "무역·구매·생산·품질 사무",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "air",
+     "name": "항공",
+     "desc": "항공사·공항 지상직"
+    },
+    {
+     "id": "rail",
+     "name": "철도·지하철",
+     "desc": "역무·운영 기관"
+    },
+    {
+     "id": "road",
+     "name": "도로",
+     "desc": "운수 회사 운행 관리"
+    },
+    {
+     "id": "sea",
+     "name": "해운",
+     "desc": "선사·해운 대리점"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "028202",
+     "title": "철도·지하철운송사무원",
+     "track": "rail"
+    },
+    {
+     "jobCode": "028201",
+     "title": "도로운송사무원",
+     "track": "road"
+    },
+    {
+     "jobCode": "028204",
+     "title": "수상운송사무원",
+     "track": "sea"
+    }
+   ]
+  },
+  {
+   "no": 184,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-01",
+   "jobCode": "029101",
+   "title": "안내 및 접수사무원",
+   "displayName": "안내·접수 사무원",
+   "family": "service",
+   "group": "01A",
+   "groupName": "안내·접수·고객상담 사무",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 185,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-01",
+   "jobCode": "029902",
+   "title": "속기사",
+   "displayName": "속기사",
+   "family": "biz",
+   "group": "01B",
+   "groupName": "통계·비서·사무보조",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 186,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-01",
+   "jobCode": "032301",
+   "title": "보험인수심사원(언더라이터)",
+   "displayName": "보험 심사역(언더라이터)",
+   "family": "finance",
+   "group": "01C",
+   "groupName": "금융·보험 전문가",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 187,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-01",
+   "jobCode": "032302",
+   "title": "보험보상사무원",
+   "displayName": "보험·증권 사무원",
+   "family": "finance",
+   "group": "01D",
+   "groupName": "금융·보험 사무·영업",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "claim",
+     "name": "보험 보상",
+     "desc": "사고 조사·보험금 지급"
+    },
+    {
+     "id": "securities",
+     "name": "증권 사무",
+     "desc": "지점·업무 지원"
+    },
+    {
+     "id": "credit",
+     "name": "채권 관리",
+     "desc": "연체 채권 관리"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "032201",
+     "title": "증권사무원",
+     "track": "securities"
+    },
+    {
+     "jobCode": "032501",
+     "title": "신용추심원",
+     "track": "credit"
+    }
+   ]
+  },
+  {
+   "no": 188,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-01",
+   "jobCode": "031302",
+   "title": "금융상품개발자",
+   "displayName": "금융·보험 상품개발자",
+   "family": "finance",
+   "group": "063",
+   "groupName": "여행·승무·숙박·오락 서비스",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "fin",
+     "name": "금융 상품",
+     "desc": "은행·증권·자산운용 상품"
+    },
+    {
+     "id": "actuary",
+     "name": "보험 계리·상품",
+     "desc": "보험료 산출·상품 개발"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "031301",
+     "title": "보험상품개발자",
+     "track": "actuary"
+    }
+   ]
+  },
+  {
+   "no": 189,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-01",
+   "jobCode": "121102",
+   "title": "화학연구원",
+   "displayName": "자연과학 연구원",
+   "family": "research",
+   "group": "021",
+   "groupName": "인문·사회·자연·생명과학 연구",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "121101",
+     "title": "물리학연구원",
+     "track": null
+    },
+    {
+     "jobCode": "121103",
+     "title": "수학 및 통계연구원",
+     "track": null
+    },
+    {
+     "jobCode": "121106",
+     "title": "천문 및 기상학연구원",
+     "track": null
+    },
+    {
+     "jobCode": "121105",
+     "title": "지질학연구원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 190,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-02",
+   "jobCode": "122101",
+   "title": "의학연구원",
+   "displayName": "의약·농림수산 연구원",
+   "family": "research",
+   "group": "021",
+   "groupName": "인문·사회·자연·생명과학 연구",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "med",
+     "name": "의약",
+     "desc": "의학·약학 연구"
+    },
+    {
+     "id": "agri",
+     "name": "농림수산",
+     "desc": "농학·축산·수산·산림 연구"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "122102",
+     "title": "약학연구원",
+     "track": "med"
+    },
+    {
+     "jobCode": "122103",
+     "title": "농학연구원",
+     "track": "agri"
+    },
+    {
+     "jobCode": "122104",
+     "title": "수산학연구원",
+     "track": "agri"
+    },
+    {
+     "jobCode": "122106",
+     "title": "축산학 및 수의학연구원",
+     "track": "agri"
+    },
+    {
+     "jobCode": "122105",
+     "title": "임학 및 산림학연구원",
+     "track": "agri"
+    }
+   ]
+  },
+  {
+   "no": 191,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-02",
+   "jobCode": "110202",
+   "title": "경제학연구원",
+   "displayName": "인문·사회과학 연구원",
+   "family": "research",
+   "group": "021",
+   "groupName": "인문·사회·자연·생명과학 연구",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "110203",
+     "title": "사회학연구원",
+     "track": null
+    },
+    {
+     "jobCode": "110201",
+     "title": "정치학연구원",
+     "track": null
+    },
+    {
+     "jobCode": "110101",
+     "title": "철학연구원",
+     "track": null
+    },
+    {
+     "jobCode": "110102",
+     "title": "역사학연구원",
+     "track": null
+    },
+    {
+     "jobCode": "110104",
+     "title": "교육학연구원",
+     "track": null
+    },
+    {
+     "jobCode": "110105",
+     "title": "심리학연구원",
+     "track": null
+    },
+    {
+     "jobCode": "110103",
+     "title": "언어학연구원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 192,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-02",
+   "jobCode": "122201",
+   "title": "생명과학시험원",
+   "displayName": "시험·분석원",
+   "family": "research",
+   "group": "021",
+   "groupName": "인문·사회·자연·생명과학 연구",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "bio",
+     "name": "생명·농림·식품",
+     "desc": "생물·식품 시험"
+    },
+    {
+     "id": "chem",
+     "name": "화학·환경·에너지",
+     "desc": "화학 분석·환경 측정"
+    },
+    {
+     "id": "material",
+     "name": "기계·금속·전기·건설",
+     "desc": "재료·제품 시험"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "122301",
+     "title": "농림어업시험원",
+     "track": "bio"
+    },
+    {
+     "jobCode": "121201",
+     "title": "자연과학시험원",
+     "track": "chem"
+    },
+    {
+     "jobCode": "140701",
+     "title": "건설자재시험원",
+     "track": "material"
+    },
+    {
+     "jobCode": "152201",
+     "title": "금속·재료공학시험원",
+     "track": "material"
+    },
+    {
+     "jobCode": "151301",
+     "title": "기계‧로봇공학시험원",
+     "track": "material"
+    },
+    {
+     "jobCode": "153301",
+     "title": "전기·전자공학시험원",
+     "track": "material"
+    },
+    {
+     "jobCode": "154201",
+     "title": "화학공학시험원",
+     "track": "chem"
+    },
+    {
+     "jobCode": "155401",
+     "title": "환경시험원",
+     "track": "chem"
+    },
+    {
+     "jobCode": "157201",
+     "title": "식품공학시험원",
+     "track": "bio"
+    },
+    {
+     "jobCode": "156201",
+     "title": "섬유공학시험원",
+     "track": "material"
+    },
+    {
+     "jobCode": "155203",
+     "title": "가스·에너지시험원 및 진단전문가",
+     "track": "chem"
+    }
+   ]
+  },
+  {
+   "no": 193,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-02",
+   "jobCode": "211101",
+   "title": "대학교수",
+   "displayName": "대학 교수",
+   "family": "edu",
+   "group": "031",
+   "groupName": "교수·학교·유치원 교사",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "211201",
+     "title": "대학시간강사",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 194,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-02",
+   "jobCode": "136002",
+   "title": "방송송출장비기사",
+   "displayName": "방송·통신 송출 기사",
+   "family": "it",
+   "group": "027",
+   "groupName": "통신·방송 송출",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "136001",
+     "title": "통신장비기사",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 195,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-02",
+   "jobCode": "151108",
+   "title": "조선·해양공학기술자",
+   "displayName": "조선·해양 엔지니어",
+   "family": "eng",
+   "group": "029",
+   "groupName": "기계·로봇·금속·재료 공학",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 196,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-02",
+   "jobCode": "155106",
+   "title": "원자력공학기술자",
+   "displayName": "원자력 엔지니어",
+   "family": "eng",
+   "group": "02B",
+   "groupName": "화학·에너지·환경 공학",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 197,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-02",
+   "jobCode": "156101",
+   "title": "섬유공학기술자",
+   "displayName": "섬유 엔지니어",
+   "family": "eng",
+   "group": "02C",
+   "groupName": "섬유·식품·안전 공학",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 198,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-02",
+   "jobCode": "158501",
+   "title": "비파괴검사원",
+   "displayName": "비파괴검사 기술자",
+   "family": "eng",
+   "group": "02C",
+   "groupName": "섬유·식품·안전 공학",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 199,
+   "tier": null,
+   "wave": 3,
+   "batch": "3-02",
+   "jobCode": "155501",
+   "title": "보건위생·환경검사원",
+   "displayName": "위생·환경 검사원(위생사)",
+   "family": "health",
+   "group": "02B",
+   "groupName": "화학·에너지·환경 공학",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
   }
  ]
 }

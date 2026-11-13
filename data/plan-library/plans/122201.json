@@ -1,0 +1,217 @@
+{
+ "jobCode": "122201",
+ "title": "생명과학시험원",
+ "displayName": "시험·분석원",
+ "family": "research",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 관련 전공과 분석 분야 자격을 본다. 시험·검사 기관과 기업 품질 부서에서 일한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "bio",
+   "name": "생명·농림·식품",
+   "desc": "생물·식품 시험"
+  },
+  {
+   "id": "chem",
+   "name": "화학·환경·에너지",
+   "desc": "화학 분석·환경 측정"
+  },
+  {
+   "id": "material",
+   "name": "기계·금속·전기·건설",
+   "desc": "재료·제품 시험"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "122301",
+   "title": "농림어업시험원",
+   "track": "bio"
+  },
+  {
+   "jobCode": "121201",
+   "title": "자연과학시험원",
+   "track": "chem"
+  },
+  {
+   "jobCode": "140701",
+   "title": "건설자재시험원",
+   "track": "material"
+  },
+  {
+   "jobCode": "152201",
+   "title": "금속·재료공학시험원",
+   "track": "material"
+  },
+  {
+   "jobCode": "151301",
+   "title": "기계‧로봇공학시험원",
+   "track": "material"
+  },
+  {
+   "jobCode": "153301",
+   "title": "전기·전자공학시험원",
+   "track": "material"
+  },
+  {
+   "jobCode": "154201",
+   "title": "화학공학시험원",
+   "track": "chem"
+  },
+  {
+   "jobCode": "155401",
+   "title": "환경시험원",
+   "track": "chem"
+  },
+  {
+   "jobCode": "157201",
+   "title": "식품공학시험원",
+   "track": "bio"
+  },
+  {
+   "jobCode": "156201",
+   "title": "섬유공학시험원",
+   "track": "material"
+  },
+  {
+   "jobCode": "155203",
+   "title": "가스·에너지시험원 및 진단전문가",
+   "track": "chem"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.ta-lab",
+   "name": "시험 분석 기본기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "시료를 다루고 시험 규격대로 시험해 기록한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "시료 채취·전처리",
+      "저울·피펫 등 기구 사용",
+      "시험 기록 작성"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "규격",
+     "items": [
+      "시험 규격 읽기",
+      "결과 계산과 불확도 개념"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ta-qa",
+   "name": "시험 기관의 품질 체계",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "공인 시험 기관의 운영 기준과 성적서 발급 절차를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "체계",
+     "items": [
+      "시험 기관 인정 제도",
+      "장비 교정과 기록 관리",
+      "성적서 발급"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.eng-major",
+   "step": 2,
+   "major": false,
+   "skip": "관련 전공 과목에서 배운다",
+   "note": "분야 관련 전공"
+  },
+  {
+   "ref": "p.ta-lab",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.ta-qa",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 7,
+   "major": true,
+   "note": "분야별 기사·산업기사(화학 분석·식품·환경·재료 시험 등)"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "bio": [
+   {
+    "ref": "cp.bio-lab",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "chem": [
+   {
+    "ref": "cp.instrument-analysis",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "material": [
+   {
+    "ref": "cp.material-analysis",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "cp.drawing-reading",
+    "step": 4.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
+}

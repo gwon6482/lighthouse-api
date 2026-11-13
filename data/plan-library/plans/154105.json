@@ -127,38 +127,6 @@
     }
    ],
    "basis": "practice"
-  },
-  {
-   "id": "p.ph-qc",
-   "name": "분석 기기 실습",
-   "type": "skill",
-   "subtype": "field",
-   "category": "skill",
-   "method": "practice",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 120,
-   "goal": "주요 분석 기기로 시험하고 결과를 기록한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "기기",
-     "items": [
-      "크로마토그래피(HPLC)",
-      "분광 분석",
-      "미생물 시험"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "기록",
-     "items": [
-      "시험 기록서 작성",
-      "기준 일탈 처리 흐름"
-     ]
-    }
-   ],
-   "basis": "practice"
   }
  ],
  "common": [
@@ -218,7 +186,7 @@
   ],
   "qc": [
    {
-    "ref": "p.ph-qc",
+    "ref": "cp.instrument-analysis",
     "step": 4,
     "major": true
    },

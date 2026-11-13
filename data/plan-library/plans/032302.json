@@ -1,0 +1,194 @@
+{
+ "jobCode": "032302",
+ "title": "보험보상사무원",
+ "displayName": "보험·증권 사무원",
+ "family": "finance",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 보험 보상, 증권 사무, 채권 관리 중 어느 쪽이냐에 따라 필요한 지식이 다르다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "claim",
+   "name": "보험 보상",
+   "desc": "사고 조사·보험금 지급"
+  },
+  {
+   "id": "securities",
+   "name": "증권 사무",
+   "desc": "지점·업무 지원"
+  },
+  {
+   "id": "credit",
+   "name": "채권 관리",
+   "desc": "연체 채권 관리"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "032201",
+   "title": "증권사무원",
+   "track": "securities"
+  },
+  {
+   "jobCode": "032501",
+   "title": "신용추심원",
+   "track": "credit"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.fo-claim",
+   "name": "보상 실무",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "사고 접수부터 손해액 산정·지급까지의 절차를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "절차",
+     "items": [
+      "사고 접수와 조사",
+      "약관 해석",
+      "손해액 산정·지급"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fo-sec",
+   "name": "증권 업무와 상품 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "계좌·매매·결제 절차와 금융 투자 상품을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "업무",
+     "items": [
+      "계좌 개설과 매매·결제",
+      "금융 투자 상품",
+      "투자자 보호 규정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fo-credit",
+   "name": "신용관리사",
+   "type": "cert",
+   "subtype": "private-certified",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 60,
+   "goal": "신용관리사 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "준비",
+     "items": [
+      "채권 일반·신용 관리",
+      "민사 법규",
+      "기출"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.computer-2",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.econ-test",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "claim": [
+   {
+    "ref": "p.fo-claim",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.driver-license",
+    "step": 7,
+    "major": true,
+    "note": "현장 조사",
+    "optional": true
+   }
+  ],
+  "securities": [
+   {
+    "ref": "p.fo-sec",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.investment-manager",
+    "step": 7,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.afpk",
+    "step": 8,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "credit": [
+   {
+    "ref": "p.fo-credit",
+    "step": 6,
+    "major": true
+   }
+  ]
+ }
+}

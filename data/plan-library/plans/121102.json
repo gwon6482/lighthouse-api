@@ -1,0 +1,156 @@
+{
+ "jobCode": "121102",
+ "title": "화학연구원",
+ "displayName": "자연과학 연구원",
+ "family": "research",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "연구직은 석사·박사 학위를 요구한다. 전공 지식과 연구 경험을 쌓아 대학원을 거친다.",
+ "gate": "법정 요건은 없으나 연구직 채용은 석사·박사 학위를 요구한다",
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "121101",
+   "title": "물리학연구원",
+   "track": null
+  },
+  {
+   "jobCode": "121103",
+   "title": "수학 및 통계연구원",
+   "track": null
+  },
+  {
+   "jobCode": "121106",
+   "title": "천문 및 기상학연구원",
+   "track": null
+  },
+  {
+   "jobCode": "121105",
+   "title": "지질학연구원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.ns-method",
+   "name": "실험·계산 도구 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "분야의 실험 기법이나 계산·관측 도구를 혼자 쓴다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "도구",
+     "items": [
+      "분야 대표 실험·관측 기법",
+      "수치 계산·시뮬레이션 도구"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기록",
+     "items": [
+      "연구 노트 작성",
+      "결과 재현"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ns-thesis",
+   "name": "학위 논문과 학회 발표",
+   "type": "output",
+   "subtype": "research",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 240,
+   "goal": "연구 결과를 논문으로 쓰고 학회에서 발표한다.",
+   "phases": [
+    {
+     "weeks": 20,
+     "title": "연구",
+     "items": [
+      "연구 수행",
+      "자료 분석"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "발표",
+     "items": [
+      "논문 작성",
+      "학회 발표·투고"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.eng-major",
+   "step": 1,
+   "major": false,
+   "skip": "전공 과목에서 배운다",
+   "note": "화학·물리·수학·지구과학 등 자연과학 전공"
+  },
+  {
+   "ref": "cp.stats",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.paper-reading",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.python-data",
+   "step": 5,
+   "major": true,
+   "note": "자료 분석·계산",
+   "optional": true
+  },
+  {
+   "ref": "cp.lab-grad",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 7,
+   "major": true,
+   "note": "대학원·연구소 영어 기준"
+  },
+  {
+   "ref": "p.ns-method",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.ns-thesis",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

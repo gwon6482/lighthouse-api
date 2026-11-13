@@ -1,0 +1,86 @@
+{
+ "jobCode": "021001",
+ "title": "정부·공공행정전문가",
+ "displayName": "정책 전문가(5급 공채)",
+ "family": "public",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "5급 공개경쟁채용 시험으로 뽑는다. 1차 PSAT, 2차 논술형, 3차 면접을 거친다.",
+ "gate": "5급 공개경쟁채용 시험 합격(PSAT → 논술형 → 면접)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.g5-second",
+   "name": "5급 2차 논술형 시험",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 300,
+   "goal": "2차 논술형 과목에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 20,
+     "title": "과목별 이론",
+     "items": [
+      "행정법·행정학",
+      "경제학·정치학",
+      "선택 과목"
+     ]
+    },
+    {
+     "weeks": 16,
+     "title": "답안 연습",
+     "items": [
+      "논술 답안 작성",
+      "스터디 첨삭",
+      "모의고사"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "직렬에 따라 과목이 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.civil-pick",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 2,
+   "major": true,
+   "note": "한국사능력검정 2급 이상이 응시 요건"
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 3,
+   "major": true,
+   "note": "영어 과목을 공인 성적으로 대체"
+  },
+  {
+   "ref": "cp.psat",
+   "step": 4,
+   "major": true,
+   "note": "1차 시험"
+  },
+  {
+   "ref": "p.g5-second",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.civil-interview",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "시험 과목·응시 요건은 인사혁신처 공고가 정본"
+}

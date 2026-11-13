@@ -1158,7 +1158,7 @@
      "groupName": "경영·회계·광고·상품기획",
      "covers": [],
      "batch": "3-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1170,7 +1170,7 @@
      "groupName": "경영지원 사무",
      "covers": [],
      "batch": "3-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1182,7 +1182,7 @@
      "groupName": "회계·경리 사무",
      "covers": [],
      "batch": "3-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1207,7 +1207,7 @@
       }
      ],
      "batch": "3-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1219,7 +1219,7 @@
      "groupName": "안내·접수·고객상담 사무",
      "covers": [],
      "batch": "3-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1231,7 +1231,7 @@
      "groupName": "통계·비서·사무보조",
      "covers": [],
      "batch": "3-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1243,7 +1243,7 @@
      "groupName": "금융·보험 전문가",
      "covers": [],
      "batch": "3-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1264,7 +1264,7 @@
       }
      ],
      "batch": "3-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1281,7 +1281,7 @@
       }
      ],
      "batch": "3-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1310,7 +1310,7 @@
       }
      ],
      "batch": "3-01",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1343,7 +1343,7 @@
       }
      ],
      "batch": "3-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1384,7 +1384,7 @@
       }
      ],
      "batch": "3-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1441,7 +1441,7 @@
       }
      ],
      "batch": "3-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1458,7 +1458,7 @@
       }
      ],
      "batch": "3-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1475,7 +1475,7 @@
       }
      ],
      "batch": "3-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1487,7 +1487,7 @@
      "groupName": "기계·로봇·금속·재료 공학",
      "covers": [],
      "batch": "3-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1499,7 +1499,7 @@
      "groupName": "화학·에너지·환경 공학",
      "covers": [],
      "batch": "3-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1511,7 +1511,7 @@
      "groupName": "섬유·식품·안전 공학",
      "covers": [],
      "batch": "3-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1523,7 +1523,7 @@
      "groupName": "섬유·식품·안전 공학",
      "covers": [],
      "batch": "3-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,
@@ -1535,7 +1535,7 @@
      "groupName": "화학·에너지·환경 공학",
      "covers": [],
      "batch": "3-02",
-     "done": false
+     "done": true
     },
     {
      "wave": 3,

@@ -1,0 +1,215 @@
+{
+ "jobCode": "211101",
+ "title": "대학교수",
+ "displayName": "대학 교수",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "박사 학위와 연구 실적이 바탕이다. 강사와 박사후연구원을 거쳐 공개 채용으로 임용된다.",
+ "gate": "박사 학위(분야에 따라 실기·현장 경력) + 연구 실적",
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "211201",
+   "title": "대학시간강사",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.pf-phd",
+   "name": "박사 과정",
+   "type": "edu",
+   "subtype": "graduate",
+   "category": "knowledge",
+   "method": "school",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "박사 학위를 받는다.",
+   "phases": [
+    {
+     "weeks": 100,
+     "title": "과정",
+     "items": [
+      "수업과 자격 시험",
+      "연구 수행",
+      "학술지 논문"
+     ]
+    },
+    {
+     "weeks": 50,
+     "title": "학위 논문",
+     "items": [
+      "논문 연구",
+      "심사와 졸업"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "기간은 분야와 개인에 따라 크게 다르다"
+  },
+  {
+   "id": "p.pf-papers",
+   "name": "연구 실적 쌓기",
+   "type": "output",
+   "subtype": "research",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 300,
+   "goal": "임용 기준에 맞는 논문 실적을 만든다.",
+   "phases": [
+    {
+     "weeks": 50,
+     "title": "연구",
+     "items": [
+      "주저자 논문 게재",
+      "공동 연구",
+      "연구 과제 참여"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pf-lecture",
+   "name": "강의 경력 쌓기",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 180,
+   "goal": "강사로 강의하며 강의 평가와 경력을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "강사 공개 채용 지원"
+     ]
+    },
+    {
+     "weeks": 30,
+     "title": "강의",
+     "items": [
+      "강의 계획서",
+      "수업과 평가"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pf-postdoc",
+   "name": "박사후연구원",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "internship",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "연구 기관에서 독립적인 연구 경력을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "연구실·기관 지원"
+     ]
+    },
+    {
+     "weeks": 100,
+     "title": "연구",
+     "items": [
+      "연구 수행과 논문",
+      "연구비 제안서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pf-apply",
+   "name": "교수 임용 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "공개 채용에 지원해 연구 발표와 공개 강의를 한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "서류",
+     "items": [
+      "연구·교육 계획서",
+      "실적 목록"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "심사",
+     "items": [
+      "연구 발표",
+      "공개 강의",
+      "면접"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.major-grades",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.lab-grad",
+   "step": 2,
+   "major": true,
+   "note": "석사 과정"
+  },
+  {
+   "ref": "p.pf-phd",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.paper-reading",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.pf-papers",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.pf-lecture",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.pf-postdoc",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.pf-apply",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

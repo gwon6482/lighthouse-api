@@ -10,39 +10,7 @@
  "gate": "법정 요건은 없으나 채용 공고가 관련 전공과 기사 자격을 요구·우대한다",
  "tracks": [],
  "covers": [],
- "projects": [
-  {
-   "id": "p.mt-analysis",
-   "name": "재료 분석 장비 실습",
-   "type": "skill",
-   "subtype": "field",
-   "category": "skill",
-   "method": "practice",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "현미경·회절 분석으로 재료의 구조를 본다.",
-   "phases": [
-    {
-     "weeks": 3,
-     "title": "장비",
-     "items": [
-      "시편 준비",
-      "전자현미경·X선 회절",
-      "기계적 시험"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "보고",
-     "items": [
-      "분석 보고서"
-     ]
-    }
-   ],
-   "basis": "practice"
-  }
- ],
+ "projects": [],
  "common": [
   {
    "ref": "cp.job-research",
@@ -64,7 +32,7 @@
    "optional": true
   },
   {
-   "ref": "p.mt-analysis",
+   "ref": "cp.material-analysis",
    "step": 4,
    "major": true
   },

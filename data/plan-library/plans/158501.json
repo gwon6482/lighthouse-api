@@ -1,0 +1,100 @@
+{
+ "jobCode": "158501",
+ "title": "비파괴검사원",
+ "displayName": "비파괴검사 기술자",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "비파괴검사 자격이 사실상 필수다. 종목별 자격을 따고 검사 업체에서 경력을 쌓는다.",
+ "gate": "비파괴검사 자격(종목별 기능사·산업기사·기사) — 검사 업무에 사실상 필수",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.nd-basics",
+   "name": "비파괴검사 원리와 결함 판독",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "종목별 검사 원리와 결함 신호를 읽는 법을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "원리",
+     "items": [
+      "종목별 원리와 적용",
+      "결함 종류와 판독",
+      "검사 절차서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비·폴리텍 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "비파괴검사기능사(방사선·초음파·자기·침투 등 종목별)"
+  },
+  {
+   "ref": "p.nd-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 5,
+   "major": true,
+   "note": "비파괴검사산업기사·기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.safety-law",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 80,
+   "major": true,
+   "note": "비파괴검사 전문 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "방사선 종목은 방사선 작업 종사자 교육·건강 진단이 필요하다"
+}

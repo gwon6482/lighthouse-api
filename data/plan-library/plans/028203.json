@@ -1,0 +1,234 @@
+{
+ "jobCode": "028203",
+ "title": "항공운송사무원",
+ "displayName": "운송 사무원",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 항공·철도·도로·해운 가운데 어느 쪽이냐에 따라 채용 방식과 필요한 지식이 다르다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "air",
+   "name": "항공",
+   "desc": "항공사·공항 지상직"
+  },
+  {
+   "id": "rail",
+   "name": "철도·지하철",
+   "desc": "역무·운영 기관"
+  },
+  {
+   "id": "road",
+   "name": "도로",
+   "desc": "운수 회사 운행 관리"
+  },
+  {
+   "id": "sea",
+   "name": "해운",
+   "desc": "선사·해운 대리점"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "028202",
+   "title": "철도·지하철운송사무원",
+   "track": "rail"
+  },
+  {
+   "jobCode": "028201",
+   "title": "도로운송사무원",
+   "track": "road"
+  },
+  {
+   "jobCode": "028204",
+   "title": "수상운송사무원",
+   "track": "sea"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.to-basics",
+   "name": "운송 업무 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "예약·발권·운행 관리·정산의 흐름을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "흐름",
+     "items": [
+      "여객·화물 운송 절차",
+      "운임과 정산",
+      "안전·보안 규정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.to-air",
+   "name": "항공 예약·발권과 공항 업무",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "예약 기록을 읽고 탑승 수속 절차를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "업무",
+     "items": [
+      "항공 예약 시스템",
+      "탑승 수속·수하물",
+      "항공 보안 규정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.to-road",
+   "name": "배차·운행 관리와 운수 법규",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "차량 배차와 운행 기록 관리, 관련 법규를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "관리",
+     "items": [
+      "배차 계획",
+      "운행 기록·사고 처리",
+      "운수사업 법규"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.to-sea",
+   "name": "해운 실무",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "선박 운항 일정과 선적 서류, 항만 업무를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "실무",
+     "items": [
+      "정기선·부정기선",
+      "선하증권과 선적 절차",
+      "항만·대리점 업무"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.to-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.logistics-cert",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "air": [
+   {
+    "ref": "cp.toeic",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "p.to-air",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "rail": [
+   {
+    "ref": "cp.ncs",
+    "step": 5,
+    "major": true,
+    "note": "철도 운영 기관 필기"
+   },
+   {
+    "ref": "cp.korean-history",
+    "step": 7,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "road": [
+   {
+    "ref": "p.to-road",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "sea": [
+   {
+    "ref": "cp.trade-basics",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "p.to-sea",
+    "step": 7,
+    "major": true
+   }
+  ]
+ },
+ "verify": "항공 운항 관리는 별도 자격증명(운항관리사)이 필요한 직무다"
+}

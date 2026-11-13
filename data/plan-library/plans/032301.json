@@ -1,0 +1,144 @@
+{
+ "jobCode": "032301",
+ "title": "보험인수심사원(언더라이터)",
+ "displayName": "보험 심사역(언더라이터)",
+ "family": "finance",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 보험사 공채로 들어가 배치받는 경우가 많고, 위험을 평가하는 지식과 숫자 감각을 본다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.uw-basics",
+   "name": "보험 심사 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "위험 선택과 요율, 약관의 관계를 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "개념",
+     "items": [
+      "위험 선택 원칙",
+      "요율과 인수 기준",
+      "약관과 고지 의무"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.uw-medical",
+   "name": "의학·재무 심사 지식",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "질병 이력과 재무 정보를 심사에 쓰는 방법을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "지식",
+     "items": [
+      "주요 질환과 위험도",
+      "건강 검진 결과 읽기",
+      "재무 심사"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.uw-cert",
+   "name": "보험 심사 자격",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "언더라이터 관련 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "준비",
+     "items": [
+      "이론",
+      "기출",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "협회가 운영하는 민간 자격이다. 재직자 응시가 많다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.uw-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.uw-medical",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.fs-reading",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.uw-cert",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

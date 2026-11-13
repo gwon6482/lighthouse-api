@@ -106,8 +106,10 @@ def covtrack(title, mapping):
     """함께 덮는 직업을 세부 카테고리에 잇는다. mapping = {덮는 직업 이름: 카테고리 id}"""
     pri = _load('priority-jobs.json'); j = next(x for x in pri['jobs'] if x['title'] == title)
     tids = {t['id'] for t in j['tracks']}
+    nz = lambda s: s.replace(' ', '').replace('‧', '·')
+    mp = {nz(k): v for k, v in mapping.items()}
     for c in j['covers']:
-        if c['title'] in mapping: assert mapping[c['title']] in tids, (title, mapping); c['track'] = mapping[c['title']]
-    assert set(mapping) <= {c['title'] for c in j['covers']}, (title, set(mapping) - {c['title'] for c in j['covers']})
+        if nz(c['title']) in mp: assert mp[nz(c['title'])] in tids, (title, mapping); c['track'] = mp[nz(c['title'])]
+    assert set(mp) <= {nz(c['title']) for c in j['covers']}, (title, set(mp) - {nz(c['title']) for c in j['covers']})
     _dump('priority-jobs.json', pri)
     pl = _load(f"plans/{j['jobCode']}.json"); pl['covers'] = j['covers']; _dump(f"plans/{j['jobCode']}.json", pl)

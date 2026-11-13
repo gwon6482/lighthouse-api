@@ -1,0 +1,72 @@
+{
+ "jobCode": "029303",
+ "title": "통계사무원",
+ "displayName": "통계 담당자",
+ "family": "data",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 사회조사분석사가 대표 증빙이다. 통계 작성 기관과 조사 회사, 통계직 공무원으로 간다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.stats",
+   "step": 2,
+   "major": false,
+   "skip": "통계 전공 과목에서 배운다"
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.stat-tools",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.social-survey-cert",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.sql",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.adsp",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.civil9-common",
+   "step": 8,
+   "major": true,
+   "note": "통계직 공무원을 목표로 할 때",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,189 @@
+{
+ "jobCode": "031302",
+ "title": "금융상품개발자",
+ "displayName": "금융·보험 상품개발자",
+ "family": "finance",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 수학·통계 실력을 본다. 보험 상품은 보험계리사 자격이 사실상 관문이다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "fin",
+   "name": "금융 상품",
+   "desc": "은행·증권·자산운용 상품"
+  },
+  {
+   "id": "actuary",
+   "name": "보험 계리·상품",
+   "desc": "보험료 산출·상품 개발"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "031301",
+   "title": "보험상품개발자",
+   "track": "actuary"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.fp-design",
+   "name": "금융 상품의 구조와 설계",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "예금·펀드·파생 결합 상품의 구조와 손익을 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "구조",
+     "items": [
+      "상품 유형과 손익 구조",
+      "가격 결정 기초",
+      "규제와 설명 의무"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fp-math",
+   "name": "보험 수학과 확률 통계",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "생존 모형과 보험료·준비금 계산의 기본을 안다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "수학",
+     "items": [
+      "이자론",
+      "생존 분포·생명표",
+      "보험료·준비금"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fp-actuary",
+   "name": "보험계리사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 240,
+   "goal": "보험계리사 1차·2차 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 16,
+     "title": "1차",
+     "items": [
+      "보험 계약법·보험 수학",
+      "경제학·회계 원리"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "2차",
+     "items": [
+      "계리 리스크 관리",
+      "보험 수리학",
+      "연금·재무 관리"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "영어는 공인 성적으로 대체한다. 과목은 공고 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.stats",
+   "step": 2,
+   "major": false,
+   "skip": "통계·수학·상경 전공 과목에서 배운다"
+  },
+  {
+   "ref": "cp.fs-reading",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "fin": [
+   {
+    "ref": "p.fp-design",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "cp.investment-manager",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.python-data",
+    "step": 6.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "actuary": [
+   {
+    "ref": "p.fp-math",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "p.fp-actuary",
+    "step": 6,
+    "major": true
+   }
+  ]
+ }
+}

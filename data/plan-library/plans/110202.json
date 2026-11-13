@@ -1,0 +1,169 @@
+{
+ "jobCode": "110202",
+ "title": "경제학연구원",
+ "displayName": "인문·사회과학 연구원",
+ "family": "research",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "연구직은 석사·박사 학위를 요구한다. 연구 방법론과 논문 실적을 쌓아 연구 기관이나 대학으로 간다.",
+ "gate": "법정 요건은 없으나 연구직 채용은 석사·박사 학위를 요구한다",
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "110203",
+   "title": "사회학연구원",
+   "track": null
+  },
+  {
+   "jobCode": "110201",
+   "title": "정치학연구원",
+   "track": null
+  },
+  {
+   "jobCode": "110101",
+   "title": "철학연구원",
+   "track": null
+  },
+  {
+   "jobCode": "110102",
+   "title": "역사학연구원",
+   "track": null
+  },
+  {
+   "jobCode": "110104",
+   "title": "교육학연구원",
+   "track": null
+  },
+  {
+   "jobCode": "110105",
+   "title": "심리학연구원",
+   "track": null
+  },
+  {
+   "jobCode": "110103",
+   "title": "언어학연구원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.hs-method",
+   "name": "연구 방법론",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "양적·질적 연구 설계와 자료 수집 방법을 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "방법",
+     "items": [
+      "연구 질문과 설계",
+      "양적·질적 방법",
+      "연구 윤리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.hs-paper",
+   "name": "학술 논문 쓰기와 투고",
+   "type": "output",
+   "subtype": "research",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 180,
+   "goal": "연구 결과를 논문으로 써서 학술지에 낸다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "연구",
+     "items": [
+      "선행 연구 검토",
+      "자료 수집·분석"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "집필",
+     "items": [
+      "초고·퇴고",
+      "투고와 심사 대응"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.major-grades",
+   "step": 1,
+   "major": true,
+   "note": "대학원 진학에 학부 성적이 반영된다"
+  },
+  {
+   "ref": "p.hs-method",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.stats",
+   "step": 3,
+   "major": true,
+   "note": "양적 연구를 할 때"
+  },
+  {
+   "ref": "cp.stat-tools",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.paper-reading",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.second-language",
+   "step": 6,
+   "major": true,
+   "note": "원전·해외 자료",
+   "optional": true
+  },
+  {
+   "ref": "cp.lab-grad",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "p.hs-paper",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

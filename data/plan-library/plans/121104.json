@@ -10,70 +10,7 @@
  "gate": "법정 요건은 없으나 채용 공고가 관련 전공 석사 이상을 요구하는 경우가 대부분",
  "tracks": [],
  "covers": [],
- "projects": [
-  {
-   "id": "p.bio-tech",
-   "name": "실험 기법 익히기",
-   "type": "skill",
-   "subtype": "field",
-   "category": "skill",
-   "method": "practice",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 180,
-   "goal": "분자·세포 실험의 기본 기법을 혼자 수행한다.",
-   "phases": [
-    {
-     "weeks": 4,
-     "title": "기법",
-     "items": [
-      "PCR·전기영동",
-      "세포 배양",
-      "단백질 분석"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "기록",
-     "items": [
-      "실험 노트 작성",
-      "결과 재현"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.bio-paper",
-   "name": "논문 읽기와 연구 계획",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "study_group",
-   "level": "중급",
-   "daysPerWeek": 2,
-   "minutesPerSession": 120,
-   "goal": "분야 논문을 읽고 연구 질문을 세운다.",
-   "phases": [
-    {
-     "weeks": 6,
-     "title": "읽기",
-     "items": [
-      "주 1편 정독",
-      "방법·결과 비판적으로 보기"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "계획",
-     "items": [
-      "연구 질문과 계획서 초안"
-     ]
-    }
-   ],
-   "basis": "practice"
-  }
- ],
+ "projects": [],
  "common": [
   {
    "ref": "cp.eng-major",
@@ -88,12 +25,12 @@
    "major": true
   },
   {
-   "ref": "p.bio-tech",
+   "ref": "cp.bio-lab",
    "step": 3,
    "major": true
   },
   {
-   "ref": "p.bio-paper",
+   "ref": "cp.paper-reading",
    "step": 4,
    "major": true
   },

@@ -1,0 +1,132 @@
+{
+ "jobCode": "026401",
+ "title": "감사사무원",
+ "displayName": "감사 담당자",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 회계와 내부 통제를 아는 것이 바탕이고, 다른 부서 경력을 쌓은 뒤 가는 경우가 많다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.au-basics",
+   "name": "내부 감사 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "내부 통제와 위험 평가, 감사 절차를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "내부 통제 체계",
+      "위험 평가와 감사 계획",
+      "증거 수집과 보고"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "사례",
+     "items": [
+      "부정 사례 분석"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.au-cia",
+   "name": "국제공인내부감사사(CIA)",
+   "type": "cert",
+   "subtype": "international",
+   "category": "qualification",
+   "method": "book",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "CIA 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 16,
+     "title": "파트별",
+     "items": [
+      "감사 기초",
+      "감사 실무",
+      "경영·정보 기술 지식"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "응시·자격 인정 요건은 협회 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.fs-reading",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.accounting-basic",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.au-basics",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.jaegyeong",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.au-cia",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

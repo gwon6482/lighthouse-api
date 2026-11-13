@@ -43,67 +43,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.rs-tool",
-   "name": "통계 패키지 다루기(SPSS·R)",
-   "type": "skill",
-   "subtype": "field",
-   "category": "skill",
-   "method": "lecture",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "조사 자료를 분석해 표와 그래프로 낸다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "분석",
-     "items": [
-      "빈도·교차 분석",
-      "평균 비교·회귀"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "보고",
-     "items": [
-      "분석 결과표 작성"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.rs-cert",
-   "name": "사회조사분석사 2급",
-   "type": "cert",
-   "subtype": "national-tech",
-   "category": "qualification",
-   "method": "book",
-   "level": "입문",
-   "daysPerWeek": 5,
-   "minutesPerSession": 90,
-   "goal": "사회조사분석사 2급에 합격한다.",
-   "phases": [
-    {
-     "weeks": 4,
-     "title": "필기",
-     "items": [
-      "조사 방법론",
-      "사회 통계"
-     ]
-    },
-    {
-     "weeks": 4,
-     "title": "실기",
-     "items": [
-      "작업형(통계 패키지)",
-      "필답형"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.rs-project",
    "name": "조사 프로젝트",
    "type": "output",
@@ -158,12 +97,12 @@
    "major": true
   },
   {
-   "ref": "p.rs-tool",
+   "ref": "cp.stat-tools",
    "step": 5,
    "major": true
   },
   {
-   "ref": "p.rs-cert",
+   "ref": "cp.social-survey-cert",
    "step": 6,
    "major": true
   },
