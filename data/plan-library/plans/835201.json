@@ -9,7 +9,18 @@
  "summary": "학력 제한이 낮은 공개 채용으로 뽑는다. 공정 이해와 관련 자격, 교대 근무 적응이 중요하다.",
  "gate": null,
  "tracks": [],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "835101",
+   "title": "전기부품·제품생산기계조작원",
+   "track": null
+  },
+  {
+   "jobCode": "836001",
+   "title": "전기·전자부품·제품조립원",
+   "track": null
+  }
+ ],
  "projects": [
   {
    "id": "p.op-work",

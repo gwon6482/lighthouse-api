@@ -25,7 +25,13 @@
    "desc": "병원·정신건강"
   }
  ],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "306601",
+   "title": "임상심리사",
+   "track": "clinical"
+  }
+ ],
  "projects": [
   {
    "id": "p.pc-major",

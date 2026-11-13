@@ -20,7 +20,13 @@
    "desc": "제품 목표·우선순위·지표"
   }
  ],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "134401",
+   "title": "웹운영자",
+   "track": "planner"
+  }
+ ],
  "projects": [
   {
    "id": "p.pl-basics",

@@ -13,6 +13,7 @@
 | `taxonomy.json` | 분류 — 활동 유형 7가지(자격·학업·스킬·경험·산출물·채용 절차·네트워킹), 공통성 3단계(전 직무·계열·직무 특화), 계열, 계열별 묶음 |
 | `common-projects.json` | 보편 프로젝트. id 는 `cp.<이름>` |
 | `priority-jobs.json` | 우선순위 직업 100개 — 통칭, 계열, 세부 카테고리(tracks), 같은 계획을 함께 쓰는 직업(covers) |
+| `backlog.json` | 1차 뒤에 남은 직업의 작업 목록 — 단계(2~4)와 묶음(batch). 한 줄이 계획 하나(대표 직업 + 함께 덮는 직업). 만들 때 `adopt()` 로 `priority-jobs.json` 에 옮긴다 |
 | `job-groups.json` | 추천 직무 112개와 1차에 넣은 직업, 뺀 이유 |
 | `plans/<jobCode>.json` | 직업별 예시 진로설계 |
 

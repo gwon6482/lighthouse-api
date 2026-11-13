@@ -9,7 +9,23 @@
  "summary": "자격이나 채용 절차가 없는 창업형 진로다. 작목을 정하고 교육과 실습을 거쳐 지원 사업으로 기반을 마련한다.",
  "gate": null,
  "tracks": [],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "901301",
+   "title": "과수작물재배원",
+   "track": null
+  },
+  {
+   "jobCode": "901101",
+   "title": "곡식작물재배원",
+   "track": null
+  },
+  {
+   "jobCode": "901401",
+   "title": "육묘 및 화훼작물재배자",
+   "track": null
+  }
+ ],
  "projects": [
   {
    "id": "p.fa-explore",

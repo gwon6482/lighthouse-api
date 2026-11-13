@@ -65,6 +65,11 @@
    "jobCode": "133101",
    "title": "시스템소프트웨어개발자",
    "track": "sys"
+  },
+  {
+   "jobCode": "133202",
+   "title": "가상현실전문가",
+   "track": "game"
   }
  ],
  "projects": [

@@ -9,7 +9,13 @@
  "summary": "필수 자격은 없다. 듣고 설명하는 힘과 빠른 문서 처리, 감정 관리가 핵심이다.",
  "gate": null,
  "tracks": [],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "613001",
+   "title": "텔레마케터",
+   "track": null
+  }
+ ],
  "projects": [
   {
    "id": "p.csr-tools",

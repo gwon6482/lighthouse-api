@@ -25,7 +25,13 @@
    "desc": "디지털·아날로그 설계"
   }
  ],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "153204",
+   "title": "디스플레이연구 및 개발자",
+   "track": "process"
+  }
+ ],
  "projects": [
   {
    "id": "p.semi-major",

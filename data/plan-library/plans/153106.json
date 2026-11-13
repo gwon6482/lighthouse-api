@@ -25,7 +25,23 @@
    "desc": "한전·발전사 채용"
   }
  ],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "153104",
+   "title": "송·배전설비기술자",
+   "track": "utility"
+  },
+  {
+   "jobCode": "153103",
+   "title": "발전설비기술자",
+   "track": "utility"
+  },
+  {
+   "jobCode": "153105",
+   "title": "전기감리기술자",
+   "track": "design"
+  }
+ ],
  "projects": [
   {
    "id": "p.el-safety",

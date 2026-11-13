@@ -30,6 +30,11 @@
    "jobCode": "031201",
    "title": "자산운용가",
    "track": "am"
+  },
+  {
+   "jobCode": "031401",
+   "title": "증권·외환딜러",
+   "track": null
   }
  ],
  "projects": [

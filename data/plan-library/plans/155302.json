@@ -9,7 +9,33 @@
  "summary": "환경 전공과 환경 분야 기사가 기본이다. 환경 시설·측정 업체·공기업으로 간다.",
  "gate": "법정 요건은 없으나 채용 공고가 환경 관련 전공과 기사 자격을 요구·우대한다",
  "tracks": [],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "155303",
+   "title": "폐기물처리기술자",
+   "track": null
+  },
+  {
+   "jobCode": "155305",
+   "title": "소음진동기술자 및 연구원",
+   "track": null
+  },
+  {
+   "jobCode": "155306",
+   "title": "토양환경기술자 및 연구원",
+   "track": null
+  },
+  {
+   "jobCode": "155301",
+   "title": "대기환경기술자 및 연구원",
+   "track": null
+  },
+  {
+   "jobCode": "155304",
+   "title": "환경영향평가원",
+   "track": null
+  }
+ ],
  "projects": [
   {
    "id": "p.env-law",

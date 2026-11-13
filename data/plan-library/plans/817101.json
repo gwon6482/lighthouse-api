@@ -9,7 +9,13 @@
  "summary": "학력 제한이 낮은 공개 채용으로 뽑는다. 서류·인적성·면접·신체검사를 거치고 관련 자격과 제조 경력이 가점이 된다.",
  "gate": null,
  "tracks": [],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "817201",
+   "title": "자동차부품조립·검사원",
+   "track": null
+  }
+ ],
  "projects": [
   {
    "id": "p.ap-line",

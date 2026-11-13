@@ -365,7 +365,13 @@
    "groupName": "안내·접수·고객상담 사무",
    "work24Postings": 364,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "613001",
+     "title": "텔레마케터",
+     "track": null
+    }
+   ]
   },
   {
    "no": 15,
@@ -412,6 +418,11 @@
      "jobCode": "032401",
      "title": "출납창구사무원",
      "track": "retail"
+    },
+    {
+     "jobCode": "031102",
+     "title": "신용분석가",
+     "track": "corp"
     }
    ]
   },
@@ -447,6 +458,11 @@
      "jobCode": "031201",
      "title": "자산운용가",
      "track": "am"
+    },
+    {
+     "jobCode": "031401",
+     "title": "증권·외환딜러",
+     "track": null
     }
    ]
   },
@@ -517,6 +533,11 @@
      "jobCode": "133101",
      "title": "시스템소프트웨어개발자",
      "track": "sys"
+    },
+    {
+     "jobCode": "133202",
+     "title": "가상현실전문가",
+     "track": "game"
     }
    ]
   },
@@ -542,7 +563,13 @@
      "desc": "제품 목표·우선순위·지표"
     }
    ],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "134401",
+     "title": "웹운영자",
+     "track": "planner"
+    }
+   ]
   },
   {
    "no": 20,
@@ -662,6 +689,11 @@
      "jobCode": "134101",
      "title": "데이터베이스운영·관리자",
      "track": "dba"
+    },
+    {
+     "jobCode": "134201",
+     "title": "네트워크시스템개발자",
+     "track": "network"
     }
    ]
   },
@@ -702,7 +734,18 @@
    "groupName": "건설·채굴 공학",
    "work24Postings": 719,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "140205",
+     "title": "건축감리기술자",
+     "track": null
+    },
+    {
+     "jobCode": "140206",
+     "title": "건축안전·환경기술자 및 건축품질기술자",
+     "track": null
+    }
+   ]
   },
   {
    "no": 27,
@@ -715,7 +758,18 @@
    "groupName": "건설·채굴 공학",
    "work24Postings": 687,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "140304",
+     "title": "토목감리기술자",
+     "track": null
+    },
+    {
+     "jobCode": "140305",
+     "title": "토목안전·환경기술자 및 토목품질기술자",
+     "track": null
+    }
+   ]
   },
   {
    "no": 28,
@@ -744,7 +798,18 @@
      "desc": "전장 부품·제어 SW"
     }
    ],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "151101",
+     "title": "건설기계공학기술자 및 연구원",
+     "track": "design"
+    },
+    {
+     "jobCode": "151102",
+     "title": "플랜트기계공학기술자",
+     "track": "design"
+    }
+   ]
   },
   {
    "no": 29,
@@ -773,7 +838,13 @@
      "desc": "디지털·아날로그 설계"
     }
    ],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "153204",
+     "title": "디스플레이연구 및 개발자",
+     "track": "process"
+    }
+   ]
   },
   {
    "no": 30,
@@ -797,7 +868,18 @@
      "desc": "MCU·임베디드 C"
     }
    ],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "131101",
+     "title": "컴퓨터하드웨어기술자",
+     "track": "hw"
+    },
+    {
+     "jobCode": "153101",
+     "title": "전기기기·제품개발기술자 및 연구원",
+     "track": "hw"
+    }
+   ]
   },
   {
    "no": 31,
@@ -826,7 +908,23 @@
      "desc": "한전·발전사 채용"
     }
    ],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "153104",
+     "title": "송·배전설비기술자",
+     "track": "utility"
+    },
+    {
+     "jobCode": "153103",
+     "title": "발전설비기술자",
+     "track": "utility"
+    },
+    {
+     "jobCode": "153105",
+     "title": "전기감리기술자",
+     "track": "design"
+    }
+   ]
   },
   {
    "no": 32,
@@ -873,7 +971,33 @@
    "groupName": "화학·에너지·환경 공학",
    "work24Postings": 231,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "155303",
+     "title": "폐기물처리기술자",
+     "track": null
+    },
+    {
+     "jobCode": "155305",
+     "title": "소음진동기술자 및 연구원",
+     "track": null
+    },
+    {
+     "jobCode": "155306",
+     "title": "토양환경기술자 및 연구원",
+     "track": null
+    },
+    {
+     "jobCode": "155301",
+     "title": "대기환경기술자 및 연구원",
+     "track": null
+    },
+    {
+     "jobCode": "155304",
+     "title": "환경영향평가원",
+     "track": null
+    }
+   ]
   },
   {
    "no": 34,
@@ -951,7 +1075,13 @@
      "desc": "기계 부품·3D 모델링"
     }
    ],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "159103",
+     "title": "3D프린팅모델러",
+     "track": "mech"
+    }
+   ]
   },
   {
    "no": 37,
@@ -1062,7 +1192,18 @@
    "groupName": "법률 전문가·사무",
    "work24Postings": 1,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "221101",
+     "title": "판사",
+     "track": null
+    },
+    {
+     "jobCode": "221102",
+     "title": "검사",
+     "track": null
+    }
+   ]
   },
   {
    "no": 43,
@@ -1114,7 +1255,13 @@
      "desc": "사회복지직 9급"
     }
    ],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "232901",
+     "title": "생활지도원",
+     "track": "youth"
+    }
+   ]
   },
   {
    "no": 45,
@@ -1127,7 +1274,13 @@
    "groupName": "사회복지·상담",
    "work24Postings": 98,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "029904",
+     "title": "취업알선원",
+     "track": null
+    }
+   ]
   },
   {
    "no": 46,
@@ -1156,7 +1309,13 @@
      "desc": "병원·정신건강"
     }
    ],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "306601",
+     "title": "임상심리사",
+     "track": "clinical"
+    }
+   ]
   },
   {
    "no": 47,
@@ -1443,7 +1602,73 @@
    "groupName": "의사·한의사·치과의사",
    "work24Postings": 8,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "301101",
+     "title": "내과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301109",
+     "title": "방사선과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301108",
+     "title": "소아청소년과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301102",
+     "title": "외과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301104",
+     "title": "산부인과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301107",
+     "title": "정신과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301106",
+     "title": "안과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301103",
+     "title": "성형외과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301105",
+     "title": "이비인후과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301112",
+     "title": "피부과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301110",
+     "title": "마취병리과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301113",
+     "title": "가정의학과의사",
+     "track": null
+    },
+    {
+     "jobCode": "301111",
+     "title": "비뇨기과의사",
+     "track": null
+    }
+   ]
   },
   {
    "no": 62,
@@ -1586,7 +1811,13 @@
    "groupName": "제품·패션·실내·시각 디자인",
    "work24Postings": 23,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "415202",
+     "title": "패션소품디자이너",
+     "track": null
+    }
+   ]
   },
   {
    "no": 68,
@@ -1839,6 +2070,11 @@
      "jobCode": "511401",
      "title": "메이크업아티스트 및 뷰티매니저",
      "track": "makeup"
+    },
+    {
+     "jobCode": "511402",
+     "title": "분장사",
+     "track": "makeup"
     }
    ]
   },
@@ -1937,6 +2173,11 @@
      "jobCode": "531501",
      "title": "일식조리사",
      "track": "japanese"
+    },
+    {
+     "jobCode": "531101",
+     "title": "주방장",
+     "track": null
     }
    ]
   },
@@ -1964,7 +2205,13 @@
    "groupName": "제과·제빵·떡 제조",
    "work24Postings": 127,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "871201",
+     "title": "떡제조원",
+     "track": null
+    }
+   ]
   },
   {
    "no": 83,
@@ -2061,7 +2308,13 @@
      "desc": "공군·해군 조종 장교"
     }
    ],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "621102",
+     "title": "헬리콥터조종사",
+     "track": null
+    }
+   ]
   },
   {
    "no": 88,
@@ -2126,7 +2379,18 @@
    "groupName": "운송장비 정비",
    "work24Postings": 514,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "812901",
+     "title": "오토바이정비원",
+     "track": null
+    },
+    {
+     "jobCode": "812902",
+     "title": "자전거판매 및 정비원",
+     "track": null
+    }
+   ]
   },
   {
    "no": 93,
@@ -2139,7 +2403,13 @@
    "groupName": "운송장비 정비",
    "work24Postings": 2,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "812102",
+     "title": "헬리콥터정비원",
+     "track": null
+    }
+   ]
   },
   {
    "no": 94,
@@ -2178,7 +2448,13 @@
    "groupName": "기계·운송장비 조립",
    "work24Postings": 75,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "817201",
+     "title": "자동차부품조립·검사원",
+     "track": null
+    }
+   ]
   },
   {
    "no": 97,
@@ -2204,7 +2480,18 @@
    "groupName": "전기공",
    "work24Postings": 467,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "831301",
+     "title": "외선전기공",
+     "track": null
+    },
+    {
+     "jobCode": "831101",
+     "title": "산업전기공",
+     "track": null
+    }
+   ]
   },
   {
    "no": 99,
@@ -2217,7 +2504,18 @@
    "groupName": "전기·전자 생산기계 조작",
    "work24Postings": 153,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "835101",
+     "title": "전기부품·제품생산기계조작원",
+     "track": null
+    },
+    {
+     "jobCode": "836001",
+     "title": "전기·전자부품·제품조립원",
+     "track": null
+    }
+   ]
   },
   {
    "no": 100,
@@ -2230,7 +2528,23 @@
    "groupName": "작물재배",
    "work24Postings": 39,
    "tracks": [],
-   "covers": []
+   "covers": [
+    {
+     "jobCode": "901301",
+     "title": "과수작물재배원",
+     "track": null
+    },
+    {
+     "jobCode": "901101",
+     "title": "곡식작물재배원",
+     "track": null
+    },
+    {
+     "jobCode": "901401",
+     "title": "육묘 및 화훼작물재배자",
+     "track": null
+    }
+   ]
   }
  ]
 }

@@ -9,7 +9,13 @@
  "summary": "필수 자격은 없다. 디자인 감각과 패턴·봉제 이해를 컬렉션 포트폴리오로 보여 준다.",
  "gate": null,
  "tracks": [],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "415202",
+   "title": "패션소품디자이너",
+   "track": null
+  }
+ ],
  "projects": [
   {
    "id": "p.fs-draw",

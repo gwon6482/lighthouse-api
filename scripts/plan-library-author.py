@@ -47,3 +47,21 @@ def relink(jobCode, pid, cid):
         for it in items:
             if it['ref'] == pid: it['ref'] = cid
     _dump(f'plans/{jobCode}.json', plan)
+
+def adopt(title, tracks=()):
+    """backlog.json 의 묶음을 priority-jobs.json 으로 옮긴다(계획을 쓰기 직전에 부른다). tracks = [(id, 이름, 설명), ...]"""
+    global PR
+    bl = _load('backlog.json'); pri = _load('priority-jobs.json')
+    b = next(x for w in bl['waves'] for x in w['bundles'] if x['title'] == title)
+    assert not b['done'], title
+    b['done'] = True
+    pri['jobs'].append(dict(no=len(pri['jobs']) + 1, tier=None, wave=b['wave'], batch=b['batch'], jobCode=b['jobCode'], title=b['title'], displayName=b['displayName'],
+        family=b['family'], group=b['group'], groupName=b['groupName'], work24Postings=None,
+        tracks=[dict(id=i, name=n, desc=d) for i, n, d in tracks], covers=[dict(jobCode=c['jobCode'], title=c['title'], track=c.get('track')) for c in b['covers']]))
+    _dump('backlog.json', bl); _dump('priority-jobs.json', pri)
+    PR = {j['title']: j for j in pri['jobs']}
+def next_batch():
+    """아직 안 만든 첫 묶음의 계획 목록을 찍는다"""
+    left = [x for w in _load('backlog.json')['waves'] for x in w['bundles'] if not x['done']]
+    if not left: print('남은 계획 없음'); return
+    for x in [y for y in left if y['batch'] == left[0]['batch']]: print(x['batch'], '|', x['title'], '|', x['displayName'], '|', x['family'], '|', ', '.join(c['title'] for c in x['covers']))

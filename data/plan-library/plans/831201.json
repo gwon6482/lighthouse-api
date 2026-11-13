@@ -9,7 +9,18 @@
  "summary": "전기기능사가 기본 증빙이다. 자격과 현장 경력을 쌓아 전기공사 기술자로 올라간다.",
  "gate": null,
  "tracks": [],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "831301",
+   "title": "외선전기공",
+   "track": null
+  },
+  {
+   "jobCode": "831101",
+   "title": "산업전기공",
+   "track": null
+  }
+ ],
  "projects": [
   {
    "id": "p.ew-basics",

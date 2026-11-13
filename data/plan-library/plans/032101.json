@@ -30,6 +30,11 @@
    "jobCode": "032401",
    "title": "출납창구사무원",
    "track": "retail"
+  },
+  {
+   "jobCode": "031102",
+   "title": "신용분석가",
+   "track": "corp"
   }
  ],
  "projects": [

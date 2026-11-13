@@ -45,6 +45,11 @@
    "jobCode": "134101",
    "title": "데이터베이스운영·관리자",
    "track": "dba"
+  },
+  {
+   "jobCode": "134201",
+   "title": "네트워크시스템개발자",
+   "track": "network"
   }
  ],
  "projects": [

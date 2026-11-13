@@ -20,7 +20,13 @@
    "desc": "기계 부품·3D 모델링"
   }
  ],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "159103",
+   "title": "3D프린팅모델러",
+   "track": "mech"
+  }
+ ],
  "projects": [
   {
    "id": "p.cd-arch",

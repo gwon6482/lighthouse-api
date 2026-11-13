@@ -45,6 +45,11 @@
    "jobCode": "531501",
    "title": "일식조리사",
    "track": "japanese"
+  },
+  {
+   "jobCode": "531101",
+   "title": "주방장",
+   "track": null
   }
  ],
  "projects": [

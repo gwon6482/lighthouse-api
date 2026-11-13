@@ -47,7 +47,10 @@ for (const [fam, ids] of Object.entries(tax.bundles)) {
   if (!tax.families[fam]) err('bundles', `family '${fam}'`);
   for (const id of ids) if (!cp.has(id)) err(`bundles.${fam}`, `없는 보편 프로젝트 ${id}`);
 }
-if (priority.length !== 100 || new Set(priority.map((j) => j.jobCode)).size !== 100) err('priority-jobs', '100개가 아니거나 중복');
+// 1차 100개 + 이후 단계에서 옮겨 온 계획. 대표 직업·함께 덮는 직업을 통틀어 한 직업은 한 번만 나와야 한다
+const allCodes = priority.flatMap((j) => [j.jobCode, ...j.covers.map((c) => c.jobCode)]);
+if (priority.length < 100 || new Set(allCodes).size !== allCodes.length) err('priority-jobs', '100개 미만이거나 직업이 겹침');
+for (const j of priority) for (const c of j.covers) if (c.track && !j.tracks.some((t) => t.id === c.track)) err('priority-jobs', `${j.title}: 함께 덮는 직업의 세부 카테고리 ${c.track} 없음`);
 
 const byCode = new Map(priority.map((j) => [j.jobCode, j]));
 const usedCommon = new Map();
@@ -99,7 +102,8 @@ for (const f of planFiles) {
     rows.push({ job: plan.displayName, track: tid ? pj.tracks.find((t) => t.id === tid).name : '-', ...summarize(items) });
   }
 }
-console.log(`보편 프로젝트 ${common.length}개 · 우선순위 직업 ${priority.length}개 · 계획 ${planFiles.length}개(${rows.length}갈래)`);
+console.log(`보편 프로젝트 ${common.length}개 · 계획 대상 ${priority.length}개(덮는 직업 ${allCodes.length}/537) · 계획 ${planFiles.length}개(${rows.length}갈래)`);
+if (fs.existsSync(path.join(DIR, 'backlog.json'))) { const left = read('backlog.json').waves.flatMap((w) => w.bundles).filter((b) => !b.done); console.log(`남은 계획 ${left.length}개` + (left.length ? ` — 다음 묶음 ${left[0].batch}` : '')); }
 if (process.argv.includes('--table')) for (const r of rows) console.log(`  ${r.job} / ${r.track}: 비전공 ${r.n}개 ${r.weeks}주 · 전공 ${r.major}개 ${r.majorWeeks}주 · 선택 ${r.opt}개`);
 const dup = [...localNames.entries()].filter(([, jobs]) => new Set(jobs).size > 1);
 if (dup.length) console.log('여러 직업에 같은 이름의 직업 프로젝트 → 보편 프로젝트로 올릴 후보:', dup.map(([n, j]) => `${n}(${[...new Set(j)].join('·')})`).join(', '));

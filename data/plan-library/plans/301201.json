@@ -9,7 +9,73 @@
  "summary": "의과대학을 졸업하고 의사 국가시험에 합격해 면허를 받는다. 이후 수련(인턴·전공의)을 거쳐 전문의가 된다.",
  "gate": "의과대학(6년) 졸업 + 의사 국가시험 합격(면허)",
  "tracks": [],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "301101",
+   "title": "내과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301109",
+   "title": "방사선과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301108",
+   "title": "소아청소년과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301102",
+   "title": "외과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301104",
+   "title": "산부인과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301107",
+   "title": "정신과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301106",
+   "title": "안과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301103",
+   "title": "성형외과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301105",
+   "title": "이비인후과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301112",
+   "title": "피부과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301110",
+   "title": "마취병리과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301113",
+   "title": "가정의학과의사",
+   "track": null
+  },
+  {
+   "jobCode": "301111",
+   "title": "비뇨기과의사",
+   "track": null
+  }
+ ],
  "projects": [
   {
    "id": "p.md-train",

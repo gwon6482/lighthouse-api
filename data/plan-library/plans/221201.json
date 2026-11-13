@@ -9,7 +9,18 @@
  "summary": "법학전문대학원(로스쿨)을 졸업하고 변호사시험에 합격해야 한다. 로스쿨 입학 준비가 첫 관문이다.",
  "gate": "법학전문대학원 석사 학위 + 변호사시험 합격",
  "tracks": [],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "221101",
+   "title": "판사",
+   "track": null
+  },
+  {
+   "jobCode": "221102",
+   "title": "검사",
+   "track": null
+  }
+ ],
  "projects": [
   {
    "id": "p.law-leet",

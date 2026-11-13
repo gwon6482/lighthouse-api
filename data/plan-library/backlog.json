@@ -1,0 +1,2960 @@
+{
+ "updatedAt": "2026-11-13",
+ "note": "1차 100개 뒤에 남은 직업을 묶어 단계와 묶음(batch)으로 나눈 작업 목록. 한 줄 = 계획 하나(대표 직업 + 함께 덮는 직업). 만들면 priority-jobs.json 으로 옮기고 여기서 done 을 true 로",
+ "waves": [
+  {
+   "wave": 2,
+   "name": "2단계 — 준비 과정이 뚜렷한 직업(전문자격·면허·공무원·전문 기술)",
+   "plans": 79,
+   "jobs": 117,
+   "batches": 8,
+   "bundles": [
+    {
+     "wave": 2,
+     "jobCode": "023401",
+     "title": "감정평가사",
+     "displayName": "감정평가사",
+     "family": "pro",
+     "group": "015",
+     "groupName": "경영·회계·광고·상품기획",
+     "covers": [],
+     "batch": "2-01",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "023301",
+     "title": "관세사",
+     "displayName": "관세사",
+     "family": "pro",
+     "group": "015",
+     "groupName": "경영·회계·광고·상품기획",
+     "covers": [],
+     "batch": "2-01",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "221401",
+     "title": "변리사",
+     "displayName": "변리사",
+     "family": "pro",
+     "group": "036",
+     "groupName": "법률 전문가·사무",
+     "covers": [],
+     "batch": "2-01",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "221301",
+     "title": "법무사 및 집행관",
+     "displayName": "법무사",
+     "family": "pro",
+     "group": "036",
+     "groupName": "법률 전문가·사무",
+     "covers": [],
+     "batch": "2-01",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "029903",
+     "title": "행정사",
+     "displayName": "행정사",
+     "family": "pro",
+     "group": "015",
+     "groupName": "경영·회계·광고·상품기획",
+     "covers": [],
+     "batch": "2-01",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "031501",
+     "title": "손해사정사",
+     "displayName": "손해사정사",
+     "family": "finance",
+     "group": "01C",
+     "groupName": "금융·보험 전문가",
+     "covers": [],
+     "batch": "2-01",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "301301",
+     "title": "한의사",
+     "displayName": "한의사",
+     "family": "health",
+     "group": "041",
+     "groupName": "의사·한의사·치과의사",
+     "covers": [],
+     "batch": "2-01",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "301401",
+     "title": "치과의사",
+     "displayName": "치과의사",
+     "family": "health",
+     "group": "041",
+     "groupName": "의사·한의사·치과의사",
+     "covers": [],
+     "batch": "2-01",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "302001",
+     "title": "수의사",
+     "displayName": "수의사",
+     "family": "health",
+     "group": "042",
+     "groupName": "약사·간호사·영양사 등",
+     "covers": [],
+     "batch": "2-01",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "306502",
+     "title": "작업치료사",
+     "displayName": "작업치료사",
+     "family": "health",
+     "group": "043",
+     "groupName": "의료기사·치료사·재활사",
+     "covers": [],
+     "batch": "2-01",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "306901",
+     "title": "언어치료사",
+     "displayName": "언어재활사",
+     "family": "health",
+     "group": "043",
+     "groupName": "의료기사·치료사·재활사",
+     "covers": [
+      {
+       "jobCode": "306902",
+       "title": "청능사"
+      }
+     ],
+     "batch": "2-02",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "306301",
+     "title": "치과기공사",
+     "displayName": "치과기공사",
+     "family": "health",
+     "group": "043",
+     "groupName": "의료기사·치료사·재활사",
+     "covers": [],
+     "batch": "2-02",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "307401",
+     "title": "보건의료정보관리사",
+     "displayName": "보건의료정보관리사",
+     "family": "health",
+     "group": "044",
+     "groupName": "그 외 보건·의료",
+     "covers": [],
+     "batch": "2-02",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "307301",
+     "title": "안경사",
+     "displayName": "안경사",
+     "family": "health",
+     "group": "044",
+     "groupName": "그 외 보건·의료",
+     "covers": [],
+     "batch": "2-02",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "029202",
+     "title": "의료코디네이터",
+     "displayName": "병원 코디네이터",
+     "family": "health",
+     "group": "01A",
+     "groupName": "안내·접수·고객상담 사무",
+     "covers": [],
+     "batch": "2-02",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "025101",
+     "title": "조세행정사무원",
+     "displayName": "세무·관세직 공무원",
+     "family": "public",
+     "group": "016",
+     "groupName": "정부 행정 사무",
+     "covers": [
+      {
+       "jobCode": "025201",
+       "title": "관세행정사무원"
+      },
+      {
+       "jobCode": "025301",
+       "title": "병무행정사무원"
+      }
+     ],
+     "batch": "2-02",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "025402",
+     "title": "법원공무원",
+     "displayName": "법원직 공무원",
+     "family": "public",
+     "group": "036",
+     "groupName": "법률 전문가·사무",
+     "covers": [],
+     "batch": "2-02",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "240301",
+     "title": "교도관",
+     "displayName": "교정직 공무원",
+     "family": "public",
+     "group": "039",
+     "groupName": "경찰·소방·교도·군인",
+     "covers": [],
+     "batch": "2-02",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "240102",
+     "title": "해양경찰관",
+     "displayName": "해양경찰",
+     "family": "public",
+     "group": "039",
+     "groupName": "경찰·소방·교도·군인",
+     "covers": [],
+     "batch": "2-02",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "250201",
+     "title": "위관급 장교",
+     "displayName": "군 장교",
+     "family": "public",
+     "group": "039",
+     "groupName": "경찰·소방·교도·군인",
+     "covers": [],
+     "batch": "2-02",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "026301",
+     "title": "총무사무원",
+     "displayName": "총무 담당자",
+     "family": "biz",
+     "group": "017",
+     "groupName": "경영지원 사무",
+     "covers": [],
+     "batch": "2-03",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "028401",
+     "title": "생산관리사무원",
+     "displayName": "생산관리 담당자",
+     "family": "biz",
+     "group": "019",
+     "groupName": "무역·구매·생산·품질 사무",
+     "covers": [],
+     "batch": "2-03",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "028301",
+     "title": "자재·구매사무원",
+     "displayName": "구매 담당자",
+     "family": "biz",
+     "group": "019",
+     "groupName": "무역·구매·생산·품질 사무",
+     "covers": [],
+     "batch": "2-03",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "029401",
+     "title": "비서",
+     "displayName": "비서",
+     "family": "biz",
+     "group": "01B",
+     "groupName": "통계·비서·사무보조",
+     "covers": [],
+     "batch": "2-03",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "022103",
+     "title": "경영·진단전문가",
+     "displayName": "경영 컨설턴트",
+     "family": "biz",
+     "group": "015",
+     "groupName": "경영·회계·광고·상품기획",
+     "covers": [],
+     "batch": "2-03",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "024203",
+     "title": "조사전문가",
+     "displayName": "리서처(시장·여론 조사)",
+     "family": "biz",
+     "group": "015",
+     "groupName": "경영·회계·광고·상품기획",
+     "covers": [],
+     "batch": "2-03",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "024404",
+     "title": "행사기획자",
+     "displayName": "행사·전시 기획자",
+     "family": "biz",
+     "group": "015",
+     "groupName": "경영·회계·광고·상품기획",
+     "covers": [],
+     "batch": "2-03",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "033202",
+     "title": "보험모집인",
+     "displayName": "보험설계사",
+     "family": "finance",
+     "group": "01D",
+     "groupName": "금융·보험 사무·영업",
+     "covers": [
+      {
+       "jobCode": "033201",
+       "title": "보험대리인 및 중개인"
+      }
+     ],
+     "batch": "2-03",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "612401",
+     "title": "제품광고영업원",
+     "displayName": "영업사원",
+     "family": "sales",
+     "group": "073",
+     "groupName": "자동차·제품·기타 영업",
+     "covers": [],
+     "batch": "2-03",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "612301",
+     "title": "자동차영업원",
+     "displayName": "자동차 영업사원(카마스터)",
+     "family": "sales",
+     "group": "073",
+     "groupName": "자동차·제품·기타 영업",
+     "covers": [],
+     "batch": "2-03",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "132002",
+     "title": "컴퓨터시스템설계 및 분석가",
+     "displayName": "IT 컨설턴트·시스템 분석가",
+     "family": "it",
+     "group": "023",
+     "groupName": "컴퓨터시스템",
+     "covers": [
+      {
+       "jobCode": "132004",
+       "title": "정보통신컨설턴트 및 감리원"
+      }
+     ],
+     "batch": "2-04",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "131202",
+     "title": "통신기술개발자",
+     "displayName": "통신 엔지니어",
+     "family": "it",
+     "group": "022",
+     "groupName": "컴퓨터하드웨어·통신공학",
+     "covers": [
+      {
+       "jobCode": "131201",
+       "title": "통신기기·장비기술자"
+      },
+      {
+       "jobCode": "131203",
+       "title": "통신망운영기술자"
+      }
+     ],
+     "batch": "2-04",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "415502",
+     "title": "게임그래픽디자이너",
+     "displayName": "게임 그래픽 디자이너",
+     "family": "design",
+     "group": "056",
+     "groupName": "미디어·UX/UI 디자인",
+     "covers": [],
+     "batch": "2-04",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "415101",
+     "title": "제품디자이너",
+     "displayName": "제품 디자이너",
+     "family": "design",
+     "group": "055",
+     "groupName": "제품·패션·실내·시각 디자인",
+     "covers": [],
+     "batch": "2-04",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "151201",
+     "title": "로봇공학기술자",
+     "displayName": "로봇 엔지니어",
+     "family": "eng",
+     "group": "029",
+     "groupName": "기계·로봇·금속·재료 공학",
+     "covers": [],
+     "batch": "2-04",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "151105",
+     "title": "항공공학기술자",
+     "displayName": "항공우주 엔지니어",
+     "family": "eng",
+     "group": "029",
+     "groupName": "기계·로봇·금속·재료 공학",
+     "covers": [],
+     "batch": "2-04",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "152101",
+     "title": "재료(금속)공학기술자",
+     "displayName": "소재 엔지니어",
+     "family": "eng",
+     "group": "029",
+     "groupName": "기계·로봇·금속·재료 공학",
+     "covers": [],
+     "batch": "2-04",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "153102",
+     "title": "전기계측제어기술자",
+     "displayName": "계측제어 엔지니어",
+     "family": "eng",
+     "group": "02A",
+     "groupName": "전기·전자 공학",
+     "covers": [
+      {
+       "jobCode": "153203",
+       "title": "전자계측제어기술자"
+      }
+     ],
+     "batch": "2-04",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "154101",
+     "title": "석유화학공학기술자 및 연구원",
+     "displayName": "화학공학 엔지니어",
+     "family": "eng",
+     "group": "02B",
+     "groupName": "화학·에너지·환경 공학",
+     "covers": [
+      {
+       "jobCode": "154103",
+       "title": "도료 및 농약품화학공학기술자 및 연구원"
+      },
+      {
+       "jobCode": "154102",
+       "title": "고무 및 플라스틱화학공학기술자 및 연구원"
+      },
+      {
+       "jobCode": "154104",
+       "title": "비누 및 화장품화학공학기술자 및 연구원"
+      }
+     ],
+     "batch": "2-04",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "155102",
+     "title": "태양광발전연구 및 개발자",
+     "displayName": "신재생에너지 엔지니어",
+     "family": "eng",
+     "group": "02B",
+     "groupName": "화학·에너지·환경 공학",
+     "covers": [
+      {
+       "jobCode": "155103",
+       "title": "풍력발전연구 및 개발자"
+      }
+     ],
+     "batch": "2-04",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "158201",
+     "title": "소방공학기술자 및 연구원",
+     "displayName": "소방 설비 기술자",
+     "family": "eng",
+     "group": "02C",
+     "groupName": "섬유·식품·안전 공학",
+     "covers": [],
+     "batch": "2-05",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "140201",
+     "title": "건축구조기술자",
+     "displayName": "구조 기술자",
+     "family": "eng",
+     "group": "028",
+     "groupName": "건설·채굴 공학",
+     "covers": [
+      {
+       "jobCode": "140301",
+       "title": "토목구조설계기술자"
+      }
+     ],
+     "batch": "2-05",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "140204",
+     "title": "건축설비기술자",
+     "displayName": "건축 설비 기술자",
+     "family": "eng",
+     "group": "028",
+     "groupName": "건설·채굴 공학",
+     "covers": [],
+     "batch": "2-05",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "140401",
+     "title": "조경기술자",
+     "displayName": "조경 기술자",
+     "family": "eng",
+     "group": "028",
+     "groupName": "건설·채굴 공학",
+     "covers": [],
+     "batch": "2-05",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "140601",
+     "title": "지적 및 측량기술자",
+     "displayName": "측량·공간정보 기술자",
+     "family": "eng",
+     "group": "028",
+     "groupName": "건설·채굴 공학",
+     "covers": [
+      {
+       "jobCode": "140602",
+       "title": "지리정보시스템전문가"
+      }
+     ],
+     "batch": "2-05",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "140501",
+     "title": "도시계획·설계가",
+     "displayName": "도시·교통 계획가",
+     "family": "eng",
+     "group": "028",
+     "groupName": "건설·채굴 공학",
+     "covers": [
+      {
+       "jobCode": "140502",
+       "title": "교통계획·설계가"
+      },
+      {
+       "jobCode": "140503",
+       "title": "교통영향평가원"
+      }
+     ],
+     "batch": "2-05",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "214301",
+     "title": "기술·기능계강사",
+     "displayName": "직업훈련 교사·강사",
+     "family": "edu",
+     "group": "033",
+     "groupName": "정보통신·기술·기능계 강사",
+     "covers": [
+      {
+       "jobCode": "214201",
+       "title": "컴퓨터강사"
+      }
+     ],
+     "batch": "2-05",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "215105",
+     "title": "교재·교구 및 이러닝교육전문가",
+     "displayName": "교육 콘텐츠 기획자(교수설계)",
+     "family": "edu",
+     "group": "035",
+     "groupName": "장학관·교육조교·보조 교사",
+     "covers": [],
+     "batch": "2-05",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "411202",
+     "title": "통역가",
+     "displayName": "통역사",
+     "family": "media",
+     "group": "051",
+     "groupName": "작가·통번역·출판",
+     "covers": [],
+     "batch": "2-05",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "411104",
+     "title": "방송작가",
+     "displayName": "방송·시나리오 작가",
+     "family": "media",
+     "group": "051",
+     "groupName": "작가·통번역·출판",
+     "covers": [
+      {
+       "jobCode": "411103",
+       "title": "영화시나리오작가"
+      }
+     ],
+     "batch": "2-05",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "411301",
+     "title": "출판물기획자",
+     "displayName": "출판 편집자",
+     "family": "media",
+     "group": "052",
+     "groupName": "기자·언론 전문가",
+     "covers": [
+      {
+       "jobCode": "029901",
+       "title": "출판·자료편집사무원"
+      }
+     ],
+     "batch": "2-06",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "416301",
+     "title": "아나운서",
+     "displayName": "아나운서·리포터",
+     "family": "media",
+     "group": "057",
+     "groupName": "연극·영화·방송",
+     "covers": [
+      {
+       "jobCode": "416302",
+       "title": "리포터"
+      }
+     ],
+     "batch": "2-06",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "416401",
+     "title": "촬영기사",
+     "displayName": "촬영 감독",
+     "family": "media",
+     "group": "057",
+     "groupName": "연극·영화·방송",
+     "covers": [],
+     "batch": "2-06",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "416501",
+     "title": "음향·녹음기사",
+     "displayName": "음향·조명 엔지니어",
+     "family": "media",
+     "group": "057",
+     "groupName": "연극·영화·방송",
+     "covers": [
+      {
+       "jobCode": "416701",
+       "title": "조명기사"
+      }
+     ],
+     "batch": "2-06",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "416201",
+     "title": "영화배우 및 탤런트",
+     "displayName": "배우",
+     "family": "media",
+     "group": "057",
+     "groupName": "연극·영화·방송",
+     "covers": [
+      {
+       "jobCode": "416203",
+       "title": "연극 및 뮤지컬배우"
+      }
+     ],
+     "batch": "2-06",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "414601",
+     "title": "가수",
+     "displayName": "가수",
+     "family": "media",
+     "group": "054",
+     "groupName": "창작·공연",
+     "covers": [],
+     "batch": "2-06",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "414201",
+     "title": "사진작가 및 사진사",
+     "displayName": "사진작가",
+     "family": "media",
+     "group": "054",
+     "groupName": "창작·공연",
+     "covers": [],
+     "batch": "2-06",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "414303",
+     "title": "만화영화작가(애니메이터)",
+     "displayName": "애니메이터",
+     "family": "media",
+     "group": "054",
+     "groupName": "창작·공연",
+     "covers": [],
+     "batch": "2-06",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "417201",
+     "title": "연예인매니저",
+     "displayName": "연예인 매니저",
+     "family": "media",
+     "group": "059",
+     "groupName": "스포츠·레크리에이션",
+     "covers": [],
+     "batch": "2-06",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "413101",
+     "title": "학예사",
+     "displayName": "학예사(큐레이터)",
+     "family": "edu",
+     "group": "053",
+     "groupName": "학예사·사서·기록물관리사",
+     "covers": [
+      {
+       "jobCode": "413102",
+       "title": "문화재보존원"
+      }
+     ],
+     "batch": "2-06",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "413202",
+     "title": "기록물관리사",
+     "displayName": "기록물관리 전문요원",
+     "family": "edu",
+     "group": "053",
+     "groupName": "학예사·사서·기록물관리사",
+     "covers": [],
+     "batch": "2-07",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "420101",
+     "title": "스포츠감독 및 코치",
+     "displayName": "스포츠 지도자",
+     "family": "service",
+     "group": "059",
+     "groupName": "스포츠·레크리에이션",
+     "covers": [],
+     "batch": "2-07",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "511501",
+     "title": "반려동물미용사",
+     "displayName": "반려동물 미용사",
+     "family": "service",
+     "group": "061",
+     "groupName": "미용·반려동물 서비스",
+     "covers": [],
+     "batch": "2-07",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "512102",
+     "title": "웨딩플래너",
+     "displayName": "웨딩플래너",
+     "family": "service",
+     "group": "062",
+     "groupName": "결혼·장례 등 예식 서비스",
+     "covers": [
+      {
+       "jobCode": "512201",
+       "title": "혼례종사원"
+      }
+     ],
+     "batch": "2-07",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "512301",
+     "title": "장례지도사 및 장례상담원",
+     "displayName": "장례지도사",
+     "family": "service",
+     "group": "062",
+     "groupName": "결혼·장례 등 예식 서비스",
+     "covers": [],
+     "batch": "2-07",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "521101",
+     "title": "여행상품개발자",
+     "displayName": "여행 기획자",
+     "family": "service",
+     "group": "063",
+     "groupName": "여행·승무·숙박·오락 서비스",
+     "covers": [
+      {
+       "jobCode": "521201",
+       "title": "여행사무원"
+      }
+     ],
+     "batch": "2-07",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "521304",
+     "title": "여행안내원",
+     "displayName": "관광 가이드·해설사",
+     "family": "service",
+     "group": "063",
+     "groupName": "여행·승무·숙박·오락 서비스",
+     "covers": [
+      {
+       "jobCode": "521303",
+       "title": "자연 및 문화해설사"
+      }
+     ],
+     "batch": "2-07",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "621201",
+     "title": "선장 및 항해사",
+     "displayName": "항해사·기관사",
+     "family": "transport",
+     "group": "079",
+     "groupName": "항공기·선박·철도 조종·관제",
+     "covers": [
+      {
+       "jobCode": "621203",
+       "title": "선박기관사"
+      },
+      {
+       "jobCode": "624301",
+       "title": "선박갑판원"
+      }
+     ],
+     "batch": "2-07",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "621401",
+     "title": "항공교통관제사",
+     "displayName": "교통 관제사",
+     "family": "transport",
+     "group": "079",
+     "groupName": "항공기·선박·철도 조종·관제",
+     "covers": [
+      {
+       "jobCode": "621402",
+       "title": "선박교통관제사"
+      },
+      {
+       "jobCode": "621403",
+       "title": "철도교통관제사"
+      }
+     ],
+     "batch": "2-07",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "622201",
+     "title": "버스운전원",
+     "displayName": "버스·화물·택시 운전기사",
+     "family": "transport",
+     "group": "07A",
+     "groupName": "자동차 운전",
+     "covers": [
+      {
+       "jobCode": "622304",
+       "title": "화물차·특수차운전원"
+      },
+      {
+       "jobCode": "622101",
+       "title": "택시운전원"
+      }
+     ],
+     "batch": "2-07",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "701601",
+     "title": "건축목공",
+     "displayName": "목수",
+     "family": "tech",
+     "group": "081",
+     "groupName": "건설구조 기능",
+     "covers": [
+      {
+       "jobCode": "701602",
+       "title": "전통건축기능원"
+      }
+     ],
+     "batch": "2-08",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "702401",
+     "title": "타일·대리석시공원",
+     "displayName": "타일 기술자",
+     "family": "tech",
+     "group": "082",
+     "groupName": "건축마감 기능",
+     "covers": [],
+     "batch": "2-08",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "703101",
+     "title": "건설배관공",
+     "displayName": "배관공",
+     "family": "tech",
+     "group": "083",
+     "groupName": "배관",
+     "covers": [
+      {
+       "jobCode": "703201",
+       "title": "공업배관공"
+      }
+     ],
+     "batch": "2-08",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "811201",
+     "title": "승강기설치·정비원",
+     "displayName": "승강기 기술자",
+     "family": "tech",
+     "group": "091",
+     "groupName": "기계장비 설치·정비",
+     "covers": [],
+     "batch": "2-08",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "811401",
+     "title": "냉동·냉장·공조기설치·정비원",
+     "displayName": "냉동공조 기술자",
+     "family": "tech",
+     "group": "091",
+     "groupName": "기계장비 설치·정비",
+     "covers": [
+      {
+       "jobCode": "811501",
+       "title": "보일러설치·정비원"
+      }
+     ],
+     "batch": "2-08",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "814001",
+     "title": "냉·난방설비조작원",
+     "displayName": "시설관리 기사",
+     "family": "tech",
+     "group": "094",
+     "groupName": "설비·자동화 조작",
+     "covers": [],
+     "batch": "2-08",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "851201",
+     "title": "화학물가공장치조작원",
+     "displayName": "정유·화학 생산직",
+     "family": "tech",
+     "group": "111",
+     "groupName": "석유·화학물 가공장치 조작",
+     "covers": [
+      {
+       "jobCode": "851101",
+       "title": "석유·천연가스제조제어장치조작원"
+      }
+     ],
+     "batch": "2-08",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "883101",
+     "title": "가구제조·수리원",
+     "displayName": "가구 제작자(목공)",
+     "family": "tech",
+     "group": "123",
+     "groupName": "가구·목제품 제조·수리",
+     "covers": [
+      {
+       "jobCode": "883201",
+       "title": "가구조립원"
+      }
+     ],
+     "batch": "2-08",
+     "done": false
+    },
+    {
+     "wave": 2,
+     "jobCode": "884201",
+     "title": "귀금속·보석세공원",
+     "displayName": "주얼리·공예 작가",
+     "family": "tech",
+     "group": "124",
+     "groupName": "공예·귀금속 세공",
+     "covers": [
+      {
+       "jobCode": "884101",
+       "title": "공예원"
+      }
+     ],
+     "batch": "2-08",
+     "done": false
+    }
+   ]
+  },
+  {
+   "wave": 3,
+   "name": "3단계 — 틈새 전문직·기능직·예술·연구",
+   "plans": 78,
+   "jobs": 157,
+   "batches": 8,
+   "bundles": [
+    {
+     "wave": 3,
+     "jobCode": "021001",
+     "title": "정부·공공행정전문가",
+     "displayName": "정책 전문가(5급 공채)",
+     "family": "public",
+     "group": "015",
+     "groupName": "경영·회계·광고·상품기획",
+     "covers": [],
+     "batch": "3-01",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "026401",
+     "title": "감사사무원",
+     "displayName": "감사 담당자",
+     "family": "biz",
+     "group": "017",
+     "groupName": "경영지원 사무",
+     "covers": [],
+     "batch": "3-01",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "029303",
+     "title": "통계사무원",
+     "displayName": "통계 담당자",
+     "family": "data",
+     "group": "018",
+     "groupName": "회계·경리 사무",
+     "covers": [],
+     "batch": "3-01",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "028203",
+     "title": "항공운송사무원",
+     "displayName": "운송 사무원",
+     "family": "biz",
+     "group": "019",
+     "groupName": "무역·구매·생산·품질 사무",
+     "covers": [
+      {
+       "jobCode": "028202",
+       "title": "철도·지하철운송사무원"
+      },
+      {
+       "jobCode": "028201",
+       "title": "도로운송사무원"
+      },
+      {
+       "jobCode": "028204",
+       "title": "수상운송사무원"
+      }
+     ],
+     "batch": "3-01",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "029101",
+     "title": "안내 및 접수사무원",
+     "displayName": "안내·접수 사무원",
+     "family": "service",
+     "group": "01A",
+     "groupName": "안내·접수·고객상담 사무",
+     "covers": [],
+     "batch": "3-01",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "029902",
+     "title": "속기사",
+     "displayName": "속기사",
+     "family": "biz",
+     "group": "01B",
+     "groupName": "통계·비서·사무보조",
+     "covers": [],
+     "batch": "3-01",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "032301",
+     "title": "보험인수심사원(언더라이터)",
+     "displayName": "보험 심사역(언더라이터)",
+     "family": "finance",
+     "group": "01C",
+     "groupName": "금융·보험 전문가",
+     "covers": [],
+     "batch": "3-01",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "032302",
+     "title": "보험보상사무원",
+     "displayName": "보험·증권 사무원",
+     "family": "finance",
+     "group": "01D",
+     "groupName": "금융·보험 사무·영업",
+     "covers": [
+      {
+       "jobCode": "032201",
+       "title": "증권사무원"
+      },
+      {
+       "jobCode": "032501",
+       "title": "신용추심원"
+      }
+     ],
+     "batch": "3-01",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "031302",
+     "title": "금융상품개발자",
+     "displayName": "금융·보험 상품개발자",
+     "family": "finance",
+     "group": "063",
+     "groupName": "여행·승무·숙박·오락 서비스",
+     "covers": [
+      {
+       "jobCode": "031301",
+       "title": "보험상품개발자"
+      }
+     ],
+     "batch": "3-01",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "121102",
+     "title": "화학연구원",
+     "displayName": "자연과학 연구원",
+     "family": "research",
+     "group": "021",
+     "groupName": "인문·사회·자연·생명과학 연구",
+     "covers": [
+      {
+       "jobCode": "121101",
+       "title": "물리학연구원"
+      },
+      {
+       "jobCode": "121103",
+       "title": "수학 및 통계연구원"
+      },
+      {
+       "jobCode": "121106",
+       "title": "천문 및 기상학연구원"
+      },
+      {
+       "jobCode": "121105",
+       "title": "지질학연구원"
+      }
+     ],
+     "batch": "3-01",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "122101",
+     "title": "의학연구원",
+     "displayName": "의약·농림수산 연구원",
+     "family": "research",
+     "group": "021",
+     "groupName": "인문·사회·자연·생명과학 연구",
+     "covers": [
+      {
+       "jobCode": "122102",
+       "title": "약학연구원"
+      },
+      {
+       "jobCode": "122103",
+       "title": "농학연구원"
+      },
+      {
+       "jobCode": "122104",
+       "title": "수산학연구원"
+      },
+      {
+       "jobCode": "122106",
+       "title": "축산학 및 수의학연구원"
+      },
+      {
+       "jobCode": "122105",
+       "title": "임학 및 산림학연구원"
+      }
+     ],
+     "batch": "3-02",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "110202",
+     "title": "경제학연구원",
+     "displayName": "인문·사회과학 연구원",
+     "family": "research",
+     "group": "021",
+     "groupName": "인문·사회·자연·생명과학 연구",
+     "covers": [
+      {
+       "jobCode": "110203",
+       "title": "사회학연구원"
+      },
+      {
+       "jobCode": "110201",
+       "title": "정치학연구원"
+      },
+      {
+       "jobCode": "110101",
+       "title": "철학연구원"
+      },
+      {
+       "jobCode": "110102",
+       "title": "역사학연구원"
+      },
+      {
+       "jobCode": "110104",
+       "title": "교육학연구원"
+      },
+      {
+       "jobCode": "110105",
+       "title": "심리학연구원"
+      },
+      {
+       "jobCode": "110103",
+       "title": "언어학연구원"
+      }
+     ],
+     "batch": "3-02",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "122201",
+     "title": "생명과학시험원",
+     "displayName": "시험·분석원",
+     "family": "research",
+     "group": "021",
+     "groupName": "인문·사회·자연·생명과학 연구",
+     "covers": [
+      {
+       "jobCode": "122301",
+       "title": "농림어업시험원"
+      },
+      {
+       "jobCode": "121201",
+       "title": "자연과학시험원"
+      },
+      {
+       "jobCode": "140701",
+       "title": "건설자재시험원"
+      },
+      {
+       "jobCode": "152201",
+       "title": "금속·재료공학시험원"
+      },
+      {
+       "jobCode": "151301",
+       "title": "기계‧로봇공학시험원"
+      },
+      {
+       "jobCode": "153301",
+       "title": "전기·전자공학시험원"
+      },
+      {
+       "jobCode": "154201",
+       "title": "화학공학시험원"
+      },
+      {
+       "jobCode": "155401",
+       "title": "환경시험원"
+      },
+      {
+       "jobCode": "157201",
+       "title": "식품공학시험원"
+      },
+      {
+       "jobCode": "156201",
+       "title": "섬유공학시험원"
+      },
+      {
+       "jobCode": "155203",
+       "title": "가스·에너지시험원 및 진단전문가"
+      }
+     ],
+     "batch": "3-02",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "211101",
+     "title": "대학교수",
+     "displayName": "대학 교수",
+     "family": "edu",
+     "group": "031",
+     "groupName": "교수·학교·유치원 교사",
+     "covers": [
+      {
+       "jobCode": "211201",
+       "title": "대학시간강사"
+      }
+     ],
+     "batch": "3-02",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "136002",
+     "title": "방송송출장비기사",
+     "displayName": "방송·통신 송출 기사",
+     "family": "it",
+     "group": "027",
+     "groupName": "통신·방송 송출",
+     "covers": [
+      {
+       "jobCode": "136001",
+       "title": "통신장비기사"
+      }
+     ],
+     "batch": "3-02",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "151108",
+     "title": "조선·해양공학기술자",
+     "displayName": "조선·해양 엔지니어",
+     "family": "eng",
+     "group": "029",
+     "groupName": "기계·로봇·금속·재료 공학",
+     "covers": [],
+     "batch": "3-02",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "155106",
+     "title": "원자력공학기술자",
+     "displayName": "원자력 엔지니어",
+     "family": "eng",
+     "group": "02B",
+     "groupName": "화학·에너지·환경 공학",
+     "covers": [],
+     "batch": "3-02",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "156101",
+     "title": "섬유공학기술자",
+     "displayName": "섬유 엔지니어",
+     "family": "eng",
+     "group": "02C",
+     "groupName": "섬유·식품·안전 공학",
+     "covers": [],
+     "batch": "3-02",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "158501",
+     "title": "비파괴검사원",
+     "displayName": "비파괴검사 기술자",
+     "family": "eng",
+     "group": "02C",
+     "groupName": "섬유·식품·안전 공학",
+     "covers": [],
+     "batch": "3-02",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "155501",
+     "title": "보건위생·환경검사원",
+     "displayName": "위생·환경 검사원(위생사)",
+     "family": "health",
+     "group": "02B",
+     "groupName": "화학·에너지·환경 공학",
+     "covers": [],
+     "batch": "3-02",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "303002",
+     "title": "한약사",
+     "displayName": "한약사",
+     "family": "health",
+     "group": "042",
+     "groupName": "약사·간호사·영양사 등",
+     "covers": [],
+     "batch": "3-03",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "306903",
+     "title": "놀이치료사",
+     "displayName": "놀이·예술 치료사",
+     "family": "health",
+     "group": "043",
+     "groupName": "의료기사·치료사·재활사",
+     "covers": [
+      {
+       "jobCode": "306904",
+       "title": "예술치료사"
+      }
+     ],
+     "batch": "3-03",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "306701",
+     "title": "재활공학기사",
+     "displayName": "의지·보조기 기사",
+     "family": "health",
+     "group": "043",
+     "groupName": "의료기사·치료사·재활사",
+     "covers": [],
+     "batch": "3-03",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "511502",
+     "title": "수의사보조원",
+     "displayName": "동물보건사",
+     "family": "health",
+     "group": "044",
+     "groupName": "그 외 보건·의료",
+     "covers": [],
+     "batch": "3-03",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "307601",
+     "title": "안마사",
+     "displayName": "안마사",
+     "family": "health",
+     "group": "044",
+     "groupName": "그 외 보건·의료",
+     "covers": [],
+     "batch": "3-03",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "214401",
+     "title": "예능강사",
+     "displayName": "예체능 강사",
+     "family": "edu",
+     "group": "034",
+     "groupName": "예능·학습지·기타 강사",
+     "covers": [],
+     "batch": "3-03",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "214501",
+     "title": "학습지·교육교구방문강사",
+     "displayName": "방문 학습 교사",
+     "family": "edu",
+     "group": "034",
+     "groupName": "예능·학습지·기타 강사",
+     "covers": [],
+     "batch": "3-03",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "212901",
+     "title": "보조교사",
+     "displayName": "보조 교사·방과후 강사",
+     "family": "edu",
+     "group": "035",
+     "groupName": "장학관·교육조교·보조 교사",
+     "covers": [],
+     "batch": "3-03",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "231501",
+     "title": "사회단체활동가",
+     "displayName": "비영리 단체 활동가",
+     "family": "welfare",
+     "group": "037",
+     "groupName": "사회복지·상담",
+     "covers": [],
+     "batch": "3-03",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "411102",
+     "title": "소설가",
+     "displayName": "소설가·웹소설 작가",
+     "family": "media",
+     "group": "051",
+     "groupName": "작가·통번역·출판",
+     "covers": [],
+     "batch": "3-03",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "416102",
+     "title": "영화감독",
+     "displayName": "영화·연극 연출가",
+     "family": "media",
+     "group": "057",
+     "groupName": "연극·영화·방송",
+     "covers": [
+      {
+       "jobCode": "416103",
+       "title": "연극연출가"
+      },
+      {
+       "jobCode": "416104",
+       "title": "광고영상감독"
+      },
+      {
+       "jobCode": "416105",
+       "title": "연극영화방송기술감독"
+      }
+     ],
+     "batch": "3-04",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "416205",
+     "title": "성우",
+     "displayName": "성우",
+     "family": "media",
+     "group": "057",
+     "groupName": "연극·영화·방송",
+     "covers": [],
+     "batch": "3-04",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "416202",
+     "title": "모델",
+     "displayName": "모델",
+     "family": "media",
+     "group": "057",
+     "groupName": "연극·영화·방송",
+     "covers": [],
+     "batch": "3-04",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "416204",
+     "title": "개그맨 및 코미디언",
+     "displayName": "코미디언",
+     "family": "media",
+     "group": "057",
+     "groupName": "연극·영화·방송",
+     "covers": [],
+     "batch": "3-04",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "414503",
+     "title": "연주가",
+     "displayName": "클래식·국악 음악가",
+     "family": "media",
+     "group": "054",
+     "groupName": "창작·공연",
+     "covers": [
+      {
+       "jobCode": "414602",
+       "title": "성악가"
+      },
+      {
+       "jobCode": "414501",
+       "title": "지휘자"
+      },
+      {
+       "jobCode": "414401",
+       "title": "국악인"
+      }
+     ],
+     "batch": "3-04",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "414502",
+     "title": "작곡가",
+     "displayName": "작곡가",
+     "family": "media",
+     "group": "054",
+     "groupName": "창작·공연",
+     "covers": [],
+     "batch": "3-04",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "414701",
+     "title": "무용가",
+     "displayName": "무용가·안무가",
+     "family": "media",
+     "group": "054",
+     "groupName": "창작·공연",
+     "covers": [
+      {
+       "jobCode": "414702",
+       "title": "안무가"
+      },
+      {
+       "jobCode": "414703",
+       "title": "대중무용수"
+      }
+     ],
+     "batch": "3-04",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "414101",
+     "title": "화가",
+     "displayName": "미술 작가",
+     "family": "media",
+     "group": "054",
+     "groupName": "창작·공연",
+     "covers": [
+      {
+       "jobCode": "414102",
+       "title": "조각가"
+      }
+     ],
+     "batch": "3-04",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "420201",
+     "title": "직업운동선수",
+     "displayName": "운동선수",
+     "family": "service",
+     "group": "059",
+     "groupName": "스포츠·레크리에이션",
+     "covers": [],
+     "batch": "3-04",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "420202",
+     "title": "프로게이머",
+     "displayName": "프로게이머",
+     "family": "service",
+     "group": "059",
+     "groupName": "스포츠·레크리에이션",
+     "covers": [],
+     "batch": "3-04",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "420403",
+     "title": "레크리에이션전문가",
+     "displayName": "레크리에이션 지도자",
+     "family": "service",
+     "group": "059",
+     "groupName": "스포츠·레크리에이션",
+     "covers": [],
+     "batch": "3-05",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "420301",
+     "title": "경기심판 및 경기기록원",
+     "displayName": "경기 심판",
+     "family": "service",
+     "group": "059",
+     "groupName": "스포츠·레크리에이션",
+     "covers": [],
+     "batch": "3-05",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "511101",
+     "title": "이용사",
+     "displayName": "이용사(바버)",
+     "family": "service",
+     "group": "061",
+     "groupName": "미용·반려동물 서비스",
+     "covers": [],
+     "batch": "3-05",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "531601",
+     "title": "바텐터",
+     "displayName": "바텐더",
+     "family": "service",
+     "group": "064",
+     "groupName": "주방장·조리사",
+     "covers": [],
+     "batch": "3-05",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "522202",
+     "title": "열차객실승무원",
+     "displayName": "열차·선박 승무원",
+     "family": "service",
+     "group": "063",
+     "groupName": "여행·승무·숙박·오락 서비스",
+     "covers": [
+      {
+       "jobCode": "522201",
+       "title": "선박객실승무원"
+      }
+     ],
+     "batch": "3-05",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "541101",
+     "title": "경호원",
+     "displayName": "경호·특수경비원",
+     "family": "service",
+     "group": "066",
+     "groupName": "경호·보안",
+     "covers": [
+      {
+       "jobCode": "541301",
+       "title": "시설·특수경비원"
+      },
+      {
+       "jobCode": "541201",
+       "title": "청원경찰"
+      }
+     ],
+     "batch": "3-05",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "550201",
+     "title": "육아도우미",
+     "displayName": "아이돌보미",
+     "family": "service",
+     "group": "068",
+     "groupName": "돌봄 서비스",
+     "covers": [],
+     "batch": "3-05",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "561301",
+     "title": "방역원",
+     "displayName": "방역 기술자",
+     "family": "service",
+     "group": "069",
+     "groupName": "청소·방역·가사 서비스",
+     "covers": [],
+     "batch": "3-05",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "561601",
+     "title": "가사관리사",
+     "displayName": "가사관리사",
+     "family": "service",
+     "group": "069",
+     "groupName": "청소·방역·가사 서비스",
+     "covers": [],
+     "batch": "3-05",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "612501",
+     "title": "상품중개인 및 경매사",
+     "displayName": "경매사·상품 중개인",
+     "family": "sales",
+     "group": "072",
+     "groupName": "기술·의약품·해외 영업",
+     "covers": [],
+     "batch": "3-05",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "614001",
+     "title": "소규모판매점장",
+     "displayName": "매장 판매·점장",
+     "family": "sales",
+     "group": "075",
+     "groupName": "판매점장·상점 판매",
+     "covers": [
+      {
+       "jobCode": "615101",
+       "title": "상점판매원"
+      }
+     ],
+     "batch": "3-06",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "621901",
+     "title": "신호원 및 수송원",
+     "displayName": "철도 신호·수송원",
+     "family": "transport",
+     "group": "079",
+     "groupName": "항공기·선박·철도 조종·관제",
+     "covers": [],
+     "batch": "3-06",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "623001",
+     "title": "크레인·호이스트운전원",
+     "displayName": "크레인 운전원",
+     "family": "tech",
+     "group": "07B",
+     "groupName": "물품이동장비 조작",
+     "covers": [],
+     "batch": "3-06",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "624201",
+     "title": "집배원",
+     "displayName": "집배원(우정직)",
+     "family": "public",
+     "group": "07C",
+     "groupName": "택배·배달·하역 등 운송",
+     "covers": [],
+     "batch": "3-06",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "701301",
+     "title": "철근공",
+     "displayName": "골조 기능공",
+     "family": "tech",
+     "group": "081",
+     "groupName": "건설구조 기능",
+     "covers": [
+      {
+       "jobCode": "701101",
+       "title": "철골공(강구조물건립원)"
+      },
+      {
+       "jobCode": "701201",
+       "title": "경량철골공"
+      },
+      {
+       "jobCode": "701401",
+       "title": "콘크리트공"
+      },
+      {
+       "jobCode": "701501",
+       "title": "건축석공"
+      },
+      {
+       "jobCode": "701701",
+       "title": "조적원"
+      }
+     ],
+     "batch": "3-06",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "702601",
+     "title": "건물도장공",
+     "displayName": "건축 마감 기능공",
+     "family": "tech",
+     "group": "082",
+     "groupName": "건축마감 기능",
+     "covers": [
+      {
+       "jobCode": "702101",
+       "title": "미장공"
+      },
+      {
+       "jobCode": "702201",
+       "title": "방수공"
+      },
+      {
+       "jobCode": "702301",
+       "title": "단열공"
+      },
+      {
+       "jobCode": "702502",
+       "title": "유리부착원"
+      },
+      {
+       "jobCode": "702701",
+       "title": "섀시조립·설치원"
+      }
+     ],
+     "batch": "3-06",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "705902",
+     "title": "잠수기능원",
+     "displayName": "산업 잠수사",
+     "family": "tech",
+     "group": "085",
+     "groupName": "기타 건설 기능",
+     "covers": [],
+     "batch": "3-06",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "705901",
+     "title": "점화·발파·화약관리원",
+     "displayName": "화약류 관리 기술자",
+     "family": "tech",
+     "group": "085",
+     "groupName": "기타 건설 기능",
+     "covers": [],
+     "batch": "3-06",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "811601",
+     "title": "건설·광업기계설치·정비원",
+     "displayName": "중장비·농기계 정비사",
+     "family": "tech",
+     "group": "091",
+     "groupName": "기계장비 설치·정비",
+     "covers": [
+      {
+       "jobCode": "811301",
+       "title": "크레인 및 지게차설치 및 정비원"
+      },
+      {
+       "jobCode": "811901",
+       "title": "농업용 및 기타기계장비설치 및 정비원"
+      }
+     ],
+     "batch": "3-06",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "812301",
+     "title": "철도기관차·전동차정비원",
+     "displayName": "철도 차량 정비사",
+     "family": "tech",
+     "group": "092",
+     "groupName": "운송장비 정비",
+     "covers": [],
+     "batch": "3-06",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "812201",
+     "title": "선박정비원",
+     "displayName": "선박 정비사",
+     "family": "tech",
+     "group": "092",
+     "groupName": "운송장비 정비",
+     "covers": [],
+     "batch": "3-07",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "813101",
+     "title": "금형원",
+     "displayName": "금형 기술자",
+     "family": "tech",
+     "group": "093",
+     "groupName": "금형·공작기계 조작",
+     "covers": [],
+     "batch": "3-07",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "815001",
+     "title": "자동조립라인·산업용 로봇조작원",
+     "displayName": "자동화 설비 운전원",
+     "family": "tech",
+     "group": "094",
+     "groupName": "설비·자동화 조작",
+     "covers": [],
+     "batch": "3-07",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "816103",
+     "title": "일반기계조립원",
+     "displayName": "기계·선박 조립원",
+     "family": "tech",
+     "group": "095",
+     "groupName": "기계·운송장비 조립",
+     "covers": [
+      {
+       "jobCode": "817301",
+       "title": "선박조립원"
+      }
+     ],
+     "batch": "3-07",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "822101",
+     "title": "판금원(판금기조작원)",
+     "displayName": "판금·제관·주조 기능공",
+     "family": "tech",
+     "group": "097",
+     "groupName": "판금·제관·단조·주조",
+     "covers": [
+      {
+       "jobCode": "822301",
+       "title": "제관원(제관기조작원)"
+      },
+      {
+       "jobCode": "823301",
+       "title": "주조원(주조기조작원)"
+      },
+      {
+       "jobCode": "823101",
+       "title": "단조원(단조기조작원)"
+      }
+     ],
+     "batch": "3-07",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "825101",
+     "title": "도장원(도장기조작원)",
+     "displayName": "도장·도금 기능공",
+     "family": "tech",
+     "group": "099",
+     "groupName": "도장·도금",
+     "covers": [
+      {
+       "jobCode": "825201",
+       "title": "도금·금속분무기조작원"
+      }
+     ],
+     "batch": "3-07",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "832201",
+     "title": "가전제품설치·수리원",
+     "displayName": "가전·IT기기 수리 기사",
+     "family": "tech",
+     "group": "102",
+     "groupName": "전기·전자 기기 설치·수리",
+     "covers": [
+      {
+       "jobCode": "832101",
+       "title": "사무용 전자기기설치·수리원"
+      },
+      {
+       "jobCode": "841101",
+       "title": "컴퓨터설치·수리원"
+      },
+      {
+       "jobCode": "841201",
+       "title": "이동전화기수리원"
+      }
+     ],
+     "batch": "3-07",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "833001",
+     "title": "발전·배전장치조작원",
+     "displayName": "발전·전기 설비 운전원",
+     "family": "tech",
+     "group": "103",
+     "groupName": "발전·전기 설비 조작",
+     "covers": [
+      {
+       "jobCode": "834001",
+       "title": "전기·전자설비조작원"
+      }
+     ],
+     "batch": "3-07",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "842201",
+     "title": "통신장비설치·수리원",
+     "displayName": "통신·인터넷 설치 기사",
+     "family": "tech",
+     "group": "107",
+     "groupName": "방송·통신장비 설치·수리",
+     "covers": [
+      {
+       "jobCode": "842301",
+       "title": "방송·통신·인터넷케이블 설치·수리원"
+      },
+      {
+       "jobCode": "842101",
+       "title": "방송장비설치·수리원"
+      }
+     ],
+     "batch": "3-07",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "853101",
+     "title": "상·하수도처리장치조작원",
+     "displayName": "환경 시설 운전원",
+     "family": "tech",
+     "group": "113",
+     "groupName": "환경 장치 조작",
+     "covers": [
+      {
+       "jobCode": "853201",
+       "title": "재활용 처리장치·소각로조작원"
+      }
+     ],
+     "batch": "3-07",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "862101",
+     "title": "패턴사",
+     "displayName": "패턴·봉제사",
+     "family": "tech",
+     "group": "115",
+     "groupName": "패턴·재단·재봉",
+     "covers": [
+      {
+       "jobCode": "862201",
+       "title": "재단사"
+      },
+      {
+       "jobCode": "862301",
+       "title": "재봉사"
+      }
+     ],
+     "batch": "3-08",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "863201",
+     "title": "양장·양복제조원",
+     "displayName": "의류 제작·수선사",
+     "family": "tech",
+     "group": "116",
+     "groupName": "의복 제조·수선",
+     "covers": [
+      {
+       "jobCode": "863101",
+       "title": "한복제조원"
+      },
+      {
+       "jobCode": "863401",
+       "title": "의복·가죽·모피수선원"
+      }
+     ],
+     "batch": "3-08",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "885201",
+     "title": "간판제작·설치원",
+     "displayName": "간판·사인 제작자",
+     "family": "tech",
+     "group": "125",
+     "groupName": "악기·간판·기타 제조",
+     "covers": [],
+     "batch": "3-08",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "885101",
+     "title": "악기제조원 및 조율사",
+     "displayName": "악기 제작·조율사",
+     "family": "tech",
+     "group": "125",
+     "groupName": "악기·간판·기타 제조",
+     "covers": [],
+     "batch": "3-08",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "901501",
+     "title": "조경원",
+     "displayName": "조경 관리원",
+     "family": "agri",
+     "group": "131",
+     "groupName": "작물재배",
+     "covers": [],
+     "batch": "3-08",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "902201",
+     "title": "가축사육종사원",
+     "displayName": "축산 농업인",
+     "family": "agri",
+     "group": "132",
+     "groupName": "낙농·사육",
+     "covers": [
+      {
+       "jobCode": "902101",
+       "title": "낙농종사원"
+      }
+     ],
+     "batch": "3-08",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "903101",
+     "title": "조림·산림경영인 및 벌목원",
+     "displayName": "임업인(산림 경영)",
+     "family": "agri",
+     "group": "133",
+     "groupName": "임업",
+     "covers": [],
+     "batch": "3-08",
+     "done": false
+    },
+    {
+     "wave": 3,
+     "jobCode": "904101",
+     "title": "양식원",
+     "displayName": "수산 양식·어업인",
+     "family": "agri",
+     "group": "134",
+     "groupName": "어업",
+     "covers": [
+      {
+       "jobCode": "904201",
+       "title": "어부 및 해녀"
+      }
+     ],
+     "batch": "3-08",
+     "done": false
+    }
+   ]
+  },
+  {
+   "wave": 4,
+   "name": "4단계 — 관리자(경력으로 가는 자리)·단순 직종(짧은 계획)",
+   "plans": 22,
+   "jobs": 80,
+   "batches": 3,
+   "bundles": [
+    {
+     "wave": 4,
+     "jobCode": "012201",
+     "title": "경영지원관리자",
+     "displayName": "경영·금융 관리자",
+     "family": "biz",
+     "group": "011",
+     "groupName": "행정·경영·금융·보험 관리",
+     "covers": [
+      {
+       "jobCode": "012301",
+       "title": "마케팅·광고·홍보관리자"
+      },
+      {
+       "jobCode": "012401",
+       "title": "금융관리자"
+      },
+      {
+       "jobCode": "012402",
+       "title": "보험관리자"
+      },
+      {
+       "jobCode": "011201",
+       "title": "기업고위임원"
+      }
+     ],
+     "batch": "4-01",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "012101",
+     "title": "정부행정관리자",
+     "displayName": "고위 공무원",
+     "family": "public",
+     "group": "011",
+     "groupName": "행정·경영·금융·보험 관리",
+     "covers": [
+      {
+       "jobCode": "011102",
+       "title": "행정부고위공무원"
+      }
+     ],
+     "batch": "4-01",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "013202",
+     "title": "초등학교 교장 및 교감",
+     "displayName": "학교 관리자(교장·교감)",
+     "family": "edu",
+     "group": "012",
+     "groupName": "전문서비스 관리",
+     "covers": [
+      {
+       "jobCode": "013203",
+       "title": "중고등학교 교장 및 교감"
+      },
+      {
+       "jobCode": "013201",
+       "title": "유치원 원장 및 원감"
+      },
+      {
+       "jobCode": "013204",
+       "title": "대학교 총장 및 대학학장"
+      }
+     ],
+     "batch": "4-01",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "013701",
+     "title": "정보통신관리자",
+     "displayName": "전문 분야 관리자",
+     "family": "biz",
+     "group": "012",
+     "groupName": "전문서비스 관리",
+     "covers": [
+      {
+       "jobCode": "013101",
+       "title": "연구관리자"
+      },
+      {
+       "jobCode": "013601",
+       "title": "예술·디자인·방송관리자"
+      },
+      {
+       "jobCode": "013401",
+       "title": "보건·의료관리자"
+      },
+      {
+       "jobCode": "013501",
+       "title": "사회복지관리자"
+      },
+      {
+       "jobCode": "013305",
+       "title": "경찰·소방·교도관리자"
+      }
+     ],
+     "batch": "4-01",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "015101",
+     "title": "영업·판매관리자",
+     "displayName": "영업·서비스 관리자(점장·매니저)",
+     "family": "sales",
+     "group": "013",
+     "groupName": "개인서비스·영업·운송 관리",
+     "covers": [
+      {
+       "jobCode": "014301",
+       "title": "경비·청소관리자"
+      },
+      {
+       "jobCode": "014201",
+       "title": "음식서비스관리자"
+      },
+      {
+       "jobCode": "014103",
+       "title": "여행·호텔관리자"
+      },
+      {
+       "jobCode": "015201",
+       "title": "운송관리자"
+      }
+     ],
+     "batch": "4-01",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "016301",
+     "title": "제조·생산관리자",
+     "displayName": "생산·건설 관리자",
+     "family": "eng",
+     "group": "014",
+     "groupName": "건설·제조·생산 관리",
+     "covers": [
+      {
+       "jobCode": "016101",
+       "title": "건설·채굴관리자"
+      },
+      {
+       "jobCode": "016201",
+       "title": "전기·가스·수도관리자"
+      }
+     ],
+     "batch": "4-01",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "532201",
+     "title": "홀서빙원",
+     "displayName": "식당 서비스·주방 보조",
+     "family": "service",
+     "group": "065",
+     "groupName": "식당 서비스",
+     "covers": [
+      {
+       "jobCode": "532301",
+       "title": "주방보조원"
+      },
+      {
+       "jobCode": "532101",
+       "title": "패스트푸드준비원"
+      }
+     ],
+     "batch": "4-01",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "542001",
+     "title": "경비원",
+     "displayName": "경비원",
+     "family": "service",
+     "group": "067",
+     "groupName": "경비원",
+     "covers": [],
+     "batch": "4-01",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "561201",
+     "title": "환경미화원 및 재활용품수거원",
+     "displayName": "청소·환경미화원",
+     "family": "service",
+     "group": "069",
+     "groupName": "청소·방역·가사 서비스",
+     "covers": [
+      {
+       "jobCode": "561101",
+       "title": "청소원"
+      },
+      {
+       "jobCode": "561501",
+       "title": "세탁원(다림질원)"
+      }
+     ],
+     "batch": "4-01",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "562301",
+     "title": "주차관리·안내원",
+     "displayName": "주차·검침·검표원",
+     "family": "service",
+     "group": "06A",
+     "groupName": "검침·주차관리 등 서비스",
+     "covers": [
+      {
+       "jobCode": "562101",
+       "title": "계기검침원 및 가스점검원"
+      },
+      {
+       "jobCode": "562401",
+       "title": "검표원"
+      }
+     ],
+     "batch": "4-01",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "524001",
+     "title": "오락시설서비스원",
+     "displayName": "오락시설 서비스원",
+     "family": "service",
+     "group": "063",
+     "groupName": "여행·승무·숙박·오락 서비스",
+     "covers": [],
+     "batch": "4-02",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "615203",
+     "title": "통신기기·서비스판매원",
+     "displayName": "판매·대여 서비스원",
+     "family": "sales",
+     "group": "076",
+     "groupName": "온라인판매·통신서비스",
+     "covers": [
+      {
+       "jobCode": "615401",
+       "title": "상품대여원"
+      },
+      {
+       "jobCode": "615701",
+       "title": "주유원"
+      },
+      {
+       "jobCode": "615501",
+       "title": "노점 및 이동판매원"
+      },
+      {
+       "jobCode": "615601",
+       "title": "방문판매원"
+      }
+     ],
+     "batch": "4-02",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "616101",
+     "title": "매장계산원 및 요금정산원",
+     "displayName": "계산·매표원",
+     "family": "sales",
+     "group": "077",
+     "groupName": "매장 계산·매표",
+     "covers": [
+      {
+       "jobCode": "616201",
+       "title": "매표원 및 복권판매원"
+      }
+     ],
+     "batch": "4-02",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "617101",
+     "title": "홍보도우미 및 판촉원",
+     "displayName": "판촉 도우미",
+     "family": "sales",
+     "group": "078",
+     "groupName": "판촉·기타 판매",
+     "covers": [],
+     "batch": "4-02",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "624101",
+     "title": "택배원",
+     "displayName": "택배·배달·하역",
+     "family": "transport",
+     "group": "07C",
+     "groupName": "택배·배달·하역 등 운송",
+     "covers": [
+      {
+       "jobCode": "532401",
+       "title": "음식배달원"
+      },
+      {
+       "jobCode": "624401",
+       "title": "하역·적재종사원"
+      }
+     ],
+     "batch": "4-02",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "705201",
+     "title": "철로설치·보수원",
+     "displayName": "철로·채석 기능원",
+     "family": "tech",
+     "group": "085",
+     "groupName": "기타 건설 기능",
+     "covers": [
+      {
+       "jobCode": "705101",
+       "title": "광원·채석원 및 석재절단원"
+      }
+     ],
+     "batch": "4-02",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "706001",
+     "title": "건설·채굴단순종사원",
+     "displayName": "건설 현장 일용직",
+     "family": "tech",
+     "group": "086",
+     "groupName": "건설·채굴 단순 종사자",
+     "covers": [],
+     "batch": "4-02",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "821201",
+     "title": "금속가공기계조작원",
+     "displayName": "금속·비금속 생산기계 조작원",
+     "family": "tech",
+     "group": "096",
+     "groupName": "금속 기계·설비 조작",
+     "covers": [
+      {
+       "jobCode": "821101",
+       "title": "금속가공제어장치조작원"
+      },
+      {
+       "jobCode": "826301",
+       "title": "시멘트·광물제품생산기계조작원"
+      },
+      {
+       "jobCode": "826101",
+       "title": "유리·유리제품생산기계조작원"
+      },
+      {
+       "jobCode": "826201",
+       "title": "점토제품생산기계조작원"
+      },
+      {
+       "jobCode": "826401",
+       "title": "광석·석제품생산기계조작원"
+      }
+     ],
+     "batch": "4-02",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "852201",
+     "title": "플라스틱제품생산기계조작원",
+     "displayName": "고무·플라스틱·화학제품 생산직",
+     "family": "tech",
+     "group": "112",
+     "groupName": "고무·플라스틱·화학제품 생산",
+     "covers": [
+      {
+       "jobCode": "852401",
+       "title": "고무·플라스틱 제품 조립원"
+      },
+      {
+       "jobCode": "852301",
+       "title": "화학제품생산기계조작원(고무·플라스틱 제외)"
+      },
+      {
+       "jobCode": "852101",
+       "title": "타이어·고무제품생산기계조작원"
+      }
+     ],
+     "batch": "4-02",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "861101",
+     "title": "섬유제조기계조작원",
+     "displayName": "섬유·의복·신발 생산직",
+     "family": "tech",
+     "group": "114",
+     "groupName": "섬유 제조·가공 기계 조작",
+     "covers": [
+      {
+       "jobCode": "861201",
+       "title": "직조기 및 편직기조작원"
+      },
+      {
+       "jobCode": "861301",
+       "title": "표백·염색기조작원"
+      },
+      {
+       "jobCode": "864301",
+       "title": "세탁기계조작원"
+      },
+      {
+       "jobCode": "864101",
+       "title": "제화원"
+      },
+      {
+       "jobCode": "864201",
+       "title": "신발제조기계조작원 및 조립원"
+      }
+     ],
+     "batch": "4-02",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "872101",
+     "title": "정육원 및 도축원",
+     "displayName": "식품 가공·생산직",
+     "family": "tech",
+     "group": "119",
+     "groupName": "식품가공 기능원",
+     "covers": [
+      {
+       "jobCode": "872201",
+       "title": "김치·밑반찬 제조종사원"
+      },
+      {
+       "jobCode": "872301",
+       "title": "식품·담배등급원"
+      },
+      {
+       "jobCode": "873301",
+       "title": "곡물가공제품기계조작원"
+      },
+      {
+       "jobCode": "873101",
+       "title": "육류·어패류·낙농품가공기계조작원"
+      },
+      {
+       "jobCode": "873501",
+       "title": "음료제조기계조작원"
+      },
+      {
+       "jobCode": "873401",
+       "title": "과실·채소기계조작원"
+      },
+      {
+       "jobCode": "873201",
+       "title": "제분·도정기계조작원"
+      }
+     ],
+     "batch": "4-03",
+     "done": false
+    },
+    {
+     "wave": 4,
+     "jobCode": "881101",
+     "title": "인쇄기계조작원",
+     "displayName": "인쇄·목재·종이·포장 생산직",
+     "family": "tech",
+     "group": "121",
+     "groupName": "인쇄기계·사진현상기 조작",
+     "covers": [
+      {
+       "jobCode": "881201",
+       "title": "사진인화·현상기조작원(사진수정 포함)"
+      },
+      {
+       "jobCode": "882301",
+       "title": "종이제품생산기계조작원"
+      },
+      {
+       "jobCode": "882101",
+       "title": "목재가공기계조작원"
+      },
+      {
+       "jobCode": "882201",
+       "title": "펄프·종이제조장치조작원"
+      },
+      {
+       "jobCode": "885902",
+       "title": "주입·포장·상표부착기계조작원"
+      }
+     ],
+     "batch": "4-03",
+     "done": false
+    }
+   ]
+  }
+ ]
+}

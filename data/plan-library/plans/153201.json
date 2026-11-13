@@ -20,7 +20,18 @@
    "desc": "MCU·임베디드 C"
   }
  ],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "131101",
+   "title": "컴퓨터하드웨어기술자",
+   "track": "hw"
+  },
+  {
+   "jobCode": "153101",
+   "title": "전기기기·제품개발기술자 및 연구원",
+   "track": "hw"
+  }
+ ],
  "projects": [
   {
    "id": "p.eh-pcb",

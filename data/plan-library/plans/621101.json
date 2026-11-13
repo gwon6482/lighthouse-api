@@ -25,7 +25,13 @@
    "desc": "공군·해군 조종 장교"
   }
  ],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "621102",
+   "title": "헬리콥터조종사",
+   "track": null
+  }
+ ],
  "projects": [
   {
    "id": "p.fly-medical",

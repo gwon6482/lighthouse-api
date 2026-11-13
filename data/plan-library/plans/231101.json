@@ -35,7 +35,13 @@
    "desc": "사회복지직 9급"
   }
  ],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "232901",
+   "title": "생활지도원",
+   "track": "youth"
+  }
+ ],
  "projects": [
   {
    "id": "p.swe-elder",

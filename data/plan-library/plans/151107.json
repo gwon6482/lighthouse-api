@@ -25,7 +25,18 @@
    "desc": "전장 부품·제어 SW"
   }
  ],
- "covers": [],
+ "covers": [
+  {
+   "jobCode": "151101",
+   "title": "건설기계공학기술자 및 연구원",
+   "track": "design"
+  },
+  {
+   "jobCode": "151102",
+   "title": "플랜트기계공학기술자",
+   "track": "design"
+  }
+ ],
  "projects": [
   {
    "id": "p.me-cae",
