@@ -4943,6 +4943,285 @@
     "tech"
    ],
    "promotedFrom": "158401:p.sm-hazmat"
+  },
+  {
+   "id": "cp.lecture-demo",
+   "name": "강의 시연 연습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "한 단원을 판서와 함께 20분 강의로 풀어낸다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "설계",
+     "items": [
+      "수업 목표와 흐름",
+      "판서 계획"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "시연",
+     "items": [
+      "녹화하며 강의",
+      "피드백 받아 고치기",
+      "시범 강의 3종 준비"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "edu"
+   ],
+   "promotedFrom": "214101:p.ac-lecture"
+  },
+  {
+   "id": "cp.teaching-material",
+   "name": "교재와 수업 자료 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "단원별 개념서와 문제 자료를 직접 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "대상 학년과 수준",
+      "구성"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "제작",
+     "items": [
+      "개념 정리 자료",
+      "유형별 문제",
+      "테스트지"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "edu"
+   ],
+   "promotedFrom": "214101:p.ac-material"
+  },
+  {
+   "id": "cp.term-glossary",
+   "name": "전문 분야 용어집 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "한 분야의 용어집과 문체 기준을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분야",
+     "items": [
+      "분야 정하기",
+      "참고 문서 모으기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "구축",
+     "items": [
+      "용어 500개 정리",
+      "문서 3건 번역"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "media"
+   ],
+   "promotedFrom": "411201:p.tl-domain"
+  },
+  {
+   "id": "cp.indesign",
+   "name": "인디자인과 편집 디자인",
+   "type": "skill",
+   "subtype": "design",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "인디자인으로 여러 쪽 문서를 조판한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기능",
+     "items": [
+      "마스터 페이지·스타일",
+      "표·이미지 배치",
+      "인쇄용 내보내기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "조판",
+     "items": [
+      "본문 조판 규칙",
+      "잡지 펼침면 4개"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "design",
+    "media"
+   ],
+   "promotedFrom": "415404:p.vd-indesign"
+  },
+  {
+   "id": "cp.color-grading",
+   "name": "색보정(다빈치 리졸브)",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "촬영 소스를 보정하고 톤을 맞춘다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "스코프 읽기",
+      "1차·2차 보정",
+      "로그·LUT"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "적용",
+     "items": [
+      "장면 간 톤 맞추기",
+      "룩 만들기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "media"
+   ],
+   "promotedFrom": "416601:p.ve-color"
+  },
+  {
+   "id": "cp.sound-mixing",
+   "name": "사운드 편집과 믹싱 기초",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "대사·음악·효과음을 정리해 듣기 좋게 맞춘다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "잡음 제거",
+      "대사 레벨 맞추기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "믹싱",
+     "items": [
+      "음악·효과음 배치",
+      "라우드니스 기준 맞추기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "media"
+   ],
+   "promotedFrom": "416601:p.ve-sound"
+  },
+  {
+   "id": "cp.ent-industry",
+   "name": "공연·엔터 산업 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "제작·투자·유통 구조와 저작권 기본을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "구조",
+     "items": [
+      "기획사·제작사·공연장 역할",
+      "티켓·수익 구조",
+      "저작권·초상권"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "media"
+   ],
+   "promotedFrom": "024402:p.pf-industry"
+  },
+  {
+   "id": "cp.gis",
+   "name": "공간정보 도구(GIS) 다루기",
+   "type": "skill",
+   "subtype": "data",
+   "scope": "family",
+   "families": [
+    "eng",
+    "data"
+   ],
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "지도 데이터를 불러와 분석하고 주제도를 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "좌표계와 데이터 형식",
+      "레이어·속성 다루기",
+      "공공 공간 데이터 구하기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "중첩·버퍼 분석",
+      "주제도 만들기"
+     ]
+    }
+   ]
   }
  ]
 }

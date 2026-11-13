@@ -1,0 +1,233 @@
+{
+ "jobCode": "416501",
+ "title": "음향·녹음기사",
+ "displayName": "음향·조명 엔지니어",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 공연장은 무대예술전문인 자격을 요구하기도 한다. 현장 스태프로 시작해 경력을 쌓는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "sound",
+   "name": "음향",
+   "desc": "녹음·라이브 음향"
+  },
+  {
+   "id": "light",
+   "name": "조명",
+   "desc": "공연·방송 조명"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "416701",
+   "title": "조명기사",
+   "track": "light"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.sl-basics",
+   "name": "음향·조명 기초 이론",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "소리와 빛의 기본 원리와 장비 구성을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이론",
+     "items": [
+      "음향 기초(주파수·레벨)",
+      "조명 기초(광원·색)",
+      "신호 흐름과 전기 안전"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sl-daw",
+   "name": "녹음과 콘솔 운용",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "녹음 프로그램과 믹싱 콘솔로 녹음·라이브 음향을 다룬다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "녹음",
+     "items": [
+      "마이킹",
+      "녹음 프로그램 사용"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "라이브",
+     "items": [
+      "콘솔 운용",
+      "모니터·하울링 대처"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sl-console",
+   "name": "조명 콘솔과 도면",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "조명 도면을 읽고 콘솔로 큐를 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "장비",
+     "items": [
+      "조명기 종류",
+      "설치·포커싱"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "운용",
+     "items": [
+      "조명 도면",
+      "큐 프로그래밍"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sl-cert",
+   "name": "무대예술전문인 자격",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "무대예술전문인(음향 또는 조명) 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "무대 기술 일반",
+      "분야별 이론"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기",
+     "items": [
+      "분야별 실기"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "급수별 응시자격(학력·경력)이 다르다"
+  },
+  {
+   "id": "p.sl-crew",
+   "name": "공연장·스튜디오 현장 근무",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "현장에서 설치·운용·철수를 반복하며 익힌다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "공연장·음향 업체·스튜디오 지원"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "근무",
+     "items": [
+      "장비 설치·철수",
+      "오퍼레이터 보조"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.sl-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.sl-crew",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.sl-cert",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "sound": [
+   {
+    "ref": "p.sl-daw",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.sound-mixing",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "light": [
+   {
+    "ref": "p.sl-console",
+    "step": 3,
+    "major": true
+   }
+  ]
+ }
+}

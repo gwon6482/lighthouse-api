@@ -1,0 +1,171 @@
+{
+ "jobCode": "411301",
+ "title": "출판물기획자",
+ "displayName": "출판 편집자",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 원고를 책으로 만드는 과정 전체를 알고, 기획서와 교정 능력으로 평가받는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "029901",
+   "title": "출판·자료편집사무원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.ed-process",
+   "name": "출판 과정과 교정·교열",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "기획부터 제작까지의 단계와 교정 부호, 맞춤법 규칙을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "과정",
+     "items": [
+      "기획·편집·제작·마케팅 흐름",
+      "판권·계약 기초"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "교정",
+     "items": [
+      "교정 부호",
+      "원고 교정 연습"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ed-plan",
+   "name": "출판 기획서 쓰기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "내고 싶은 책의 기획서를 독자·경쟁 도서 분석과 함께 쓴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "독자와 시장 조사",
+      "경쟁 도서 분석"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기획",
+     "items": [
+      "콘셉트와 목차",
+      "저자·일정·예산"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ed-school",
+   "name": "출판 교육 과정",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "출판 편집자 양성 과정을 수료한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "선택",
+     "items": [
+      "과정 비교"
+     ]
+    },
+    {
+     "weeks": 16,
+     "title": "수강",
+     "items": [
+      "편집 실무",
+      "기획 실습"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.writing",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.ed-process",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.indesign",
+   "step": 4,
+   "major": true,
+   "note": "편집 디자인 이해",
+   "optional": true
+  },
+  {
+   "ref": "p.ed-plan",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.ed-school",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 7,
+   "major": true,
+   "note": "출판사 인턴"
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 8,
+   "major": true,
+   "note": "기획서와 교정 샘플"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

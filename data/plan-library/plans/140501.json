@@ -1,0 +1,184 @@
+{
+ "jobCode": "140501",
+ "title": "도시계획·설계가",
+ "displayName": "도시·교통 계획가",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "도시계획·교통공학 전공을 본다. 엔지니어링 회사와 연구 기관으로 가고 석사를 우대하는 곳이 많다.",
+ "gate": "법정 요건은 없으나 채용 공고가 관련 전공과 기사 자격을 요구·우대한다",
+ "tracks": [
+  {
+   "id": "urban",
+   "name": "도시 계획",
+   "desc": "토지 이용·도시 설계"
+  },
+  {
+   "id": "transport",
+   "name": "교통 계획",
+   "desc": "교통 수요·영향 평가"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "140502",
+   "title": "교통계획·설계가",
+   "track": "transport"
+  },
+  {
+   "jobCode": "140503",
+   "title": "교통영향평가원",
+   "track": "transport"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.up-project",
+   "name": "계획 프로젝트",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "team_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "대상지 하나의 현황을 분석해 계획안을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "현황 자료 수집",
+      "문제와 목표"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "계획",
+     "items": [
+      "구상과 대안",
+      "계획도·보고서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.up-traffic",
+   "name": "교통 수요 분석과 영향 평가",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "교통량을 조사·예측하고 개선안을 낸다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "분석",
+     "items": [
+      "교통 조사 방법",
+      "수요 예측 기초",
+      "영향 평가 절차"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.eng-major",
+   "step": 2,
+   "major": false,
+   "skip": "전공 과목에서 배운다",
+   "note": "도시계획·교통공학"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 3,
+   "major": true,
+   "note": "도시계획기사·교통기사"
+  },
+  {
+   "ref": "cp.gis",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.cad",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.up-project",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.lab-grad",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.contest",
+   "step": 9,
+   "major": true,
+   "note": "도시 설계 공모전",
+   "optional": true
+  },
+  {
+   "ref": "cp.eng-field",
+   "step": 80,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 81,
+   "major": true,
+   "note": "대기업 지원 시",
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 82,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "urban": [],
+  "transport": [
+   {
+    "ref": "p.up-traffic",
+    "step": 6.5,
+    "major": true
+   }
+  ]
+ }
+}

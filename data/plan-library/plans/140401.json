@@ -1,0 +1,150 @@
+{
+ "jobCode": "140401",
+ "title": "조경기술자",
+ "displayName": "조경 기술자",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "조경 전공과 조경기사가 기본이다. 조경 설계 사무소와 시공 회사, 공공 기관으로 간다.",
+ "gate": "법정 요건은 없으나 채용 공고가 관련 전공과 기사 자격을 요구·우대한다",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.la-plants",
+   "name": "수목과 식재 지식",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "주요 조경 수목을 구별하고 식재 계획에 쓴다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "수목",
+     "items": [
+      "수목 100종 익히기",
+      "생육 조건",
+      "식재 설계 원칙"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.la-design",
+   "name": "조경 설계 프로젝트",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "대상지 하나를 분석해 설계안과 도면을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "대상지 조사",
+      "개념 잡기"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "설계",
+     "items": [
+      "기본 계획도",
+      "식재·시설 도면",
+      "패널 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.eng-major",
+   "step": 2,
+   "major": false,
+   "skip": "전공 과목에서 배운다",
+   "note": "조경(설계·식재·시공)"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 3,
+   "major": true,
+   "note": "조경기사"
+  },
+  {
+   "ref": "cp.cad",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.la-plants",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.la-design",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.adobe",
+   "step": 7,
+   "major": true,
+   "note": "패널 표현",
+   "optional": true
+  },
+  {
+   "ref": "cp.contest",
+   "step": 8,
+   "major": true,
+   "note": "조경 설계 공모전",
+   "optional": true
+  },
+  {
+   "ref": "cp.eng-field",
+   "step": 80,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 81,
+   "major": true,
+   "note": "대기업 지원 시",
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 82,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

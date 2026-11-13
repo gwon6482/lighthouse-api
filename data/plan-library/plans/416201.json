@@ -1,0 +1,218 @@
+{
+ "jobCode": "416201",
+ "title": "영화배우 및 탤런트",
+ "displayName": "배우",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이나 정해진 채용이 없다. 연기 훈련과 작품 경험을 쌓고 오디션으로 기회를 얻는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "screen",
+   "name": "영화·드라마",
+   "desc": "카메라 연기"
+  },
+  {
+   "id": "stage",
+   "name": "연극·뮤지컬",
+   "desc": "무대 연기"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "416203",
+   "title": "연극 및 뮤지컬배우",
+   "track": "stage"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.at-train",
+   "name": "연기 훈련",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "발성·신체·장면 연기를 꾸준히 훈련한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "기초",
+     "items": [
+      "발성·화술",
+      "신체 훈련"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "장면",
+     "items": [
+      "독백·장면 연기",
+      "카메라 연기",
+      "피드백 받기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.at-vocal",
+   "name": "노래와 춤 훈련",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "뮤지컬 넘버를 부르고 기본 안무를 소화한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "훈련",
+     "items": [
+      "보컬 레슨",
+      "재즈·발레 기초",
+      "뮤지컬 넘버 연습"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.at-profile",
+   "name": "프로필과 연기 영상",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "프로필 사진과 연기 영상을 준비한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "촬영",
+     "items": [
+      "프로필 사진",
+      "독백·장면 영상"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "이력 정리",
+      "온라인 프로필 등록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.at-work",
+   "name": "단편 영화·연극 출연",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 300,
+   "goal": "작은 작품에 출연하며 경력을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "찾기",
+     "items": [
+      "단편 영화·연극 공고 찾기"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "출연",
+     "items": [
+      "작품 3편 이상 출연",
+      "현장 태도와 호흡 익히기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.at-audition",
+   "name": "오디션 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 120,
+   "goal": "오디션 정보를 찾아 꾸준히 지원한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "지정 대본·자유 연기 준비"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "지원",
+     "items": [
+      "오디션 응시",
+      "결과 기록과 보완"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.at-train",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.dept-admission",
+   "step": 2,
+   "major": true,
+   "note": "연극영화과 진학 — 필수는 아니다",
+   "optional": true
+  },
+  {
+   "ref": "p.at-profile",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.at-work",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.at-audition",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "screen": [],
+  "stage": [
+   {
+    "ref": "p.at-vocal",
+    "step": 3,
+    "major": true
+   }
+  ]
+ }
+}

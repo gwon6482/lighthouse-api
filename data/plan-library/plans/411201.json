@@ -197,37 +197,6 @@
     }
    ],
    "basis": "practice"
-  },
-  {
-   "id": "p.tl-domain",
-   "name": "전문 분야 용어집 만들기",
-   "type": "output",
-   "subtype": "portfolio",
-   "category": "portfolio",
-   "method": "personal_project",
-   "level": "중급",
-   "daysPerWeek": 2,
-   "minutesPerSession": 90,
-   "goal": "한 분야의 용어집과 문체 기준을 만든다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "분야",
-     "items": [
-      "분야 정하기",
-      "참고 문서 모으기"
-     ]
-    },
-    {
-     "weeks": 3,
-     "title": "구축",
-     "items": [
-      "용어 500개 정리",
-      "문서 3건 번역"
-     ]
-    }
-   ],
-   "basis": "practice"
   }
  ],
  "common": [
@@ -281,7 +250,7 @@
   ],
   "tech": [
    {
-    "ref": "p.tl-domain",
+    "ref": "cp.term-glossary",
     "step": 5,
     "major": true
    }

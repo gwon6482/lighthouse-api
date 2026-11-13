@@ -1,0 +1,150 @@
+{
+ "jobCode": "416401",
+ "title": "촬영기사",
+ "displayName": "촬영 감독",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이나 공채가 없다. 촬영팀 막내로 현장에서 배우고, 직접 찍은 작품으로 일을 얻는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.dp-light",
+   "name": "조명과 렌즈 심화",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "장면의 분위기에 맞게 조명과 렌즈를 고른다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "조명",
+     "items": [
+      "3점 조명과 변형",
+      "자연광 다루기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "렌즈",
+     "items": [
+      "화각·심도 설계",
+      "움직임(짐벌·달리)"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dp-work",
+   "name": "촬영 작품 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "team_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "단편·뮤직비디오 등 작품 3편을 촬영한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "콘티와 촬영 계획"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "촬영",
+     "items": [
+      "작품 3편 촬영",
+      "색보정까지 마무리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dp-assist",
+   "name": "촬영팀 막내로 일하기",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "현장에서 장비를 다루며 촬영부의 일을 배운다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "촬영팀·렌털 업체 지원"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "현장",
+     "items": [
+      "장비 세팅·관리",
+      "포커스·데이터 관리 보조"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.shooting-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.dp-light",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.video-edit",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.color-grading",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.dp-work",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.dp-assist",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 8,
+   "major": true,
+   "note": "쇼릴"
+  }
+ ],
+ "byTrack": {}
+}

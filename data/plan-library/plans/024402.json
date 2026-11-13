@@ -12,30 +12,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.pf-industry",
-   "name": "공연·엔터 산업 이해",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "book",
-   "level": "입문",
-   "daysPerWeek": 2,
-   "minutesPerSession": 60,
-   "goal": "제작·투자·유통 구조와 저작권 기본을 설명한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "구조",
-     "items": [
-      "기획사·제작사·공연장 역할",
-      "티켓·수익 구조",
-      "저작권·초상권"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.pf-plan",
    "name": "공연 기획서 쓰기",
    "type": "output",
@@ -112,7 +88,7 @@
    "major": true
   },
   {
-   "ref": "p.pf-industry",
+   "ref": "cp.ent-industry",
    "step": 2,
    "major": true
   },

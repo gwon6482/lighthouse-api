@@ -102,3 +102,12 @@ def tech(title, summary, certnote, projects=(), extra=(), work='관련 업체', 
     """기능직형: 훈련 → 기능사 → 현장"""
     C0 = [It('cp.job-research', 1)] + ([It('cp.training-course', 2, note='국비·폴리텍 과정', optional=True)] if train else []) + ([It('cp.craftsman-cert', 4, note=certnote, optional=certopt)] if certnote else []) + list(extra) + [It('cp.shop-work', 80, note=work), It('cp.interview', 91)]
     mk(title, summary, gate, list(projects), C0, byTrack, tracks, verify)
+def covtrack(title, mapping):
+    """함께 덮는 직업을 세부 카테고리에 잇는다. mapping = {덮는 직업 이름: 카테고리 id}"""
+    pri = _load('priority-jobs.json'); j = next(x for x in pri['jobs'] if x['title'] == title)
+    tids = {t['id'] for t in j['tracks']}
+    for c in j['covers']:
+        if c['title'] in mapping: assert mapping[c['title']] in tids, (title, mapping); c['track'] = mapping[c['title']]
+    assert set(mapping) <= {c['title'] for c in j['covers']}, (title, set(mapping) - {c['title'] for c in j['covers']})
+    _dump('priority-jobs.json', pri)
+    pl = _load(f"plans/{j['jobCode']}.json"); pl['covers'] = j['covers']; _dump(f"plans/{j['jobCode']}.json", pl)

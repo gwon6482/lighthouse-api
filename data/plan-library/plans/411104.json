@@ -1,0 +1,198 @@
+{
+ "jobCode": "411104",
+ "title": "방송작가",
+ "displayName": "방송·시나리오 작가",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이나 공채가 없다. 예능·교양은 막내 작가로 들어가 올라가고, 드라마·영화는 극본 공모전과 투고로 데뷔한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "nonfic",
+   "name": "예능·교양 구성",
+   "desc": "방송 구성 작가"
+  },
+  {
+   "id": "drama",
+   "name": "드라마·영화 극본",
+   "desc": "극본·시나리오 작가"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "411103",
+   "title": "영화시나리오작가",
+   "track": "drama"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.bw-academy",
+   "name": "작가 교육 과정",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "작가 교육원의 과정을 수료한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "선택",
+     "items": [
+      "교육원과 과정 비교"
+     ]
+    },
+    {
+     "weeks": 20,
+     "title": "수강",
+     "items": [
+      "구성·극작 수업",
+      "과제와 합평"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "구성 작가와 드라마 작가 과정이 따로 있다"
+  },
+  {
+   "id": "p.bw-script",
+   "name": "구성안과 대본 쓰기",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "프로그램 구성안과 대본을 형식에 맞게 쓴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "방송 모니터링하며 구성 따라 적기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "작성",
+     "items": [
+      "구성안 5편",
+      "대본 2편",
+      "합평 받기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.bw-junior",
+   "name": "막내 작가로 일하기",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "제작팀에서 자료 조사와 섭외를 맡으며 일을 배운다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "구인 게시판 확인",
+      "지원"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "근무",
+     "items": [
+      "자료 조사·섭외",
+      "촬영 구성안 보조",
+      "편집 구성 참여"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.bw-drama",
+   "name": "극본 완성과 공모전 투고",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "contest",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "단막극 극본을 완성해 공모전에 낸다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기획",
+     "items": [
+      "로그라인·시놉시스",
+      "인물과 구조"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "집필",
+     "items": [
+      "초고",
+      "퇴고"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "투고",
+     "items": [
+      "방송사·제작사 공모전 제출"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.writing",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.bw-academy",
+   "step": 2,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.bw-script",
+   "step": 3,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "nonfic": [
+   {
+    "ref": "p.bw-junior",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "drama": [
+   {
+    "ref": "p.bw-drama",
+    "step": 4,
+    "major": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,119 @@
+{
+ "jobCode": "417201",
+ "title": "연예인매니저",
+ "displayName": "연예인 매니저",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 운전과 일정 관리가 기본이고 로드 매니저로 시작해 올라간다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.mn-contract",
+   "name": "전속 계약과 관련 법 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "표준 전속 계약서의 구조와 기획업 관련 규정을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "표준 계약서 조항",
+      "대중문화예술 관련 법",
+      "초상권·저작권 기초"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mn-road",
+   "name": "로드 매니저로 시작하기",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "현장 동행과 일정 관리를 맡으며 일을 배운다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "기획사 채용 공고 지원"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "근무",
+     "items": [
+      "일정·이동 관리",
+      "현장 대응",
+      "관계자 소통"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 2,
+   "major": true,
+   "note": "사실상 필수"
+  },
+  {
+   "ref": "cp.ent-industry",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.mn-contract",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.mn-road",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,233 @@
+{
+ "jobCode": "413101",
+ "title": "학예사",
+ "displayName": "학예사(큐레이터)",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "학예사 자격이 필요하다. 준학예사 시험과 실무 경력, 또는 관련 학위와 경력으로 자격을 받는다.",
+ "gate": "학예사 자격(준학예사 시험 + 경력, 또는 학위 + 경력으로 정학예사)",
+ "tracks": [
+  {
+   "id": "curator",
+   "name": "학예",
+   "desc": "전시·연구·교육"
+  },
+  {
+   "id": "conserve",
+   "name": "보존",
+   "desc": "소장품 보존 처리"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "413102",
+   "title": "문화재보존원",
+   "track": "conserve"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.cu-route",
+   "name": "자격 경로 정하기",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "내 학력에 맞는 자격 취득 경로를 정한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "준학예사·정학예사 요건 비교",
+      "경력 인정 기관 목록 확인",
+      "계획 세우기"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.cu-exam",
+   "name": "준학예사 시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "준학예사 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "과목",
+     "items": [
+      "박물관학",
+      "외국어",
+      "전공 선택 과목"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "기출",
+     "items": [
+      "기출 풀이",
+      "서술형 답안"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "시험은 연 1회. 합격 뒤 경력을 채워야 자격증이 나온다"
+  },
+  {
+   "id": "p.cu-career",
+   "name": "박물관·미술관 실무 경력",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "internship",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "경력 인정 기관에서 실무 경력을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "인턴·학예 보조 지원"
+     ]
+    },
+    {
+     "weeks": 50,
+     "title": "근무",
+     "items": [
+      "소장품 관리",
+      "전시 준비",
+      "교육 프로그램 보조"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.cu-exhibit",
+   "name": "전시 기획안 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "주제를 정해 전시 기획안을 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "주제와 작품 조사"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "기획",
+     "items": [
+      "전시 구성과 동선",
+      "예산·일정",
+      "글 쓰기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cu-conserve",
+   "name": "보존 과학과 보존 처리 실습",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "재질별 손상 원인과 보존 처리 방법을 안다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "보존",
+     "items": [
+      "재질별 열화",
+      "보존 환경 관리",
+      "처리 실습"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "문화재 수리 분야는 별도 자격(문화재수리기술자·기능자)이 있다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.cu-route",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.lab-grad",
+   "step": 3,
+   "major": true,
+   "note": "관련 전공 대학원 — 정학예사는 학위가 요건",
+   "optional": true
+  },
+  {
+   "ref": "p.cu-exam",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.cu-career",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.second-language",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "curator": [
+   {
+    "ref": "p.cu-exhibit",
+    "step": 2,
+    "major": true
+   }
+  ],
+  "conserve": [
+   {
+    "ref": "p.cu-conserve",
+    "step": 2,
+    "major": true
+   }
+  ]
+ },
+ "verify": "자격 요건은 박물관 및 미술관 진흥법 시행령이 정본"
+}

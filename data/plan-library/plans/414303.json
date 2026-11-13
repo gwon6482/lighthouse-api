@@ -1,0 +1,208 @@
+{
+ "jobCode": "414303",
+ "title": "만화영화작가(애니메이터)",
+ "displayName": "애니메이터",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 움직임을 만드는 실력을 데모릴로 평가받는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "2d",
+   "name": "2D 작화",
+   "desc": "원화·동화"
+  },
+  {
+   "id": "3d",
+   "name": "3D 애니메이션",
+   "desc": "캐릭터 애니메이션"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.am-principles",
+   "name": "애니메이션 원리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "타이밍·간격·과장 등 움직임의 원리를 작업에 쓴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "원리",
+     "items": [
+      "기본 12원칙",
+      "걷기·달리기 사이클"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연습",
+     "items": [
+      "공 튀기기부터 캐릭터 동작까지"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.am-2d",
+   "name": "2D 작화",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "원화와 동화를 그려 장면을 완성한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "작화",
+     "items": [
+      "레이아웃·원화",
+      "동화·타이밍 시트"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "완성",
+     "items": [
+      "채색·촬영",
+      "10초 장면 완성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.am-3d",
+   "name": "3D 애니메이션",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "3D 캐릭터를 리깅된 모델로 연기시킨다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "기본",
+     "items": [
+      "3D 도구 사용",
+      "키 프레임·그래프 편집"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "연기",
+     "items": [
+      "바디 메카닉",
+      "표정·립싱크"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.am-reel",
+   "name": "데모릴 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "대표 작업을 1분 영상으로 묶는다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "작업",
+     "items": [
+      "대표 숏 5개 완성"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "편집과 설명"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.drawing-basics",
+   "step": 2,
+   "major": false,
+   "skip": "애니메이션 전공 실기에서 배운다"
+  },
+  {
+   "ref": "p.am-principles",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.after-effects",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.am-reel",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.contest",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "2d": [
+   {
+    "ref": "p.am-2d",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "3d": [
+   {
+    "ref": "p.am-3d",
+    "step": 4,
+    "major": true
+   }
+  ]
+ }
+}

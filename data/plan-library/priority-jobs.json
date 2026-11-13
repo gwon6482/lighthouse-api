@@ -3240,6 +3240,448 @@
      "track": null
     }
    ]
+  },
+  {
+   "no": 141,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-05",
+   "jobCode": "158201",
+   "title": "소방공학기술자 및 연구원",
+   "displayName": "소방 설비 기술자",
+   "family": "eng",
+   "group": "02C",
+   "groupName": "섬유·식품·안전 공학",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 142,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-05",
+   "jobCode": "140201",
+   "title": "건축구조기술자",
+   "displayName": "구조 기술자",
+   "family": "eng",
+   "group": "028",
+   "groupName": "건설·채굴 공학",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "140301",
+     "title": "토목구조설계기술자",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 143,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-05",
+   "jobCode": "140204",
+   "title": "건축설비기술자",
+   "displayName": "건축 설비 기술자",
+   "family": "eng",
+   "group": "028",
+   "groupName": "건설·채굴 공학",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 144,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-05",
+   "jobCode": "140401",
+   "title": "조경기술자",
+   "displayName": "조경 기술자",
+   "family": "eng",
+   "group": "028",
+   "groupName": "건설·채굴 공학",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 145,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-05",
+   "jobCode": "140601",
+   "title": "지적 및 측량기술자",
+   "displayName": "측량·공간정보 기술자",
+   "family": "eng",
+   "group": "028",
+   "groupName": "건설·채굴 공학",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "140602",
+     "title": "지리정보시스템전문가",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 146,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-05",
+   "jobCode": "140501",
+   "title": "도시계획·설계가",
+   "displayName": "도시·교통 계획가",
+   "family": "eng",
+   "group": "028",
+   "groupName": "건설·채굴 공학",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "urban",
+     "name": "도시 계획",
+     "desc": "토지 이용·도시 설계"
+    },
+    {
+     "id": "transport",
+     "name": "교통 계획",
+     "desc": "교통 수요·영향 평가"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "140502",
+     "title": "교통계획·설계가",
+     "track": "transport"
+    },
+    {
+     "jobCode": "140503",
+     "title": "교통영향평가원",
+     "track": "transport"
+    }
+   ]
+  },
+  {
+   "no": 147,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-05",
+   "jobCode": "214301",
+   "title": "기술·기능계강사",
+   "displayName": "직업훈련 교사·강사",
+   "family": "edu",
+   "group": "033",
+   "groupName": "정보통신·기술·기능계 강사",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "214201",
+     "title": "컴퓨터강사",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 148,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-05",
+   "jobCode": "215105",
+   "title": "교재·교구 및 이러닝교육전문가",
+   "displayName": "교육 콘텐츠 기획자(교수설계)",
+   "family": "edu",
+   "group": "035",
+   "groupName": "장학관·교육조교·보조 교사",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 149,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-05",
+   "jobCode": "411202",
+   "title": "통역가",
+   "displayName": "통역사",
+   "family": "media",
+   "group": "051",
+   "groupName": "작가·통번역·출판",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 150,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-05",
+   "jobCode": "411104",
+   "title": "방송작가",
+   "displayName": "방송·시나리오 작가",
+   "family": "media",
+   "group": "051",
+   "groupName": "작가·통번역·출판",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "nonfic",
+     "name": "예능·교양 구성",
+     "desc": "방송 구성 작가"
+    },
+    {
+     "id": "drama",
+     "name": "드라마·영화 극본",
+     "desc": "극본·시나리오 작가"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "411103",
+     "title": "영화시나리오작가",
+     "track": "drama"
+    }
+   ]
+  },
+  {
+   "no": 151,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-06",
+   "jobCode": "411301",
+   "title": "출판물기획자",
+   "displayName": "출판 편집자",
+   "family": "media",
+   "group": "052",
+   "groupName": "기자·언론 전문가",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "029901",
+     "title": "출판·자료편집사무원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 152,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-06",
+   "jobCode": "416301",
+   "title": "아나운서",
+   "displayName": "아나운서·리포터",
+   "family": "media",
+   "group": "057",
+   "groupName": "연극·영화·방송",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": [
+    {
+     "jobCode": "416302",
+     "title": "리포터",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 153,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-06",
+   "jobCode": "416401",
+   "title": "촬영기사",
+   "displayName": "촬영 감독",
+   "family": "media",
+   "group": "057",
+   "groupName": "연극·영화·방송",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 154,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-06",
+   "jobCode": "416501",
+   "title": "음향·녹음기사",
+   "displayName": "음향·조명 엔지니어",
+   "family": "media",
+   "group": "057",
+   "groupName": "연극·영화·방송",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "sound",
+     "name": "음향",
+     "desc": "녹음·라이브 음향"
+    },
+    {
+     "id": "light",
+     "name": "조명",
+     "desc": "공연·방송 조명"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "416701",
+     "title": "조명기사",
+     "track": "light"
+    }
+   ]
+  },
+  {
+   "no": 155,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-06",
+   "jobCode": "416201",
+   "title": "영화배우 및 탤런트",
+   "displayName": "배우",
+   "family": "media",
+   "group": "057",
+   "groupName": "연극·영화·방송",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "screen",
+     "name": "영화·드라마",
+     "desc": "카메라 연기"
+    },
+    {
+     "id": "stage",
+     "name": "연극·뮤지컬",
+     "desc": "무대 연기"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "416203",
+     "title": "연극 및 뮤지컬배우",
+     "track": "stage"
+    }
+   ]
+  },
+  {
+   "no": 156,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-06",
+   "jobCode": "414601",
+   "title": "가수",
+   "displayName": "가수",
+   "family": "media",
+   "group": "054",
+   "groupName": "창작·공연",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 157,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-06",
+   "jobCode": "414201",
+   "title": "사진작가 및 사진사",
+   "displayName": "사진작가",
+   "family": "media",
+   "group": "054",
+   "groupName": "창작·공연",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "commercial",
+     "name": "광고·제품",
+     "desc": "상업 사진"
+    },
+    {
+     "id": "portrait",
+     "name": "인물·웨딩",
+     "desc": "스튜디오 촬영"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 158,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-06",
+   "jobCode": "414303",
+   "title": "만화영화작가(애니메이터)",
+   "displayName": "애니메이터",
+   "family": "media",
+   "group": "054",
+   "groupName": "창작·공연",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "2d",
+     "name": "2D 작화",
+     "desc": "원화·동화"
+    },
+    {
+     "id": "3d",
+     "name": "3D 애니메이션",
+     "desc": "캐릭터 애니메이션"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 159,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-06",
+   "jobCode": "417201",
+   "title": "연예인매니저",
+   "displayName": "연예인 매니저",
+   "family": "media",
+   "group": "059",
+   "groupName": "스포츠·레크리에이션",
+   "work24Postings": null,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 160,
+   "tier": null,
+   "wave": 2,
+   "batch": "2-06",
+   "jobCode": "413101",
+   "title": "학예사",
+   "displayName": "학예사(큐레이터)",
+   "family": "edu",
+   "group": "053",
+   "groupName": "학예사·사서·기록물관리사",
+   "work24Postings": null,
+   "tracks": [
+    {
+     "id": "curator",
+     "name": "학예",
+     "desc": "전시·연구·교육"
+    },
+    {
+     "id": "conserve",
+     "name": "보존",
+     "desc": "소장품 보존 처리"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "413102",
+     "title": "문화재보존원",
+     "track": "conserve"
+    }
+   ]
   }
  ]
 }

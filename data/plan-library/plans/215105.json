@@ -1,0 +1,177 @@
+{
+ "jobCode": "215105",
+ "title": "교재·교구 및 이러닝교육전문가",
+ "displayName": "교육 콘텐츠 기획자(교수설계)",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 배울 내용을 과정으로 설계해 콘텐츠로 만드는 능력을 결과물로 보인다. 교육공학 전공을 우대한다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.isd-theory",
+   "name": "교수 설계 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "학습자 분석부터 평가까지 과정 설계의 흐름을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "학습 목표와 과제 분석",
+      "교수 전략",
+      "평가 설계"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "온라인 과정 3개 뜯어보기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.isd-story",
+   "name": "스토리보드 쓰기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "차시 하나의 화면 구성과 내레이션을 스토리보드로 쓴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "형식",
+     "items": [
+      "스토리보드 양식",
+      "화면·음성 구분"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "작성",
+     "items": [
+      "차시 3개 스토리보드",
+      "검토 받고 수정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.isd-course",
+   "name": "온라인 과정 하나 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "주제를 정해 5차시 과정을 기획·제작한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "대상과 목표",
+      "차시 구성"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "제작",
+     "items": [
+      "스토리보드",
+      "촬영·편집",
+      "퀴즈·과제"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "검증",
+     "items": [
+      "시범 운영과 피드백"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.isd-theory",
+   "step": 2,
+   "major": false,
+   "skip": "교육공학 전공 과목에서 배운다"
+  },
+  {
+   "ref": "p.isd-story",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.teaching-material",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.video-edit",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.isd-course",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 8,
+   "major": true,
+   "note": "교육 회사",
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

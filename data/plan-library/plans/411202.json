@@ -1,0 +1,150 @@
+{
+ "jobCode": "411202",
+ "title": "통역가",
+ "displayName": "통역사",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법정 자격은 없다. 통번역대학원이 사실상 관문이고, 졸업 뒤 에이전시와 인맥으로 일을 얻는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.it-grad",
+   "name": "통번역대학원 진학",
+   "type": "edu",
+   "subtype": "graduate",
+   "category": "knowledge",
+   "method": "school",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 180,
+   "goal": "통번역대학원 입학시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "전형 파악",
+     "items": [
+      "학교별 시험 방식 확인"
+     ]
+    },
+    {
+     "weeks": 30,
+     "title": "준비",
+     "items": [
+      "요약·번역 훈련",
+      "시사 배경 지식",
+      "구술 시험 연습"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "입시 경쟁이 높아 입시 학원을 거치는 경우가 많다"
+  },
+  {
+   "id": "p.it-train",
+   "name": "통역 훈련(순차·동시)",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "study_group",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "연설을 듣고 순차 통역하고 동시 통역의 기초를 익힌다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "순차",
+     "items": [
+      "노트 테이킹",
+      "연설 듣고 통역"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "동시",
+     "items": [
+      "섀도잉",
+      "짧은 연설 동시 통역"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.it-field",
+   "name": "통역 현장 경험",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 480,
+   "goal": "전시·회의·수행 통역을 해 보고 실적을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "찾기",
+     "items": [
+      "에이전시 등록",
+      "행사 통역 지원"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "현장",
+     "items": [
+      "행사·회의 통역",
+      "용어 준비와 사후 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.second-language",
+   "step": 1,
+   "major": true,
+   "note": "최상급 수준의 공인 성적"
+  },
+  {
+   "ref": "cp.writing",
+   "step": 2,
+   "major": true,
+   "note": "한국어 표현력"
+  },
+  {
+   "ref": "p.it-train",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.it-grad",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.term-glossary",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.it-field",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 7,
+   "major": true,
+   "note": "이력서와 통역 실적 목록"
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,159 @@
+{
+ "jobCode": "214301",
+ "title": "기술·기능계강사",
+ "displayName": "직업훈련 교사·강사",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "가르칠 분야의 자격과 경력이 바탕이다. 직업훈련 기관은 직업능력개발훈련교사 자격을 요구하는 경우가 많다.",
+ "gate": "직업능력개발훈련교사 자격(가르칠 분야의 자격·경력 + 양성 과정) — 기관에 따라 요구",
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "214201",
+   "title": "컴퓨터강사",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.vt-route",
+   "name": "가르칠 분야와 자격 요건 확인",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "분야를 정하고 필요한 자격·경력 요건을 정리한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "가르칠 분야 정하기",
+      "훈련교사 자격 기준 확인",
+      "채용 공고 조사"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.vt-cert",
+   "name": "직업능력개발훈련교사 자격",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 240,
+   "goal": "양성 과정을 이수하고 훈련교사 자격을 받는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "요건",
+     "items": [
+      "자격·경력 요건 대조",
+      "과정 신청"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "과정",
+     "items": [
+      "교직 과목 이수",
+      "수업 실습"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "발급",
+     "items": [
+      "자격증 신청"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "급수와 요건은 관련 법령과 양성 기관 안내 확인"
+  },
+  {
+   "id": "p.vt-assist",
+   "name": "보조 강사·조교 경험",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "훈련 기관에서 수업을 돕고 일부를 직접 진행한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "훈련 기관 찾기"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "근무",
+     "items": [
+      "실습 지도 보조",
+      "수업 일부 맡기",
+      "훈련생 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.vt-route",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 2,
+   "major": true,
+   "note": "가르칠 분야의 기사·산업기사 등"
+  },
+  {
+   "ref": "p.vt-cert",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.lecture-demo",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.teaching-material",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.vt-assist",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

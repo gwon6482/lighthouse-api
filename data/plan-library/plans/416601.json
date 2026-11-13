@@ -93,69 +93,6 @@
     }
    ],
    "basis": "practice"
-  },
-  {
-   "id": "p.ve-color",
-   "name": "색보정(다빈치 리졸브)",
-   "type": "skill",
-   "subtype": "content",
-   "category": "skill",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "촬영 소스를 보정하고 톤을 맞춘다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "기본",
-     "items": [
-      "스코프 읽기",
-      "1차·2차 보정",
-      "로그·LUT"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "적용",
-     "items": [
-      "장면 간 톤 맞추기",
-      "룩 만들기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.ve-sound",
-   "name": "사운드 편집과 믹싱 기초",
-   "type": "skill",
-   "subtype": "content",
-   "category": "skill",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 2,
-   "minutesPerSession": 90,
-   "goal": "대사·음악·효과음을 정리해 듣기 좋게 맞춘다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "정리",
-     "items": [
-      "잡음 제거",
-      "대사 레벨 맞추기"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "믹싱",
-     "items": [
-      "음악·효과음 배치",
-      "라우드니스 기준 맞추기"
-     ]
-    }
-   ],
-   "basis": "practice"
   }
  ],
  "common": [
@@ -231,12 +168,12 @@
   ],
   "post": [
    {
-    "ref": "p.ve-color",
+    "ref": "cp.color-grading",
     "step": 6,
     "major": true
    },
    {
-    "ref": "p.ve-sound",
+    "ref": "cp.sound-mixing",
     "step": 7,
     "major": true
    },

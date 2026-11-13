@@ -74,38 +74,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.vd-indesign",
-   "name": "인디자인과 편집 디자인",
-   "type": "skill",
-   "subtype": "design",
-   "category": "skill",
-   "method": "lecture",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "인디자인으로 여러 쪽 문서를 조판한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "기능",
-     "items": [
-      "마스터 페이지·스타일",
-      "표·이미지 배치",
-      "인쇄용 내보내기"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "조판",
-     "items": [
-      "본문 조판 규칙",
-      "잡지 펼침면 4개"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.vd-book",
    "name": "책·잡지 한 권 만들기",
    "type": "output",
@@ -315,7 +283,7 @@
   ],
   "editorial": [
    {
-    "ref": "p.vd-indesign",
+    "ref": "cp.indesign",
     "step": 6,
     "major": true
    },

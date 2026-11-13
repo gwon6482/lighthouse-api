@@ -65,70 +65,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.ac-lecture",
-   "name": "강의 시연 연습",
-   "type": "skill",
-   "subtype": "field",
-   "category": "skill",
-   "method": "practice",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "한 단원을 판서와 함께 20분 강의로 풀어낸다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "설계",
-     "items": [
-      "수업 목표와 흐름",
-      "판서 계획"
-     ]
-    },
-    {
-     "weeks": 3,
-     "title": "시연",
-     "items": [
-      "녹화하며 강의",
-      "피드백 받아 고치기",
-      "시범 강의 3종 준비"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.ac-material",
-   "name": "교재와 수업 자료 만들기",
-   "type": "output",
-   "subtype": "portfolio",
-   "category": "portfolio",
-   "method": "personal_project",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "단원별 개념서와 문제 자료를 직접 만든다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "기획",
-     "items": [
-      "대상 학년과 수준",
-      "구성"
-     ]
-    },
-    {
-     "weeks": 3,
-     "title": "제작",
-     "items": [
-      "개념 정리 자료",
-      "유형별 문제",
-      "테스트지"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.ac-csat",
    "name": "입시 분석",
    "type": "edu",
@@ -214,12 +150,12 @@
    "major": true
   },
   {
-   "ref": "p.ac-lecture",
+   "ref": "cp.lecture-demo",
    "step": 3,
    "major": true
   },
   {
-   "ref": "p.ac-material",
+   "ref": "cp.teaching-material",
    "step": 4,
    "major": true
   },
