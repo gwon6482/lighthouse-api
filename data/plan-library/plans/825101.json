@@ -91,13 +91,6 @@
    "optional": true
   },
   {
-   "ref": "cp.craftsman-cert",
-   "step": 4,
-   "major": true,
-   "note": "금속도장기능사·표면처리기능사",
-   "optional": true
-  },
-  {
    "ref": "p.pt-chem",
    "step": 3,
    "major": true
@@ -120,19 +113,41 @@
    "optional": true
   },
   {
-   "ref": "cp.shop-work",
-   "step": 80,
-   "major": true,
-   "note": "도장·도금 업체"
-  },
-  {
    "ref": "cp.interview",
    "step": 91,
    "major": true
   }
  ],
  "byTrack": {
-  "paint": [],
-  "plating": []
+  "paint": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "금속도장기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "자동차·금속 제품 도장 업체"
+   }
+  ],
+  "plating": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "표면처리기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "도금·표면 처리 업체"
+   }
+  ]
  }
 }

@@ -104,12 +104,6 @@
    "optional": true
   },
   {
-   "ref": "cp.craftsman-cert",
-   "step": 4,
-   "major": true,
-   "note": "건설기계정비기능사·농기계정비기능사"
-  },
-  {
    "ref": "p.hm-basics",
    "step": 3,
    "major": true
@@ -126,22 +120,9 @@
    "optional": true
   },
   {
-   "ref": "cp.engineer-cert",
-   "step": 7,
-   "major": true,
-   "note": "건설기계정비산업기사",
-   "optional": true
-  },
-  {
    "ref": "cp.driver-license",
    "step": 8,
    "major": true
-  },
-  {
-   "ref": "cp.shop-work",
-   "step": 80,
-   "major": true,
-   "note": "중장비·농기계 정비 업체"
   },
   {
    "ref": "cp.interview",
@@ -150,7 +131,47 @@
   }
  ],
  "byTrack": {
-  "heavy": [],
-  "agri": []
+  "heavy": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "건설기계정비기능사"
+   },
+   {
+    "ref": "cp.engineer-cert",
+    "step": 7,
+    "major": true,
+    "optional": true,
+    "note": "건설기계정비산업기사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "건설 기계 정비 업체·장비 임대 회사"
+   }
+  ],
+  "agri": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "농기계정비기능사"
+   },
+   {
+    "ref": "cp.engineer-cert",
+    "step": 7,
+    "major": true,
+    "optional": true,
+    "note": "농업기계산업기사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "농기계 대리점·수리 센터"
+   }
+  ]
  }
 }

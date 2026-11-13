@@ -51,6 +51,32 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.ev-water-op",
+   "name": "정수시설운영관리사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "정수장 운영 인력에게 요구되는 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 10,
+     "title": "준비",
+     "items": [
+      "수처리 공정",
+      "수질 분석과 관리",
+      "설비 운영",
+      "기출"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "등급별 응시 자격(학력·경력)과 시험 일정은 시행 기관 공고 확인"
   }
  ],
  "common": [
@@ -69,13 +95,6 @@
    "step": 3,
    "major": true,
    "note": "환경기능사 등"
-  },
-  {
-   "ref": "cp.engineer-cert",
-   "step": 4,
-   "major": true,
-   "note": "수질환경·폐기물처리 산업기사",
-   "optional": true
   },
   {
    "ref": "cp.hazmat-cert",
@@ -115,7 +134,30 @@
   }
  ],
  "byTrack": {
-  "water": [],
-  "waste": []
+  "water": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "수질환경산업기사"
+   },
+   {
+    "ref": "p.ev-water-op",
+    "step": 4.5,
+    "major": true,
+    "note": "정수장 — 법이 정한 배치 자격",
+    "optional": true
+   }
+  ],
+  "waste": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "폐기물처리산업기사"
+   }
+  ]
  }
 }

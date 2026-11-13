@@ -89,13 +89,6 @@
    "optional": true
   },
   {
-   "ref": "cp.craftsman-cert",
-   "step": 4,
-   "major": true,
-   "note": "판금제관기능사·주조기능사 등 해당 직종 기능사",
-   "optional": true
-  },
-  {
    "ref": "cp.drawing-reading",
    "step": 3,
    "major": true
@@ -106,12 +99,6 @@
    "major": true
   },
   {
-   "ref": "cp.shop-work",
-   "step": 80,
-   "major": true,
-   "note": "금속 가공·주물 업체"
-  },
-  {
    "ref": "cp.interview",
    "step": 91,
    "major": true
@@ -120,12 +107,54 @@
  "byTrack": {
   "sheet": [
    {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "판금제관기능사"
+   },
+   {
     "ref": "cp.welding-practice",
     "step": 6,
     "major": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "판금·제관 업체"
    }
   ],
-  "cast": [],
-  "forge": []
- }
+  "cast": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "주조기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "주물 공장"
+   }
+  ],
+  "forge": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "금형·열처리 등 관련 기능사 — 단조 쪽 종목은 큐넷에서 확인"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "단조 공장"
+   }
+  ]
+ },
+ "verify": "기능사 종목 이름과 시행 여부는 큐넷에서 확인(종목 통폐합이 잦다)"
 }

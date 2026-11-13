@@ -194,6 +194,54 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.mu-diction",
+   "name": "딕션과 외국어 가사 익히기",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "이탈리아어·독일어 등 가사의 발음과 뜻을 알고 부른다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "공부",
+     "items": [
+      "이탈리아어·독일어 발음",
+      "가사 해석",
+      "오페라·가곡 레퍼토리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mu-gugak",
+   "name": "장단과 국악 이론",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "장단과 악조, 갈래별 음악의 짜임을 안다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "공부",
+     "items": [
+      "장단과 악조",
+      "정악과 민속악",
+      "정간보·오선보 읽기"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -201,13 +249,6 @@
    "ref": "p.mu-practice",
    "step": 1,
    "major": true
-  },
-  {
-   "ref": "cp.dept-admission",
-   "step": 2,
-   "major": false,
-   "skip": "이미 음악 대학에 다니고 있다",
-   "note": "음악 대학(실기 입시)"
   },
   {
    "ref": "p.mu-ensemble",
@@ -246,15 +287,56 @@
   }
  ],
  "byTrack": {
-  "inst": [],
-  "vocal": [],
+  "inst": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 2,
+    "major": false,
+    "skip": "이미 음악 대학에 다니고 있다",
+    "note": "음악 대학 기악 전공(실기 입시)"
+   }
+  ],
+  "vocal": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 2,
+    "major": false,
+    "skip": "이미 음악 대학에 다니고 있다",
+    "note": "음악 대학 성악 전공(실기 입시)"
+   },
+   {
+    "ref": "p.mu-diction",
+    "step": 2.5,
+    "major": true
+   }
+  ],
   "conduct": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 2,
+    "major": false,
+    "skip": "이미 음악 대학에 다니고 있다",
+    "note": "음악 대학 작곡·지휘 전공 — 지휘는 대학원 과정이 많다"
+   },
    {
     "ref": "p.mu-score",
     "step": 3.5,
     "major": true
    }
   ],
-  "gugak": []
+  "gugak": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 2,
+    "major": false,
+    "skip": "이미 음악 대학에 다니고 있다",
+    "note": "국악과(실기 입시)"
+   },
+   {
+    "ref": "p.mu-gugak",
+    "step": 2.5,
+    "major": true
+   }
+  ]
  }
 }

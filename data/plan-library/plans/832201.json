@@ -133,17 +133,6 @@
    "major": true
   },
   {
-   "ref": "cp.driver-license",
-   "step": 7,
-   "major": true
-  },
-  {
-   "ref": "cp.shop-work",
-   "step": 80,
-   "major": true,
-   "note": "제조사 서비스 센터·수리 업체"
-  },
-  {
    "ref": "cp.interview",
    "step": 91,
    "major": true
@@ -157,17 +146,62 @@
     "major": true,
     "note": "공조냉동기계기능사 — 에어컨 설치",
     "optional": true
+   },
+   {
+    "ref": "cp.driver-license",
+    "step": 7,
+    "major": true,
+    "note": "출장 설치·수리"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "제조사 서비스 센터·설치 협력 업체"
    }
   ],
-  "office": [],
+  "office": [
+   {
+    "ref": "cp.driver-license",
+    "step": 7,
+    "major": true,
+    "note": "출장 수리"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "사무기기 렌털·유지 보수 업체"
+   }
+  ],
   "pc": [
    {
     "ref": "cp.linux-network",
     "step": 6.5,
     "major": true,
     "optional": true
+   },
+   {
+    "ref": "cp.driver-license",
+    "step": 7,
+    "major": true,
+    "note": "출장 수리",
+    "optional": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "PC 수리점·전산 유지 보수 업체"
    }
   ],
-  "phone": []
+  "phone": [
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "휴대폰 서비스 센터·사설 수리점"
+   }
+  ]
  }
 }

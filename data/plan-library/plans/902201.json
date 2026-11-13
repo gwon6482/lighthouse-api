@@ -75,6 +75,32 @@
    ],
    "basis": "law",
    "verify": "교육 시간과 시설 기준은 축산법 확인"
+  },
+  {
+   "id": "p.ls-milk",
+   "name": "착유와 원유 위생 관리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "착유 순서와 위생 기준을 지켜 품질 좋은 원유를 낸다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "관리",
+     "items": [
+      "착유 순서와 장비 세척",
+      "유방염 예방",
+      "원유 품질 기준",
+      "납유처와 납유 권리(쿼터) 확인"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "낙농은 원유를 받아 줄 납유처와 납유 권리를 먼저 확보해야 한다 — 조건은 유업체·집유 조합에 확인"
   }
  ],
  "common": [
@@ -87,12 +113,6 @@
    "ref": "cp.farm-edu",
    "step": 2,
    "major": true
-  },
-  {
-   "ref": "cp.farm-practice",
-   "step": 3,
-   "major": true,
-   "note": "축산 농가 실습"
   },
   {
    "ref": "p.ls-care",
@@ -123,7 +143,26 @@
   }
  ],
  "byTrack": {
-  "livestock": [],
-  "dairy": []
+  "livestock": [
+   {
+    "ref": "cp.farm-practice",
+    "step": 3,
+    "major": true,
+    "note": "한우·양돈·양계 농가 실습 — 키울 축종을 정한다"
+   }
+  ],
+  "dairy": [
+   {
+    "ref": "cp.farm-practice",
+    "step": 3,
+    "major": true,
+    "note": "낙농 목장 실습(착유 포함)"
+   },
+   {
+    "ref": "p.ls-milk",
+    "step": 4.5,
+    "major": true
+   }
+  ]
  }
 }

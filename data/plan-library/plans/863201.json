@@ -85,13 +85,6 @@
    "optional": true
   },
   {
-   "ref": "cp.craftsman-cert",
-   "step": 4,
-   "major": true,
-   "note": "양장기능사·양복기능사·한복기능사",
-   "optional": true
-  },
-  {
    "ref": "cp.pattern-sewing",
    "step": 3,
    "major": true
@@ -113,20 +106,56 @@
    "optional": true
   },
   {
-   "ref": "cp.shop-work",
-   "step": 80,
-   "major": true,
-   "note": "맞춤 의상실·수선실"
-  },
-  {
    "ref": "cp.interview",
    "step": 91,
    "major": true
   }
  ],
  "byTrack": {
-  "tailor": [],
-  "hanbok": [],
-  "repair": []
+  "tailor": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "양장기능사·양복기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "맞춤 의상실·양복점"
+   }
+  ],
+  "hanbok": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "한복기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "한복집·한복 공방"
+   }
+  ],
+  "repair": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "양장기능사 등 — 수선 실력을 보여 주는 용도"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "수선실·수선 전문 업체"
+   }
+  ]
  }
 }

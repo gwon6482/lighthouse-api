@@ -104,13 +104,6 @@
    "optional": true
   },
   {
-   "ref": "cp.craftsman-cert",
-   "step": 4,
-   "major": true,
-   "note": "철근기능사·거푸집기능사 등 해당 직종 기능사",
-   "optional": true
-  },
-  {
    "ref": "cp.construction-safety",
    "step": 3,
    "major": true
@@ -126,21 +119,78 @@
    "major": true
   },
   {
-   "ref": "cp.shop-work",
-   "step": 80,
-   "major": true,
-   "note": "전문 건설 업체·현장 팀"
-  },
-  {
    "ref": "cp.interview",
    "step": 91,
    "major": true
   }
  ],
  "byTrack": {
-  "rebar": [],
-  "steel": [],
-  "concrete": [],
-  "masonry": []
- }
+  "rebar": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "철근기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "철근 가공장·골조 전문 업체"
+   }
+  ],
+  "steel": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "용접 분야 기능사 등 — 철골 직종에 맞는 종목은 큐넷에서 확인"
+   },
+   {
+    "ref": "cp.welding-practice",
+    "step": 5.5,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "철골 제작·설치 업체"
+   }
+  ],
+  "concrete": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "콘크리트기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "콘크리트 타설 팀·골조 전문 업체"
+   }
+  ],
+  "masonry": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "조적기능사·석공기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "조적·석공사 팀"
+   }
+  ]
+ },
+ "verify": "기능사 종목 이름과 시행 여부는 큐넷에서 확인(종목 통폐합이 잦다)"
 }

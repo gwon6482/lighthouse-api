@@ -104,13 +104,6 @@
    "optional": true
   },
   {
-   "ref": "cp.craftsman-cert",
-   "step": 4,
-   "major": true,
-   "note": "건축도장기능사·미장기능사·방수기능사 등 해당 직종 기능사",
-   "optional": true
-  },
-  {
    "ref": "cp.construction-safety",
    "step": 3,
    "major": true
@@ -132,21 +125,72 @@
    "optional": true
   },
   {
-   "ref": "cp.shop-work",
-   "step": 80,
-   "major": true,
-   "note": "마감 공사 팀"
-  },
-  {
    "ref": "cp.interview",
    "step": 91,
    "major": true
   }
  ],
  "byTrack": {
-  "paint": [],
-  "plaster": [],
-  "waterproof": [],
-  "glass": []
- }
+  "paint": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "건축도장기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "도장 공사 팀"
+   }
+  ],
+  "plaster": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "미장기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "미장 공사 팀"
+   }
+  ],
+  "waterproof": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "방수기능사 — 단열 쪽 종목은 큐넷에서 확인"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "방수·단열 공사 업체"
+   }
+  ],
+  "glass": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "optional": true,
+    "note": "유리시공기능사·창호 분야 기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 80,
+    "major": true,
+    "note": "유리·창호 시공 업체"
+   }
+  ]
+ },
+ "verify": "기능사 종목 이름과 시행 여부는 큐넷에서 확인(종목 통폐합이 잦다)"
 }
