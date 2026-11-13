@@ -1,0 +1,132 @@
+{
+ "jobCode": "306401",
+ "title": "치과위생사",
+ "displayName": "치과위생사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "치위생(학)과를 졸업하고 국가시험에 합격해 면허를 받아야 한다.",
+ "gate": "치위생(학)과(3·4년제) 졸업 + 치과위생사 국가시험 합격(면허)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.dh-skills",
+   "name": "치과 임상 술기 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "스케일링·구강 방사선 촬영·진료 보조를 순서대로 해낸다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "술기 목록과 순서 정리",
+      "감염 관리 원칙"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "연습",
+     "items": [
+      "실습실 반복 연습",
+      "동료 평가",
+      "실기 시험 대비"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.dh-claim",
+   "name": "치과 건강보험 청구 이해",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "치과 진료의 보험 청구 흐름을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "청구",
+     "items": [
+      "보험 적용 항목",
+      "청구 프로그램 화면",
+      "자주 나는 실수"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간 자격 과정이 있다. 필수는 아니다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 치위생(학)과에 다니고 있다",
+   "note": "치위생(학)과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "의료 봉사",
+   "optional": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 4,
+   "major": true,
+   "note": "학과가 정한 실습"
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 6,
+   "major": true,
+   "note": "치과위생사 국가시험(필기·실기)"
+  },
+  {
+   "ref": "cp.hospital-apply",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "p.dh-skills",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.dh-claim",
+   "step": 7.5,
+   "major": true,
+   "optional": true
+  }
+ ],
+ "byTrack": {}
+}

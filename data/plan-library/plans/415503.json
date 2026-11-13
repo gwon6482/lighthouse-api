@@ -1,0 +1,229 @@
+{
+ "jobCode": "415503",
+ "title": "영상그래픽디자이너",
+ "displayName": "모션그래픽 디자이너",
+ "family": "design",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 모션 원리와 툴을 익히고 쇼릴로 평가받는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "motion",
+   "name": "모션그래픽",
+   "desc": "2D 모션·타이틀"
+  },
+  {
+   "id": "3d",
+   "name": "3D·VFX",
+   "desc": "3D 모델링·합성"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.mg-motion",
+   "name": "모션 디자인 원리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "타이밍·이징·전환으로 움직임에 의미를 담는다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "원리",
+     "items": [
+      "타이밍과 이징",
+      "전환과 리듬",
+      "타이포 모션"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연습",
+     "items": [
+      "10초 모션 5개",
+      "레퍼런스 따라 만들기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mg-reel",
+   "name": "모션 쇼릴 제작",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 150,
+   "goal": "작업 5개 이상을 묶은 1분 쇼릴을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "작업 목록과 콘셉트"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "제작",
+     "items": [
+      "타이틀·인포그래픽 모션",
+      "브랜드 필름 1편",
+      "사운드 맞추기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "쇼릴 편집",
+      "작업 설명"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mg-3d",
+   "name": "3D 도구 익히기",
+   "type": "skill",
+   "subtype": "design",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "3D 모델링·재질·조명·렌더로 짧은 장면을 만든다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "기본",
+     "items": [
+      "모델링",
+      "재질·조명",
+      "애니메이션·렌더"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "작품",
+     "items": [
+      "3D 모션 3개"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mg-comp",
+   "name": "합성과 VFX 기초",
+   "type": "skill",
+   "subtype": "design",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "촬영 소스에 그래픽을 합성한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "합성",
+     "items": [
+      "키잉·트래킹",
+      "로토스코핑",
+      "3D 요소 합성"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "작품",
+     "items": [
+      "합성 숏 3개"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.design-basics",
+   "step": 2,
+   "major": false,
+   "skip": "디자인 전공 기초 과목에서 배운다"
+  },
+  {
+   "ref": "cp.adobe",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.after-effects",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.video-edit",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.contest",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.mg-reel",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "motion": [
+   {
+    "ref": "p.mg-motion",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "3d": [
+   {
+    "ref": "p.mg-3d",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.mg-comp",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
+}

@@ -55,71 +55,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.ve-ae",
-   "name": "애프터 이펙트 기초",
-   "type": "skill",
-   "subtype": "content",
-   "category": "skill",
-   "method": "lecture",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "자막 모션과 간단한 효과를 만든다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "기본",
-     "items": [
-      "키프레임·이징",
-      "텍스트 애니메이션",
-      "마스크·트래킹"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "적용",
-     "items": [
-      "인트로 3개",
-      "자막 템플릿 만들기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.ve-shoot",
-   "name": "촬영 기초",
-   "type": "skill",
-   "subtype": "content",
-   "category": "skill",
-   "method": "practice",
-   "level": "입문",
-   "daysPerWeek": 2,
-   "minutesPerSession": 120,
-   "goal": "카메라·조명·마이크를 다뤄 편집하기 좋은 소스를 찍는다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "장비",
-     "items": [
-      "노출·초점·프레임레이트",
-      "조명 기본 배치",
-      "마이크와 녹음"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "촬영",
-     "items": [
-      "인터뷰 촬영",
-      "브이로그 촬영",
-      "소스 정리 습관"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.ve-shorts",
    "name": "유튜브·숏폼 편집 포트폴리오",
    "type": "output",
@@ -240,12 +175,12 @@
    "major": true
   },
   {
-   "ref": "p.ve-ae",
+   "ref": "cp.after-effects",
    "step": 4,
    "major": true
   },
   {
-   "ref": "p.ve-shoot",
+   "ref": "cp.shooting-basics",
    "step": 5,
    "major": true
   },

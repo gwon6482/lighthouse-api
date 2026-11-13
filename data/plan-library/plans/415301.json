@@ -1,0 +1,256 @@
+{
+ "jobCode": "415301",
+ "title": "실내장식디자이너",
+ "displayName": "인테리어 디자이너",
+ "family": "design",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 실내건축 자격과 도면·3D 능력을 본다. 포트폴리오와 현장 이해가 중요하다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "home",
+   "name": "주거 공간",
+   "desc": "아파트·주택 인테리어"
+  },
+  {
+   "id": "commercial",
+   "name": "상업 공간",
+   "desc": "매장·오피스"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.id-basics",
+   "name": "공간 디자인 기초",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "치수·동선·재료·조명의 기본으로 공간을 계획한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "원리",
+     "items": [
+      "인체 치수와 동선",
+      "재료·마감",
+      "조명·색"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연습",
+     "items": [
+      "공간 실측과 도면화",
+      "좋은 공간 5곳 분석"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.id-3d",
+   "name": "3D 모델링과 렌더",
+   "type": "skill",
+   "subtype": "design",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "도면을 3D로 세우고 렌더 이미지를 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "모델링",
+     "items": [
+      "공간 모델링",
+      "가구·재질"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "렌더",
+     "items": [
+      "조명·카메라",
+      "보정과 패널 구성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.id-site",
+   "name": "시공 현장과 견적 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "공정 순서·자재·견적서 구성을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "공정",
+     "items": [
+      "철거부터 마감까지 순서",
+      "자재와 단가"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "견적",
+     "items": [
+      "견적서 읽기·작성",
+      "공정표"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.id-home",
+   "name": "주거 공간 프로젝트",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "주거 공간 하나를 콘셉트부터 도면·3D까지 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "거주자 요구 정리",
+      "실측"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "설계",
+     "items": [
+      "평면·입면·천장도",
+      "자재 보드",
+      "3D·견적"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.id-shop",
+   "name": "상업 공간 프로젝트",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "매장이나 오피스 하나를 브랜드에 맞춰 설계한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "브랜드와 고객 분석",
+      "법규(소방·장애인 시설) 확인"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "설계",
+     "items": [
+      "동선과 평면",
+      "도면 일체",
+      "3D·견적"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.id-basics",
+   "step": 2,
+   "major": false,
+   "skip": "실내디자인 전공 과목에서 배운다"
+  },
+  {
+   "ref": "cp.cad",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.id-3d",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 5,
+   "major": true,
+   "note": "실내건축산업기사·기사",
+   "optional": true
+  },
+  {
+   "ref": "p.id-site",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 8,
+   "major": true,
+   "note": "인테리어 회사 인턴·현장 보조"
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "home": [
+   {
+    "ref": "p.id-home",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "commercial": [
+   {
+    "ref": "p.id-shop",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
+}

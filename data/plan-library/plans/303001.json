@@ -1,0 +1,163 @@
+{
+ "jobCode": "303001",
+ "title": "약사",
+ "displayName": "약사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "약학대학(6년제)을 졸업하고 약사 국가시험에 합격해 면허를 받아야 한다.",
+ "gate": "약학대학(6년제) 졸업 + 약사 국가시험 합격(면허)",
+ "tracks": [
+  {
+   "id": "pharmacy",
+   "name": "약국",
+   "desc": "조제·복약 지도"
+  },
+  {
+   "id": "hospital",
+   "name": "병원",
+   "desc": "병원 약제부"
+  },
+  {
+   "id": "industry",
+   "name": "제약회사",
+   "desc": "개발·허가·마케팅"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pm-otc",
+   "name": "일반의약품과 복약 상담 공부",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "증상별 일반의약품을 고르고 복약 지도를 한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "약",
+     "items": [
+      "증상별 일반의약품",
+      "건강기능식품",
+      "상호작용"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "상담",
+     "items": [
+      "상담 대화 연습",
+      "약국 경영 기초"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pm-hosp",
+   "name": "병원 약제 업무 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "조제·주사제 무균 조제·임상 약동학 업무를 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "업무",
+     "items": [
+      "입원·외래 조제",
+      "주사제 조제",
+      "임상 지원 업무"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 약학대학에 다니고 있다",
+   "note": "약학대학 6년제"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 3,
+   "major": true,
+   "note": "약국·병원·제약 실무 실습"
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 5,
+   "major": true,
+   "note": "약사 국가시험"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "pharmacy": [
+   {
+    "ref": "p.pm-otc",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "hospital": [
+   {
+    "ref": "p.pm-hosp",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "cp.hospital-apply",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "industry": [
+   {
+    "ref": "cp.pharma-ra",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "cp.speaking",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.internship",
+    "step": 7,
+    "major": true,
+    "note": "제약회사 인턴",
+    "optional": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,224 @@
+{
+ "jobCode": "416101",
+ "title": "방송연출가",
+ "displayName": "PD",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "방송국은 공채 시험으로, 제작사와 디지털 채널은 작품과 경력으로 뽑는다. 기획력과 직접 만든 결과물이 공통 바탕이다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "broadcast",
+   "name": "방송국 PD",
+   "desc": "공채·시사교양·예능·드라마"
+  },
+  {
+   "id": "digital",
+   "name": "디지털 콘텐츠 PD",
+   "desc": "제작사·MCN·브랜드 채널"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pd-plan",
+   "name": "기획안 쓰기",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "프로그램이나 콘텐츠의 기획안을 형식에 맞춰 쓴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분석",
+     "items": [
+      "프로그램 구성 분석",
+      "기획안 형식"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "작성",
+     "items": [
+      "기획안 5편",
+      "구성안·큐시트",
+      "피드백 반영"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pd-work",
+   "name": "직접 제작한 작품 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "team_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 150,
+   "goal": "기획·촬영·편집을 맡은 작품 3편을 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "주제와 형식",
+      "팀 구성"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "제작",
+     "items": [
+      "촬영",
+      "편집",
+      "공개와 반응 확인"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "작품 설명",
+      "내 역할 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pd-exam",
+   "name": "방송사 공채 필기 준비",
+   "type": "hiring",
+   "subtype": "ncs",
+   "category": "qualification",
+   "method": "book",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "논술·작문·시사 상식과 기획안 시험에 대비한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "훈련",
+     "items": [
+      "논술·작문 주 2편",
+      "시사 상식 정리",
+      "기획안 실전"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실전",
+     "items": [
+      "방송사별 기출",
+      "스터디 첨삭"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "전형 구성은 방송사마다 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.pd-plan",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.shooting-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.video-edit",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.writing",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.pd-work",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.outreach",
+   "step": 7,
+   "major": true,
+   "note": "대학 방송·영상 동아리",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 11,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 12,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "broadcast": [
+   {
+    "ref": "cp.korean-lang-test",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.toeic",
+    "step": 9,
+    "major": true
+   },
+   {
+    "ref": "p.pd-exam",
+    "step": 10,
+    "major": true
+   },
+   {
+    "ref": "cp.study-club",
+    "step": 10.5,
+    "major": true,
+    "note": "언론사 준비 스터디"
+   }
+  ],
+  "digital": [
+   {
+    "ref": "cp.channel",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.ga4",
+    "step": 9,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.internship",
+    "step": 10,
+    "major": true,
+    "note": "제작사·MCN"
+   }
+  ]
+ }
+}

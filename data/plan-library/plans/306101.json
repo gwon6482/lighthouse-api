@@ -1,0 +1,101 @@
+{
+ "jobCode": "306101",
+ "title": "임상병리사",
+ "displayName": "임상병리사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "임상병리(학)과를 졸업하고 국가시험에 합격해 면허를 받아야 한다. 병원 외에 검진 센터·연구소로도 간다.",
+ "gate": "임상병리(학)과(3·4년제) 졸업 + 임상병리사 국가시험 합격(면허)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.mt-lab",
+   "name": "검사 분야별 실습 정리",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "혈액·화학·미생물·조직 검사의 절차와 정도 관리를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "분야",
+     "items": [
+      "진단혈액·수혈",
+      "임상화학·면역",
+      "미생물·조직 병리"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "관리",
+     "items": [
+      "정도 관리 개념",
+      "검체 취급과 채혈"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 임상병리(학)과에 다니고 있다",
+   "note": "임상병리(학)과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "의료 봉사",
+   "optional": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 4,
+   "major": true,
+   "note": "학과가 정한 실습"
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 6,
+   "major": true,
+   "note": "임상병리사 국가시험(필기·실기)"
+  },
+  {
+   "ref": "cp.hospital-apply",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "p.mt-lab",
+   "step": 5,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -33,39 +33,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.vd-basics",
-   "name": "디자인 기초(타이포·색·레이아웃)",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "book",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "타이포그래피·색·그리드 원리를 작업에 적용한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "원리",
-     "items": [
-      "타이포그래피 기본",
-      "색 이론·배색",
-      "그리드와 여백"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "연습",
-     "items": [
-      "포스터 따라 만들기 5개",
-      "같은 내용 다른 레이아웃",
-      "피드백 받기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.vd-bx",
    "name": "브랜드 아이덴티티 프로젝트",
    "type": "output",
@@ -282,7 +249,7 @@
    "major": true
   },
   {
-   "ref": "p.vd-basics",
+   "ref": "cp.design-basics",
    "step": 2,
    "major": false,
    "skip": "디자인 전공 기초 과목에서 배운다"

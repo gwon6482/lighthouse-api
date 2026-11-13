@@ -1,0 +1,144 @@
+{
+ "jobCode": "417102",
+ "title": "미디어콘텐츠창작자(크리에이터)",
+ "displayName": "크리에이터",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "자격이나 채용 절차가 없다. 주제를 정해 꾸준히 올리고 지표를 보며 고쳐 가는 것이 전부다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cr-concept",
+   "name": "채널 콘셉트와 시청자 정하기",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "누구에게 무엇을 줄지 한 문장으로 정한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "비슷한 채널 10개 분석",
+      "빈틈 찾기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "결정",
+     "items": [
+      "주제·형식·발행 주기",
+      "첫 10편 목록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cr-analytics",
+   "name": "채널 분석과 개선",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "조회·시청 지속·유입 지표를 읽고 다음 영상에 반영한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지표",
+     "items": [
+      "노출·클릭률·시청 지속 시간",
+      "유입 경로"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "개선",
+     "items": [
+      "제목·썸네일 실험",
+      "잘된 영상 요인 분석",
+      "월간 회고"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cr-business",
+   "name": "수익 구조와 저작권 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "수익 창출 조건과 광고·협찬 표시, 저작권 규칙을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "규칙",
+     "items": [
+      "수익 창출 조건",
+      "광고 표시 의무",
+      "음원·영상 저작권",
+      "세금 신고 기초"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "플랫폼 정책은 자주 바뀐다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.cr-concept",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.shooting-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.video-edit",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.adobe",
+   "step": 4,
+   "major": true,
+   "note": "썸네일",
+   "optional": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.cr-analytics",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.cr-business",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

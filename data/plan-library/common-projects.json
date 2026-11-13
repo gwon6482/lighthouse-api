@@ -4053,6 +4053,191 @@
     "edu"
    ],
    "promotedFrom": "232101:p.cc-curriculum"
+  },
+  {
+   "id": "cp.pharma-ra",
+   "name": "의약품 인허가 규정 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "허가 절차와 제출 자료의 구성을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "절차",
+     "items": [
+      "허가·신고 절차",
+      "국제 공통 기술 문서 구성",
+      "임상 단계"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "실무",
+     "items": [
+      "허가 사례 조사",
+      "규정 변경 추적 방법"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "eng",
+    "health"
+   ],
+   "promotedFrom": "154105:p.ph-ra"
+  },
+  {
+   "id": "cp.design-basics",
+   "name": "디자인 기초(타이포·색·레이아웃)",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "타이포그래피·색·그리드 원리를 작업에 적용한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "원리",
+     "items": [
+      "타이포그래피 기본",
+      "색 이론·배색",
+      "그리드와 여백"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연습",
+     "items": [
+      "포스터 따라 만들기 5개",
+      "같은 내용 다른 레이아웃",
+      "피드백 받기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "design",
+    "media"
+   ],
+   "promotedFrom": "415404:p.vd-basics"
+  },
+  {
+   "id": "cp.after-effects",
+   "name": "애프터 이펙트 기초",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "자막 모션과 간단한 효과를 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "키프레임·이징",
+      "텍스트 애니메이션",
+      "마스크·트래킹"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "적용",
+     "items": [
+      "인트로 3개",
+      "자막 템플릿 만들기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "media",
+    "design"
+   ],
+   "promotedFrom": "416601:p.ve-ae"
+  },
+  {
+   "id": "cp.shooting-basics",
+   "name": "촬영 기초",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 120,
+   "goal": "카메라·조명·마이크를 다뤄 편집하기 좋은 소스를 찍는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "장비",
+     "items": [
+      "노출·초점·프레임레이트",
+      "조명 기본 배치",
+      "마이크와 녹음"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "촬영",
+     "items": [
+      "인터뷰 촬영",
+      "브이로그 촬영",
+      "소스 정리 습관"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "media"
+   ],
+   "promotedFrom": "416601:p.ve-shoot"
+  },
+  {
+   "id": "cp.korean-lang-test",
+   "name": "KBS 한국어능력시험",
+   "type": "cert",
+   "subtype": "private-certified",
+   "scope": "family",
+   "families": [
+    "media"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "KBS 한국어능력시험에서 목표 등급을 받는다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "영역별",
+     "items": [
+      "어휘·어법",
+      "쓰기·읽기",
+      "듣기·국어 문화"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "기출",
+     "items": [
+      "기출 풀이",
+      "응시"
+     ]
+    }
+   ],
+   "verify": "언론사에 따라 지원 요건이거나 가점이다"
   }
  ]
 }

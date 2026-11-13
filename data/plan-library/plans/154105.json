@@ -192,38 +192,6 @@
    ],
    "basis": "practice",
    "verify": "연구개발 직무는 석사 이상을 요구하는 공고가 많다"
-  },
-  {
-   "id": "p.ph-ra",
-   "name": "의약품 인허가 규정 이해",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 60,
-   "goal": "허가 절차와 제출 자료의 구성을 설명한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "절차",
-     "items": [
-      "허가·신고 절차",
-      "국제 공통 기술 문서 구성",
-      "임상 단계"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "실무",
-     "items": [
-      "허가 사례 조사",
-      "규정 변경 추적 방법"
-     ]
-    }
-   ],
-   "basis": "practice"
   }
  ],
  "common": [
@@ -303,7 +271,7 @@
   ],
   "ra": [
    {
-    "ref": "p.ph-ra",
+    "ref": "cp.pharma-ra",
     "step": 4,
     "major": true
    },

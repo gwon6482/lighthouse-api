@@ -1,0 +1,191 @@
+{
+ "jobCode": "305001",
+ "title": "영양사",
+ "displayName": "영양사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "식품영양 관련 학과에서 정해진 과목과 현장실습을 이수하고 영양사 국가시험에 합격해야 한다.",
+ "gate": "식품영양 관련 학과 졸업(지정 과목·현장실습 이수) + 영양사 국가시험 합격(면허)",
+ "tracks": [
+  {
+   "id": "catering",
+   "name": "단체급식",
+   "desc": "학교·기업·병원 급식"
+  },
+  {
+   "id": "clinical",
+   "name": "임상영양",
+   "desc": "병원 영양 상담"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.nt-menu",
+   "name": "식단 작성과 급식 관리 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "대상에 맞는 식단을 짜고 발주·검수·위생 점검 흐름을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "식단",
+     "items": [
+      "영양 기준에 맞춘 식단 작성",
+      "원가·발주량 계산"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "관리",
+     "items": [
+      "검수·조리·배식 관리",
+      "위생 점검표",
+      "급식 일지"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.nt-sanitarian",
+   "name": "위생사 면허",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "위생사 국가시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 5,
+     "title": "과목",
+     "items": [
+      "공중보건·환경 위생",
+      "식품 위생·위생 곤충",
+      "관련 법규"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "기출",
+     "items": [
+      "기출 회독",
+      "실기 문제"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "응시자격은 관련 학과·과목 이수"
+  },
+  {
+   "id": "p.nt-clinical",
+   "name": "임상영양사 과정",
+   "type": "edu",
+   "subtype": "graduate",
+   "category": "knowledge",
+   "method": "school",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "임상영양사 교육과정과 실습을 마치고 자격시험에 응시한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "조사",
+     "items": [
+      "교육 기관과 요건 확인"
+     ]
+    },
+    {
+     "weeks": 40,
+     "title": "과정",
+     "items": [
+      "교육과정 이수",
+      "병원 실습",
+      "자격시험 준비"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "영양사 면허 + 지정 교육과정(대학원)과 실무 경력이 필요하다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 식품영양학과에 다니고 있다",
+   "note": "식품영양학과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.food-hygiene",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 4,
+   "major": true,
+   "note": "영양사 현장실습"
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 6,
+   "major": true,
+   "note": "영양사 국가시험"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "catering": [
+   {
+    "ref": "p.nt-menu",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "p.nt-sanitarian",
+    "step": 7,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "clinical": [
+   {
+    "ref": "cp.hospital-apply",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.nt-clinical",
+    "step": 10,
+    "major": true
+   }
+  ]
+ }
+}
