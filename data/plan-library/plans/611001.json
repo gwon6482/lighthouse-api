@@ -99,7 +99,7 @@
    "name": "실무교육과 등록",
    "type": "edu",
    "subtype": "required-course",
-   "category": "knowledge",
+   "category": "qualification",
    "method": "required_course",
    "level": "입문",
    "daysPerWeek": 5,
