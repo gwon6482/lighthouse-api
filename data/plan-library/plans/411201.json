@@ -1,0 +1,290 @@
+{
+ "jobCode": "411201",
+ "title": "번역가",
+ "displayName": "번역가",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 외국어와 한국어 글쓰기 실력을 샘플 번역으로 보여 주고 에이전시 테스트나 투고로 일을 얻는다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "book",
+   "name": "출판 번역",
+   "desc": "도서 번역"
+  },
+  {
+   "id": "video",
+   "name": "영상 번역",
+   "desc": "자막·더빙"
+  },
+  {
+   "id": "tech",
+   "name": "산업 번역",
+   "desc": "기술·법률·의료 문서"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.tl-practice",
+   "name": "번역 연습과 첨삭",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "study_group",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "매주 번역하고 첨삭을 받아 오역과 어색한 문장을 줄인다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "연습",
+     "items": [
+      "주 2건 번역",
+      "원문 대조 검토",
+      "첨삭 반영 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tl-cat",
+   "name": "번역 도구 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "번역 지원 도구로 용어집과 번역 메모리를 쓴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "도구",
+     "items": [
+      "번역 메모리·용어집",
+      "품질 검사 기능",
+      "납품 파일 형식"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tl-sample",
+   "name": "샘플 번역 포트폴리오",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "분야별 샘플 번역을 원문과 함께 정리한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "고르기",
+     "items": [
+      "분야별 원문 선정"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "번역",
+     "items": [
+      "분야별 3건씩",
+      "감수 받기",
+      "설명 붙여 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tl-apply",
+   "name": "에이전시 등록과 테스트 응시",
+   "type": "hiring",
+   "subtype": "coding",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "번역 회사에 지원해 테스트를 통과한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "번역 회사 목록",
+      "이력서와 샘플 제출"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "테스트",
+     "items": [
+      "테스트 번역 응시",
+      "요율·계약 조건 확인"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tl-book",
+   "name": "출판 기획서와 샘플 번역 투고",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "심화",
+   "daysPerWeek": 2,
+   "minutesPerSession": 120,
+   "goal": "번역하고 싶은 책의 기획서와 샘플을 출판사에 보낸다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "원서 선정과 판권 확인",
+      "기획서 작성"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "투고",
+     "items": [
+      "샘플 번역 30쪽",
+      "출판사 투고"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tl-sub",
+   "name": "자막 번역 규칙과 도구",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "글자 수·시간 제한에 맞춰 자막을 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "규칙",
+     "items": [
+      "자막 길이·시간 규칙",
+      "자막 도구 사용"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "작업",
+     "items": [
+      "영상 3편 자막 번역"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.tl-domain",
+   "name": "전문 분야 용어집 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "한 분야의 용어집과 문체 기준을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "분야",
+     "items": [
+      "분야 정하기",
+      "참고 문서 모으기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "구축",
+     "items": [
+      "용어 500개 정리",
+      "문서 3건 번역"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.second-language",
+   "step": 1,
+   "major": true,
+   "note": "번역 언어의 공인 성적"
+  },
+  {
+   "ref": "cp.writing",
+   "step": 2,
+   "major": true,
+   "note": "한국어 문장력"
+  },
+  {
+   "ref": "p.tl-practice",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.tl-cat",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.tl-sample",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.tl-apply",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "book": [
+   {
+    "ref": "p.tl-book",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "video": [
+   {
+    "ref": "p.tl-sub",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "tech": [
+   {
+    "ref": "p.tl-domain",
+    "step": 5,
+    "major": true
+   }
+  ]
+ }
+}

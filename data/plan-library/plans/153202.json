@@ -62,39 +62,6 @@
    "verify": "비전공자는 학위 과정(편입·대학원) 없이 엔지니어 직무로 가기 어렵다"
   },
   {
-   "id": "p.semi-process",
-   "name": "반도체 8대 공정 이해",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "lecture",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "웨이퍼에서 패키징까지 공정의 순서와 역할을 설명한다.",
-   "phases": [
-    {
-     "weeks": 3,
-     "title": "전공정",
-     "items": [
-      "산화·포토·식각",
-      "증착·이온주입",
-      "금속 배선"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "후공정과 산업",
-     "items": [
-      "테스트·패키징",
-      "메모리·파운드리 구조",
-      "기업별 사업 정리"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.semi-training",
    "name": "반도체 공정 실습 교육",
    "type": "edu",
@@ -317,7 +284,7 @@
    "skip": "전공 필수 과목에서 배운다"
   },
   {
-   "ref": "p.semi-process",
+   "ref": "cp.semi-process",
    "step": 2,
    "major": true
   },

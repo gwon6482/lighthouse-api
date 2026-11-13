@@ -1,0 +1,146 @@
+{
+ "jobCode": "550101",
+ "title": "요양보호사 및 간병인",
+ "displayName": "요양보호사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "지정 교육기관에서 양성 교육을 받고 자격시험에 합격해야 한다.",
+ "gate": "요양보호사 — 교육기관의 양성 과정(이론·실기·실습) 이수 + 자격시험 합격",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cg-course",
+   "name": "요양보호사 양성 교육",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "qualification",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "교육기관에서 이론·실기·현장 실습을 마친다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "등록",
+     "items": [
+      "교육기관 고르기",
+      "국비 지원 확인"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "교육",
+     "items": [
+      "요양보호 이론",
+      "신체·일상 지원 실기",
+      "시설·재가 현장 실습"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "교육 시간은 법령 개정으로 바뀌었다. 교육기관에서 현재 기준 확인"
+  },
+  {
+   "id": "p.cg-exam",
+   "name": "요양보호사 자격시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 60,
+   "goal": "자격시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "준비",
+     "items": [
+      "교재 정리",
+      "기출 문제 풀이",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.cg-care",
+   "name": "치매·만성질환 돌봄 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "치매 어르신 대응과 낙상·욕창 예방 방법을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "돌봄",
+     "items": [
+      "치매 증상별 대응",
+      "낙상·욕창 예방",
+      "기록지 작성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.training-course",
+   "step": 1,
+   "major": true,
+   "note": "국민내일배움카드 지원 과정",
+   "optional": true
+  },
+  {
+   "ref": "p.cg-course",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.cg-exam",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.cg-care",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 6,
+   "major": true,
+   "note": "방문 요양",
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 7,
+   "major": true,
+   "note": "요양 시설·재가 센터"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "자격 요건은 노인복지법 시행규칙이 정본"
+}

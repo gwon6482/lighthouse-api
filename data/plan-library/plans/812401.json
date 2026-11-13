@@ -12,30 +12,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.am-basics",
-   "name": "자동차 구조와 원리",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "book",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "엔진·변속기·제동·전기 장치의 구조와 작동을 설명한다.",
-   "phases": [
-    {
-     "weeks": 3,
-     "title": "구조",
-     "items": [
-      "엔진·동력 전달",
-      "제동·조향·현가",
-      "전기·전자 장치"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.am-diag",
    "name": "진단기 사용과 고장 진단",
    "type": "skill",
@@ -99,7 +75,7 @@
    "major": true
   },
   {
-   "ref": "p.am-basics",
+   "ref": "cp.car-basics",
    "step": 2,
    "major": false,
    "skip": "자동차 전공 과목에서 배운다"

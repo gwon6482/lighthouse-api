@@ -1,0 +1,82 @@
+{
+ "jobCode": "623002",
+ "title": "지게차운전원",
+ "displayName": "지게차 운전원",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "지게차운전기능사를 따고 건설기계 조종사 면허를 받아야 한다.",
+ "gate": "지게차운전기능사 + 건설기계 조종사 면허",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.fk-practice",
+   "name": "운전 숙련과 안전 수칙",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "좁은 통로 주행과 적재를 안전하게 한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "숙련",
+     "items": [
+      "코스 주행",
+      "적재·하역",
+      "일상 점검"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "안전",
+     "items": [
+      "작업장 안전 수칙",
+      "사고 사례"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.driver-license",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 2,
+   "major": true,
+   "note": "지게차운전기능사"
+  },
+  {
+   "ref": "cp.equipment-license",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.fk-practice",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 5,
+   "major": true,
+   "note": "물류센터·공장"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

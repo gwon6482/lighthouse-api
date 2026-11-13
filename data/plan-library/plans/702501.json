@@ -1,0 +1,114 @@
+{
+ "jobCode": "702501",
+ "title": "도배공",
+ "displayName": "도배사",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 기술을 배우고 현장 팀에서 보조로 시작해 실력으로 일을 얻는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.wp-skill",
+   "name": "도배 기술 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 240,
+   "goal": "벽지 재단·풀칠·시공을 혼자 해낸다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기초",
+     "items": [
+      "도구와 벽지 종류",
+      "바탕 처리"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "시공",
+     "items": [
+      "천장·벽 시공",
+      "모서리·창 주변 마감"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.wp-record",
+   "name": "시공 기록 남기기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 60,
+   "goal": "작업 전후 사진과 내용을 모아 알린다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "기록",
+     "items": [
+      "현장별 전후 사진",
+      "작업 내용 정리",
+      "온라인에 올리기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비 도배 과정",
+   "optional": true
+  },
+  {
+   "ref": "p.wp-skill",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 4,
+   "major": true,
+   "note": "도배기능사",
+   "optional": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 6,
+   "major": true,
+   "note": "도배 팀 보조"
+  },
+  {
+   "ref": "p.wp-record",
+   "step": 7,
+   "major": true,
+   "optional": true
+  }
+ ],
+ "byTrack": {}
+}

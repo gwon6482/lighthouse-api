@@ -1,0 +1,171 @@
+{
+ "jobCode": "024402",
+ "title": "공연·영화 및 음반기획자",
+ "displayName": "공연·엔터 기획자",
+ "family": "media",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 현장 경험과 직접 기획해 본 결과물로 들어가는 분야다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.pf-industry",
+   "name": "공연·엔터 산업 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "제작·투자·유통 구조와 저작권 기본을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "구조",
+     "items": [
+      "기획사·제작사·공연장 역할",
+      "티켓·수익 구조",
+      "저작권·초상권"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pf-plan",
+   "name": "공연 기획서 쓰기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "공연 하나의 기획서를 예산과 홍보 계획까지 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "콘셉트",
+     "items": [
+      "관객과 콘셉트",
+      "장소·출연진"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "계획",
+     "items": [
+      "예산과 손익분기",
+      "일정·홍보 계획"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pf-produce",
+   "name": "작은 공연·행사 직접 열기",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "team_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 150,
+   "goal": "소규모 공연이나 행사를 기획부터 정산까지 치른다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "팀과 장소 확보",
+      "예산"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실행",
+     "items": [
+      "섭외·홍보·예매",
+      "현장 운영"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정산",
+     "items": [
+      "정산과 회고"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.pf-industry",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.pf-plan",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 5,
+   "major": true,
+   "note": "예산표"
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 6,
+   "major": true,
+   "note": "공연장 안내·현장 스태프"
+  },
+  {
+   "ref": "p.pf-produce",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.channel",
+   "step": 8,
+   "major": true,
+   "note": "홍보 콘텐츠",
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 9,
+   "major": true,
+   "note": "기획사·공연장"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

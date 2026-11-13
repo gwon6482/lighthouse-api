@@ -4628,6 +4628,136 @@
     "edu"
    ],
    "promotedFrom": "231101:p.swy-youth"
+  },
+  {
+   "id": "cp.car-basics",
+   "name": "자동차 구조와 원리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "엔진·변속기·제동·전기 장치의 구조와 작동을 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "구조",
+     "items": [
+      "엔진·동력 전달",
+      "제동·조향·현가",
+      "전기·전자 장치"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "tech",
+    "eng"
+   ],
+   "promotedFrom": "812401:p.am-basics"
+  },
+  {
+   "id": "cp.semi-process",
+   "name": "반도체 8대 공정 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "웨이퍼에서 패키징까지 공정의 순서와 역할을 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "전공정",
+     "items": [
+      "산화·포토·식각",
+      "증착·이온주입",
+      "금속 배선"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "후공정과 산업",
+     "items": [
+      "테스트·패키징",
+      "메모리·파운드리 구조",
+      "기업별 사업 정리"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "eng",
+    "tech"
+   ],
+   "promotedFrom": "153202:p.semi-process"
+  },
+  {
+   "id": "cp.equipment-license",
+   "name": "건설기계 조종사 면허 발급",
+   "type": "cert",
+   "subtype": "national-license",
+   "scope": "family",
+   "families": [
+    "tech"
+   ],
+   "category": "qualification",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 60,
+   "goal": "자격 취득 뒤 건설기계 조종사 면허를 발급받는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "발급",
+     "items": [
+      "적성검사(신체검사)",
+      "시·군·구청 신청",
+      "면허증 수령"
+     ]
+    }
+   ],
+   "verify": "소형 건설기계는 교육 이수로 면허를 받는 길이 있다"
+  },
+  {
+   "id": "cp.plc",
+   "name": "PLC와 자동화 기초",
+   "type": "skill",
+   "subtype": "field",
+   "scope": "family",
+   "families": [
+    "tech",
+    "eng"
+   ],
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "PLC로 간단한 자동화 회로를 짜고 설비 신호를 읽는다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "릴레이·시퀀스 회로",
+      "PLC 래더 프로그램"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실습",
+     "items": [
+      "센서·실린더 제어",
+      "고장 신호 추적"
+     ]
+    }
+   ]
   }
  ]
 }

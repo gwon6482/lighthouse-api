@@ -1,0 +1,95 @@
+{
+ "jobCode": "704001",
+ "title": "건설 및 채굴기계운전원",
+ "displayName": "중장비 운전원",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "장비별 운전기능사를 따고 건설기계 조종사 면허를 받아야 한다. 굴착기가 가장 일반적이다.",
+ "gate": "건설기계 운전기능사(굴착기 등) + 건설기계 조종사 면허",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.he-practice",
+   "name": "장비 운전 숙련",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "굴착·상차·정지 작업을 안정적으로 한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "숙련",
+     "items": [
+      "기본 조작",
+      "굴착과 상차",
+      "지반 정리"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "안전",
+     "items": [
+      "신호수와 협업",
+      "전도·협착 예방"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.driver-license",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 2,
+   "major": true,
+   "note": "국비 중장비 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 3,
+   "major": true,
+   "note": "굴착기운전기능사"
+  },
+  {
+   "ref": "cp.equipment-license",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.he-practice",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.safety-law",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 7,
+   "major": true,
+   "note": "건설 현장·장비 업체"
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

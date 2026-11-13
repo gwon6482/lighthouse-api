@@ -1,0 +1,142 @@
+{
+ "jobCode": "413201",
+ "title": "사서",
+ "displayName": "사서",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "사서 자격증이 필요하다. 문헌정보학을 전공해 정사서 2급을 받는 길이 일반적이고, 공공도서관은 사서직 공무원 시험으로 간다.",
+ "gate": "사서 자격증(정사서 2급 — 문헌정보학 전공 학사 등)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.lb-practice",
+   "name": "도서관 현장 실습",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "도서관에서 수서·정리·열람 업무를 해 본다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "실습 도서관 정하기"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "자료 정리(분류·목록)",
+      "이용자 응대",
+      "프로그램 운영 보조"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.lb-civil",
+   "name": "사서직 공무원 전문과목",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "자료조직개론과 정보봉사개론에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "기본 이론",
+     "items": [
+      "자료조직개론",
+      "정보봉사개론"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출",
+     "items": [
+      "기출 회독",
+      "분류·목록 규칙 암기"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실전",
+     "items": [
+      "모의고사"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "과목은 연도·지역에 따라 바뀐다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 문헌정보학과에 다니고 있다",
+   "note": "문헌정보학과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "도서관 봉사",
+   "optional": true
+  },
+  {
+   "ref": "p.lb-practice",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.computer-2",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.civil9-common",
+   "step": 6,
+   "major": true,
+   "note": "공공도서관 사서직 공무원",
+   "optional": true
+  },
+  {
+   "ref": "p.lb-civil",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "자격 요건은 도서관법 시행령이 정본"
+}

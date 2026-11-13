@@ -1,0 +1,290 @@
+{
+ "jobCode": "621101",
+ "title": "항공기조종사",
+ "displayName": "항공기 조종사",
+ "family": "transport",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "조종사 자격증명(자가용→계기→사업용)과 항공 신체검사, 항공 영어 등급이 필요하다. 그 뒤 비행 시간을 쌓아 항공사에 지원한다.",
+ "gate": "사업용 조종사 자격증명 + 계기비행증명 + 항공신체검사증명 + 항공영어구술능력증명",
+ "tracks": [
+  {
+   "id": "univ",
+   "name": "항공운항학과",
+   "desc": "대학 과정"
+  },
+  {
+   "id": "academy",
+   "name": "비행교육원",
+   "desc": "국내·해외 비행 훈련"
+  },
+  {
+   "id": "military",
+   "name": "군 조종사",
+   "desc": "공군·해군 조종 장교"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.fly-medical",
+   "name": "항공 신체검사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 120,
+   "goal": "항공 신체검사 기준을 통과한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "검사",
+     "items": [
+      "지정 병원 예약",
+      "검사",
+      "증명 발급"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "교육 시작 전에 먼저 확인하는 것이 안전하다"
+  },
+  {
+   "id": "p.fly-license",
+   "name": "조종사 자격증명 따기",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "academy",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 300,
+   "goal": "자가용·계기·사업용 자격을 차례로 딴다.",
+   "phases": [
+    {
+     "weeks": 16,
+     "title": "자가용",
+     "items": [
+      "학과 시험",
+      "비행 훈련",
+      "실기 시험"
+     ]
+    },
+    {
+     "weeks": 36,
+     "title": "계기·사업용",
+     "items": [
+      "계기 비행 훈련",
+      "사업용 훈련",
+      "학과·실기 시험"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "필요 비행 시간과 비용이 크다. 교육 기관별로 비교할 것"
+  },
+  {
+   "id": "p.fly-epta",
+   "name": "항공영어구술능력증명",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "항공영어 구술 능력에서 필요 등급을 받는다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "준비",
+     "items": [
+      "항공 교신 표현",
+      "듣기·말하기 연습",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.fly-hours",
+   "name": "비행 시간 쌓기",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "etc",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 300,
+   "goal": "항공사 지원 기준 비행 시간을 채운다.",
+   "phases": [
+    {
+     "weeks": 50,
+     "title": "경력",
+     "items": [
+      "비행 교관 자격·근무",
+      "비행 기록 관리"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "기준 시간은 항공사마다 다르다"
+  },
+  {
+   "id": "p.fly-airline",
+   "name": "항공사 채용 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "필기·시뮬레이터 평가·면접에 대비한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "전형",
+     "items": [
+      "항공사별 전형 확인"
+     ]
+    },
+    {
+     "weeks": 5,
+     "title": "준비",
+     "items": [
+      "항공 지식 필기",
+      "시뮬레이터 연습",
+      "면접"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fly-academy",
+   "name": "비행교육원 과정",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "국내외 비행교육원에서 훈련 과정을 마친다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "선택",
+     "items": [
+      "교육원·비용·기간 비교"
+     ]
+    },
+    {
+     "weeks": 50,
+     "title": "훈련",
+     "items": [
+      "지상 학술 교육",
+      "비행 훈련"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fly-military",
+   "name": "군 조종 장교 선발",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "etc",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "군 조종 분야 선발 과정에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "경로",
+     "items": [
+      "사관학교·학군·조종 장학생 비교"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "준비",
+     "items": [
+      "필기·체력",
+      "신체검사·적성검사",
+      "면접"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "의무 복무 기간이 길다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.fly-medical",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 3,
+   "major": true,
+   "note": "항공사 지원 기준"
+  },
+  {
+   "ref": "p.fly-license",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.fly-epta",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.fly-hours",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "p.fly-airline",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "univ": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 2,
+    "major": false,
+    "skip": "이미 항공운항학과에 다니고 있다",
+    "note": "항공운항학과"
+   }
+  ],
+  "academy": [
+   {
+    "ref": "p.fly-academy",
+    "step": 2,
+    "major": true
+   }
+  ],
+  "military": [
+   {
+    "ref": "p.fly-military",
+    "step": 2,
+    "major": true
+   }
+  ]
+ },
+ "verify": "자격 요건은 항공안전법이 정본"
+}

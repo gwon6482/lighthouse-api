@@ -1,0 +1,149 @@
+{
+ "jobCode": "811101",
+ "title": "공업기계설치 및 정비원",
+ "displayName": "설비보전 기술자",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 설비보전·기계정비 자격이 기본 증빙이다. 기계·전기·자동화를 두루 다루는 힘을 기른다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.mt-basics",
+   "name": "기계 요소와 유공압 기초",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "베어링·기어 같은 기계 요소와 유공압 회로를 이해한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기계",
+     "items": [
+      "기계 요소와 윤활",
+      "분해·조립 순서"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "유공압",
+     "items": [
+      "공압·유압 기호",
+      "회로 구성 실습"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mt-maint",
+   "name": "설비 보전 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 180,
+   "goal": "설비를 점검하고 고장 원인을 찾아 고친다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "점검",
+     "items": [
+      "일상·정기 점검",
+      "진동·온도 진단"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "정비",
+     "items": [
+      "축 정렬",
+      "고장 탐구",
+      "정비 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.mt-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 4,
+   "major": true,
+   "note": "폴리텍·국비 과정",
+   "optional": true
+  },
+  {
+   "ref": "p.mt-maint",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.plc",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 7,
+   "major": true,
+   "note": "설비보전기능사"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 8,
+   "major": true,
+   "note": "기계정비산업기사·설비보전기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 10,
+   "major": true,
+   "note": "대기업 생산기술직",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 11,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 12,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

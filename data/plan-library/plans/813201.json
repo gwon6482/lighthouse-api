@@ -1,0 +1,143 @@
+{
+ "jobCode": "813201",
+ "title": "금속공작기계조작원",
+ "displayName": "CNC·MCT 가공 기술자",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 컴퓨터응용 선반·밀링 기능사가 기본 증빙이다. 도면을 읽고 프로그램을 짜서 가공하는 실력을 쌓는다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cn-basics",
+   "name": "절삭 가공 기초와 측정",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "선반·밀링의 가공 원리와 공구, 측정 방법을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "가공",
+     "items": [
+      "선반·밀링 원리",
+      "공구와 절삭 조건"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "측정",
+     "items": [
+      "측정기 사용",
+      "공차 판정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cn-program",
+   "name": "CNC 프로그램과 CAM",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 180,
+   "goal": "G코드를 짜고 CAM으로 가공 경로를 만든다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "프로그램",
+     "items": [
+      "G코드·M코드",
+      "좌표계와 보정",
+      "시뮬레이션"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "가공",
+     "items": [
+      "CAM 경로 생성",
+      "실제 가공과 치수 확인"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.cn-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 4,
+   "major": true,
+   "note": "폴리텍·국비 가공 과정",
+   "optional": true
+  },
+  {
+   "ref": "p.cn-program",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.craftsman-cert",
+   "step": 6,
+   "major": true,
+   "note": "컴퓨터응용선반·밀링기능사"
+  },
+  {
+   "ref": "cp.cad-3d",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 8,
+   "major": true,
+   "note": "가공 업체"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 9,
+   "major": true,
+   "note": "컴퓨터응용가공산업기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

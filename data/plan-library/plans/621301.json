@@ -1,0 +1,148 @@
+{
+ "jobCode": "621301",
+ "title": "철도·전동차기관사",
+ "displayName": "철도 기관사",
+ "family": "transport",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "철도차량 운전면허가 필요하다. 교육훈련기관 과정을 마치고 면허 시험에 합격한 뒤 운영 기관 채용에 지원한다.",
+ "gate": "철도차량 운전면허(신체·적성검사 + 교육훈련 이수 + 필기·기능 시험)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.rw-check",
+   "name": "신체검사와 적성검사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 120,
+   "goal": "운전면허 요건인 신체검사와 적성검사를 통과한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "검사",
+     "items": [
+      "지정 기관 예약",
+      "검사",
+      "판정서 발급"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.rw-training",
+   "name": "운전 교육훈련기관 과정",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "면허 종류에 맞는 교육훈련을 이수한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "선발",
+     "items": [
+      "교육기관 입교 시험",
+      "면허 종류 정하기"
+     ]
+    },
+    {
+     "weeks": 16,
+     "title": "훈련",
+     "items": [
+      "이론 교육",
+      "기능 교육(모의·실차)"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "입교 경쟁이 있고 교육비가 든다"
+  },
+  {
+   "id": "p.rw-license",
+   "name": "철도차량 운전면허 시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "필기와 기능 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "철도 관련 법·시스템",
+      "운전 이론"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기능",
+     "items": [
+      "기능 시험 준비",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.rw-check",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.rw-training",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.rw-license",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.ncs",
+   "step": 6,
+   "major": true,
+   "note": "운영 기관 필기"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "면허 요건은 철도안전법이 정본"
+}
