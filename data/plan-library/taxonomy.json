@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-11-13",
- "note": "사용자가 준 분류(2026-11-13). 보편 프로젝트와 직업별 프로젝트가 모두 이 분류를 쓴다. category 는 앱 진로설계의 5개 영역(config/projectMethods.js)으로 옮길 때의 기본값 — ⑥⑦은 앱 영역과 딱 맞지 않아 항목마다 따로 정한다",
+ "note": "사용자가 준 분류(2026-11-13). 보편 프로젝트와 직업별 프로젝트가 모두 이 분류를 쓴다. category 는 앱 진로설계의 5개 영역(config/projectMethods.js)으로 옮길 때의 기본값 — ⑥⑦은 앱 영역과 딱 맞지 않아 항목마다 따로 정한다 / bundles(계열별 조합): 앞의 12계열은 사용자 예시를 따라 처음에 정한 것, 서비스·영업·전문자격·연구·운송·농업 6계열과 기술·기능 보강분은 계획 279개에서 많이 쓰인 순으로 골랐다(2026-11-13). 전문자격은 시험이 자격마다 달라 함께 쓰는 것이 공인 영어 성적뿐이다",
  "types": [
   {
    "id": "cert",
@@ -206,7 +206,49 @@
   ],
   "tech": [
    "cp.craftsman-cert",
-   "cp.training-course"
+   "cp.training-course",
+   "cp.shop-work",
+   "cp.drawing-reading",
+   "cp.driver-license"
+  ],
+  "service": [
+   "cp.customer-service",
+   "cp.parttime",
+   "cp.craftsman-cert",
+   "cp.shop-work",
+   "cp.speaking"
+  ],
+  "sales": [
+   "cp.sales-basics",
+   "cp.customer-service",
+   "cp.parttime",
+   "cp.driver-license",
+   "cp.excel-data"
+  ],
+  "pro": [
+   "cp.toeic"
+  ],
+  "research": [
+   "cp.eng-major",
+   "cp.lab-grad",
+   "cp.paper-reading",
+   "cp.stats",
+   "cp.toeic"
+  ],
+  "transport": [
+   "cp.driver-license",
+   "cp.toeic",
+   "cp.ncs",
+   "cp.korean-history",
+   "cp.cargo-license"
+  ],
+  "agri": [
+   "cp.farm-explore",
+   "cp.farm-edu",
+   "cp.farm-practice",
+   "cp.farm-plan",
+   "cp.craftsman-cert",
+   "cp.driver-license"
   ]
  }
 }

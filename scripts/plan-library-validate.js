@@ -3,6 +3,7 @@
 // 보는 것: id 중복, 분류(type·subtype)·계열·영역·진행 방식, 주차(1 이상)·할 일(1~4개), ref 가 가리키는 프로젝트의 존재,
 //         세부 카테고리 id 가 priority-jobs.json 과 같은지, 전공자 제외 항목에 이유(skip)가 있는지
 //         계열 공통 보편 프로젝트의 families 가 그것을 쓰는 계획의 계열을 담고 있는지
+//         세부 카테고리 가운데 내용이 빈 것이 둘 이상인지(카테고리끼리 계획이 같아진다)
 const fs = require('fs');
 const path = require('path');
 const { CATEGORIES, METHODS_BY_CATEGORY } = require('../config/projectMethods');
@@ -74,6 +75,9 @@ for (const f of planFiles) {
   }
   const trackIds = pj.tracks.map((t) => t.id);
   if (JSON.stringify(Object.keys(plan.byTrack).sort()) !== JSON.stringify([...trackIds].sort())) err(w, '세부 카테고리가 우선순위 목록과 다름');
+  // 세부 카테고리를 나눴으면 카테고리마다 다른 항목이 있어야 한다. 비어도 되는 것은 '기본 경로' 하나뿐
+  const emptyTracks = Object.entries(plan.byTrack).filter(([, items]) => !items.length).map(([t]) => t);
+  if (emptyTracks.length > 1) err(w, `내용이 같은 세부 카테고리가 둘 이상(${emptyTracks.join('·')})`);
   const resolve = (it) => (it.ref.startsWith('cp.') ? cp.get(it.ref) : local.get(it.ref));
   const used = new Set();
   const checkItems = (label, items) => {
