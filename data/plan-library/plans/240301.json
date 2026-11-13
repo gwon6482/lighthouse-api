@@ -1,0 +1,85 @@
+{
+ "jobCode": "240301",
+ "title": "교도관",
+ "displayName": "교정직 공무원",
+ "family": "public",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "교정직 공무원은 공개경쟁채용 시험으로 뽑고 체력 검사가 있다.",
+ "gate": "교정직 공무원 공채 시험 합격(필기·체력·면접)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.major",
+   "name": "교정직 전문과목",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "전문과목에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 10,
+     "title": "기본 이론",
+     "items": [
+      "교정학개론",
+      "형사소송법개론",
+      "단원별 문제"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "기출 3회독",
+      "법령·판례 정리",
+      "오답 노트"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.civil-pick",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.civil9-common",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.major",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.fitness-test",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.civil-interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "시험 과목·응시 요건은 채용 공고가 정본. 과목은 직렬·연도에 따라 바뀐다"
+}

@@ -1,0 +1,64 @@
+{
+ "jobCode": "301301",
+ "title": "한의사",
+ "displayName": "한의사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "한의과대학을 졸업하고 한의사 국가시험에 합격해 면허를 받는다.",
+ "gate": "한의과대학(6년) 졸업 + 한의사 국가시험 합격(면허)",
+ "tracks": [],
+ "covers": [],
+ "projects": [],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 한의과대학에 다니고 있다",
+   "note": "한의과대학"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "분야 관련 봉사",
+   "optional": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 4,
+   "major": true,
+   "note": "학과가 정한 실습"
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 6,
+   "major": true,
+   "note": "한의사 국가시험"
+  },
+  {
+   "ref": "cp.hospital-apply",
+   "step": 7,
+   "major": true,
+   "note": "병·의원 채용 준비"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

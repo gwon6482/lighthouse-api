@@ -1,0 +1,103 @@
+{
+ "jobCode": "025101",
+ "title": "조세행정사무원",
+ "displayName": "세무·관세직 공무원",
+ "family": "public",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "세무직·관세직 공무원은 공개경쟁채용 시험으로 뽑는다. 공통과목에 직렬 전문과목이 더해진다.",
+ "gate": "세무직·관세직 공무원 공채 시험 합격",
+ "tracks": [],
+ "covers": [
+  {
+   "jobCode": "025201",
+   "title": "관세행정사무원",
+   "track": null
+  },
+  {
+   "jobCode": "025301",
+   "title": "병무행정사무원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.major",
+   "name": "세무·관세직 전문과목",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "전문과목에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 10,
+     "title": "기본 이론",
+     "items": [
+      "세무직 — 세법개론·회계학",
+      "관세직 — 관세법개론·회계원리",
+      "단원별 문제"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "기출 3회독",
+      "법령·판례 정리",
+      "오답 노트"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.civil-pick",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.civil9-common",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.major",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.fitness-test",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.accounting-basic",
+   "step": 2.5,
+   "major": true,
+   "note": "회계 기초를 먼저 잡을 때",
+   "optional": true
+  },
+  {
+   "ref": "cp.civil-interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "시험 과목·응시 요건은 채용 공고가 정본. 과목은 직렬·연도에 따라 바뀐다"
+}

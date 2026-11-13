@@ -1,0 +1,147 @@
+{
+ "jobCode": "029202",
+ "title": "의료코디네이터",
+ "displayName": "병원 코디네이터",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 병원 접수·상담·예약 관리가 주 업무라 응대 능력과 의료 용어, 보험 청구 이해를 갖춘다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.mc-terms",
+   "name": "의료 용어와 진료 과정 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "진료과별 기본 용어와 진료 흐름을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "용어",
+     "items": [
+      "진료과별 기본 용어",
+      "검사·시술 이름"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "흐름",
+     "items": [
+      "접수부터 수납까지",
+      "개인정보 보호 수칙"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mc-consult",
+   "name": "상담과 예약 관리 연습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "초진 상담과 예약·재방문 관리를 한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "상담",
+     "items": [
+      "상담 대화 틀",
+      "비용 안내",
+      "불만 응대"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mc-cert",
+   "name": "병원 코디네이터 자격",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "병원 코디네이터 민간자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "준비",
+     "items": [
+      "이론",
+      "기출",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간자격이라 발급 기관이 여럿이다. 필수는 아니다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.mc-terms",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.mc-consult",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.computer-2",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.mc-cert",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 7,
+   "major": true,
+   "note": "병·의원 데스크 근무",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,148 @@
+{
+ "jobCode": "031501",
+ "title": "손해사정사",
+ "displayName": "손해사정사",
+ "family": "finance",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "손해사정사 시험(1차·2차)에 합격하고 실무수습을 마쳐야 한다. 재물·차량·신체로 종목이 나뉜다.",
+ "gate": "손해사정사 시험 합격 + 실무수습. 영어는 공인 성적으로 대체",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.first",
+   "name": "손해사정사 1차 시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 240,
+   "goal": "1차 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 9,
+     "title": "기본 이론",
+     "items": [
+      "보험업법",
+      "보험계약법",
+      "손해사정 이론"
+     ]
+    },
+    {
+     "weeks": 5,
+     "title": "문제 풀이",
+     "items": [
+      "객관식 기출 회독",
+      "과락 과목 보강",
+      "모의고사"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.second",
+   "name": "손해사정사 2차 시험",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 300,
+   "goal": "2차 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "심화 이론",
+     "items": [
+      "종목별 손해사정 실무",
+      "책임·보상 관련 법",
+      "의학 이론(신체)"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "답안 연습",
+     "items": [
+      "서술형 답안 작성",
+      "기출 회독",
+      "모의고사"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.train",
+   "name": "손해사정사 실무 수습과 등록",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "수습·연수를 마치고 등록한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "수습 기관 찾기",
+      "면접"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "수습",
+     "items": [
+      "손해사정 법인 수습",
+      "사고 조사와 손해액 산정"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "수습 기간과 방식은 자격별 협회 안내 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.toeic",
+   "step": 1,
+   "major": true,
+   "note": "공인 영어 성적이 응시 요건(기준 점수는 공고 확인)"
+  },
+  {
+   "ref": "p.first",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.second",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.train",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "시험 과목·응시 요건은 보험개발원 공고가 정본. 과목 구성은 바뀔 수 있다"
+}

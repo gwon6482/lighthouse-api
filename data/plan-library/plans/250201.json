@@ -1,0 +1,123 @@
+{
+ "jobCode": "250201",
+ "title": "위관급 장교",
+ "displayName": "군 장교",
+ "family": "public",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "사관학교, 학군단(ROTC), 학사장교, 3사관학교 등 경로별 선발을 거쳐 임관한다.",
+ "gate": "장교 양성 과정 선발 + 임관",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.of-route",
+   "name": "임관 경로 정하기",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "내게 맞는 양성 과정과 군·병과를 정한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "비교",
+     "items": [
+      "사관학교·학군단·학사장교 비교",
+      "의무 복무 기간 확인"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "결정",
+     "items": [
+      "지원 일정 정리",
+      "준비 계획"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.of-select",
+   "name": "선발 시험 준비",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "필기 평가와 면접에 대비한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "필기",
+     "items": [
+      "지적 능력 평가",
+      "국사·상황 판단 등"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "면접",
+     "items": [
+      "국가관·리더십 답변",
+      "토론 면접"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "평가 구성은 과정마다 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.of-route",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true,
+   "note": "대학 성적이 선발에 반영되는 과정이 있다",
+   "optional": true
+  },
+  {
+   "ref": "p.of-select",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 4,
+   "major": true,
+   "note": "가점",
+   "optional": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 5,
+   "major": true,
+   "note": "가점",
+   "optional": true
+  },
+  {
+   "ref": "cp.fitness-test",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.civil-interview",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "선발 기준은 각 군 모집 공고가 정본"
+}

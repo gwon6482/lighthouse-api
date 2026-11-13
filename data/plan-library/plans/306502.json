@@ -1,0 +1,102 @@
+{
+ "jobCode": "306502",
+ "title": "작업치료사",
+ "displayName": "작업치료사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "작업치료(학)과를 졸업하고 국가시험에 합격해 면허를 받아야 한다.",
+ "gate": "작업치료(학)과(3·4년제) 졸업 + 작업치료사 국가시험 합격(면허)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ot-skills",
+   "name": "작업 수행 평가와 중재 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "일상생활 동작 평가와 치료 활동 설계를 해낸다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "평가",
+     "items": [
+      "평가 도구 익히기",
+      "사례 평가서 작성"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "중재",
+     "items": [
+      "활동 분석",
+      "치료 계획 세우기",
+      "보조 도구 적용"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 작업치료(학)과에 다니고 있다",
+   "note": "작업치료(학)과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "분야 관련 봉사",
+   "optional": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 4,
+   "major": true,
+   "note": "학과가 정한 실습"
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 6,
+   "major": true,
+   "note": "작업치료사 국가시험(필기·실기)"
+  },
+  {
+   "ref": "cp.hospital-apply",
+   "step": 7,
+   "major": true,
+   "note": "병·의원 채용 준비"
+  },
+  {
+   "ref": "p.ot-skills",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

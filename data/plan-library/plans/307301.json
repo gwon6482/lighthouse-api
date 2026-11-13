@@ -1,0 +1,106 @@
+{
+ "jobCode": "307301",
+ "title": "안경사",
+ "displayName": "안경사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "안경광학과를 졸업하고 국가시험에 합격해 면허를 받아야 한다.",
+ "gate": "안경광학과(3·4년제) 졸업 + 안경사 국가시험 합격(면허)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.op-skills",
+   "name": "시력 검사와 조제 가공 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "굴절 검사를 하고 안경을 가공·피팅한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "검사",
+     "items": [
+      "굴절 검사",
+      "콘택트렌즈 처방"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "가공",
+     "items": [
+      "렌즈 가공",
+      "피팅"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 안경광학과에 다니고 있다",
+   "note": "안경광학과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "분야 관련 봉사",
+   "optional": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 4,
+   "major": true,
+   "note": "학과가 정한 실습"
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 6,
+   "major": true,
+   "note": "안경사 국가시험(필기·실기)"
+  },
+  {
+   "ref": "p.op-skills",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.shop-work",
+   "step": 8,
+   "major": true,
+   "note": "안경원"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 90,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 91,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}
