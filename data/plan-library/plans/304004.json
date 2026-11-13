@@ -1,0 +1,441 @@
+{
+ "jobCode": "304004",
+ "title": "간호사",
+ "displayName": "간호사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "간호학과를 졸업하고 간호사 국가시험에 합격해야 한다. 학과 과정과 임상실습, 국가시험이 뼈대이고 병원 채용 준비가 그 위에 얹힌다.",
+ "gate": "간호학과(4년제·전문대 4년 과정) 졸업 + 간호사 국가시험 합격(면허)",
+ "tracks": [
+  {
+   "id": "ward",
+   "name": "병동",
+   "desc": "일반 병동 입원 환자 간호"
+  },
+  {
+   "id": "special",
+   "name": "특수파트",
+   "desc": "중환자실·응급실·수술실"
+  },
+  {
+   "id": "community",
+   "name": "보건·산업 간호",
+   "desc": "보건소·기업 보건관리"
+  },
+  {
+   "id": "school",
+   "name": "보건교사",
+   "desc": "교직이수 + 임용"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "304003",
+   "title": "보건교사",
+   "track": "school"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.nurse-admission",
+   "name": "간호학과 진학(입시·편입)",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 180,
+   "goal": "간호학과에 입학하거나 편입한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "경로 정하기",
+     "items": [
+      "신입학·편입·학사편입 비교",
+      "지원 대학 요건 확인",
+      "일정 정리"
+     ]
+    },
+    {
+     "weeks": 20,
+     "title": "준비",
+     "items": [
+      "전형별 시험 과목 공부",
+      "성적·어학 관리",
+      "면접 준비"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "지원",
+     "items": [
+      "원서 접수",
+      "면접",
+      "등록"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "전형 요소는 대학마다 다르다"
+  },
+  {
+   "id": "p.nurse-courses",
+   "name": "전공 성적 관리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "기본간호학·성인간호학 등 전공 과목에서 병원 지원에 필요한 성적을 유지한다.",
+   "phases": [
+    {
+     "weeks": 15,
+     "title": "학기 중",
+     "items": [
+      "수업 뒤 당일 복습",
+      "실습 전 이론 정리",
+      "시험 2주 전 회독"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "학기 말",
+     "items": [
+      "성적 확인",
+      "부족한 과목 보완 계획",
+      "다음 학기 수강 계획"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "note": "매 학기 반복한다"
+  },
+  {
+   "id": "p.nurse-apply",
+   "name": "병원 채용 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "지원할 병원의 전형 일정과 기준을 정리하고 서류·면접을 준비한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "병원 고르기",
+     "items": [
+      "병원별 채용 시기·전형 조사",
+      "성적·어학 기준 확인",
+      "지원 목록 만들기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "전형 준비",
+     "items": [
+      "병원별 자기소개서",
+      "인성·직무 면접 답변",
+      "간호 지식·술기 질문 대비"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "대학병원은 졸업 전 해에 채용하는 곳이 많다"
+  },
+  {
+   "id": "p.nw-skills",
+   "name": "핵심 기본간호술 복습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "활력징후·투약·정맥주사 등 핵심 술기를 순서대로 해낸다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "목록 정리",
+     "items": [
+      "핵심 술기 목록 확인",
+      "프로토콜 정리",
+      "체크리스트 만들기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "반복 연습",
+     "items": [
+      "실습실에서 반복",
+      "동료와 서로 평가",
+      "자주 틀리는 단계 교정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ns-als",
+   "name": "전문 소생술 과정(KALS·ACLS)",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "academy",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 480,
+   "goal": "전문 심장소생술 과정을 수료한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "수료",
+     "items": [
+      "사전 학습(심전도·약물)",
+      "이론·실기 교육",
+      "평가 후 수료증"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "BLS 수료가 먼저 필요하다. 필수는 아니고 특수파트 지원 때 도움이 된다"
+  },
+  {
+   "id": "p.ns-study",
+   "name": "중환자·응급 간호 지식 정리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "심전도·인공호흡기·중증도 분류의 기본을 설명할 수 있다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "중환자",
+     "items": [
+      "심전도 판독 기초",
+      "인공호흡기 기본 설정",
+      "주요 약물"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "응급·수술",
+     "items": [
+      "중증도 분류(KTAS)",
+      "응급 처치 흐름",
+      "수술실 무균술·기구"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.nc-civil",
+   "name": "간호직·보건직 공무원 시험",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "간호직(8급) 또는 보건직 공무원 필기에 합격한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "기본 이론",
+     "items": [
+      "공통과목 강의",
+      "간호관리·지역사회간호",
+      "보건 관련 법규"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "과목별 기출",
+      "오답 정리",
+      "법규 암기"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "면접 준비",
+      "지역별 공고 확인"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "과목·채용 인원은 지역과 연도에 따라 다르다"
+  },
+  {
+   "id": "p.nc-industry",
+   "name": "산업간호(보건관리자) 준비",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "산업안전보건법과 사업장 보건관리 업무를 이해한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "제도",
+     "items": [
+      "산업안전보건법 기본",
+      "보건관리자 선임 기준",
+      "건강검진·작업환경 관리"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실무",
+     "items": [
+      "직무 스트레스·근골격계 관리",
+      "보건 교육 자료 만들기",
+      "채용 공고 분석"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "임상 경력을 요구하는 공고가 많다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.nurse-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 간호학과에 다니고 있다"
+  },
+  {
+   "ref": "p.nurse-courses",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "의료 봉사",
+   "optional": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 5,
+   "major": true,
+   "note": "간호학과 임상실습 1,000시간 이상"
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 6,
+   "major": true,
+   "note": "대학병원에 지원할 때",
+   "optional": true
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 9,
+   "major": true,
+   "note": "간호사 국가시험"
+  },
+  {
+   "ref": "p.nurse-apply",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 11,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 12,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "ward": [
+   {
+    "ref": "p.nw-skills",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "special": [
+   {
+    "ref": "p.nw-skills",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.ns-als",
+    "step": 7.5,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.ns-study",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "community": [
+   {
+    "ref": "p.nc-industry",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.nc-civil",
+    "step": 9.5,
+    "major": true,
+    "note": "보건소·공공기관으로 갈 때",
+    "optional": true
+   }
+  ],
+  "school": [
+   {
+    "ref": "cp.teaching-course",
+    "step": 2.5,
+    "major": true,
+    "note": "간호학과 안에서 성적순으로 뽑는다"
+   },
+   {
+    "ref": "cp.teacher-exam",
+    "step": 9.5,
+    "major": true,
+    "note": "보건교사 임용 — 교육학 + 간호학"
+   },
+   {
+    "ref": "cp.teaching-demo",
+    "step": 9.7,
+    "major": true
+   }
+  ]
+ },
+ "verify": "면허는 보건복지부 장관이 발급한다. 응시자격·실습 시간은 국시원과 학교 규정 확인"
+}

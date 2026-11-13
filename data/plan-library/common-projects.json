@@ -1,0 +1,2726 @@
+{
+ "updatedAt": "2026-11-13",
+ "status": "draft",
+ "note": "여러 직업이 함께 쓰는 프로젝트(보편 프로젝트). 직업 계획(plans/*.json)은 여기 id 를 ref 로 가리킨다. Claude 가 일반 지식으로 쓴 초안 — verify 는 바뀌기 쉬운 사실이라 확인이 필요한 곳. 직업 계획을 만들다가 두 직업 이상에 겹치는 프로젝트가 보이면 여기로 올린다",
+ "items": [
+  {
+   "id": "cp.toeic",
+   "name": "토익 목표 점수 만들기",
+   "type": "cert",
+   "subtype": "language",
+   "scope": "all",
+   "families": [],
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 60,
+   "goal": "지원하려는 곳의 기준 점수를 넘는 토익 성적을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "진단과 목표 정하기",
+     "items": [
+      "모의고사 1회로 현재 점수 확인",
+      "지원할 곳의 기준 점수 조사",
+      "시험 날짜 정하고 접수"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "파트별 학습",
+     "items": [
+      "LC 파트별 유형 정리",
+      "RC 문법·어휘 정리",
+      "매일 단어 50개 암기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "실전 모의고사",
+     "items": [
+      "주 2회 실전 모의고사",
+      "틀린 유형만 다시 풀기",
+      "시간 배분 연습"
+     ]
+    }
+   ],
+   "options": [
+    "700점대 — 일반 사무",
+    "800점대 — 대기업·공기업",
+    "900점대 — 해외·외국계"
+   ],
+   "verify": "기준 점수는 기업·직렬마다 다르다. 공무원은 영어 과목을 토익으로 대체하는 시험이 있다(7급 등)"
+  },
+  {
+   "id": "cp.speaking",
+   "name": "영어 말하기 성적(오픽·토익스피킹)",
+   "type": "cert",
+   "subtype": "language",
+   "scope": "all",
+   "families": [],
+   "category": "qualification",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 40,
+   "goal": "오픽 또는 토익스피킹에서 지원 기준 등급을 받는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "시험 고르기와 진단",
+     "items": [
+      "지원할 곳이 받는 시험 확인",
+      "유형별 샘플 답변 녹음",
+      "목표 등급 정하기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "유형별 답변 틀 만들기",
+     "items": [
+      "자기소개·묘사 답변 정리",
+      "돌발 주제 답변 틀",
+      "매일 3문제 녹음"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "실전 연습",
+     "items": [
+      "실전 모의 2회",
+      "녹음 듣고 고치기",
+      "시험 응시"
+     ]
+    }
+   ],
+   "options": [
+    "IM2·Lv5 — 기본",
+    "IH·Lv6 — 대기업",
+    "AL·Lv7 — 해외 직무"
+   ]
+  },
+  {
+   "id": "cp.second-language",
+   "name": "제2외국어 성적(JLPT·HSK 등)",
+   "type": "cert",
+   "subtype": "language",
+   "scope": "all",
+   "families": [],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 60,
+   "goal": "일본어·중국어 등 제2외국어 공인 성적을 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "급수 정하기와 기초 점검",
+     "items": [
+      "목표 급수 정하기",
+      "기출 1회로 수준 확인",
+      "교재·강의 고르기"
+     ]
+    },
+    {
+     "weeks": 7,
+     "title": "어휘·문법·독해",
+     "items": [
+      "급수별 어휘 암기",
+      "문법 정리",
+      "독해 지문 매일 2개"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "청해와 실전",
+     "items": [
+      "청해 매일 30분",
+      "기출 모의 3회",
+      "오답 정리 후 응시"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.korean-history",
+   "name": "한국사능력검정 심화",
+   "type": "cert",
+   "subtype": "basic",
+   "scope": "all",
+   "families": [],
+   "category": "qualification",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 60,
+   "goal": "한국사능력검정 심화에서 필요한 급수를 딴다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "시대별 흐름 정리",
+     "items": [
+      "선사~고려 강의",
+      "조선~근대 강의",
+      "현대사 강의"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "기출 회독",
+     "items": [
+      "최근 기출 5회 풀기",
+      "틀린 시대 다시 보기",
+      "응시"
+     ]
+    }
+   ],
+   "options": [
+    "3급 — 일부 공기업 가산",
+    "2급 — 7급·경찰 등 응시 요건",
+    "1급 — 가산점 최대"
+   ],
+   "verify": "요구 급수는 시험·기관마다 다르다"
+  },
+  {
+   "id": "cp.computer-1",
+   "name": "컴퓨터활용능력 1급",
+   "type": "cert",
+   "subtype": "basic",
+   "scope": "all",
+   "families": [],
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 60,
+   "goal": "컴활 1급 필기와 실기에 합격한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "필기",
+     "items": [
+      "컴퓨터 일반·스프레드시트 이론",
+      "데이터베이스 이론",
+      "기출 반복"
+     ]
+    },
+    {
+     "weeks": 5,
+     "title": "실기",
+     "items": [
+      "엑셀 함수·분석 작업",
+      "매크로·프로시저",
+      "액세스 폼·쿼리"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.computer-2",
+   "name": "컴퓨터활용능력 2급",
+   "type": "cert",
+   "subtype": "basic",
+   "scope": "all",
+   "families": [],
+   "category": "qualification",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "컴활 2급 필기와 실기에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "필기",
+     "items": [
+      "컴퓨터 일반 이론",
+      "스프레드시트 이론",
+      "기출 반복"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실기",
+     "items": [
+      "엑셀 기본 작업",
+      "함수·분석 작업",
+      "기출 모의 반복"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.driver-license",
+   "name": "운전면허 따기",
+   "type": "cert",
+   "subtype": "basic",
+   "scope": "all",
+   "families": [],
+   "category": "qualification",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "1종 또는 2종 보통 운전면허를 딴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "학과 시험",
+     "items": [
+      "교통안전교육 이수",
+      "학과 문제 풀이",
+      "학과 시험 응시"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기능·도로주행",
+     "items": [
+      "기능 교육과 시험",
+      "도로주행 교육",
+      "도로주행 시험"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.office-docs",
+   "name": "엑셀·PPT·보고서 기본기",
+   "type": "skill",
+   "subtype": "common",
+   "scope": "all",
+   "families": [],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "엑셀 표·함수, 발표 자료, 한 장 보고서를 혼자 만들 수 있다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "엑셀",
+     "items": [
+      "함수(VLOOKUP·IF·SUMIFS)",
+      "피벗 테이블과 차트",
+      "실무 예제 3개 따라 하기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "PPT",
+     "items": [
+      "한 장에 한 메시지 원칙",
+      "도식·차트 정리",
+      "10장 발표 자료 만들기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "보고서",
+     "items": [
+      "결론부터 쓰기",
+      "한 장 보고서 2개 작성",
+      "피드백 받아 고치기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.resume",
+   "name": "자기소개서와 경험 정리",
+   "type": "hiring",
+   "subtype": "interview",
+   "scope": "all",
+   "families": [],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "내 경험을 직무 역량으로 정리하고 자기소개서 기본본을 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "경험 꺼내기",
+     "items": [
+      "활동·경험 전부 적기",
+      "상황-행동-결과로 정리",
+      "직무 역량과 연결"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "기본본 쓰기",
+     "items": [
+      "지원동기·성장과정 초안",
+      "직무 경험 문항 초안",
+      "분량 맞춰 다듬기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "첨삭",
+     "items": [
+      "현직자·선배 피드백",
+      "공고별 맞춤 수정",
+      "이력서 정리"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.interview",
+   "name": "면접 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "scope": "all",
+   "families": [],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "예상 질문에 내 경험으로 답할 수 있고 모의 면접을 3회 이상 해 본다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "질문 모으기",
+     "items": [
+      "자기소개 1분 준비",
+      "직무·인성 예상 질문 30개",
+      "지원 기업·기관 조사"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "답변 만들기",
+     "items": [
+      "경험 사례별 답변 정리",
+      "꼬리 질문 대비",
+      "녹화해서 보기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "모의 면접",
+     "items": [
+      "스터디 모의 면접 3회",
+      "피드백 반영",
+      "복장·동선 점검"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.job-research",
+   "name": "직무·기업 조사와 지원 전략",
+   "type": "network",
+   "subtype": "research",
+   "scope": "all",
+   "families": [],
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "가고 싶은 직무의 채용공고를 분석해 내가 채워야 할 것을 목록으로 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "공고 분석",
+     "items": [
+      "관심 직무 공고 20개 모으기",
+      "자격·우대 조건 표로 정리",
+      "자주 나오는 요구 추리기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "지원 전략",
+     "items": [
+      "부족한 항목 고르기",
+      "준비 순서 정하기",
+      "지원 일정 달력 만들기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.internship",
+   "name": "인턴으로 직무 경험 쌓기",
+   "type": "activity",
+   "subtype": "work",
+   "scope": "all",
+   "families": [],
+   "category": "experience",
+   "method": "internship",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "관심 직무의 인턴을 마치고 한 일을 성과로 정리한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "지원",
+     "items": [
+      "인턴 공고 찾기",
+      "서류·면접 준비",
+      "합격 후 업무 파악"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "근무",
+     "items": [
+      "맡은 업무 기록하기",
+      "선배에게 피드백 받기",
+      "작은 개선 하나 해 보기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "한 일을 숫자로 정리",
+      "자기소개서에 반영",
+      "추천인 부탁하기"
+     ]
+    }
+   ],
+   "verify": "기간은 회사마다 다르다(보통 2~6개월). 체험형·채용연계형을 구분할 것"
+  },
+  {
+   "id": "cp.volunteer",
+   "name": "분야 관련 봉사활동",
+   "type": "activity",
+   "subtype": "volunteer",
+   "scope": "all",
+   "families": [],
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 180,
+   "goal": "진로와 관련된 기관에서 꾸준히 봉사하고 확인서를 받는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기관 찾기",
+     "items": [
+      "1365·VMS에서 기관 찾기",
+      "활동 내용 확인",
+      "신청과 사전 교육"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "정기 활동",
+     "items": [
+      "주 1회 활동",
+      "활동 일지 쓰기",
+      "현장 실무자에게 질문하기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "봉사 확인서 발급",
+      "배운 점 정리",
+      "자기소개서에 반영"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.outreach",
+   "name": "대외활동(서포터즈·기자단)",
+   "type": "activity",
+   "subtype": "outreach",
+   "scope": "all",
+   "families": [],
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 120,
+   "goal": "기업·기관의 대외활동을 수료하고 결과물을 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "관심 분야 대외활동 찾기",
+      "지원서·포트폴리오 제출",
+      "면접"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "활동",
+     "items": [
+      "월별 미션 수행",
+      "콘텐츠·보고서 작성",
+      "팀 활동 참여"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "수료증 받기",
+      "결과물 모으기",
+      "경험 정리"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.contest",
+   "name": "공모전 도전",
+   "type": "output",
+   "subtype": "award",
+   "scope": "all",
+   "families": [],
+   "category": "portfolio",
+   "method": "contest",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "공모전 한 건을 끝까지 제출하고 결과물을 포트폴리오에 넣는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "고르기와 팀 꾸리기",
+     "items": [
+      "분야에 맞는 공모전 찾기",
+      "팀원 구하기",
+      "수상작 분석"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "기획과 제작",
+     "items": [
+      "주제 조사",
+      "기획안·시안 만들기",
+      "피드백 받아 고치기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "제출과 정리",
+     "items": [
+      "제출 서류 완성",
+      "발표 준비",
+      "결과물 포트폴리오화"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.study-club",
+   "name": "동아리·학회·스터디",
+   "type": "activity",
+   "subtype": "club",
+   "scope": "all",
+   "families": [],
+   "category": "experience",
+   "method": "club",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 120,
+   "goal": "분야 동아리나 스터디에서 한 학기 이상 활동하며 함께 결과물을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "찾기",
+     "items": [
+      "학교·연합 동아리 조사",
+      "모집 일정 확인",
+      "지원"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "활동",
+     "items": [
+      "정기 모임 참석",
+      "발표·세미나 준비",
+      "공동 프로젝트 참여"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "활동 내용 기록",
+      "결과물 정리",
+      "인맥 연락처 정리"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.overseas",
+   "name": "교환학생·어학연수",
+   "type": "activity",
+   "subtype": "overseas",
+   "scope": "all",
+   "families": [],
+   "category": "experience",
+   "method": "activity",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 240,
+   "goal": "해외에서 한 학기 이상 공부하며 언어와 적응 경험을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "준비",
+     "items": [
+      "학교 선발 요건 확인",
+      "어학 성적 준비",
+      "지원서·비자"
+     ]
+    },
+    {
+     "weeks": 16,
+     "title": "현지 생활",
+     "items": [
+      "수업 이수",
+      "현지 활동 참여",
+      "언어 꾸준히 쓰기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "학점 인정 처리",
+      "경험 정리",
+      "어학 성적 다시 응시"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.parttime",
+   "name": "직무 관련 아르바이트·계약직",
+   "type": "activity",
+   "subtype": "work",
+   "scope": "all",
+   "families": [],
+   "category": "experience",
+   "method": "parttime",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 300,
+   "goal": "관심 직무와 가까운 현장에서 일하며 실무를 직접 본다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "찾기",
+     "items": [
+      "직무와 가까운 일자리 찾기",
+      "근로 조건 확인",
+      "지원"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "근무",
+     "items": [
+      "업무 흐름 익히기",
+      "현장 용어 정리",
+      "맡은 일 기록"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "경력 증명 받기",
+      "배운 점 정리",
+      "이력서에 반영"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.portfolio",
+   "name": "포트폴리오 정리",
+   "type": "output",
+   "subtype": "portfolio",
+   "scope": "all",
+   "families": [],
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "지금까지의 결과물을 지원용 포트폴리오 한 벌로 묶는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "고르기",
+     "items": [
+      "결과물 전부 모으기",
+      "대표작 3~5개 고르기",
+      "지원 직무에 맞는지 점검"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "다듬기",
+     "items": [
+      "문제-과정-결과로 서술",
+      "내 역할과 수치 적기",
+      "디자인·형식 통일"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "공개와 피드백",
+     "items": [
+      "PDF·웹 링크 만들기",
+      "현직자 피드백 받기",
+      "고쳐서 최종본"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.side-project",
+   "name": "개인·사이드 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "scope": "all",
+   "families": [],
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "내가 정한 주제로 작은 프로젝트 하나를 끝까지 완성해 공개한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "풀고 싶은 문제 정하기",
+      "범위 줄이기",
+      "일정 짜기"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "제작",
+     "items": [
+      "매주 결과물 내기",
+      "막힌 점 기록",
+      "사용자 한 명에게 보여 주기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "공개",
+     "items": [
+      "결과 정리 글 쓰기",
+      "공개 링크 만들기",
+      "회고"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.mentoring",
+   "name": "현직자 멘토링·커피챗",
+   "type": "network",
+   "subtype": "mentoring",
+   "scope": "all",
+   "families": [],
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 60,
+   "goal": "현직자 3명 이상을 만나 직무의 실제와 준비 방법을 듣는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "만나고 싶은 직무 정하기",
+      "질문 10개 준비",
+      "연락할 사람 찾기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "만남",
+     "items": [
+      "커피챗 3회",
+      "들은 내용 기록",
+      "감사 인사"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "반영",
+     "items": [
+      "준비 계획 고치기",
+      "추천받은 자료 보기",
+      "다음 만남 약속"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.job-fair",
+   "name": "채용설명회·직무 박람회",
+   "type": "network",
+   "subtype": "event",
+   "scope": "all",
+   "families": [],
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 180,
+   "goal": "설명회·박람회에 가서 채용 담당자에게 직접 묻고 정보를 정리한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "참가",
+     "items": [
+      "일정 찾아 신청",
+      "질문 준비",
+      "현장 상담과 기록"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.ncs",
+   "name": "NCS 직업기초능력 필기",
+   "type": "hiring",
+   "subtype": "ncs",
+   "scope": "family",
+   "families": [
+    "public",
+    "biz",
+    "eng",
+    "finance"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "공기업 필기의 NCS 영역을 시간 안에 풀 수 있다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "유형 파악",
+     "items": [
+      "의사소통·수리·문제해결 유형 정리",
+      "모듈형·PSAT형 구분",
+      "기본서 1회독"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "영역별 훈련",
+     "items": [
+      "수리 매일 20문제",
+      "자료해석 시간 재기",
+      "취약 영역 반복"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실전",
+     "items": [
+      "봉투 모의고사 주 2회",
+      "기관별 기출 복원 풀기",
+      "오답 정리"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.major-written",
+   "name": "공기업 전공 필기",
+   "type": "hiring",
+   "subtype": "ncs",
+   "scope": "family",
+   "families": [
+    "public",
+    "biz",
+    "eng",
+    "finance"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "지원 직렬의 전공 필기 과목을 기출 수준으로 푼다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "과목 확인",
+     "items": [
+      "지원 기관 시험 과목 확인",
+      "기본서 고르기",
+      "기출 범위 파악"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "이론과 문제",
+     "items": [
+      "과목별 기본서 회독",
+      "단원별 문제 풀이",
+      "요약 노트 만들기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "기출",
+     "items": [
+      "기관별 기출 풀이",
+      "틀린 단원 다시 보기",
+      "시간 맞춰 모의"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.civil9-common",
+   "name": "9급 공무원 공통과목(국어·영어·한국사)",
+   "type": "hiring",
+   "subtype": "civil",
+   "scope": "family",
+   "families": [
+    "public"
+   ],
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "9급 필기 공통과목에서 합격선 점수를 안정적으로 받는다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "기본 이론",
+     "items": [
+      "국어 문법·독해 강의",
+      "영어 문법·어휘 강의",
+      "한국사 통사 강의"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "과목별 기출 3회독",
+      "단원별 오답 정리",
+      "영어 단어 매일 암기"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "실전 모의",
+     "items": [
+      "주 1회 전 과목 모의",
+      "시간 배분 연습",
+      "약점 단원 보강"
+     ]
+    }
+   ],
+   "verify": "과목은 직렬·연도에 따라 바뀐다. 시험 공고를 꼭 확인할 것"
+  },
+  {
+   "id": "cp.psat",
+   "name": "PSAT(공직적격성평가)",
+   "type": "hiring",
+   "subtype": "civil",
+   "scope": "family",
+   "families": [
+    "public"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "언어논리·자료해석·상황판단을 시간 안에 풀 수 있다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "영역 파악",
+     "items": [
+      "기출 1회로 수준 확인",
+      "영역별 유형 정리",
+      "풀이 순서 정하기"
+     ]
+    },
+    {
+     "weeks": 7,
+     "title": "영역별 훈련",
+     "items": [
+      "언어논리 매일 1세트",
+      "자료해석 계산 연습",
+      "상황판단 유형별 풀이"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "실전",
+     "items": [
+      "기출 전 회차 시간 재고 풀기",
+      "오답 원인 분류",
+      "모의고사 응시"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.fitness-test",
+   "name": "체력시험 준비",
+   "type": "hiring",
+   "subtype": "physical",
+   "scope": "family",
+   "families": [
+    "public"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "지원 시험의 체력 종목에서 합격 기준 이상을 낸다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기준 확인",
+     "items": [
+      "종목과 기준 기록 확인",
+      "현재 기록 재기",
+      "운동 계획 짜기"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "종목별 훈련",
+     "items": [
+      "달리기·순환식 종목 훈련",
+      "근력 운동",
+      "주 1회 기록 측정"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "마무리",
+     "items": [
+      "실전처럼 전 종목 측정",
+      "부상 관리",
+      "시험 응시"
+     ]
+    }
+   ],
+   "verify": "종목·기준은 경찰·소방·군마다 다르고 자주 바뀐다"
+  },
+  {
+   "id": "cp.aptitude",
+   "name": "대기업 인적성 검사",
+   "type": "hiring",
+   "subtype": "aptitude",
+   "scope": "family",
+   "families": [
+    "biz",
+    "eng",
+    "sales",
+    "finance"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "지원 기업의 인적성 검사를 시간 안에 풀 수 있다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "유형 파악",
+     "items": [
+      "지원 기업 검사 유형 확인",
+      "기본서 1회독",
+      "약한 영역 찾기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "영역별 훈련",
+     "items": [
+      "수리·추리 매일 풀기",
+      "언어·도형 유형 정리",
+      "시간 재고 풀기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실전",
+     "items": [
+      "실전 모의고사 4회",
+      "오답 정리",
+      "온라인 응시 환경 점검"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.accounting-basic",
+   "name": "전산회계 1급",
+   "type": "cert",
+   "subtype": "private-certified",
+   "scope": "family",
+   "families": [
+    "biz",
+    "finance"
+   ],
+   "category": "qualification",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 60,
+   "goal": "전산회계 1급에 합격해 회계 기초와 프로그램 사용을 증명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이론",
+     "items": [
+      "회계 원리",
+      "원가 회계 기초",
+      "부가가치세 기초"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "실무와 기출",
+     "items": [
+      "회계 프로그램 입력 연습",
+      "기출 5회 풀기",
+      "오답 정리"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.excel-data",
+   "name": "엑셀로 데이터 다루기",
+   "type": "skill",
+   "subtype": "data",
+   "scope": "family",
+   "families": [
+    "biz",
+    "sales",
+    "finance",
+    "data"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "엑셀로 자료를 정리·분석해 표와 차트로 보고할 수 있다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "데이터 정제(중복·형식)",
+      "조건부 서식",
+      "표 기능"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "분석과 보고",
+     "items": [
+      "피벗·슬라이서",
+      "함수 조합(INDEX·MATCH)",
+      "한 장 대시보드 만들기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.investment-manager",
+   "name": "투자자산운용사",
+   "type": "cert",
+   "subtype": "private-certified",
+   "scope": "family",
+   "families": [
+    "finance"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "투자자산운용사 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 5,
+     "title": "과목별 이론",
+     "items": [
+      "금융상품·세제",
+      "투자운용·전략",
+      "직무윤리·법규"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "문제 풀이",
+     "items": [
+      "기출 유형 반복",
+      "과목별 과락 점검",
+      "모의고사 3회"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.afpk",
+   "name": "AFPK(재무설계사)",
+   "type": "cert",
+   "subtype": "private-certified",
+   "scope": "family",
+   "families": [
+    "finance"
+   ],
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "AFPK 교육을 이수하고 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "교육 이수",
+     "items": [
+      "지정 교육과정 수강",
+      "모듈별 요약",
+      "단원 문제 풀이"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "시험 준비",
+     "items": [
+      "기출 유형 반복",
+      "계산 문제 연습",
+      "모의고사"
+     ]
+    }
+   ],
+   "verify": "응시하려면 지정 교육 이수가 필요하다"
+  },
+  {
+   "id": "cp.econ-test",
+   "name": "경제이해력 시험(매경TEST·TESAT)",
+   "type": "cert",
+   "subtype": "private-certified",
+   "scope": "family",
+   "families": [
+    "finance",
+    "biz"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "매경TEST 또는 TESAT에서 목표 등급을 받는다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "경제·경영 이론",
+     "items": [
+      "미시·거시 기본 개념",
+      "경영 일반 정리",
+      "시사 용어 정리"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기출과 시사",
+     "items": [
+      "기출 4회 풀기",
+      "경제 신문 매일 읽기",
+      "오답 정리"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.cs-basics",
+   "name": "컴퓨터공학 기초(자료구조·OS·네트워크)",
+   "type": "edu",
+   "subtype": "major",
+   "scope": "family",
+   "families": [
+    "it",
+    "data"
+   ],
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "자료구조·운영체제·네트워크·DB의 핵심 개념을 설명할 수 있다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "자료구조·알고리즘",
+     "items": [
+      "배열·리스트·트리·그래프",
+      "정렬·탐색",
+      "직접 구현해 보기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "운영체제·네트워크",
+     "items": [
+      "프로세스·메모리",
+      "HTTP·TCP/IP",
+      "정리 노트 만들기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "데이터베이스",
+     "items": [
+      "관계형 모델·정규화",
+      "트랜잭션·인덱스",
+      "면접 질문으로 점검"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.git",
+   "name": "Git과 GitHub로 협업하기",
+   "type": "skill",
+   "subtype": "dev",
+   "scope": "family",
+   "families": [
+    "it",
+    "data"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "브랜치·PR로 협업하고 내 코드를 GitHub에 관리한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기본",
+     "items": [
+      "commit·branch·merge",
+      "원격 저장소 push·pull",
+      "충돌 해결"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "협업",
+     "items": [
+      "PR과 코드 리뷰",
+      "이슈·커밋 메시지 규칙",
+      "README 쓰기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.sql",
+   "name": "SQL 기본기",
+   "type": "skill",
+   "subtype": "data",
+   "scope": "family",
+   "families": [
+    "it",
+    "data",
+    "biz"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "SELECT·JOIN·집계로 필요한 데이터를 직접 뽑는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조회",
+     "items": [
+      "SELECT·WHERE·ORDER",
+      "집계와 GROUP BY",
+      "연습 문제 30개"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "결합과 응용",
+     "items": [
+      "JOIN·서브쿼리",
+      "윈도 함수",
+      "실습 데이터로 분석 질문 풀기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.info-eng",
+   "name": "정보처리기사",
+   "type": "cert",
+   "subtype": "national-tech",
+   "scope": "family",
+   "families": [
+    "it",
+    "data"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "정보처리기사 필기와 실기에 합격한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "과목별 이론 정리",
+      "기출 5회독",
+      "과락 과목 보강"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실기",
+     "items": [
+      "실기 이론 암기",
+      "프로그래밍·SQL 문제 풀이",
+      "기출 복원 반복"
+     ]
+    }
+   ],
+   "verify": "응시자격(관련 학과 졸업 예정·경력 등)을 큐넷에서 확인할 것"
+  },
+  {
+   "id": "cp.coding-test",
+   "name": "코딩테스트 준비",
+   "type": "hiring",
+   "subtype": "coding",
+   "scope": "family",
+   "families": [
+    "it",
+    "data"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "기업 코딩테스트의 기본 유형을 시간 안에 푼다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "언어와 기본 유형",
+     "items": [
+      "사용할 언어 문법 정리",
+      "구현·문자열 문제",
+      "시간 복잡도 익히기"
+     ]
+    },
+    {
+     "weeks": 7,
+     "title": "유형별 풀이",
+     "items": [
+      "탐색(DFS·BFS)",
+      "DP·그리디",
+      "자료구조 활용 문제"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "실전",
+     "items": [
+      "기업 기출 풀기",
+      "시간 재고 모의 테스트",
+      "풀이 정리 글 쓰기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.team-project",
+   "name": "팀 프로젝트로 서비스 만들기",
+   "type": "output",
+   "subtype": "project",
+   "scope": "family",
+   "families": [
+    "it",
+    "data",
+    "design"
+   ],
+   "category": "portfolio",
+   "method": "team_project",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "팀으로 서비스 하나를 기획부터 배포까지 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "주제와 역할 정하기",
+      "요구사항·화면 정리",
+      "일정과 협업 규칙"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "개발",
+     "items": [
+      "주 단위로 기능 완성",
+      "코드 리뷰",
+      "중간 배포"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "마무리",
+     "items": [
+      "배포와 테스트",
+      "발표 자료·README",
+      "회고 정리"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.bootcamp",
+   "name": "부트캠프·국비 교육(K-디지털 트레이닝)",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "scope": "family",
+   "families": [
+    "it",
+    "data",
+    "design"
+   ],
+   "category": "knowledge",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "전일제 교육과정을 수료하고 팀 프로젝트 결과물을 남긴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "과정 고르기",
+     "items": [
+      "HRD-Net에서 과정 비교",
+      "커리큘럼·수료생 후기 확인",
+      "국민내일배움카드 발급"
+     ]
+    },
+    {
+     "weeks": 20,
+     "title": "수강",
+     "items": [
+      "매일 수업과 복습",
+      "과제·미니 프로젝트",
+      "스터디 병행"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "최종 프로젝트",
+     "items": [
+      "팀 프로젝트 완성",
+      "발표회",
+      "포트폴리오 정리"
+     ]
+    }
+   ],
+   "verify": "과정 기간은 보통 4~6개월. 훈련비·훈련장려금 조건을 확인할 것"
+  },
+  {
+   "id": "cp.adsp",
+   "name": "ADsP(데이터분석 준전문가)",
+   "type": "cert",
+   "subtype": "private-certified",
+   "scope": "family",
+   "families": [
+    "data",
+    "biz",
+    "it"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "ADsP에 합격해 데이터 분석 기초를 증명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "과목별 이론",
+     "items": [
+      "데이터 이해",
+      "분석 기획",
+      "통계·분석 기법"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "기출",
+     "items": [
+      "기출 5회 풀기",
+      "오답 정리",
+      "응시"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.sqld",
+   "name": "SQLD(SQL 개발자)",
+   "type": "cert",
+   "subtype": "private-certified",
+   "scope": "family",
+   "families": [
+    "data",
+    "it"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "SQLD에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이론",
+     "items": [
+      "데이터 모델링",
+      "SQL 기본·활용",
+      "실습으로 확인"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기출",
+     "items": [
+      "기출 문제집 2회독",
+      "오답 정리",
+      "응시"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.python-data",
+   "name": "파이썬 데이터 분석",
+   "type": "skill",
+   "subtype": "data",
+   "scope": "family",
+   "families": [
+    "data",
+    "it"
+   ],
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "pandas로 데이터를 불러와 정리하고 그래프로 설명할 수 있다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "파이썬 기초",
+     "items": [
+      "문법·자료형",
+      "함수·반복",
+      "문제 풀이"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "pandas·시각화",
+     "items": [
+      "데이터 정제",
+      "집계·결합",
+      "matplotlib·seaborn 그래프"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "미니 분석",
+     "items": [
+      "공개 데이터 고르기",
+      "질문 3개에 답하기",
+      "결과 정리 글 쓰기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.stats",
+   "name": "통계 기초",
+   "type": "edu",
+   "subtype": "major",
+   "scope": "family",
+   "families": [
+    "data",
+    "research"
+   ],
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "기술통계·가설검정·회귀를 이해하고 결과를 해석한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기술통계와 확률",
+     "items": [
+      "평균·분산·분포",
+      "확률 기본",
+      "표본과 추정"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "검정과 회귀",
+     "items": [
+      "가설검정",
+      "상관·회귀 분석",
+      "실습 데이터로 해석 연습"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.figma",
+   "name": "피그마 익히기",
+   "type": "skill",
+   "subtype": "design",
+   "scope": "family",
+   "families": [
+    "design",
+    "it"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "피그마로 화면을 만들고 컴포넌트·프로토타입을 쓸 수 있다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기본",
+     "items": [
+      "프레임·오토 레이아웃",
+      "컴포넌트·스타일",
+      "앱 화면 3개 따라 그리기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "응용",
+     "items": [
+      "디자인 시스템 기초",
+      "프로토타입 연결",
+      "기존 앱 리디자인 1건"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.adobe",
+   "name": "어도비 툴(포토샵·일러스트레이터)",
+   "type": "skill",
+   "subtype": "design",
+   "scope": "family",
+   "families": [
+    "design",
+    "media"
+   ],
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "포토샵·일러스트레이터로 시안을 만들 수 있다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "포토샵",
+     "items": [
+      "레이어·마스크",
+      "보정·합성",
+      "배너·포스터 제작"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "일러스트레이터",
+     "items": [
+      "펜툴·패스",
+      "타이포·로고",
+      "인쇄용 파일 만들기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.gtq",
+   "name": "GTQ(그래픽기술자격)",
+   "type": "cert",
+   "subtype": "private-certified",
+   "scope": "family",
+   "families": [
+    "design"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "GTQ 1급에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기능 익히기",
+     "items": [
+      "출제 기능 정리",
+      "유형별 따라 하기",
+      "시간 재기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "기출",
+     "items": [
+      "기출 5회 제한 시간 안에 풀기",
+      "감점 요인 점검",
+      "응시"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.license-exam",
+   "name": "보건의료 국가시험 준비",
+   "type": "cert",
+   "subtype": "national-license",
+   "scope": "family",
+   "families": [
+    "health"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "면허 국가시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "과목별 정리",
+     "items": [
+      "과목별 요약 정리",
+      "단원 문제 풀이",
+      "취약 과목 표시"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "최근 5개년 기출 3회독",
+      "오답 노트",
+      "과락 과목 보강"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "모의고사",
+     "items": [
+      "전 과목 모의고사",
+      "시간 배분",
+      "법규 최종 암기"
+     ]
+    }
+   ],
+   "verify": "응시자격은 해당 학과 졸업(예정). 과목은 직종마다 다르다 — 국시원 공고 확인"
+  },
+  {
+   "id": "cp.clinical-practice",
+   "name": "임상실습",
+   "type": "edu",
+   "subtype": "required-course",
+   "scope": "family",
+   "families": [
+    "health"
+   ],
+   "category": "experience",
+   "method": "field_practice",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "학과가 정한 임상실습 시간을 채우고 현장 업무를 익힌다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "실습 기관·일정 확인",
+      "예방접종·검진",
+      "사전 교육"
+     ]
+    },
+    {
+     "weeks": 14,
+     "title": "실습",
+     "items": [
+      "파트별 실습",
+      "사례 보고서 작성",
+      "실습 일지"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "실습 평가",
+      "관심 파트 정하기",
+      "취업 희망 병원 정리"
+     ]
+    }
+   ],
+   "verify": "필수 시간은 직종·학교마다 다르다(간호학과는 1,000시간 이상)"
+  },
+  {
+   "id": "cp.bls",
+   "name": "BLS(기본소생술) 수료",
+   "type": "cert",
+   "subtype": "basic",
+   "scope": "family",
+   "families": [
+    "health"
+   ],
+   "category": "qualification",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 300,
+   "goal": "BLS Provider 과정을 수료한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "수료",
+     "items": [
+      "교육 기관 신청",
+      "이론·실기 교육",
+      "평가 후 수료증"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.teaching-course",
+   "name": "교직이수",
+   "type": "edu",
+   "subtype": "required-course",
+   "scope": "family",
+   "families": [
+    "edu"
+   ],
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "교직 과목을 이수해 교원자격증 요건을 채운다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "선발",
+     "items": [
+      "학과 교직이수 선발 기준 확인",
+      "성적 관리",
+      "신청"
+     ]
+    },
+    {
+     "weeks": 28,
+     "title": "이수",
+     "items": [
+      "교직 이론 과목",
+      "교과교육 과목",
+      "교직 적성·인성 검사"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "교육실습",
+     "items": [
+      "학교 현장실습 4주",
+      "수업 참관·실연",
+      "실습록 작성"
+     ]
+    }
+   ],
+   "verify": "선발 인원이 적고 학과마다 기준이 다르다. 사범대·교육대학원 경로도 있다"
+  },
+  {
+   "id": "cp.edu-volunteer",
+   "name": "교육봉사",
+   "type": "activity",
+   "subtype": "volunteer",
+   "scope": "family",
+   "families": [
+    "edu"
+   ],
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 180,
+   "goal": "교원자격 요건인 교육봉사 시간을 채운다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기관 찾기",
+     "items": [
+      "인정 기관 확인",
+      "신청",
+      "사전 교육"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "활동",
+     "items": [
+      "학습 지도·멘토링",
+      "활동 일지",
+      "지도 사례 기록"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "확인서 제출",
+      "배운 점 정리"
+     ]
+    }
+   ],
+   "verify": "필수 시간은 학교 규정을 확인할 것(통상 60시간)"
+  },
+  {
+   "id": "cp.teacher-exam",
+   "name": "임용시험 1차(교육학·전공)",
+   "type": "hiring",
+   "subtype": "civil",
+   "scope": "family",
+   "families": [
+    "edu"
+   ],
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 240,
+   "goal": "임용시험 1차 필기에 합격한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "기본 이론",
+     "items": [
+      "교육학 영역별 강의",
+      "전공 각론",
+      "개념 지도 만들기"
+     ]
+    },
+    {
+     "weeks": 12,
+     "title": "기출 분석",
+     "items": [
+      "기출 문제 논술 답안 쓰기",
+      "전공 기출 회독",
+      "스터디 첨삭"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "실전",
+     "items": [
+      "모의고사 주 1회",
+      "답안 시간 맞추기",
+      "취약 영역 보강"
+     ]
+    }
+   ],
+   "verify": "초등·중등·유치원·특수가 과목이 다르다"
+  },
+  {
+   "id": "cp.teaching-demo",
+   "name": "임용 2차(수업 실연·면접)",
+   "type": "hiring",
+   "subtype": "interview",
+   "scope": "family",
+   "families": [
+    "edu"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 180,
+   "goal": "수업 실연과 심층 면접을 실전처럼 해낸다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "지도안",
+     "items": [
+      "지도안 작성 연습",
+      "교과서 단원 분석",
+      "평가 기준 확인"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "실연과 면접",
+     "items": [
+      "스터디에서 수업 실연",
+      "녹화 후 피드백",
+      "면접 예상 질문 답변"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "마무리",
+     "items": [
+      "시도 교육청 기준 확인",
+      "실전 리허설",
+      "시간 관리"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.sw2",
+   "name": "사회복지사 2급 과목 이수",
+   "type": "cert",
+   "subtype": "national-license",
+   "scope": "family",
+   "families": [
+    "welfare"
+   ],
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "법정 과목을 이수해 사회복지사 2급 자격을 받는다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "경로 정하기",
+     "items": [
+      "대학·학점은행제 중 선택",
+      "필수·선택 과목 확인",
+      "수강 신청"
+     ]
+    },
+    {
+     "weeks": 30,
+     "title": "이론 과목",
+     "items": [
+      "필수 과목 이수",
+      "선택 과목 이수",
+      "과제·시험"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "자격 신청",
+     "items": [
+      "실습 이수 확인",
+      "학위 요건 확인",
+      "자격증 발급 신청"
+     ]
+    }
+   ],
+   "verify": "2020년 이후 입학자는 17과목 + 현장실습 160시간. 학위 요건이 함께 필요하다"
+  },
+  {
+   "id": "cp.sw-practicum",
+   "name": "사회복지 현장실습(160시간)",
+   "type": "edu",
+   "subtype": "required-course",
+   "scope": "family",
+   "families": [
+    "welfare"
+   ],
+   "category": "experience",
+   "method": "field_practice",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "지정 기관에서 현장실습 160시간을 마친다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "실습 기관 선정·신청",
+      "실습 세미나 수강",
+      "사전 교육"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "기관 사업 이해",
+      "프로그램 보조·기획",
+      "실습 일지·사례 기록"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "평가",
+     "items": [
+      "실습 평가",
+      "세미나 발표",
+      "진로 분야 정하기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.sw1",
+   "name": "사회복지사 1급",
+   "type": "cert",
+   "subtype": "national-license",
+   "scope": "family",
+   "families": [
+    "welfare"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "사회복지사 1급 국가시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "과목별 정리",
+     "items": [
+      "사회복지 기초",
+      "사회복지 실천",
+      "정책과 제도"
+     ]
+    },
+    {
+     "weeks": 5,
+     "title": "기출",
+     "items": [
+      "기출 5개년 회독",
+      "오답 정리",
+      "법령 암기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "모의",
+     "items": [
+      "전 과목 모의고사",
+      "시간 배분"
+     ]
+    }
+   ],
+   "verify": "응시자격: 2급 요건 + 학사 학위 등"
+  },
+  {
+   "id": "cp.video-edit",
+   "name": "영상 편집(프리미어 프로)",
+   "type": "skill",
+   "subtype": "content",
+   "scope": "family",
+   "families": [
+    "media",
+    "design",
+    "biz"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "컷 편집·자막·색·사운드를 다뤄 3분 영상을 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "컷 편집",
+     "items": [
+      "타임라인·단축키",
+      "컷·전환",
+      "음악 맞추기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "자막·색·소리",
+     "items": [
+      "자막 스타일",
+      "색보정 기초",
+      "소리 정리"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "완성",
+     "items": [
+      "3분 영상 1편",
+      "썸네일",
+      "피드백 받고 수정"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.channel",
+   "name": "개인 채널 운영",
+   "type": "output",
+   "subtype": "portfolio",
+   "scope": "family",
+   "families": [
+    "media",
+    "biz",
+    "sales"
+   ],
+   "category": "portfolio",
+   "method": "content",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "주제를 정해 채널을 3개월 운영하고 지표로 결과를 정리한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "주제·대상 정하기",
+      "비슷한 채널 분석",
+      "발행 주기 정하기"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "운영",
+     "items": [
+      "주 1~2회 발행",
+      "반응 지표 기록",
+      "잘된 글·영상 분석"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "성과 지표 정리",
+      "배운 점 정리",
+      "포트폴리오에 넣기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.writing",
+   "name": "글쓰기 훈련",
+   "type": "skill",
+   "subtype": "content",
+   "scope": "family",
+   "families": [
+    "media",
+    "biz"
+   ],
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "읽는 사람에게 맞춰 구조 잡힌 글을 쓴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "한 문장 한 뜻",
+      "구조 잡기(결론 먼저)",
+      "좋은 글 베껴 쓰기"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "쓰고 고치기",
+     "items": [
+      "주 2편 쓰기",
+      "첨삭 받기",
+      "퇴고 습관 들이기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.engineer-cert",
+   "name": "기사 자격 준비(필기→실기)",
+   "type": "cert",
+   "subtype": "national-tech",
+   "scope": "family",
+   "families": [
+    "eng",
+    "tech"
+   ],
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "지원 분야의 기사(산업기사) 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "응시자격과 일정",
+     "items": [
+      "큐넷에서 응시자격 확인",
+      "시험 일정 접수",
+      "기본서 고르기"
+     ]
+    },
+    {
+     "weeks": 7,
+     "title": "필기",
+     "items": [
+      "과목별 이론",
+      "기출 7개년 회독",
+      "과락 과목 보강"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "실기",
+     "items": [
+      "필답형 요약 암기",
+      "작업형·계산 문제 연습",
+      "기출 복원 반복"
+     ]
+    }
+   ],
+   "verify": "응시자격: 관련 학과 4년제 졸업(예정) 또는 경력. 종목마다 실기 방식이 다르다"
+  },
+  {
+   "id": "cp.craftsman-cert",
+   "name": "기능사 자격 준비",
+   "type": "cert",
+   "subtype": "national-tech",
+   "scope": "family",
+   "families": [
+    "tech",
+    "service"
+   ],
+   "category": "qualification",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "지원 분야의 기능사 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "필기",
+     "items": [
+      "과목별 이론",
+      "CBT 기출 반복",
+      "응시"
+     ]
+    },
+    {
+     "weeks": 5,
+     "title": "실기",
+     "items": [
+      "공개 문제 확인",
+      "작업 순서 반복 연습",
+      "시간 안에 완성하기"
+     ]
+    }
+   ],
+   "verify": "기능사는 응시자격 제한이 없다. 필기 면제 과정평가형도 있다"
+  },
+  {
+   "id": "cp.cad",
+   "name": "CAD 기초(AutoCAD)",
+   "type": "skill",
+   "subtype": "field",
+   "scope": "family",
+   "families": [
+    "eng",
+    "tech",
+    "design"
+   ],
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "AutoCAD로 2D 도면을 그리고 출력할 수 있다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본 명령",
+     "items": [
+      "그리기·수정 명령",
+      "레이어·치수",
+      "예제 도면 10장"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "도면 완성",
+     "items": [
+      "도면 규격·축척",
+      "출력 설정",
+      "실제 도면 따라 그리기"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.eng-field",
+   "name": "현장실습·학기제 인턴(공학)",
+   "type": "activity",
+   "subtype": "work",
+   "scope": "family",
+   "families": [
+    "eng"
+   ],
+   "category": "experience",
+   "method": "field_practice",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "기업 현장에서 한 학기 또는 방학 동안 실습하고 수행 내용을 정리한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "지원",
+     "items": [
+      "학교 현장실습 공고 확인",
+      "기업·직무 고르기",
+      "지원"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "실습",
+     "items": [
+      "공정·업무 흐름 파악",
+      "맡은 과제 수행",
+      "실습 일지"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "수행 내용 보고서",
+      "학점 인정",
+      "자기소개서 반영"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cp.training-course",
+   "name": "국비 직업훈련 과정",
+   "type": "edu",
+   "subtype": "bootcamp",
+   "scope": "family",
+   "families": [
+    "tech",
+    "service",
+    "biz"
+   ],
+   "category": "knowledge",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "직업훈련 과정을 수료하고 자격증과 실습 결과를 얻는다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "과정 고르기",
+     "items": [
+      "HRD-Net에서 과정 비교",
+      "국민내일배움카드 발급",
+      "상담·신청"
+     ]
+    },
+    {
+     "weeks": 14,
+     "title": "훈련",
+     "items": [
+      "이론·실습 수업",
+      "자격증 시험 준비",
+      "현장 실습"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "취업 연계",
+     "items": [
+      "수료",
+      "이력서·면접 지원",
+      "취업처 소개"
+     ]
+    }
+   ]
+  }
+ ]
+}

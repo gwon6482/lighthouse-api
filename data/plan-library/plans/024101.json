@@ -1,0 +1,716 @@
+{
+ "jobCode": "024101",
+ "title": "광고·홍보·마케팅전문가",
+ "displayName": "마케터",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 마케팅 기본기와 숫자 읽는 힘을 갖춘 뒤, 고른 분야에서 직접 해 본 결과물과 인턴 경험으로 증명한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "performance",
+   "name": "퍼포먼스 마케팅",
+   "desc": "광고 운영·성과 분석"
+  },
+  {
+   "id": "growth",
+   "name": "그로스 마케팅",
+   "desc": "지표·실험으로 성장 만들기"
+  },
+  {
+   "id": "crm",
+   "name": "CRM 마케팅",
+   "desc": "고객 데이터·리텐션·메시지"
+  },
+  {
+   "id": "content",
+   "name": "콘텐츠 마케팅",
+   "desc": "SNS·영상·글 콘텐츠"
+  },
+  {
+   "id": "brand",
+   "name": "브랜드 마케팅",
+   "desc": "브랜드 전략·캠페인"
+  },
+  {
+   "id": "pr",
+   "name": "홍보(PR)",
+   "desc": "언론 홍보·대외 커뮤니케이션"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "026102",
+   "title": "광고·홍보·마케팅사무원",
+   "track": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.mkt-basics",
+   "name": "마케팅 기본기",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "STP·4P·퍼널로 브랜드의 마케팅을 분석해 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "시장·고객·경쟁 분석",
+      "STP와 4P",
+      "퍼널과 고객 여정"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "적용",
+     "items": [
+      "좋아하는 브랜드 3곳 분석",
+      "분석 글 쓰기",
+      "피드백 받기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mkt-ga",
+   "name": "GA4로 지표 읽기",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "웹·앱 지표를 읽고 유입과 전환을 설명한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기본",
+     "items": [
+      "이벤트·세션·전환 개념",
+      "GA4 화면 익히기",
+      "데모 계정 살펴보기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "유입 경로별 성과 보기",
+      "퍼널·리텐션 보고서",
+      "한 장 리포트 쓰기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pf-ads",
+   "name": "검색·SNS 광고 직접 집행",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "소액으로 광고를 직접 돌려 보고 지표로 개선한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "매체 이해",
+     "items": [
+      "검색 광고 구조(키워드·입찰)",
+      "SNS 광고 구조(타깃·소재)",
+      "픽셀·전환 추적"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "집행",
+     "items": [
+      "소액 캠페인 열기",
+      "소재·타깃 바꿔 가며 시험",
+      "CTR·CPA·ROAS 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pf-cert",
+   "name": "검색광고마케터 1급",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "검색광고마케터 1급에 합격한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이론",
+     "items": [
+      "온라인 비즈니스·마케팅",
+      "검색광고 실무",
+      "성과 분석"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "기출",
+     "items": [
+      "기출 문제 풀이",
+      "오답 정리",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "민간자격. 채용에서 필수는 아니고 입문 증빙으로 쓴다"
+  },
+  {
+   "id": "p.pf-report",
+   "name": "광고 성과 리포트 포트폴리오",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "집행한 캠페인을 가설-결과-개선으로 정리한 리포트를 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "자료 모으기",
+     "items": [
+      "캠페인 지표 정리",
+      "가설과 실험 목록",
+      "핵심 수치 뽑기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "리포트",
+     "items": [
+      "문제-가설-결과 구조",
+      "차트로 보여 주기",
+      "다음 액션 제안"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.gr-experiment",
+   "name": "A/B 테스트와 퍼널 분석",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "가설을 세워 실험을 설계하고 결과를 통계로 해석한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "퍼널·코호트 분석",
+      "핵심 지표(AARRR) 정하기",
+      "SQL로 지표 뽑기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "실험",
+     "items": [
+      "가설과 실험 설계",
+      "표본·유의성 이해",
+      "결과 해석과 회고"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.gr-project",
+   "name": "지표 개선 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "실제 서비스나 내 채널의 지표 하나를 실험으로 끌어올린 기록을 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "문제 찾기",
+     "items": [
+      "지표 살펴보기",
+      "막히는 구간 찾기",
+      "가설 3개"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실험",
+     "items": [
+      "실험 실행",
+      "결과 측정",
+      "다음 실험"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "전후 수치",
+      "배운 점",
+      "사례 문서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.crm-basics",
+   "name": "CRM 기초",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "세그먼트·리텐션·LTV 개념으로 고객을 나눠 볼 수 있다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "고객 생애 주기",
+      "세그먼트와 RFM",
+      "리텐션·LTV"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "적용",
+     "items": [
+      "서비스 하나의 CRM 뜯어보기",
+      "받은 메시지 모아 분석",
+      "개선안 쓰기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.crm-campaign",
+   "name": "메시지 캠페인 설계",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "세그먼트별 푸시·알림톡·이메일 캠페인을 설계한 기획서를 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "대상",
+     "items": [
+      "세그먼트 정의",
+      "목표 지표",
+      "발송 시점"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "설계",
+     "items": [
+      "메시지 문안",
+      "자동화 시나리오",
+      "성과 측정 계획"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "기획서 완성",
+      "가상 결과 분석",
+      "피드백 반영"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ct-planning",
+   "name": "콘텐츠 기획과 카피라이팅",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "타깃에 맞는 콘텐츠를 기획하고 카피를 쓴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기획",
+     "items": [
+      "타깃과 메시지 정하기",
+      "콘텐츠 캘린더",
+      "레퍼런스 분석"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "카피",
+     "items": [
+      "헤드라인 30개 쓰기",
+      "채널별 문체 맞추기",
+      "반응 보고 고치기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.br-strategy",
+   "name": "브랜드 전략 분석",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "브랜드의 포지셔닝과 아이덴티티를 분석해 문서로 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "브랜드 자산·아이덴티티",
+      "포지셔닝",
+      "브랜드 경험"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "분석",
+     "items": [
+      "브랜드 2곳 비교 분석",
+      "리브랜딩 사례 정리",
+      "분석서 쓰기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.br-campaign",
+   "name": "캠페인 기획서 만들기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "브랜드 하나를 골라 통합 캠페인 기획서를 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "브랜드 과제 정하기",
+      "소비자 조사",
+      "인사이트 뽑기"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "기획",
+     "items": [
+      "콘셉트와 메시지",
+      "채널별 실행안",
+      "예산·일정·지표"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "발표",
+     "items": [
+      "발표 자료",
+      "피드백",
+      "최종본"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pr-press",
+   "name": "보도자료와 기획 기사 쓰기",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "보도자료 형식에 맞춰 쓰고 기자에게 보내는 과정을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "형식",
+     "items": [
+      "보도자료 구조",
+      "제목·리드 쓰기",
+      "실제 보도자료 20개 분석"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "쓰기",
+     "items": [
+      "보도자료 5건 작성",
+      "기획 기사 제안서",
+      "첨삭 받기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.pr-plan",
+   "name": "홍보 계획서와 위기 대응 시나리오",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "연간 홍보 계획과 위기 상황 대응안을 문서로 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "홍보 계획",
+     "items": [
+      "목표·대상 정하기",
+      "매체 목록",
+      "월별 계획"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "위기 대응",
+     "items": [
+      "위기 사례 분석",
+      "단계별 대응 문안",
+      "질의응답 준비"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.mkt-basics",
+   "step": 2,
+   "major": false,
+   "skip": "경영학 마케팅 과목에서 배운다"
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.excel-data",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.mkt-ga",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.outreach",
+   "step": 10,
+   "major": true,
+   "note": "마케팅 서포터즈·기업 대외활동",
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 12,
+   "major": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 13,
+   "major": true,
+   "note": "대기업·외국계에 지원할 때",
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 14,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 15,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 16,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "performance": [
+   {
+    "ref": "p.pf-ads",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.pf-cert",
+    "step": 7,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.pf-report",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "growth": [
+   {
+    "ref": "cp.sql",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.gr-experiment",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.gr-project",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "crm": [
+   {
+    "ref": "cp.sql",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.crm-basics",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.crm-campaign",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "content": [
+   {
+    "ref": "p.ct-planning",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.video-edit",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.channel",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "brand": [
+   {
+    "ref": "p.br-strategy",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.br-campaign",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.contest",
+    "step": 8,
+    "major": true,
+    "note": "광고·마케팅 공모전"
+   }
+  ],
+  "pr": [
+   {
+    "ref": "cp.writing",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.pr-press",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.pr-plan",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.outreach",
+    "step": 9,
+    "major": true,
+    "note": "기자단 활동"
+   }
+  ]
+ }
+}

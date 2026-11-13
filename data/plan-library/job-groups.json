@@ -1,0 +1,1172 @@
+{
+ "updatedAt": "2026-11-13",
+ "note": "추천 직무 112개와 1차(100개)에 넣은 직업. deferred = 1차에서 뺀 이유",
+ "groups": [
+  {
+   "code": "011",
+   "name": "행정·경영·금융·보험 관리",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 7,
+   "picked": [],
+   "deferred": "관리자 — 승진으로 가는 자리라 입문 계획이 없다"
+  },
+  {
+   "code": "012",
+   "name": "전문서비스 관리",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 10,
+   "picked": [],
+   "deferred": "관리자 — 승진으로 가는 자리라 입문 계획이 없다"
+  },
+  {
+   "code": "013",
+   "name": "개인서비스·영업·운송 관리",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 5,
+   "picked": [],
+   "deferred": "관리자 — 승진으로 가는 자리라 입문 계획이 없다"
+  },
+  {
+   "code": "014",
+   "name": "건설·제조·생산 관리",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "관리자 — 승진으로 가는 자리라 입문 계획이 없다"
+  },
+  {
+   "code": "015",
+   "name": "경영·회계·광고·상품기획",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 12,
+   "picked": [
+    "인적자원전문가",
+    "회계사",
+    "세무사",
+    "노무사",
+    "상품기획자"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "016",
+   "name": "정부 행정 사무",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 4,
+   "picked": [
+    "일반행정공무원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "017",
+   "name": "경영지원 사무",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 7,
+   "picked": [
+    "광고·홍보·마케팅전문가",
+    "경영기획사무원",
+    "영업기획·관리·지원사무원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "018",
+   "name": "회계·경리 사무",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 3,
+   "picked": [
+    "회계사무원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "019",
+   "name": "무역·구매·생산·품질 사무",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 9,
+   "picked": [
+    "무역사무원",
+    "물류사무원",
+    "품질관리사무원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "01A",
+   "name": "안내·접수·고객상담 사무",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 4,
+   "picked": [
+    "고객상담원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "01B",
+   "name": "통계·비서·사무보조",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 4,
+   "picked": [
+    "전산자료입력원 및 사무보조원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "01C",
+   "name": "금융·보험 전문가",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 6,
+   "picked": [
+    "투자분석가"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "01D",
+   "name": "금융·보험 사무·영업",
+   "top": "01",
+   "topName": "경영·사무·금융·보험",
+   "jobCount": 7,
+   "picked": [
+    "은행사무원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "021",
+   "name": "인문·사회·자연·생명과학 연구",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 23,
+   "picked": [
+    "생물학연구원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "022",
+   "name": "컴퓨터하드웨어·통신공학",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 4,
+   "picked": [],
+   "deferred": "준비 인구가 적음 — 2차로 미룸"
+  },
+  {
+   "code": "023",
+   "name": "컴퓨터시스템",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "준비 인구가 적음 — 2차로 미룸"
+  },
+  {
+   "code": "024",
+   "name": "소프트웨어 개발",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 8,
+   "picked": [
+    "응용소프트웨어개발자",
+    "웹기획자",
+    "IT테스터 및 IT QA전문가"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "025",
+   "name": "네트워크 시스템·정보보안",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 2,
+   "picked": [
+    "정보보안전문가"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "026",
+   "name": "데이터·정보시스템·웹 운영",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 6,
+   "picked": [
+    "데이터분석가(빅데이터분석가)",
+    "정보시스템운영자"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "027",
+   "name": "통신·방송 송출",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "준비 인구가 적음 — 2차로 미룸"
+  },
+  {
+   "code": "028",
+   "name": "건설·채굴 공학",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 17,
+   "picked": [
+    "건축가(건축설계사)",
+    "건축시공기술자 및 견적원",
+    "토목시공기술자 및 견적원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "029",
+   "name": "기계·로봇·금속·재료 공학",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 9,
+   "picked": [
+    "자동차공학기술자"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "02A",
+   "name": "전기·전자 공학",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 11,
+   "picked": [
+    "반도체공학기술자 및 연구원",
+    "전자제품 및 부품 개발기술자",
+    "전기안전기술자"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "02B",
+   "name": "화학·에너지·환경 공학",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 18,
+   "picked": [
+    "의약품공학기술자 및 연구원",
+    "수질환경기술자 및 연구원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "02C",
+   "name": "섬유·식품·안전 공학",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 8,
+   "picked": [
+    "산업안전원 및 위험관리원",
+    "식품공학기술자 및 연구원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "02D",
+   "name": "제도·3D프린팅·기타 공학",
+   "top": "02",
+   "topName": "연구 및 공학기술",
+   "jobCount": 2,
+   "picked": [
+    "제도사(캐드원)"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "031",
+   "name": "교수·학교·유치원 교사",
+   "top": "03",
+   "topName": "교육·법률·사회복지·경찰·소방 및 군인",
+   "jobCount": 6,
+   "picked": [
+    "초등학교교사",
+    "중·고등학교교사",
+    "유치원교사",
+    "특수교육교사"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "032",
+   "name": "외국어·문리 강사",
+   "top": "03",
+   "topName": "교육·법률·사회복지·경찰·소방 및 군인",
+   "jobCount": 2,
+   "picked": [
+    "문리학원강사"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "033",
+   "name": "정보통신·기술·기능계 강사",
+   "top": "03",
+   "topName": "교육·법률·사회복지·경찰·소방 및 군인",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "준비 인구가 적음 — 2차로 미룸"
+  },
+  {
+   "code": "034",
+   "name": "예능·학습지·기타 강사",
+   "top": "03",
+   "topName": "교육·법률·사회복지·경찰·소방 및 군인",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "준비 인구가 적음 — 2차로 미룸"
+  },
+  {
+   "code": "035",
+   "name": "장학관·교육조교·보조 교사",
+   "top": "03",
+   "topName": "교육·법률·사회복지·경찰·소방 및 군인",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "준비 인구가 적음 — 2차로 미룸"
+  },
+  {
+   "code": "036",
+   "name": "법률 전문가·사무",
+   "top": "03",
+   "topName": "교육·법률·사회복지·경찰·소방 및 군인",
+   "jobCount": 7,
+   "picked": [
+    "변호사",
+    "법률사무원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "037",
+   "name": "사회복지·상담",
+   "top": "03",
+   "topName": "교육·법률·사회복지·경찰·소방 및 군인",
+   "jobCount": 5,
+   "picked": [
+    "사회복지사",
+    "직업상담사",
+    "심리상담전문가",
+    "청소년지도사"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "038",
+   "name": "보육·생활지도·종교",
+   "top": "03",
+   "topName": "교육·법률·사회복지·경찰·소방 및 군인",
+   "jobCount": 2,
+   "picked": [
+    "보육교사"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "039",
+   "name": "경찰·소방·교도·군인",
+   "top": "03",
+   "topName": "교육·법률·사회복지·경찰·소방 및 군인",
+   "jobCount": 6,
+   "picked": [
+    "경찰관",
+    "소방관",
+    "부사관"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "041",
+   "name": "의사·한의사·치과의사",
+   "top": "04",
+   "topName": "보건·의료",
+   "jobCount": 16,
+   "picked": [
+    "일반의사"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "042",
+   "name": "약사·간호사·영양사 등",
+   "top": "04",
+   "topName": "보건·의료",
+   "jobCount": 6,
+   "picked": [
+    "간호사",
+    "영양사",
+    "약사"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "043",
+   "name": "의료기사·치료사·재활사",
+   "top": "04",
+   "topName": "보건·의료",
+   "jobCount": 12,
+   "picked": [
+    "물리치료사",
+    "치과위생사",
+    "방사선사",
+    "임상병리사"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "044",
+   "name": "그 외 보건·의료",
+   "top": "04",
+   "topName": "보건·의료",
+   "jobCount": 6,
+   "picked": [
+    "간호조무사",
+    "응급구조사"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "051",
+   "name": "작가·통번역·출판",
+   "top": "05",
+   "topName": "예술·디자인·방송·스포츠",
+   "jobCount": 5,
+   "picked": [
+    "번역가"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "052",
+   "name": "기자·언론 전문가",
+   "top": "05",
+   "topName": "예술·디자인·방송·스포츠",
+   "jobCount": 4,
+   "picked": [
+    "신문기자"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "053",
+   "name": "학예사·사서·기록물관리사",
+   "top": "05",
+   "topName": "예술·디자인·방송·스포츠",
+   "jobCount": 4,
+   "picked": [
+    "사서"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "054",
+   "name": "창작·공연",
+   "top": "05",
+   "topName": "예술·디자인·방송·스포츠",
+   "jobCount": 14,
+   "picked": [
+    "만화가"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "055",
+   "name": "제품·패션·실내·시각 디자인",
+   "top": "05",
+   "topName": "예술·디자인·방송·스포츠",
+   "jobCount": 5,
+   "picked": [
+    "시각디자이너",
+    "실내장식디자이너",
+    "의상디자이너"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "056",
+   "name": "미디어·UX/UI 디자인",
+   "top": "05",
+   "topName": "예술·디자인·방송·스포츠",
+   "jobCount": 4,
+   "picked": [
+    "UX·UI디자이너",
+    "영상그래픽디자이너"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "057",
+   "name": "연극·영화·방송",
+   "top": "05",
+   "topName": "예술·디자인·방송·스포츠",
+   "jobCount": 17,
+   "picked": [
+    "영상·녹화 및 편집기사",
+    "방송연출가",
+    "미디어콘텐츠창작자(크리에이터)"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "058",
+   "name": "공연·음반 기획",
+   "top": "05",
+   "topName": "예술·디자인·방송·스포츠",
+   "jobCount": 1,
+   "picked": [
+    "공연·영화 및 음반기획자"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "059",
+   "name": "스포츠·레크리에이션",
+   "top": "05",
+   "topName": "예술·디자인·방송·스포츠",
+   "jobCount": 8,
+   "picked": [
+    "스포츠트레이너"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "061",
+   "name": "미용·반려동물 서비스",
+   "top": "06",
+   "topName": "미용·여행·숙박·음식·경비·돌봄·청소",
+   "jobCount": 7,
+   "picked": [
+    "미용사"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "062",
+   "name": "결혼·장례 등 예식 서비스",
+   "top": "06",
+   "topName": "미용·여행·숙박·음식·경비·돌봄·청소",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "준비 인구가 적음 — 2차로 미룸"
+  },
+  {
+   "code": "063",
+   "name": "여행·승무·숙박·오락 서비스",
+   "top": "06",
+   "topName": "미용·여행·숙박·음식·경비·돌봄·청소",
+   "jobCount": 11,
+   "picked": [
+    "항공기객실승무원",
+    "숙박시설서비스원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "064",
+   "name": "주방장·조리사",
+   "top": "06",
+   "topName": "미용·여행·숙박·음식·경비·돌봄·청소",
+   "jobCount": 7,
+   "picked": [
+    "한식조리사",
+    "음료조리사"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "065",
+   "name": "식당 서비스",
+   "top": "06",
+   "topName": "미용·여행·숙박·음식·경비·돌봄·청소",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "단순·보조 — 준비 과정이 짧다"
+  },
+  {
+   "code": "066",
+   "name": "경호·보안",
+   "top": "06",
+   "topName": "미용·여행·숙박·음식·경비·돌봄·청소",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "준비 인구가 적음 — 2차로 미룸"
+  },
+  {
+   "code": "067",
+   "name": "경비원",
+   "top": "06",
+   "topName": "미용·여행·숙박·음식·경비·돌봄·청소",
+   "jobCount": 1,
+   "picked": [],
+   "deferred": "단순·보조 — 준비 과정이 짧다"
+  },
+  {
+   "code": "068",
+   "name": "돌봄 서비스",
+   "top": "06",
+   "topName": "미용·여행·숙박·음식·경비·돌봄·청소",
+   "jobCount": 2,
+   "picked": [
+    "요양보호사 및 간병인"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "069",
+   "name": "청소·방역·가사 서비스",
+   "top": "06",
+   "topName": "미용·여행·숙박·음식·경비·돌봄·청소",
+   "jobCount": 5,
+   "picked": [],
+   "deferred": "단순·보조 — 준비 과정이 짧다"
+  },
+  {
+   "code": "06A",
+   "name": "검침·주차관리 등 서비스",
+   "top": "06",
+   "topName": "미용·여행·숙박·음식·경비·돌봄·청소",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "단순·보조 — 준비 과정이 짧다"
+  },
+  {
+   "code": "071",
+   "name": "부동산중개",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 1,
+   "picked": [
+    "부동산중개인"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "072",
+   "name": "기술·의약품·해외 영업",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 3,
+   "picked": [
+    "기술영업원",
+    "해외영업원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "073",
+   "name": "자동차·제품·기타 영업",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "준비 인구가 적음 — 2차로 미룸"
+  },
+  {
+   "code": "074",
+   "name": "텔레마케터",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 1,
+   "picked": [],
+   "deferred": "단순·보조 — 준비 과정이 짧다"
+  },
+  {
+   "code": "075",
+   "name": "판매점장·상점 판매",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "단순·보조 — 준비 과정이 짧다"
+  },
+  {
+   "code": "076",
+   "name": "온라인판매·통신서비스",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 6,
+   "picked": [
+    "온라인판매원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "077",
+   "name": "매장 계산·매표",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "단순·보조 — 준비 과정이 짧다"
+  },
+  {
+   "code": "078",
+   "name": "판촉·기타 판매",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 1,
+   "picked": [],
+   "deferred": "단순·보조 — 준비 과정이 짧다"
+  },
+  {
+   "code": "079",
+   "name": "항공기·선박·철도 조종·관제",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 9,
+   "picked": [
+    "항공기조종사",
+    "철도·전동차기관사"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "07A",
+   "name": "자동차 운전",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "준비 인구가 적음 — 2차로 미룸"
+  },
+  {
+   "code": "07B",
+   "name": "물품이동장비 조작",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 2,
+   "picked": [
+    "지게차운전원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "07C",
+   "name": "택배·배달·하역 등 운송",
+   "top": "07",
+   "topName": "영업·판매·운전·운송",
+   "jobCount": 5,
+   "picked": [],
+   "deferred": "단순·보조 — 준비 과정이 짧다"
+  },
+  {
+   "code": "081",
+   "name": "건설구조 기능",
+   "top": "08",
+   "topName": "건설·채굴",
+   "jobCount": 8,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "082",
+   "name": "건축마감 기능",
+   "top": "08",
+   "topName": "건설·채굴",
+   "jobCount": 8,
+   "picked": [
+    "도배공"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "083",
+   "name": "배관",
+   "top": "08",
+   "topName": "건설·채굴",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "084",
+   "name": "건설·채굴 기계 운전",
+   "top": "08",
+   "topName": "건설·채굴",
+   "jobCount": 1,
+   "picked": [
+    "건설 및 채굴기계운전원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "085",
+   "name": "기타 건설 기능",
+   "top": "08",
+   "topName": "건설·채굴",
+   "jobCount": 4,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "086",
+   "name": "건설·채굴 단순 종사자",
+   "top": "08",
+   "topName": "건설·채굴",
+   "jobCount": 1,
+   "picked": [],
+   "deferred": "단순·보조 — 준비 과정이 짧다"
+  },
+  {
+   "code": "091",
+   "name": "기계장비 설치·정비",
+   "top": "09",
+   "topName": "설치·정비·생산-기계·금속·재료",
+   "jobCount": 7,
+   "picked": [
+    "공업기계설치 및 정비원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "092",
+   "name": "운송장비 정비",
+   "top": "09",
+   "topName": "설치·정비·생산-기계·금속·재료",
+   "jobCount": 7,
+   "picked": [
+    "자동차정비원",
+    "항공기정비원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "093",
+   "name": "금형·공작기계 조작",
+   "top": "09",
+   "topName": "설치·정비·생산-기계·금속·재료",
+   "jobCount": 2,
+   "picked": [
+    "금속공작기계조작원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "094",
+   "name": "설비·자동화 조작",
+   "top": "09",
+   "topName": "설치·정비·생산-기계·금속·재료",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "095",
+   "name": "기계·운송장비 조립",
+   "top": "09",
+   "topName": "설치·정비·생산-기계·금속·재료",
+   "jobCount": 4,
+   "picked": [
+    "자동차조립원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "096",
+   "name": "금속 기계·설비 조작",
+   "top": "09",
+   "topName": "설치·정비·생산-기계·금속·재료",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "097",
+   "name": "판금·제관·단조·주조",
+   "top": "09",
+   "topName": "설치·정비·생산-기계·금속·재료",
+   "jobCount": 4,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "098",
+   "name": "용접",
+   "top": "09",
+   "topName": "설치·정비·생산-기계·금속·재료",
+   "jobCount": 1,
+   "picked": [
+    "용접원(용접기조작원)"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "099",
+   "name": "도장·도금",
+   "top": "09",
+   "topName": "설치·정비·생산-기계·금속·재료",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "09A",
+   "name": "비금속제품 생산기계 조작",
+   "top": "09",
+   "topName": "설치·정비·생산-기계·금속·재료",
+   "jobCount": 4,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "101",
+   "name": "전기공",
+   "top": "10",
+   "topName": "설치·정비·생산-전기·전자·정보통신",
+   "jobCount": 3,
+   "picked": [
+    "내선전기공"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "102",
+   "name": "전기·전자 기기 설치·수리",
+   "top": "10",
+   "topName": "설치·정비·생산-전기·전자·정보통신",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "103",
+   "name": "발전·전기 설비 조작",
+   "top": "10",
+   "topName": "설치·정비·생산-전기·전자·정보통신",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "104",
+   "name": "전기·전자 생산기계 조작",
+   "top": "10",
+   "topName": "설치·정비·생산-전기·전자·정보통신",
+   "jobCount": 2,
+   "picked": [
+    "전자부품·제품생산기계조작원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "105",
+   "name": "전기·전자 부품·제품 조립",
+   "top": "10",
+   "topName": "설치·정비·생산-전기·전자·정보통신",
+   "jobCount": 1,
+   "picked": [],
+   "deferred": "단순·보조 — 준비 과정이 짧다"
+  },
+  {
+   "code": "106",
+   "name": "정보통신기기 설치·수리",
+   "top": "10",
+   "topName": "설치·정비·생산-전기·전자·정보통신",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "107",
+   "name": "방송·통신장비 설치·수리",
+   "top": "10",
+   "topName": "설치·정비·생산-전기·전자·정보통신",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "111",
+   "name": "석유·화학물 가공장치 조작",
+   "top": "11",
+   "topName": "설치·정비·생산-화학·환경·섬유·의복·식품가공",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "112",
+   "name": "고무·플라스틱·화학제품 생산",
+   "top": "11",
+   "topName": "설치·정비·생산-화학·환경·섬유·의복·식품가공",
+   "jobCount": 4,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "113",
+   "name": "환경 장치 조작",
+   "top": "11",
+   "topName": "설치·정비·생산-화학·환경·섬유·의복·식품가공",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "114",
+   "name": "섬유 제조·가공 기계 조작",
+   "top": "11",
+   "topName": "설치·정비·생산-화학·환경·섬유·의복·식품가공",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "115",
+   "name": "패턴·재단·재봉",
+   "top": "11",
+   "topName": "설치·정비·생산-화학·환경·섬유·의복·식품가공",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "116",
+   "name": "의복 제조·수선",
+   "top": "11",
+   "topName": "설치·정비·생산-화학·환경·섬유·의복·식품가공",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "117",
+   "name": "제화·섬유·의복 기계 조작",
+   "top": "11",
+   "topName": "설치·정비·생산-화학·환경·섬유·의복·식품가공",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "118",
+   "name": "제과·제빵·떡 제조",
+   "top": "11",
+   "topName": "설치·정비·생산-화학·환경·섬유·의복·식품가공",
+   "jobCount": 2,
+   "picked": [
+    "제과·제빵원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "119",
+   "name": "식품가공 기능원",
+   "top": "11",
+   "topName": "설치·정비·생산-화학·환경·섬유·의복·식품가공",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "11A",
+   "name": "식품가공 기계 조작",
+   "top": "11",
+   "topName": "설치·정비·생산-화학·환경·섬유·의복·식품가공",
+   "jobCount": 5,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "121",
+   "name": "인쇄기계·사진현상기 조작",
+   "top": "12",
+   "topName": "설치·정비·생산-인쇄·목재·공예 및 제조 단순",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "122",
+   "name": "목재·펄프·종이 생산",
+   "top": "12",
+   "topName": "설치·정비·생산-인쇄·목재·공예 및 제조 단순",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "123",
+   "name": "가구·목제품 제조·수리",
+   "top": "12",
+   "topName": "설치·정비·생산-인쇄·목재·공예 및 제조 단순",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "124",
+   "name": "공예·귀금속 세공",
+   "top": "12",
+   "topName": "설치·정비·생산-인쇄·목재·공예 및 제조 단순",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "125",
+   "name": "악기·간판·기타 제조",
+   "top": "12",
+   "topName": "설치·정비·생산-인쇄·목재·공예 및 제조 단순",
+   "jobCount": 3,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "131",
+   "name": "작물재배",
+   "top": "13",
+   "topName": "농림어업직",
+   "jobCount": 5,
+   "picked": [
+    "채소·특용작물재배원"
+   ],
+   "deferred": null
+  },
+  {
+   "code": "132",
+   "name": "낙농·사육",
+   "top": "13",
+   "topName": "농림어업직",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "133",
+   "name": "임업",
+   "top": "13",
+   "topName": "농림어업직",
+   "jobCount": 1,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  },
+  {
+   "code": "134",
+   "name": "어업",
+   "top": "13",
+   "topName": "농림어업직",
+   "jobCount": 2,
+   "picked": [],
+   "deferred": "생산 조작·기능 — 2차로 미룸"
+  }
+ ]
+}

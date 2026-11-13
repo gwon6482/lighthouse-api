@@ -1,0 +1,2236 @@
+{
+ "updatedAt": "2026-11-13",
+ "audience": "20대 취업 준비생",
+ "rule": "추천 직무(채용 직종 중분류 112개)마다 준비하는 사람이 많은 직업을 먼저, 준비 인구가 많은 직무는 여러 개. 관리자·단순 노무·생산 조작 직무는 2차. 고용24 공고 수는 참고만(공무원·전문직·IT가 거의 안 잡힌다). 순위는 Claude 의 판단 — 사람이 고칠 것",
+ "families": {
+  "biz": "경영·사무",
+  "finance": "금융",
+  "it": "IT·개발",
+  "data": "데이터",
+  "design": "디자인",
+  "public": "공공·행정",
+  "health": "보건·의료",
+  "edu": "교육",
+  "welfare": "사회복지·상담",
+  "media": "미디어·콘텐츠",
+  "eng": "엔지니어링",
+  "tech": "기술·기능",
+  "service": "서비스",
+  "sales": "영업·유통",
+  "pro": "전문자격·법률",
+  "research": "연구",
+  "transport": "운송",
+  "agri": "농업"
+ },
+ "jobs": [
+  {
+   "no": 1,
+   "tier": 1,
+   "jobCode": "024101",
+   "title": "광고·홍보·마케팅전문가",
+   "displayName": "마케터",
+   "family": "biz",
+   "group": "017",
+   "groupName": "경영지원 사무",
+   "work24Postings": 1061,
+   "tracks": [
+    {
+     "id": "performance",
+     "name": "퍼포먼스 마케팅",
+     "desc": "광고 운영·성과 분석"
+    },
+    {
+     "id": "growth",
+     "name": "그로스 마케팅",
+     "desc": "지표·실험으로 성장 만들기"
+    },
+    {
+     "id": "crm",
+     "name": "CRM 마케팅",
+     "desc": "고객 데이터·리텐션·메시지"
+    },
+    {
+     "id": "content",
+     "name": "콘텐츠 마케팅",
+     "desc": "SNS·영상·글 콘텐츠"
+    },
+    {
+     "id": "brand",
+     "name": "브랜드 마케팅",
+     "desc": "브랜드 전략·캠페인"
+    },
+    {
+     "id": "pr",
+     "name": "홍보(PR)",
+     "desc": "언론 홍보·대외 커뮤니케이션"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "026102",
+     "title": "광고·홍보·마케팅사무원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "tier": 1,
+   "jobCode": "027101",
+   "title": "회계사무원",
+   "displayName": "회계·경리 담당자",
+   "family": "biz",
+   "group": "018",
+   "groupName": "회계·경리 사무",
+   "work24Postings": 863,
+   "tracks": [
+    {
+     "id": "corp",
+     "name": "기업 회계팀",
+     "desc": "전표·결산·재무제표"
+    },
+    {
+     "id": "tax",
+     "name": "세무사무소",
+     "desc": "기장 대리·세무 신고"
+    },
+    {
+     "id": "payroll",
+     "name": "급여·4대보험",
+     "desc": "급여 계산·원천세·보험 신고"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "027201",
+     "title": "경리사무원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "tier": 1,
+   "jobCode": "022202",
+   "title": "인적자원전문가",
+   "displayName": "인사 담당자(HR)",
+   "family": "biz",
+   "group": "015",
+   "groupName": "경영·회계·광고·상품기획",
+   "work24Postings": 25,
+   "tracks": [
+    {
+     "id": "recruit",
+     "name": "채용",
+     "desc": "채용 기획·운영·브랜딩"
+    },
+    {
+     "id": "hrd",
+     "name": "교육(HRD)",
+     "desc": "교육 기획·조직문화"
+    },
+    {
+     "id": "hrm",
+     "name": "인사운영·보상",
+     "desc": "평가·보상·급여·제도"
+    },
+    {
+     "id": "er",
+     "name": "노무",
+     "desc": "노동법·노사 관계"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "026201",
+     "title": "인사·교육·훈련사무원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "tier": 1,
+   "jobCode": "026101",
+   "title": "경영기획사무원",
+   "displayName": "경영기획 담당자",
+   "family": "biz",
+   "group": "017",
+   "groupName": "경영지원 사무",
+   "work24Postings": 252,
+   "tracks": [
+    {
+     "id": "strategy",
+     "name": "경영기획·전략",
+     "desc": "사업계획·실적 관리"
+    },
+    {
+     "id": "bizdev",
+     "name": "사업기획",
+     "desc": "신사업·제휴 기획"
+    },
+    {
+     "id": "fpa",
+     "name": "재무기획",
+     "desc": "예산·손익 분석"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 5,
+   "tier": 2,
+   "jobCode": "026103",
+   "title": "영업기획·관리·지원사무원",
+   "displayName": "영업관리 담당자",
+   "family": "sales",
+   "group": "017",
+   "groupName": "경영지원 사무",
+   "work24Postings": 1061,
+   "tracks": [
+    {
+     "id": "salesops",
+     "name": "영업관리",
+     "desc": "매출·거래처·채권 관리"
+    },
+    {
+     "id": "salesplan",
+     "name": "영업기획",
+     "desc": "목표·판촉 기획"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 6,
+   "tier": 1,
+   "jobCode": "025401",
+   "title": "일반행정공무원",
+   "displayName": "일반행정 공무원",
+   "family": "public",
+   "group": "016",
+   "groupName": "정부 행정 사무",
+   "work24Postings": 32,
+   "tracks": [
+    {
+     "id": "g9",
+     "name": "9급 공채",
+     "desc": "국가직·지방직 9급"
+    },
+    {
+     "id": "g7",
+     "name": "7급 공채",
+     "desc": "PSAT + 전문과목"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 7,
+   "tier": 2,
+   "jobCode": "023101",
+   "title": "회계사",
+   "displayName": "공인회계사(CPA)",
+   "family": "pro",
+   "group": "015",
+   "groupName": "경영·회계·광고·상품기획",
+   "work24Postings": 3,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 8,
+   "tier": 2,
+   "jobCode": "023201",
+   "title": "세무사",
+   "displayName": "세무사",
+   "family": "pro",
+   "group": "015",
+   "groupName": "경영·회계·광고·상품기획",
+   "work24Postings": 31,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 9,
+   "tier": 3,
+   "jobCode": "022201",
+   "title": "노무사",
+   "displayName": "공인노무사",
+   "family": "pro",
+   "group": "015",
+   "groupName": "경영·회계·광고·상품기획",
+   "work24Postings": 25,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 10,
+   "tier": 2,
+   "jobCode": "024301",
+   "title": "상품기획자",
+   "displayName": "MD·상품기획자",
+   "family": "biz",
+   "group": "015",
+   "groupName": "경영·회계·광고·상품기획",
+   "work24Postings": 75,
+   "tracks": [
+    {
+     "id": "retail",
+     "name": "유통 MD(바이어)",
+     "desc": "백화점·마트·편의점 상품 소싱"
+    },
+    {
+     "id": "online",
+     "name": "온라인 MD",
+     "desc": "이커머스 상품·프로모션 운영"
+    },
+    {
+     "id": "product",
+     "name": "상품기획",
+     "desc": "제조·PB 상품 기획"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 11,
+   "tier": 2,
+   "jobCode": "028101",
+   "title": "무역사무원",
+   "displayName": "무역 사무 담당자",
+   "family": "biz",
+   "group": "019",
+   "groupName": "무역·구매·생산·품질 사무",
+   "work24Postings": 185,
+   "tracks": [
+    {
+     "id": "trade",
+     "name": "수출입 사무",
+     "desc": "서류·결제·통관 진행"
+    },
+    {
+     "id": "forwarding",
+     "name": "포워딩(국제물류)",
+     "desc": "선적·운송 주선"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 12,
+   "tier": 3,
+   "jobCode": "028302",
+   "title": "물류사무원",
+   "displayName": "물류 관리 담당자",
+   "family": "biz",
+   "group": "019",
+   "groupName": "무역·구매·생산·품질 사무",
+   "work24Postings": 1678,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 13,
+   "tier": 2,
+   "jobCode": "028402",
+   "title": "품질관리사무원",
+   "displayName": "품질관리(QC·QA) 담당자",
+   "family": "eng",
+   "group": "019",
+   "groupName": "무역·구매·생산·품질 사무",
+   "work24Postings": 2216,
+   "tracks": [
+    {
+     "id": "qc",
+     "name": "품질관리(QC)",
+     "desc": "검사·공정 품질"
+    },
+    {
+     "id": "qa",
+     "name": "품질보증(QA)",
+     "desc": "품질 시스템·인증·고객 대응"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 14,
+   "tier": 3,
+   "jobCode": "029201",
+   "title": "고객상담원",
+   "displayName": "고객상담(CS) 담당자",
+   "family": "service",
+   "group": "01A",
+   "groupName": "안내·접수·고객상담 사무",
+   "work24Postings": 364,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 15,
+   "tier": 3,
+   "jobCode": "029501",
+   "title": "전산자료입력원 및 사무보조원",
+   "displayName": "사무보조·사무직",
+   "family": "biz",
+   "group": "01B",
+   "groupName": "통계·비서·사무보조",
+   "work24Postings": 169,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 16,
+   "tier": 1,
+   "jobCode": "032101",
+   "title": "은행사무원",
+   "displayName": "은행원",
+   "family": "finance",
+   "group": "01D",
+   "groupName": "금융·보험 사무·영업",
+   "work24Postings": 8,
+   "tracks": [
+    {
+     "id": "retail",
+     "name": "개인금융",
+     "desc": "창구·자산관리(PB)"
+    },
+    {
+     "id": "corp",
+     "name": "기업금융",
+     "desc": "기업 여신·외환"
+    },
+    {
+     "id": "digital",
+     "name": "디지털·IT",
+     "desc": "디지털 금융·데이터"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "032401",
+     "title": "출납창구사무원",
+     "track": "retail"
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "tier": 2,
+   "jobCode": "031101",
+   "title": "투자분석가",
+   "displayName": "증권·자산운용 전문가",
+   "family": "finance",
+   "group": "01C",
+   "groupName": "금융·보험 전문가",
+   "work24Postings": 0,
+   "tracks": [
+    {
+     "id": "research",
+     "name": "리서치(애널리스트)",
+     "desc": "기업·산업 분석"
+    },
+    {
+     "id": "am",
+     "name": "자산운용",
+     "desc": "펀드·포트폴리오 운용"
+    },
+    {
+     "id": "ib",
+     "name": "IB",
+     "desc": "기업금융·인수합병"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "031201",
+     "title": "자산운용가",
+     "track": "am"
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "tier": 1,
+   "jobCode": "133201",
+   "title": "응용소프트웨어개발자",
+   "displayName": "소프트웨어 개발자",
+   "family": "it",
+   "group": "024",
+   "groupName": "소프트웨어 개발",
+   "work24Postings": 97,
+   "tracks": [
+    {
+     "id": "be",
+     "name": "백엔드",
+     "desc": "서버·API·데이터베이스"
+    },
+    {
+     "id": "fe",
+     "name": "프론트엔드",
+     "desc": "웹 화면·사용자 경험"
+    },
+    {
+     "id": "mobile",
+     "name": "모바일 앱",
+     "desc": "Android·iOS·크로스플랫폼"
+    },
+    {
+     "id": "ai",
+     "name": "AI",
+     "desc": "머신러닝·딥러닝 모델 개발"
+    },
+    {
+     "id": "data",
+     "name": "데이터베이스·데이터 엔지니어링",
+     "desc": "DB 설계·데이터 파이프라인"
+    },
+    {
+     "id": "sys",
+     "name": "시스템·임베디드",
+     "desc": "OS·펌웨어·하드웨어 가까운 개발"
+    },
+    {
+     "id": "game",
+     "name": "게임",
+     "desc": "게임 클라이언트·서버"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "133301",
+     "title": "웹개발자",
+     "track": "be"
+    },
+    {
+     "jobCode": "133205",
+     "title": "모바일앱개발자",
+     "track": "mobile"
+    },
+    {
+     "jobCode": "133204",
+     "title": "게임프로그래머",
+     "track": "game"
+    },
+    {
+     "jobCode": "133101",
+     "title": "시스템소프트웨어개발자",
+     "track": "sys"
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "tier": 1,
+   "jobCode": "133302",
+   "title": "웹기획자",
+   "displayName": "서비스 기획자·PM",
+   "family": "it",
+   "group": "024",
+   "groupName": "소프트웨어 개발",
+   "work24Postings": 32,
+   "tracks": [
+    {
+     "id": "planner",
+     "name": "서비스 기획",
+     "desc": "요구사항·화면 설계·정책"
+    },
+    {
+     "id": "pm",
+     "name": "PM·PO",
+     "desc": "제품 목표·우선순위·지표"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 20,
+   "tier": 3,
+   "jobCode": "133901",
+   "title": "IT테스터 및 IT QA전문가",
+   "displayName": "QA 엔지니어",
+   "family": "it",
+   "group": "024",
+   "groupName": "소프트웨어 개발",
+   "work24Postings": 16,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 21,
+   "tier": 2,
+   "jobCode": "135001",
+   "title": "정보보안전문가",
+   "displayName": "정보보안 전문가",
+   "family": "it",
+   "group": "025",
+   "groupName": "네트워크 시스템·정보보안",
+   "work24Postings": 23,
+   "tracks": [
+    {
+     "id": "soc",
+     "name": "보안관제",
+     "desc": "탐지·대응 운영"
+    },
+    {
+     "id": "pentest",
+     "name": "모의해킹",
+     "desc": "취약점 진단"
+    },
+    {
+     "id": "grc",
+     "name": "보안 컨설팅",
+     "desc": "관리체계·인증(ISMS)"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 22,
+   "tier": 1,
+   "jobCode": "134102",
+   "title": "데이터분석가(빅데이터분석가)",
+   "displayName": "데이터 분석가",
+   "family": "data",
+   "group": "026",
+   "groupName": "데이터·정보시스템·웹 운영",
+   "work24Postings": 9,
+   "tracks": [
+    {
+     "id": "analyst",
+     "name": "데이터 분석",
+     "desc": "지표·대시보드·비즈니스 분석"
+    },
+    {
+     "id": "ds",
+     "name": "데이터 사이언스",
+     "desc": "통계·머신러닝 모델링"
+    },
+    {
+     "id": "de",
+     "name": "데이터 엔지니어링",
+     "desc": "수집·적재·파이프라인"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 23,
+   "tier": 2,
+   "jobCode": "134301",
+   "title": "정보시스템운영자",
+   "displayName": "인프라·시스템 엔지니어",
+   "family": "it",
+   "group": "026",
+   "groupName": "데이터·정보시스템·웹 운영",
+   "work24Postings": 55,
+   "tracks": [
+    {
+     "id": "sys",
+     "name": "서버·시스템 운영",
+     "desc": "서버·OS·모니터링"
+    },
+    {
+     "id": "cloud",
+     "name": "클라우드·DevOps",
+     "desc": "AWS·배포 자동화"
+    },
+    {
+     "id": "network",
+     "name": "네트워크",
+     "desc": "라우팅·스위칭·보안장비"
+    },
+    {
+     "id": "dba",
+     "name": "DBA",
+     "desc": "데이터베이스 운영·튜닝"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "134303",
+     "title": "IT기술지원전문가",
+     "track": "sys"
+    },
+    {
+     "jobCode": "134302",
+     "title": "네트워크관리자",
+     "track": "network"
+    },
+    {
+     "jobCode": "134101",
+     "title": "데이터베이스운영·관리자",
+     "track": "dba"
+    }
+   ]
+  },
+  {
+   "no": 24,
+   "tier": 3,
+   "jobCode": "121104",
+   "title": "생물학연구원",
+   "displayName": "바이오 연구원",
+   "family": "research",
+   "group": "021",
+   "groupName": "인문·사회·자연·생명과학 연구",
+   "work24Postings": 13,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 25,
+   "tier": 2,
+   "jobCode": "140101",
+   "title": "건축가(건축설계사)",
+   "displayName": "건축설계사",
+   "family": "eng",
+   "group": "028",
+   "groupName": "건설·채굴 공학",
+   "work24Postings": 92,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 26,
+   "tier": 2,
+   "jobCode": "140207",
+   "title": "건축시공기술자 및 견적원",
+   "displayName": "건축 시공 기술자",
+   "family": "eng",
+   "group": "028",
+   "groupName": "건설·채굴 공학",
+   "work24Postings": 719,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 27,
+   "tier": 3,
+   "jobCode": "140306",
+   "title": "토목시공기술자 및 견적원",
+   "displayName": "토목 기술자",
+   "family": "eng",
+   "group": "028",
+   "groupName": "건설·채굴 공학",
+   "work24Postings": 687,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 28,
+   "tier": 2,
+   "jobCode": "151107",
+   "title": "자동차공학기술자",
+   "displayName": "기계·자동차 엔지니어",
+   "family": "eng",
+   "group": "029",
+   "groupName": "기계·로봇·금속·재료 공학",
+   "work24Postings": 468,
+   "tracks": [
+    {
+     "id": "design",
+     "name": "설계·개발(R&D)",
+     "desc": "기구 설계·해석"
+    },
+    {
+     "id": "mfg",
+     "name": "생산기술",
+     "desc": "공정·설비·양산"
+    },
+    {
+     "id": "elec",
+     "name": "전장·제어",
+     "desc": "전장 부품·제어 SW"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 29,
+   "tier": 1,
+   "jobCode": "153202",
+   "title": "반도체공학기술자 및 연구원",
+   "displayName": "반도체 엔지니어",
+   "family": "eng",
+   "group": "02A",
+   "groupName": "전기·전자 공학",
+   "work24Postings": 40,
+   "tracks": [
+    {
+     "id": "process",
+     "name": "공정 엔지니어",
+     "desc": "8대 공정·수율"
+    },
+    {
+     "id": "equip",
+     "name": "설비 엔지니어",
+     "desc": "장비 유지보수·개선"
+    },
+    {
+     "id": "design",
+     "name": "회로 설계",
+     "desc": "디지털·아날로그 설계"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 30,
+   "tier": 3,
+   "jobCode": "153201",
+   "title": "전자제품 및 부품 개발기술자",
+   "displayName": "전자 하드웨어 개발자",
+   "family": "eng",
+   "group": "02A",
+   "groupName": "전기·전자 공학",
+   "work24Postings": 115,
+   "tracks": [
+    {
+     "id": "hw",
+     "name": "회로·하드웨어",
+     "desc": "회로 설계·PCB"
+    },
+    {
+     "id": "fw",
+     "name": "펌웨어",
+     "desc": "MCU·임베디드 C"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 31,
+   "tier": 2,
+   "jobCode": "153106",
+   "title": "전기안전기술자",
+   "displayName": "전기 기술자(전기기사)",
+   "family": "eng",
+   "group": "02A",
+   "groupName": "전기·전자 공학",
+   "work24Postings": 522,
+   "tracks": [
+    {
+     "id": "safety",
+     "name": "전기안전관리",
+     "desc": "건물·공장 전기설비 관리"
+    },
+    {
+     "id": "design",
+     "name": "전기 설계·감리",
+     "desc": "설계 도면·감리"
+    },
+    {
+     "id": "utility",
+     "name": "발전·전력 공기업",
+     "desc": "한전·발전사 채용"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 32,
+   "tier": 2,
+   "jobCode": "154105",
+   "title": "의약품공학기술자 및 연구원",
+   "displayName": "제약·바이오 엔지니어",
+   "family": "eng",
+   "group": "02B",
+   "groupName": "화학·에너지·환경 공학",
+   "work24Postings": 131,
+   "tracks": [
+    {
+     "id": "mfg",
+     "name": "생산",
+     "desc": "제조 공정·GMP"
+    },
+    {
+     "id": "qc",
+     "name": "품질(QC·QA)",
+     "desc": "시험·품질보증"
+    },
+    {
+     "id": "rnd",
+     "name": "연구개발",
+     "desc": "제제·분석 연구"
+    },
+    {
+     "id": "ra",
+     "name": "인허가(RA)",
+     "desc": "허가·규제 대응"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 33,
+   "tier": 3,
+   "jobCode": "155302",
+   "title": "수질환경기술자 및 연구원",
+   "displayName": "환경 엔지니어",
+   "family": "eng",
+   "group": "02B",
+   "groupName": "화학·에너지·환경 공학",
+   "work24Postings": 231,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 34,
+   "tier": 1,
+   "jobCode": "158401",
+   "title": "산업안전원 및 위험관리원",
+   "displayName": "안전관리자",
+   "family": "eng",
+   "group": "02C",
+   "groupName": "섬유·식품·안전 공학",
+   "work24Postings": 187,
+   "tracks": [
+    {
+     "id": "construction",
+     "name": "건설 안전",
+     "desc": "건설 현장 안전관리"
+    },
+    {
+     "id": "mfg",
+     "name": "제조 안전",
+     "desc": "공장·설비 안전관리"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "158402",
+     "title": "위험관리원",
+     "track": null
+    }
+   ]
+  },
+  {
+   "no": 35,
+   "tier": 2,
+   "jobCode": "157101",
+   "title": "식품공학기술자 및 연구원",
+   "displayName": "식품 연구·품질 담당자",
+   "family": "eng",
+   "group": "02C",
+   "groupName": "섬유·식품·안전 공학",
+   "work24Postings": 53,
+   "tracks": [
+    {
+     "id": "rnd",
+     "name": "연구개발",
+     "desc": "제품 개발·배합"
+    },
+    {
+     "id": "qc",
+     "name": "품질관리",
+     "desc": "HACCP·위생·검사"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 36,
+   "tier": 3,
+   "jobCode": "159104",
+   "title": "제도사(캐드원)",
+   "displayName": "캐드(CAD) 설계 보조",
+   "family": "tech",
+   "group": "02D",
+   "groupName": "제도·3D프린팅·기타 공학",
+   "work24Postings": 813,
+   "tracks": [
+    {
+     "id": "arch",
+     "name": "건축 캐드",
+     "desc": "건축·인테리어 도면"
+    },
+    {
+     "id": "mech",
+     "name": "기계 캐드",
+     "desc": "기계 부품·3D 모델링"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 37,
+   "tier": 1,
+   "jobCode": "212201",
+   "title": "초등학교교사",
+   "displayName": "초등교사",
+   "family": "edu",
+   "group": "031",
+   "groupName": "교수·학교·유치원 교사",
+   "work24Postings": 5,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 38,
+   "tier": 1,
+   "jobCode": "212101",
+   "title": "중·고등학교교사",
+   "displayName": "중등교사",
+   "family": "edu",
+   "group": "031",
+   "groupName": "교수·학교·유치원 교사",
+   "work24Postings": 28,
+   "tracks": [
+    {
+     "id": "public",
+     "name": "국공립 임용",
+     "desc": "임용시험"
+    },
+    {
+     "id": "private",
+     "name": "사립학교",
+     "desc": "사립 채용·기간제"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 39,
+   "tier": 2,
+   "jobCode": "213001",
+   "title": "유치원교사",
+   "displayName": "유치원 교사",
+   "family": "edu",
+   "group": "031",
+   "groupName": "교수·학교·유치원 교사",
+   "work24Postings": 137,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 40,
+   "tier": 3,
+   "jobCode": "212301",
+   "title": "특수교육교사",
+   "displayName": "특수교사",
+   "family": "edu",
+   "group": "031",
+   "groupName": "교수·학교·유치원 교사",
+   "work24Postings": 41,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 41,
+   "tier": 2,
+   "jobCode": "214101",
+   "title": "문리학원강사",
+   "displayName": "학원 강사",
+   "family": "edu",
+   "group": "032",
+   "groupName": "외국어·문리 강사",
+   "work24Postings": 39,
+   "tracks": [
+    {
+     "id": "exam",
+     "name": "중·고등 입시",
+     "desc": "과목 전문 강사"
+    },
+    {
+     "id": "elementary",
+     "name": "초등·보습",
+     "desc": "초등·중등 내신"
+    },
+    {
+     "id": "english",
+     "name": "영어·외국어",
+     "desc": "영어 학원·회화"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "214102",
+     "title": "외국어강사",
+     "track": "english"
+    }
+   ]
+  },
+  {
+   "no": 42,
+   "tier": 2,
+   "jobCode": "221201",
+   "title": "변호사",
+   "displayName": "변호사",
+   "family": "pro",
+   "group": "036",
+   "groupName": "법률 전문가·사무",
+   "work24Postings": 1,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 43,
+   "tier": 3,
+   "jobCode": "222001",
+   "title": "법률사무원",
+   "displayName": "법률 사무직",
+   "family": "pro",
+   "group": "036",
+   "groupName": "법률 전문가·사무",
+   "work24Postings": 53,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 44,
+   "tier": 1,
+   "jobCode": "231101",
+   "title": "사회복지사",
+   "displayName": "사회복지사",
+   "family": "welfare",
+   "group": "037",
+   "groupName": "사회복지·상담",
+   "work24Postings": 1910,
+   "tracks": [
+    {
+     "id": "youth",
+     "name": "아동·청소년",
+     "desc": "지역아동센터·청소년 기관"
+    },
+    {
+     "id": "elderly",
+     "name": "노인",
+     "desc": "노인복지관·요양 시설"
+    },
+    {
+     "id": "disability",
+     "name": "장애인",
+     "desc": "장애인복지관·직업재활"
+    },
+    {
+     "id": "medical",
+     "name": "의료사회복지",
+     "desc": "병원 사회사업"
+    },
+    {
+     "id": "public",
+     "name": "공공(사회복지직 공무원)",
+     "desc": "사회복지직 9급"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 45,
+   "tier": 2,
+   "jobCode": "231401",
+   "title": "직업상담사",
+   "displayName": "직업상담사",
+   "family": "welfare",
+   "group": "037",
+   "groupName": "사회복지·상담",
+   "work24Postings": 98,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 46,
+   "tier": 2,
+   "jobCode": "231201",
+   "title": "심리상담전문가",
+   "displayName": "심리상담사",
+   "family": "welfare",
+   "group": "037",
+   "groupName": "사회복지·상담",
+   "work24Postings": 67,
+   "tracks": [
+    {
+     "id": "counsel",
+     "name": "상담심리",
+     "desc": "상담센터·대학 상담실"
+    },
+    {
+     "id": "youth",
+     "name": "청소년 상담",
+     "desc": "청소년상담사·Wee센터"
+    },
+    {
+     "id": "clinical",
+     "name": "임상심리",
+     "desc": "병원·정신건강"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 47,
+   "tier": 3,
+   "jobCode": "231301",
+   "title": "청소년지도사",
+   "displayName": "청소년지도사",
+   "family": "welfare",
+   "group": "037",
+   "groupName": "사회복지·상담",
+   "work24Postings": 33,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 48,
+   "tier": 1,
+   "jobCode": "232101",
+   "title": "보육교사",
+   "displayName": "보육교사",
+   "family": "edu",
+   "group": "038",
+   "groupName": "보육·생활지도·종교",
+   "work24Postings": 1066,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 49,
+   "tier": 1,
+   "jobCode": "240101",
+   "title": "경찰관",
+   "displayName": "경찰공무원",
+   "family": "public",
+   "group": "039",
+   "groupName": "경찰·소방·교도·군인",
+   "work24Postings": 0,
+   "tracks": [
+    {
+     "id": "open",
+     "name": "순경 공채",
+     "desc": "일반 공개채용"
+    },
+    {
+     "id": "special",
+     "name": "경력경쟁채용",
+     "desc": "전공·경력 특채"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 50,
+   "tier": 1,
+   "jobCode": "240201",
+   "title": "소방관",
+   "displayName": "소방공무원",
+   "family": "public",
+   "group": "039",
+   "groupName": "경찰·소방·교도·군인",
+   "work24Postings": 2,
+   "tracks": [
+    {
+     "id": "open",
+     "name": "공채",
+     "desc": "일반 공개채용"
+    },
+    {
+     "id": "special",
+     "name": "경력경쟁채용",
+     "desc": "구급·구조·화학 등 특채"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 51,
+   "tier": 3,
+   "jobCode": "250301",
+   "title": "부사관",
+   "displayName": "군 부사관",
+   "family": "public",
+   "group": "039",
+   "groupName": "경찰·소방·교도·군인",
+   "work24Postings": 0,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 52,
+   "tier": 1,
+   "jobCode": "304004",
+   "title": "간호사",
+   "displayName": "간호사",
+   "family": "health",
+   "group": "042",
+   "groupName": "약사·간호사·영양사 등",
+   "work24Postings": 629,
+   "tracks": [
+    {
+     "id": "ward",
+     "name": "병동",
+     "desc": "일반 병동 입원 환자 간호"
+    },
+    {
+     "id": "special",
+     "name": "특수파트",
+     "desc": "중환자실·응급실·수술실"
+    },
+    {
+     "id": "community",
+     "name": "보건·산업 간호",
+     "desc": "보건소·기업 보건관리"
+    },
+    {
+     "id": "school",
+     "name": "보건교사",
+     "desc": "교직이수 + 임용"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "304003",
+     "title": "보건교사",
+     "track": "school"
+    }
+   ]
+  },
+  {
+   "no": 53,
+   "tier": 1,
+   "jobCode": "307501",
+   "title": "간호조무사",
+   "displayName": "간호조무사",
+   "family": "health",
+   "group": "044",
+   "groupName": "그 외 보건·의료",
+   "work24Postings": 986,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 54,
+   "tier": 1,
+   "jobCode": "306501",
+   "title": "물리치료사",
+   "displayName": "물리치료사",
+   "family": "health",
+   "group": "043",
+   "groupName": "의료기사·치료사·재활사",
+   "work24Postings": 281,
+   "tracks": [
+    {
+     "id": "ortho",
+     "name": "근골격",
+     "desc": "정형외과·도수치료"
+    },
+    {
+     "id": "neuro",
+     "name": "신경계",
+     "desc": "재활병원·뇌졸중 재활"
+    },
+    {
+     "id": "sports",
+     "name": "스포츠",
+     "desc": "선수·운동 재활"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 55,
+   "tier": 2,
+   "jobCode": "306401",
+   "title": "치과위생사",
+   "displayName": "치과위생사",
+   "family": "health",
+   "group": "043",
+   "groupName": "의료기사·치료사·재활사",
+   "work24Postings": 67,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 56,
+   "tier": 2,
+   "jobCode": "306201",
+   "title": "방사선사",
+   "displayName": "방사선사",
+   "family": "health",
+   "group": "043",
+   "groupName": "의료기사·치료사·재활사",
+   "work24Postings": 48,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 57,
+   "tier": 2,
+   "jobCode": "306101",
+   "title": "임상병리사",
+   "displayName": "임상병리사",
+   "family": "health",
+   "group": "043",
+   "groupName": "의료기사·치료사·재활사",
+   "work24Postings": 33,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 58,
+   "tier": 3,
+   "jobCode": "307101",
+   "title": "응급구조사",
+   "displayName": "응급구조사",
+   "family": "health",
+   "group": "044",
+   "groupName": "그 외 보건·의료",
+   "work24Postings": 20,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 59,
+   "tier": 2,
+   "jobCode": "305001",
+   "title": "영양사",
+   "displayName": "영양사",
+   "family": "health",
+   "group": "042",
+   "groupName": "약사·간호사·영양사 등",
+   "work24Postings": 166,
+   "tracks": [
+    {
+     "id": "catering",
+     "name": "단체급식",
+     "desc": "학교·기업·병원 급식"
+    },
+    {
+     "id": "clinical",
+     "name": "임상영양",
+     "desc": "병원 영양 상담"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 60,
+   "tier": 2,
+   "jobCode": "303001",
+   "title": "약사",
+   "displayName": "약사",
+   "family": "health",
+   "group": "042",
+   "groupName": "약사·간호사·영양사 등",
+   "work24Postings": 4,
+   "tracks": [
+    {
+     "id": "pharmacy",
+     "name": "약국",
+     "desc": "조제·복약 지도"
+    },
+    {
+     "id": "hospital",
+     "name": "병원",
+     "desc": "병원 약제부"
+    },
+    {
+     "id": "industry",
+     "name": "제약회사",
+     "desc": "개발·허가·마케팅"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 61,
+   "tier": 3,
+   "jobCode": "301201",
+   "title": "일반의사",
+   "displayName": "의사",
+   "family": "health",
+   "group": "041",
+   "groupName": "의사·한의사·치과의사",
+   "work24Postings": 8,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 62,
+   "tier": 3,
+   "jobCode": "550101",
+   "title": "요양보호사 및 간병인",
+   "displayName": "요양보호사",
+   "family": "health",
+   "group": "068",
+   "groupName": "돌봄 서비스",
+   "work24Postings": 10991,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 63,
+   "tier": 1,
+   "jobCode": "415404",
+   "title": "시각디자이너",
+   "displayName": "시각디자이너",
+   "family": "design",
+   "group": "055",
+   "groupName": "제품·패션·실내·시각 디자인",
+   "work24Postings": 183,
+   "tracks": [
+    {
+     "id": "brand",
+     "name": "브랜드(BX)",
+     "desc": "로고·아이덴티티"
+    },
+    {
+     "id": "editorial",
+     "name": "편집·출판",
+     "desc": "책·잡지·인쇄물"
+    },
+    {
+     "id": "ad",
+     "name": "광고·마케팅 디자인",
+     "desc": "배너·상세페이지·프로모션"
+    },
+    {
+     "id": "package",
+     "name": "패키지",
+     "desc": "제품 포장 디자인"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 64,
+   "tier": 1,
+   "jobCode": "415504",
+   "title": "UX·UI디자이너",
+   "displayName": "UX·UI 디자이너",
+   "family": "design",
+   "group": "056",
+   "groupName": "미디어·UX/UI 디자인",
+   "work24Postings": 156,
+   "tracks": [
+    {
+     "id": "ui",
+     "name": "UI 디자인",
+     "desc": "화면·컴포넌트·디자인 시스템"
+    },
+    {
+     "id": "ux",
+     "name": "UX 리서치·설계",
+     "desc": "사용자 조사·정보 구조"
+    },
+    {
+     "id": "product",
+     "name": "프로덕트 디자이너",
+     "desc": "문제 정의부터 출시까지"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "415501",
+     "title": "웹디자이너",
+     "track": "ui"
+    }
+   ]
+  },
+  {
+   "no": 65,
+   "tier": 2,
+   "jobCode": "415503",
+   "title": "영상그래픽디자이너",
+   "displayName": "모션그래픽 디자이너",
+   "family": "design",
+   "group": "056",
+   "groupName": "미디어·UX/UI 디자인",
+   "work24Postings": 156,
+   "tracks": [
+    {
+     "id": "motion",
+     "name": "모션그래픽",
+     "desc": "2D 모션·타이틀"
+    },
+    {
+     "id": "3d",
+     "name": "3D·VFX",
+     "desc": "3D 모델링·합성"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 66,
+   "tier": 2,
+   "jobCode": "415301",
+   "title": "실내장식디자이너",
+   "displayName": "인테리어 디자이너",
+   "family": "design",
+   "group": "055",
+   "groupName": "제품·패션·실내·시각 디자인",
+   "work24Postings": 83,
+   "tracks": [
+    {
+     "id": "home",
+     "name": "주거 공간",
+     "desc": "아파트·주택 인테리어"
+    },
+    {
+     "id": "commercial",
+     "name": "상업 공간",
+     "desc": "매장·오피스"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 67,
+   "tier": 3,
+   "jobCode": "415201",
+   "title": "의상디자이너",
+   "displayName": "패션 디자이너",
+   "family": "design",
+   "group": "055",
+   "groupName": "제품·패션·실내·시각 디자인",
+   "work24Postings": 23,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 68,
+   "tier": 1,
+   "jobCode": "416601",
+   "title": "영상·녹화 및 편집기사",
+   "displayName": "영상 편집자",
+   "family": "media",
+   "group": "057",
+   "groupName": "연극·영화·방송",
+   "work24Postings": 31,
+   "tracks": [
+    {
+     "id": "online",
+     "name": "유튜브·숏폼",
+     "desc": "채널 편집·썸네일"
+    },
+    {
+     "id": "post",
+     "name": "방송·광고 후반작업",
+     "desc": "종합편집·색보정"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 69,
+   "tier": 2,
+   "jobCode": "416101",
+   "title": "방송연출가",
+   "displayName": "PD",
+   "family": "media",
+   "group": "057",
+   "groupName": "연극·영화·방송",
+   "work24Postings": 3,
+   "tracks": [
+    {
+     "id": "broadcast",
+     "name": "방송국 PD",
+     "desc": "공채·시사교양·예능·드라마"
+    },
+    {
+     "id": "digital",
+     "name": "디지털 콘텐츠 PD",
+     "desc": "제작사·MCN·브랜드 채널"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 70,
+   "tier": 2,
+   "jobCode": "417102",
+   "title": "미디어콘텐츠창작자(크리에이터)",
+   "displayName": "크리에이터",
+   "family": "media",
+   "group": "057",
+   "groupName": "연극·영화·방송",
+   "work24Postings": 17,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 71,
+   "tier": 2,
+   "jobCode": "412001",
+   "title": "신문기자",
+   "displayName": "기자",
+   "family": "media",
+   "group": "052",
+   "groupName": "기자·언론 전문가",
+   "work24Postings": 16,
+   "tracks": [
+    {
+     "id": "paper",
+     "name": "신문·통신",
+     "desc": "취재·기사 작성"
+    },
+    {
+     "id": "broadcast",
+     "name": "방송",
+     "desc": "방송 리포트·영상 취재"
+    },
+    {
+     "id": "online",
+     "name": "온라인·전문지",
+     "desc": "분야 전문 매체"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "412002",
+     "title": "방송기자",
+     "track": "broadcast"
+    },
+    {
+     "jobCode": "412003",
+     "title": "잡지기자",
+     "track": "online"
+    }
+   ]
+  },
+  {
+   "no": 72,
+   "tier": 3,
+   "jobCode": "411201",
+   "title": "번역가",
+   "displayName": "번역가",
+   "family": "media",
+   "group": "051",
+   "groupName": "작가·통번역·출판",
+   "work24Postings": 17,
+   "tracks": [
+    {
+     "id": "book",
+     "name": "출판 번역",
+     "desc": "도서 번역"
+    },
+    {
+     "id": "video",
+     "name": "영상 번역",
+     "desc": "자막·더빙"
+    },
+    {
+     "id": "tech",
+     "name": "산업 번역",
+     "desc": "기술·법률·의료 문서"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 73,
+   "tier": 3,
+   "jobCode": "413201",
+   "title": "사서",
+   "displayName": "사서",
+   "family": "edu",
+   "group": "053",
+   "groupName": "학예사·사서·기록물관리사",
+   "work24Postings": 5,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 74,
+   "tier": 2,
+   "jobCode": "414301",
+   "title": "만화가",
+   "displayName": "웹툰 작가",
+   "family": "media",
+   "group": "054",
+   "groupName": "창작·공연",
+   "work24Postings": 2,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 75,
+   "tier": 3,
+   "jobCode": "024402",
+   "title": "공연·영화 및 음반기획자",
+   "displayName": "공연·엔터 기획자",
+   "family": "media",
+   "group": "058",
+   "groupName": "공연·음반 기획",
+   "work24Postings": 12,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 76,
+   "tier": 1,
+   "jobCode": "420402",
+   "title": "스포츠트레이너",
+   "displayName": "트레이너",
+   "family": "service",
+   "group": "059",
+   "groupName": "스포츠·레크리에이션",
+   "work24Postings": 85,
+   "tracks": [
+    {
+     "id": "pt",
+     "name": "퍼스널 트레이너",
+     "desc": "피트니스 센터 개인 지도"
+    },
+    {
+     "id": "at",
+     "name": "선수·재활 트레이너",
+     "desc": "팀·재활 센터"
+    },
+    {
+     "id": "pilates",
+     "name": "필라테스·요가",
+     "desc": "그룹·개인 레슨"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "420401",
+     "title": "스포츠강사",
+     "track": "pt"
+    }
+   ]
+  },
+  {
+   "no": 77,
+   "tier": 1,
+   "jobCode": "511201",
+   "title": "미용사",
+   "displayName": "미용사",
+   "family": "service",
+   "group": "061",
+   "groupName": "미용·반려동물 서비스",
+   "work24Postings": 12,
+   "tracks": [
+    {
+     "id": "hair",
+     "name": "헤어",
+     "desc": "커트·펌·염색"
+    },
+    {
+     "id": "skin",
+     "name": "피부",
+     "desc": "피부 관리"
+    },
+    {
+     "id": "nail",
+     "name": "네일",
+     "desc": "네일 아트"
+    },
+    {
+     "id": "makeup",
+     "name": "메이크업",
+     "desc": "메이크업·뷰티"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "511301",
+     "title": "피부 및 체형관리사",
+     "track": "skin"
+    },
+    {
+     "jobCode": "511302",
+     "title": "네일아티스트",
+     "track": "nail"
+    },
+    {
+     "jobCode": "511401",
+     "title": "메이크업아티스트 및 뷰티매니저",
+     "track": "makeup"
+    }
+   ]
+  },
+  {
+   "no": 78,
+   "tier": 1,
+   "jobCode": "522101",
+   "title": "항공기객실승무원",
+   "displayName": "객실 승무원",
+   "family": "service",
+   "group": "063",
+   "groupName": "여행·승무·숙박·오락 서비스",
+   "work24Postings": 0,
+   "tracks": [
+    {
+     "id": "domestic",
+     "name": "국내 항공사",
+     "desc": "국내 FSC·LCC"
+    },
+    {
+     "id": "foreign",
+     "name": "외국 항공사",
+     "desc": "외항사 채용"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 79,
+   "tier": 2,
+   "jobCode": "523001",
+   "title": "숙박시설서비스원",
+   "displayName": "호텔리어",
+   "family": "service",
+   "group": "063",
+   "groupName": "여행·승무·숙박·오락 서비스",
+   "work24Postings": 87,
+   "tracks": [
+    {
+     "id": "front",
+     "name": "프런트",
+     "desc": "객실 예약·체크인"
+    },
+    {
+     "id": "fnb",
+     "name": "식음(F&B)",
+     "desc": "레스토랑·연회"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 80,
+   "tier": 1,
+   "jobCode": "531201",
+   "title": "한식조리사",
+   "displayName": "조리사",
+   "family": "service",
+   "group": "064",
+   "groupName": "주방장·조리사",
+   "work24Postings": 363,
+   "tracks": [
+    {
+     "id": "korean",
+     "name": "한식",
+     "desc": "한식조리기능사"
+    },
+    {
+     "id": "western",
+     "name": "양식",
+     "desc": "양식조리기능사"
+    },
+    {
+     "id": "chinese",
+     "name": "중식",
+     "desc": "중식조리기능사"
+    },
+    {
+     "id": "japanese",
+     "name": "일식",
+     "desc": "일식조리기능사"
+    }
+   ],
+   "covers": [
+    {
+     "jobCode": "531401",
+     "title": "양식조리사",
+     "track": "western"
+    },
+    {
+     "jobCode": "531301",
+     "title": "중식조리사",
+     "track": "chinese"
+    },
+    {
+     "jobCode": "531501",
+     "title": "일식조리사",
+     "track": "japanese"
+    }
+   ]
+  },
+  {
+   "no": 81,
+   "tier": 2,
+   "jobCode": "531701",
+   "title": "음료조리사",
+   "displayName": "바리스타",
+   "family": "service",
+   "group": "064",
+   "groupName": "주방장·조리사",
+   "work24Postings": 142,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 82,
+   "tier": 1,
+   "jobCode": "871101",
+   "title": "제과·제빵원",
+   "displayName": "제과·제빵사",
+   "family": "service",
+   "group": "118",
+   "groupName": "제과·제빵·떡 제조",
+   "work24Postings": 127,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 83,
+   "tier": 1,
+   "jobCode": "611001",
+   "title": "부동산중개인",
+   "displayName": "공인중개사",
+   "family": "pro",
+   "group": "071",
+   "groupName": "부동산중개",
+   "work24Postings": 11,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 84,
+   "tier": 2,
+   "jobCode": "612101",
+   "title": "기술영업원",
+   "displayName": "기술영업 담당자",
+   "family": "sales",
+   "group": "072",
+   "groupName": "기술·의약품·해외 영업",
+   "work24Postings": 493,
+   "tracks": [
+    {
+     "id": "industrial",
+     "name": "산업재·부품",
+     "desc": "제조업 B2B"
+    },
+    {
+     "id": "it",
+     "name": "IT·솔루션",
+     "desc": "소프트웨어·클라우드"
+    },
+    {
+     "id": "medical",
+     "name": "의료기기·제약",
+     "desc": "병원 대상 영업"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 85,
+   "tier": 2,
+   "jobCode": "612201",
+   "title": "해외영업원",
+   "displayName": "해외영업 담당자",
+   "family": "sales",
+   "group": "072",
+   "groupName": "기술·의약품·해외 영업",
+   "work24Postings": 110,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 86,
+   "tier": 2,
+   "jobCode": "615301",
+   "title": "온라인판매원",
+   "displayName": "이커머스 운영자",
+   "family": "sales",
+   "group": "076",
+   "groupName": "온라인판매·통신서비스",
+   "work24Postings": 138,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 87,
+   "tier": 3,
+   "jobCode": "621101",
+   "title": "항공기조종사",
+   "displayName": "항공기 조종사",
+   "family": "transport",
+   "group": "079",
+   "groupName": "항공기·선박·철도 조종·관제",
+   "work24Postings": 0,
+   "tracks": [
+    {
+     "id": "univ",
+     "name": "항공운항학과",
+     "desc": "대학 과정"
+    },
+    {
+     "id": "academy",
+     "name": "비행교육원",
+     "desc": "국내·해외 비행 훈련"
+    },
+    {
+     "id": "military",
+     "name": "군 조종사",
+     "desc": "공군·해군 조종 장교"
+    }
+   ],
+   "covers": []
+  },
+  {
+   "no": 88,
+   "tier": 3,
+   "jobCode": "621301",
+   "title": "철도·전동차기관사",
+   "displayName": "철도 기관사",
+   "family": "transport",
+   "group": "079",
+   "groupName": "항공기·선박·철도 조종·관제",
+   "work24Postings": 0,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 89,
+   "tier": 3,
+   "jobCode": "623002",
+   "title": "지게차운전원",
+   "displayName": "지게차 운전원",
+   "family": "tech",
+   "group": "07B",
+   "groupName": "물품이동장비 조작",
+   "work24Postings": 828,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 90,
+   "tier": 3,
+   "jobCode": "702501",
+   "title": "도배공",
+   "displayName": "도배사",
+   "family": "tech",
+   "group": "082",
+   "groupName": "건축마감 기능",
+   "work24Postings": 13,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 91,
+   "tier": 3,
+   "jobCode": "704001",
+   "title": "건설 및 채굴기계운전원",
+   "displayName": "중장비 운전원",
+   "family": "tech",
+   "group": "084",
+   "groupName": "건설·채굴 기계 운전",
+   "work24Postings": 358,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 92,
+   "tier": 2,
+   "jobCode": "812401",
+   "title": "자동차정비원",
+   "displayName": "자동차 정비사",
+   "family": "tech",
+   "group": "092",
+   "groupName": "운송장비 정비",
+   "work24Postings": 514,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 93,
+   "tier": 2,
+   "jobCode": "812101",
+   "title": "항공기정비원",
+   "displayName": "항공 정비사",
+   "family": "tech",
+   "group": "092",
+   "groupName": "운송장비 정비",
+   "work24Postings": 2,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 94,
+   "tier": 2,
+   "jobCode": "824101",
+   "title": "용접원(용접기조작원)",
+   "displayName": "용접사",
+   "family": "tech",
+   "group": "098",
+   "groupName": "용접",
+   "work24Postings": 1201,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 95,
+   "tier": 3,
+   "jobCode": "813201",
+   "title": "금속공작기계조작원",
+   "displayName": "CNC·MCT 가공 기술자",
+   "family": "tech",
+   "group": "093",
+   "groupName": "금형·공작기계 조작",
+   "work24Postings": 2584,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 96,
+   "tier": 3,
+   "jobCode": "817101",
+   "title": "자동차조립원",
+   "displayName": "완성차 생산직",
+   "family": "tech",
+   "group": "095",
+   "groupName": "기계·운송장비 조립",
+   "work24Postings": 75,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 97,
+   "tier": 3,
+   "jobCode": "811101",
+   "title": "공업기계설치 및 정비원",
+   "displayName": "설비보전 기술자",
+   "family": "tech",
+   "group": "091",
+   "groupName": "기계장비 설치·정비",
+   "work24Postings": 683,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 98,
+   "tier": 2,
+   "jobCode": "831201",
+   "title": "내선전기공",
+   "displayName": "전기공",
+   "family": "tech",
+   "group": "101",
+   "groupName": "전기공",
+   "work24Postings": 467,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 99,
+   "tier": 3,
+   "jobCode": "835201",
+   "title": "전자부품·제품생산기계조작원",
+   "displayName": "반도체·전자 생산직",
+   "family": "tech",
+   "group": "104",
+   "groupName": "전기·전자 생산기계 조작",
+   "work24Postings": 153,
+   "tracks": [],
+   "covers": []
+  },
+  {
+   "no": 100,
+   "tier": 3,
+   "jobCode": "901201",
+   "title": "채소·특용작물재배원",
+   "displayName": "청년 농부(스마트팜)",
+   "family": "agri",
+   "group": "131",
+   "groupName": "작물재배",
+   "work24Postings": 39,
+   "tracks": [],
+   "covers": []
+  }
+ ]
+}

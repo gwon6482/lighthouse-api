@@ -1,0 +1,231 @@
+{
+ "jobCode": "025401",
+ "title": "일반행정공무원",
+ "displayName": "일반행정 공무원",
+ "family": "public",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "학력·경력 제한 없이 공개경쟁채용 시험으로 뽑는다. 필기 과목 공부가 거의 전부이고 마지막에 면접이 있다.",
+ "gate": "공개경쟁채용 시험 합격(필기 → 면접). 응시 연령 등 자격은 시험 공고 확인",
+ "tracks": [
+  {
+   "id": "g9",
+   "name": "9급 공채",
+   "desc": "국가직·지방직 9급"
+  },
+  {
+   "id": "g7",
+   "name": "7급 공채",
+   "desc": "PSAT + 전문과목"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.gov-pick",
+   "name": "직렬·지역 정하기와 시험 제도 파악",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "응시할 직렬·지역을 정하고 과목·일정·경쟁률을 정리한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "조사",
+     "items": [
+      "국가직·지방직 차이 알기",
+      "직렬별 과목·하는 일 조사",
+      "최근 합격선·경쟁률 확인"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "계획",
+     "items": [
+      "응시 시험 정하기",
+      "연간 공부 일정표",
+      "강의·교재 고르기"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.g9-major",
+   "name": "9급 전문과목(행정법총론·행정학개론)",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "행정법총론과 행정학개론에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "기본 이론",
+     "items": [
+      "행정법 기본 강의",
+      "행정학 기본 강의",
+      "단원별 문제"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "기출 3회독",
+      "판례·조문 정리",
+      "오답 노트"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "빈출 주제 암기",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "과목은 직렬·연도에 따라 바뀐다"
+  },
+  {
+   "id": "p.g7-major",
+   "name": "7급 전문과목(헌법·행정법·행정학·경제학)",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 240,
+   "goal": "7급 2차 전문과목에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "기본 이론",
+     "items": [
+      "헌법·행정법 강의",
+      "행정학·경제학 강의",
+      "단원별 문제"
+     ]
+    },
+    {
+     "weeks": 10,
+     "title": "기출 회독",
+     "items": [
+      "기출 회독",
+      "판례·조문 정리",
+      "경제학 계산 문제"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "약점 과목 보강",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "과목은 직렬·연도에 따라 바뀐다"
+  },
+  {
+   "id": "p.gov-interview",
+   "name": "공무원 면접",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "발표·경험·상황 면접에 공직 가치와 내 경험으로 답한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "제도 이해",
+     "items": [
+      "면접 방식과 평가 요소 확인",
+      "공직 가치 정리",
+      "지원 기관 정책 조사"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "답변 준비",
+     "items": [
+      "경험·상황 질문 답변",
+      "발표 과제 연습",
+      "스터디 모의 면접"
+     ]
+    }
+   ],
+   "basis": "law"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.gov-pick",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.gov-interview",
+   "step": 5,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "g9": [
+   {
+    "ref": "cp.civil9-common",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "p.g9-major",
+    "step": 3,
+    "major": true
+   }
+  ],
+  "g7": [
+   {
+    "ref": "cp.psat",
+    "step": 2,
+    "major": true,
+    "note": "1차 시험"
+   },
+   {
+    "ref": "cp.korean-history",
+    "step": 2.5,
+    "major": true,
+    "note": "한국사능력검정 2급 이상이 응시 요건"
+   },
+   {
+    "ref": "cp.toeic",
+    "step": 2.7,
+    "major": true,
+    "note": "영어 과목을 공인 성적으로 대체(기준 점수는 공고 확인)"
+   },
+   {
+    "ref": "p.g7-major",
+    "step": 3,
+    "major": true,
+    "note": "2차 시험"
+   }
+  ]
+ },
+ "verify": "시험 과목·가산점·응시 요건은 인사혁신처와 지방자치단체 공고가 정본이다"
+}

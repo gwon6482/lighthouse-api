@@ -1,0 +1,1278 @@
+{
+ "jobCode": "133201",
+ "title": "응용소프트웨어개발자",
+ "displayName": "소프트웨어 개발자",
+ "family": "it",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "학위·자격이 필수는 아니다. 언어와 컴퓨터 기초를 다진 뒤 한 분야를 골라 프로젝트로 증명하고, 코딩테스트와 기술 면접을 통과한다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "be",
+   "name": "백엔드",
+   "desc": "서버·API·데이터베이스"
+  },
+  {
+   "id": "fe",
+   "name": "프론트엔드",
+   "desc": "웹 화면·사용자 경험"
+  },
+  {
+   "id": "mobile",
+   "name": "모바일 앱",
+   "desc": "Android·iOS·크로스플랫폼"
+  },
+  {
+   "id": "ai",
+   "name": "AI",
+   "desc": "머신러닝·딥러닝 모델 개발"
+  },
+  {
+   "id": "data",
+   "name": "데이터베이스·데이터 엔지니어링",
+   "desc": "DB 설계·데이터 파이프라인"
+  },
+  {
+   "id": "sys",
+   "name": "시스템·임베디드",
+   "desc": "OS·펌웨어·하드웨어 가까운 개발"
+  },
+  {
+   "id": "game",
+   "name": "게임",
+   "desc": "게임 클라이언트·서버"
+  }
+ ],
+ "covers": [
+  {
+   "jobCode": "133301",
+   "title": "웹개발자",
+   "track": "be"
+  },
+  {
+   "jobCode": "133205",
+   "title": "모바일앱개발자",
+   "track": "mobile"
+  },
+  {
+   "jobCode": "133204",
+   "title": "게임프로그래머",
+   "track": "game"
+  },
+  {
+   "jobCode": "133101",
+   "title": "시스템소프트웨어개발자",
+   "track": "sys"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p.lang",
+   "name": "프로그래밍 언어 하나 제대로 익히기",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "파이썬·자바·자바스크립트 중 하나로 작은 프로그램을 혼자 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "문법",
+     "items": [
+      "변수·조건·반복",
+      "함수·자료구조",
+      "매일 문제 5개"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "객체지향과 모듈",
+     "items": [
+      "클래스·상속",
+      "예외·파일 입출력",
+      "작은 프로그램 3개"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "미니 프로젝트",
+     "items": [
+      "만들 것 정하기",
+      "기능 구현",
+      "코드 정리해 공개"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.web-basics",
+   "name": "웹 기초(HTML·CSS·JS·HTTP)",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "브라우저와 서버가 주고받는 과정을 이해하고 정적 페이지를 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "화면",
+     "items": [
+      "HTML 구조·시맨틱",
+      "CSS 레이아웃(Flex·Grid)",
+      "페이지 3개 따라 만들기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "동작과 통신",
+     "items": [
+      "JS로 DOM 다루기",
+      "HTTP·REST·JSON",
+      "공개 API 불러와 보여 주기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.be-framework",
+   "name": "API 서버 만들기(Spring 또는 Node)",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "프레임워크로 인증이 있는 REST API 서버를 만든다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "프레임워크 기본",
+     "items": [
+      "라우팅·컨트롤러",
+      "요청 검증·예외 처리",
+      "CRUD API 만들기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "인증과 구조",
+     "items": [
+      "로그인(JWT·세션)",
+      "계층 구조 나누기",
+      "테스트 코드 쓰기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "문서화",
+     "items": [
+      "API 문서(Swagger)",
+      "로그 남기기",
+      "리팩터링"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.be-db",
+   "name": "DB 설계와 ORM",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "요구사항을 테이블로 설계하고 ORM으로 다룬다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "설계",
+     "items": [
+      "ERD 그리기",
+      "정규화·인덱스",
+      "쿼리 실행 계획 보기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "ORM",
+     "items": [
+      "엔티티 매핑",
+      "N+1 문제 해결",
+      "트랜잭션 다루기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.be-deploy",
+   "name": "배포와 운영 기초(AWS·Docker)",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "만든 서버를 클라우드에 올리고 자동 배포를 건다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "배포",
+     "items": [
+      "리눅스 기본 명령",
+      "Docker 이미지 만들기",
+      "클라우드 서버에 올리기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "자동화",
+     "items": [
+      "CI/CD 파이프라인",
+      "환경 변수·비밀 관리",
+      "모니터링 기초"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.be-project",
+   "name": "백엔드 중심 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "트래픽·동시성 같은 문제를 하나 정해 해결한 서버 프로젝트를 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "주제",
+     "items": [
+      "서비스와 핵심 문제 정하기",
+      "API·DB 설계",
+      "일정"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "구현",
+     "items": [
+      "핵심 기능 구현",
+      "부하 테스트",
+      "문제 원인 찾아 개선"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "개선 전후 수치 정리",
+      "README·구조도",
+      "배포 링크"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fe-js",
+   "name": "자바스크립트 심화와 TypeScript",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "비동기·모듈을 이해하고 TypeScript로 타입을 붙인다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "JS 심화",
+     "items": [
+      "스코프·클로저",
+      "비동기(Promise·async)",
+      "모듈·번들러"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "TypeScript",
+     "items": [
+      "기본 타입·인터페이스",
+      "제네릭",
+      "기존 코드에 타입 붙이기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fe-react",
+   "name": "React로 화면 만들기",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "컴포넌트로 화면을 나누고 서버 데이터를 다루는 웹 앱을 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기본",
+     "items": [
+      "컴포넌트·props·state",
+      "이벤트·폼",
+      "라우팅"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "데이터",
+     "items": [
+      "API 연동",
+      "상태 관리",
+      "로딩·오류 처리"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "완성도",
+     "items": [
+      "컴포넌트 재사용",
+      "테스트",
+      "배포"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fe-quality",
+   "name": "반응형·성능·접근성",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "화면 크기에 맞게 보이고 빠르며 키보드로도 쓸 수 있게 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "반응형",
+     "items": [
+      "모바일 우선 레이아웃",
+      "이미지 최적화",
+      "실기기 확인"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "성능과 접근성",
+     "items": [
+      "Lighthouse로 측정",
+      "렌더링 최적화",
+      "시맨틱·키보드 접근"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.fe-project",
+   "name": "프론트엔드 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "실제 쓸 수 있는 웹 서비스를 만들어 배포하고 개선 과정을 기록한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "서비스 정하기",
+      "화면 설계",
+      "기술 선택 이유 적기"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "구현",
+     "items": [
+      "핵심 화면 구현",
+      "성능·사용성 개선",
+      "사용자 피드백 반영"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "개선 전후 비교",
+      "README",
+      "배포 링크"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mo-native",
+   "name": "모바일 앱 개발 기초",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "Kotlin·Swift·Flutter 중 하나로 화면 여러 개짜리 앱을 만든다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "언어와 UI",
+     "items": [
+      "언어 문법",
+      "화면 구성·내비게이션",
+      "리스트·폼"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "앱 구조",
+     "items": [
+      "상태 관리",
+      "생명주기",
+      "아키텍처 패턴"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기기 기능",
+     "items": [
+      "권한·알림",
+      "카메라·위치",
+      "디버깅"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mo-api",
+   "name": "서버 연동과 로컬 저장",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "앱에서 API를 부르고 데이터를 기기에 저장한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "통신",
+     "items": [
+      "REST API 호출",
+      "로그인 토큰 관리",
+      "오류·오프라인 처리"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "저장",
+     "items": [
+      "로컬 DB",
+      "캐시",
+      "동기화"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.mo-release",
+   "name": "스토어에 앱 출시",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "앱 하나를 완성해 스토어에 올리고 사용자 반응으로 업데이트한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "앱 주제·범위",
+      "화면 설계",
+      "일정"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "개발",
+     "items": [
+      "핵심 기능 구현",
+      "테스트",
+      "성능 점검"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "출시",
+     "items": [
+      "스토어 심사 제출",
+      "리뷰 반영 업데이트",
+      "출시 과정 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ai-math",
+   "name": "AI를 위한 수학 기초",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "선형대수·확률·미분의 핵심을 모델과 연결해 이해한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "선형대수",
+     "items": [
+      "벡터·행렬 연산",
+      "고유값·분해",
+      "넘파이로 확인"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "확률·통계",
+     "items": [
+      "확률분포",
+      "추정·검정",
+      "베이즈 기초"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "미분과 최적화",
+     "items": [
+      "편미분·연쇄 법칙",
+      "경사하강법",
+      "직접 구현해 보기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ai-ml",
+   "name": "머신러닝 기초",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "대표 알고리즘을 쓰고 평가·튜닝까지 한 번 돌려 본다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "지도 학습",
+     "items": [
+      "회귀·분류",
+      "평가 지표",
+      "과적합과 검증"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "모델 다루기",
+     "items": [
+      "트리·앙상블",
+      "특성 공학",
+      "하이퍼파라미터 튜닝"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실습",
+     "items": [
+      "공개 데이터 문제 풀기",
+      "결과 해석",
+      "노트북 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ai-dl",
+   "name": "딥러닝(PyTorch)",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "PyTorch로 신경망을 학습시키고 사전학습 모델을 활용한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "기본",
+     "items": [
+      "텐서·자동미분",
+      "신경망 학습 루프",
+      "CNN·RNN"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "최신 구조",
+     "items": [
+      "트랜스포머",
+      "사전학습 모델 미세조정",
+      "LLM API 활용"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실험 관리",
+     "items": [
+      "실험 기록",
+      "재현 가능한 코드",
+      "논문 한 편 구현"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ai-project",
+   "name": "모델을 서비스에 붙이는 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "심화",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "문제 정의부터 모델 서빙까지 한 사이클을 돌린 결과물을 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "문제 정의",
+     "items": [
+      "풀 문제와 데이터 정하기",
+      "평가 기준",
+      "기준 모델"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "개발",
+     "items": [
+      "모델 개선 실험",
+      "API로 서빙",
+      "데모 화면"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "실험 결과 표",
+      "한계와 개선안",
+      "공개 링크"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.de-modeling",
+   "name": "데이터 모델링과 SQL 심화",
+   "type": "skill",
+   "subtype": "data",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "분석용 테이블을 설계하고 느린 쿼리를 고친다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "모델링",
+     "items": [
+      "정규화와 반정규화",
+      "분석용 스키마(스타)",
+      "파티션·인덱스"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "쿼리",
+     "items": [
+      "윈도 함수 심화",
+      "실행 계획 읽기",
+      "느린 쿼리 개선"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.de-pipeline",
+   "name": "데이터 파이프라인 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "수집→적재→가공→대시보드까지 자동으로 도는 파이프라인을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "설계",
+     "items": [
+      "데이터 원천 정하기",
+      "구조도 그리기",
+      "도구 선택"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "구현",
+     "items": [
+      "수집·적재 자동화",
+      "배치 스케줄(Airflow)",
+      "데이터 품질 검사"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "대시보드 연결",
+      "장애 대응 기록",
+      "README"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sys-c",
+   "name": "C·C++",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "포인터·메모리를 다루는 C·C++ 프로그램을 작성한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "C",
+     "items": [
+      "포인터·배열",
+      "메모리 할당",
+      "파일·구조체"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "C++",
+     "items": [
+      "클래스·RAII",
+      "STL",
+      "템플릿 기초"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "도구",
+     "items": [
+      "빌드(Make·CMake)",
+      "디버거",
+      "메모리 오류 찾기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sys-os",
+   "name": "운영체제·컴퓨터구조 심화",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "프로세스·메모리·인터럽트가 실제로 어떻게 도는지 설명할 수 있다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "컴퓨터구조",
+     "items": [
+      "명령어·레지스터",
+      "캐시·메모리 계층",
+      "어셈블리 읽기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "운영체제",
+     "items": [
+      "스케줄링·동기화",
+      "가상 메모리",
+      "시스템 콜 써 보기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.sys-embedded",
+   "name": "임베디드 보드로 펌웨어 만들기",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "MCU 보드에서 센서·통신을 다루는 장치를 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "보드·부품 고르기",
+      "개발 환경",
+      "데이터시트 읽기"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "구현",
+     "items": [
+      "GPIO·타이머·인터럽트",
+      "UART·I2C·SPI 통신",
+      "RTOS 올려 보기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "동작 영상",
+      "회로도·코드 공개",
+      "문제 해결 기록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.game-engine",
+   "name": "게임 엔진 익히기(Unity 또는 Unreal)",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "엔진으로 조작·충돌·UI가 있는 게임 장면을 만든다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "엔진 기본",
+     "items": [
+      "에디터·오브젝트",
+      "스크립트(C#·C++)",
+      "물리·충돌"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "게임 시스템",
+     "items": [
+      "애니메이션",
+      "UI·사운드",
+      "저장·씬 전환"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "최적화",
+     "items": [
+      "프로파일러",
+      "오브젝트 풀링",
+      "빌드"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.game-math",
+   "name": "게임 수학·물리 기초",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "벡터·행렬·충돌 계산을 게임 코드에 쓴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "벡터와 변환",
+     "items": [
+      "벡터 연산",
+      "행렬·회전(쿼터니언)",
+      "카메라 좌표"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "물리",
+     "items": [
+      "충돌 판정",
+      "이동·가속",
+      "직접 구현해 보기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.game-release",
+   "name": "게임 한 편 완성해 공개",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "작은 게임을 끝까지 만들어 플레이 가능한 형태로 공개한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기획",
+     "items": [
+      "한 줄 콘셉트",
+      "핵심 재미 정하기",
+      "범위 줄이기"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "제작",
+     "items": [
+      "핵심 플레이 구현",
+      "스테이지·밸런스",
+      "테스트 플레이 반영"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "공개",
+     "items": [
+      "빌드 올리기",
+      "플레이 영상",
+      "개발 일지 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.lang",
+   "step": 2,
+   "major": false,
+   "skip": "전공 프로그래밍 수업에서 배운다"
+  },
+  {
+   "ref": "cp.cs-basics",
+   "step": 3,
+   "major": false,
+   "skip": "전공 필수 과목에서 배운다"
+  },
+  {
+   "ref": "cp.git",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.sql",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.web-basics",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.bootcamp",
+   "step": 6.5,
+   "major": false,
+   "skip": "전공 교육과정이 대신한다",
+   "note": "혼자 하기 어려우면 고르는 경로",
+   "optional": true
+  },
+  {
+   "ref": "cp.team-project",
+   "step": 11,
+   "major": true
+  },
+  {
+   "ref": "cp.coding-test",
+   "step": 12,
+   "major": true
+  },
+  {
+   "ref": "cp.info-eng",
+   "step": 13,
+   "major": true,
+   "note": "공기업·금융권·SI에 지원할 때",
+   "optional": true
+  },
+  {
+   "ref": "cp.internship",
+   "step": 13.5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 14,
+   "major": true,
+   "note": "GitHub와 README로 정리"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 15,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 16,
+   "major": true,
+   "note": "기술 면접 — 프로젝트와 컴퓨터 기초 질문"
+  }
+ ],
+ "byTrack": {
+  "be": [
+   {
+    "ref": "p.be-framework",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.be-db",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "p.be-deploy",
+    "step": 9,
+    "major": true
+   },
+   {
+    "ref": "p.be-project",
+    "step": 10,
+    "major": true
+   }
+  ],
+  "fe": [
+   {
+    "ref": "p.fe-js",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.fe-react",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "p.fe-quality",
+    "step": 9,
+    "major": true
+   },
+   {
+    "ref": "p.fe-project",
+    "step": 10,
+    "major": true
+   }
+  ],
+  "mobile": [
+   {
+    "ref": "p.mo-native",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.mo-api",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "p.mo-release",
+    "step": 10,
+    "major": true
+   }
+  ],
+  "ai": [
+   {
+    "ref": "cp.python-data",
+    "step": 6.6,
+    "major": true
+   },
+   {
+    "ref": "p.ai-math",
+    "step": 7,
+    "major": false,
+    "skip": "전공 수학 과목에서 배운다"
+   },
+   {
+    "ref": "p.ai-ml",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "p.ai-dl",
+    "step": 9,
+    "major": true
+   },
+   {
+    "ref": "p.ai-project",
+    "step": 10,
+    "major": true
+   }
+  ],
+  "data": [
+   {
+    "ref": "p.de-modeling",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.sqld",
+    "step": 8,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.be-deploy",
+    "step": 9,
+    "major": true
+   },
+   {
+    "ref": "p.de-pipeline",
+    "step": 10,
+    "major": true
+   }
+  ],
+  "sys": [
+   {
+    "ref": "p.sys-c",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.sys-os",
+    "step": 8,
+    "major": false,
+    "skip": "전공 운영체제·컴퓨터구조 과목에서 배운다"
+   },
+   {
+    "ref": "p.sys-embedded",
+    "step": 10,
+    "major": true
+   }
+  ],
+  "game": [
+   {
+    "ref": "p.sys-c",
+    "step": 7,
+    "major": true,
+    "note": "언리얼을 쓸 때. 유니티면 C#으로 대신"
+   },
+   {
+    "ref": "p.game-engine",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "p.game-math",
+    "step": 9,
+    "major": true
+   },
+   {
+    "ref": "p.game-release",
+    "step": 10,
+    "major": true
+   }
+  ]
+ }
+}

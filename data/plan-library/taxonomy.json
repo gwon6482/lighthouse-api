@@ -1,0 +1,212 @@
+{
+ "updatedAt": "2026-11-13",
+ "note": "사용자가 준 분류(2026-11-13). 보편 프로젝트와 직업별 프로젝트가 모두 이 분류를 쓴다. category 는 앱 진로설계의 5개 영역(config/projectMethods.js)으로 옮길 때의 기본값 — ⑥⑦은 앱 영역과 딱 맞지 않아 항목마다 따로 정한다",
+ "types": [
+  {
+   "id": "cert",
+   "no": 1,
+   "name": "자격·인증",
+   "desc": "시험을 보고 따는 것",
+   "category": "qualification",
+   "subtypes": {
+    "national-tech": "국가기술자격(기사·산업기사·기능사)",
+    "national-license": "국가전문자격(면허형)",
+    "private-certified": "국가공인 민간자격",
+    "international": "국제 자격",
+    "language": "어학 성적",
+    "basic": "기본 소양",
+    "private": "민간자격·기업 인증"
+   }
+  },
+  {
+   "id": "edu",
+   "no": 2,
+   "name": "학업·교육 과정",
+   "desc": "학교·과정을 이수하는 것",
+   "category": "knowledge",
+   "subtypes": {
+    "major": "전공·복수전공·부전공",
+    "required-course": "필수 이수 과목",
+    "graduate": "대학원·전문대학원",
+    "bootcamp": "부트캠프·국비·직업훈련",
+    "online": "MOOC·온라인 수료"
+   }
+  },
+  {
+   "id": "skill",
+   "no": 3,
+   "name": "실무 스킬",
+   "desc": "시험 없이 익히는 능력",
+   "category": "skill",
+   "subtypes": {
+    "dev": "개발",
+    "data": "데이터",
+    "design": "디자인",
+    "content": "콘텐츠",
+    "common": "공통 역량",
+    "field": "직무 실기"
+   }
+  },
+  {
+   "id": "activity",
+   "no": 4,
+   "name": "경험·활동",
+   "desc": "기간·시간을 채우는 활동",
+   "category": "experience",
+   "subtypes": {
+    "work": "인턴·현장실습·직무 경험",
+    "volunteer": "봉사",
+    "tryout": "체험·견학",
+    "outreach": "대외활동",
+    "contest": "공모전·해커톤·대회",
+    "club": "동아리·학회·스터디",
+    "overseas": "교환학생·어학연수·워킹홀리데이"
+   }
+  },
+  {
+   "id": "output",
+   "no": 5,
+   "name": "산출물·증빙",
+   "desc": "결과물이 남는 것",
+   "category": "portfolio",
+   "subtypes": {
+    "portfolio": "포트폴리오",
+    "project": "개인·사이드 프로젝트·창업",
+    "research": "논문·연구 참여",
+    "award": "수상"
+   }
+  },
+  {
+   "id": "hiring",
+   "no": 6,
+   "name": "채용·선발 절차 준비",
+   "desc": "필기·면접 등 선발 과정",
+   "category": null,
+   "subtypes": {
+    "ncs": "NCS·전공 필기(공기업)",
+    "aptitude": "인적성(대기업)",
+    "civil": "공무원 필기·PSAT",
+    "coding": "코딩테스트·과제 전형",
+    "interview": "면접·자기소개서",
+    "physical": "체력시험"
+   }
+  },
+  {
+   "id": "network",
+   "no": 7,
+   "name": "네트워킹·탐색",
+   "desc": "사람·현장을 만나 알아보는 것",
+   "category": "experience",
+   "subtypes": {
+    "mentoring": "현직자 멘토링·커피챗",
+    "event": "박람회·설명회·컨퍼런스",
+    "community": "커뮤니티",
+    "research": "직무·기업 조사"
+   }
+  }
+ ],
+ "scopes": {
+  "all": "전 직무 공통 — 거의 모든 진로에 붙는다",
+  "family": "계열 공통 — 같은 계열 안에서 겹친다",
+  "job": "직무 특화 — 그 직업만의 관문"
+ },
+ "families": {
+  "biz": "경영·사무",
+  "finance": "금융",
+  "it": "IT·개발",
+  "data": "데이터",
+  "design": "디자인",
+  "public": "공공·행정",
+  "health": "보건·의료",
+  "edu": "교육",
+  "welfare": "사회복지·상담",
+  "media": "미디어·콘텐츠",
+  "eng": "엔지니어링",
+  "tech": "기술·기능",
+  "service": "서비스",
+  "sales": "영업·유통",
+  "pro": "전문자격·법률",
+  "research": "연구",
+  "transport": "운송",
+  "agri": "농업"
+ },
+ "bundles": {
+  "biz": [
+   "cp.toeic",
+   "cp.computer-1",
+   "cp.accounting-basic",
+   "cp.internship",
+   "cp.contest"
+  ],
+  "finance": [
+   "cp.investment-manager",
+   "cp.afpk",
+   "cp.econ-test",
+   "cp.internship"
+  ],
+  "it": [
+   "cp.info-eng",
+   "cp.cs-basics",
+   "cp.coding-test",
+   "cp.team-project",
+   "cp.git",
+   "cp.portfolio"
+  ],
+  "data": [
+   "cp.adsp",
+   "cp.sqld",
+   "cp.python-data",
+   "cp.stats",
+   "cp.side-project"
+  ],
+  "design": [
+   "cp.figma",
+   "cp.adobe",
+   "cp.portfolio",
+   "cp.contest",
+   "cp.gtq"
+  ],
+  "public": [
+   "cp.korean-history",
+   "cp.civil9-common",
+   "cp.psat",
+   "cp.ncs",
+   "cp.toeic"
+  ],
+  "health": [
+   "cp.license-exam",
+   "cp.clinical-practice",
+   "cp.volunteer",
+   "cp.bls"
+  ],
+  "edu": [
+   "cp.teaching-course",
+   "cp.edu-volunteer",
+   "cp.teacher-exam",
+   "cp.teaching-demo"
+  ],
+  "welfare": [
+   "cp.sw2",
+   "cp.sw-practicum",
+   "cp.sw1",
+   "cp.volunteer"
+  ],
+  "media": [
+   "cp.video-edit",
+   "cp.outreach",
+   "cp.channel",
+   "cp.contest",
+   "cp.writing"
+  ],
+  "eng": [
+   "cp.engineer-cert",
+   "cp.cad",
+   "cp.eng-field",
+   "cp.toeic"
+  ],
+  "tech": [
+   "cp.craftsman-cert",
+   "cp.training-course"
+  ]
+ }
+}
