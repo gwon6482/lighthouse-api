@@ -17,6 +17,7 @@
 | `backlog.json` | 1차 뒤에 남은 직업의 작업 목록 — 단계(2~4)와 묶음(batch). 한 줄이 계획 하나(대표 직업 + 함께 덮는 직업). 만들 때 `adopt()` 로 `priority-jobs.json` 에 옮긴다. 2026-11-13 전부 `done` |
 | `job-groups.json` | 추천 직무 112개와 1차에 넣은 직업, 뺀 이유 |
 | `plans/<jobCode>.json` | 직업별 예시 진로설계 |
+| `review/template.html` | 검토 페이지의 틀. `python3 scripts/plan-library-review.py <나올 파일.html>` 이 위 JSON 을 끼워 한 파일로 낸다(브라우저로 바로 열려면 `--standalone`). 나온 파일은 레포에 넣지 않는다 |
 
 ## 직업 계획의 구조
 - `projects`: 그 직업만의 프로젝트(id 는 `p.<이름>`). 보편 프로젝트와 같은 모양이다
