@@ -1,0 +1,205 @@
+{
+ "jobCode": "133901",
+ "title": "IT테스터 및 IT QA전문가",
+ "displayName": "QA 엔지니어",
+ "family": "it",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 테스트 설계 능력과 꼼꼼한 문서, 개발 이해를 결과물로 보여 준다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.qa-basics",
+   "name": "소프트웨어 테스트 기본",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "테스트 종류와 설계 기법을 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "개념",
+     "items": [
+      "테스트 수준과 종류",
+      "경계값·동등 분할 등 설계 기법",
+      "결함 생명 주기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "적용",
+     "items": [
+      "자주 쓰는 앱의 테스트 항목 뽑기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.qa-istqb",
+   "name": "ISTQB 기초 자격(CTFL)",
+   "type": "cert",
+   "subtype": "international",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 60,
+   "goal": "ISTQB CTFL에 합격한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이론",
+     "items": [
+      "실러버스 정독",
+      "용어 정리"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "기출",
+     "items": [
+      "샘플 문제",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.qa-case",
+   "name": "테스트 케이스와 버그 리포트 쓰기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "실제 서비스를 테스트한 케이스와 결함 보고서를 남긴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "설계",
+     "items": [
+      "테스트 범위",
+      "케이스 작성"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "수행",
+     "items": [
+      "테스트 수행",
+      "결함 보고서(재현 절차·증거)",
+      "결과 요약"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.qa-auto",
+   "name": "테스트 자동화 입문",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "화면과 API 테스트를 코드로 자동화한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "도구",
+     "items": [
+      "자동화 도구 기본",
+      "API 테스트"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "적용",
+     "items": [
+      "회귀 테스트 묶음 만들기",
+      "실행 결과 보고"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.qa-basics",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.web-basics",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.sql",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.qa-case",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.qa-istqb",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.git",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "p.qa-auto",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.team-project",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 11,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 12,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

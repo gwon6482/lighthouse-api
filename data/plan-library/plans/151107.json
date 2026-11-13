@@ -28,38 +28,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.me-3d",
-   "name": "3D 설계 도구 익히기",
-   "type": "skill",
-   "subtype": "design",
-   "category": "skill",
-   "method": "lecture",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "3D CAD로 부품을 모델링하고 도면을 만든다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "모델링",
-     "items": [
-      "스케치·피처",
-      "조립품",
-      "도면화"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "실습",
-     "items": [
-      "기계 부품 10개 모델링",
-      "공차 표기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.me-cae",
    "name": "구조·열 해석 기초",
    "type": "skill",
@@ -228,7 +196,7 @@
    "note": "4대 역학"
   },
   {
-   "ref": "p.me-3d",
+   "ref": "cp.cad-3d",
    "step": 2,
    "major": true
   },

@@ -1,0 +1,162 @@
+{
+ "jobCode": "159104",
+ "title": "제도사(캐드원)",
+ "displayName": "캐드(CAD) 설계 보조",
+ "family": "tech",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없지만 전산응용 제도 기능사가 기본 증빙이다. 도면을 정확하고 빠르게 그리는 실력을 도면 묶음으로 보여 준다.",
+ "gate": null,
+ "tracks": [
+  {
+   "id": "arch",
+   "name": "건축 캐드",
+   "desc": "건축·인테리어 도면"
+  },
+  {
+   "id": "mech",
+   "name": "기계 캐드",
+   "desc": "기계 부품·3D 모델링"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cd-arch",
+   "name": "건축 도면 작성 실습",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "주택 한 채의 평면·입면·단면도를 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기준",
+     "items": [
+      "도면 규격과 표기법"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "작성",
+     "items": [
+      "평면도",
+      "입면·단면도",
+      "상세도와 출력"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cd-mech",
+   "name": "기계 도면 작성 실습",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "조립품 하나의 부품도와 조립도를 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "기준",
+     "items": [
+      "공차·표면 거칠기 표기"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "작성",
+     "items": [
+      "부품도",
+      "조립도",
+      "부품 목록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.drawing-reading",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.cad",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 4,
+   "major": true,
+   "note": "국비 캐드 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.portfolio",
+   "step": 8,
+   "major": true,
+   "note": "도면 묶음"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 10,
+   "major": true,
+   "note": "실기 테스트를 본다"
+  }
+ ],
+ "byTrack": {
+  "arch": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 5,
+    "major": true,
+    "note": "전산응용건축제도기능사"
+   },
+   {
+    "ref": "p.cd-arch",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "mech": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 5,
+    "major": true,
+    "note": "전산응용기계제도기능사"
+   },
+   {
+    "ref": "cp.cad-3d",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.cd-mech",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
+}

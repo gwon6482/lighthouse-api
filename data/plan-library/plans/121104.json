@@ -1,0 +1,130 @@
+{
+ "jobCode": "121104",
+ "title": "생물학연구원",
+ "displayName": "바이오 연구원",
+ "family": "research",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "연구직은 사실상 석사 이상을 본다. 전공 지식과 실험 경험을 쌓아 대학원을 거친다.",
+ "gate": "법정 요건은 없으나 채용 공고가 관련 전공 석사 이상을 요구하는 경우가 대부분",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.bio-tech",
+   "name": "실험 기법 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "분자·세포 실험의 기본 기법을 혼자 수행한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "기법",
+     "items": [
+      "PCR·전기영동",
+      "세포 배양",
+      "단백질 분석"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "기록",
+     "items": [
+      "실험 노트 작성",
+      "결과 재현"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.bio-paper",
+   "name": "논문 읽기와 연구 계획",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "study_group",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 120,
+   "goal": "분야 논문을 읽고 연구 질문을 세운다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "읽기",
+     "items": [
+      "주 1편 정독",
+      "방법·결과 비판적으로 보기"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "계획",
+     "items": [
+      "연구 질문과 계획서 초안"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.eng-major",
+   "step": 1,
+   "major": false,
+   "skip": "전공 필수 과목에서 배운다",
+   "note": "생명과학 전공"
+  },
+  {
+   "ref": "cp.stats",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.bio-tech",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.bio-paper",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.lab-grad",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.python-data",
+   "step": 6,
+   "major": true,
+   "note": "데이터 분석",
+   "optional": true
+  },
+  {
+   "ref": "cp.toeic",
+   "step": 7,
+   "major": true,
+   "note": "대학원·연구소 영어 기준"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

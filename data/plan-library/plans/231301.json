@@ -1,0 +1,94 @@
+{
+ "jobCode": "231301",
+ "title": "청소년지도사",
+ "displayName": "청소년지도사",
+ "family": "welfare",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "청소년지도사 자격(국가자격)이 기본이다. 관련 과목을 이수하고 면접과 연수를 거쳐 2급을 받는 길이 일반적이다.",
+ "gate": "청소년지도사 2급 — 대학에서 관련 과목 이수 뒤 면접·연수(급수별 요건은 공고 확인)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.yl-cert",
+   "name": "청소년지도사 2급",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "과목 이수 뒤 면접과 연수를 거쳐 자격을 받는다.",
+   "phases": [
+    {
+     "weeks": 30,
+     "title": "과목 이수",
+     "items": [
+      "청소년 관련 필수 과목"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "면접",
+     "items": [
+      "면접 준비",
+      "응시"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "연수",
+     "items": [
+      "자격 연수 이수"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "과목 이수 여부에 따라 필기 면제가 갈린다. 자격 검정 공고 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "p.yl-cert",
+   "step": 1,
+   "major": false,
+   "skip": "청소년 관련 학과 교육과정에 포함돼 있다"
+  },
+  {
+   "ref": "cp.youth-understanding",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "청소년 수련 시설·센터 활동"
+  },
+  {
+   "ref": "cp.program-plan",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.sw2",
+   "step": 5,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

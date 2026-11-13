@@ -1,0 +1,118 @@
+{
+ "jobCode": "301201",
+ "title": "일반의사",
+ "displayName": "의사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "의과대학을 졸업하고 의사 국가시험에 합격해 면허를 받는다. 이후 수련(인턴·전공의)을 거쳐 전문의가 된다.",
+ "gate": "의과대학(6년) 졸업 + 의사 국가시험 합격(면허)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.md-train",
+   "name": "수련(인턴·전공의)",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 600,
+   "goal": "수련 병원에서 인턴과 전공의 과정을 마친다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "지원",
+     "items": [
+      "수련 병원·전공과 정하기",
+      "지원·선발"
+     ]
+    },
+    {
+     "weeks": 200,
+     "title": "수련",
+     "items": [
+      "인턴 과정",
+      "전공의 과정",
+      "전문의 시험 준비"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "수련 기간은 전공과에 따라 다르다"
+  },
+  {
+   "id": "p.md-research",
+   "name": "의학 연구 참여",
+   "type": "output",
+   "subtype": "research",
+   "category": "portfolio",
+   "method": "team_project",
+   "level": "심화",
+   "daysPerWeek": 2,
+   "minutesPerSession": 180,
+   "goal": "연구실에 참여해 논문이나 학회 발표를 낸다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "연구",
+     "items": [
+      "연구실 참여",
+      "자료 수집·분석",
+      "초록·논문 작성"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 의과대학에 다니고 있다",
+   "note": "의과대학"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.volunteer",
+   "step": 3,
+   "major": true,
+   "note": "의료 봉사",
+   "optional": true
+  },
+  {
+   "ref": "p.md-research",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 5,
+   "major": true,
+   "note": "임상 실습"
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 6,
+   "major": true,
+   "note": "의사 국가시험(필기·실기)"
+  },
+  {
+   "ref": "p.md-train",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "세부 전문의(내과·외과 등 13개 직업)는 이 계획 뒤의 수련 과정에서 갈린다"
+}

@@ -1,0 +1,111 @@
+{
+ "jobCode": "307101",
+ "title": "응급구조사",
+ "displayName": "응급구조사",
+ "family": "health",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "1급은 응급구조(학)과를 졸업하고 국가시험에 합격해야 한다. 2급은 지정 양성기관 과정으로 딸 수 있다.",
+ "gate": "응급구조사 1급 — 응급구조(학)과 졸업 + 국가시험 / 2급 — 양성기관 과정 + 시험",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.emt-skills",
+   "name": "응급 처치 술기 익히기",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "기도 관리·외상 처치·환자 이송을 순서대로 해낸다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "술기 목록과 평가표"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "연습",
+     "items": [
+      "시나리오 기반 반복",
+      "팀 역할 연습"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 응급구조(학)과에 다니고 있다",
+   "note": "응급구조(학)과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.bls",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.clinical-practice",
+   "step": 4,
+   "major": true,
+   "note": "병원·구급차 동승 실습"
+  },
+  {
+   "ref": "p.emt-skills",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.license-exam",
+   "step": 6,
+   "major": true,
+   "note": "응급구조사 국가시험(필기·실기)"
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 7,
+   "major": true,
+   "note": "구급차 운전"
+  },
+  {
+   "ref": "cp.civil-special",
+   "step": 8,
+   "major": true,
+   "note": "소방 구급 분야 경력경쟁채용",
+   "optional": true
+  },
+  {
+   "ref": "cp.hospital-apply",
+   "step": 9,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 10,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 11,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

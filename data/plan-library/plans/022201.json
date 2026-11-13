@@ -1,0 +1,153 @@
+{
+ "jobCode": "022201",
+ "title": "노무사",
+ "displayName": "공인노무사",
+ "family": "pro",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "공인노무사 시험(1차·2차·3차 면접)에 합격하고 수습을 마쳐야 한다. 응시에는 공인 영어 성적이 필요하다.",
+ "gate": "공인노무사 시험 합격 + 실무 수습. 응시 요건: 공인 영어 성적",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cpla-first",
+   "name": "공인노무사 1차",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "1차 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "기본 이론",
+     "items": [
+      "노동법 1·2",
+      "민법·사회보험법",
+      "선택 과목"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "문제",
+     "items": [
+      "객관식 회독",
+      "기출",
+      "모의고사"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.cpla-second",
+   "name": "공인노무사 2차",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "심화",
+   "daysPerWeek": 6,
+   "minutesPerSession": 300,
+   "goal": "2차 논술형 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 16,
+     "title": "심화 이론",
+     "items": [
+      "노동법",
+      "인사노무관리론",
+      "행정쟁송법·선택 과목"
+     ]
+    },
+    {
+     "weeks": 14,
+     "title": "답안 연습",
+     "items": [
+      "논술 답안 작성",
+      "판례 정리",
+      "모의고사"
+     ]
+    }
+   ],
+   "basis": "law"
+  },
+  {
+   "id": "p.cpla-train",
+   "name": "면접과 실무 수습",
+   "type": "edu",
+   "subtype": "required-course",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "3차 면접을 통과하고 수습 과정을 마친다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "면접",
+     "items": [
+      "3차 면접 준비"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "수습",
+     "items": [
+      "집체 교육",
+      "노무법인 실무 수습"
+     ]
+    }
+   ],
+   "basis": "law",
+   "verify": "수습 기간은 한국공인노무사회 안내 확인"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.toeic",
+   "step": 1,
+   "major": true,
+   "note": "공인 영어 성적이 응시 요건(기준 점수는 공고 확인)"
+  },
+  {
+   "ref": "cp.labor-law",
+   "step": 2,
+   "major": true,
+   "note": "본격 수험 전 입문"
+  },
+  {
+   "ref": "p.cpla-first",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "p.cpla-second",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.cpla-train",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 7,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "시험 과목·응시 요건은 한국산업인력공단 공고가 정본"
+}

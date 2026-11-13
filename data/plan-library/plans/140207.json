@@ -12,38 +12,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.cs-estimate",
-   "name": "적산과 공정 관리 기초",
-   "type": "skill",
-   "subtype": "field",
-   "category": "skill",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "도면에서 물량을 뽑고 공정표를 짠다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "적산",
-     "items": [
-      "도면 읽기",
-      "물량 산출",
-      "내역서 구성"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "공정",
-     "items": [
-      "공정표 작성",
-      "공정·원가·품질 관리 개념"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.cs-site",
    "name": "시공 현장 이해",
    "type": "edu",
@@ -106,7 +74,7 @@
    "major": true
   },
   {
-   "ref": "p.cs-estimate",
+   "ref": "cp.estimate-schedule",
    "step": 6,
    "major": true
   },

@@ -1,0 +1,86 @@
+{
+ "jobCode": "250301",
+ "title": "부사관",
+ "displayName": "군 부사관",
+ "family": "public",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "군별 선발 시험으로 뽑는다. 필기 평가·체력 검정·면접과 신체검사를 거친다.",
+ "gate": "부사관 선발 시험 합격(지원 자격은 모집 공고 확인)",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.nco-written",
+   "name": "부사관 필기 평가",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "지적 능력·상황 판단·직무 성격 평가에 대비한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "영역별",
+     "items": [
+      "언어·자료 해석",
+      "공간·지각 속도",
+      "상황 판단"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실전",
+     "items": [
+      "모의 평가",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "verify": "평가 구성은 군·모집 분야마다 다르다"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.civil-pick",
+   "step": 1,
+   "major": true,
+   "note": "군·병과·모집 분야 정하기"
+  },
+  {
+   "ref": "p.nco-written",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 3,
+   "major": true,
+   "note": "가점",
+   "optional": true
+  },
+  {
+   "ref": "cp.civil-bonus",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.fitness-test",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.civil-interview",
+   "step": 6,
+   "major": true
+  }
+ ],
+ "byTrack": {},
+ "verify": "선발 기준은 각 군 모집 공고가 정본"
+}

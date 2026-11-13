@@ -1,0 +1,95 @@
+{
+ "jobCode": "212301",
+ "title": "특수교육교사",
+ "displayName": "특수교사",
+ "family": "edu",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "특수교육과를 졸업해 특수학교 정교사 자격을 받고 임용시험에 합격해야 한다.",
+ "gate": "특수학교 정교사 2급(특수교육과 졸업) + 임용시험 합격",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.se-method",
+   "name": "장애 유형별 교수법",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "school",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "장애 유형에 따른 교육 지원과 개별화교육계획 작성을 안다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "이해",
+     "items": [
+      "장애 유형별 특성",
+      "개별화교육계획",
+      "행동 지원"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "적용",
+     "items": [
+      "수업 지도안 작성",
+      "보조 공학 살펴보기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.dept-admission",
+   "step": 1,
+   "major": false,
+   "skip": "이미 특수교육과에 다니고 있다",
+   "note": "특수교육과"
+  },
+  {
+   "ref": "cp.major-grades",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.se-method",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.edu-volunteer",
+   "step": 4,
+   "major": true,
+   "note": "장애 학생 지원 활동"
+  },
+  {
+   "ref": "cp.teaching-practicum",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 6,
+   "major": true,
+   "note": "임용시험 응시 요건(급수는 공고 확인)"
+  },
+  {
+   "ref": "cp.teacher-exam",
+   "step": 7,
+   "major": true,
+   "note": "특수 임용 1차"
+  },
+  {
+   "ref": "cp.teaching-demo",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

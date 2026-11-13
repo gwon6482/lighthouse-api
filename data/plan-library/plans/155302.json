@@ -1,0 +1,124 @@
+{
+ "jobCode": "155302",
+ "title": "수질환경기술자 및 연구원",
+ "displayName": "환경 엔지니어",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "환경 전공과 환경 분야 기사가 기본이다. 환경 시설·측정 업체·공기업으로 간다.",
+ "gate": "법정 요건은 없으나 채용 공고가 환경 관련 전공과 기사 자격을 요구·우대한다",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.env-law",
+   "name": "환경 법규와 인허가",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "배출 시설 인허가와 배출 허용 기준 체계를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "법규",
+     "items": [
+      "물환경·대기환경 관련 법",
+      "배출 시설 인허가",
+      "환경기술인 선임"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "실무",
+     "items": [
+      "측정 기록과 보고"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.env-lab",
+   "name": "수질 분석 실험",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "공정 시험 기준에 따라 수질 항목을 분석한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "분석",
+     "items": [
+      "시료 채취와 보존",
+      "유기물·영양염류 분석",
+      "분석 기록과 정도 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.eng-major",
+   "step": 2,
+   "major": false,
+   "skip": "환경 전공 과목에서 배운다",
+   "note": "수질·대기·폐기물"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 3,
+   "major": true,
+   "note": "수질환경기사"
+  },
+  {
+   "ref": "p.env-law",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.env-lab",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.eng-field",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.ncs",
+   "step": 7,
+   "major": true,
+   "note": "환경 분야 공기업",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

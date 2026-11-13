@@ -1,0 +1,127 @@
+{
+ "jobCode": "029501",
+ "title": "전산자료입력원 및 사무보조원",
+ "displayName": "사무보조·사무직",
+ "family": "biz",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 문서·엑셀 능력을 자격증으로 증빙하고 사무 보조 경험으로 시작한다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.oa-doc",
+   "name": "문서 작성 능력(한글·워드)",
+   "type": "cert",
+   "subtype": "private-certified",
+   "category": "qualification",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "문서 편집을 익히고 ITQ 등 사무 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "기능",
+     "items": [
+      "서식·표·차트",
+      "공문서 형식"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "자격",
+     "items": [
+      "기출 풀이",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.oa-admin",
+   "name": "사무 업무 흐름 익히기",
+   "type": "skill",
+   "subtype": "common",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "문서 관리·전화 응대·일정 관리의 기본을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "업무",
+     "items": [
+      "문서 분류와 보관",
+      "전화·메일 응대",
+      "회의·일정 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.computer-2",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.oa-doc",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.oa-admin",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.accounting-basic",
+   "step": 6,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.training-course",
+   "step": 7,
+   "major": true,
+   "note": "국비 사무 과정",
+   "optional": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 8,
+   "major": true,
+   "note": "사무 보조 근무"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 10,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

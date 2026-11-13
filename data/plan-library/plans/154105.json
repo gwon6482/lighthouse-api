@@ -159,39 +159,6 @@
     }
    ],
    "basis": "practice"
-  },
-  {
-   "id": "p.ph-lab",
-   "name": "연구실 경험과 대학원",
-   "type": "edu",
-   "subtype": "graduate",
-   "category": "knowledge",
-   "method": "school",
-   "level": "심화",
-   "daysPerWeek": 5,
-   "minutesPerSession": 300,
-   "goal": "학부연구생으로 연구에 참여하고 석사 과정을 준비한다.",
-   "phases": [
-    {
-     "weeks": 16,
-     "title": "학부연구생",
-     "items": [
-      "연구실 고르기",
-      "실험 참여와 기록",
-      "논문 읽기 모임"
-     ]
-    },
-    {
-     "weeks": 4,
-     "title": "진학",
-     "items": [
-      "연구 계획서",
-      "지원·면접"
-     ]
-    }
-   ],
-   "basis": "practice",
-   "verify": "연구개발 직무는 석사 이상을 요구하는 공고가 많다"
   }
  ],
  "common": [
@@ -264,7 +231,7 @@
   ],
   "rnd": [
    {
-    "ref": "p.ph-lab",
+    "ref": "cp.lab-grad",
     "step": 4,
     "major": true
    }

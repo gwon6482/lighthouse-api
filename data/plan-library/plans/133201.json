@@ -579,48 +579,6 @@
    "basis": "practice"
   },
   {
-   "id": "p.sys-c",
-   "name": "C·C++",
-   "type": "skill",
-   "subtype": "dev",
-   "category": "skill",
-   "method": "lecture",
-   "level": "중급",
-   "daysPerWeek": 5,
-   "minutesPerSession": 120,
-   "goal": "포인터·메모리를 다루는 C·C++ 프로그램을 작성한다.",
-   "phases": [
-    {
-     "weeks": 3,
-     "title": "C",
-     "items": [
-      "포인터·배열",
-      "메모리 할당",
-      "파일·구조체"
-     ]
-    },
-    {
-     "weeks": 3,
-     "title": "C++",
-     "items": [
-      "클래스·RAII",
-      "STL",
-      "템플릿 기초"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "도구",
-     "items": [
-      "빌드(Make·CMake)",
-      "디버거",
-      "메모리 오류 찾기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.sys-os",
    "name": "운영체제·컴퓨터구조 심화",
    "type": "edu",
@@ -648,48 +606,6 @@
       "스케줄링·동기화",
       "가상 메모리",
       "시스템 콜 써 보기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.sys-embedded",
-   "name": "임베디드 보드로 펌웨어 만들기",
-   "type": "output",
-   "subtype": "project",
-   "category": "portfolio",
-   "method": "personal_project",
-   "level": "중급",
-   "daysPerWeek": 4,
-   "minutesPerSession": 150,
-   "goal": "MCU 보드에서 센서·통신을 다루는 장치를 완성한다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "준비",
-     "items": [
-      "보드·부품 고르기",
-      "개발 환경",
-      "데이터시트 읽기"
-     ]
-    },
-    {
-     "weeks": 6,
-     "title": "구현",
-     "items": [
-      "GPIO·타이머·인터럽트",
-      "UART·I2C·SPI 통신",
-      "RTOS 올려 보기"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "정리",
-     "items": [
-      "동작 영상",
-      "회로도·코드 공개",
-      "문제 해결 기록"
      ]
     }
    ],
@@ -1010,7 +926,7 @@
   ],
   "sys": [
    {
-    "ref": "p.sys-c",
+    "ref": "cp.c-cpp",
     "step": 7,
     "major": true
    },
@@ -1021,14 +937,14 @@
     "skip": "전공 운영체제·컴퓨터구조 과목에서 배운다"
    },
    {
-    "ref": "p.sys-embedded",
+    "ref": "cp.embedded-project",
     "step": 10,
     "major": true
    }
   ],
   "game": [
    {
-    "ref": "p.sys-c",
+    "ref": "cp.c-cpp",
     "step": 7,
     "major": true,
     "note": "언리얼을 쓸 때. 유니티면 C#으로 대신"

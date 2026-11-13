@@ -38,78 +38,6 @@
  "covers": [],
  "projects": [
   {
-   "id": "p.sw-program",
-   "name": "프로그램 기획서 쓰기",
-   "type": "output",
-   "subtype": "portfolio",
-   "category": "portfolio",
-   "method": "personal_project",
-   "level": "중급",
-   "daysPerWeek": 3,
-   "minutesPerSession": 90,
-   "goal": "대상자 욕구 조사부터 평가까지 담은 프로그램 계획서를 쓴다.",
-   "phases": [
-    {
-     "weeks": 1,
-     "title": "욕구 조사",
-     "items": [
-      "대상과 문제 정하기",
-      "지역 자원 조사"
-     ]
-    },
-    {
-     "weeks": 2,
-     "title": "설계",
-     "items": [
-      "목표·세부 활동",
-      "예산·일정",
-      "평가 계획"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "정리",
-     "items": [
-      "공모 사업 양식에 맞추기",
-      "피드백 반영"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
-   "id": "p.swy-youth",
-   "name": "아동·청소년 이해와 지도",
-   "type": "edu",
-   "subtype": "major",
-   "category": "knowledge",
-   "method": "book",
-   "level": "입문",
-   "daysPerWeek": 3,
-   "minutesPerSession": 60,
-   "goal": "발달 단계와 아동·청소년 복지 제도를 설명한다.",
-   "phases": [
-    {
-     "weeks": 2,
-     "title": "이해",
-     "items": [
-      "발달 이론",
-      "아동학대 신고 의무와 절차",
-      "청소년 정책"
-     ]
-    },
-    {
-     "weeks": 1,
-     "title": "현장",
-     "items": [
-      "기관 유형별 사업 정리",
-      "사례 읽기"
-     ]
-    }
-   ],
-   "basis": "practice"
-  },
-  {
    "id": "p.swe-elder",
    "name": "노인복지와 장기요양 제도",
    "type": "edu",
@@ -273,7 +201,7 @@
    "note": "기록·보고서 작성"
   },
   {
-   "ref": "p.sw-program",
+   "ref": "cp.program-plan",
    "step": 5,
    "major": true
   },
@@ -303,7 +231,7 @@
  "byTrack": {
   "youth": [
    {
-    "ref": "p.swy-youth",
+    "ref": "cp.youth-understanding",
     "step": 7,
     "major": true
    }

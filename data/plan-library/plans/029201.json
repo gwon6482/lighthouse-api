@@ -1,0 +1,145 @@
+{
+ "jobCode": "029201",
+ "title": "고객상담원",
+ "displayName": "고객상담(CS) 담당자",
+ "family": "service",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 듣고 설명하는 힘과 빠른 문서 처리, 감정 관리가 핵심이다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.csr-tools",
+   "name": "상담 시스템과 문서 처리 연습",
+   "type": "skill",
+   "subtype": "common",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "통화하면서 기록을 남기고 채팅 응대를 빠르게 한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "타자",
+     "items": [
+      "타자 속도 올리기",
+      "응대 문장 틀 만들기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "기록",
+     "items": [
+      "상담 이력 작성 연습",
+      "채팅 여러 건 동시 응대"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.csr-product",
+   "name": "상품·정책 숙지 훈련",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "약관과 정책을 읽고 고객 말로 풀어 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "훈련",
+     "items": [
+      "약관·정책 요약",
+      "자주 묻는 질문 답변집",
+      "예외 상황 판단 연습"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.csr-care",
+   "name": "감정 관리와 스트레스 대처",
+   "type": "skill",
+   "subtype": "common",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 60,
+   "goal": "어려운 고객을 대한 뒤 회복하는 나만의 방법을 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "방법",
+     "items": [
+      "폭언 대응 절차 알기",
+      "호흡·휴식 습관",
+      "동료와 사례 나누기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.customer-service",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.csr-tools",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.computer-2",
+   "step": 4,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "p.csr-product",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "p.csr-care",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 7,
+   "major": true,
+   "note": "서비스·상담 아르바이트",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 9,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,115 @@
+{
+ "jobCode": "222001",
+ "title": "법률사무원",
+ "displayName": "법률 사무직",
+ "family": "pro",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "필수 자격은 없다. 소송 절차와 서류를 아는 것이 핵심이고 법률사무소 경험으로 시작한다.",
+ "gate": null,
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.ls-basics",
+   "name": "법률 기초와 소송 절차",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "민사·형사 절차의 단계와 용어를 설명한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "절차",
+     "items": [
+      "민사 소송 단계",
+      "형사 절차",
+      "등기·집행 기초"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.ls-doc",
+   "name": "소송 서류와 전자소송 실무",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "소장·준비서면의 형식을 알고 전자소송으로 제출하는 흐름을 안다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "형식",
+     "items": [
+      "서류 종류와 양식",
+      "기일·기간 계산"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실무",
+     "items": [
+      "전자소송 화면 익히기",
+      "기록 정리와 송달 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "p.ls-basics",
+   "step": 2,
+   "major": false,
+   "skip": "법학 전공 과목에서 배운다"
+  },
+  {
+   "ref": "p.ls-doc",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.computer-2",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "cp.office-docs",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.parttime",
+   "step": 6,
+   "major": true,
+   "note": "법률사무소 근무"
+  },
+  {
+   "ref": "cp.resume",
+   "step": 7,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 8,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}

@@ -1,0 +1,182 @@
+{
+ "jobCode": "153201",
+ "title": "전자제품 및 부품 개발기술자",
+ "displayName": "전자 하드웨어 개발자",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법정 자격은 없지만 전자·전기 전공을 본다. 회로나 펌웨어를 직접 만든 결과물로 증명한다.",
+ "gate": "법정 요건은 없으나 채용 공고가 전자·전기 계열 전공을 요구하는 경우가 대부분",
+ "tracks": [
+  {
+   "id": "hw",
+   "name": "회로·하드웨어",
+   "desc": "회로 설계·PCB"
+  },
+  {
+   "id": "fw",
+   "name": "펌웨어",
+   "desc": "MCU·임베디드 C"
+  }
+ ],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.eh-pcb",
+   "name": "회로 설계와 PCB 제작",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 150,
+   "goal": "회로를 설계해 기판을 만들고 동작시킨다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "설계",
+     "items": [
+      "사양과 부품 선정",
+      "회로도"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "제작",
+     "items": [
+      "PCB 아트워크",
+      "조립·납땜",
+      "동작 시험과 수정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.eh-measure",
+   "name": "계측기 사용과 디버깅",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "오실로스코프·멀티미터로 신호를 보고 문제를 찾는다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "계측",
+     "items": [
+      "오실로스코프·로직 분석기",
+      "전원·신호 무결성 확인",
+      "불량 원인 추적"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.eh-mcu",
+   "name": "임베디드 C와 MCU",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 90,
+   "goal": "마이크로컨트롤러의 주변 장치를 레지스터 수준에서 다룬다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "기본",
+     "items": [
+      "GPIO·타이머·인터럽트",
+      "통신(UART·I2C·SPI)"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "응용",
+     "items": [
+      "센서 드라이버 작성",
+      "저전력 설계"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.eng-major",
+   "step": 1,
+   "major": false,
+   "skip": "전공 필수 과목에서 배운다",
+   "note": "회로이론·전자회로"
+  },
+  {
+   "ref": "cp.c-cpp",
+   "step": 2,
+   "major": true
+  },
+  {
+   "ref": "p.eh-measure",
+   "step": 3,
+   "major": true
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 6,
+   "major": true,
+   "note": "전자기사",
+   "optional": true
+  },
+  {
+   "ref": "cp.speaking",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.aptitude",
+   "step": 8,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 10,
+   "major": true
+  }
+ ],
+ "byTrack": {
+  "hw": [
+   {
+    "ref": "p.eh-pcb",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "fw": [
+   {
+    "ref": "p.eh-mcu",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "cp.embedded-project",
+    "step": 5,
+    "major": true
+   }
+  ]
+ }
+}

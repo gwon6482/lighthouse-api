@@ -4341,6 +4341,293 @@
      ]
     }
    ]
+  },
+  {
+   "id": "cp.lab-grad",
+   "name": "연구실 경험과 대학원",
+   "type": "edu",
+   "subtype": "graduate",
+   "category": "knowledge",
+   "method": "school",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 300,
+   "goal": "학부연구생으로 연구에 참여하고 석사 과정을 준비한다.",
+   "phases": [
+    {
+     "weeks": 16,
+     "title": "학부연구생",
+     "items": [
+      "연구실 고르기",
+      "실험 참여와 기록",
+      "논문 읽기 모임"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "진학",
+     "items": [
+      "연구 계획서",
+      "지원·면접"
+     ]
+    }
+   ],
+   "verify": "연구개발 직무는 석사 이상을 요구하는 공고가 많다",
+   "scope": "family",
+   "families": [
+    "eng",
+    "research"
+   ],
+   "promotedFrom": "154105:p.ph-lab"
+  },
+  {
+   "id": "cp.estimate-schedule",
+   "name": "적산과 공정 관리 기초",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "도면에서 물량을 뽑고 공정표를 짠다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "적산",
+     "items": [
+      "도면 읽기",
+      "물량 산출",
+      "내역서 구성"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "공정",
+     "items": [
+      "공정표 작성",
+      "공정·원가·품질 관리 개념"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "eng"
+   ],
+   "promotedFrom": "140207:p.cs-estimate"
+  },
+  {
+   "id": "cp.c-cpp",
+   "name": "C·C++",
+   "type": "skill",
+   "subtype": "dev",
+   "category": "skill",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 120,
+   "goal": "포인터·메모리를 다루는 C·C++ 프로그램을 작성한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "C",
+     "items": [
+      "포인터·배열",
+      "메모리 할당",
+      "파일·구조체"
+     ]
+    },
+    {
+     "weeks": 3,
+     "title": "C++",
+     "items": [
+      "클래스·RAII",
+      "STL",
+      "템플릿 기초"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "도구",
+     "items": [
+      "빌드(Make·CMake)",
+      "디버거",
+      "메모리 오류 찾기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "it",
+    "eng"
+   ],
+   "promotedFrom": "133201:p.sys-c"
+  },
+  {
+   "id": "cp.embedded-project",
+   "name": "임베디드 보드로 펌웨어 만들기",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 4,
+   "minutesPerSession": 150,
+   "goal": "MCU 보드에서 센서·통신을 다루는 장치를 완성한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "준비",
+     "items": [
+      "보드·부품 고르기",
+      "개발 환경",
+      "데이터시트 읽기"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "구현",
+     "items": [
+      "GPIO·타이머·인터럽트",
+      "UART·I2C·SPI 통신",
+      "RTOS 올려 보기"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "동작 영상",
+      "회로도·코드 공개",
+      "문제 해결 기록"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "it",
+    "eng"
+   ],
+   "promotedFrom": "133201:p.sys-embedded"
+  },
+  {
+   "id": "cp.cad-3d",
+   "name": "3D 설계 도구 익히기",
+   "type": "skill",
+   "subtype": "design",
+   "category": "skill",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "3D CAD로 부품을 모델링하고 도면을 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "모델링",
+     "items": [
+      "스케치·피처",
+      "조립품",
+      "도면화"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "실습",
+     "items": [
+      "기계 부품 10개 모델링",
+      "공차 표기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "eng",
+    "tech"
+   ],
+   "promotedFrom": "151107:p.me-3d"
+  },
+  {
+   "id": "cp.program-plan",
+   "name": "프로그램 기획서 쓰기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "대상자 욕구 조사부터 평가까지 담은 프로그램 계획서를 쓴다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "욕구 조사",
+     "items": [
+      "대상과 문제 정하기",
+      "지역 자원 조사"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "설계",
+     "items": [
+      "목표·세부 활동",
+      "예산·일정",
+      "평가 계획"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "정리",
+     "items": [
+      "공모 사업 양식에 맞추기",
+      "피드백 반영"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "welfare",
+    "edu"
+   ],
+   "promotedFrom": "231101:p.sw-program"
+  },
+  {
+   "id": "cp.youth-understanding",
+   "name": "아동·청소년 이해와 지도",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "발달 단계와 아동·청소년 복지 제도를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "발달 이론",
+      "아동학대 신고 의무와 절차",
+      "청소년 정책"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "현장",
+     "items": [
+      "기관 유형별 사업 정리",
+      "사례 읽기"
+     ]
+    }
+   ],
+   "scope": "family",
+   "families": [
+    "welfare",
+    "edu"
+   ],
+   "promotedFrom": "231101:p.swy-youth"
   }
  ]
 }

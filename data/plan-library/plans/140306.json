@@ -1,0 +1,116 @@
+{
+ "jobCode": "140306",
+ "title": "토목시공기술자 및 견적원",
+ "displayName": "토목 기술자",
+ "family": "eng",
+ "status": "draft",
+ "updatedAt": "2026-11-13",
+ "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
+ "summary": "법정 필수는 아니지만 토목 전공과 토목기사를 본다. 건설사·공기업·공무원(토목직)으로 간다.",
+ "gate": "법정 요건은 없으나 채용 공고가 토목 관련 전공과 토목기사를 요구·우대한다",
+ "tracks": [],
+ "covers": [],
+ "projects": [
+  {
+   "id": "p.cv-site",
+   "name": "토목 현장 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "토공·구조물·포장 공사의 순서와 관리 포인트를 설명한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "공종",
+     "items": [
+      "토공·기초",
+      "교량·터널·도로",
+      "측량과 품질 시험"
+     ]
+    },
+    {
+     "weeks": 1,
+     "title": "관리",
+     "items": [
+      "시공 계획서",
+      "안전·환경 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
+ "common": [
+  {
+   "ref": "cp.job-research",
+   "step": 1,
+   "major": true
+  },
+  {
+   "ref": "cp.eng-major",
+   "step": 2,
+   "major": false,
+   "skip": "토목 전공 과목에서 배운다",
+   "note": "구조·토질·수리"
+  },
+  {
+   "ref": "cp.engineer-cert",
+   "step": 3,
+   "major": true,
+   "note": "토목기사"
+  },
+  {
+   "ref": "cp.cad",
+   "step": 4,
+   "major": true
+  },
+  {
+   "ref": "p.cv-site",
+   "step": 5,
+   "major": true
+  },
+  {
+   "ref": "cp.estimate-schedule",
+   "step": 6,
+   "major": true
+  },
+  {
+   "ref": "cp.safety-law",
+   "step": 7,
+   "major": true,
+   "optional": true
+  },
+  {
+   "ref": "cp.eng-field",
+   "step": 8,
+   "major": true
+  },
+  {
+   "ref": "cp.driver-license",
+   "step": 9,
+   "major": true
+  },
+  {
+   "ref": "cp.ncs",
+   "step": 10,
+   "major": true,
+   "note": "공기업 지원 시",
+   "optional": true
+  },
+  {
+   "ref": "cp.resume",
+   "step": 11,
+   "major": true
+  },
+  {
+   "ref": "cp.interview",
+   "step": 12,
+   "major": true
+  }
+ ],
+ "byTrack": {}
+}
