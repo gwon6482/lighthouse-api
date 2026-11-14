@@ -4,7 +4,7 @@
  "displayName": "금속·비금속 생산기계 조작원",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 담당 설비를 표준대로 운전하고 품질과 안전을 지키는 일이다. 관련 기능사가 있으면 유리하다.",
  "gate": null,
@@ -132,7 +132,7 @@
     "ref": "cp.craftsman-cert",
     "step": 3.5,
     "major": true,
-    "note": "금속 재료·압연·열처리 등 해당 분야 기능사",
+    "note": "압연기능사·열처리기능사·제선기능사·제강기능사 등",
     "optional": true
    }
   ],
@@ -141,7 +141,7 @@
     "ref": "cp.craftsman-cert",
     "step": 3.5,
     "major": true,
-    "note": "세라믹·유리 등 해당 분야 기능사",
+    "note": "전용 기능사 종목이 없다 — 지게차운전기능사 등 공통 자격이 도움이 된다",
     "optional": true
    }
   ]

@@ -4,7 +4,7 @@
  "displayName": "위생·환경 검사원(위생사)",
  "family": "health",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "위생사 면허가 기본이다. 관련 학과에서 과목을 이수하고 국가시험에 합격한다.",
  "gate": "위생사 면허 — 보건·환경·식품 관련 학과(과목 이수) + 국가시험",
@@ -82,6 +82,12 @@
    "ref": "cp.interview",
    "step": 91,
    "major": true
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 5.5,
+   "major": true,
+   "note": "9급 공채는 3급 이상 — 2027년부터 한국사 과목을 대체한다"
   }
  ],
  "byTrack": {}

@@ -4,7 +4,7 @@
  "displayName": "웹툰 작가",
  "family": "media",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "자격이나 채용 절차가 없다. 그림·이야기 실력을 단편과 연재로 보여 주고 공모전·플랫폼 투고로 데뷔한다.",
  "gate": null,
@@ -143,7 +143,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "플랫폼별 투고 방식과 공모전 일정 확인"
+   "caution": "플랫폼별 투고 방식과 공모전 일정 확인"
   },
   {
    "id": "p.wt-assist",

@@ -4,7 +4,7 @@
  "displayName": "성우",
  "family": "media",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "방송사 성우 공채나 프리랜서 오디션으로 시작한다. 목소리 연기를 데모로 보여 준다.",
  "gate": null,
@@ -94,7 +94,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "공채 규모와 전형은 방송사마다 다르다"
+   "caution": "공채 규모와 전형은 방송사마다 다르다"
   }
  ],
  "common": [

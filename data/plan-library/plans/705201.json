@@ -4,7 +4,7 @@
  "displayName": "철로·채석 기능원",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "선로 유지 보수는 철도 분야 기능사와 현장 경력으로, 채석·광산은 장비 운전과 현장 경험으로 일한다.",
  "gate": null,

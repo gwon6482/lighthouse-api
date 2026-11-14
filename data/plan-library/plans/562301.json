@@ -4,7 +4,7 @@
  "displayName": "주차·검침·검표원",
  "family": "service",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 응대 태도와 성실함을 보고, 가스 점검원은 관련 자격을 우대한다.",
  "gate": null,

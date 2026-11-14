@@ -4,7 +4,7 @@
  "displayName": "크리에이터",
  "family": "media",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "자격이나 채용 절차가 없다. 주제를 정해 꾸준히 올리고 지표를 보며 고쳐 가는 것이 전부다.",
  "gate": null,
@@ -98,7 +98,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "플랫폼 정책은 자주 바뀐다"
+   "caution": "플랫폼 정책은 자주 바뀐다"
   }
  ],
  "common": [

@@ -4,7 +4,7 @@
  "displayName": "통계 담당자",
  "family": "data",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 사회조사분석사가 대표 증빙이다. 통계 작성 기관과 조사 회사, 통계직 공무원으로 간다.",
  "gate": null,
@@ -66,6 +66,12 @@
    "ref": "cp.interview",
    "step": 91,
    "major": true
+  },
+  {
+   "ref": "cp.korean-history",
+   "step": 7.5,
+   "major": true,
+   "note": "9급 공채는 3급 이상 — 2027년부터 한국사 과목을 대체한다"
   }
  ],
  "byTrack": {}

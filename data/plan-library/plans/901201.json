@@ -4,7 +4,7 @@
  "displayName": "청년 농부(스마트팜)",
  "family": "agri",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "자격이나 채용 절차가 없는 창업형 진로다. 작목을 정하고 교육과 실습을 거쳐 지원 사업으로 기반을 마련한다.",
  "gate": null,
@@ -50,7 +50,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "공공 장기 교육과정이 있다. 모집 시기 확인"
+   "caution": "공공 장기 교육과정이 있다. 모집 시기 확인"
   }
  ],
  "common": [

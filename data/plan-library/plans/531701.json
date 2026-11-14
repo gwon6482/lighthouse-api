@@ -4,7 +4,7 @@
  "displayName": "바리스타",
  "family": "service",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 추출 실력과 매장 경험이 전부이고 민간 자격은 입문 증빙 정도다.",
  "gate": null,
@@ -90,7 +90,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "민간자격이라 발급 기관이 여럿이다. 채용에서 필수는 아니다"
+   "caution": "민간자격이라 발급 기관이 여럿이다. 채용에서 필수는 아니다"
   },
   {
    "id": "p.br-startup",

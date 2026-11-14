@@ -4,7 +4,7 @@
  "displayName": "가수",
  "family": "media",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "자격이나 정해진 채용이 없다. 실력을 쌓아 음원·영상과 공연으로 알리거나, 기획사 오디션을 거쳐 연습생이 된다.",
  "gate": null,
@@ -142,7 +142,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "아이돌은 기획사 오디션 뒤 연습생 기간을 거친다"
+   "caution": "아이돌은 기획사 오디션 뒤 연습생 기간을 거친다"
   }
  ],
  "common": [

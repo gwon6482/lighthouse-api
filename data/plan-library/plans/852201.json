@@ -4,7 +4,7 @@
  "displayName": "고무·플라스틱·화학제품 생산직",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 성형 설비를 운전하고 제품을 검사·조립한다. 화학 물질을 다루는 공정은 안전이 먼저다.",
  "gate": null,
@@ -72,7 +72,7 @@
    "ref": "cp.craftsman-cert",
    "step": 4,
    "major": true,
-   "note": "사출·화학 분야 기능사",
+   "note": "위험물기능사·화학분석기능사 등",
    "optional": true
   },
   {

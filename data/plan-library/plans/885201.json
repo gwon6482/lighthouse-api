@@ -4,7 +4,7 @@
  "displayName": "간판·사인 제작자",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 디자인부터 제작·설치까지 익히고, 높은 곳 작업과 전기 안전을 지킨다.",
  "gate": null,
@@ -85,7 +85,7 @@
    "ref": "cp.craftsman-cert",
    "step": 4,
    "major": true,
-   "note": "광고도장기능사 등",
+   "note": "컴퓨터그래픽기능사 등(광고도장기능사는 없어졌다)",
    "optional": true
   },
   {

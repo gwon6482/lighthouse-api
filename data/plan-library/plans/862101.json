@@ -4,7 +4,7 @@
  "displayName": "패턴·봉제사",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 패턴과 봉제 실력을 샘플로 보여 주고 의류 업체 개발실이나 샘플실에서 일한다.",
  "gate": null,
@@ -123,7 +123,7 @@
    "ref": "cp.craftsman-cert",
    "step": 4,
    "major": true,
-   "note": "양장기능사",
+   "note": "여성복기능사",
    "optional": true
   },
   {

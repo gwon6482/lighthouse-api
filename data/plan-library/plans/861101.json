@@ -4,7 +4,7 @@
  "displayName": "섬유·의복·신발 생산직",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 담당 설비를 운전하며 익히고, 제화처럼 손기술이 필요한 분야는 기술을 따로 배운다.",
  "gate": null,
@@ -118,7 +118,7 @@
     "ref": "cp.craftsman-cert",
     "step": 4,
     "major": true,
-    "note": "염색 등 섬유 분야 기능사",
+    "note": "염색기능사(날염·침염)",
     "optional": true
    }
   ],
@@ -132,7 +132,7 @@
     "ref": "cp.craftsman-cert",
     "step": 4,
     "major": true,
-    "note": "신발 분야 기능사",
+    "note": "신발제조기능사",
     "optional": true
    }
   ],

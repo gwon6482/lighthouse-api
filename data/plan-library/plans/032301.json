@@ -4,7 +4,7 @@
  "displayName": "보험 심사역(언더라이터)",
  "family": "finance",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 보험사 공채로 들어가 배치받는 경우가 많고, 위험을 평가하는 지식과 숫자 감각을 본다.",
  "gate": null,
@@ -82,7 +82,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "협회가 운영하는 민간 자격이다. 재직자 응시가 많다"
+   "caution": "협회가 운영하는 민간 자격이다. 재직자 응시가 많다"
   }
  ],
  "common": [

@@ -4,7 +4,7 @@
  "displayName": "증권·자산운용 전문가",
  "family": "finance",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "법정 자격은 없지만 금융 자격증과 분석 결과물, 금융권 인턴 경험을 본다. 상경 계열 지식이 바탕이다.",
  "gate": null,
@@ -197,7 +197,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "응시 요건과 일정은 CFA 협회 확인"
+   "verify": "응시 요건과 일정은 CFA 협회 원문을 확인하지 못했다"
   }
  ],
  "common": [

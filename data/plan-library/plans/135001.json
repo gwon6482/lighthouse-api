@@ -4,7 +4,7 @@
  "displayName": "정보보안 전문가",
  "family": "it",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 정보보안기사가 대표 증빙이다. 시스템·네트워크 기초 위에 분야별 실습 결과물을 쌓는다.",
  "gate": null,
@@ -154,7 +154,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "허가받은 실습 환경에서만 진단한다"
+   "caution": "허가받은 실습 환경에서만 진단한다"
   },
   {
    "id": "p.sec-isms",

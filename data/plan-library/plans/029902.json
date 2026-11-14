@@ -4,7 +4,7 @@
  "displayName": "속기사",
  "family": "biz",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "한글속기 자격이 기본 증빙이다. 속기 키보드를 익혀 자격을 따고 회의록·자막 속기로 일한다.",
  "gate": null,

@@ -4,7 +4,7 @@
  "displayName": "반려동물 미용사",
  "family": "service",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "법정 필수 자격은 없다. 학원에서 기술을 익히고 자격과 현장 경험으로 시작한다.",
  "gate": null,
@@ -90,7 +90,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "민간 자격이다(일부는 국가공인). 급수와 발급 기관을 확인할 것"
+   "caution": "민간 자격이다(일부는 국가공인). 급수와 발급 기관을 확인할 것"
   }
  ],
  "common": [

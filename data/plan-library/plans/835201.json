@@ -4,7 +4,7 @@
  "displayName": "반도체·전자 생산직",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "학력 제한이 낮은 공개 채용으로 뽑는다. 공정 이해와 관련 자격, 교대 근무 적응이 중요하다.",
  "gate": null,
@@ -74,7 +74,7 @@
    "ref": "cp.craftsman-cert",
    "step": 5,
    "major": true,
-   "note": "반도체장비유지보수기능사 등",
+   "note": "반도체설비보전기능사 등",
    "optional": true
   },
   {
@@ -95,5 +95,5 @@
   }
  ],
  "byTrack": {},
- "verify": "모집 대상(학력·전공)은 회사 공고마다 다르다"
+ "caution": "모집 대상(학력·전공)은 회사 공고마다 다르다"
 }

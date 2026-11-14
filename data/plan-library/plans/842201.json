@@ -4,7 +4,7 @@
  "displayName": "통신·인터넷 설치 기사",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 통신 분야 기능사가 증빙이 된다. 통신 공사 업체와 인터넷 설치 업체에서 일한다.",
  "gate": null,
@@ -88,7 +88,7 @@
    "ref": "cp.craftsman-cert",
    "step": 4,
    "major": true,
-   "note": "통신선로기능사·방송통신기능사 등",
+   "note": "방송통신기능사 등 정보통신 분야 기능사",
    "optional": true
   },
   {

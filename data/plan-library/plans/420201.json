@@ -4,7 +4,7 @@
  "displayName": "운동선수",
  "family": "service",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "종목 단체에 선수로 등록해 대회 성적을 쌓고, 드래프트나 입단 테스트로 프로·실업팀에 들어간다.",
  "gate": null,
@@ -82,7 +82,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "선발 방식은 종목과 리그마다 다르다"
+   "caution": "선발 방식은 종목과 리그마다 다르다"
   }
  ],
  "common": [

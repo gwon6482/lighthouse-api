@@ -4,7 +4,7 @@
  "displayName": "기계·선박 조립원",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 도면을 보고 부품을 조립·측정하는 기술을 익혀 기계·조선 제조 업체에서 일한다.",
  "gate": null,

@@ -4,7 +4,7 @@
  "displayName": "임업인(산림 경영)",
  "family": "agri",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "산림기능사가 기본 증빙이다. 산림조합이나 산림 사업 법인에서 일하며 숲 가꾸기와 벌목 기술을 쌓는다.",
  "gate": null,

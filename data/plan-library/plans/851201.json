@@ -4,7 +4,7 @@
  "displayName": "정유·화학 생산직",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "학력 제한이 낮은 공개 채용으로 뽑는다. 공정 이해와 위험물·가스 관련 자격, 교대 근무 적응이 중요하다.",
  "gate": null,
@@ -68,7 +68,7 @@
    "ref": "cp.engineer-cert",
    "step": 5,
    "major": true,
-   "note": "화공산업기사·산업안전산업기사",
+   "note": "위험물산업기사·산업안전산업기사",
    "optional": true
   },
   {
@@ -101,5 +101,5 @@
   }
  ],
  "byTrack": {},
- "verify": "모집 대상과 전형은 회사 공고마다 다르다"
+ "caution": "모집 대상과 전형은 회사 공고마다 다르다"
 }

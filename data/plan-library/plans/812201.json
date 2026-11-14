@@ -4,7 +4,7 @@
  "displayName": "선박 정비사",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 기관 정비 분야 기능사가 기본 증빙이다. 조선소와 수리 업체에서 경력을 쌓는다.",
  "gate": null,
@@ -77,7 +77,7 @@
    "ref": "cp.craftsman-cert",
    "step": 4,
    "major": true,
-   "note": "선박기관정비기능사·동력기계정비기능사"
+   "note": "선박기관정비기능사"
   },
   {
    "ref": "p.sr-basics",

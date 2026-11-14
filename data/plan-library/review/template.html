@@ -20,6 +20,8 @@
   --local-soft: #f1ecdf;
   --warn: #b4540a;
   --warn-soft: #fdeedd;
+  --ok: #0b7a52;
+  --ok-soft: #e2f3ea;
   --c-qualification: #c2410c;
   --c-knowledge: #2563eb;
   --c-skill: #0f8a5f;
@@ -31,13 +33,13 @@
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #15140f; --surface: #1e1d17; --surface-2: #26251e; --line: #36342b; --fg: #efede4; --fg-2: #b7b4a6; --fg-3: #858273;
   --accent: #f5c400; --accent-ink: #1d1700; --accent-soft: #3a3105; --common: #7aa7f5; --common-soft: #1c2a45; --local: #d4c49a; --local-soft: #302b1d;
-  --warn: #f0a35c; --warn-soft: #3a2614;
+  --warn: #f0a35c; --warn-soft: #3a2614; --ok: #5fd3a6; --ok-soft: #14301f;
   --c-qualification: #fb8a5c; --c-knowledge: #7aa7f5; --c-skill: #4fd1a0; --c-portfolio: #c49af5; --c-experience: #f0b35c;
   color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #15140f; --surface: #1e1d17; --surface-2: #26251e; --line: #36342b; --fg: #efede4; --fg-2: #b7b4a6; --fg-3: #858273;
   --accent: #f5c400; --accent-ink: #1d1700; --accent-soft: #3a3105; --common: #7aa7f5; --common-soft: #1c2a45; --local: #d4c49a; --local-soft: #302b1d;
-  --warn: #f0a35c; --warn-soft: #3a2614;
+  --warn: #f0a35c; --warn-soft: #3a2614; --ok: #5fd3a6; --ok-soft: #14301f;
   --c-qualification: #fb8a5c; --c-knowledge: #7aa7f5; --c-skill: #4fd1a0; --c-portfolio: #c49af5; --c-experience: #f0b35c;
   color-scheme: dark }
 
@@ -91,6 +93,14 @@ button { font: inherit; color: inherit; }
 .gate { display: flex; gap: 8px; align-items: flex-start; padding: 10px 12px; border-radius: 8px; background: var(--accent-soft); color: var(--fg); font-size: 13px; }
 .gate b { white-space: nowrap; }
 .verify { display: flex; gap: 8px; align-items: flex-start; padding: 8px 12px; border-radius: 8px; background: var(--warn-soft); color: var(--warn); font-size: 12.5px; }
+.checked { display: flex; gap: 8px; align-items: flex-start; padding: 8px 12px; border-radius: 8px; background: var(--ok-soft); color: var(--fg); font-size: 12.5px; }
+.checked b { color: var(--ok); }
+.checked small { display: block; color: var(--fg-2); margin-top: 2px; }
+.caution { display: flex; gap: 8px; align-items: flex-start; padding: 8px 12px; border-radius: 8px; background: var(--surface); border: 1px solid var(--line); color: var(--fg-2); font-size: 12.5px; }
+.checked b, .caution b, .verify b { white-space: nowrap; }
+.checked span, .caution span, .verify span { min-width: 0; }
+.tag--ok { background: var(--ok-soft); color: var(--ok); }
+.tag--warn { background: var(--warn-soft); color: var(--warn); }
 .covers { font-size: 12.5px; color: var(--fg-2); }
 
 .trackbar { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -213,6 +223,10 @@ const PLAN = Object.fromEntries(PLANS.map(p => [p.jobCode, p]));
 // 1차 = 우선순위 100개(tier 1~3), 그 뒤는 2차의 단계(wave 2~4)
 const stageOf = pr => pr.tier != null ? '1' : String(pr.wave);
 const STAGES = [['all', '전체'], ['1', '1차 100'], ['2', '2단계'], ['3', '3단계'], ['4', '4단계']];
+// 확인 표시: checked = 출처와 대조함, caution = 공고마다 다르다 같은 안내, verify = 아직 대조하지 못함
+const LEVEL = { law: '법령 원문', official: '공식 자료', secondary: '2차 자료' };
+const notes = o => `${o.checked ? `<div class="checked"><b>확인함</b><span>${esc(o.checked.note || '')}<small>${esc(LEVEL[o.checked.level] || '')} · ${esc(o.checked.source)} · ${esc(o.checked.at)}</small></span></div>` : ''}${o.caution ? `<div class="caution"><b>주의</b><span>${esc(o.caution)}</span></div>` : ''}${o.verify ? `<div class="verify"><b>확인 필요</b><span>${esc(o.verify)}</span></div>` : ''}`;
+const marks = o => `${o.checked ? '<span class="tag tag--ok">확인함</span>' : ''}${o.verify ? '<span class="tag tag--warn">확인 필요</span>' : ''}`;
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const weeksOf = p => p.phases.reduce((s, ph) => s + ph.weeks, 0);
 const fmtWeeks = w => w >= 52 ? `${w}주 <small>(약 ${Math.round(w / 4.345)}개월)</small>` : `${w}주`;
@@ -242,9 +256,11 @@ const save = () => { try { localStorage.setItem('plan-lib', JSON.stringify({ job
 // ── 상단 통계 ──
 const localCount = PLANS.reduce((s, p) => s + p.projects.length, 0);
 const branches = PLANS.reduce((s, p) => s + Math.max(1, p.tracks.length), 0);
+const everything = [...D.common, ...PLANS, ...PLANS.flatMap(p => p.projects)];
+const nChecked = everything.filter(o => o.checked).length, nVerify = everything.filter(o => o.verify).length;
 const jobCount = PLANS.reduce((s, p) => s + 1 + PRI[p.jobCode].covers.length, 0);
 document.getElementById('stats').innerHTML =
-  `<span>계획 <b>${PLANS.length}</b></span><span>덮는 직업 <b>${jobCount}</b></span><span>세부 카테고리까지 <b>${branches}</b>갈래</span><span>보편 프로젝트 <b>${D.common.length}</b></span><span>직업 전용 <b>${localCount}</b></span>`;
+  `<span>계획 <b>${PLANS.length}</b></span><span>덮는 직업 <b>${jobCount}</b></span><span>세부 카테고리까지 <b>${branches}</b>갈래</span><span>보편 프로젝트 <b>${D.common.length}</b></span><span>직업 전용 <b>${localCount}</b></span><span>확인함 <b>${nChecked}</b></span><span>확인 필요 <b>${nVerify}</b></span>`;
 
 // ── 직업 목록 ──
 function renderStageBar() {
@@ -317,7 +333,7 @@ function renderJob() {
       </div>
       <p>${esc(p.summary)}</p>
       ${p.gate ? `<div class="gate"><b>진입 관문</b><span>${esc(p.gate)}</span></div>` : ''}
-      ${p.verify ? `<div class="verify"><b>확인 필요</b><span>${esc(p.verify)}</span></div>` : ''}
+      ${notes(p)}
       ${pr.covers.length ? `<div class="covers">같은 계획을 함께 쓰는 직업: ${pr.covers.map(c => `${esc(c.title)}${c.track ? ` → ${esc(p.tracks.find(t => t.id === c.track)?.name)}` : ''}`).join(', ')}</div>` : ''}
     </div>
     ${p.tracks.length ? `
@@ -349,7 +365,7 @@ function stepHtml(plan, it, n) {
           ${it._track ? `<span class="tag tag--track">${esc(plan.tracks.find(t => t.id === it._track).name)}</span>` : ''}
           ${it.optional ? '<span class="tag tag--opt">선택</span>' : ''}
           ${it.major === false ? '<span class="tag tag--skip">전공자 생략</span>' : ''}
-          <span class="tag tag--opt">${esc(pj.level)}</span>
+          <span class="tag tag--opt">${esc(pj.level)}</span>${marks(pj)}
         </span>
         <span class="step__goal">${esc(pj.goal)}</span>
         ${it.note ? `<span class="step__note">${esc(it.note)}</span>` : ''}
@@ -363,7 +379,7 @@ function stepHtml(plan, it, n) {
         <span class="mono">${esc(pj.id)}</span></div>
       <div class="phases">${pj.phases.map(ph => `<div class="phase"><div class="phase__t">${esc(ph.title)}<span>${ph.weeks}주</span></div><ul>${ph.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div>
       ${pj.options ? `<ul class="options">${pj.options.map(o => `<li>${esc(o)}</li>`).join('')}</ul>` : ''}
-      ${pj.verify ? `<div class="verify"><b>확인 필요</b><span>${esc(pj.verify)}</span></div>` : ''}
+      ${notes(pj)}
     </div>` : ''}
   </li>`;
 }
@@ -419,7 +435,7 @@ function renderCards() {
         <span class="step__tags">
           <span class="tag tag--cat" style="background:var(--c-${c.category})">${CAT[c.category]}</span>
           <span class="tag tag--opt">${esc(TYPES[c.type].name)} · ${esc(TYPES[c.type].subtypes[c.subtype])}</span>
-          <span class="tag ${c.scope === 'all' ? 'tag--track' : 'tag--common'}">${esc(famLabel(c, state.fam))}</span>
+          <span class="tag ${c.scope === 'all' ? 'tag--track' : 'tag--common'}">${esc(famLabel(c, state.fam))}</span>${marks(c)}
         </span>
         <span class="card__goal">${esc(c.goal)}</span>
         <span class="meta"><span><b>${weeksOf(c)}주</b> · 주 ${c.daysPerWeek}회 · ${c.minutesPerSession}분</span><span>${esc(METHOD[c.method] || c.method)}</span><span>${esc(c.level)}</span></span>
@@ -427,7 +443,7 @@ function renderCards() {
       ${open ? `<div class="card__body">
         <div class="phases">${c.phases.map(ph => `<div class="phase"><div class="phase__t">${esc(ph.title)}<span>${ph.weeks}주</span></div><ul>${ph.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div>
         ${c.options ? `<ul class="options">${c.options.map(o => `<li>${esc(o)}</li>`).join('')}</ul>` : ''}
-        ${c.verify ? `<div class="verify"><b>확인 필요</b><span>${esc(c.verify)}</span></div>` : ''}
+        ${notes(c)}
         <p class="sec-title">쓰는 계획 ${used.length}개</p>
         <div class="usedby">${used.length ? used.map(j => `<button data-job="${j}">${esc(PLAN[j].displayName)}</button>`).join('') : '<span class="step__note">아직 어느 계획에도 없다 — 사용자가 골라 쓰는 용도</span>'}</div>
         ${c.scope === 'family' ? `<div class="step__note"><em>쓰는 계열 ${c.families.length}곳 · </em>${c.families.map(f => esc(FAM[f])).join(', ')}</div>` : ''}

@@ -4,7 +4,7 @@
  "displayName": "번역가",
  "family": "media",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 외국어와 한국어 글쓰기 실력을 샘플 번역으로 보여 주고 에이전시 테스트나 투고로 일을 얻는다.",
  "gate": null,

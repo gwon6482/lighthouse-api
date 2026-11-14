@@ -4,7 +4,7 @@
  "displayName": "아나운서·리포터",
  "family": "media",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "방송사 공채나 프리랜서 오디션으로 뽑는다. 발성·진행 실력을 카메라 테스트로 보여 준다.",
  "gate": null,
@@ -101,7 +101,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "전형 구성은 방송사마다 다르다"
+   "caution": "전형 구성은 방송사마다 다르다"
   }
  ],
  "common": [

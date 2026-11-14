@@ -4,7 +4,7 @@
  "displayName": "리서처(시장·여론 조사)",
  "family": "biz",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 사회조사분석사가 대표 증빙이다. 조사 설계와 통계 분석 능력을 프로젝트로 보인다.",
  "gate": null,

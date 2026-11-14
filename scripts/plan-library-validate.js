@@ -4,6 +4,7 @@
 //         세부 카테고리 id 가 priority-jobs.json 과 같은지, 전공자 제외 항목에 이유(skip)가 있는지
 //         계열 공통 보편 프로젝트의 families 가 그것을 쓰는 계획의 계열을 담고 있는지
 //         세부 카테고리 가운데 내용이 빈 것이 둘 이상인지(카테고리끼리 계획이 같아진다)
+//         확인 표시(checked·caution·verify)의 모양
 const fs = require('fs');
 const path = require('path');
 const { CATEGORIES, METHODS_BY_CATEGORY } = require('../config/projectMethods');
@@ -34,6 +35,20 @@ function checkProject(where, p) {
   }
 }
 const weeksOf = (p) => p.phases.reduce((s, ph) => s + ph.weeks, 0);
+// 확인 표시: checked = 출처와 대조한 것, caution = 공고마다 다르다 같은 안내, verify = 아직 대조하지 못한 사실
+const CHECK_LEVELS = ['law', 'official', 'secondary'];
+const noteStat = { checked: 0, law: 0, official: 0, secondary: 0, caution: 0, verify: 0 };
+function checkNotes(where, o) {
+  if (o.checked !== undefined) {
+    const k = o.checked;
+    if (!k || typeof k !== 'object' || !/^\d{4}-\d{2}-\d{2}$/.test(k.at || '') || !CHECK_LEVELS.includes(k.level) || !k.source) err(where, 'checked 는 { at(YYYY-MM-DD), level(law|official|secondary), source, note? } 모양이어야 한다');
+    else { noteStat.checked++; noteStat[k.level]++; }
+  }
+  for (const f of ['caution', 'verify']) {
+    if (o[f] === undefined) continue;
+    if (typeof o[f] !== 'string' || !o[f]) err(where, `${f} 는 비어 있지 않은 글이어야 한다`); else noteStat[f]++;
+  }
+}
 
 const cp = new Map();
 for (const p of common) {
@@ -41,6 +56,7 @@ for (const p of common) {
   if (cp.has(p.id)) err(p.id, '중복');
   cp.set(p.id, p);
   checkProject(p.id, p);
+  checkNotes(p.id, p);
   if (!tax.scopes[p.scope]) err(p.id, `scope '${p.scope}'`);
   if (p.scope === 'all' ? p.families.length : !p.families.length) err(p.id, 'scope 와 families 가 어긋남');
   for (const f of p.families) if (!tax.families[f]) err(p.id, `family '${f}'`);
@@ -65,12 +81,14 @@ for (const f of planFiles) {
   const pj = byCode.get(plan.jobCode);
   if (!pj) { err(w, '우선순위 목록에 없는 직업'); continue; }
   if (f !== `${plan.jobCode}.json`) err(w, '파일 이름과 jobCode 가 다름');
+  checkNotes(w, plan);
   const local = new Map();
   for (const p of plan.projects) {
     if (!/^p\.[a-z0-9-]+$/.test(p.id)) err(w, `id 모양 ${p.id}`);
     if (local.has(p.id)) err(w, `중복 ${p.id}`);
     local.set(p.id, p);
     checkProject(`${w} ${p.id}`, p);
+    checkNotes(`${w} ${p.id}`, p);
     localNames.set(p.name, [...(localNames.get(p.name) || []), plan.displayName]);
   }
   const trackIds = pj.tracks.map((t) => t.id);
@@ -117,5 +135,6 @@ if (process.argv.includes('--table')) for (const r of rows) console.log(`  ${r.j
 const dup = [...localNames.entries()].filter(([, jobs]) => new Set(jobs).size > 1);
 if (dup.length) console.log('여러 직업에 같은 이름의 직업 프로젝트 → 보편 프로젝트로 올릴 후보:', dup.map(([n, j]) => `${n}(${[...new Set(j)].join('·')})`).join(', '));
 console.log(`계획에서 쓰인 보편 프로젝트 ${usedCommon.size}/${common.length}개`);
+console.log(`확인함 ${noteStat.checked}곳(법령 원문 ${noteStat.law} · 공식 자료 ${noteStat.official} · 2차 자료 ${noteStat.secondary}) · 주의 ${noteStat.caution}곳 · 확인 필요 ${noteStat.verify}곳`);
 if (errors.length) { console.error(`\n오류 ${errors.length}건`); errors.forEach((e) => console.error(' - ' + e)); process.exit(1); }
 console.log('오류 없음');

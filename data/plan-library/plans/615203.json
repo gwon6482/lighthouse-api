@@ -4,7 +4,7 @@
  "displayName": "판매·대여 서비스원",
  "family": "sales",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 상품 지식과 응대, 판매 경험으로 일한다. 노점·방문 판매는 스스로 사업을 꾸린다.",
  "gate": null,
@@ -100,7 +100,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "업종에 따라 신고·허가 요건이 다르다"
+   "caution": "업종에 따라 신고·허가 요건이 다르다"
   }
  ],
  "common": [

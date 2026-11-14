@@ -4,7 +4,7 @@
  "displayName": "식당 서비스·주방 보조",
  "family": "service",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 건강 진단을 받고 일하면서 익힌다.",
  "gate": null,

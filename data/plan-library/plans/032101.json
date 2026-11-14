@@ -4,7 +4,7 @@
  "displayName": "은행원",
  "family": "finance",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "학력·전공 제한은 없고 공개 채용으로 뽑는다. 서류 → 필기(NCS·금융 상식) → 면접 순이며 금융 자격증과 영업 경험이 가점이 된다.",
  "gate": null,
@@ -70,7 +70,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "은행마다 필기 구성과 비중이 다르다"
+   "caution": "은행마다 필기 구성과 비중이 다르다"
   },
   {
    "id": "p.bank-product",

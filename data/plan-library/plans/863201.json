@@ -4,7 +4,7 @@
  "displayName": "의류 제작·수선사",
  "family": "tech",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 분야별 기능사가 증빙이 된다. 맞춤 제작과 수선 기술을 익혀 의상실이나 수선실에서 일한다.",
  "gate": null,
@@ -118,7 +118,7 @@
     "step": 4,
     "major": true,
     "optional": true,
-    "note": "양장기능사·양복기능사"
+    "note": "여성복기능사·남성복기능사"
    },
    {
     "ref": "cp.shop-work",
@@ -148,7 +148,7 @@
     "step": 4,
     "major": true,
     "optional": true,
-    "note": "양장기능사 등 — 수선 실력을 보여 주는 용도"
+    "note": "여성복기능사 등 — 수선 실력을 보여 주는 용도"
    },
    {
     "ref": "cp.shop-work",

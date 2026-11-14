@@ -4,7 +4,7 @@
  "displayName": "기자",
  "family": "media",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "언론사 공채나 인턴 전환으로 뽑는다. 글쓰기와 시사 이해, 직접 쓴 기사가 바탕이고 필기(논술·작문)를 통과해야 한다.",
  "gate": null,
@@ -101,7 +101,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "전형 구성은 언론사마다 다르다"
+   "caution": "전형 구성은 언론사마다 다르다"
   },
   {
    "id": "p.jr-field",

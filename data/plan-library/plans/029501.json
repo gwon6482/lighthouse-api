@@ -4,7 +4,7 @@
  "displayName": "사무보조·사무직",
  "family": "biz",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 문서·엑셀 능력을 자격증으로 증빙하고 사무 보조 경험으로 시작한다.",
  "gate": null,

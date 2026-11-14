@@ -4,7 +4,7 @@
  "displayName": "통역사",
  "family": "media",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "법정 자격은 없다. 통번역대학원이 사실상 관문이고, 졸업 뒤 에이전시와 인맥으로 일을 얻는다.",
  "gate": null,
@@ -41,7 +41,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "입시 경쟁이 높아 입시 학원을 거치는 경우가 많다"
+   "caution": "입시 경쟁이 높아 입시 학원을 거치는 경우가 많다"
   },
   {
    "id": "p.it-train",

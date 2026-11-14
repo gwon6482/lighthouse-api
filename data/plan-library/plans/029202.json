@@ -4,7 +4,7 @@
  "displayName": "병원 코디네이터",
  "family": "health",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 병원 접수·상담·예약 관리가 주 업무라 응대 능력과 의료 용어, 보험 청구 이해를 갖춘다.",
  "gate": null,
@@ -89,7 +89,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "민간자격이라 발급 기관이 여럿이다. 필수는 아니다"
+   "caution": "민간자격이라 발급 기관이 여럿이다. 필수는 아니다"
   }
  ],
  "common": [

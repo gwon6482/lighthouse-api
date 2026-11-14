@@ -4,7 +4,7 @@
  "displayName": "품질관리(QC·QA) 담당자",
  "family": "eng",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 품질경영기사가 대표 증빙이다. 통계로 품질을 보는 힘과 현장 이해를 함께 갖춘다.",
  "gate": null,
@@ -140,7 +140,7 @@
     }
    ],
    "basis": "practice",
-   "verify": "민간 교육 과정이다"
+   "caution": "민간 교육 과정이다"
   }
  ],
  "common": [

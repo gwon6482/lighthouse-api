@@ -4,7 +4,7 @@
  "displayName": "촬영 감독",
  "family": "media",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "자격이나 공채가 없다. 촬영팀 막내로 현장에서 배우고, 직접 찍은 작품으로 일을 얻는다.",
  "gate": null,

@@ -4,7 +4,7 @@
  "displayName": "생산관리 담당자",
  "family": "biz",
  "status": "draft",
- "updatedAt": "2026-11-13",
+ "updatedAt": "2026-11-14",
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 생산 계획과 재고·납기를 숫자로 관리하는 일이라 엑셀과 공정 이해, 현장 경험을 본다.",
  "gate": null,
