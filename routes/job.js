@@ -523,7 +523,7 @@ router.get('/list', getJobList);
 router.get('/classifications', getClassifications);
 router.get('/majors', getMajors);
 router.get('/search', searchJobByName);
-// 진로 둘러보기(2026-11-14) — 서로 다른 직무에서 무작위 직업. ?count=5(1~12). 응답 data[].group = { code, name }(직무)
+// 진로 둘러보기(2026-11-14) — 서로 다른 직무에서 무작위 직업. ?count=5(1~12). 응답 data[].group = { code, name }(직무), data[].overview = 하는 일 요약
 router.get('/explore', getExploreJobs);
 router.get('/recommend/:survey_id', getJobRecommendBySurveyId);
 router.get('/recommend-t2/:survey_id', getJobRecommendT2BySurveyId);

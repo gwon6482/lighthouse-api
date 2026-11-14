@@ -51,7 +51,7 @@ async function getSearchIndex() {
   if (_searchIndex && Date.now() - _searchIndexAt < INDEX_TTL_MS) return _searchIndex;
   const jobs = await getJobModel().find(
     {},
-    { jobCode: 1, title: 1, 'classification.primary': 1, 'classification.secondary': 1, 'work24.keco.code': 1, _id: 0 }
+    { jobCode: 1, title: 1, overview: 1, 'classification.primary': 1, 'classification.secondary': 1, 'work24.keco.code': 1, _id: 0 }
   ).lean();
   _searchIndex = jobSearch.buildIndex(jobs);
   _searchIndexAt = Date.now();

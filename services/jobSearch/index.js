@@ -13,7 +13,7 @@ const norm = (s) => String(s ?? '').replace(/[\s·∙‧ㆍ・]/g, '').toLowerCa
 
 const ALIAS_MAP = new Map(Object.entries(ALIASES).map(([k, v]) => [norm(k), v.map(norm).filter(Boolean)]));
 
-/** DB 에서 읽은 직업들 → 색인. jobs: [{ jobCode, title, classification, work24.keco.code }] */
+/** DB 에서 읽은 직업들 → 색인. jobs: [{ jobCode, title, overview, classification, work24.keco.code }] */
 function buildIndex(jobs) {
   const rows = [];
   const primaries = new Map();
@@ -23,7 +23,9 @@ function buildIndex(jobs) {
     if (!j?.jobCode || !title) continue;
     const primary = String(j.classification?.primary ?? '').trim();
     const secondary = String(j.classification?.secondary ?? '').trim();
-    rows.push({ jobCode: j.jobCode, title, primary, secondary, nTitle: norm(title), nPrimary: norm(primary), nSecondary: norm(secondary), group: groupOf(j) });
+    // overview = 하는 일 요약(한두 문장). 둘러보기 카드의 한 줄 설명으로만 쓴다(검색 대상 아님)
+    const overview = String(j.overview ?? '').replace(/\s+/g, ' ').trim();
+    rows.push({ jobCode: j.jobCode, title, primary, secondary, overview, nTitle: norm(title), nPrimary: norm(primary), nSecondary: norm(secondary), group: groupOf(j) });
     if (primary) primaries.set(primary, (primaries.get(primary) ?? 0) + 1);
     if (secondary) {
       const s = secondaries.get(secondary) ?? { primary, count: 0 };
@@ -107,7 +109,8 @@ function explore(index, count = 5, rand = Math.random) {
       if (!next) continue;
       const [code, rows] = next;
       const g = groupInfo(code);
-      out.push(summary(pick(rows, rand), { group: { code: g.code, name: g.name } }));
+      const r = pick(rows, rand);
+      out.push(summary(r, { group: { code: g.code, name: g.name }, overview: r.overview }));
     }
   }
   return out;
