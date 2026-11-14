@@ -8,12 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "측량·지적·공간정보 전공과 기사 자격을 본다. 측량 업체, 공간정보 회사, 공공 기관과 지적직 공무원으로 간다.",
  "gate": "법정 요건은 없으나 채용 공고가 관련 전공과 기사 자격을 요구·우대한다",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "survey",
+   "name": "지적·측량",
+   "desc": "측량 업체·지적직"
+  },
+  {
+   "id": "gis",
+   "name": "GIS 개발",
+   "desc": "공간정보 시스템·데이터"
+  }
+ ],
  "covers": [
   {
    "jobCode": "140602",
    "title": "지리정보시스템전문가",
-   "track": null
+   "track": "gis"
   }
  ],
  "projects": [
@@ -47,6 +58,38 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.gis-project",
+   "name": "공간 데이터 분석·웹 지도 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "공공 공간 데이터로 분석 결과를 웹 지도에 올린다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "주제와 데이터 정하기",
+      "좌표계·전처리"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "제작",
+     "items": [
+      "공간 분석",
+      "웹 지도에 표현",
+      "과정 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -63,12 +106,6 @@
    "note": "측량·지적·공간정보"
   },
   {
-   "ref": "cp.engineer-cert",
-   "step": 3,
-   "major": true,
-   "note": "측량및지형공간정보기사·지적기사"
-  },
-  {
    "ref": "cp.cad",
    "step": 4,
    "major": true
@@ -77,18 +114,6 @@
    "ref": "cp.gis",
    "step": 5,
    "major": true
-  },
-  {
-   "ref": "p.sv-field",
-   "step": 6,
-   "major": true
-  },
-  {
-   "ref": "cp.civil9-common",
-   "step": 7,
-   "major": true,
-   "note": "지적직 공무원을 목표로 할 때",
-   "optional": true
   },
   {
    "ref": "cp.eng-field",
@@ -118,13 +143,58 @@
    "ref": "cp.interview",
    "step": 91,
    "major": true
-  },
-  {
-   "ref": "cp.korean-history",
-   "step": 6.5,
-   "major": true,
-   "note": "9급 공채는 3급 이상 — 2027년부터 한국사 과목을 대체한다"
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "survey": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "측량및지형공간정보기사·지적기사"
+   },
+   {
+    "ref": "p.sv-field",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.korean-history",
+    "step": 6.5,
+    "major": true,
+    "note": "9급 공채는 3급 이상 — 2027년부터 한국사 과목을 대체한다"
+   },
+   {
+    "ref": "cp.civil9-common",
+    "step": 7,
+    "major": true,
+    "note": "지적직 공무원을 목표로 할 때",
+    "optional": true
+   }
+  ],
+  "gis": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "측량및지형공간정보기사·공간정보융합 분야 자격",
+    "optional": true
+   },
+   {
+    "ref": "cp.python-data",
+    "step": 5.5,
+    "major": true
+   },
+   {
+    "ref": "cp.sql",
+    "step": 5.6,
+    "major": true
+   },
+   {
+    "ref": "p.gis-project",
+    "step": 6,
+    "major": true
+   }
+  ]
+ }
 }

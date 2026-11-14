@@ -8,17 +8,33 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "법학전문대학원(로스쿨)을 졸업하고 변호사시험에 합격해야 한다. 로스쿨 입학 준비가 첫 관문이다.",
  "gate": "법학전문대학원 석사 학위 + 변호사시험 합격",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "lawyer",
+   "name": "변호사",
+   "desc": "로펌·기업·공공기관"
+  },
+  {
+   "id": "prosecutor",
+   "name": "검사",
+   "desc": "검사 임용"
+  },
+  {
+   "id": "judge",
+   "name": "판사",
+   "desc": "법조 경력 뒤 법관 임용"
+  }
+ ],
  "covers": [
   {
    "jobCode": "221101",
    "title": "판사",
-   "track": null
+   "track": "judge"
   },
   {
    "jobCode": "221102",
    "title": "검사",
-   "track": null
+   "track": "prosecutor"
   }
  ],
  "projects": [
@@ -155,6 +171,77 @@
     "source": "변호사시험법 제7조",
     "note": "석사학위를 취득한 달의 말일부터 5년 안에 5회만 응시할 수 있다"
    }
+  },
+  {
+   "id": "p.law-pros",
+   "name": "검사 임용 준비",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "심화",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "검사 임용 전형에 대비한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "확인",
+     "items": [
+      "임용 일정과 전형 확인",
+      "로스쿨 성적·검찰 실무 수습"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "형사법 심화",
+      "검찰 실무 기록 연습",
+      "면접 준비"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "임용 절차와 선발 인원은 법무부 공고 확인"
+  },
+  {
+   "id": "p.law-career",
+   "name": "법조 경력 쌓기",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "etc",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "재판연구원·변호사·검사로 법조 경력을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "진입",
+     "items": [
+      "재판연구원 지원 또는 로펌 취업"
+     ]
+    },
+    {
+     "weeks": 250,
+     "title": "경력",
+     "items": [
+      "사건 수행과 서면 작성",
+      "전문 분야 만들기",
+      "법관 임용 지원"
+     ]
+    }
+   ],
+   "basis": "law",
+   "checked": {
+    "at": "2026-11-14",
+    "level": "law",
+    "source": "법원조직법 제42조",
+    "note": "판사는 5년 이상 판사·검사·변호사 등의 직에 있던 사람 가운데서 임용한다"
+   },
+   "caution": "법관 임용 절차는 법원행정처 공고 확인"
   }
  ],
  "common": [
@@ -201,7 +288,31 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "lawyer": [
+   {
+    "ref": "cp.internship",
+    "step": 5.5,
+    "major": true,
+    "note": "로펌 실무 수습(방학 중)",
+    "optional": true
+   }
+  ],
+  "prosecutor": [
+   {
+    "ref": "p.law-pros",
+    "step": 6.5,
+    "major": true
+   }
+  ],
+  "judge": [
+   {
+    "ref": "p.law-career",
+    "step": 6.5,
+    "major": true
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "law",

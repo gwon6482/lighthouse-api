@@ -8,17 +8,38 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "법정 필수는 아니지만 토목 전공과 토목기사를 본다. 건설사·공기업·공무원(토목직)으로 간다.",
  "gate": "법정 요건은 없으나 채용 공고가 토목 관련 전공과 토목기사를 요구·우대한다",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "site",
+   "name": "시공",
+   "desc": "현장 공사 관리"
+  },
+  {
+   "id": "design",
+   "name": "설계",
+   "desc": "엔지니어링사 설계"
+  },
+  {
+   "id": "cm",
+   "name": "감리·CM",
+   "desc": "건설사업관리"
+  },
+  {
+   "id": "qs",
+   "name": "품질·안전",
+   "desc": "품질 시험·안전 관리"
+  }
+ ],
  "covers": [
   {
    "jobCode": "140304",
    "title": "토목감리기술자",
-   "track": null
+   "track": "cm"
   },
   {
    "jobCode": "140305",
    "title": "토목안전·환경기술자 및 토목품질기술자",
-   "track": null
+   "track": "qs"
   }
  ],
  "projects": [
@@ -49,6 +70,54 @@
      "items": [
       "시공 계획서",
       "안전·환경 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cv-design",
+   "name": "토목 설계 프로그램과 설계 도서",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "설계 프로그램으로 도면과 수량 산출서를 만든다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "실습",
+     "items": [
+      "설계 기준 읽기",
+      "도로·구조물 도면 작성",
+      "수량 산출과 설계 설명서"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cv-quality",
+   "name": "토목 품질 시험과 안전 관리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "토질·콘크리트 품질 시험과 현장 안전 관리 계획을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "토질·콘크리트 품질 시험",
+      "품질 관리 계획서",
+      "굴착·가설 구조물 안전"
      ]
     }
    ],
@@ -90,12 +159,6 @@
    "major": true
   },
   {
-   "ref": "cp.safety-law",
-   "step": 7,
-   "major": true,
-   "optional": true
-  },
-  {
    "ref": "cp.eng-field",
    "step": 8,
    "major": true
@@ -123,5 +186,66 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "site": [
+   {
+    "ref": "cp.safety-law",
+    "step": 7,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "design": [
+   {
+    "ref": "cp.safety-law",
+    "step": 7,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.cv-design",
+    "step": 6.5,
+    "major": true
+   },
+   {
+    "ref": "cp.lab-grad",
+    "step": 6.6,
+    "major": true,
+    "note": "설계사는 석사를 우대하는 곳이 있다",
+    "optional": true
+   }
+  ],
+  "cm": [
+   {
+    "ref": "cp.safety-law",
+    "step": 7,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.cm-basics",
+    "step": 6.5,
+    "major": true
+   }
+  ],
+  "qs": [
+   {
+    "ref": "cp.safety-law",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.cv-quality",
+    "step": 6.5,
+    "major": true
+   },
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3.5,
+    "major": true,
+    "note": "건설안전기사",
+    "optional": true
+   }
+  ]
+ }
 }

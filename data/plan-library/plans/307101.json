@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "1급은 응급구조(학)과를 졸업하고 국가시험에 합격해야 한다. 2급은 지정 양성기관 과정으로 딸 수 있다.",
  "gate": "응급구조사 1급 — 응급구조(학)과 졸업 + 국가시험 / 2급 — 양성기관 과정 + 시험",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "lv1",
+   "name": "1급(응급구조학과)",
+   "desc": "대학·전문대학 졸업 뒤 국가시험"
+  },
+  {
+   "id": "lv2",
+   "name": "2급(양성기관)",
+   "desc": "양성과정 뒤 시험"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -40,21 +51,48 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.em-course",
+   "name": "2급 응급구조사 양성과정",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "required_course",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 360,
+   "goal": "지정 양성기관의 과정을 마친다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "등록",
+     "items": [
+      "지정 양성기관 확인",
+      "등록"
+     ]
+    },
+    {
+     "weeks": 16,
+     "title": "과정",
+     "items": [
+      "이론 교육",
+      "실기 교육",
+      "병원·구급차 실습"
+     ]
+    }
+   ],
+   "basis": "law",
+   "checked": {
+    "at": "2026-11-14",
+    "level": "law",
+    "source": "응급의료에 관한 법률 제36조",
+    "note": "2급은 지정 양성기관의 양성과정을 마치고 시험에 합격하면 된다. 2급으로 3년 이상 일하면 1급 시험을 볼 수 있다"
+   },
+   "caution": "양성과정의 기간과 모집은 기관마다 다르다"
   }
  ],
  "common": [
-  {
-   "ref": "cp.dept-admission",
-   "step": 1,
-   "major": false,
-   "skip": "이미 응급구조(학)과에 다니고 있다",
-   "note": "응급구조(학)과"
-  },
-  {
-   "ref": "cp.major-grades",
-   "step": 2,
-   "major": true
-  },
   {
    "ref": "cp.bls",
    "step": 3,
@@ -70,12 +108,6 @@
    "ref": "p.emt-skills",
    "step": 5,
    "major": true
-  },
-  {
-   "ref": "cp.license-exam",
-   "step": 6,
-   "major": true,
-   "note": "응급구조사 국가시험(필기·실기)"
   },
   {
    "ref": "cp.driver-license",
@@ -107,5 +139,39 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "lv1": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 1,
+    "major": false,
+    "skip": "이미 응급구조(학)과에 다니고 있다",
+    "note": "응급구조(학)과"
+   },
+   {
+    "ref": "cp.major-grades",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "cp.license-exam",
+    "step": 6,
+    "major": true,
+    "note": "1급 응급구조사 국가시험(필기·실기)"
+   }
+  ],
+  "lv2": [
+   {
+    "ref": "cp.license-exam",
+    "step": 6,
+    "major": true,
+    "note": "2급 응급구조사 시험(필기·실기)"
+   },
+   {
+    "ref": "p.em-course",
+    "step": 1,
+    "major": true
+   }
+  ]
+ }
 }

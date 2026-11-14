@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "정부 아이돌봄 서비스는 아이돌봄사 자격(교육과정 이수 + 적성·인성 검사)을 받은 사람이 맡는다. 민간 베이비시터는 필수 자격이 없다.",
  "gate": "아이돌봄사 자격 — 교육과정 이수 + 적성·인성 검사(아이돌봄 지원법, 2026-04-23 시행). 민간은 필수 자격 없음",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "public",
+   "name": "공공 아이돌봄사",
+   "desc": "정부 아이돌봄 서비스"
+  },
+  {
+   "id": "private",
+   "name": "민간 베이비시터",
+   "desc": "플랫폼·개인 계약"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -48,17 +59,37 @@
     "note": "교육과정(교과학습 80시간 이상 + 실습 10시간 이상)을 이수하고 적성·인성 검사를 받은 사람에게 성평등가족부장관이 자격을 준다. 보육교사 등 자격 소지자는 수료 기준을 달리 정할 수 있다"
    },
    "caution": "선발과 교육 일정은 지역 기관 공고 확인"
+  },
+  {
+   "id": "p.cs-platform",
+   "name": "돌봄 플랫폼 등록과 프로필 만들기",
+   "type": "network",
+   "subtype": "research",
+   "category": "experience",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "돌봄 플랫폼에 등록하고 믿을 만한 프로필을 만든다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "등록",
+     "items": [
+      "플랫폼별 조건 비교",
+      "신원·건강 확인 서류",
+      "경력·자격을 담은 프로필"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "계약 조건과 보험 적용을 미리 확인할 것"
   }
  ],
  "common": [
   {
    "ref": "cp.job-research",
    "step": 1,
-   "major": true
-  },
-  {
-   "ref": "p.cs-train",
-   "step": 2,
    "major": true
   },
   {
@@ -84,5 +115,26 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "public": [
+   {
+    "ref": "p.cs-train",
+    "step": 2,
+    "major": true
+   }
+  ],
+  "private": [
+   {
+    "ref": "p.cs-platform",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "cp.bls",
+    "step": 2.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

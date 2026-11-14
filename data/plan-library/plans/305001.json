@@ -18,6 +18,11 @@
    "id": "clinical",
    "name": "임상영양",
    "desc": "병원 영양 상담"
+  },
+  {
+   "id": "teacher",
+   "name": "영양교사",
+   "desc": "학교 영양교사(임용)"
   }
  ],
  "covers": [],
@@ -156,6 +161,30 @@
    {
     "ref": "p.nt-clinical",
     "step": 10,
+    "major": true
+   }
+  ],
+  "teacher": [
+   {
+    "ref": "cp.teaching-course",
+    "step": 4.5,
+    "major": true
+   },
+   {
+    "ref": "cp.korean-history",
+    "step": 6.5,
+    "major": true,
+    "note": "임용시험 응시 요건 — 3급 이상(응시할 시도의 공고 확인)"
+   },
+   {
+    "ref": "cp.teacher-exam",
+    "step": 7,
+    "major": true,
+    "note": "영양교사 임용 1차"
+   },
+   {
+    "ref": "cp.teaching-demo",
+    "step": 7.5,
     "major": true
    }
   ]

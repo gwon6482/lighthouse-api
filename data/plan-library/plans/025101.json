@@ -8,23 +8,39 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "세무직·관세직 공무원은 공개경쟁채용 시험으로 뽑는다. 공통과목에 직렬 전문과목이 더해진다.",
  "gate": "세무직·관세직 공무원 공채 시험 합격",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "tax",
+   "name": "세무직",
+   "desc": "국세청·세무서"
+  },
+  {
+   "id": "customs",
+   "name": "관세직",
+   "desc": "관세청·세관"
+  },
+  {
+   "id": "mma",
+   "name": "병무행정",
+   "desc": "병무청 행정직"
+  }
+ ],
  "covers": [
   {
    "jobCode": "025201",
    "title": "관세행정사무원",
-   "track": null
+   "track": "customs"
   },
   {
    "jobCode": "025301",
    "title": "병무행정사무원",
-   "track": null
+   "track": "mma"
   }
  ],
  "projects": [
   {
-   "id": "p.major",
-   "name": "세무·관세직 전문과목",
+   "id": "p.tax-major",
+   "name": "세무직 전문과목(세법개론·회계학)",
    "type": "hiring",
    "subtype": "civil",
    "category": "qualification",
@@ -38,8 +54,8 @@
      "weeks": 10,
      "title": "기본 이론",
      "items": [
-      "세무직 — 세법개론·회계학",
-      "관세직 — 관세법개론·회계원리",
+      "세법개론",
+      "회계학",
       "단원별 문제"
      ]
     },
@@ -61,7 +77,102 @@
      ]
     }
    ],
-   "basis": "law"
+   "basis": "law",
+   "checked": {
+    "at": "2026-11-14",
+    "level": "law",
+    "source": "공무원임용시험령 별표 1(개정 2026-09-29)",
+    "note": "9급 세무직 전문과목은 세법개론·회계학"
+   }
+  },
+  {
+   "id": "p.cus-major",
+   "name": "관세직 전문과목(관세법개론·회계원리)",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "전문과목에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 10,
+     "title": "기본 이론",
+     "items": [
+      "관세법개론",
+      "회계원리",
+      "단원별 문제"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "기출 3회독",
+      "법령·판례 정리",
+      "오답 노트"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law",
+   "checked": {
+    "at": "2026-11-14",
+    "level": "law",
+    "source": "공무원임용시험령 별표 1(개정 2026-09-29)",
+    "note": "9급 관세직 전문과목은 관세법개론·회계원리"
+   }
+  },
+  {
+   "id": "p.mma-major",
+   "name": "행정직 전문과목(행정법총론·행정학개론)",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "전문과목에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 10,
+     "title": "기본 이론",
+     "items": [
+      "행정법총론",
+      "행정학개론",
+      "단원별 문제"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "기출 3회독",
+      "법령·판례 정리",
+      "오답 노트"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law",
+   "caution": "병무청은 행정직 모집 단위로 뽑는다 — 모집 단위와 과목은 해당 연도 공고 확인"
   }
  ],
  "common": [
@@ -73,16 +184,6 @@
   {
    "ref": "cp.civil9-common",
    "step": 2,
-   "major": true
-  },
-  {
-   "ref": "p.major",
-   "step": 3,
-   "major": true
-  },
-  {
-   "ref": "cp.fitness-test",
-   "step": 5,
    "major": true
   },
   {
@@ -104,7 +205,29 @@
    "note": "9급 공채는 3급 이상 — 2027년부터 한국사 과목을 대체한다"
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "tax": [
+   {
+    "ref": "p.tax-major",
+    "step": 3,
+    "major": true
+   }
+  ],
+  "customs": [
+   {
+    "ref": "p.cus-major",
+    "step": 3,
+    "major": true
+   }
+  ],
+  "mma": [
+   {
+    "ref": "p.mma-major",
+    "step": 3,
+    "major": true
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "law",

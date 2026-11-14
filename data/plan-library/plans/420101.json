@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "선수 경력이 바탕이다. 학교·실업팀 지도자는 전문스포츠지도사 자격을 요구한다.",
  "gate": "전문스포츠지도사 자격(해당 종목 경기 경력 요건) — 학교·실업팀 지도자 채용에서 요구",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "elite",
+   "name": "전문(선수 지도)",
+   "desc": "학교·실업팀 코치"
+  },
+  {
+   "id": "life",
+   "name": "생활체육",
+   "desc": "센터·클럽 강사"
+  },
+  {
+   "id": "group",
+   "name": "유소년·노인·장애인",
+   "desc": "대상별 지도"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -118,14 +134,55 @@
     "note": "필기는 7과목 가운데 5과목 선택, 이어 실기·구술과 연수"
    },
    "caution": "해당 종목의 경기 경력(4년 이상)이 응시 요건이다 — 체육지도자 자격 공고 확인"
+  },
+  {
+   "id": "p.sc-group",
+   "name": "유소년·노인·장애인스포츠지도사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "지도 대상에 맞는 스포츠지도사 자격을 딴다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "필기",
+     "items": [
+      "선택 과목 이론",
+      "대상별 특성 과목",
+      "기출"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "실기·구술",
+     "items": [
+      "종목 실기",
+      "구술"
+     ]
+    },
+    {
+     "weeks": 2,
+     "title": "연수",
+     "items": [
+      "연수 이수"
+     ]
+    }
+   ],
+   "basis": "law",
+   "checked": {
+    "at": "2026-11-14",
+    "level": "law",
+    "source": "국민체육진흥법 시행령 제2조",
+    "note": "체육지도자에는 스포츠지도사·건강운동관리사·장애인스포츠지도사·유소년스포츠지도사·노인스포츠지도사가 있다"
+   },
+   "caution": "종목과 일정은 체육지도자 자격 공고 확인"
   }
  ],
  "common": [
-  {
-   "ref": "p.sc-career",
-   "step": 1,
-   "major": true
-  },
   {
    "ref": "p.sc-coach",
    "step": 2,
@@ -135,18 +192,6 @@
    "ref": "cp.sports-rehab",
    "step": 3,
    "major": true,
-   "optional": true
-  },
-  {
-   "ref": "p.sc-cert",
-   "step": 4,
-   "major": true
-  },
-  {
-   "ref": "cp.sports-instructor-cert",
-   "step": 5,
-   "major": true,
-   "note": "생활 체육 지도를 겸할 때",
    "optional": true
   },
   {
@@ -166,5 +211,58 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "elite": [
+   {
+    "ref": "p.sc-career",
+    "step": 1,
+    "major": true
+   },
+   {
+    "ref": "p.sc-cert",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "cp.sports-instructor-cert",
+    "step": 5,
+    "major": true,
+    "note": "생활 체육 지도를 겸할 때",
+    "optional": true
+   }
+  ],
+  "life": [
+   {
+    "ref": "p.sc-career",
+    "step": 1,
+    "major": true,
+    "note": "종목 실력과 지도 보조 경험(선수 경력이 없어도 된다)"
+   },
+   {
+    "ref": "cp.sports-instructor-cert",
+    "step": 5,
+    "major": true,
+    "note": "생활스포츠지도사 2급"
+   }
+  ],
+  "group": [
+   {
+    "ref": "p.sc-career",
+    "step": 1,
+    "major": true,
+    "note": "종목 실력과 지도 보조 경험(선수 경력이 없어도 된다)"
+   },
+   {
+    "ref": "p.sc-group",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "cp.child-safety",
+    "step": 5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

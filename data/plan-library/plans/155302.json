@@ -8,32 +8,53 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "환경 전공과 환경 분야 기사가 기본이다. 환경 시설·측정 업체·공기업으로 간다.",
  "gate": "법정 요건은 없으나 채용 공고가 환경 관련 전공과 기사 자격을 요구·우대한다",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "water",
+   "name": "수질",
+   "desc": "수처리·상하수도"
+  },
+  {
+   "id": "air",
+   "name": "대기·소음진동",
+   "desc": "대기 오염 방지·측정"
+  },
+  {
+   "id": "waste",
+   "name": "폐기물·토양",
+   "desc": "폐기물 처리·토양 정화"
+  },
+  {
+   "id": "eia",
+   "name": "환경영향평가",
+   "desc": "평가서 작성·협의"
+  }
+ ],
  "covers": [
   {
    "jobCode": "155303",
    "title": "폐기물처리기술자",
-   "track": null
+   "track": "waste"
   },
   {
    "jobCode": "155305",
    "title": "소음진동기술자 및 연구원",
-   "track": null
+   "track": "air"
   },
   {
    "jobCode": "155306",
    "title": "토양환경기술자 및 연구원",
-   "track": null
+   "track": "waste"
   },
   {
    "jobCode": "155301",
    "title": "대기환경기술자 및 연구원",
-   "track": null
+   "track": "air"
   },
   {
    "jobCode": "155304",
    "title": "환경영향평가원",
-   "track": null
+   "track": "eia"
   }
  ],
  "projects": [
@@ -91,6 +112,79 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.en-air",
+   "name": "대기 측정과 방지 시설 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "대기 오염 물질의 측정과 방지 시설의 원리를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "오염 물질과 배출 기준",
+      "집진·흡수 등 방지 시설",
+      "측정 방법과 자가 측정"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.en-waste",
+   "name": "폐기물 처리 공정과 토양 정화 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "폐기물의 분류·처리 공정과 토양 정화 방법을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "폐기물 분류와 처리 공정",
+      "소각·매립·재활용",
+      "토양 오염 조사와 정화"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.en-eia",
+   "name": "환경영향평가서 읽기",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "평가 항목과 절차를 알고 평가서를 읽을 수 있다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "평가 대상과 절차",
+      "항목별 조사·예측 방법",
+      "공개된 평가서 읽기"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "환경영향평가사 자격은 경력이 있어야 응시할 수 있다"
   }
  ],
  "common": [
@@ -107,19 +201,8 @@
    "note": "수질·대기·폐기물"
   },
   {
-   "ref": "cp.engineer-cert",
-   "step": 3,
-   "major": true,
-   "note": "수질환경기사"
-  },
-  {
    "ref": "p.env-law",
    "step": 4,
-   "major": true
-  },
-  {
-   "ref": "p.env-lab",
-   "step": 5,
    "major": true
   },
   {
@@ -146,5 +229,64 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "water": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "수질환경기사"
+   },
+   {
+    "ref": "p.env-lab",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "air": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "대기환경기사·소음진동기사"
+   },
+   {
+    "ref": "p.en-air",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "waste": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "폐기물처리기사·토양환경기사"
+   },
+   {
+    "ref": "p.en-waste",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "eia": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "수질환경기사·대기환경기사 등 환경 분야 기사"
+   },
+   {
+    "ref": "p.en-eia",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "cp.gis",
+    "step": 5.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

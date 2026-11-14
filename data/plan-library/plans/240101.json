@@ -18,6 +18,11 @@
    "id": "special",
    "name": "경력경쟁채용",
    "desc": "전공·경력 특채"
+  },
+  {
+   "id": "cadet",
+   "name": "경위 공채·경찰대학",
+   "desc": "간부로 시작"
   }
  ],
  "covers": [],
@@ -69,6 +74,54 @@
     "source": "경찰공무원 임용령 별표 2(개정 2024-08-13)",
     "note": "형사법(형법총론·각론·형사소송법) 100점, 헌법 50점, 경찰학 100점"
    }
+  },
+  {
+   "id": "p.pol-cadet",
+   "name": "경위 공채 필기(형사법·헌법·경찰학·범죄학)",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "전문과목에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 10,
+     "title": "기본 이론",
+     "items": [
+      "형사법·헌법",
+      "경찰학·범죄학",
+      "선택 1과목(행정법·행정학·민법총칙 중)"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "기출 3회독",
+      "법령·판례 정리",
+      "오답 노트"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law",
+   "checked": {
+    "at": "2026-11-14",
+    "level": "law",
+    "source": "경찰공무원 임용령 별표 2·7(개정 2024-08-13)",
+    "note": "경위 공채 일반 분야 필수는 형사법 120점·헌법 60점·경찰학 120점·범죄학 60점에 선택 1과목. 한국사는 2급 이상"
+   },
+   "caution": "경찰대학은 고교 졸업 뒤 입학하거나 편입으로 간다 — 입학 전형은 경찰대학 요강 확인"
   }
  ],
  "common": [
@@ -96,11 +149,6 @@
    "note": "영어 과목 대신 공인 성적 제출(기준 점수는 공고 확인)"
   },
   {
-   "ref": "p.pol-major",
-   "step": 5,
-   "major": true
-  },
-  {
    "ref": "cp.civil-bonus",
    "step": 6,
    "major": true,
@@ -118,11 +166,29 @@
   }
  ],
  "byTrack": {
-  "open": [],
+  "open": [
+   {
+    "ref": "p.pol-major",
+    "step": 5,
+    "major": true
+   }
+  ],
   "special": [
    {
     "ref": "cp.civil-special",
     "step": 1.5,
+    "major": true
+   },
+   {
+    "ref": "p.pol-major",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "cadet": [
+   {
+    "ref": "p.pol-cadet",
+    "step": 5,
     "major": true
    }
   ]

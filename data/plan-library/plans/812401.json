@@ -8,17 +8,38 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 자동차정비기능사가 기본 증빙이다. 자격과 정비소 경험을 함께 쌓는다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "general",
+   "name": "일반 정비",
+   "desc": "엔진·섀시·전기 장치"
+  },
+  {
+   "id": "body",
+   "name": "차체·도장",
+   "desc": "판금·보수 도장"
+  },
+  {
+   "id": "ev",
+   "name": "전기차",
+   "desc": "고전압 계통 정비"
+  },
+  {
+   "id": "moto",
+   "name": "이륜차·자전거",
+   "desc": "오토바이·자전거 정비"
+  }
+ ],
  "covers": [
   {
    "jobCode": "812901",
    "title": "오토바이정비원",
-   "track": null
+   "track": "moto"
   },
   {
    "jobCode": "812902",
    "title": "자전거판매 및 정비원",
-   "track": null
+   "track": "moto"
   }
  ],
  "projects": [
@@ -77,6 +98,54 @@
    ],
    "basis": "practice",
    "caution": "제조사·공공 교육 과정이 있다"
+  },
+  {
+   "id": "p.am-body",
+   "name": "판금·도장 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 180,
+   "goal": "찌그러진 패널을 펴고 색을 맞춰 도장한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "실습",
+     "items": [
+      "패널 판금과 교환",
+      "퍼티·서페이서 작업",
+      "조색과 스프레이 도장"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.am-moto",
+   "name": "이륜차·자전거 정비 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "이륜차 엔진과 구동계, 자전거 구동·제동 계통을 정비한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "실습",
+     "items": [
+      "엔진·구동계 점검",
+      "제동·전기 장치",
+      "자전거 구동계 정비"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -99,12 +168,6 @@
    "optional": true
   },
   {
-   "ref": "cp.craftsman-cert",
-   "step": 4,
-   "major": true,
-   "note": "자동차정비기능사"
-  },
-  {
    "ref": "cp.driver-license",
    "step": 5,
    "major": true
@@ -115,22 +178,10 @@
    "major": true
   },
   {
-   "ref": "cp.shop-work",
-   "step": 7,
-   "major": true,
-   "note": "정비소 근무"
-  },
-  {
    "ref": "cp.engineer-cert",
    "step": 8,
    "major": true,
    "note": "자동차정비산업기사",
-   "optional": true
-  },
-  {
-   "ref": "p.am-ev",
-   "step": 9,
-   "major": true,
    "optional": true
   },
   {
@@ -144,5 +195,90 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "general": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "자동차정비기능사"
+   },
+   {
+    "ref": "p.am-ev",
+    "step": 9,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 7,
+    "major": true,
+    "note": "정비소 근무"
+   }
+  ],
+  "body": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "자동차차체수리기능사·자동차보수도장기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 7,
+    "major": true,
+    "note": "판금·도장 공업사"
+   },
+   {
+    "ref": "p.am-body",
+    "step": 6.5,
+    "major": true
+   }
+  ],
+  "ev": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "자동차정비기능사(전기차도 기본 자격 위에 쌓는다)"
+   },
+   {
+    "ref": "p.am-ev",
+    "step": 9,
+    "major": true
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 7,
+    "major": true,
+    "note": "제조사 서비스 센터·전기차 정비소"
+   },
+   {
+    "ref": "cp.engineer-cert",
+    "step": 8.5,
+    "major": true,
+    "note": "그린전동자동차기사",
+    "optional": true
+   }
+  ],
+  "moto": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "이륜자동차정비기능사"
+   },
+   {
+    "ref": "cp.shop-work",
+    "step": 7,
+    "major": true,
+    "note": "이륜차 정비점·자전거 매장"
+   },
+   {
+    "ref": "p.am-moto",
+    "step": 6.5,
+    "major": true
+   }
+  ]
+ }
 }

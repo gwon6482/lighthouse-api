@@ -120,3 +120,63 @@ def covtrack(title, mapping):
     assert set(mp) <= {nz(c['title']) for c in j['covers']}, (title, set(mp) - {nz(c['title']) for c in j['covers']})
     _dump('priority-jobs.json', pri)
     pl = _load(f"plans/{j['jobCode']}.json"); pl['covers'] = j['covers']; _dump(f"plans/{j['jobCode']}.json", pl)
+
+# ── 갈래 나누기(2026-11-14) ──
+def split(code, tracks, by=None, move=None, drop=(), projects=(), covers=None):
+    """이미 있는 계획을 세부 카테고리로 나누거나 카테고리를 더한다.
+    tracks = [(id, 이름, 설명)] 전체 목록(기존 포함) · by = {카테고리: [It...]} 더할 항목
+    move = {공통 항목(ref 또는 프로젝트 이름): {카테고리: True|메모|{고칠 값}}} 공통에서 빼서 적힌 카테고리에만 넣는다('*' = 나머지 전부)
+    drop = 공통에서 지울 항목 · projects = 새 직업 전용 프로젝트 · covers = {함께 덮는 직업: 카테고리}"""
+    pri = _load('priority-jobs.json'); j = next(x for x in pri['jobs'] if x['jobCode'] == code)
+    plan = _load(f'plans/{code}.json')
+    j['tracks'] = [dict(id=i, name=n, desc=d) for i, n, d in tracks]; tids = [t['id'] for t in j['tracks']]
+    assert set(plan['byTrack']) <= set(tids), (code, set(plan['byTrack']) - set(tids))
+    bt = {t: list(plan['byTrack'].get(t, [])) for t in tids}
+    have = {q['id'] for q in plan['projects']}
+    for q in projects: assert q['id'] not in have, (code, q['id']); have.add(q['id'])
+    plan['projects'] += list(projects)
+    def rid(k):
+        if k.startswith(('cp.', 'p.')): return k
+        return next(q['id'] for q in plan['projects'] if q['name'] == k)
+    for k, spec in (move or {}).items():
+        r = rid(k); it = next(i for i in plan['common'] if i['ref'] == r); plan['common'].remove(it)
+        for t in tids:
+            v = spec.get(t, spec.get('*', False))
+            if v is False: continue
+            d = dict(it)
+            if isinstance(v, str): d['note'] = v
+            elif isinstance(v, dict):
+                for kk, vv in v.items():
+                    if vv is None or vv is False: d.pop(kk, None)
+                    else: d[kk] = vv
+            bt[t].append(d)
+    for k in drop:
+        r = rid(k); n = len(plan['common']); plan['common'] = [i for i in plan['common'] if i['ref'] != r]; assert len(plan['common']) < n, (code, k)
+    for t, items in (by or {}).items(): bt[t] += [dict(i, ref=rid(i['ref'])) for i in items]
+    cs = {i['step'] for i in plan['common']}
+    for t in tids:
+        seen = set(cs)
+        for i in bt[t]:
+            while i['step'] in seen: i['step'] = round(i['step'] + 0.01, 2)
+            seen.add(i['step'])
+    assert sum(1 for v in bt.values() if not v) <= 1, (code, {k: len(v) for k, v in bt.items()})
+    used = {i['ref'] for i in plan['common']} | {i['ref'] for v in bt.values() for i in v}
+    plan['projects'] = [q for q in plan['projects'] if q['id'] in used]
+    if covers:
+        nz = lambda s: s.replace(' ', '').replace('‧', '·'); mp = {nz(k): v for k, v in covers.items()}
+        for c in j['covers']:
+            if nz(c['title']) in mp: assert mp[nz(c['title'])] in tids, (code, c['title']); c['track'] = mp[nz(c['title'])]
+        assert set(mp) <= {nz(c['title']) for c in j['covers']}, (code, set(mp) - {nz(c['title']) for c in j['covers']})
+    plan.update(tracks=j['tracks'], covers=j['covers'], byTrack=bt, updatedAt='2026-11-14')
+    c = _load('common-projects.json'); grew = False
+    for x in c['items']:
+        if x['id'] in used and x['scope'] == 'family' and plan['family'] not in x['families']: x['families'].append(plan['family']); grew = True
+    if grew: _dump('common-projects.json', c)
+    _dump('priority-jobs.json', pri); _dump(f'plans/{code}.json', plan)
+    print('나눔', code, plan['displayName'], {k: len(v) for k, v in bt.items()})
+Op = lambda ref, step, note=None: It(ref, step, note=note, optional=True)
+HI = lambda id, name, goal, phases, **x: Pj(id, name, 'hiring', 'interview', 'skill', 'practice', x.pop('level', '중급'), x.pop('days', 2), x.pop('mins', 90), goal, phases, **x)
+LAW = lambda s, n, at='2026-11-14': dict(at=at, level='law', source=s, note=n)
+def major(id, name, subjects, **x):
+    """공무원 전문과목 프로젝트"""
+    return Pj(id, name, 'hiring', 'civil', 'qualification', 'lecture', '중급', 6, 180, '전문과목에서 합격선 점수를 받는다.', [(10, '기본 이론', subjects), (8, '기출 회독', ['기출 3회독', '법령·판례 정리', '오답 노트']), (6, '실전', ['모의고사', '시간 배분'])], basis='law', **x)

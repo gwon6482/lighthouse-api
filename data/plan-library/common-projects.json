@@ -1514,7 +1514,8 @@
     "it",
     "data",
     "biz",
-    "finance"
+    "finance",
+    "eng"
    ],
    "category": "skill",
    "method": "practice",
@@ -1814,7 +1815,8 @@
     "data",
     "it",
     "finance",
-    "research"
+    "research",
+    "eng"
    ],
    "category": "skill",
    "method": "lecture",
@@ -3155,7 +3157,8 @@
    "scope": "family",
    "families": [
     "it",
-    "data"
+    "data",
+    "eng"
    ],
    "promotedFrom": "133201:p.ai-ml"
   },
@@ -4097,7 +4100,8 @@
    "scope": "family",
    "families": [
     "it",
-    "tech"
+    "tech",
+    "eng"
    ],
    "category": "skill",
    "method": "practice",
@@ -6697,6 +6701,34 @@
      ]
     }
    ]
+  },
+  {
+   "id": "cp.cm-basics",
+   "name": "감리 업무와 건설 기술인 등급 이해",
+   "type": "edu",
+   "subtype": "online",
+   "scope": "family",
+   "families": [
+    "eng"
+   ],
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "감리(건설사업관리)가 하는 일과 건설 기술인 경력·등급 제도를 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "이해",
+     "items": [
+      "감리 업무 범위와 절차",
+      "건설 기술인 등급과 경력 관리",
+      "검측·품질 확인 서류"
+     ]
+    }
+   ],
+   "caution": "감리원으로 일하려면 시공·설계 경력이 먼저 필요하다 — 신입은 보조 업무부터"
   }
  ]
 }

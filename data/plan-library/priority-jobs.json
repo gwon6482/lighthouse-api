@@ -733,17 +733,38 @@
    "group": "028",
    "groupName": "건설·채굴 공학",
    "work24Postings": 719,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "site",
+     "name": "시공",
+     "desc": "현장 공사 관리"
+    },
+    {
+     "id": "office",
+     "name": "공무·견적",
+     "desc": "원가·계약·공정 관리"
+    },
+    {
+     "id": "cm",
+     "name": "감리·CM",
+     "desc": "건설사업관리"
+    },
+    {
+     "id": "qs",
+     "name": "품질·안전",
+     "desc": "품질 시험·안전 관리"
+    }
+   ],
    "covers": [
     {
      "jobCode": "140205",
      "title": "건축감리기술자",
-     "track": null
+     "track": "cm"
     },
     {
      "jobCode": "140206",
      "title": "건축안전·환경기술자 및 건축품질기술자",
-     "track": null
+     "track": "qs"
     }
    ]
   },
@@ -757,17 +778,38 @@
    "group": "028",
    "groupName": "건설·채굴 공학",
    "work24Postings": 687,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "site",
+     "name": "시공",
+     "desc": "현장 공사 관리"
+    },
+    {
+     "id": "design",
+     "name": "설계",
+     "desc": "엔지니어링사 설계"
+    },
+    {
+     "id": "cm",
+     "name": "감리·CM",
+     "desc": "건설사업관리"
+    },
+    {
+     "id": "qs",
+     "name": "품질·안전",
+     "desc": "품질 시험·안전 관리"
+    }
+   ],
    "covers": [
     {
      "jobCode": "140304",
      "title": "토목감리기술자",
-     "track": null
+     "track": "cm"
     },
     {
      "jobCode": "140305",
      "title": "토목안전·환경기술자 및 토목품질기술자",
-     "track": null
+     "track": "qs"
     }
    ]
   },
@@ -970,32 +1012,53 @@
    "group": "02B",
    "groupName": "화학·에너지·환경 공학",
    "work24Postings": 231,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "water",
+     "name": "수질",
+     "desc": "수처리·상하수도"
+    },
+    {
+     "id": "air",
+     "name": "대기·소음진동",
+     "desc": "대기 오염 방지·측정"
+    },
+    {
+     "id": "waste",
+     "name": "폐기물·토양",
+     "desc": "폐기물 처리·토양 정화"
+    },
+    {
+     "id": "eia",
+     "name": "환경영향평가",
+     "desc": "평가서 작성·협의"
+    }
+   ],
    "covers": [
     {
      "jobCode": "155303",
      "title": "폐기물처리기술자",
-     "track": null
+     "track": "waste"
     },
     {
      "jobCode": "155305",
      "title": "소음진동기술자 및 연구원",
-     "track": null
+     "track": "air"
     },
     {
      "jobCode": "155306",
      "title": "토양환경기술자 및 연구원",
-     "track": null
+     "track": "waste"
     },
     {
      "jobCode": "155301",
      "title": "대기환경기술자 및 연구원",
-     "track": null
+     "track": "air"
     },
     {
      "jobCode": "155304",
      "title": "환경영향평가원",
-     "track": null
+     "track": "eia"
     }
    ]
   },
@@ -1130,7 +1193,18 @@
    "group": "031",
    "groupName": "교수·학교·유치원 교사",
    "work24Postings": 137,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "public",
+     "name": "국공립 임용",
+     "desc": "임용시험"
+    },
+    {
+     "id": "private",
+     "name": "사립 유치원",
+     "desc": "유치원별 채용"
+    }
+   ],
    "covers": []
   },
   {
@@ -1143,7 +1217,23 @@
    "group": "031",
    "groupName": "교수·학교·유치원 교사",
    "work24Postings": 41,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "early",
+     "name": "유아특수",
+     "desc": "특수학교 유치원 과정"
+    },
+    {
+     "id": "elem",
+     "name": "초등특수",
+     "desc": "특수학교 초등 과정·특수학급"
+    },
+    {
+     "id": "sec",
+     "name": "중등특수",
+     "desc": "특수학교 중등 과정"
+    }
+   ],
    "covers": []
   },
   {
@@ -1191,17 +1281,33 @@
    "group": "036",
    "groupName": "법률 전문가·사무",
    "work24Postings": 1,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "lawyer",
+     "name": "변호사",
+     "desc": "로펌·기업·공공기관"
+    },
+    {
+     "id": "prosecutor",
+     "name": "검사",
+     "desc": "검사 임용"
+    },
+    {
+     "id": "judge",
+     "name": "판사",
+     "desc": "법조 경력 뒤 법관 임용"
+    }
+   ],
    "covers": [
     {
      "jobCode": "221101",
      "title": "판사",
-     "track": null
+     "track": "judge"
     },
     {
      "jobCode": "221102",
      "title": "검사",
-     "track": null
+     "track": "prosecutor"
     }
    ]
   },
@@ -1363,6 +1469,11 @@
      "id": "special",
      "name": "경력경쟁채용",
      "desc": "전공·경력 특채"
+    },
+    {
+     "id": "cadet",
+     "name": "경위 공채·경찰대학",
+     "desc": "간부로 시작"
     }
    ],
    "covers": []
@@ -1535,7 +1646,18 @@
    "group": "044",
    "groupName": "그 외 보건·의료",
    "work24Postings": 20,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "lv1",
+     "name": "1급(응급구조학과)",
+     "desc": "대학·전문대학 졸업 뒤 국가시험"
+    },
+    {
+     "id": "lv2",
+     "name": "2급(양성기관)",
+     "desc": "양성과정 뒤 시험"
+    }
+   ],
    "covers": []
   },
   {
@@ -1558,6 +1680,11 @@
      "id": "clinical",
      "name": "임상영양",
      "desc": "병원 영양 상담"
+    },
+    {
+     "id": "teacher",
+     "name": "영양교사",
+     "desc": "학교 영양교사(임용)"
     }
    ],
    "covers": []
@@ -1959,7 +2086,23 @@
    "group": "053",
    "groupName": "학예사·사서·기록물관리사",
    "work24Postings": 5,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "public",
+     "name": "공공도서관",
+     "desc": "사서직 공무원"
+    },
+    {
+     "id": "school",
+     "name": "학교 도서관",
+     "desc": "사서교사"
+    },
+    {
+     "id": "univ",
+     "name": "대학·전문 도서관",
+     "desc": "대학·기업·연구소"
+    }
+   ],
    "covers": []
   },
   {
@@ -2204,12 +2347,28 @@
    "group": "118",
    "groupName": "제과·제빵·떡 제조",
    "work24Postings": 127,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "pastry",
+     "name": "제과·디저트",
+     "desc": "케이크·구움 과자"
+    },
+    {
+     "id": "bread",
+     "name": "제빵",
+     "desc": "식빵·하드 계열"
+    },
+    {
+     "id": "rice",
+     "name": "떡·한과",
+     "desc": "떡 제조"
+    }
+   ],
    "covers": [
     {
      "jobCode": "871201",
      "title": "떡제조원",
-     "track": null
+     "track": "rice"
     }
    ]
   },
@@ -2378,17 +2537,38 @@
    "group": "092",
    "groupName": "운송장비 정비",
    "work24Postings": 514,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "general",
+     "name": "일반 정비",
+     "desc": "엔진·섀시·전기 장치"
+    },
+    {
+     "id": "body",
+     "name": "차체·도장",
+     "desc": "판금·보수 도장"
+    },
+    {
+     "id": "ev",
+     "name": "전기차",
+     "desc": "고전압 계통 정비"
+    },
+    {
+     "id": "moto",
+     "name": "이륜차·자전거",
+     "desc": "오토바이·자전거 정비"
+    }
+   ],
    "covers": [
     {
      "jobCode": "812901",
      "title": "오토바이정비원",
-     "track": null
+     "track": "moto"
     },
     {
      "jobCode": "812902",
      "title": "자전거판매 및 정비원",
-     "track": null
+     "track": "moto"
     }
    ]
   },
@@ -2421,7 +2601,23 @@
    "group": "098",
    "groupName": "용접",
    "work24Postings": 1201,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "ship",
+     "name": "조선",
+     "desc": "선체·블록 용접"
+    },
+    {
+     "id": "pipe",
+     "name": "플랜트 배관",
+     "desc": "배관·압력 용기 용접"
+    },
+    {
+     "id": "fab",
+     "name": "일반 제조",
+     "desc": "철 구조물·제품 용접"
+    }
+   ],
    "covers": []
   },
   {
@@ -2479,17 +2675,33 @@
    "group": "101",
    "groupName": "전기공",
    "work24Postings": 467,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "inner",
+     "name": "내선",
+     "desc": "건물 전기 배선"
+    },
+    {
+     "id": "outer",
+     "name": "외선·배전",
+     "desc": "전주·지중 선로"
+    },
+    {
+     "id": "plant",
+     "name": "산업 전기",
+     "desc": "공장 전기·자동화 설비"
+    }
+   ],
    "covers": [
     {
      "jobCode": "831301",
      "title": "외선전기공",
-     "track": null
+     "track": "outer"
     },
     {
      "jobCode": "831101",
      "title": "산업전기공",
-     "track": null
+     "track": "plant"
     }
    ]
   },
@@ -2708,12 +2920,23 @@
    "group": "043",
    "groupName": "의료기사·치료사·재활사",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "speech",
+     "name": "언어재활",
+     "desc": "말·언어 장애 평가와 치료"
+    },
+    {
+     "id": "hearing",
+     "name": "청능",
+     "desc": "청력 검사·보청기·청능 훈련"
+    }
+   ],
    "covers": [
     {
      "jobCode": "306902",
      "title": "청능사",
-     "track": null
+     "track": "hearing"
     }
    ]
   },
@@ -2789,17 +3012,33 @@
    "group": "016",
    "groupName": "정부 행정 사무",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "tax",
+     "name": "세무직",
+     "desc": "국세청·세무서"
+    },
+    {
+     "id": "customs",
+     "name": "관세직",
+     "desc": "관세청·세관"
+    },
+    {
+     "id": "mma",
+     "name": "병무행정",
+     "desc": "병무청 행정직"
+    }
+   ],
    "covers": [
     {
      "jobCode": "025201",
      "title": "관세행정사무원",
-     "track": null
+     "track": "customs"
     },
     {
      "jobCode": "025301",
      "title": "병무행정사무원",
-     "track": null
+     "track": "mma"
     }
    ]
   },
@@ -2815,7 +3054,18 @@
    "group": "036",
    "groupName": "법률 전문가·사무",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "court",
+     "name": "법원사무",
+     "desc": "재판 참여·사건 관리"
+    },
+    {
+     "id": "registry",
+     "name": "등기사무",
+     "desc": "부동산·법인 등기"
+    }
+   ],
    "covers": []
   },
   {
@@ -2860,7 +3110,28 @@
    "group": "039",
    "groupName": "경찰·소방·교도·군인",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "academy",
+     "name": "사관학교",
+     "desc": "고교 졸업 뒤 4년 과정"
+    },
+    {
+     "id": "rotc",
+     "name": "학군단(ROTC)",
+     "desc": "대학 재학 중 선발"
+    },
+    {
+     "id": "ocs",
+     "name": "학사장교",
+     "desc": "대학 졸업 뒤 사관후보생"
+    },
+    {
+     "id": "third",
+     "name": "육군3사관학교",
+     "desc": "대학 2년 수료·전문대 졸업 뒤 편입"
+    }
+   ],
    "covers": []
   },
   {
@@ -3119,7 +3390,23 @@
    "group": "029",
    "groupName": "기계·로봇·금속·재료 공학",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "mech",
+     "name": "기구 설계",
+     "desc": "구동부·기구"
+    },
+    {
+     "id": "sw",
+     "name": "제어·소프트웨어",
+     "desc": "로봇 제어·인식"
+    },
+    {
+     "id": "hw",
+     "name": "전장·하드웨어",
+     "desc": "회로·센서·구동기"
+    }
+   ],
    "covers": []
   },
   {
@@ -3253,7 +3540,18 @@
    "group": "02C",
    "groupName": "섬유·식품·안전 공학",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "mech",
+     "name": "소방 기계",
+     "desc": "소화 설비·제연"
+    },
+    {
+     "id": "elec",
+     "name": "소방 전기",
+     "desc": "경보·감지·비상 전원"
+    }
+   ],
    "covers": []
   },
   {
@@ -3319,12 +3617,23 @@
    "group": "028",
    "groupName": "건설·채굴 공학",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "survey",
+     "name": "지적·측량",
+     "desc": "측량 업체·지적직"
+    },
+    {
+     "id": "gis",
+     "name": "GIS 개발",
+     "desc": "공간정보 시스템·데이터"
+    }
+   ],
    "covers": [
     {
      "jobCode": "140602",
      "title": "지리정보시스템전문가",
-     "track": null
+     "track": "gis"
     }
    ]
   },
@@ -3710,7 +4019,23 @@
    "group": "059",
    "groupName": "스포츠·레크리에이션",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "elite",
+     "name": "전문(선수 지도)",
+     "desc": "학교·실업팀 코치"
+    },
+    {
+     "id": "life",
+     "name": "생활체육",
+     "desc": "센터·클럽 강사"
+    },
+    {
+     "id": "group",
+     "name": "유소년·노인·장애인",
+     "desc": "대상별 지도"
+    }
+   ],
    "covers": []
   },
   {
@@ -4816,7 +5141,23 @@
    "group": "034",
    "groupName": "예능·학습지·기타 강사",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "music",
+     "name": "음악",
+     "desc": "피아노·악기·성악"
+    },
+    {
+     "id": "art",
+     "name": "미술",
+     "desc": "아동 미술·입시 미술"
+    },
+    {
+     "id": "pe",
+     "name": "체육·무용",
+     "desc": "태권도·수영·무용 등"
+    }
+   ],
    "covers": []
   },
   {
@@ -5305,7 +5646,18 @@
    "group": "068",
    "groupName": "돌봄 서비스",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "public",
+     "name": "공공 아이돌봄사",
+     "desc": "정부 아이돌봄 서비스"
+    },
+    {
+     "id": "private",
+     "name": "민간 베이비시터",
+     "desc": "플랫폼·개인 계약"
+    }
+   ],
    "covers": []
   },
   {
@@ -5412,7 +5764,23 @@
    "group": "07B",
    "groupName": "물품이동장비 조작",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "tower",
+     "name": "타워크레인",
+     "desc": "건설 현장"
+    },
+    {
+     "id": "mobile",
+     "name": "기중기",
+     "desc": "이동식 크레인"
+    },
+    {
+     "id": "overhead",
+     "name": "천장·항만 크레인",
+     "desc": "공장·항만"
+    }
+   ],
    "covers": []
   },
   {

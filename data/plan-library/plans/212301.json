@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "특수교육과를 졸업해 특수학교 정교사 자격을 받고 임용시험에 합격해야 한다.",
  "gate": "특수학교 정교사 2급(특수교육과 졸업) + 임용시험 합격",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "early",
+   "name": "유아특수",
+   "desc": "특수학교 유치원 과정"
+  },
+  {
+   "id": "elem",
+   "name": "초등특수",
+   "desc": "특수학교 초등 과정·특수학급"
+  },
+  {
+   "id": "sec",
+   "name": "중등특수",
+   "desc": "특수학교 중등 과정"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -46,13 +62,6 @@
  ],
  "common": [
   {
-   "ref": "cp.dept-admission",
-   "step": 1,
-   "major": false,
-   "skip": "이미 특수교육과에 다니고 있다",
-   "note": "특수교육과"
-  },
-  {
    "ref": "cp.major-grades",
    "step": 2,
    "major": true
@@ -80,16 +89,56 @@
    "note": "임용시험 응시 요건 — 3급 이상(응시할 시도의 공고 확인)"
   },
   {
-   "ref": "cp.teacher-exam",
-   "step": 7,
-   "major": true,
-   "note": "특수 임용 1차"
-  },
-  {
    "ref": "cp.teaching-demo",
    "step": 8,
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "early": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 1,
+    "major": false,
+    "skip": "이미 특수교육과에 다니고 있다",
+    "note": "유아특수교육과"
+   },
+   {
+    "ref": "cp.teacher-exam",
+    "step": 7,
+    "major": true,
+    "note": "유아특수 임용 1차"
+   }
+  ],
+  "elem": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 1,
+    "major": false,
+    "skip": "이미 특수교육과에 다니고 있다",
+    "note": "초등특수교육과"
+   },
+   {
+    "ref": "cp.teacher-exam",
+    "step": 7,
+    "major": true,
+    "note": "초등특수 임용 1차"
+   }
+  ],
+  "sec": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 1,
+    "major": false,
+    "skip": "이미 특수교육과에 다니고 있다",
+    "note": "특수교육과(중등)"
+   },
+   {
+    "ref": "cp.teacher-exam",
+    "step": 7,
+    "major": true,
+    "note": "중등특수 임용 1차"
+   }
+  ]
+ }
 }

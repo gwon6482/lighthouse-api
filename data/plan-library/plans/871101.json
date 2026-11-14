@@ -8,12 +8,28 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 제과기능사·제빵기능사가 기본 증빙이다. 자격과 매장 경험, 내 제품으로 실력을 보인다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "pastry",
+   "name": "제과·디저트",
+   "desc": "케이크·구움 과자"
+  },
+  {
+   "id": "bread",
+   "name": "제빵",
+   "desc": "식빵·하드 계열"
+  },
+  {
+   "id": "rice",
+   "name": "떡·한과",
+   "desc": "떡 제조"
+  }
+ ],
  "covers": [
   {
    "jobCode": "871201",
    "title": "떡제조원",
-   "track": null
+   "track": "rice"
   }
  ],
  "projects": [
@@ -145,28 +161,36 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.bk-rice",
+   "name": "쌀가루와 찌기·치기의 원리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "쌀가루의 성질과 찌는 떡·치는 떡의 공정을 안다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "원리",
+     "items": [
+      "쌀 불리기와 가루 내기",
+      "찌는 떡·치는 떡·빚는 떡",
+      "보관과 굳음 방지"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
   {
    "ref": "cp.job-research",
    "step": 1,
-   "major": true
-  },
-  {
-   "ref": "p.bk-theory",
-   "step": 2,
-   "major": true
-  },
-  {
-   "ref": "cp.craftsman-cert",
-   "step": 3,
-   "major": true,
-   "note": "제과기능사·제빵기능사"
-  },
-  {
-   "ref": "p.bk-items",
-   "step": 4,
    "major": true
   },
   {
@@ -209,5 +233,63 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "pastry": [
+   {
+    "ref": "p.bk-theory",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3,
+    "major": true,
+    "note": "제과기능사"
+   },
+   {
+    "ref": "p.bk-items",
+    "step": 4,
+    "major": true,
+    "note": "케이크·쿠키·타르트"
+   }
+  ],
+  "bread": [
+   {
+    "ref": "p.bk-theory",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3,
+    "major": true,
+    "note": "제빵기능사"
+   },
+   {
+    "ref": "p.bk-items",
+    "step": 4,
+    "major": true,
+    "note": "식빵·단과자빵·하드 계열"
+   }
+  ],
+  "rice": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3,
+    "major": true,
+    "note": "떡제조기능사"
+   },
+   {
+    "ref": "p.bk-items",
+    "step": 4,
+    "major": true,
+    "note": "설기·인절미·송편"
+   },
+   {
+    "ref": "p.bk-rice",
+    "step": 2,
+    "major": true
+   }
+  ]
+ }
 }

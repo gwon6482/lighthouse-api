@@ -8,17 +8,38 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "법정 필수는 아니지만 건설사는 건축 전공과 건축기사를 본다. 전공 지식, 기사 자격, 현장 경험이 뼈대다.",
  "gate": "법정 요건은 없으나 채용 공고가 건축 관련 전공과 건축기사를 요구·우대하는 경우가 대부분",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "site",
+   "name": "시공",
+   "desc": "현장 공사 관리"
+  },
+  {
+   "id": "office",
+   "name": "공무·견적",
+   "desc": "원가·계약·공정 관리"
+  },
+  {
+   "id": "cm",
+   "name": "감리·CM",
+   "desc": "건설사업관리"
+  },
+  {
+   "id": "qs",
+   "name": "품질·안전",
+   "desc": "품질 시험·안전 관리"
+  }
+ ],
  "covers": [
   {
    "jobCode": "140205",
    "title": "건축감리기술자",
-   "track": null
+   "track": "cm"
   },
   {
    "jobCode": "140206",
    "title": "건축안전·환경기술자 및 건축품질기술자",
-   "track": null
+   "track": "qs"
   }
  ],
  "projects": [
@@ -49,6 +70,54 @@
      "items": [
       "시공 계획서",
       "품질·안전 점검"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cs-plan",
+   "name": "공정표와 시공 계획서 쓰기",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "작은 건물 하나의 공정표와 시공 계획서를 만든다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "작성",
+     "items": [
+      "공종별 순서 정리",
+      "공정표 그리기",
+      "시공 계획서 쓰기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.cs-quality",
+   "name": "품질 시험과 안전 관리 계획",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "재료 품질 시험과 현장 안전 관리 계획을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "콘크리트·철근 품질 시험",
+      "품질 관리 계획서",
+      "안전 관리 계획과 위험성 평가"
      ]
     }
    ],
@@ -85,17 +154,6 @@
    "major": true
   },
   {
-   "ref": "cp.estimate-schedule",
-   "step": 6,
-   "major": true
-  },
-  {
-   "ref": "cp.safety-law",
-   "step": 7,
-   "major": true,
-   "optional": true
-  },
-  {
    "ref": "cp.eng-field",
    "step": 8,
    "major": true,
@@ -130,5 +188,92 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "site": [
+   {
+    "ref": "cp.estimate-schedule",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.safety-law",
+    "step": 7,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.cs-plan",
+    "step": 6.5,
+    "major": true
+   }
+  ],
+  "office": [
+   {
+    "ref": "cp.estimate-schedule",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.safety-law",
+    "step": 7,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.excel-data",
+    "step": 6.5,
+    "major": true
+   },
+   {
+    "ref": "cp.office-docs",
+    "step": 6.6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "cm": [
+   {
+    "ref": "cp.estimate-schedule",
+    "step": 6,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.safety-law",
+    "step": 7,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.cm-basics",
+    "step": 6.5,
+    "major": true
+   }
+  ],
+  "qs": [
+   {
+    "ref": "cp.estimate-schedule",
+    "step": 6,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.safety-law",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "p.cs-quality",
+    "step": 6.5,
+    "major": true
+   },
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3.5,
+    "major": true,
+    "note": "건설안전기사",
+    "optional": true
+   }
+  ]
+ }
 }

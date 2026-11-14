@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "소방 분야는 소방설비기사가 사실상 기본 자격이다. 소방 설계·시공·점검 업체와 건물 소방 안전 관리로 간다.",
  "gate": "법정 요건은 없으나 채용 공고가 관련 전공과 기사 자격을 요구·우대한다",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "mech",
+   "name": "소방 기계",
+   "desc": "소화 설비·제연"
+  },
+  {
+   "id": "elec",
+   "name": "소방 전기",
+   "desc": "경보·감지·비상 전원"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -112,19 +123,6 @@
    "major": true
   },
   {
-   "ref": "cp.eng-major",
-   "step": 2,
-   "major": false,
-   "skip": "전공 과목에서 배운다",
-   "note": "기계·전기·소방(유체·열·전기 회로)"
-  },
-  {
-   "ref": "cp.engineer-cert",
-   "step": 3,
-   "major": true,
-   "note": "소방설비기사(기계 분야·전기 분야)"
-  },
-  {
    "ref": "p.fs-law",
    "step": 4,
    "major": true
@@ -175,5 +173,36 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "mech": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "소방설비기사(기계 분야)"
+   },
+   {
+    "ref": "cp.eng-major",
+    "step": 2,
+    "major": false,
+    "skip": "전공 과목에서 배운다",
+    "note": "유체역학·열역학·소방 기계"
+   }
+  ],
+  "elec": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "소방설비기사(전기 분야)"
+   },
+   {
+    "ref": "cp.eng-major",
+    "step": 2,
+    "major": false,
+    "skip": "전공 과목에서 배운다",
+    "note": "전기 회로·전자·소방 전기"
+   }
+  ]
+ }
 }

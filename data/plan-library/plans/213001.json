@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "유아교육과를 졸업해 유치원 정교사 2급을 받는다. 국공립은 임용시험, 사립은 유치원별 채용이다.",
  "gate": "유치원 정교사 2급(유아교육과 졸업) + 국공립은 임용시험 합격",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "public",
+   "name": "국공립 임용",
+   "desc": "임용시험"
+  },
+  {
+   "id": "private",
+   "name": "사립 유치원",
+   "desc": "유치원별 채용"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -79,25 +90,6 @@
    "note": "임용시험 응시 요건 — 3급 이상(응시할 시도의 공고 확인)"
   },
   {
-   "ref": "cp.teacher-exam",
-   "step": 7,
-   "major": true,
-   "note": "유치원 임용 1차",
-   "optional": true
-  },
-  {
-   "ref": "cp.teaching-demo",
-   "step": 8,
-   "major": true,
-   "optional": true
-  },
-  {
-   "ref": "p.kd-private",
-   "step": 9,
-   "major": true,
-   "optional": true
-  },
-  {
    "ref": "cp.resume",
    "step": 10,
    "major": true
@@ -108,6 +100,27 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "public": [
+   {
+    "ref": "cp.teacher-exam",
+    "step": 7,
+    "major": true,
+    "note": "유치원 임용 1차"
+   },
+   {
+    "ref": "cp.teaching-demo",
+    "step": 8,
+    "major": true
+   }
+  ],
+  "private": [
+   {
+    "ref": "p.kd-private",
+    "step": 9,
+    "major": true
+   }
+  ]
+ },
  "caution": "국공립과 사립 중 목표에 따라 임용 준비 또는 사립 채용 준비를 고른다"
 }

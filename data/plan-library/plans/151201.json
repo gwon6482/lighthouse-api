@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "기계·전자·제어 전공을 본다. 직접 만든 로봇과 대회 경험이 강한 증빙이고 연구개발은 석사를 우대한다.",
  "gate": "법정 요건은 없으나 채용 공고가 관련 전공과 기사 자격을 요구·우대한다",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "mech",
+   "name": "기구 설계",
+   "desc": "구동부·기구"
+  },
+  {
+   "id": "sw",
+   "name": "제어·소프트웨어",
+   "desc": "로봇 제어·인식"
+  },
+  {
+   "id": "hw",
+   "name": "전장·하드웨어",
+   "desc": "회로·센서·구동기"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -94,13 +110,6 @@
    "note": "기계·전자·제어"
   },
   {
-   "ref": "cp.engineer-cert",
-   "step": 3,
-   "major": true,
-   "note": "일반기계기사·전자기사 등",
-   "optional": true
-  },
-  {
    "ref": "cp.c-cpp",
    "step": 4,
    "major": true
@@ -157,5 +166,54 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "mech": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "로봇기구개발기사·일반기계기사",
+    "optional": true
+   },
+   {
+    "ref": "cp.cad-3d",
+    "step": 4.5,
+    "major": true
+   }
+  ],
+  "sw": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "로봇소프트웨어개발기사",
+    "optional": true
+   },
+   {
+    "ref": "cp.linux-network",
+    "step": 4.5,
+    "major": true
+   },
+   {
+    "ref": "cp.ml-basics",
+    "step": 6.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "hw": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "로봇하드웨어개발기사·전자기사",
+    "optional": true
+   },
+   {
+    "ref": "cp.embedded-project",
+    "step": 6.5,
+    "major": true
+   }
+  ]
+ }
 }

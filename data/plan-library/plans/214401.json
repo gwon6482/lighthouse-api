@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "학원 강사 자격 기준만 채우면 된다. 전공 실기 실력과 가르치는 능력으로 평가받는다.",
  "gate": "학원 강사 자격 기준(학원법 시행령 — 전문대 졸업 이상 등)",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "music",
+   "name": "음악",
+   "desc": "피아노·악기·성악"
+  },
+  {
+   "id": "art",
+   "name": "미술",
+   "desc": "아동 미술·입시 미술"
+  },
+  {
+   "id": "pe",
+   "name": "체육·무용",
+   "desc": "태권도·수영·무용 등"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -74,11 +90,6 @@
    "major": true
   },
   {
-   "ref": "p.ag-major",
-   "step": 2,
-   "major": true
-  },
-  {
    "ref": "cp.lecture-demo",
    "step": 3,
    "major": true
@@ -124,5 +135,42 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "music": [
+   {
+    "ref": "p.ag-major",
+    "step": 2,
+    "major": true,
+    "note": "악기·성악 실기와 단계별 교재"
+   }
+  ],
+  "art": [
+   {
+    "ref": "p.ag-major",
+    "step": 2,
+    "major": true,
+    "note": "소묘·수채·디자인 등 과정별 커리큘럼"
+   }
+  ],
+  "pe": [
+   {
+    "ref": "p.ag-major",
+    "step": 2,
+    "major": true,
+    "note": "종목 지도법과 안전"
+   },
+   {
+    "ref": "cp.sports-instructor-cert",
+    "step": 2.5,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.bls",
+    "step": 2.6,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

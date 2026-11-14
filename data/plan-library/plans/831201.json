@@ -8,17 +8,33 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "전기기능사가 기본 증빙이다. 자격과 현장 경력을 쌓아 전기공사 기술자로 올라간다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "inner",
+   "name": "내선",
+   "desc": "건물 전기 배선"
+  },
+  {
+   "id": "outer",
+   "name": "외선·배전",
+   "desc": "전주·지중 선로"
+  },
+  {
+   "id": "plant",
+   "name": "산업 전기",
+   "desc": "공장 전기·자동화 설비"
+  }
+ ],
  "covers": [
   {
    "jobCode": "831301",
    "title": "외선전기공",
-   "track": null
+   "track": "outer"
   },
   {
    "jobCode": "831101",
    "title": "산업전기공",
-   "track": null
+   "track": "plant"
   }
  ],
  "projects": [
@@ -84,6 +100,31 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.el-line",
+   "name": "배전 선로 작업과 활선 안전",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "가공·지중 배전 선로의 구조와 작업 순서, 감전 예방을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "배전 선로 구조와 자재",
+      "승주·활선 작업 안전",
+      "작업 순서와 신호"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "배전 공사에는 협회가 운영하는 기능 자격이 따로 있다 — 종류와 취득 방법은 한국전기공사협회 안내 확인"
   }
  ],
  "common": [
@@ -126,12 +167,6 @@
    "major": true
   },
   {
-   "ref": "cp.shop-work",
-   "step": 8,
-   "major": true,
-   "note": "전기공사 업체"
-  },
-  {
    "ref": "cp.engineer-cert",
    "step": 9,
    "major": true,
@@ -149,5 +184,46 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "inner": [
+   {
+    "ref": "cp.shop-work",
+    "step": 8,
+    "major": true,
+    "note": "전기공사 업체(건물 내선)"
+   }
+  ],
+  "outer": [
+   {
+    "ref": "cp.shop-work",
+    "step": 8,
+    "major": true,
+    "note": "배전 공사 업체"
+   },
+   {
+    "ref": "p.el-line",
+    "step": 4.5,
+    "major": true
+   }
+  ],
+  "plant": [
+   {
+    "ref": "cp.shop-work",
+    "step": 8,
+    "major": true,
+    "note": "공장 전기·자동화 설비 업체"
+   },
+   {
+    "ref": "cp.plc",
+    "step": 4.5,
+    "major": true
+   },
+   {
+    "ref": "cp.safety-law",
+    "step": 6.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

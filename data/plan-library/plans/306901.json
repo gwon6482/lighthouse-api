@@ -8,12 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "언어재활 관련 학과를 졸업하고 언어재활사 국가시험에 합격해야 한다.",
  "gate": "언어재활사 2급 — 언어재활 관련 교과목 이수 + 관련 학과 전문학사 이상 + 국가시험 합격",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "speech",
+   "name": "언어재활",
+   "desc": "말·언어 장애 평가와 치료"
+  },
+  {
+   "id": "hearing",
+   "name": "청능",
+   "desc": "청력 검사·보청기·청능 훈련"
+  }
+ ],
  "covers": [
   {
    "jobCode": "306902",
    "title": "청능사",
-   "track": null
+   "track": "hearing"
   }
  ],
  "projects": [
@@ -48,16 +59,58 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.au-test",
+   "name": "청력 검사와 보청기 적합 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "청력 검사를 하고 결과에 맞춰 보청기를 조절한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "실습",
+     "items": [
+      "순음·어음 청력 검사",
+      "보청기 적합과 조절",
+      "청능 훈련 계획"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.au-cert",
+   "name": "청능사 자격(학회)",
+   "type": "cert",
+   "subtype": "private",
+   "category": "qualification",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "학회의 청능사 자격을 받는다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "이수 과목·실습 요건 확인",
+      "자격시험 준비",
+      "응시"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "민간(학회) 자격이다. 응시 요건은 학회 안내 확인"
   }
  ],
  "common": [
-  {
-   "ref": "cp.dept-admission",
-   "step": 1,
-   "major": false,
-   "skip": "이미 언어치료(재활)학과에 다니고 있다",
-   "note": "언어치료(재활)학과"
-  },
   {
    "ref": "cp.major-grades",
    "step": 2,
@@ -77,17 +130,6 @@
    "note": "학과가 정한 실습"
   },
   {
-   "ref": "cp.license-exam",
-   "step": 6,
-   "major": true,
-   "note": "언어재활사 국가시험"
-  },
-  {
-   "ref": "p.st-clinic",
-   "step": 5,
-   "major": true
-  },
-  {
    "ref": "cp.hospital-apply",
    "step": 7,
    "major": true,
@@ -104,7 +146,47 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "speech": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 1,
+    "major": false,
+    "skip": "이미 언어치료(재활)학과에 다니고 있다",
+    "note": "언어치료(재활)학과"
+   },
+   {
+    "ref": "cp.license-exam",
+    "step": 6,
+    "major": true,
+    "note": "언어재활사 국가시험"
+   },
+   {
+    "ref": "p.st-clinic",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "hearing": [
+   {
+    "ref": "cp.dept-admission",
+    "step": 1,
+    "major": false,
+    "skip": "이미 청각학 전공에 다니고 있다",
+    "note": "청각학 전공(학부·대학원)"
+   },
+   {
+    "ref": "p.au-test",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "p.au-cert",
+    "step": 6,
+    "major": true
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "law",

@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "사서 자격증이 필요하다. 문헌정보학을 전공해 정사서 2급을 받는 길이 일반적이고, 공공도서관은 사서직 공무원 시험으로 간다.",
  "gate": "사서 자격증(정사서 2급 — 문헌정보학 전공 학사 등)",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "public",
+   "name": "공공도서관",
+   "desc": "사서직 공무원"
+  },
+  {
+   "id": "school",
+   "name": "학교 도서관",
+   "desc": "사서교사"
+  },
+  {
+   "id": "univ",
+   "name": "대학·전문 도서관",
+   "desc": "대학·기업·연구소"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -86,6 +102,30 @@
     "note": "사서 9급: 국어·영어·한국사·자료조직개론·정보봉사개론"
    },
    "caution": "과목은 연도·지역에 따라 바뀐다"
+  },
+  {
+   "id": "p.lb-subject",
+   "name": "학술 정보 서비스와 주제 전문성",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "학술 DB 검색과 서지 관리, 한 분야의 자료를 안내할 수 있다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "익히기",
+     "items": [
+      "학술 DB와 검색 기법",
+      "서지 관리 도구",
+      "주제 분야 자료 조사"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -120,19 +160,6 @@
    "optional": true
   },
   {
-   "ref": "cp.civil9-common",
-   "step": 6,
-   "major": true,
-   "note": "공공도서관 사서직 공무원",
-   "optional": true
-  },
-  {
-   "ref": "p.lb-civil",
-   "step": 7,
-   "major": true,
-   "optional": true
-  },
-  {
    "ref": "cp.resume",
    "step": 8,
    "major": true
@@ -141,15 +168,73 @@
    "ref": "cp.interview",
    "step": 9,
    "major": true
-  },
-  {
-   "ref": "cp.korean-history",
-   "step": 5.5,
-   "major": true,
-   "note": "9급 공채는 3급 이상 — 2027년부터 한국사 과목을 대체한다"
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "public": [
+   {
+    "ref": "cp.korean-history",
+    "step": 5.5,
+    "major": true,
+    "note": "9급 공채는 3급 이상 — 2027년부터 한국사 과목을 대체한다"
+   },
+   {
+    "ref": "cp.civil9-common",
+    "step": 6,
+    "major": true,
+    "note": "공공도서관 사서직 공무원"
+   },
+   {
+    "ref": "p.lb-civil",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "school": [
+   {
+    "ref": "cp.teaching-course",
+    "step": 5.5,
+    "major": true
+   },
+   {
+    "ref": "cp.korean-history",
+    "step": 5.8,
+    "major": true,
+    "note": "임용시험 응시 요건 — 3급 이상(응시할 시도의 공고 확인)"
+   },
+   {
+    "ref": "cp.teacher-exam",
+    "step": 6,
+    "major": true,
+    "note": "사서교사 임용 1차"
+   },
+   {
+    "ref": "cp.teaching-demo",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "univ": [
+   {
+    "ref": "p.lb-subject",
+    "step": 5.5,
+    "major": true
+   },
+   {
+    "ref": "cp.toeic",
+    "step": 6,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.internship",
+    "step": 7,
+    "major": true,
+    "note": "대학 도서관 근로·인턴",
+    "optional": true
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "law",

@@ -8,7 +8,28 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "사관학교, 학군단(ROTC), 학사장교, 3사관학교 등 경로별 선발을 거쳐 임관한다.",
  "gate": "장교 양성 과정 선발 + 임관",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "academy",
+   "name": "사관학교",
+   "desc": "고교 졸업 뒤 4년 과정"
+  },
+  {
+   "id": "rotc",
+   "name": "학군단(ROTC)",
+   "desc": "대학 재학 중 선발"
+  },
+  {
+   "id": "ocs",
+   "name": "학사장교",
+   "desc": "대학 졸업 뒤 사관후보생"
+  },
+  {
+   "id": "third",
+   "name": "육군3사관학교",
+   "desc": "대학 2년 수료·전문대 졸업 뒤 편입"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -80,6 +101,138 @@
     "note": "학군사관후보생(ROTC) 선발은 2024년부터 필기시험을 보지 않는다"
    },
    "caution": "평가 구성은 과정마다 다르다 — 모집 공고 확인"
+  },
+  {
+   "id": "p.of-academy",
+   "name": "사관학교 입시",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "사관학교 1차·2차 시험에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "요강",
+     "items": [
+      "모집 요강과 일정 확인",
+      "지원 자격·신체 기준 대조"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "1차 학과 시험(국어·영어·수학)",
+      "2차 면접·체력 검정·신체검사",
+      "수능·내신 관리"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "선발 일정과 평가 요소는 해마다 모집 요강으로 확인"
+  },
+  {
+   "id": "p.of-rotc",
+   "name": "학군사관후보생 선발 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "학군단 선발에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "요강",
+     "items": [
+      "모집 요강과 일정 확인",
+      "지원 자격·신체 기준 대조"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "학군단이 있는 대학인지 확인",
+      "대학 성적과 면접 준비",
+      "체력 검정"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "선발 일정과 평가 요소는 해마다 모집 요강으로 확인"
+  },
+  {
+   "id": "p.of-ocs",
+   "name": "학사사관후보생 선발 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "학사장교 선발에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "요강",
+     "items": [
+      "모집 요강과 일정 확인",
+      "지원 자격·신체 기준 대조"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "군별 모집 일정 확인",
+      "면접 준비",
+      "체력 검정"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "선발 일정과 평가 요소는 해마다 모집 요강으로 확인"
+  },
+  {
+   "id": "p.of-third",
+   "name": "3사관학교 편입 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "생도 선발에 합격한다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "요강",
+     "items": [
+      "모집 요강과 일정 확인",
+      "지원 자격·신체 기준 대조"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "준비",
+     "items": [
+      "대학 성적 관리",
+      "선발 평가와 면접 준비",
+      "체력 검정"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "선발 일정과 평가 요소는 해마다 모집 요강으로 확인"
   }
  ],
  "common": [
@@ -87,13 +240,6 @@
    "ref": "p.of-route",
    "step": 1,
    "major": true
-  },
-  {
-   "ref": "cp.major-grades",
-   "step": 2,
-   "major": true,
-   "note": "대학 성적이 선발에 반영되는 과정이 있다",
-   "optional": true
   },
   {
    "ref": "p.of-select",
@@ -125,6 +271,54 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "academy": [
+   {
+    "ref": "p.of-academy",
+    "step": 2.5,
+    "major": true
+   }
+  ],
+  "rotc": [
+   {
+    "ref": "cp.major-grades",
+    "step": 2,
+    "major": true,
+    "note": "대학 성적이 선발에 반영되는 과정이 있다"
+   },
+   {
+    "ref": "p.of-rotc",
+    "step": 2.5,
+    "major": true
+   }
+  ],
+  "ocs": [
+   {
+    "ref": "cp.major-grades",
+    "step": 2,
+    "major": true,
+    "note": "대학 성적이 선발에 반영되는 과정이 있다",
+    "optional": true
+   },
+   {
+    "ref": "p.of-ocs",
+    "step": 2.5,
+    "major": true
+   }
+  ],
+  "third": [
+   {
+    "ref": "cp.major-grades",
+    "step": 2,
+    "major": true,
+    "note": "대학 성적이 선발에 반영되는 과정이 있다"
+   },
+   {
+    "ref": "p.of-third",
+    "step": 2.5,
+    "major": true
+   }
+  ]
+ },
  "caution": "선발 기준은 각 군 모집 공고가 정본"
 }

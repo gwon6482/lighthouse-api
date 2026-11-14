@@ -8,12 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "법원사무직·등기사무직 공무원은 법원행정처가 따로 뽑는다. 법 과목 비중이 크다.",
  "gate": "법원직 공무원 공채 시험 합격",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "court",
+   "name": "법원사무",
+   "desc": "재판 참여·사건 관리"
+  },
+  {
+   "id": "registry",
+   "name": "등기사무",
+   "desc": "부동산·법인 등기"
+  }
+ ],
  "covers": [],
  "projects": [
   {
-   "id": "p.major",
-   "name": "법원직 전문과목",
+   "id": "p.court-major",
+   "name": "법원사무직 전문과목",
    "type": "hiring",
    "subtype": "civil",
    "category": "qualification",
@@ -50,7 +61,60 @@
      ]
     }
    ],
-   "basis": "law"
+   "basis": "law",
+   "checked": {
+    "at": "2026-11-14",
+    "level": "law",
+    "source": "법원공무원규칙 별표 6의1(개정 2026-02-02)",
+    "note": "1차 헌법(공통), 2차 민법·민사소송법·형법·형사소송법"
+   }
+  },
+  {
+   "id": "p.reg-major",
+   "name": "등기사무직 전문과목",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "전문과목에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 10,
+     "title": "기본 이론",
+     "items": [
+      "헌법·민법",
+      "민사소송법",
+      "상법·부동산등기법"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "기출 3회독",
+      "법령·판례 정리",
+      "오답 노트"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law",
+   "checked": {
+    "at": "2026-11-14",
+    "level": "law",
+    "source": "법원공무원규칙 별표 6의1(개정 2026-02-02)",
+    "note": "1차 헌법(공통), 2차 민법·민사소송법·상법(총론·회사편)·부동산등기법"
+   }
   }
  ],
  "common": [
@@ -65,11 +129,6 @@
    "major": true
   },
   {
-   "ref": "p.major",
-   "step": 3,
-   "major": true
-  },
-  {
    "ref": "cp.civil-interview",
    "step": 9,
    "major": true
@@ -81,7 +140,22 @@
    "note": "9급 공채는 3급 이상 — 2027년부터 한국사 과목을 대체한다"
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "court": [
+   {
+    "ref": "p.court-major",
+    "step": 3,
+    "major": true
+   }
+  ],
+  "registry": [
+   {
+    "ref": "p.reg-major",
+    "step": 3,
+    "major": true
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "law",
