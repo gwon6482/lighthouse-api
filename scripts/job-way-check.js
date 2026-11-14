@@ -20,6 +20,8 @@ const n = (s) => String(s ?? '').replace(/[\s·∙‧ㆍ()]/g, '');
     const j = byCode.get(code);
     if (!j) { bad++; console.log(`✗ ${code} ${o.title}: 통합조사 직업에 없다`); continue; }
     if (j.title.trim() !== o.title) { bad++; console.log(`✗ ${code}: 이름이 다르다(${j.title} / ${o.title})`); }
+    // replaced: 전에 나오던 글의 주인(남의 글이던 직업) 또는 null(비어 있던 직업) — DB 와 맞는지
+    if (o.replaced ? !j.work24.way : !!j.work24.way) { bad++; console.log(`✗ ${code} ${o.title}: replaced 가 DB 와 어긋난다(DB 의 되는 길 ${j.work24.way ? '있음' : '없음'})`); }
     if (!['law', 'general'].includes(o.basis) || !Array.isArray(o.sources) || (o.basis === 'law' && !o.sources.length)) { bad++; console.log(`✗ ${code} ${o.title}: basis·sources`); }
     if (!o.way || o.way.length < 150) { bad++; console.log(`✗ ${code} ${o.title}: 글이 너무 짧다`); }
   }
