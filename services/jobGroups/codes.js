@@ -35,6 +35,19 @@ const JOB_OVERRIDE = {
   '615601': '076',   // 방문판매원(keco 6157, 표에 없음) → 바로 앞 코드 6156 '노점 및 이동 판매원'의 직무
 };
 
+// 고용24 통합조사 묶음(job_info.dataSource 'work24-shared', 85개 직업·29묶음)은 **묶음 대표 직업의 keco 를 구성원 모두가 받는다.**
+//   대표와 분야가 다른 구성원은 엉뚱한 직무·채용 공고로 이어진다(보험상품개발자 → 대표 '여행상품 개발자' → 여행 서비스).
+//   그런 직업에는 제 세분류 코드를 손으로 준다(2026-11-14). 85개를 전부 대조해 직무가 달라지는 것은 이 4개뿐이었다
+//   (나머지는 대표와 같은 직무이거나 — 자재·물류·운송 사무, 오토바이·자전거 정비 — 제 코드가 표에 없다: 법원공무원·음식배달원).
+//   ⚠️ 직업 데이터를 다시 실으면(work24-load.js) 묶음이 바뀔 수 있다 — 통합조사 직업을 다시 대조할 것.
+//   ⚠️ 여기를 고치면 직무 추천 보정 분포도 다시 만든다: node --env-file=.env scripts/job-group-null-stats.js
+const OCC_OVERRIDE = {
+  '031301': '031300', // 보험상품개발자 → 금융 및 보험 상품 개발자(01C 금융·보험 전문가). 대표는 여행상품 개발자(5211 → 063)
+  '031302': '031300', // 금융상품개발자 → 위와 같음
+  '029303': '029301', // 통계사무원 → 통계 사무원(01B 통계·비서·사무보조). 대표는 회계사무원(0271 → 회계·경리 사무)
+  '024101': '024101', // 광고·홍보·마케팅전문가 → 광고·홍보 전문가(015 경영·회계·광고·상품기획). 대표는 광고·홍보·마케팅사무원(0262 → 017 경영지원 사무)
+};
+
 // 화면 이름 — 카드 제목 한 줄(약 14자)에 들어가게. 여기 없으면 공식 이름에서 괄호 설명을 빼고 ' 및 ' → '·'.
 //   공식 이름은 fullName 으로 같이 준다
 const NAMES = {
@@ -96,6 +109,7 @@ function groupInfo(code) {
 
 /** 우리 직업 → 트리에 있는 세분류 코드. keco+'00' 이 트리에 없으면 같은 앞 4자리의 첫 세분류(19개 직업) */
 function occupationCodeOf(job) {
+  if (OCC_OVERRIDE[job?.jobCode]) return OCC_OVERRIDE[job.jobCode];
   const k = String(job?.work24?.keco?.code ?? '');
   if (!/^\d{4}$/.test(k)) return null;
   if (TREE.parent[`${k}00`]) return `${k}00`;
@@ -109,4 +123,4 @@ function groupOf(job) {
   return occ ? (PARENT_OVERRIDE[occ] ?? TREE.parent[occ] ?? null) : null;
 }
 
-module.exports = { TREE, PARENT_OVERRIDE, JOB_OVERRIDE, groupInfo, groupOf, occupationCodeOf, isGroupCode };
+module.exports = { TREE, PARENT_OVERRIDE, JOB_OVERRIDE, OCC_OVERRIDE, groupInfo, groupOf, occupationCodeOf, isGroupCode };

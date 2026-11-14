@@ -11,7 +11,7 @@ const LIST_URL = 'https://www.work24.go.kr/cm/openApi/call/wk/callOpenApiSvcInfo
 const OPEN_URL = 'https://www.work24.go.kr/cm/openApi/call/wk/callOpenApiSvcInfo210L21.do'; // 공채속보
 // 직업 → 직무(채용 직종 중분류) 연결은 결과지 직무 카드와 **같은 규칙**을 쓴다(2026-11-09) —
 //   트리의 superCd 하나만 보면 여러 상위에 실린 세분류에서 엉뚱한 공채가 나왔다(한식 조리사 → 제과·제빵)
-const { groupOf, groupInfo } = require('../../jobGroups/codes');
+const { groupOf, groupInfo, OCC_OVERRIDE } = require('../../jobGroups/codes');
 const SEARCH_PAGE = 'https://www.work24.go.kr/wk/a/b/1200/retriveDtlEmpSrchList.do';
 const parser = new XMLParser({ ignoreAttributes: true, parseTagValue: false, trimValues: true });
 const asArray = (v) => (v == null ? [] : Array.isArray(v) ? v : [v]);
@@ -41,6 +41,8 @@ const ymd8 = (s) => {
 
 /** 우리 직업 → 고용24 채용 직종코드(상위 코드). 없으면 null(이 출처는 건너뛴다) */
 function occupationOf(job) {
+  // 통합조사 묶음에서 대표와 분야가 다른 직업은 제 세분류 코드로(jobGroups/codes.js OCC_OVERRIDE) — 안 그러면 보험상품개발자에 여행 공고가 뜬다
+  if (OCC_OVERRIDE[job?.jobCode]) return OCC_OVERRIDE[job.jobCode];
   const k = job?.work24?.keco?.code;
   return /^\d{4}$/.test(String(k ?? '')) ? `${k}00` : null;
 }
