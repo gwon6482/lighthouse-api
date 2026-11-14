@@ -76,6 +76,15 @@ const researchSurveyResultSchema = new mongoose.Schema({
     suspectReasons: { type: [String], default: [] },
   },
 
+  // 검사·결과지 평가(선택, 2026-11-15). test = 검사 직후(결과 보기 전) / result = 결과지를 본 뒤.
+  // 값의 뜻과 허용 범위는 controllers/researchSurveyController.js FEEDBACK_SPEC 이 정본이다.
+  // ⚠️ 응답 문서 안에 둔다 — 보유기간(expireAt)을 응답과 함께 따른다(처리방침 제3조).
+  // ⚠️ 이름·연락처는 받지 않는다. 서술 칸에도 적지 말라고 화면에서 안내한다
+  feedback: {
+    test: { type: Object, default: null },
+    result: { type: Object, default: null },
+  },
+
   meta: {
     campaign: { type: String, default: null, index: true },  // 수집 경로 태그(QR/링크별)
     userAgent: { type: String, default: null },

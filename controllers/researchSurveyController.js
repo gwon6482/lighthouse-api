@@ -298,6 +298,9 @@ const getResearchResult = async (req, res, next) => {
       success: true, respondent_id, completed_at: doc.updated_at, analysis, recommend: recommend.data, currentJob, groups,
       // null = 실무자가 아니라 후기 대상이 아님
       reviewSubmitted: currentJobCode ? !!review : null,
+      // 평가지(2026-11-15) — 어느 문항을 보여 줄지(role)와 이미 보냈는지. role 은 currentJob 유무로도 드러나던 값이다
+      role: doc.respondent?.role ?? null,
+      feedbackSubmitted: { test: !!doc.feedback?.test, result: !!doc.feedback?.result },
     });
   } catch (err) {
     next(err);
@@ -485,11 +488,124 @@ const submitResearchReview = async (req, res, next) => {
   }
 };
 
+// ── 검사·결과지 평가(2026-11-15) ─────────────────────────────────────────────
+// 설문을 마친 사람이 검사와 결과지가 어땠는지 답한다(전부 선택 응답). 두 번에 나눠 받는다:
+//   test   = 검사 직후, 결과 보기 전(길이·난이도·이해도·집중도)
+//   result = 결과지를 본 뒤(정확도·추천 직무·도움·다음 걸음·추천 의향·자유 의견)
+// 화면 문구의 정본은 랜딩 composables/researchFeedback.ts — 보기를 바꾸면 여기와 함께 고친다.
+// 모양: int = 1~5 정수 / enum = 하나 / multi = 여러 개(중복 제거) / bool / text = 글(앞뒤 공백 제거, 길이 제한)
+// roles 가 있으면 그 참여자만 답할 수 있다(끝의 두 문항만 직업인·예비 사용자가 다르다)
+const FB_PARTS5 = ['T1', 'T21', 'T22', 'T23', 'T3'];
+const FB_RESULT_PARTS = ['personality', 'talent', 'values', 'interest', 'environment', 'jobs'];
+const FEEDBACK_SPEC = {
+  test: {
+    length: { type: 'enum', values: ['too_short', 'short', 'ok', 'long', 'too_long'] },          // Q1 검사 길이
+    difficulty: { type: 'int' },                                                                // Q2 답 고르기 난이도(1 매우 쉬움 ~ 5 매우 어려움)
+    unclear: { type: 'enum', values: ['none', 'few', 'several', 'many'] },                        // Q3 뜻이 이해 안 된 문항
+    unclearParts: { type: 'multi', values: FB_PARTS5 },                                           // Q3-1 어느 영역
+    unclearReasons: { type: 'multi', values: ['wording', 'long', 'situational', 'no_experience', 'repetitive', 'scale', 'other'] }, // Q3-2
+    unclearOther: { type: 'text', max: 200 },
+    focus: { type: 'enum', values: ['full', 'faster', 'careless'] },                              // Q4 끝까지 집중했나(응답 품질 자기보고 — 표시만, 지우지 않는다)
+  },
+  result: {
+    accuracy: { type: 'int' },                                                                    // Q5 결과가 나를 잘 설명하나
+    offParts: { type: 'multi', values: [...FB_RESULT_PARTS, 'none'] },                            // Q5-1 다르다고 느낀 부분
+    jobsFit: { type: 'int' },                                                                     // Q6 추천 직무가 어울리나
+    jobsFitUnknown: { type: 'bool' },                                                             //     잘 모르는 직무라 판단하기 어려움
+    helpful: { type: 'int' },                                                                     // Q7 도움이 됐나
+    helpfulParts: { type: 'multi', values: [...FB_RESULT_PARTS, 'current_job', 'none'] },         // Q7-1 도움이 된 부분
+    helpfulReasons: { type: 'multi', values: ['new_self', 'put_into_words', 'new_jobs', 'confirmed', 'next_step', 'other'] }, // Q7-2
+    helpfulOther: { type: 'text', max: 200 },
+    lacking: { type: 'multi', values: ['already_knew', 'hard_or_long', 'no_reason', 'no_next_step', 'other'] },               // Q7-3 아쉬운 점
+    lackingOther: { type: 'text', max: 200 },
+    planIntent: { type: 'int', roles: ['prospective'] },                                          // Q8(예비) 진로 계획을 세워 보고 싶은 마음
+    planBlockers: { type: 'multi', values: ['no_goal', 'distrust', 'dont_know_start', 'have_plan', 'not_now', 'other'], roles: ['prospective'] }, // Q8-1
+    planBlockerOther: { type: 'text', max: 200, roles: ['prospective'] },
+    nextAction: { type: 'enum', values: ['explore_jobs', 'make_plan', 'hear_practitioner', 'counseling', 'other_test', 'none'], roles: ['prospective'] }, // Q9(예비)
+    matchFeel: { type: 'enum', values: ['lower', 'similar', 'higher', 'unsure'], roles: ['practitioner'] },   // Q8(직업인) 현재 직업 매칭도 체감
+    hindsight: { type: 'int', roles: ['practitioner'] },                                          // Q9(직업인) 준비하던 때였다면 도움이 됐을까
+    recommend: { type: 'int' },                                                                   // Q10 주변에 권하고 싶은가
+    comment: { type: 'text', max: 500 },                                                          // Q11 자유 의견
+  },
+};
+
+/** 평가 답을 명세대로 걸러 담는다. 틀린 값이 하나라도 있으면 { error } */
+function cleanFeedback(part, role, input) {
+  const spec = FEEDBACK_SPEC[part];
+  if (!input || typeof input !== 'object' || Array.isArray(input)) return { error: 'answers 가 필요합니다.' };
+  const out = {};
+  for (const [key, v] of Object.entries(input)) {
+    const f = spec[key];
+    if (!f) return { error: `알 수 없는 항목입니다: ${String(key).slice(0, 40)}` };
+    if (f.roles && !f.roles.includes(role)) return { error: `${key} 는 이 참여자에게 묻지 않는 항목입니다.` };
+    if (v === null || v === undefined || v === '') continue;
+    if (f.type === 'int') {
+      if (!Number.isInteger(v) || v < 1 || v > 5) return { error: `${key} 는 1~5 사이 정수여야 합니다.` };
+      out[key] = v;
+    } else if (f.type === 'enum') {
+      if (!f.values.includes(v)) return { error: `${key} 값이 올바르지 않습니다.` };
+      out[key] = v;
+    } else if (f.type === 'multi') {
+      if (!Array.isArray(v) || v.some((x) => !f.values.includes(x))) return { error: `${key} 값이 올바르지 않습니다.` };
+      const uniq = [...new Set(v)];
+      if (uniq.length) out[key] = uniq;
+    } else if (f.type === 'bool') {
+      if (typeof v !== 'boolean') return { error: `${key} 는 true/false 여야 합니다.` };
+      if (v) out[key] = true;
+    } else if (f.type === 'text') {
+      if (typeof v !== 'string') return { error: `${key} 는 글이어야 합니다.` };
+      // 줄바꿈·탭은 두고 그 밖의 제어문자만 지운다
+      const t = v.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '').trim();
+      if (t.length > f.max) return { error: `${key} 는 ${f.max}자 이하여야 합니다.` };
+      if (t) out[key] = t;
+    }
+  }
+  if (!Object.keys(out).length) return { error: '답한 항목이 없습니다.' };
+  return { value: out };
+}
+
+/**
+ * POST /api/survey/research/feedback  (공개)
+ * body: { respondent_id, part: 'test' | 'result', answers: { … } }
+ *
+ * 완주한 응답에만 붙인다. 같은 part 를 다시 보내면 바꿔 쓴다(고쳐 보내는 경우).
+ * ⚠️ 응답 본문(answers·quality)은 건드리지 않는다 — 완주본은 더 이상 갱신하지 않는다는 약속(updated_at = 검사일)을 지키려고
+ *    timestamps 를 끄고 feedback 만 쓴다.
+ */
+const submitResearchFeedback = async (req, res, next) => {
+  try {
+    const b = req.body || {};
+    if (!RESPONDENT_ID_RE.test(String(b.respondent_id))) {
+      return res.status(400).json({ success: false, error: 'respondent_id 형식이 올바르지 않습니다.' });
+    }
+    if (b.part !== 'test' && b.part !== 'result') {
+      return res.status(400).json({ success: false, error: "part 는 'test' 또는 'result' 여야 합니다." });
+    }
+    const doc = await ResearchSurveyResult.findOne({ respondent_id: b.respondent_id }, { completed: 1, 'respondent.role': 1 }).lean();
+    if (!doc) return res.status(404).json({ success: false, error: '응답을 찾을 수 없습니다.' });
+    if (!doc.completed) return res.status(409).json({ success: false, error: '설문을 끝까지 마친 뒤에 평가를 남길 수 있습니다.' });
+
+    const cleaned = cleanFeedback(b.part, doc.respondent?.role, b.answers);
+    if (cleaned.error) return res.status(400).json({ success: false, error: cleaned.error });
+
+    await ResearchSurveyResult.updateOne(
+      { respondent_id: b.respondent_id },
+      { $set: { [`feedback.${b.part}`]: { ...cleaned.value, at: new Date() } } },
+      { timestamps: false },
+    );
+    return res.status(201).json({ success: true, part: b.part });
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   submitResearchResponse,
+  submitResearchFeedback,
   getResearchResult,
   getResearchStats,
   submitResearchReview,
   PHASE1_TARGET,
-  __test__: { maxStraightRun, isCompleted, lastPartOf },
+  FEEDBACK_SPEC,
+  __test__: { maxStraightRun, isCompleted, lastPartOf, cleanFeedback },
 };

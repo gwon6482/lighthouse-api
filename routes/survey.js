@@ -15,7 +15,7 @@ const {
 const { getGuestJobGroupTeaser } = require('../controllers/jobGroupController');
 const adminAuth = require('../middleware/adminAuth');
 const { researchSurveyLimiter } = require('../middleware/rateLimit');
-const { submitResearchResponse, getResearchResult, getResearchStats, submitResearchReview } = require('../controllers/researchSurveyController');
+const { submitResearchResponse, getResearchResult, getResearchStats, submitResearchReview, submitResearchFeedback } = require('../controllers/researchSurveyController');
 const { authenticate } = require('../middleware/auth');
 
 /**
@@ -811,6 +811,35 @@ router.get('/research/result/:respondent_id', researchSurveyLimiter, getResearch
  *       409: { description: 미완주 · 이미 제출 }
  */
 router.post('/research/review', researchSurveyLimiter, submitResearchReview);
+
+/**
+ * @swagger
+ * /api/survey/research/feedback:
+ *   post:
+ *     summary: 연구 설문의 검사·결과지 평가 (선택, 2026-11-15)
+ *     tags: [Survey]
+ *     description: |
+ *       설문을 마친 응답자가 검사와 결과지가 어땠는지 답한다. part=test(검사 직후) / result(결과지를 본 뒤).
+ *       답은 응답 문서의 feedback.<part> 에 붙고 보유기간을 함께 따른다. 같은 part 를 다시 보내면 바꿔 쓴다.
+ *       허용 항목·값은 controllers/researchSurveyController.js FEEDBACK_SPEC. 이름·연락처는 받지 않는다.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [respondent_id, part, answers]
+ *             properties:
+ *               respondent_id: { type: string }
+ *               part: { type: string, enum: [test, result] }
+ *               answers: { type: object }
+ *     responses:
+ *       201: { description: 저장됨 }
+ *       400: { description: 형식·값 오류 }
+ *       404: { description: 응답 없음 }
+ *       409: { description: 끝까지 마치지 않은 응답 }
+ */
+router.post('/research/feedback', researchSurveyLimiter, submitResearchFeedback);
 
 /**
  * @openapi
