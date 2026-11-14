@@ -1,6 +1,22 @@
 const mongoose = require('mongoose');
 const escapeRegex = require('../utils/escapeRegex');
 const jobSearch = require('../services/jobSearch');
+// '되는 길'을 라이트하우스가 직접 쓴 직업(2026-11-14) — 고용24 통합조사 묶음은 '되는 길'이 묶음 안의 한 직업 이름으로 쓰여 있어,
+//   다른 구성원 화면에는 남의 직업 글이 나온다(보험상품개발자에 "여행상품개발자가 되기 위해서는…"). 그런 25개 직업의 글을 config 에 두고 응답에서 바꿔 준다.
+//   DB(job_info.work24.way)는 그대로 둔다 — 월 적재(work24-load.js)가 덮어쓰기 때문. 응답의 work24.waySource 로 출처를 알린다.
+const WAY_OVERRIDES = require('../config/jobWayOverrides.json');
+function applyWayOverride(job) {
+  const o = WAY_OVERRIDES.items[job.jobCode];
+  if (!o) return job;
+  return {
+    ...job,
+    work24: {
+      ...(job.work24 ?? {}),
+      way: o.way,
+      waySource: { by: 'lighthouse', basis: o.basis, sources: o.sources ?? [], caution: o.caution ?? null, updatedAt: WAY_OVERRIDES.updatedAt, reviewed: !!WAY_OVERRIDES.reviewed },
+    },
+  };
+}
 
 // career_attributes code → name 맵 (첫 조회 후 캐싱)
 let _codeNameCache = null;
@@ -96,7 +112,7 @@ const getJobByCode = async (req, res, next) => {
 
     res.json({
       success: true,
-      data: { ...job, details: enrichDetails(job.details, codeNameMap) }
+      data: { ...applyWayOverride(job), details: enrichDetails(job.details, codeNameMap) }
     });
   } catch (error) {
     // MongoDB 타임아웃
