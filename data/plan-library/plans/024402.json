@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 현장 경험과 직접 기획해 본 결과물로 들어가는 분야다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "stage",
+   "name": "공연",
+   "desc": "콘서트·연극·뮤지컬"
+  },
+  {
+   "id": "film",
+   "name": "영화",
+   "desc": "영화 기획·제작"
+  },
+  {
+   "id": "music",
+   "name": "음악(A&R)",
+   "desc": "음반 기획"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -79,6 +95,102 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-film",
+   "name": "영화 기획·투자·배급 구조 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "영화가 기획되고 투자·배급되는 과정을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "기획 개발과 시나리오",
+      "투자·제작·배급 구조",
+      "개봉작 사례 분석"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-short",
+   "name": "단편 영화 제작 참여",
+   "type": "activity",
+   "subtype": "club",
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 240,
+   "goal": "단편 영화의 제작부로 참여해 예산과 일정을 맡는다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "참여",
+     "items": [
+      "제작 일정표",
+      "예산·장소 섭외",
+      "촬영 진행"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-anr",
+   "name": "음반 기획과 A&R 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "아티스트 발굴부터 음반 제작·유통까지의 흐름을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "A&R이 하는 일",
+      "음원 제작·유통 구조",
+      "저작권과 정산"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-report",
+   "name": "아티스트·음원 분석 리포트",
+   "type": "output",
+   "subtype": "research",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "아티스트 하나를 정해 콘셉트와 음원 성과를 분석한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "작성",
+     "items": [
+      "콘셉트·팬층 분석",
+      "음원·공연 성과",
+      "다음 음반 기획안"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -90,11 +202,6 @@
   {
    "ref": "cp.ent-industry",
    "step": 2,
-   "major": true
-  },
-  {
-   "ref": "p.pf-plan",
-   "step": 3,
    "major": true
   },
   {
@@ -113,11 +220,6 @@
    "step": 6,
    "major": true,
    "note": "공연장 안내·현장 스태프"
-  },
-  {
-   "ref": "p.pf-produce",
-   "step": 7,
-   "major": true
   },
   {
    "ref": "cp.channel",
@@ -143,5 +245,42 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "stage": [
+   {
+    "ref": "p.pf-plan",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "p.pf-produce",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "film": [
+   {
+    "ref": "p.t-film",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "p.t-short",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "music": [
+   {
+    "ref": "p.t-anr",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "p.t-report",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
 }

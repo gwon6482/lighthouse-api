@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "해양경찰 공채 시험으로 뽑는다. 필기 뒤 체력·적성·면접을 거친다.",
  "gate": "해양경찰 공채 시험 합격",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "open",
+   "name": "순경 공채",
+   "desc": "일반 공개채용"
+  },
+  {
+   "id": "special",
+   "name": "경력경쟁채용",
+   "desc": "함정·해기사·구조 등"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -60,11 +71,6 @@
    "major": true
   },
   {
-   "ref": "p.major",
-   "step": 3,
-   "major": true
-  },
-  {
    "ref": "cp.fitness-test",
    "step": 5,
    "major": true
@@ -94,7 +100,28 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "open": [
+   {
+    "ref": "p.major",
+    "step": 3,
+    "major": true
+   }
+  ],
+  "special": [
+   {
+    "ref": "p.major",
+    "step": 3,
+    "major": true,
+    "note": "분야별 과목이 다르다 — 공고 확인"
+   },
+   {
+    "ref": "cp.civil-special",
+    "step": 1.5,
+    "major": true
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "secondary",

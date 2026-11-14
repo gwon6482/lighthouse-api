@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "법정 자격은 없다. 통번역대학원이 사실상 관문이고, 졸업 뒤 에이전시와 인맥으로 일을 얻는다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "conf",
+   "name": "국제회의",
+   "desc": "동시·순차 통역"
+  },
+  {
+   "id": "biz",
+   "name": "비즈니스",
+   "desc": "기업 수행·사내 통역"
+  },
+  {
+   "id": "community",
+   "name": "의료·사법·관광",
+   "desc": "현장 통역"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -104,6 +120,31 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-comm",
+   "name": "의료·사법 통역 교육 과정",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "분야 용어와 통역 윤리를 배우는 교육 과정을 마친다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "과정",
+     "items": [
+      "분야 용어",
+      "통역 윤리와 절차",
+      "모의 통역"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "교육·인증 과정은 운영 기관마다 다르다"
   }
  ],
  "common": [
@@ -125,11 +166,6 @@
    "major": true
   },
   {
-   "ref": "p.it-grad",
-   "step": 4,
-   "major": true
-  },
-  {
    "ref": "cp.term-glossary",
    "step": 5,
    "major": true
@@ -146,5 +182,45 @@
    "note": "이력서와 통역 실적 목록"
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "conf": [
+   {
+    "ref": "p.it-grad",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "biz": [
+   {
+    "ref": "p.it-grad",
+    "step": 4,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.industry-report",
+    "step": 4.5,
+    "major": true
+   },
+   {
+    "ref": "cp.trade-basics",
+    "step": 4.6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "community": [
+   {
+    "ref": "p.it-grad",
+    "step": 4,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.t-comm",
+    "step": 4.5,
+    "major": true
+   }
+  ]
+ }
 }

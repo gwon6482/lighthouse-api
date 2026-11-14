@@ -8,22 +8,43 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "자격이나 채용 절차가 없는 창업형 진로다. 작목을 정하고 교육과 실습을 거쳐 지원 사업으로 기반을 마련한다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "facility",
+   "name": "시설채소(스마트팜)",
+   "desc": "온실 채소·특용작물"
+  },
+  {
+   "id": "fruit",
+   "name": "과수",
+   "desc": "사과·배·포도 등"
+  },
+  {
+   "id": "grain",
+   "name": "식량작물",
+   "desc": "벼·밭작물"
+  },
+  {
+   "id": "flower",
+   "name": "육묘·화훼",
+   "desc": "모종·꽃"
+  }
+ ],
  "covers": [
   {
    "jobCode": "901301",
    "title": "과수작물재배원",
-   "track": null
+   "track": "fruit"
   },
   {
    "jobCode": "901101",
    "title": "곡식작물재배원",
-   "track": null
+   "track": "grain"
   },
   {
    "jobCode": "901401",
    "title": "육묘 및 화훼작물재배자",
-   "track": null
+   "track": "flower"
   }
  ],
  "projects": [
@@ -51,6 +72,78 @@
    ],
    "basis": "practice",
    "caution": "공공 장기 교육과정이 있다. 모집 시기 확인"
+  },
+  {
+   "id": "p.t-fruit",
+   "name": "과수 전정과 수확 후 관리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "나무 모양을 잡고 열매를 솎아 저장·출하한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "익히기",
+     "items": [
+      "수형과 전정",
+      "적화·적과",
+      "병해충과 저장·선별"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-grain",
+   "name": "농기계 운용과 수확 후 관리",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "경운부터 수확·건조·저장까지의 기계 작업을 안다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "익히기",
+     "items": [
+      "경운·이앙·수확 작업",
+      "건조와 저장",
+      "농지 임차와 규모 계획"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-flower",
+   "name": "육묘·화훼 재배와 출하",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "모종과 꽃을 길러 규격에 맞춰 출하한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "익히기",
+     "items": [
+      "파종·삽목과 육묘 환경",
+      "개화 조절",
+      "선별·포장과 경매 출하"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -70,19 +163,6 @@
    "major": true
   },
   {
-   "ref": "p.fa-smart",
-   "step": 4,
-   "major": true,
-   "optional": true
-  },
-  {
-   "ref": "cp.craftsman-cert",
-   "step": 5,
-   "major": true,
-   "note": "유기농업기능사·종자기능사",
-   "optional": true
-  },
-  {
    "ref": "cp.driver-license",
    "step": 6,
    "major": true
@@ -100,5 +180,68 @@
    "optional": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "facility": [
+   {
+    "ref": "p.fa-smart",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 5,
+    "major": true,
+    "note": "유기농업기능사·종자기능사",
+    "optional": true
+   }
+  ],
+  "fruit": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 5,
+    "major": true,
+    "note": "유기농업기능사",
+    "optional": true
+   },
+   {
+    "ref": "p.t-fruit",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "grain": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 5,
+    "major": true,
+    "note": "유기농업기능사·농기계운전기능사",
+    "optional": true
+   },
+   {
+    "ref": "p.t-grain",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "cp.equipment-license",
+    "step": 4.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "flower": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 5,
+    "major": true,
+    "note": "화훼장식기능사·종자기능사",
+    "optional": true
+   },
+   {
+    "ref": "p.t-flower",
+    "step": 4,
+    "major": true
+   }
+  ]
+ }
 }

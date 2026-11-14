@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "자격이나 공채가 없다. 촬영팀 막내로 현장에서 배우고, 직접 찍은 작품으로 일을 얻는다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "film",
+   "name": "영화·드라마",
+   "desc": "촬영팀"
+  },
+  {
+   "id": "broadcast",
+   "name": "방송",
+   "desc": "스튜디오·ENG"
+  },
+  {
+   "id": "commercial",
+   "name": "광고·유튜브",
+   "desc": "브랜드 영상"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -101,6 +117,54 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-eng",
+   "name": "방송 카메라 운용",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "스튜디오 카메라와 ENG 카메라를 다룬다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "스튜디오 카메라 워크",
+      "ENG 촬영과 현장 음향",
+      "생방송 큐 따르기"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-brand",
+   "name": "제품·브랜드 영상 쇼릴",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "제품과 브랜드를 찍은 짧은 영상들을 모은다.",
+   "phases": [
+    {
+     "weeks": 5,
+     "title": "제작",
+     "items": [
+      "제품 촬영",
+      "인터뷰·현장 영상",
+      "쇼릴 편집"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -135,16 +199,51 @@
    "major": true
   },
   {
-   "ref": "p.dp-assist",
-   "step": 7,
-   "major": true
-  },
-  {
    "ref": "cp.portfolio",
    "step": 8,
    "major": true,
    "note": "쇼릴"
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "film": [
+   {
+    "ref": "p.dp-assist",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "broadcast": [
+   {
+    "ref": "p.dp-assist",
+    "step": 7,
+    "major": true,
+    "note": "방송사·제작사 촬영 보조"
+   },
+   {
+    "ref": "p.t-eng",
+    "step": 5.5,
+    "major": true
+   }
+  ],
+  "commercial": [
+   {
+    "ref": "p.dp-assist",
+    "step": 7,
+    "major": true,
+    "note": "프로덕션 촬영 보조"
+   },
+   {
+    "ref": "p.t-brand",
+    "step": 6.5,
+    "major": true
+   },
+   {
+    "ref": "cp.after-effects",
+    "step": 5.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

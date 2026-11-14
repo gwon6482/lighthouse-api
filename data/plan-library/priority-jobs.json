@@ -327,7 +327,23 @@
    "group": "019",
    "groupName": "무역·구매·생산·품질 사무",
    "work24Postings": 1678,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "center",
+     "name": "물류센터 운영",
+     "desc": "입출고·재고 관리"
+    },
+    {
+     "id": "intl",
+     "name": "국제물류",
+     "desc": "수출입 운송·통관 연계"
+    },
+    {
+     "id": "scm",
+     "name": "SCM 기획",
+     "desc": "수요·재고 계획"
+    }
+   ],
    "covers": []
   },
   {
@@ -364,12 +380,28 @@
    "group": "01A",
    "groupName": "안내·접수·고객상담 사무",
    "work24Postings": 364,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "inbound",
+     "name": "인바운드 상담",
+     "desc": "문의·민원 응대"
+    },
+    {
+     "id": "outbound",
+     "name": "아웃바운드",
+     "desc": "안내·판매 전화"
+    },
+    {
+     "id": "chat",
+     "name": "채팅·VOC",
+     "desc": "채팅 상담·고객 의견 분석"
+    }
+   ],
    "covers": [
     {
      "jobCode": "613001",
      "title": "텔레마케터",
-     "track": null
+     "track": "outbound"
     }
    ]
   },
@@ -581,7 +613,23 @@
    "group": "024",
    "groupName": "소프트웨어 개발",
    "work24Postings": 16,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "manual",
+     "name": "기능 테스트",
+     "desc": "테스트 설계·수동 검증"
+    },
+    {
+     "id": "auto",
+     "name": "테스트 자동화",
+     "desc": "UI·API 자동화"
+    },
+    {
+     "id": "game",
+     "name": "게임 QA",
+     "desc": "게임 테스트"
+    }
+   ],
    "covers": []
   },
   {
@@ -707,7 +755,23 @@
    "group": "021",
    "groupName": "인문·사회·자연·생명과학 연구",
    "work24Postings": 13,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "rnd",
+     "name": "연구개발(석·박사)",
+     "desc": "연구소·기업 R&D"
+    },
+    {
+     "id": "tech",
+     "name": "연구 지원·분석",
+     "desc": "학사 연구원·품질 분석"
+    },
+    {
+     "id": "clinical",
+     "name": "임상시험",
+     "desc": "임상 운영·모니터링"
+    }
+   ],
    "covers": []
   },
   {
@@ -1178,7 +1242,12 @@
     {
      "id": "private",
      "name": "사립학교",
-     "desc": "사립 채용·기간제"
+     "desc": "사립 채용"
+    },
+    {
+     "id": "temp",
+     "name": "기간제 교사",
+     "desc": "계약제로 경력 쌓기"
     }
    ],
    "covers": []
@@ -1321,7 +1390,23 @@
    "group": "036",
    "groupName": "법률 전문가·사무",
    "work24Postings": 53,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "litigation",
+     "name": "송무",
+     "desc": "법률사무소 소송 지원"
+    },
+    {
+     "id": "corp",
+     "name": "기업 법무",
+     "desc": "계약·법인 서류"
+    },
+    {
+     "id": "special",
+     "name": "등기·특허 사무",
+     "desc": "법무사·특허 사무소"
+    }
+   ],
    "covers": []
   },
   {
@@ -1379,12 +1464,28 @@
    "group": "037",
    "groupName": "사회복지·상담",
    "work24Postings": 98,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "public",
+     "name": "공공",
+     "desc": "고용센터·지자체 일자리센터"
+    },
+    {
+     "id": "private",
+     "name": "민간 위탁 기관",
+     "desc": "취업 지원 프로그램"
+    },
+    {
+     "id": "corp",
+     "name": "대학·기업·헤드헌팅",
+     "desc": "취업 지원실·채용 대행"
+    }
+   ],
    "covers": [
     {
      "jobCode": "029904",
      "title": "취업알선원",
-     "track": null
+     "track": "corp"
     }
    ]
   },
@@ -1446,7 +1547,18 @@
    "group": "038",
    "groupName": "보육·생활지도·종교",
    "work24Postings": 1066,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "major",
+     "name": "관련 학과",
+     "desc": "보육·아동·유아교육 전공"
+    },
+    {
+     "id": "credit",
+     "name": "학점은행제",
+     "desc": "비전공자"
+    }
+   ],
    "covers": []
   },
   {
@@ -1498,6 +1610,11 @@
      "id": "special",
      "name": "경력경쟁채용",
      "desc": "구급·구조·화학 등 특채"
+    },
+    {
+     "id": "cadet",
+     "name": "소방간부후보생",
+     "desc": "간부로 시작"
     }
    ],
    "covers": []
@@ -1512,7 +1629,28 @@
    "group": "039",
    "groupName": "경찰·소방·교도·군인",
    "work24Postings": 0,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "army",
+     "name": "육군",
+     "desc": "육군 부사관"
+    },
+    {
+     "id": "navy",
+     "name": "해군",
+     "desc": "해군 부사관"
+    },
+    {
+     "id": "air",
+     "name": "공군",
+     "desc": "공군 부사관"
+    },
+    {
+     "id": "marine",
+     "name": "해병대",
+     "desc": "해병대 부사관"
+    }
+   ],
    "covers": []
   },
   {
@@ -1937,12 +2075,23 @@
    "group": "055",
    "groupName": "제품·패션·실내·시각 디자인",
    "work24Postings": 23,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "apparel",
+     "name": "의류",
+     "desc": "여성복·남성복·캐주얼"
+    },
+    {
+     "id": "acc",
+     "name": "가방·신발·잡화",
+     "desc": "패션 소품"
+    }
+   ],
    "covers": [
     {
      "jobCode": "415202",
      "title": "패션소품디자이너",
-     "track": null
+     "track": "acc"
     }
    ]
   },
@@ -1984,12 +2133,17 @@
     {
      "id": "broadcast",
      "name": "방송국 PD",
-     "desc": "공채·시사교양·예능·드라마"
+     "desc": "공채"
     },
     {
      "id": "digital",
      "name": "디지털 콘텐츠 PD",
-     "desc": "제작사·MCN·브랜드 채널"
+     "desc": "유튜브·OTT"
+    },
+    {
+     "id": "prod",
+     "name": "제작사·드라마",
+     "desc": "조연출부터"
     }
    ],
    "covers": []
@@ -2004,7 +2158,23 @@
    "group": "057",
    "groupName": "연극·영화·방송",
    "work24Postings": 17,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "video",
+     "name": "영상 채널",
+     "desc": "기획·촬영·편집 영상"
+    },
+    {
+     "id": "live",
+     "name": "라이브 방송",
+     "desc": "스트리밍"
+    },
+    {
+     "id": "short",
+     "name": "숏폼·SNS",
+     "desc": "짧은 영상·인플루언서"
+    }
+   ],
    "covers": []
   },
   {
@@ -2115,7 +2285,23 @@
    "group": "054",
    "groupName": "창작·공연",
    "work24Postings": 2,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "art",
+     "name": "그림 작가",
+     "desc": "작화·연출"
+    },
+    {
+     "id": "story",
+     "name": "글 작가",
+     "desc": "스토리·콘티"
+    },
+    {
+     "id": "assist",
+     "name": "스튜디오 어시스턴트",
+     "desc": "배경·채색·보조 작화"
+    }
+   ],
    "covers": []
   },
   {
@@ -2128,7 +2314,23 @@
    "group": "058",
    "groupName": "공연·음반 기획",
    "work24Postings": 12,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "stage",
+     "name": "공연",
+     "desc": "콘서트·연극·뮤지컬"
+    },
+    {
+     "id": "film",
+     "name": "영화",
+     "desc": "영화 기획·제작"
+    },
+    {
+     "id": "music",
+     "name": "음악(A&R)",
+     "desc": "음반 기획"
+    }
+   ],
    "covers": []
   },
   {
@@ -2259,12 +2461,22 @@
     {
      "id": "front",
      "name": "프런트",
-     "desc": "객실 예약·체크인"
+     "desc": "체크인·예약"
     },
     {
      "id": "fnb",
      "name": "식음(F&B)",
      "desc": "레스토랑·연회"
+    },
+    {
+     "id": "rooms",
+     "name": "객실 관리",
+     "desc": "하우스키핑"
+    },
+    {
+     "id": "sales",
+     "name": "세일즈·마케팅",
+     "desc": "판촉·예약 영업"
     }
    ],
    "covers": []
@@ -2334,7 +2546,23 @@
    "group": "064",
    "groupName": "주방장·조리사",
    "work24Postings": 142,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "cafe",
+     "name": "매장 바리스타",
+     "desc": "카페 근무"
+    },
+    {
+     "id": "roast",
+     "name": "로스터·원두",
+     "desc": "로스팅·품질"
+    },
+    {
+     "id": "owner",
+     "name": "카페 창업",
+     "desc": "개인 카페 운영"
+    }
+   ],
    "covers": []
   },
   {
@@ -2437,7 +2665,23 @@
    "group": "076",
    "groupName": "온라인판매·통신서비스",
    "work24Postings": 138,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "seller",
+     "name": "내 스토어 창업",
+     "desc": "오픈마켓 셀러"
+    },
+    {
+     "id": "brand",
+     "name": "브랜드 운영 담당",
+     "desc": "자사몰·입점몰 운영"
+    },
+    {
+     "id": "live",
+     "name": "라이브커머스",
+     "desc": "방송 판매"
+    }
+   ],
    "covers": []
   },
   {
@@ -2485,7 +2729,18 @@
    "group": "079",
    "groupName": "항공기·선박·철도 조종·관제",
    "work24Postings": 0,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "urban",
+     "name": "도시철도",
+     "desc": "지하철·전동차"
+    },
+    {
+     "id": "rail",
+     "name": "일반·고속 철도",
+     "desc": "기관차·고속 열차"
+    }
+   ],
    "covers": []
   },
   {
@@ -2524,7 +2779,23 @@
    "group": "084",
    "groupName": "건설·채굴 기계 운전",
    "work24Postings": 358,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "excavator",
+     "name": "굴착기",
+     "desc": "굴착·상차"
+    },
+    {
+     "id": "earth",
+     "name": "로더·불도저·롤러",
+     "desc": "토공·다짐"
+    },
+    {
+     "id": "drill",
+     "name": "천공기 등 특수 장비",
+     "desc": "기초·천공"
+    }
+   ],
    "covers": []
   },
   {
@@ -2582,12 +2853,23 @@
    "group": "092",
    "groupName": "운송장비 정비",
    "work24Postings": 2,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "airline",
+     "name": "항공사·정비 업체",
+     "desc": "운송용 항공기 정비"
+    },
+    {
+     "id": "heli",
+     "name": "헬리콥터",
+     "desc": "회전익 항공기 정비"
+    }
+   ],
    "covers": [
     {
      "jobCode": "812102",
      "title": "헬리콥터정비원",
-     "track": null
+     "track": "heli"
     }
    ]
   },
@@ -2630,7 +2912,18 @@
    "group": "093",
    "groupName": "금형·공작기계 조작",
    "work24Postings": 2584,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "lathe",
+     "name": "CNC 선반",
+     "desc": "선삭 가공"
+    },
+    {
+     "id": "mill",
+     "name": "머시닝센터(MCT)",
+     "desc": "밀링 가공"
+    }
+   ],
    "covers": []
   },
   {
@@ -2662,7 +2955,18 @@
    "group": "091",
    "groupName": "기계장비 설치·정비",
    "work24Postings": 683,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "mech",
+     "name": "기계 보전",
+     "desc": "기계·유공압 설비"
+    },
+    {
+     "id": "elec",
+     "name": "전기·자동화 보전",
+     "desc": "전기·제어 설비"
+    }
+   ],
    "covers": []
   },
   {
@@ -2715,17 +3019,33 @@
    "group": "104",
    "groupName": "전기·전자 생산기계 조작",
    "work24Postings": 153,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "operator",
+     "name": "공정 오퍼레이터",
+     "desc": "설비 운전·검사"
+    },
+    {
+     "id": "maint",
+     "name": "설비 유지보수",
+     "desc": "장비 점검·정비"
+    },
+    {
+     "id": "assembly",
+     "name": "전자 부품 조립·검사",
+     "desc": "조립·납땜·외관 검사"
+    }
+   ],
    "covers": [
     {
      "jobCode": "835101",
      "title": "전기부품·제품생산기계조작원",
-     "track": null
+     "track": "operator"
     },
     {
      "jobCode": "836001",
      "title": "전기·전자부품·제품조립원",
-     "track": null
+     "track": "assembly"
     }
    ]
   },
@@ -2739,22 +3059,43 @@
    "group": "131",
    "groupName": "작물재배",
    "work24Postings": 39,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "facility",
+     "name": "시설채소(스마트팜)",
+     "desc": "온실 채소·특용작물"
+    },
+    {
+     "id": "fruit",
+     "name": "과수",
+     "desc": "사과·배·포도 등"
+    },
+    {
+     "id": "grain",
+     "name": "식량작물",
+     "desc": "벼·밭작물"
+    },
+    {
+     "id": "flower",
+     "name": "육묘·화훼",
+     "desc": "모종·꽃"
+    }
+   ],
    "covers": [
     {
      "jobCode": "901301",
      "title": "과수작물재배원",
-     "track": null
+     "track": "fruit"
     },
     {
      "jobCode": "901101",
      "title": "곡식작물재배원",
-     "track": null
+     "track": "grain"
     },
     {
      "jobCode": "901401",
      "title": "육묘 및 화훼작물재배자",
-     "track": null
+     "track": "flower"
     }
    ]
   },
@@ -2830,7 +3171,23 @@
    "group": "015",
    "groupName": "경영·회계·광고·상품기획",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "general",
+     "name": "일반행정사",
+     "desc": "인허가·민원 서류"
+    },
+    {
+     "id": "maritime",
+     "name": "해사행정사",
+     "desc": "해운·항만 서류"
+    },
+    {
+     "id": "trans",
+     "name": "외국어번역행정사",
+     "desc": "번역·번역 확인"
+    }
+   ],
    "covers": []
   },
   {
@@ -2890,7 +3247,23 @@
    "group": "042",
    "groupName": "약사·간호사·영양사 등",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "pet",
+     "name": "반려동물 임상",
+     "desc": "동물병원"
+    },
+    {
+     "id": "farm",
+     "name": "산업동물",
+     "desc": "소·돼지·가금 진료"
+    },
+    {
+     "id": "public",
+     "name": "검역·방역 공무원",
+     "desc": "수의직"
+    }
+   ],
    "covers": []
   },
   {
@@ -3095,7 +3468,18 @@
    "group": "039",
    "groupName": "경찰·소방·교도·군인",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "open",
+     "name": "순경 공채",
+     "desc": "일반 공개채용"
+    },
+    {
+     "id": "special",
+     "name": "경력경쟁채용",
+     "desc": "함정·해기사·구조 등"
+    }
+   ],
    "covers": []
   },
   {
@@ -3206,7 +3590,23 @@
    "group": "015",
    "groupName": "경영·회계·광고·상품기획",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "strategy",
+     "name": "전략",
+     "desc": "전략 컨설팅사"
+    },
+    {
+     "id": "digital",
+     "name": "IT·디지털",
+     "desc": "시스템·데이터 컨설팅"
+    },
+    {
+     "id": "hr",
+     "name": "인사·조직",
+     "desc": "조직·보상 컨설팅"
+    }
+   ],
    "covers": []
   },
   {
@@ -3221,7 +3621,23 @@
    "group": "015",
    "groupName": "경영·회계·광고·상품기획",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "quant",
+     "name": "정량 조사",
+     "desc": "설문·통계 분석"
+    },
+    {
+     "id": "qual",
+     "name": "정성 조사",
+     "desc": "인터뷰·좌담회"
+    },
+    {
+     "id": "ux",
+     "name": "UX 리서치",
+     "desc": "사용자 조사"
+    }
+   ],
    "covers": []
   },
   {
@@ -3236,7 +3652,23 @@
    "group": "015",
    "groupName": "경영·회계·광고·상품기획",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "corp",
+     "name": "기업 행사·프로모션",
+     "desc": "대행사"
+    },
+    {
+     "id": "mice",
+     "name": "전시·컨벤션",
+     "desc": "국제 회의·박람회"
+    },
+    {
+     "id": "festival",
+     "name": "축제·공연 행사",
+     "desc": "지역 축제"
+    }
+   ],
    "covers": []
   },
   {
@@ -3251,12 +3683,28 @@
    "group": "01D",
    "groupName": "금융·보험 사무·영업",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "life",
+     "name": "생명보험",
+     "desc": "종신·건강·연금"
+    },
+    {
+     "id": "nonlife",
+     "name": "손해보험",
+     "desc": "자동차·화재·실손"
+    },
+    {
+     "id": "ga",
+     "name": "GA·보험중개",
+     "desc": "여러 회사 상품 비교"
+    }
+   ],
    "covers": [
     {
      "jobCode": "033201",
      "title": "보험대리인 및 중개인",
-     "track": null
+     "track": "ga"
     }
    ]
   },
@@ -3272,7 +3720,23 @@
    "group": "073",
    "groupName": "자동차·제품·기타 영업",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "b2b",
+     "name": "기업 영업",
+     "desc": "법인 고객"
+    },
+    {
+     "id": "b2c",
+     "name": "소비재·유통 채널",
+     "desc": "대리점·매장 영업"
+    },
+    {
+     "id": "ad",
+     "name": "광고·매체 영업",
+     "desc": "광고 상품 판매"
+    }
+   ],
    "covers": []
   },
   {
@@ -3302,12 +3766,23 @@
    "group": "023",
    "groupName": "컴퓨터시스템",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "consult",
+     "name": "IT 컨설팅",
+     "desc": "시스템 구축 기획·분석"
+    },
+    {
+     "id": "audit",
+     "name": "정보시스템 감리",
+     "desc": "사업 감리"
+    }
+   ],
    "covers": [
     {
      "jobCode": "132004",
      "title": "정보통신컨설턴트 및 감리원",
-     "track": null
+     "track": "audit"
     }
    ]
   },
@@ -3323,17 +3798,28 @@
    "group": "022",
    "groupName": "컴퓨터하드웨어·통신공학",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "rf",
+     "name": "무선·장비 개발",
+     "desc": "통신 장비·단말"
+    },
+    {
+     "id": "net",
+     "name": "통신망 운영",
+     "desc": "망 구축·운영"
+    }
+   ],
    "covers": [
     {
      "jobCode": "131201",
      "title": "통신기기·장비기술자",
-     "track": null
+     "track": "rf"
     },
     {
      "jobCode": "131203",
      "title": "통신망운영기술자",
-     "track": null
+     "track": "net"
     }
    ]
   },
@@ -3353,12 +3839,22 @@
     {
      "id": "concept",
      "name": "원화·컨셉",
-     "desc": "캐릭터·배경 컨셉 아트"
+     "desc": "캐릭터·배경 원화"
     },
     {
      "id": "model",
      "name": "3D 모델링",
-     "desc": "캐릭터·배경 모델러"
+     "desc": "캐릭터·배경 모델"
+    },
+    {
+     "id": "anim",
+     "name": "애니메이션·이펙트",
+     "desc": "캐릭터 동작·VFX"
+    },
+    {
+     "id": "ui",
+     "name": "UI",
+     "desc": "게임 화면·아이콘"
     }
    ],
    "covers": []
@@ -3519,12 +4015,23 @@
    "group": "02B",
    "groupName": "화학·에너지·환경 공학",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "solar",
+     "name": "태양광",
+     "desc": "발전소 설계·시공·운영"
+    },
+    {
+     "id": "wind",
+     "name": "풍력",
+     "desc": "터빈·단지 개발"
+    }
+   ],
    "covers": [
     {
      "jobCode": "155103",
      "title": "풍력발전연구 및 개발자",
-     "track": null
+     "track": "wind"
     }
    ]
   },
@@ -3566,12 +4073,23 @@
    "group": "028",
    "groupName": "건설·채굴 공학",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "building",
+     "name": "건축 구조",
+     "desc": "건물 구조 설계"
+    },
+    {
+     "id": "civil",
+     "name": "토목 구조",
+     "desc": "교량·지하 구조물"
+    }
+   ],
    "covers": [
     {
      "jobCode": "140301",
      "title": "토목구조설계기술자",
-     "track": null
+     "track": "civil"
     }
    ]
   },
@@ -3602,7 +4120,18 @@
    "group": "028",
    "groupName": "건설·채굴 공학",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "design",
+     "name": "조경 설계",
+     "desc": "설계 사무소"
+    },
+    {
+     "id": "build",
+     "name": "조경 시공·관리",
+     "desc": "시공사·유지 관리"
+    }
+   ],
    "covers": []
   },
   {
@@ -3722,7 +4251,23 @@
    "group": "051",
    "groupName": "작가·통번역·출판",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "conf",
+     "name": "국제회의",
+     "desc": "동시·순차 통역"
+    },
+    {
+     "id": "biz",
+     "name": "비즈니스",
+     "desc": "기업 수행·사내 통역"
+    },
+    {
+     "id": "community",
+     "name": "의료·사법·관광",
+     "desc": "현장 통역"
+    }
+   ],
    "covers": []
   },
   {
@@ -3790,12 +4335,28 @@
    "group": "057",
    "groupName": "연극·영화·방송",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "anchor",
+     "name": "아나운서",
+     "desc": "방송사 공채"
+    },
+    {
+     "id": "reporter",
+     "name": "리포터·MC",
+     "desc": "프리랜서"
+    },
+    {
+     "id": "host",
+     "name": "쇼호스트·기상캐스터",
+     "desc": "홈쇼핑·날씨"
+    }
+   ],
    "covers": [
     {
      "jobCode": "416302",
      "title": "리포터",
-     "track": null
+     "track": "reporter"
     }
    ]
   },
@@ -3811,7 +4372,23 @@
    "group": "057",
    "groupName": "연극·영화·방송",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "film",
+     "name": "영화·드라마",
+     "desc": "촬영팀"
+    },
+    {
+     "id": "broadcast",
+     "name": "방송",
+     "desc": "스튜디오·ENG"
+    },
+    {
+     "id": "commercial",
+     "name": "광고·유튜브",
+     "desc": "브랜드 영상"
+    }
+   ],
    "covers": []
   },
   {
@@ -3890,7 +4467,23 @@
    "group": "054",
    "groupName": "창작·공연",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "idol",
+     "name": "아이돌",
+     "desc": "기획사 연습생"
+    },
+    {
+     "id": "solo",
+     "name": "싱어송라이터·인디",
+     "desc": "자작곡 발매"
+    },
+    {
+     "id": "session",
+     "name": "보컬 트레이너·세션",
+     "desc": "가이드·코러스·레슨"
+    }
+   ],
    "covers": []
   },
   {
@@ -4101,12 +4694,28 @@
    "group": "063",
    "groupName": "여행·승무·숙박·오락 서비스",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "plan",
+     "name": "상품 기획",
+     "desc": "여행 상품 개발"
+    },
+    {
+     "id": "op",
+     "name": "예약·수배",
+     "desc": "오퍼레이터"
+    },
+    {
+     "id": "tc",
+     "name": "인솔",
+     "desc": "국외여행 인솔자"
+    }
+   ],
    "covers": [
     {
      "jobCode": "521201",
      "title": "여행사무원",
-     "track": null
+     "track": "op"
     }
    ]
   },
@@ -4401,7 +5010,23 @@
    "group": "094",
    "groupName": "설비·자동화 조작",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "elec",
+     "name": "전기",
+     "desc": "수변전·전기실"
+    },
+    {
+     "id": "mech",
+     "name": "기계·공조",
+     "desc": "보일러·냉동기·공조"
+    },
+    {
+     "id": "fire",
+     "name": "소방",
+     "desc": "소방 설비 점검"
+    }
+   ],
    "covers": []
   },
   {
@@ -4490,7 +5115,23 @@
    "group": "015",
    "groupName": "경영·회계·광고·상품기획",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "general",
+     "name": "일반행정",
+     "desc": "행정직"
+    },
+    {
+     "id": "finance",
+     "name": "재경",
+     "desc": "재경직"
+    },
+    {
+     "id": "tech",
+     "name": "기술직",
+     "desc": "전산·토목·화공 등"
+    }
+   ],
    "covers": []
   },
   {
@@ -4932,12 +5573,33 @@
    "group": "031",
    "groupName": "교수·학교·유치원 교사",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "sci",
+     "name": "이공계",
+     "desc": "연구 실적 중심"
+    },
+    {
+     "id": "hum",
+     "name": "인문·사회",
+     "desc": "논문·저서"
+    },
+    {
+     "id": "arts",
+     "name": "예체능",
+     "desc": "작품·실기"
+    },
+    {
+     "id": "lecturer",
+     "name": "강사",
+     "desc": "비전임 교원"
+    }
+   ],
    "covers": [
     {
      "jobCode": "211201",
      "title": "대학시간강사",
-     "track": null
+     "track": "lecturer"
     }
    ]
   },
@@ -5702,7 +6364,18 @@
    "group": "072",
    "groupName": "기술·의약품·해외 영업",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "auction",
+     "name": "경매사",
+     "desc": "도매시장 법인"
+    },
+    {
+     "id": "broker",
+     "name": "중도매인·상품 중개",
+     "desc": "도매 거래"
+    }
+   ],
    "covers": []
   },
   {
@@ -6031,7 +6704,18 @@
    "group": "093",
    "groupName": "금형·공작기계 조작",
    "work24Postings": null,
-   "tracks": [],
+   "tracks": [
+    {
+     "id": "injection",
+     "name": "사출 금형",
+     "desc": "플라스틱 제품 금형"
+    },
+    {
+     "id": "press",
+     "name": "프레스 금형",
+     "desc": "판재 성형 금형"
+    }
+   ],
    "covers": []
   },
   {

@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "행정사 시험(1차·2차)에 합격하고 실무교육을 받아야 한다.",
  "gate": "행정사 시험 합격 + 실무교육",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "general",
+   "name": "일반행정사",
+   "desc": "인허가·민원 서류"
+  },
+  {
+   "id": "maritime",
+   "name": "해사행정사",
+   "desc": "해운·항만 서류"
+  },
+  {
+   "id": "trans",
+   "name": "외국어번역행정사",
+   "desc": "번역·번역 확인"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -123,11 +139,6 @@
    "major": true
   },
   {
-   "ref": "p.second",
-   "step": 3,
-   "major": true
-  },
-  {
    "ref": "p.train",
    "step": 4,
    "major": true
@@ -143,7 +154,32 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "general": [
+   {
+    "ref": "p.second",
+    "step": 3,
+    "major": true,
+    "note": "민법(계약)·행정절차론·사무관리론·행정사실무법"
+   }
+  ],
+  "maritime": [
+   {
+    "ref": "p.second",
+    "step": 3,
+    "major": true,
+    "note": "공통 과목 + 해사 분야 과목 — 공고 확인"
+   }
+  ],
+  "trans": [
+   {
+    "ref": "p.second",
+    "step": 3,
+    "major": true,
+    "note": "공통 과목 + 해당 외국어(공인 성적으로 대체) — 공고 확인"
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "law",

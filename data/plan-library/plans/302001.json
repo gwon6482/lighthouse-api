@@ -8,9 +8,50 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "수의과대학을 졸업하고 수의사 국가시험에 합격해 면허를 받는다. 동물병원 외에 공무원·제약·연구로도 간다.",
  "gate": "수의과대학(6년) 졸업 + 수의사 국가시험 합격(면허)",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "pet",
+   "name": "반려동물 임상",
+   "desc": "동물병원"
+  },
+  {
+   "id": "farm",
+   "name": "산업동물",
+   "desc": "소·돼지·가금 진료"
+  },
+  {
+   "id": "public",
+   "name": "검역·방역 공무원",
+   "desc": "수의직"
+  }
+ ],
  "covers": [],
- "projects": [],
+ "projects": [
+  {
+   "id": "p.t-farmvet",
+   "name": "농장 동물 진료 실습",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "field_practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 480,
+   "goal": "산업동물 수의사를 따라 농장 진료를 경험한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "농장 방문 동행",
+      "예방 접종과 번식 관리",
+      "질병 진단 보조"
+     ]
+    }
+   ],
+   "basis": "practice"
+  }
+ ],
  "common": [
   {
    "ref": "cp.dept-admission",
@@ -44,13 +85,6 @@
    "note": "수의사 국가시험"
   },
   {
-   "ref": "cp.internship",
-   "step": 7,
-   "major": true,
-   "note": "동물병원 인턴(수련)",
-   "optional": true
-  },
-  {
    "ref": "cp.resume",
    "step": 90,
    "major": true
@@ -61,5 +95,41 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "pet": [
+   {
+    "ref": "cp.internship",
+    "step": 7,
+    "major": true,
+    "note": "동물병원 인턴(수련)",
+    "optional": true
+   }
+  ],
+  "farm": [
+   {
+    "ref": "p.t-farmvet",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.driver-license",
+    "step": 7.5,
+    "major": true
+   }
+  ],
+  "public": [
+   {
+    "ref": "cp.civil-special",
+    "step": 7,
+    "major": true,
+    "note": "수의직 공무원 경력경쟁채용 — 과목은 수의미생물학·수의보건학·수의전염병학(지방직 7급 예)"
+   },
+   {
+    "ref": "cp.korean-history",
+    "step": 7.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

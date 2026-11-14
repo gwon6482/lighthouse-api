@@ -8,12 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 업무를 이해해 시스템으로 옮기는 설계 능력을 본다. 개발 경험을 쌓은 뒤 가는 경우가 많다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "consult",
+   "name": "IT 컨설팅",
+   "desc": "시스템 구축 기획·분석"
+  },
+  {
+   "id": "audit",
+   "name": "정보시스템 감리",
+   "desc": "사업 감리"
+  }
+ ],
  "covers": [
   {
    "jobCode": "132004",
    "title": "정보통신컨설턴트 및 감리원",
-   "track": null
+   "track": "audit"
   }
  ],
  "projects": [
@@ -71,6 +82,31 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-audit",
+   "name": "정보시스템감리사",
+   "type": "cert",
+   "subtype": "national-license",
+   "category": "qualification",
+   "method": "book",
+   "level": "심화",
+   "daysPerWeek": 5,
+   "minutesPerSession": 90,
+   "goal": "감리 자격을 준비한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "준비",
+     "items": [
+      "감리 및 사업 관리",
+      "소프트웨어 공학·데이터베이스",
+      "시스템 구조·보안"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "감리원이 되려면 경력이 먼저 필요하다 — 응시·등록 요건은 시행 기관 공고 확인"
   }
  ],
  "common": [
@@ -137,5 +173,21 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "consult": [
+   {
+    "ref": "cp.industry-report",
+    "step": 7.5,
+    "major": true
+   }
+  ],
+  "audit": [
+   {
+    "ref": "p.t-audit",
+    "step": 10.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

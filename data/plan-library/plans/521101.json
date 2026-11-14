@@ -8,12 +8,28 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 여행지 지식과 외국어, 상품을 숫자로 짜는 능력을 본다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "plan",
+   "name": "상품 기획",
+   "desc": "여행 상품 개발"
+  },
+  {
+   "id": "op",
+   "name": "예약·수배",
+   "desc": "오퍼레이터"
+  },
+  {
+   "id": "tc",
+   "name": "인솔",
+   "desc": "국외여행 인솔자"
+  }
+ ],
  "covers": [
   {
    "jobCode": "521201",
    "title": "여행사무원",
-   "track": null
+   "track": "op"
   }
  ],
  "projects": [
@@ -150,22 +166,6 @@
    "optional": true
   },
   {
-   "ref": "p.tv-res",
-   "step": 5,
-   "major": true
-  },
-  {
-   "ref": "p.tv-product",
-   "step": 6,
-   "major": true
-  },
-  {
-   "ref": "p.tv-tc",
-   "step": 7,
-   "major": true,
-   "optional": true
-  },
-  {
    "ref": "cp.customer-service",
    "step": 8,
    "major": true
@@ -188,5 +188,39 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "plan": [
+   {
+    "ref": "p.tv-product",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.tv-res",
+    "step": 5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "op": [
+   {
+    "ref": "p.tv-product",
+    "step": 6,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.tv-res",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "tc": [
+   {
+    "ref": "p.tv-tc",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
 }

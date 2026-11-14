@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 현장 스태프 경험과 직접 치러 본 행사가 가장 강한 증빙이다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "corp",
+   "name": "기업 행사·프로모션",
+   "desc": "대행사"
+  },
+  {
+   "id": "mice",
+   "name": "전시·컨벤션",
+   "desc": "국제 회의·박람회"
+  },
+  {
+   "id": "festival",
+   "name": "축제·공연 행사",
+   "desc": "지역 축제"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -96,6 +112,54 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-pitch",
+   "name": "경쟁 제안서와 발표 준비",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "가상의 행사 입찰에 낼 제안서를 만들고 발표한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "제작",
+     "items": [
+      "과제 분석",
+      "콘셉트와 프로그램",
+      "예산과 발표"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-fest",
+   "name": "지역 축제 운영 참여",
+   "type": "activity",
+   "subtype": "outreach",
+   "category": "experience",
+   "method": "activity",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 300,
+   "goal": "축제 사무국이나 운영 요원으로 한 번의 축제를 끝까지 경험한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "참여",
+     "items": [
+      "모집 공고 지원",
+      "사전 준비",
+      "현장 운영과 결과 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -132,19 +196,6 @@
    "note": "행사·전시 현장 스태프"
   },
   {
-   "ref": "p.ev-cert",
-   "step": 7,
-   "major": true,
-   "optional": true
-  },
-  {
-   "ref": "cp.toeic",
-   "step": 8,
-   "major": true,
-   "note": "국제 행사",
-   "optional": true
-  },
-  {
    "ref": "cp.internship",
    "step": 9,
    "major": true,
@@ -161,5 +212,45 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "corp": [
+   {
+    "ref": "p.ev-cert",
+    "step": 7,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.t-pitch",
+    "step": 7.5,
+    "major": true
+   },
+   {
+    "ref": "cp.sales-basics",
+    "step": 7.6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "mice": [
+   {
+    "ref": "p.ev-cert",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.toeic",
+    "step": 8,
+    "major": true,
+    "note": "국제 행사"
+   }
+  ],
+  "festival": [
+   {
+    "ref": "p.t-fest",
+    "step": 7.5,
+    "major": true
+   }
+  ]
+ }
 }

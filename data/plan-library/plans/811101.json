@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 설비보전·기계정비 자격이 기본 증빙이다. 기계·전기·자동화를 두루 다루는 힘을 기른다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "mech",
+   "name": "기계 보전",
+   "desc": "기계·유공압 설비"
+  },
+  {
+   "id": "elec",
+   "name": "전기·자동화 보전",
+   "desc": "전기·제어 설비"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -104,17 +115,6 @@
    "major": true
   },
   {
-   "ref": "cp.plc",
-   "step": 6,
-   "major": true
-  },
-  {
-   "ref": "cp.craftsman-cert",
-   "step": 7,
-   "major": true,
-   "note": "설비보전기능사"
-  },
-  {
    "ref": "cp.engineer-cert",
    "step": 8,
    "major": true,
@@ -145,5 +145,39 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "mech": [
+   {
+    "ref": "cp.plc",
+    "step": 6,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 7,
+    "major": true,
+    "note": "설비보전기능사"
+   },
+   {
+    "ref": "cp.welding-practice",
+    "step": 5.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "elec": [
+   {
+    "ref": "cp.plc",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 7,
+    "major": true,
+    "note": "전기기능사·설비보전기능사"
+   }
+  ]
+ }
 }

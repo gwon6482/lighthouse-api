@@ -8,17 +8,33 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "학력 제한이 낮은 공개 채용으로 뽑는다. 공정 이해와 관련 자격, 교대 근무 적응이 중요하다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "operator",
+   "name": "공정 오퍼레이터",
+   "desc": "설비 운전·검사"
+  },
+  {
+   "id": "maint",
+   "name": "설비 유지보수",
+   "desc": "장비 점검·정비"
+  },
+  {
+   "id": "assembly",
+   "name": "전자 부품 조립·검사",
+   "desc": "조립·납땜·외관 검사"
+  }
+ ],
  "covers": [
   {
    "jobCode": "835101",
    "title": "전기부품·제품생산기계조작원",
-   "track": null
+   "track": "operator"
   },
   {
    "jobCode": "836001",
    "title": "전기·전자부품·제품조립원",
-   "track": null
+   "track": "assembly"
   }
  ],
  "projects": [
@@ -45,6 +61,30 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-solder",
+   "name": "납땜·조립과 외관 검사 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "기판에 부품을 납땜하고 기준에 맞춰 검사한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "실습",
+     "items": [
+      "납땜 기본",
+      "조립 순서와 정전기 관리",
+      "외관 검사 기준"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -59,22 +99,10 @@
    "major": true
   },
   {
-   "ref": "p.op-work",
-   "step": 3,
-   "major": true
-  },
-  {
    "ref": "cp.training-course",
    "step": 4,
    "major": true,
    "note": "반도체 장비·공정 직업훈련",
-   "optional": true
-  },
-  {
-   "ref": "cp.craftsman-cert",
-   "step": 5,
-   "major": true,
-   "note": "반도체설비보전기능사 등",
    "optional": true
   },
   {
@@ -94,6 +122,52 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "operator": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 5,
+    "major": true,
+    "note": "반도체설비보전기능사 등",
+    "optional": true
+   },
+   {
+    "ref": "p.op-work",
+    "step": 3,
+    "major": true
+   }
+  ],
+  "maint": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 5,
+    "major": true,
+    "note": "반도체설비보전기능사 등"
+   },
+   {
+    "ref": "p.op-work",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.drawing-reading",
+    "step": 4.5,
+    "major": true
+   },
+   {
+    "ref": "cp.plc",
+    "step": 4.6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "assembly": [
+   {
+    "ref": "p.t-solder",
+    "step": 3,
+    "major": true
+   }
+  ]
+ },
  "caution": "모집 대상(학력·전공)은 회사 공고마다 다르다"
 }

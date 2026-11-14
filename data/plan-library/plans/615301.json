@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 직접 팔아 본 경험과 숫자로 보여 주는 운영 기록이 가장 강한 증빙이다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "seller",
+   "name": "내 스토어 창업",
+   "desc": "오픈마켓 셀러"
+  },
+  {
+   "id": "brand",
+   "name": "브랜드 운영 담당",
+   "desc": "자사몰·입점몰 운영"
+  },
+  {
+   "id": "live",
+   "name": "라이브커머스",
+   "desc": "방송 판매"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -137,6 +153,30 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-livecom",
+   "name": "라이브 방송 기획과 진행",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "상품 하나로 라이브 방송을 기획하고 진행한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "제작",
+     "items": [
+      "큐시트 쓰기",
+      "방송 진행",
+      "판매 지표 돌아보기"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -182,11 +222,6 @@
    "major": true
   },
   {
-   "ref": "p.ec-own",
-   "step": 9,
-   "major": true
-  },
-  {
    "ref": "cp.resume",
    "step": 10,
    "major": true
@@ -197,5 +232,46 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "seller": [
+   {
+    "ref": "p.ec-own",
+    "step": 9,
+    "major": true
+   }
+  ],
+  "brand": [
+   {
+    "ref": "cp.internship",
+    "step": 9,
+    "major": true,
+    "note": "이커머스 운영 인턴"
+   },
+   {
+    "ref": "cp.dashboard",
+    "step": 9.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "live": [
+   {
+    "ref": "p.ec-own",
+    "step": 9,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.t-livecom",
+    "step": 9.5,
+    "major": true
+   },
+   {
+    "ref": "cp.shooting-basics",
+    "step": 9.6,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

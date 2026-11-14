@@ -8,12 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 디자인 감각과 패턴·봉제 이해를 컬렉션 포트폴리오로 보여 준다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "apparel",
+   "name": "의류",
+   "desc": "여성복·남성복·캐주얼"
+  },
+  {
+   "id": "acc",
+   "name": "가방·신발·잡화",
+   "desc": "패션 소품"
+  }
+ ],
  "covers": [
   {
    "jobCode": "415202",
    "title": "패션소품디자이너",
-   "track": null
+   "track": "acc"
   }
  ],
  "projects": [
@@ -86,6 +97,30 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-acc",
+   "name": "잡화 소재와 제작 공정 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "가죽·부자재의 성질과 가방·신발이 만들어지는 과정을 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "가죽·합성 소재와 부자재",
+      "패턴과 샘플 제작 과정",
+      "원가와 생산 공정"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -109,18 +144,6 @@
    "ref": "cp.adobe",
    "step": 4,
    "major": true
-  },
-  {
-   "ref": "cp.pattern-sewing",
-   "step": 5,
-   "major": true
-  },
-  {
-   "ref": "cp.craftsman-cert",
-   "step": 6,
-   "major": true,
-   "note": "여성복기능사",
-   "optional": true
   },
   {
    "ref": "p.fs-collection",
@@ -151,5 +174,27 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "apparel": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 6,
+    "major": true,
+    "note": "여성복기능사",
+    "optional": true
+   },
+   {
+    "ref": "cp.pattern-sewing",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "acc": [
+   {
+    "ref": "p.t-acc",
+    "step": 5,
+    "major": true
+   }
+  ]
+ }
 }

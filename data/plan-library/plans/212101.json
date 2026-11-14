@@ -17,7 +17,12 @@
   {
    "id": "private",
    "name": "사립학교",
-   "desc": "사립 채용·기간제"
+   "desc": "사립 채용"
+  },
+  {
+   "id": "temp",
+   "name": "기간제 교사",
+   "desc": "계약제로 경력 쌓기"
   }
  ],
  "covers": [],
@@ -175,6 +180,13 @@
     "step": 9,
     "major": true,
     "optional": true
+   }
+  ],
+  "temp": [
+   {
+    "ref": "cp.temp-teacher",
+    "step": 8,
+    "major": true
    }
   ]
  },

@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 테스트 설계 능력과 꼼꼼한 문서, 개발 이해를 결과물로 보여 준다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "manual",
+   "name": "기능 테스트",
+   "desc": "테스트 설계·수동 검증"
+  },
+  {
+   "id": "auto",
+   "name": "테스트 자동화",
+   "desc": "UI·API 자동화"
+  },
+  {
+   "id": "game",
+   "name": "게임 QA",
+   "desc": "게임 테스트"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -135,6 +151,62 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-autoproj",
+   "name": "UI·API 자동화 프로젝트",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "공개 서비스 하나의 핵심 흐름을 자동 테스트로 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "설계",
+     "items": [
+      "자동화할 흐름 고르기",
+      "도구 정하기"
+     ]
+    },
+    {
+     "weeks": 4,
+     "title": "구현",
+     "items": [
+      "UI 테스트 작성",
+      "API 테스트 작성",
+      "실행 결과 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-game",
+   "name": "게임 테스트와 버그 리포트 모음",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "게임 하나를 정해 테스트하고 버그 리포트를 모은다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "테스트",
+     "items": [
+      "장르별 점검 항목 만들기",
+      "플레이 테스트",
+      "재현 절차를 담은 버그 리포트"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -175,11 +247,6 @@
    "major": true
   },
   {
-   "ref": "p.qa-auto",
-   "step": 8,
-   "major": true
-  },
-  {
    "ref": "cp.team-project",
    "step": 9,
    "major": true,
@@ -201,5 +268,44 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "manual": [
+   {
+    "ref": "p.qa-auto",
+    "step": 8,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "auto": [
+   {
+    "ref": "p.qa-auto",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.cs-basics",
+    "step": 2.5,
+    "major": true
+   },
+   {
+    "ref": "p.t-autoproj",
+    "step": 8.5,
+    "major": true
+   }
+  ],
+  "game": [
+   {
+    "ref": "p.qa-auto",
+    "step": 8,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.t-game",
+    "step": 5.5,
+    "major": true
+   }
+  ]
+ }
 }

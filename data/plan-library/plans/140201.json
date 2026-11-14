@@ -8,12 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "건축·토목 구조 전공을 본다. 구조 해석 능력이 핵심이고 구조 설계 사무소는 석사를 우대한다. 구조기술사는 경력을 쌓은 뒤의 자격이다.",
  "gate": "법정 요건은 없으나 채용 공고가 관련 전공과 기사 자격을 요구·우대한다",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "building",
+   "name": "건축 구조",
+   "desc": "건물 구조 설계"
+  },
+  {
+   "id": "civil",
+   "name": "토목 구조",
+   "desc": "교량·지하 구조물"
+  }
+ ],
  "covers": [
   {
    "jobCode": "140301",
    "title": "토목구조설계기술자",
-   "track": null
+   "track": "civil"
   }
  ],
  "projects": [
@@ -87,19 +98,6 @@
    "major": true
   },
   {
-   "ref": "cp.eng-major",
-   "step": 2,
-   "major": false,
-   "skip": "전공 과목에서 배운다",
-   "note": "구조(구조역학·철근콘크리트·강구조)"
-  },
-  {
-   "ref": "cp.engineer-cert",
-   "step": 3,
-   "major": true,
-   "note": "건축기사·토목기사"
-  },
-  {
    "ref": "cp.cad",
    "step": 4,
    "major": true
@@ -151,5 +149,36 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "building": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "건축기사"
+   },
+   {
+    "ref": "cp.eng-major",
+    "step": 2,
+    "major": false,
+    "skip": "전공 과목에서 배운다",
+    "note": "건축 구조(구조역학·철근콘크리트·강구조)"
+   }
+  ],
+  "civil": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "토목기사"
+   },
+   {
+    "ref": "cp.eng-major",
+    "step": 2,
+    "major": false,
+    "skip": "전공 과목에서 배운다",
+    "note": "토목 구조(구조역학·교량·토질)"
+   }
+  ]
+ }
 }

@@ -8,12 +8,33 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "박사 학위와 연구 실적이 바탕이다. 강사와 박사후연구원을 거쳐 공개 채용으로 임용된다.",
  "gate": "박사 학위(분야에 따라 실기·현장 경력) + 연구 실적",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "sci",
+   "name": "이공계",
+   "desc": "연구 실적 중심"
+  },
+  {
+   "id": "hum",
+   "name": "인문·사회",
+   "desc": "논문·저서"
+  },
+  {
+   "id": "arts",
+   "name": "예체능",
+   "desc": "작품·실기"
+  },
+  {
+   "id": "lecturer",
+   "name": "강사",
+   "desc": "비전임 교원"
+  }
+ ],
  "covers": [
   {
    "jobCode": "211201",
    "title": "대학시간강사",
-   "track": null
+   "track": "lecturer"
   }
  ],
  "projects": [
@@ -165,6 +186,78 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-hum",
+   "name": "학술지 논문과 연구 과제",
+   "type": "output",
+   "subtype": "research",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "등재 학술지에 논문을 내고 연구 과제에 참여한다.",
+   "phases": [
+    {
+     "weeks": 50,
+     "title": "실적",
+     "items": [
+      "학술지 논문 투고",
+      "연구 과제 참여",
+      "학회 발표"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-arts",
+   "name": "작품·공연 실적 쌓기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "심화",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "개인전·독주회 같은 대표 실적을 쌓는다.",
+   "phases": [
+    {
+     "weeks": 50,
+     "title": "실적",
+     "items": [
+      "작품 발표·공연",
+      "수상·초청 실적",
+      "실기 지도 경력"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-lect",
+   "name": "강사 공개 채용 지원",
+   "type": "hiring",
+   "subtype": "interview",
+   "category": "skill",
+   "method": "practice",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 90,
+   "goal": "강사 공개 채용에 지원한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "지원",
+     "items": [
+      "학기별 공고 확인",
+      "강의 계획서",
+      "면접·시범 강의"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -200,16 +293,39 @@
    "major": true
   },
   {
-   "ref": "p.pf-postdoc",
-   "step": 7,
-   "major": true,
-   "optional": true
-  },
-  {
    "ref": "p.pf-apply",
    "step": 8,
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "sci": [
+   {
+    "ref": "p.pf-postdoc",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "hum": [
+   {
+    "ref": "p.t-hum",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "arts": [
+   {
+    "ref": "p.t-arts",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "lecturer": [
+   {
+    "ref": "p.t-lect",
+    "step": 7,
+    "major": true
+   }
+  ]
+ }
 }

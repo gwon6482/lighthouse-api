@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 컴퓨터응용 선반·밀링 기능사가 기본 증빙이다. 도면을 읽고 프로그램을 짜서 가공하는 실력을 쌓는다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "lathe",
+   "name": "CNC 선반",
+   "desc": "선삭 가공"
+  },
+  {
+   "id": "mill",
+   "name": "머시닝센터(MCT)",
+   "desc": "밀링 가공"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -104,12 +115,6 @@
    "major": true
   },
   {
-   "ref": "cp.craftsman-cert",
-   "step": 6,
-   "major": true,
-   "note": "컴퓨터응용선반·밀링기능사"
-  },
-  {
    "ref": "cp.cad-3d",
    "step": 7,
    "major": true,
@@ -139,5 +144,22 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "lathe": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 6,
+    "major": true,
+    "note": "컴퓨터응용선반기능사"
+   }
+  ],
+  "mill": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 6,
+    "major": true,
+    "note": "컴퓨터응용밀링기능사"
+   }
+  ]
+ }
 }

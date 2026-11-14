@@ -12,12 +12,22 @@
   {
    "id": "front",
    "name": "프런트",
-   "desc": "객실 예약·체크인"
+   "desc": "체크인·예약"
   },
   {
    "id": "fnb",
    "name": "식음(F&B)",
    "desc": "레스토랑·연회"
+  },
+  {
+   "id": "rooms",
+   "name": "객실 관리",
+   "desc": "하우스키핑"
+  },
+  {
+   "id": "sales",
+   "name": "세일즈·마케팅",
+   "desc": "판촉·예약 영업"
   }
  ],
  "covers": [],
@@ -107,6 +117,30 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-rooms",
+   "name": "객실 정비 기준과 하우스키핑 운영",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "객실 정비 순서와 점검 기준, 인력 배치를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "객실 정비 순서",
+      "점검 기준과 분실물 처리",
+      "인력·린넨 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -184,6 +218,26 @@
     "step": 7.5,
     "major": true,
     "note": "조주기능사",
+    "optional": true
+   }
+  ],
+  "rooms": [
+   {
+    "ref": "p.t-rooms",
+    "step": 7,
+    "major": true
+   }
+  ],
+  "sales": [
+   {
+    "ref": "cp.sales-basics",
+    "step": 7,
+    "major": true
+   },
+   {
+    "ref": "cp.excel-data",
+    "step": 7.5,
+    "major": true,
     "optional": true
    }
   ]

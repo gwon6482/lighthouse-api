@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "자격이나 정해진 채용이 없다. 실력을 쌓아 음원·영상과 공연으로 알리거나, 기획사 오디션을 거쳐 연습생이 된다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "idol",
+   "name": "아이돌",
+   "desc": "기획사 연습생"
+  },
+  {
+   "id": "solo",
+   "name": "싱어송라이터·인디",
+   "desc": "자작곡 발매"
+  },
+  {
+   "id": "session",
+   "name": "보컬 트레이너·세션",
+   "desc": "가이드·코러스·레슨"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -143,17 +159,84 @@
    ],
    "basis": "practice",
    "caution": "아이돌은 기획사 오디션 뒤 연습생 기간을 거친다"
+  },
+  {
+   "id": "p.t-dance",
+   "name": "춤 트레이닝",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 4,
+   "minutesPerSession": 120,
+   "goal": "안무를 빠르게 익혀 노래와 함께 소화한다.",
+   "phases": [
+    {
+     "weeks": 12,
+     "title": "훈련",
+     "items": [
+      "기본기",
+      "커버 안무",
+      "노래와 함께 연습"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-release",
+   "name": "자작곡 발매",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "자작곡을 녹음해 음원 유통사에 등록한다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "제작",
+     "items": [
+      "곡 완성과 녹음",
+      "믹싱·마스터링",
+      "유통사 등록"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-session",
+   "name": "가이드·코러스 녹음 경험",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 2,
+   "minutesPerSession": 180,
+   "goal": "녹음실에서 가이드 보컬이나 코러스를 맡는다.",
+   "phases": [
+    {
+     "weeks": 8,
+     "title": "경험",
+     "items": [
+      "데모 보내기",
+      "녹음 참여",
+      "실적 정리"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
   {
    "ref": "p.sg-vocal",
    "step": 1,
-   "major": true
-  },
-  {
-   "ref": "p.sg-theory",
-   "step": 2,
    "major": true
   },
   {
@@ -170,12 +253,62 @@
    "ref": "p.sg-live",
    "step": 5,
    "major": true
-  },
-  {
-   "ref": "p.sg-audition",
-   "step": 6,
-   "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "idol": [
+   {
+    "ref": "p.sg-theory",
+    "step": 2,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.sg-audition",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "p.t-dance",
+    "step": 1.5,
+    "major": true
+   }
+  ],
+  "solo": [
+   {
+    "ref": "p.sg-theory",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "p.sg-audition",
+    "step": 6,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.t-release",
+    "step": 3.5,
+    "major": true
+   }
+  ],
+  "session": [
+   {
+    "ref": "p.sg-theory",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "p.t-session",
+    "step": 5.5,
+    "major": true
+   },
+   {
+    "ref": "cp.lecture-demo",
+    "step": 5.6,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

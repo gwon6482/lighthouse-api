@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "자격이나 채용 절차가 없다. 그림·이야기 실력을 단편과 연재로 보여 주고 공모전·플랫폼 투고로 데뷔한다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "art",
+   "name": "그림 작가",
+   "desc": "작화·연출"
+  },
+  {
+   "id": "story",
+   "name": "글 작가",
+   "desc": "스토리·콘티"
+  },
+  {
+   "id": "assist",
+   "name": "스튜디오 어시스턴트",
+   "desc": "배경·채색·보조 작화"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -175,41 +191,33 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-assist",
+   "name": "배경·채색·펜터치 포트폴리오",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "어시스턴트 지원용으로 파트별 작업물을 모은다.",
+   "phases": [
+    {
+     "weeks": 5,
+     "title": "제작",
+     "items": [
+      "배경 작화",
+      "채색·명암",
+      "펜터치·후보정"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
-  {
-   "ref": "cp.drawing-basics",
-   "step": 1,
-   "major": false,
-   "skip": "만화·애니메이션 전공 실기에서 배운다"
-  },
-  {
-   "ref": "p.wt-tool",
-   "step": 2,
-   "major": true
-  },
-  {
-   "ref": "p.wt-story",
-   "step": 3,
-   "major": true
-  },
-  {
-   "ref": "p.wt-short",
-   "step": 4,
-   "major": true
-  },
-  {
-   "ref": "p.wt-assist",
-   "step": 5,
-   "major": true,
-   "optional": true
-  },
-  {
-   "ref": "p.wt-serial",
-   "step": 6,
-   "major": true
-  },
   {
    "ref": "cp.channel",
    "step": 7,
@@ -218,5 +226,87 @@
    "optional": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "art": [
+   {
+    "ref": "cp.drawing-basics",
+    "step": 1,
+    "major": false,
+    "skip": "만화·애니메이션 전공 실기에서 배운다"
+   },
+   {
+    "ref": "p.wt-tool",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "p.wt-story",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "p.wt-short",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "p.wt-assist",
+    "step": 5,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.wt-serial",
+    "step": 6,
+    "major": true
+   }
+  ],
+  "story": [
+   {
+    "ref": "p.wt-story",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "p.wt-short",
+    "step": 4,
+    "major": true,
+    "note": "콘티 단계까지 완성"
+   },
+   {
+    "ref": "p.wt-serial",
+    "step": 6,
+    "major": true,
+    "note": "스토리 공모전·그림 작가와 팀 구성"
+   },
+   {
+    "ref": "cp.writing",
+    "step": 1,
+    "major": true
+   }
+  ],
+  "assist": [
+   {
+    "ref": "cp.drawing-basics",
+    "step": 1,
+    "major": false,
+    "skip": "만화·애니메이션 전공 실기에서 배운다"
+   },
+   {
+    "ref": "p.wt-tool",
+    "step": 2,
+    "major": true
+   },
+   {
+    "ref": "p.wt-assist",
+    "step": 5,
+    "major": true
+   },
+   {
+    "ref": "p.t-assist",
+    "step": 3,
+    "major": true
+   }
+  ]
+ }
 }

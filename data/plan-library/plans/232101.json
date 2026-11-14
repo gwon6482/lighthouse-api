@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "보육교사 자격증이 있어야 어린이집에서 일할 수 있다. 관련 과목 이수와 보육실습으로 2급을 받는 길이 가장 일반적이다.",
  "gate": "보육교사 2급(법정 과목 이수 + 보육실습) 또는 3급(교육훈련시설 과정)",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "major",
+   "name": "관련 학과",
+   "desc": "보육·아동·유아교육 전공"
+  },
+  {
+   "id": "credit",
+   "name": "학점은행제",
+   "desc": "비전공자"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -134,12 +145,6 @@
  ],
  "common": [
   {
-   "ref": "p.cc-cert",
-   "step": 1,
-   "major": false,
-   "skip": "보육·유아교육 관련 학과 교육과정에 포함돼 있다"
-  },
-  {
    "ref": "cp.nuri-curriculum",
    "step": 2,
    "major": true
@@ -177,7 +182,33 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "major": [
+   {
+    "ref": "p.cc-cert",
+    "step": 1,
+    "major": false,
+    "skip": "보육·유아교육 관련 학과 교육과정에 포함돼 있다",
+    "note": "전공 교과로 이수"
+   },
+   {
+    "ref": "cp.dept-admission",
+    "step": 0.5,
+    "major": false,
+    "skip": "이미 관련 학과에 다니고 있다",
+    "note": "보육·아동·유아교육 관련 학과"
+   }
+  ],
+  "credit": [
+   {
+    "ref": "p.cc-cert",
+    "step": 1,
+    "major": false,
+    "skip": "보육·유아교육 관련 학과 교육과정에 포함돼 있다",
+    "note": "학점은행제로 이수 — 대면 교과목 9과목과 실습 기관 확보가 관건"
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "law",

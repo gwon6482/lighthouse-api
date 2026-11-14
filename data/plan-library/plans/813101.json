@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "금형기능사가 기본 증빙이다. 도면을 읽고 가공·조립해 금형을 완성하는 기술을 쌓는다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "injection",
+   "name": "사출 금형",
+   "desc": "플라스틱 제품 금형"
+  },
+  {
+   "id": "press",
+   "name": "프레스 금형",
+   "desc": "판재 성형 금형"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -85,11 +96,6 @@
    "major": true
   },
   {
-   "ref": "p.md-basics",
-   "step": 5,
-   "major": true
-  },
-  {
    "ref": "p.md-make",
    "step": 6,
    "major": true
@@ -98,13 +104,6 @@
    "ref": "cp.cad-3d",
    "step": 7,
    "major": true,
-   "optional": true
-  },
-  {
-   "ref": "cp.engineer-cert",
-   "step": 8,
-   "major": true,
-   "note": "금형 분야 산업기사",
    "optional": true
   },
   {
@@ -119,5 +118,36 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "injection": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 8,
+    "major": true,
+    "note": "사출금형 분야 산업기사",
+    "optional": true
+   },
+   {
+    "ref": "p.md-basics",
+    "step": 5,
+    "major": true,
+    "note": "사출 금형 구조와 수지 흐름"
+   }
+  ],
+  "press": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 8,
+    "major": true,
+    "note": "프레스금형 분야 산업기사",
+    "optional": true
+   },
+   {
+    "ref": "p.md-basics",
+    "step": 5,
+    "major": true,
+    "note": "프레스 금형 구조와 판재 성형"
+   }
+  ]
+ }
 }

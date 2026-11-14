@@ -8,12 +8,28 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 듣고 설명하는 힘과 빠른 문서 처리, 감정 관리가 핵심이다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "inbound",
+   "name": "인바운드 상담",
+   "desc": "문의·민원 응대"
+  },
+  {
+   "id": "outbound",
+   "name": "아웃바운드",
+   "desc": "안내·판매 전화"
+  },
+  {
+   "id": "chat",
+   "name": "채팅·VOC",
+   "desc": "채팅 상담·고객 의견 분석"
+  }
+ ],
  "covers": [
   {
    "jobCode": "613001",
    "title": "텔레마케터",
-   "track": null
+   "track": "outbound"
   }
  ],
  "projects": [
@@ -147,5 +163,34 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "inbound": [
+   {
+    "ref": "cp.voice-training",
+    "step": 3.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "outbound": [
+   {
+    "ref": "cp.sales-basics",
+    "step": 3.5,
+    "major": true
+   }
+  ],
+  "chat": [
+   {
+    "ref": "cp.excel-data",
+    "step": 3.5,
+    "major": true
+   },
+   {
+    "ref": "cp.writing",
+    "step": 3.6,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

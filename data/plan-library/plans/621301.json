@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "철도차량 운전면허가 필요하다. 교육훈련기관 과정을 마치고 면허 시험에 합격한 뒤 운영 기관 채용에 지원한다.",
  "gate": "철도차량 운전면허(신체·적성검사 + 교육훈련 이수 + 필기·기능 시험)",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "urban",
+   "name": "도시철도",
+   "desc": "지하철·전동차"
+  },
+  {
+   "id": "rail",
+   "name": "일반·고속 철도",
+   "desc": "기관차·고속 열차"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -111,11 +122,6 @@
    "major": true
   },
   {
-   "ref": "p.rw-training",
-   "step": 3,
-   "major": true
-  },
-  {
    "ref": "p.rw-license",
    "step": 4,
    "major": true
@@ -143,7 +149,24 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "urban": [
+   {
+    "ref": "p.rw-training",
+    "step": 3,
+    "major": true,
+    "note": "전기차량 운전면허 과정"
+   }
+  ],
+  "rail": [
+   {
+    "ref": "p.rw-training",
+    "step": 3,
+    "major": true,
+    "note": "디젤·고속 차량 등 면허 종류는 채용 공고 확인"
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "law",

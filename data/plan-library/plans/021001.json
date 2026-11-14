@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "5급 공개경쟁채용 시험으로 뽑는다. 1차 PSAT, 2차 논술형, 3차 면접을 거친다.",
  "gate": "5급 공개경쟁채용 시험 합격(PSAT → 논술형 → 면접)",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "general",
+   "name": "일반행정",
+   "desc": "행정직"
+  },
+  {
+   "id": "finance",
+   "name": "재경",
+   "desc": "재경직"
+  },
+  {
+   "id": "tech",
+   "name": "기술직",
+   "desc": "전산·토목·화공 등"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -77,17 +93,37 @@
    "note": "1차 시험"
   },
   {
-   "ref": "p.g5-second",
-   "step": 5,
-   "major": true
-  },
-  {
    "ref": "cp.civil-interview",
    "step": 6,
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "general": [
+   {
+    "ref": "p.g5-second",
+    "step": 5,
+    "major": true,
+    "note": "행정법·행정학·경제학·정치학"
+   }
+  ],
+  "finance": [
+   {
+    "ref": "p.g5-second",
+    "step": 5,
+    "major": true,
+    "note": "경제학·재정학·행정법·행정학"
+   }
+  ],
+  "tech": [
+   {
+    "ref": "p.g5-second",
+    "step": 5,
+    "major": true,
+    "note": "직렬별 전공 과목 — 공고의 과목표 확인"
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "law",

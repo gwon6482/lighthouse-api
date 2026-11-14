@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 사람을 만나 설득하는 경험과 숫자로 관리하는 습관을 본다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "b2b",
+   "name": "기업 영업",
+   "desc": "법인 고객"
+  },
+  {
+   "id": "b2c",
+   "name": "소비재·유통 채널",
+   "desc": "대리점·매장 영업"
+  },
+  {
+   "id": "ad",
+   "name": "광고·매체 영업",
+   "desc": "광고 상품 판매"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -38,6 +54,30 @@
       "전화·방문 연습",
       "활동 기록표",
       "거절 사유 분석"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-media",
+   "name": "매체 제안서 쓰기",
+   "type": "output",
+   "subtype": "project",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "광고주 하나를 정해 매체 제안서를 만든다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "작성",
+     "items": [
+      "광고주와 목표 분석",
+      "매체 구성과 예산",
+      "기대 효과 정리"
      ]
     }
    ],
@@ -104,5 +144,45 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "b2b": [
+   {
+    "ref": "cp.industry-report",
+    "step": 3.5,
+    "major": true
+   },
+   {
+    "ref": "cp.fs-reading",
+    "step": 3.6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "b2c": [
+   {
+    "ref": "cp.excel-data",
+    "step": 3.5,
+    "major": true
+   },
+   {
+    "ref": "cp.store-management",
+    "step": 3.6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "ad": [
+   {
+    "ref": "p.t-media",
+    "step": 3.5,
+    "major": true
+   },
+   {
+    "ref": "cp.ga4",
+    "step": 3.6,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

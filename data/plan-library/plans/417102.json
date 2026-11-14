@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "자격이나 채용 절차가 없다. 주제를 정해 꾸준히 올리고 지표를 보며 고쳐 가는 것이 전부다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "video",
+   "name": "영상 채널",
+   "desc": "기획·촬영·편집 영상"
+  },
+  {
+   "id": "live",
+   "name": "라이브 방송",
+   "desc": "스트리밍"
+  },
+  {
+   "id": "short",
+   "name": "숏폼·SNS",
+   "desc": "짧은 영상·인플루언서"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -99,6 +115,54 @@
    ],
    "basis": "practice",
    "caution": "플랫폼 정책은 자주 바뀐다"
+  },
+  {
+   "id": "p.t-live",
+   "name": "방송 송출 세팅과 진행 연습",
+   "type": "skill",
+   "subtype": "content",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "송출 프로그램을 설정하고 시청자와 대화하며 방송한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "연습",
+     "items": [
+      "송출 프로그램과 장비 세팅",
+      "진행 구성",
+      "주 3회 방송"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-short",
+   "name": "숏폼 기획과 꾸준히 올리기",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "content",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "한 주제로 짧은 영상을 꾸준히 올리고 반응을 본다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "운영",
+     "items": [
+      "포맷 정하기",
+      "주 5개 업로드",
+      "지표 보고 고치기"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -110,11 +174,6 @@
   {
    "ref": "cp.shooting-basics",
    "step": 2,
-   "major": true
-  },
-  {
-   "ref": "cp.video-edit",
-   "step": 3,
    "major": true
   },
   {
@@ -140,5 +199,44 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "video": [
+   {
+    "ref": "cp.video-edit",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "cp.writing",
+    "step": 1.5,
+    "major": true,
+    "note": "대본 쓰기"
+   }
+  ],
+  "live": [
+   {
+    "ref": "cp.video-edit",
+    "step": 3,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.t-live",
+    "step": 3.01,
+    "major": true
+   }
+  ],
+  "short": [
+   {
+    "ref": "cp.video-edit",
+    "step": 3,
+    "major": true
+   },
+   {
+    "ref": "p.t-short",
+    "step": 5.5,
+    "major": true
+   }
+  ]
+ }
 }

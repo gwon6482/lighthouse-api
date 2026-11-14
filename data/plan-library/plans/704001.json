@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "장비별 운전기능사를 따고 건설기계 조종사 면허를 받아야 한다. 굴착기가 가장 일반적이다.",
  "gate": "건설기계 운전기능사(굴착기 등) + 건설기계 조종사 면허",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "excavator",
+   "name": "굴착기",
+   "desc": "굴착·상차"
+  },
+  {
+   "id": "earth",
+   "name": "로더·불도저·롤러",
+   "desc": "토공·다짐"
+  },
+  {
+   "id": "drill",
+   "name": "천공기 등 특수 장비",
+   "desc": "기초·천공"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -58,12 +74,6 @@
    "optional": true
   },
   {
-   "ref": "cp.craftsman-cert",
-   "step": 3,
-   "major": true,
-   "note": "굴착기운전기능사"
-  },
-  {
    "ref": "cp.equipment-license",
    "step": 4,
    "major": true
@@ -91,5 +101,30 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "excavator": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3,
+    "major": true,
+    "note": "굴착기운전기능사"
+   }
+  ],
+  "earth": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3,
+    "major": true,
+    "note": "로더운전기능사·불도저운전기능사·롤러운전기능사"
+   }
+  ],
+  "drill": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 3,
+    "major": true,
+    "note": "천공기운전기능사"
+   }
+  ]
+ }
 }

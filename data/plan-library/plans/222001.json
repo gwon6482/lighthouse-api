@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 소송 절차와 서류를 아는 것이 핵심이고 법률사무소 경험으로 시작한다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "litigation",
+   "name": "송무",
+   "desc": "법률사무소 소송 지원"
+  },
+  {
+   "id": "corp",
+   "name": "기업 법무",
+   "desc": "계약·법인 서류"
+  },
+  {
+   "id": "special",
+   "name": "등기·특허 사무",
+   "desc": "법무사·특허 사무소"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -65,6 +81,54 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-contract",
+   "name": "계약서 검토 보조와 법인 서류",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "계약서의 기본 조항을 보고 법인 등기 서류를 준비한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "계약서 구조와 기본 조항",
+      "법인 등기·인감 서류",
+      "문서 관리"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-registry",
+   "name": "등기·출원 서류 실무",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "등기 신청서나 출원 서류를 양식에 맞춰 작성한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "등기 신청 절차",
+      "출원 서류와 기한 관리",
+      "전자 신청 시스템"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -78,11 +142,6 @@
    "step": 2,
    "major": false,
    "skip": "법학 전공 과목에서 배운다"
-  },
-  {
-   "ref": "p.ls-doc",
-   "step": 3,
-   "major": true
   },
   {
    "ref": "cp.computer-2",
@@ -111,5 +170,39 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "litigation": [
+   {
+    "ref": "p.ls-doc",
+    "step": 3,
+    "major": true
+   }
+  ],
+  "corp": [
+   {
+    "ref": "p.ls-doc",
+    "step": 3,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.t-contract",
+    "step": 3.5,
+    "major": true
+   },
+   {
+    "ref": "cp.toeic",
+    "step": 3.6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "special": [
+   {
+    "ref": "p.t-registry",
+    "step": 3.5,
+    "major": true
+   }
+  ]
+ }
 }

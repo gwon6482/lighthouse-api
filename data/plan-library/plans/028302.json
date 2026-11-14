@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없지만 물류관리사가 대표 증빙이다. 물류 흐름 이해와 엑셀, 현장 경험을 갖춘다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "center",
+   "name": "물류센터 운영",
+   "desc": "입출고·재고 관리"
+  },
+  {
+   "id": "intl",
+   "name": "국제물류",
+   "desc": "수출입 운송·통관 연계"
+  },
+  {
+   "id": "scm",
+   "name": "SCM 기획",
+   "desc": "수요·재고 계획"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -99,27 +115,8 @@
    "major": true
   },
   {
-   "ref": "cp.craftsman-cert",
-   "step": 7,
-   "major": true,
-   "note": "지게차운전기능사",
-   "optional": true
-  },
-  {
-   "ref": "cp.parttime",
-   "step": 8,
-   "major": true,
-   "note": "물류센터 근무"
-  },
-  {
    "ref": "cp.internship",
    "step": 9,
-   "major": true,
-   "optional": true
-  },
-  {
-   "ref": "cp.toeic",
-   "step": 10,
    "major": true,
    "optional": true
   },
@@ -134,5 +131,65 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "center": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 7,
+    "major": true,
+    "note": "지게차운전기능사",
+    "optional": true
+   },
+   {
+    "ref": "cp.parttime",
+    "step": 8,
+    "major": true,
+    "note": "물류센터 근무"
+   }
+  ],
+  "intl": [
+   {
+    "ref": "cp.toeic",
+    "step": 10,
+    "major": true
+   },
+   {
+    "ref": "cp.trade-basics",
+    "step": 6.5,
+    "major": true
+   },
+   {
+    "ref": "cp.trade-cert",
+    "step": 6.6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "scm": [
+   {
+    "ref": "cp.parttime",
+    "step": 8,
+    "major": true,
+    "note": "물류센터 근무",
+    "optional": true
+   },
+   {
+    "ref": "cp.toeic",
+    "step": 10,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.sql",
+    "step": 6.5,
+    "major": true
+   },
+   {
+    "ref": "cp.dashboard",
+    "step": 6.6,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

@@ -8,12 +8,28 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "법정 필수는 아니지만 직업상담사 2급이 사실상 기본이다. 자격과 상담 실습, 고용 제도 이해를 갖춘다.",
  "gate": "법정 요건은 없으나 채용 공고 대부분이 직업상담사 2급을 요구한다",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "public",
+   "name": "공공",
+   "desc": "고용센터·지자체 일자리센터"
+  },
+  {
+   "id": "private",
+   "name": "민간 위탁 기관",
+   "desc": "취업 지원 프로그램"
+  },
+  {
+   "id": "corp",
+   "name": "대학·기업·헤드헌팅",
+   "desc": "취업 지원실·채용 대행"
+  }
+ ],
  "covers": [
   {
    "jobCode": "029904",
    "title": "취업알선원",
-   "track": null
+   "track": "corp"
   }
  ],
  "projects": [
@@ -110,6 +126,31 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-pubjob",
+   "name": "공공 직업상담 채용 확인",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 1,
+   "minutesPerSession": 60,
+   "goal": "직업상담직 공무원과 공무직 채용의 요건을 확인한다.",
+   "phases": [
+    {
+     "weeks": 1,
+     "title": "확인",
+     "items": [
+      "직렬·공무직 구분",
+      "응시 요건과 과목",
+      "채용 일정"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "채용 형태와 과목은 기관 공고마다 다르다"
   }
  ],
  "common": [
@@ -152,13 +193,6 @@
    "optional": true
   },
   {
-   "ref": "cp.sw2",
-   "step": 8,
-   "major": true,
-   "note": "사회복지사 2급을 함께 요구하는 기관이 있다",
-   "optional": true
-  },
-  {
    "ref": "cp.volunteer",
    "step": 9,
    "major": true,
@@ -175,5 +209,35 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "public": [
+   {
+    "ref": "p.t-pubjob",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.ncs",
+    "step": 8.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "private": [
+   {
+    "ref": "cp.sw2",
+    "step": 8,
+    "major": true,
+    "note": "사회복지사 2급을 함께 요구하는 기관이 있다",
+    "optional": true
+   }
+  ],
+  "corp": [
+   {
+    "ref": "cp.sales-basics",
+    "step": 8,
+    "major": true
+   }
+  ]
+ }
 }

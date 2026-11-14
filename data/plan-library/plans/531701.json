@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 추출 실력과 매장 경험이 전부이고 민간 자격은 입문 증빙 정도다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "cafe",
+   "name": "매장 바리스타",
+   "desc": "카페 근무"
+  },
+  {
+   "id": "roast",
+   "name": "로스터·원두",
+   "desc": "로스팅·품질"
+  },
+  {
+   "id": "owner",
+   "name": "카페 창업",
+   "desc": "개인 카페 운영"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -122,6 +138,54 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-latte",
+   "name": "라테아트와 바쁜 시간대 대응",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 90,
+   "goal": "기본 라테아트를 그리고 주문이 몰릴 때 순서를 지킨다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "연습",
+     "items": [
+      "하트·로제타",
+      "음료 제조 순서",
+      "주문이 몰릴 때 동선"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-roast",
+   "name": "로스팅과 커핑",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "academy",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "생두를 볶고 맛을 평가해 기록한다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "실습",
+     "items": [
+      "생두와 로스팅 단계",
+      "프로파일 기록",
+      "커핑과 평가"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -163,12 +227,6 @@
    "note": "카페 근무"
   },
   {
-   "ref": "p.br-startup",
-   "step": 8,
-   "major": true,
-   "optional": true
-  },
-  {
    "ref": "cp.resume",
    "step": 9,
    "major": true
@@ -179,5 +237,38 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "cafe": [
+   {
+    "ref": "p.t-latte",
+    "step": 3.5,
+    "major": true
+   }
+  ],
+  "roast": [
+   {
+    "ref": "p.t-roast",
+    "step": 3.5,
+    "major": true
+   }
+  ],
+  "owner": [
+   {
+    "ref": "p.br-startup",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.store-management",
+    "step": 8.5,
+    "major": true
+   },
+   {
+    "ref": "cp.accounting-basic",
+    "step": 8.6,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

@@ -8,17 +8,28 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "통신 전공과 정보통신 분야 기사가 기본이다. 통신사·장비 회사·시공 업체로 간다.",
  "gate": "법정 요건은 없으나 채용 공고가 관련 전공과 기사 자격을 요구·우대한다",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "rf",
+   "name": "무선·장비 개발",
+   "desc": "통신 장비·단말"
+  },
+  {
+   "id": "net",
+   "name": "통신망 운영",
+   "desc": "망 구축·운영"
+  }
+ ],
  "covers": [
   {
    "jobCode": "131201",
    "title": "통신기기·장비기술자",
-   "track": null
+   "track": "rf"
   },
   {
    "jobCode": "131203",
    "title": "통신망운영기술자",
-   "track": null
+   "track": "net"
   }
  ],
  "projects": [
@@ -45,6 +56,30 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-netlab",
+   "name": "네트워크 장비 설정 실습",
+   "type": "skill",
+   "subtype": "field",
+   "category": "skill",
+   "method": "practice",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "라우터·스위치를 설정해 작은 망을 구성한다.",
+   "phases": [
+    {
+     "weeks": 4,
+     "title": "실습",
+     "items": [
+      "주소 체계와 라우팅",
+      "스위칭과 가상 랜",
+      "장애 찾기"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -59,12 +94,6 @@
    "major": false,
    "skip": "전공 과목에서 배운다",
    "note": "통신·전자(신호·전자기·네트워크)"
-  },
-  {
-   "ref": "cp.engineer-cert",
-   "step": 3,
-   "major": true,
-   "note": "정보통신기사·무선설비기사"
   },
   {
    "ref": "p.te-net",
@@ -106,5 +135,38 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "rf": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "무선설비기사·정보통신기사"
+   },
+   {
+    "ref": "cp.c-cpp",
+    "step": 4.5,
+    "major": true
+   },
+   {
+    "ref": "cp.embedded-project",
+    "step": 5.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "net": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "정보통신기사"
+   },
+   {
+    "ref": "p.t-netlab",
+    "step": 5.5,
+    "major": true
+   }
+  ]
+ }
 }

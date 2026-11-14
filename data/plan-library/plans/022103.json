@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "필수 자격은 없다. 컨설팅사는 학벌·영어·케이스 인터뷰를 보고, 인턴(리서치 보조) 경험이 사실상 관문이다.",
  "gate": null,
- "tracks": [],
+ "tracks": [
+  {
+   "id": "strategy",
+   "name": "전략",
+   "desc": "전략 컨설팅사"
+  },
+  {
+   "id": "digital",
+   "name": "IT·디지털",
+   "desc": "시스템·데이터 컨설팅"
+  },
+  {
+   "id": "hr",
+   "name": "인사·조직",
+   "desc": "조직·보상 컨설팅"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -136,11 +152,6 @@
    "note": "컨설팅사 리서치 보조 인턴"
   },
   {
-   "ref": "p.co-case",
-   "step": 11,
-   "major": true
-  },
-  {
    "ref": "p.co-cert",
    "step": 12,
    "major": true,
@@ -157,5 +168,57 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "strategy": [
+   {
+    "ref": "p.co-case",
+    "step": 11,
+    "major": true
+   },
+   {
+    "ref": "cp.mba",
+    "step": 12.5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "digital": [
+   {
+    "ref": "p.co-case",
+    "step": 11,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.sql",
+    "step": 4.5,
+    "major": true
+   },
+   {
+    "ref": "cp.data-modeling",
+    "step": 4.6,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "hr": [
+   {
+    "ref": "p.co-case",
+    "step": 11,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.labor-law",
+    "step": 4.5,
+    "major": true
+   },
+   {
+    "ref": "cp.stats",
+    "step": 4.6,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

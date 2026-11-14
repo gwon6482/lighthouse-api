@@ -12,12 +12,17 @@
   {
    "id": "broadcast",
    "name": "방송국 PD",
-   "desc": "공채·시사교양·예능·드라마"
+   "desc": "공채"
   },
   {
    "id": "digital",
    "name": "디지털 콘텐츠 PD",
-   "desc": "제작사·MCN·브랜드 채널"
+   "desc": "유튜브·OTT"
+  },
+  {
+   "id": "prod",
+   "name": "제작사·드라마",
+   "desc": "조연출부터"
   }
  ],
  "covers": [],
@@ -126,6 +131,38 @@
    ],
    "basis": "practice",
    "caution": "전형 구성은 방송사마다 다르다"
+  },
+  {
+   "id": "p.t-ad",
+   "name": "조연출 업무 익히기",
+   "type": "activity",
+   "subtype": "work",
+   "category": "experience",
+   "method": "etc",
+   "level": "입문",
+   "daysPerWeek": 5,
+   "minutesPerSession": 480,
+   "goal": "제작사에서 조연출로 촬영 일정과 편집 구성을 맡는다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "지원",
+     "items": [
+      "제작사 공고 확인",
+      "지원"
+     ]
+    },
+    {
+     "weeks": 24,
+     "title": "근무",
+     "items": [
+      "촬영 일정·섭외",
+      "가편집과 자막",
+      "후반 작업 진행"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -218,6 +255,19 @@
     "step": 10,
     "major": true,
     "note": "제작사·MCN"
+   }
+  ],
+  "prod": [
+   {
+    "ref": "p.t-ad",
+    "step": 8,
+    "major": true
+   },
+   {
+    "ref": "cp.channel",
+    "step": 9,
+    "major": true,
+    "optional": true
    }
   ]
  }

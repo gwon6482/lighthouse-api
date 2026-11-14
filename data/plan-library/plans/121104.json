@@ -8,9 +8,51 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "연구직은 사실상 석사 이상을 본다. 전공 지식과 실험 경험을 쌓아 대학원을 거친다.",
  "gate": "법정 요건은 없으나 채용 공고가 관련 전공 석사 이상을 요구하는 경우가 대부분",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "rnd",
+   "name": "연구개발(석·박사)",
+   "desc": "연구소·기업 R&D"
+  },
+  {
+   "id": "tech",
+   "name": "연구 지원·분석",
+   "desc": "학사 연구원·품질 분석"
+  },
+  {
+   "id": "clinical",
+   "name": "임상시험",
+   "desc": "임상 운영·모니터링"
+  }
+ ],
  "covers": [],
- "projects": [],
+ "projects": [
+  {
+   "id": "p.t-gcp",
+   "name": "임상시험 절차와 관리 기준 교육",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "lecture",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "임상시험의 단계와 관리 기준을 배우고 교육을 수료한다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "교육",
+     "items": [
+      "임상시험 단계와 문서",
+      "관리 기준 교육 수료",
+      "모니터링 업무 이해"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "교육 과정과 인정 범위는 운영 기관 안내 확인"
+  }
+ ],
  "common": [
   {
    "ref": "cp.eng-major",
@@ -32,11 +74,6 @@
   {
    "ref": "cp.paper-reading",
    "step": 4,
-   "major": true
-  },
-  {
-   "ref": "cp.lab-grad",
-   "step": 5,
    "major": true
   },
   {
@@ -63,5 +100,46 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "rnd": [
+   {
+    "ref": "cp.lab-grad",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "tech": [
+   {
+    "ref": "cp.lab-grad",
+    "step": 5,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.internship",
+    "step": 5.5,
+    "major": true,
+    "note": "연구소·기업 인턴"
+   }
+  ],
+  "clinical": [
+   {
+    "ref": "cp.lab-grad",
+    "step": 5,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "p.t-gcp",
+    "step": 5.5,
+    "major": true
+   },
+   {
+    "ref": "cp.pharma-ra",
+    "step": 5.6,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

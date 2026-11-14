@@ -8,12 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "전기·기계·화공·신소재 전공을 본다. 발전 설비 자격과 시스템 이해를 갖추고 연구개발은 석사를 우대한다.",
  "gate": "법정 요건은 없으나 채용 공고가 관련 전공과 기사 자격을 요구·우대한다",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "solar",
+   "name": "태양광",
+   "desc": "발전소 설계·시공·운영"
+  },
+  {
+   "id": "wind",
+   "name": "풍력",
+   "desc": "터빈·단지 개발"
+  }
+ ],
  "covers": [
   {
    "jobCode": "155103",
    "title": "풍력발전연구 및 개발자",
-   "track": null
+   "track": "wind"
   }
  ],
  "projects": [
@@ -70,6 +81,30 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-wind",
+   "name": "풍력 터빈 구조와 단지 설계 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "풍력 터빈의 구조와 풍황 분석, 단지 배치의 원리를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "터빈 구조와 제어",
+      "풍황 자료 분석",
+      "단지 배치와 인허가"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -84,12 +119,6 @@
    "major": false,
    "skip": "전공 과목에서 배운다",
    "note": "전기·기계·화공·신소재"
-  },
-  {
-   "ref": "cp.engineer-cert",
-   "step": 3,
-   "major": true,
-   "note": "신재생에너지발전설비기사(태양광)·전기기사"
   },
   {
    "ref": "p.re-system",
@@ -143,5 +172,27 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "solar": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "신재생에너지발전설비기사(태양광)·전기기사"
+   }
+  ],
+  "wind": [
+   {
+    "ref": "cp.engineer-cert",
+    "step": 3,
+    "major": true,
+    "note": "전기기사·일반기계기사"
+   },
+   {
+    "ref": "p.t-wind",
+    "step": 4.5,
+    "major": true
+   }
+  ]
+ }
 }

@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "조경 전공과 조경기사가 기본이다. 조경 설계 사무소와 시공 회사, 공공 기관으로 간다.",
  "gate": "법정 요건은 없으나 채용 공고가 관련 전공과 기사 자격을 요구·우대한다",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "design",
+   "name": "조경 설계",
+   "desc": "설계 사무소"
+  },
+  {
+   "id": "build",
+   "name": "조경 시공·관리",
+   "desc": "시공사·유지 관리"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -74,25 +85,6 @@
    "major": true
   },
   {
-   "ref": "p.la-design",
-   "step": 6,
-   "major": true
-  },
-  {
-   "ref": "cp.adobe",
-   "step": 7,
-   "major": true,
-   "note": "패널 표현",
-   "optional": true
-  },
-  {
-   "ref": "cp.contest",
-   "step": 8,
-   "major": true,
-   "note": "조경 설계 공모전",
-   "optional": true
-  },
-  {
    "ref": "cp.eng-field",
    "step": 80,
    "major": true,
@@ -122,5 +114,51 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "design": [
+   {
+    "ref": "p.la-design",
+    "step": 6,
+    "major": true
+   },
+   {
+    "ref": "cp.adobe",
+    "step": 7,
+    "major": true,
+    "note": "패널 표현",
+    "optional": true
+   },
+   {
+    "ref": "cp.contest",
+    "step": 8,
+    "major": true,
+    "note": "조경 설계 공모전",
+    "optional": true
+   }
+  ],
+  "build": [
+   {
+    "ref": "p.la-design",
+    "step": 6,
+    "major": true,
+    "optional": true
+   },
+   {
+    "ref": "cp.estimate-schedule",
+    "step": 6.5,
+    "major": true
+   },
+   {
+    "ref": "cp.driver-license",
+    "step": 6.6,
+    "major": true
+   },
+   {
+    "ref": "cp.construction-safety",
+    "step": 6.7,
+    "major": true,
+    "optional": true
+   }
+  ]
+ }
 }

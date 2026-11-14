@@ -18,6 +18,11 @@
    "id": "special",
    "name": "경력경쟁채용",
    "desc": "구급·구조·화학 등 특채"
+  },
+  {
+   "id": "cadet",
+   "name": "소방간부후보생",
+   "desc": "간부로 시작"
   }
  ],
  "covers": [],
@@ -70,6 +75,48 @@
     "note": "소방학개론·소방관계법규·행정법총론(한국사·영어는 검정 대체)"
    },
    "caution": "경력경쟁채용은 분야마다 과목이 다르다"
+  },
+  {
+   "id": "p.t-cadet",
+   "name": "소방간부후보생 선발시험",
+   "type": "hiring",
+   "subtype": "civil",
+   "category": "qualification",
+   "method": "lecture",
+   "level": "중급",
+   "daysPerWeek": 6,
+   "minutesPerSession": 180,
+   "goal": "전문과목에서 합격선 점수를 받는다.",
+   "phases": [
+    {
+     "weeks": 10,
+     "title": "기본 이론",
+     "items": [
+      "헌법·행정법",
+      "소방학개론",
+      "선택 과목"
+     ]
+    },
+    {
+     "weeks": 8,
+     "title": "기출 회독",
+     "items": [
+      "기출 3회독",
+      "법령·판례 정리",
+      "오답 노트"
+     ]
+    },
+    {
+     "weeks": 6,
+     "title": "실전",
+     "items": [
+      "모의고사",
+      "시간 배분"
+     ]
+    }
+   ],
+   "basis": "law",
+   "caution": "과목은 소방공무원임용령 별표 4와 선발 공고 확인"
   }
  ],
  "common": [
@@ -97,11 +144,6 @@
    "note": "영어 과목 대신 공인 성적 제출(기준 점수는 공고 확인)"
   },
   {
-   "ref": "p.fire-major",
-   "step": 5,
-   "major": true
-  },
-  {
    "ref": "cp.civil-bonus",
    "step": 6,
    "major": true,
@@ -119,11 +161,29 @@
   }
  ],
  "byTrack": {
-  "open": [],
+  "open": [
+   {
+    "ref": "p.fire-major",
+    "step": 5,
+    "major": true
+   }
+  ],
   "special": [
    {
     "ref": "cp.civil-special",
     "step": 1.5,
+    "major": true
+   },
+   {
+    "ref": "p.fire-major",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "cadet": [
+   {
+    "ref": "p.t-cadet",
+    "step": 5,
     "major": true
    }
   ]

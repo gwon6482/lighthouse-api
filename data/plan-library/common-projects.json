@@ -931,7 +931,8 @@
     "edu",
     "tech",
     "service",
-    "transport"
+    "transport",
+    "welfare"
    ],
    "category": "qualification",
    "method": "book",
@@ -1234,7 +1235,9 @@
    "families": [
     "biz",
     "finance",
-    "public"
+    "public",
+    "service",
+    "sales"
    ],
    "category": "qualification",
    "method": "lecture",
@@ -1276,7 +1279,8 @@
     "data",
     "media",
     "eng",
-    "research"
+    "research",
+    "service"
    ],
    "category": "skill",
    "method": "practice",
@@ -1901,7 +1905,8 @@
    "scope": "family",
    "families": [
     "design",
-    "it"
+    "it",
+    "biz"
    ],
    "category": "skill",
    "method": "practice",
@@ -2596,7 +2601,8 @@
     "media",
     "biz",
     "welfare",
-    "eng"
+    "eng",
+    "service"
    ],
    "category": "skill",
    "method": "practice",
@@ -3196,7 +3202,8 @@
    "scope": "family",
    "families": [
     "it",
-    "data"
+    "data",
+    "biz"
    ],
    "promotedFrom": "133201:p.de-modeling"
   },
@@ -3332,7 +3339,9 @@
    "families": [
     "biz",
     "finance",
-    "sales"
+    "sales",
+    "it",
+    "media"
    ],
    "category": "portfolio",
    "method": "personal_project",
@@ -3379,7 +3388,8 @@
    "families": [
     "data",
     "biz",
-    "it"
+    "it",
+    "sales"
    ],
    "category": "skill",
    "method": "practice",
@@ -3982,7 +3992,8 @@
     "finance",
     "edu",
     "media",
-    "service"
+    "service",
+    "welfare"
    ],
    "category": "skill",
    "method": "practice",
@@ -4282,7 +4293,8 @@
    "scope": "family",
    "families": [
     "eng",
-    "health"
+    "health",
+    "research"
    ],
    "promotedFrom": "154105:p.ph-ra"
   },
@@ -4395,7 +4407,8 @@
    ],
    "scope": "family",
    "families": [
-    "media"
+    "media",
+    "sales"
    ],
    "promotedFrom": "416601:p.ve-shoot"
   },
@@ -4469,7 +4482,8 @@
    "scope": "family",
    "families": [
     "biz",
-    "sales"
+    "sales",
+    "media"
    ],
    "promotedFrom": "028101:p.tr-basics"
   },

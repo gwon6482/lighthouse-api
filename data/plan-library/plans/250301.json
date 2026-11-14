@@ -8,7 +8,28 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "군별 선발 전형으로 뽑는다. 체력 검정·면접·신체검사가 기본이고, 필기 평가는 없앤 과정이 많다(육군·해군 부사관).",
  "gate": "부사관 선발 시험 합격(지원 자격은 모집 공고 확인)",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "army",
+   "name": "육군",
+   "desc": "육군 부사관"
+  },
+  {
+   "id": "navy",
+   "name": "해군",
+   "desc": "해군 부사관"
+  },
+  {
+   "id": "air",
+   "name": "공군",
+   "desc": "공군 부사관"
+  },
+  {
+   "id": "marine",
+   "name": "해병대",
+   "desc": "해병대 부사관"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -60,11 +81,6 @@
    "note": "군·병과·모집 분야 정하기"
   },
   {
-   "ref": "p.nco-written",
-   "step": 2,
-   "major": true
-  },
-  {
    "ref": "cp.korean-history",
    "step": 3,
    "major": true,
@@ -88,6 +104,39 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "army": [
+   {
+    "ref": "p.nco-written",
+    "step": 2,
+    "major": true,
+    "note": "필기평가 없이 면접·체력 중심(2024년 후반기 선발부터)"
+   }
+  ],
+  "navy": [
+   {
+    "ref": "p.nco-written",
+    "step": 2,
+    "major": true,
+    "note": "필기시험 없음(286기부터)"
+   }
+  ],
+  "air": [
+   {
+    "ref": "p.nco-written",
+    "step": 2,
+    "major": true,
+    "note": "모집 요강의 평가 요소 확인"
+   }
+  ],
+  "marine": [
+   {
+    "ref": "p.nco-written",
+    "step": 2,
+    "major": true,
+    "note": "모집 요강의 평가 요소 확인"
+   }
+  ]
+ },
  "caution": "선발 기준은 각 군 모집 공고가 정본"
 }

@@ -12,12 +12,22 @@
   {
    "id": "concept",
    "name": "원화·컨셉",
-   "desc": "캐릭터·배경 컨셉 아트"
+   "desc": "캐릭터·배경 원화"
   },
   {
    "id": "model",
    "name": "3D 모델링",
-   "desc": "캐릭터·배경 모델러"
+   "desc": "캐릭터·배경 모델"
+  },
+  {
+   "id": "anim",
+   "name": "애니메이션·이펙트",
+   "desc": "캐릭터 동작·VFX"
+  },
+  {
+   "id": "ui",
+   "name": "UI",
+   "desc": "게임 화면·아이콘"
   }
  ],
  "covers": [],
@@ -107,6 +117,54 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-anim",
+   "name": "캐릭터 애니메이션·이펙트 릴",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "동작과 이펙트를 모은 영상 포트폴리오를 만든다.",
+   "phases": [
+    {
+     "weeks": 6,
+     "title": "제작",
+     "items": [
+      "걷기·공격 등 기본 동작",
+      "타격·마법 이펙트",
+      "릴 영상 편집"
+     ]
+    }
+   ],
+   "basis": "practice"
+  },
+  {
+   "id": "p.t-ui",
+   "name": "게임 UI 포트폴리오",
+   "type": "output",
+   "subtype": "portfolio",
+   "category": "portfolio",
+   "method": "personal_project",
+   "level": "중급",
+   "daysPerWeek": 3,
+   "minutesPerSession": 120,
+   "goal": "게임 하나의 화면 구성과 아이콘 세트를 만든다.",
+   "phases": [
+    {
+     "weeks": 5,
+     "title": "제작",
+     "items": [
+      "화면 흐름 설계",
+      "아이콘·버튼 세트",
+      "엔진 화면에 올려 보기"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -164,6 +222,31 @@
    },
    {
     "ref": "p.gg-engine",
+    "step": 5,
+    "major": true
+   }
+  ],
+  "anim": [
+   {
+    "ref": "p.t-anim",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "cp.after-effects",
+    "step": 5,
+    "major": true,
+    "optional": true
+   }
+  ],
+  "ui": [
+   {
+    "ref": "cp.figma",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "p.t-ui",
     "step": 5,
     "major": true
    }

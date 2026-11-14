@@ -8,7 +8,18 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "농수산물 도매시장의 경매사는 자격시험에 합격해야 한다. 도매시장 법인에서 일하며 품목 지식을 쌓는다.",
  "gate": "경매사 자격(농수산물 도매시장) — 자격시험 합격",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "auction",
+   "name": "경매사",
+   "desc": "도매시장 법인"
+  },
+  {
+   "id": "broker",
+   "name": "중도매인·상품 중개",
+   "desc": "도매 거래"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -72,6 +83,31 @@
     "note": "필기시험과 실기시험으로 치른다"
    },
    "caution": "부류(청과·수산·축산 등)별로 시험이 나뉜다"
+  },
+  {
+   "id": "p.t-broker",
+   "name": "중도매업 허가와 거래처 확보",
+   "type": "network",
+   "subtype": "research",
+   "category": "knowledge",
+   "method": "etc",
+   "level": "중급",
+   "daysPerWeek": 2,
+   "minutesPerSession": 60,
+   "goal": "중도매업 허가 요건을 확인하고 거래처를 만든다.",
+   "phases": [
+    {
+     "weeks": 2,
+     "title": "준비",
+     "items": [
+      "허가 요건과 자금",
+      "출하자·구매처 확보",
+      "거래 대금 관리"
+     ]
+    }
+   ],
+   "basis": "practice",
+   "caution": "허가 요건은 도매시장 개설자의 공고 확인"
   }
  ],
  "common": [
@@ -90,11 +126,6 @@
    "step": 3,
    "major": true,
    "note": "도매시장 법인·중도매인 점포"
-  },
-  {
-   "ref": "p.ac-cert",
-   "step": 4,
-   "major": true
   },
   {
    "ref": "cp.sales-basics",
@@ -119,7 +150,28 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "auction": [
+   {
+    "ref": "p.ac-cert",
+    "step": 4,
+    "major": true
+   }
+  ],
+  "broker": [
+   {
+    "ref": "p.t-broker",
+    "step": 4,
+    "major": true
+   },
+   {
+    "ref": "cp.accounting-basic",
+    "step": 4.5,
+    "major": true,
+    "optional": true
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "law",

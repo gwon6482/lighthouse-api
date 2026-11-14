@@ -8,12 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "항공정비사 자격증명이 있어야 정비 확인 업무를 할 수 있다. 국토교통부 지정 전문교육기관을 거치는 길이 일반적이다.",
  "gate": "항공정비사 자격증명(항공안전법) — 지정 전문교육기관 이수 또는 정비 경력 뒤 학과·실기 시험",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "airline",
+   "name": "항공사·정비 업체",
+   "desc": "운송용 항공기 정비"
+  },
+  {
+   "id": "heli",
+   "name": "헬리콥터",
+   "desc": "회전익 항공기 정비"
+  }
+ ],
  "covers": [
   {
    "jobCode": "812102",
    "title": "헬리콥터정비원",
-   "track": null
+   "track": "heli"
   }
  ],
  "projects": [
@@ -105,6 +116,30 @@
     }
    ],
    "basis": "practice"
+  },
+  {
+   "id": "p.t-heli",
+   "name": "회전익 기체와 동력 전달 계통 이해",
+   "type": "edu",
+   "subtype": "major",
+   "category": "knowledge",
+   "method": "book",
+   "level": "입문",
+   "daysPerWeek": 3,
+   "minutesPerSession": 60,
+   "goal": "헬리콥터의 로터와 동력 전달 계통의 구조를 안다.",
+   "phases": [
+    {
+     "weeks": 3,
+     "title": "이해",
+     "items": [
+      "로터 계통",
+      "동력 전달 계통",
+      "진동과 균형 점검"
+     ]
+    }
+   ],
+   "basis": "practice"
   }
  ],
  "common": [
@@ -127,12 +162,6 @@
    "ref": "p.av-license",
    "step": 4,
    "major": true
-  },
-  {
-   "ref": "cp.toeic",
-   "step": 5,
-   "major": true,
-   "note": "항공사 지원 기준"
   },
   {
    "ref": "cp.engineer-cert",
@@ -159,7 +188,30 @@
    "major": true
   }
  ],
- "byTrack": {},
+ "byTrack": {
+  "airline": [
+   {
+    "ref": "cp.toeic",
+    "step": 5,
+    "major": true,
+    "note": "항공사 지원 기준"
+   }
+  ],
+  "heli": [
+   {
+    "ref": "cp.toeic",
+    "step": 5,
+    "major": true,
+    "note": "항공사 지원 기준",
+    "optional": true
+   },
+   {
+    "ref": "p.t-heli",
+    "step": 4.5,
+    "major": true
+   }
+  ]
+ },
  "checked": {
   "at": "2026-11-13",
   "level": "law",

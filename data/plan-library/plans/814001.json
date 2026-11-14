@@ -8,7 +8,23 @@
  "source": "Claude 가 직업정보·공식 자격 목록·일반 지식으로 쓴 초안. 채용공고 분석 근거는 아직 없다(API 크레딧 뒤 보강)",
  "summary": "건물의 전기·기계·소방 설비를 운전하고 점검한다. 건물 규모에 따라 법정 선임 자격이 필요해 자격증이 곧 경쟁력이다.",
  "gate": "건물 규모에 따라 전기·소방·에너지 분야의 법정 선임 자격이 필요하다",
- "tracks": [],
+ "tracks": [
+  {
+   "id": "elec",
+   "name": "전기",
+   "desc": "수변전·전기실"
+  },
+  {
+   "id": "mech",
+   "name": "기계·공조",
+   "desc": "보일러·냉동기·공조"
+  },
+  {
+   "id": "fire",
+   "name": "소방",
+   "desc": "소방 설비 점검"
+  }
+ ],
  "covers": [],
  "projects": [
   {
@@ -74,12 +90,6 @@
    "optional": true
   },
   {
-   "ref": "cp.craftsman-cert",
-   "step": 4,
-   "major": true,
-   "note": "에너지관리기능사·공조냉동기계기능사·전기기능사 중에서"
-  },
-  {
    "ref": "p.fm-basics",
    "step": 3,
    "major": true
@@ -88,13 +98,6 @@
    "ref": "p.fm-work",
    "step": 5,
    "major": true
-  },
-  {
-   "ref": "cp.engineer-cert",
-   "step": 6,
-   "major": true,
-   "note": "산업기사 이상이면 선임할 수 있는 범위가 넓어진다",
-   "optional": true
   },
   {
    "ref": "cp.safety-law",
@@ -114,5 +117,50 @@
    "major": true
   }
  ],
- "byTrack": {}
+ "byTrack": {
+  "elec": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "전기기능사"
+   },
+   {
+    "ref": "cp.engineer-cert",
+    "step": 6,
+    "major": true,
+    "note": "전기산업기사 — 선임할 수 있는 범위가 넓어진다",
+    "optional": true
+   }
+  ],
+  "mech": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "에너지관리기능사·공조냉동기계기능사"
+   },
+   {
+    "ref": "cp.engineer-cert",
+    "step": 6,
+    "major": true,
+    "note": "에너지관리산업기사·공조냉동기계산업기사",
+    "optional": true
+   }
+  ],
+  "fire": [
+   {
+    "ref": "cp.craftsman-cert",
+    "step": 4,
+    "major": true,
+    "note": "전기기능사(기초 자격)"
+   },
+   {
+    "ref": "cp.engineer-cert",
+    "step": 6,
+    "major": true,
+    "note": "소방설비산업기사(기계·전기 분야)"
+   }
+  ]
+ }
 }
