@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const escapeRegex = require('../utils/escapeRegex');
+const jobSearch = require('../services/jobSearch');
 
 // career_attributes code → name 맵 (첫 조회 후 캐싱)
 let _codeNameCache = null;
@@ -41,6 +42,23 @@ const getJobModel = () => {
   const schema = new mongoose.Schema({}, { strict: false });
   return jobDb.model(modelName, schema, 'job_info');
 };
+
+// 검색·둘러보기 색인 — 직업의 이름·분류만 메모리에 둔다(10분). 어드민에서 직업을 고치면 바로 비운다(다른 인스턴스는 10분 안에 따라온다)
+const INDEX_TTL_MS = 10 * 60 * 1000;
+let _searchIndex = null;
+let _searchIndexAt = 0;
+async function getSearchIndex() {
+  if (_searchIndex && Date.now() - _searchIndexAt < INDEX_TTL_MS) return _searchIndex;
+  const jobs = await getJobModel().find(
+    {},
+    { jobCode: 1, title: 1, 'classification.primary': 1, 'classification.secondary': 1, 'work24.keco.code': 1, _id: 0 }
+  ).lean();
+  _searchIndex = jobSearch.buildIndex(jobs);
+  _searchIndexAt = Date.now();
+  return _searchIndex;
+}
+const dropSearchIndex = () => { _searchIndex = null; };
+const str = (v) => (typeof v === 'string' ? v.trim() : '');
 
 const getJobByCode = async (req, res, next) => {
   try {
@@ -93,11 +111,17 @@ const getJobByCode = async (req, res, next) => {
   }
 };
 
+// 직업 검색. 세 가지로 불린다
+//   ① ?name=…                         옛 방식 — 직업 이름만, 결과 없으면 404(어드민·랜딩 연구 설문·이미 나간 앱이 쓴다. 바꾸지 말 것)
+//   ② ?name=…&include=classification  넓은 검색(2026-11-14) — 이름 + 2차 분류명 + 일상어 사전, 맞는 1·2차 분류를 groups 로. 결과가 없어도 200
+//   ③ ?primary=… / ?secondary=…       그 분류의 직업 전체(200)
 const searchJobByName = async (req, res, next) => {
   try {
-    const { name } = req.query;
+    const name = str(req.query.name);
+    const primary = str(req.query.primary);
+    const secondary = str(req.query.secondary);
 
-    if (!name || name.trim() === '') {
+    if (!name && !primary && !secondary) {
       return res.status(400).json({
         success: false,
         error: 'name 쿼리 파라미터가 필요합니다.'
@@ -111,9 +135,19 @@ const searchJobByName = async (req, res, next) => {
       });
     }
 
+    if (primary || secondary) {
+      const data = jobSearch.byClassification(await getSearchIndex(), { primary, secondary });
+      return res.json({ success: true, count: data.length, data, groups: [] });
+    }
+
+    if (req.query.include === 'classification') {
+      const { jobs, groups } = jobSearch.search(await getSearchIndex(), name);
+      return res.json({ success: true, count: jobs.length, data: jobs, groups });
+    }
+
     const Job = getJobModel();
     const jobs = await Job.find(
-      { title: { $regex: escapeRegex(name.trim()), $options: 'i' } },
+      { title: { $regex: escapeRegex(name), $options: 'i' } },
       { jobCode: 1, title: 1, 'classification.primary': 1, 'classification.secondary': 1, _id: 0 }
     ).lean();
 
@@ -129,6 +163,22 @@ const searchJobByName = async (req, res, next) => {
       count: jobs.length,
       data: jobs
     });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// 진로 둘러보기 — 서로 다른 직무에서 직업을 하나씩 무작위로(기본 5개, 최대 12개). 부를 때마다 달라진다
+const getExploreJobs = async (req, res, next) => {
+  try {
+    if (mongoose.connection.readyState !== 1) {
+      return res.status(503).json({ success: false, error: '데이터베이스에 연결할 수 없습니다. 잠시 후 다시 시도해주세요.' });
+    }
+    const n = parseInt(req.query.count, 10);
+    const count = Number.isFinite(n) ? Math.min(Math.max(n, 1), 12) : 5;
+    const data = jobSearch.explore(await getSearchIndex(), count);
+    res.set('Cache-Control', 'no-store');
+    res.json({ success: true, count: data.length, data });
   } catch (error) {
     next(error);
   }
@@ -204,6 +254,7 @@ const createJob = async (req, res, next) => {
     }
 
     const job = await Job.create(req.body);
+    dropSearchIndex();
     res.status(201).json({ success: true, data: job });
   } catch (error) {
     next(error);
@@ -235,6 +286,7 @@ const updateJob = async (req, res, next) => {
       return res.status(404).json({ success: false, error: `jobCode '${jobCode}'에 해당하는 직업을 찾을 수 없습니다.` });
     }
 
+    dropSearchIndex();
     res.json({ success: true, data: updated });
   } catch (error) {
     next(error);
@@ -259,6 +311,7 @@ const deleteJob = async (req, res, next) => {
       return res.status(404).json({ success: false, error: `jobCode '${jobCode}'에 해당하는 직업을 찾을 수 없습니다.` });
     }
 
+    dropSearchIndex();
     res.json({ success: true, message: `jobCode '${jobCode}' 직업이 삭제되었습니다.` });
   } catch (error) {
     next(error);
@@ -313,4 +366,4 @@ const getMajors = async (req, res, next) => {
   }
 };
 
-module.exports = { getJobByCode, searchJobByName, getJobList, createJob, updateJob, deleteJob, getClassifications, getMajors };
+module.exports = { getJobByCode, searchJobByName, getExploreJobs, getJobList, createJob, updateJob, deleteJob, getClassifications, getMajors };

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getJobByCode, searchJobByName, getJobList, createJob, updateJob, deleteJob, getClassifications, getMajors } = require('../controllers/jobController');
+const { getJobByCode, searchJobByName, getExploreJobs, getJobList, createJob, updateJob, deleteJob, getClassifications, getMajors } = require('../controllers/jobController');
 const { getJobRecommendBySurveyId, postJobRecommend, getJobMatchScore, postJobMatchScore, getJobRecommendT2BySurveyId } = require('../controllers/recommendController');
 const { getApprovedReviews, submitReview } = require('../controllers/reviewController');
 const { getJobRecruitment, getJobGroupRecruitment } = require('../controllers/recruitmentController');
@@ -82,7 +82,11 @@ const { authenticate } = require('../middleware/auth');
  * /api/job/search:
  *   get:
  *     summary: 직업명으로 직업 코드 검색
- *     description: 직업명(일부 포함)으로 검색하여 jobCode 목록을 반환합니다.
+ *     description: |
+ *       직업명(일부 포함)으로 검색하여 jobCode 목록을 반환합니다. 결과가 없으면 404.
+ *       `include=classification` 을 붙이면 넓은 검색 — 직업 이름 + 2차 분류명 + 일상어 사전(농부 → 작물재배 등)으로 찾고,
+ *       검색어가 들어간 1·2차 분류를 `groups`([{ level, name, primary?, count }])로 함께 준다. 결과가 없어도 200.
+ *       `primary` 또는 `secondary`(분류 이름 그대로)를 주면 그 분류의 직업 전체를 준다(`name` 없이).
  *     tags: [Job]
  *     parameters:
  *       - in: query
@@ -519,6 +523,8 @@ router.get('/list', getJobList);
 router.get('/classifications', getClassifications);
 router.get('/majors', getMajors);
 router.get('/search', searchJobByName);
+// 진로 둘러보기(2026-11-14) — 서로 다른 직무에서 무작위 직업. ?count=5(1~12). 응답 data[].group = { code, name }(직무)
+router.get('/explore', getExploreJobs);
 router.get('/recommend/:survey_id', getJobRecommendBySurveyId);
 router.get('/recommend-t2/:survey_id', getJobRecommendT2BySurveyId);
 router.post('/recommend', postJobRecommend);
